@@ -1,4 +1,4 @@
-# Working effectively with uni tests
+# Working effectively with unit tests
 
 Author: Jay Fields (http://blog.jayfields.com/)
 
@@ -30,8 +30,11 @@ There are many motivators for creating a test or several tests:
 * Replace loops with individual tests
 * "Programming is not about typing... it’s about thinking." –Rich Hickey
 * Replace ObjectMother with DataBuilder
-
-
+* Validate the system:
+  - Immediate Feedback That Things Work as Expected
+  - Prevent Future Regressions
+* Solitary unit tests
+* Sociable unit tests
 
 ## Further readings
 * https://chainding.wordpress.com/2006/06/05/write-maintainable-unit-tests-that-will-save-you-time-and-tears/
