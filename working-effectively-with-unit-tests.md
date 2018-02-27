@@ -52,8 +52,19 @@ found in a test.
 * At most, 1 assertion per test.
 * At most, 1 mock verification per test.
 * When stubbing method return values, use the most generic argument matcher possible.
+* Expect Exceptions via Try/Catch
 
+## Improving test cases
+TBD
+
+## Improving test suites
+TBD
+
+## Closing Thoughts
+TBD
 
 ## Further readings
 * https://chainding.wordpress.com/2006/06/05/write-maintainable-unit-tests-that-will-save-you-time-and-tears/
 * artofunittesting.com
+
+Bookmark: 178/333
