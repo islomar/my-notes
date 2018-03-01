@@ -35,13 +35,13 @@ There are many motivators for creating a test or several tests:
 * Validate the system:
   - Immediate Feedback That Things Work as Expected
   - Prevent Future Regressions
+ * Delete tests that no longer provide positive ROI.
 
 ## Types of tests
 * Solitary unit tests
   - Never cross boundaries
-  - The Class Under Test should be the only concrete class
-  - Boundary definition: "...a database, a queue, another system..."
-found in a test.
+  - The Class Under Test should be the only concrete class.
+  - Boundary definition: "...a database, a queue, another system..." found in a test.
 * Sociable unit tests: you use the real collaborators.
 
 ## Improving assertions
@@ -53,12 +53,29 @@ found in a test.
 * At most, 1 mock verification per test.
 * When stubbing method return values, use the most generic argument matcher possible.
 * Expect Exceptions via Try/Catch
+* Using literals String, int, char) for expected values is advantageous for readability and traceability. To be clear, the expected value should be the literal itself, not a variable holding a value that was previously created by a literal.
+* Assert last principle.
+* Do not throw an exception to indicate success.
+* Inline Setup.
+* Test names are glorified comments (the author doesn't like having to write test names).
+* Im plementation over specification: default return values. The authors prefers to have tests without mocking the collaborators behavior (that way it won't break for reasons which do not matter for the test), verifying default values returned (null, 0, etc.)
 
 ## Improving test cases
-TBD
+* There are two primary reasons for writing Solitary Unit Tests:
+  1. Sociable Unit Tests can be slow and nondeterministic
+  2. Sociable Unit Tests are more susceptible to cascading failures
+
 
 ## Improving test suites
-TBD
+* Do not test language or frameworks features nor standard libraries.
+* In general, do no test private methods.
+* Custom assertions are great.
+* Test Data Builders. For each class you want to use in a test, create a Builder for that class that:
+  * Has an instance variable for each constructor parameter
+  * Initializes its instance variables to commonly used or safe values
+  * Has a build method that creates a new object using the values in its instance variables
+  * Has “chainable” public methods for overriding the values in its instance variables.
+
 
 ## Closing Thoughts
 TBD
@@ -66,5 +83,6 @@ TBD
 ## Further readings
 * https://chainding.wordpress.com/2006/06/05/write-maintainable-unit-tests-that-will-save-you-time-and-tears/
 * artofunittesting.com
+* http://www.natpryce.com/articles/000727.html
 
 Bookmark: 178/333
