@@ -6,6 +6,11 @@ Twitter
   * Hashtag:  #wewut
   * https://twitter.com/search?q=%23wewut
 
+https://www.goodreads.com/book/show/22605938-working-effectively-with-unit-tests
+
+Discussion group: https://groups.google.com/forum/#!forum/wewut
+
+
 ## Preface
 There are many motivators for creating a test or several tests:
 * validate the system
@@ -77,12 +82,11 @@ There are many motivators for creating a test or several tests:
   * Has “chainable” public methods for overriding the values in its instance variables.
 
 
-## Closing Thoughts
-TBD
 
 ## Further readings
 * https://chainding.wordpress.com/2006/06/05/write-maintainable-unit-tests-that-will-save-you-time-and-tears/
 * artofunittesting.com
 * http://www.natpryce.com/articles/000727.html
+* https://martinfowler.com/bliki/BroadStackTest.html
 
 Bookmark: 178/333
