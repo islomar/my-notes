@@ -88,5 +88,3 @@ There are many motivators for creating a test or several tests:
 * artofunittesting.com
 * http://www.natpryce.com/articles/000727.html
 * https://martinfowler.com/bliki/BroadStackTest.html
-
-Bookmark: 178/333
