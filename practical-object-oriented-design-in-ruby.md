@@ -28,7 +28,7 @@ https://github.com/skmetz/poodr
 * Hide instance variables: always wrap instance variables in accessor methods instead of directly referring to variables.
 * Hide data structures
 * Enforce Single Responsibility Everywhere: methods, like classes, should have a single responsibility.
-* Classes that do one thing *isloate* that thing from the rest of your application. This isolation allows change without consequence and reuse without duplication.
+* Classes that do one thing *isolate* that thing from the rest of your application. This isolation allows change without consequence and reuse without duplication.
 
 
 ## Chapter 3: Managing Dependencies
@@ -40,7 +40,14 @@ https://github.com/skmetz/poodr
 * If you cannot remove unnecessary dependencies, you should isolate them within your class.
 * Isolate instance creation.
 * Remove argument-order dependencies, e.g. using hashes for initialization arguments (hhmm...); you can even mix it: take a few fixed-order arguments, followed by an options hash.
-
+* You can also completely remove the defaults from the constructor and isolate them inside of a separate wrapping method.
+* Use factories: isolate all knowledge of the external interface in one place.
+* Do not allow external dependencies to permeate your code; protect yourself by wrapping each in a method that is owned by your own application.
+* Depend on things that change less often than you do:
+      * Some classes are more likely than others to have changes in requirements
+      * Concrete classes are more likely to change than abstract classes.
+      * Changing a class that has many dependents will result in widespread consequences.
+      
 
 ## Chapter 4: Creating Flexible Interfaces
 TBD
