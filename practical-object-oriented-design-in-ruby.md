@@ -50,22 +50,56 @@ https://github.com/skmetz/poodr
       
 
 ## Chapter 4: Creating Flexible Interfaces
-TBD
+* OO is *made up* of classes but *defined* by messages.
+* Messages reflect the living, animated application.
+* The conversation between objects takes place using their *interfaces*
+* *Interfaces* can be:
+      * Within a class (e.g. in Java).
+      * Duck typing
+* The public parts of a class are the stable parts; the private parts are the changeable parts.
+* The design goal is to retain maximum future flexibility while writing only enough code to meet today's requirements.
+* Public interfaces:
+      * Reveail its primary responsibility
+      * Are expected to be invoked by others
+      * Will not change on a whim
+      * Are safe for others to depend on
+      * Are thoroughly documented in the tests
+* It shows an example through sequence diagrams.
+* You don't send messages because you have objects, you have objects because you send messages
+* Tell don't ask.
+* The best possible situation is for an object to be completely independent of its context.
+* Construct public interfaces with an eye toward minimizing the context they require from others.
+* Avoid train wrecks.
+* Demeter: it might be not so bad to NOT avoid message chains that return *attributes* (balance the likelihood and cost of change against the cost of removing the violation)
+* Certains "violations" of Demeter reduce your application's flexibility and maintainability, while others make perfect sense.
+* The train wrecks of Demeter violations are clues that there are objects whose public interfaces are lacking.
+
 
 ## Chapter 5: Reducing Costs with Duck Typing
-TBD
+* Duck types are public interfaces that are not tied to any specific class.
+* Concrete code is easy to undertstand but costly to extend. Abstract code may initially seem more obscure but, once understood, is far easier to change.
+* Polymorphism in OOP referes to the ability of many different objects to responsd to the same message.
+* Hidden ducks:
+      * Case statements, isInstanceOf()...
+* Tests are the documentation for duck types.
+* *Monkey patching*: changing base classes (watch out!!)
+
 
 ## Chapter 6: Acquiring Behavior Through Inheritance
 TBD
 
+
 ## Chapter 7: Sharing Role Behavior with Modules
 TBD
+
 
 ## Chapter 8: Combining Objects with Composition
 TBD
 
+
 ## Chapter 9: Designing Cost-Effective Tests
 TBD
+
 
 ## Interesting Links
 * https://medium.com/@mithi/review-sandi-metz-s-poodr-ch-1-4-wip-d4daac417665
