@@ -44,9 +44,9 @@ https://github.com/skmetz/poodr
 * Use factories: isolate all knowledge of the external interface in one place.
 * Do not allow external dependencies to permeate your code; protect yourself by wrapping each in a method that is owned by your own application.
 * Depend on things that change less often than you do:
-      * Some classes are more likely than others to have changes in requirements
-      * Concrete classes are more likely to change than abstract classes.
-      * Changing a class that has many dependents will result in widespread consequences.
+    * Some classes are more likely than others to have changes in requirements
+    * Concrete classes are more likely to change than abstract classes.
+    * Changing a class that has many dependents will result in widespread consequences.
       
 
 ## Chapter 4: Creating Flexible Interfaces
@@ -54,16 +54,16 @@ https://github.com/skmetz/poodr
 * Messages reflect the living, animated application.
 * The conversation between objects takes place using their *interfaces*
 * *Interfaces* can be:
-      * Within a class (e.g. in Java).
-      * Duck typing
+    * Within a class (e.g. in Java).
+    * Duck typing
 * The public parts of a class are the stable parts; the private parts are the changeable parts.
 * The design goal is to retain maximum future flexibility while writing only enough code to meet today's requirements.
 * Public interfaces:
-      * Reveail its primary responsibility
-      * Are expected to be invoked by others
-      * Will not change on a whim
-      * Are safe for others to depend on
-      * Are thoroughly documented in the tests
+    * Reveail its primary responsibility
+    * Are expected to be invoked by others
+    * Will not change on a whim
+    * Are safe for others to depend on
+    * Are thoroughly documented in the tests
 * It shows an example through sequence diagrams.
 * You don't send messages because you have objects, you have objects because you send messages
 * Tell don't ask.
@@ -79,8 +79,7 @@ https://github.com/skmetz/poodr
 * Duck types are public interfaces that are not tied to any specific class.
 * Concrete code is easy to undertstand but costly to extend. Abstract code may initially seem more obscure but, once understood, is far easier to change.
 * Polymorphism in OOP referes to the ability of many different objects to responsd to the same message.
-* Hidden ducks:
-      * Case statements, isInstanceOf()...
+* Hidden ducks: Case statements, isInstanceOf()...
 * Tests are the documentation for duck types.
 * *Monkey patching*: changing base classes (watch out!!)
 
