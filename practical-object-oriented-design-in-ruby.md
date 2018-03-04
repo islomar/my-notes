@@ -85,11 +85,34 @@ https://github.com/skmetz/poodr
 
 
 ## Chapter 6: Acquiring Behavior Through Inheritance
-TBD
-
+* Small, trustworthy self-contained objects with minimal context, clear interfaces, and injected dependencies are inherently reusable.
+* Inheritance is, at its core, a mechanism for *automatic message delegation*. It defines a forwarding path for not-understood messages.
+* JS has prototypical inheritance and Ruby has *modules*.
+* The problem that inheritance solves: highly related types that share common behavior but differ along some dimension.
+* Sublcasses are *specializations* of their superclasses.
+* It almost never makes sense to create an abstract superclass with only one sublcass.
+* The author recommends a up-down-up approach: first take all the superclass content to a subclass, then move whatever is common to the superclass (for not leaving anything specif by accident at the superclass).
+* Use the *template method pattern*.
+* Avoid calling super() from a subclass: use hook messages through template method pattern also instead, e.g. with a post_initialize(). 
+      * **New sublcasses need only implement the template methods**.
+      * Abstract superclasses use the template method pattern to invite inheritors to supply specializations.
+      
 
 ## Chapter 7: Sharing Role Behavior with Modules
-TBD
+* Use of classical inheritance is always optional; every problem that it solves can be solved another way.
+* Some problems require sharing behavior among otherwise unrelated objects. This common behavior is orthogonal to class; it's a *role* an object plays.
+* In Ruby, you can achieve it with *modules*.
+* Let objects speak for themselves: objects should manage themselves; they should contain their own behavior.
+      * Avoid anemic model.
+      * Tell don't ask
+* Classes themselves are objects in their own right: they're an instance of the Class class.
+* All ot the code in an abstract superclass should apply to every class that inherits it.
+* Superclasses should not contain code that applies to some, but not all, subclasses.
+* Subclasses should not override a method.
+* Subclasses agree to a *contract*; they promise to be substituable for their superclasses.
+* **Liskov Substitution Principle (LSP)**: A subclass can be used anywhere its superclass would do; you should be able to substitute a superclass S by its subclass T.
+* Avoid writing code that requires its inheritors to send super; instead use hook messages.
+* Create shalow hierarchies: avoid deep or wide hierarchies.
 
 
 ## Chapter 8: Combining Objects with Composition
