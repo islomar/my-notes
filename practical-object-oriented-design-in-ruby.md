@@ -116,7 +116,30 @@ https://github.com/skmetz/poodr
 
 
 ## Chapter 8: Combining Objects with Composition
-TBD
+* UML: composition is represented as a black diamond.
+* *Composition* often involves delegation but the term means something more. A *composed* object is made up of parts with which it expects to interact via well-defined interfaces.
+* Composition describes a *has-a* relationship.
+* *Aggregation* is exactly like composition except that the contained object has an independent life.
+* Classical inheritance is a *code arrangement technique*.
+* Composition allows objects to have structural independence, but at the cost of explicit message delegation.
+* Composition contains far fewer built-in depdencies than inheritance; it is very often the best choice.
+* **Inheritance**:
+   * Use of inhteritance results in code that can be described as *open-closed*.
+   * Hierarchies are therefore *exemplary*; by their nature they provide guidance for writeing the code to extend them.
+   * You might be writing code that will be used by others for purposes you did not anticipate. It's easy to extend incorrectly modeled hierarchies.
+   * This is the classical inheritance's greatest stregth and biggest weakness; sublcasses are bound, irrevocably and by design, to the classes above them in the hierarchy. These built-in dependencies amplify the effects of modifications made to superclasses.
+* **Composition**:
+   * Create many small objects that contain straightforward responsibilities that are accesible through clearly defined interfaces.
+   * Composed objects tend to consist of simple, discrete entities that can easily be rearranged into new combinations.
+   * The combined operation of the whole may be less than obvious.
+   * The benefits of structural independence are gained at the cost of automatic message delegation.
+* Inheritance is specialization.
+* Inheritance is best suited to adding functionally to existing classes when you will use most of the old code and add relatively small amounts of new code.
+* Use composition when the behavior is more than the sum of its parts.
+* Use inheritance for *is-a* relationships.
+* Use duck types for *behaves-like-a* relationships.
+* Use composition for *has-a* relationships.
+* The more parts an object has, the more likely it is that is should be modeled with composition.
 
 
 ## Chapter 9: Designing Cost-Effective Tests
