@@ -143,7 +143,34 @@ https://github.com/skmetz/poodr
 
 
 ## Chapter 9: Designing Cost-Effective Tests
-TBD
+* Changeability is the only design metric that matters; code that's easy to change *is* well-designed.
+* Good design preserves maximum flexibility at minimum cost by putting off decisions at every opportunity, deferring commitments until more specific requirements arrive.
+* The true purpose of testing is to reduce costs.
+* Fixing bugs early always lower costs.
+* Tests provide the only reliable documentation of design.
+* Tests allow you to safely defer design decisions.
+* Good design naturally progressses toward small independent objects that rely on abstractions.
+* Tests are the canary in the coal mine; when the design is bad, testing is hard.
+* Tests should concentrate on the incoming or outgoing messages that cross an object's boundaries.
+* Value vs. behavior testing.
+* Objects should make assertions about state *only* for messages in their own public interfaces.
+* *Queries*: outgoing messages with no side effects.
+* *Commands*: outgoing messages with side effects.
+* Proving that a message gets sent is a test of behavior, not state, and involves assertions about the number of times, and with what arguments, the message is sent.
+* Incoming messages should be tested for the state they return. Outgoing command messages should be tested to ensure they get sent. Outgoing query messages should not be tested.
+* **BDD** takes an outside-in approach, creating objects at the boundary of an application and working its way inward, mocking as necessary to supply as-yet-unwritten objects.
+* **TDD** takes an inside-out approach, usually starting with tests of domain objects and then reusing these newly created domain objects in the tests of adjacent layers of code.
+* Isolate the Object Under Test
+* Inject dependencies as roles.
+* Roles need tests of their own.
+* Use tests to document roles.
+* In general, don't test private methods.
+* Mocks are tests of behavior, as opposed to tests of state.
+* The author created a test for the interface, which gets "inherited" by the tests who validate the implementations of that interface.
+* She creates as well a test for the subclasses (e.g. to check that it implements the template methods), which must be "inherited" as well by the implementationt tests.
+* The author creates its own double for a role in a test (or you can use the corresponding doubles library).
+* You must test concrete abstract behavior.
+* Write one shareable test for the overall interface and another for the subclass responsibilities. Diligently isolate responsibilities.
 
 
 ## Interesting Links
