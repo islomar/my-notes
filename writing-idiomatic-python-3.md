@@ -62,6 +62,25 @@ Author Jeff Knupp
     * classes should be used only when necessary and almost never at API boundaries.
   * **Formatting**
     * Use all capital letters when declaring global constant values.
-    
+    * Avoid placing multiple statements on a single line.
+    * Format your code according to PEP8
+  * **Executable scripts**
+    * Use sys.exit in your script to return proper error codes.
+    * Use the `if __name__ == '__main__'` pattern to allow a file to be both imported and run directly.
+  * **Imports**
+    * Prefer absolute imports to relative imports.
+    * Do not use from foo import * to import the contents of a module.
+    * If the package/module name is too long, use an as clause to shorten it.
+    * Arrange your import statements in a standard order:
+      1. standard library modules
+      2. third-party library modules installed in site-packages
+      3. modules local to the current project
+
+
 ## Chapter 4: General advice
-TBD
+* **Avoid reinventing the wheel**
+  * Learn the Contents of the Python Standard Library
+  * Get to know PyPI (the Python Package Index)
+* **Modules of notes**
+  * Learn the contents of the itertools module: https://docs.python.org/3/library/itertools.html#recipes
+  * Use functions in the os.path module when working with directory paths.
