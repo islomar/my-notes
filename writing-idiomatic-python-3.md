@@ -32,7 +32,7 @@ Author Jeff Knupp
 * **Classes**
   * Use underscores in function and variable names to help mark “private” data. One underscore for 'protected', two for 'private'.
     * Few developers are aware of the fact that prepending attribute names in a class does actually do something. Prepending a single underscore means that the symbol won’t be imported if the 'all' idiom is used. Prepending two underscores to an attribute name invokes Python’s name mangling. This has the effect of making it far less likely someone who subclasses your class will inadvertently replace your class’s attribute with something unintended.
- * Define `__str__` in a class to show a human-readable representation.
+  * Define `__str__` in a class to show a human-readable representation.
 
 * **Sets**
   * Use sets to eliminate duplicate entries from Iterable containers.
