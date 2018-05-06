@@ -68,13 +68,18 @@
 * Discover them with heap profilers.
 
 ### Item 8: Avoid finalizers and cleaners
+* https://dzone.com/articles/deprecating-javas-finalizer
+* finalizers are deprecated in Java 9 (Cleaner appears)
 * Finalizers are unpredictable, often dangerous, and generally unnecessary.
 * There is no guarantee they'll be executed promptly.
 * Never do anything time-critical in a finalizer or cleaner.
 * Uncaught exception thrown during finalization is ignored, anf finalization of that object terminates.
 * There is a severe performance penalty for using finalizers and cleaners: finalizers inhibit efficient garbage collection.
 * Furthermore, finalizers have a serious security problem: they open your class up to finalizer attacks.
-
+* To protect nonfinal classes from finalizer attacks, write a fina *finalize* method that does nothing
+* Solution: implement *AutoCloseable* and require its clients to invoke the *close* method
+* Good uses of finalizers and cleaners: safety net in case the owner of a resource neglects to call its *close* method (better late than never).
+* Instantiate cleaner objects in try-with-resource blocks
 
 ## Chapter 3: Methods common to all objects
 TBD
