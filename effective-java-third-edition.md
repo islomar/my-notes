@@ -35,20 +35,45 @@
  * To make it serializable: implements Serializable, make the field *transient* and implement readResove()
 * Another way: declare a single-element enum. It's often the best way.
 
-### Item 4: Enforce noninstantiability witha private constructor
-TBD
+### Item 4: Enforce noninstantiability with a private constructor
+* There might be good reasons for creating a non instantiable class:
+ * Group related methods on primitive values or arrays.
+ * Group static methods, including factories
+ * Group methods on a final class, since you can't put them in a subclass
+* Attempting to enforce noninstantiability by making a class abstract does not work: you might subclass it and the instantiate the subclass.
+* A class can be mad noninstantiable by including a private constructor which throws an Exception.
 
-### Item 5: TBD
-TBD
+### Item 5: Prefer dependency injection to hardwiring resources
+* Static utility classes and singletons are inappropriate for classes whose behavior is parameterized by an underlying resource.
+* Solution: pass the resource into the constructor when creating a new instance.
+* DI is equally applicable to constructors, static factories and builders.
+* A useful variant is to pass a *resource factory* to the constructor
+* DI frameworks: Dagger, Guice, Spring...
 
-### Item 6: TBD
-TBD
+### Item 6: Avoid creating unnecessary objects
+* `String s = new String("patata"):` DON'T DO THIS!!!
+* `String s = "patata"`: it is guaranteed that the object will be reused by any other code running inthe same VM that happens to  contain the same string literal.
+* You can avoid creating unnecessary objects by using *stastic factory methods*
+* If creating an object is expensive, you can cache it for reuse (see Pattern example at the end of this file).
+* Another way to create unnecessary objects is *autoboxing*: prefer primitives to boxed primitives, and watch out for unintentional autoboxing.
+* Avoid creating your own *objects pool* unless the objects in the pool are extremely heavyweight (e.g. database connection).-
 
-### Item 7: TBD
-TBD
+### Item 7: Eliminate obsolete object references
+* An *obsolete reference* is simply a reference that will never be dereferenced again.
+* Memory leaks in garbage-collected languages = *unintentional object retentions*
+* Solution: null out references once they become obsolete. Although that should be the exception rather than the norm. The best way to eliminate an obsolete reference is to let the variable that contained the reference fall out of scope.
+* Whenever a class manages its own memory, the programmer should be alert for memory leaks.
+* Another common source of memory leaks is caches. Solutions: e.g. use `WeakHashMap`
+* Another source of memory leaks: listeners and other callbacks.
+* Discover them with heap profilers.
 
-### Item 8: TBD
-TBD
+### Item 8: Avoid finalizers and cleaners
+* Finalizers are unpredictable, often dangerous, and generally unnecessary.
+* There is no guarantee they'll be executed promptly.
+* Never do anything time-critical in a finalizer or cleaner.
+* Uncaught exception thrown during finalization is ignored, anf finalization of that object terminates.
+* There is a severe performance penalty for using finalizers and cleaners: finalizers inhibit efficient garbage collection.
+* Furthermore, finalizers have a serious security problem: they open your class up to finalizer attacks.
 
 
 ## Chapter 3: Methods common to all objects
@@ -59,3 +84,6 @@ TBD
 * Java 8 requires all static members of an interface to be public.
 * Java 9 allows private static methods, but static fields and static member classes are still required to be public.
 * *Simulated self-type idiom*: workaround for the fact that Java lacks a self type.
+* `String.matches()`is not suitable for repeated use in performance-critical situations: 
+  * it internally creates a Pattern instance for the regex and uses it only once. Creating a Pattern instance is expensive because it requries compiling the regex into a finite state machine.
+  * Solution: explicitly compile the regex into a Pattern instance (immutable) as part of class intialization, cache it and reuse the same instance for every invocation.
