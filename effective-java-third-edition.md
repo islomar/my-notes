@@ -81,8 +81,45 @@
 * Good uses of finalizers and cleaners: safety net in case the owner of a resource neglects to call its *close* method (better late than never).
 * Instantiate cleaner objects in try-with-resource blocks
 
+
 ## Chapter 3: Methods common to all objects
+* Object nonfinal methods: *equals*, *hashCode*, *toString*, *clone* and *finalize*.
+
+### Item 10: Obey the general contract when overriding equals
+* When to override it: for *value classes*. Only when a class has a notion of logical equality that differes from mere object identity and a superclass has not already overriden equals.
+* Enum type does not require *equals* method to be overriden.
+* The *equals* method implements an *equivalence relation*: reflexive, symmetric, transitive, consistent, non-nullity.
+
+### Item 11: Always override hashCode when you override equals
+* Equal objects must have equal hash codes.
+* Used by collections like HashMap and HashSet.
+* If a class is immutable and the cost of computing the hash code is significant, you might consider caching the hash code in the object rather than recalculatint it each time it is requested. E.g. lazily initialize.
+
+### Item 12: Always override toString
+* Standard, unambiguous, human-readable representation of the object.
+* Document your intentions, whether you specify a format or not.
+* Provide programmatic access to the information contained in the value returned by toString.
+
+### Item 13: Override clone judiciously
+* Immutable classes whould never provide a *clone* method.
+* A class implementing Cloneable is expected to provide a properly functioning public clone method.
+* First, call *super.clone()*
+* Call clone recursively. Better deepCopy.
+* A better approach to object copying is to provide a *copy constructor* or *copy factory*:
+ * E.g. `public Yum(Yum yum){ ... }`, `public static Yum newInstance(Yum yum) { ... }`
+
+### Item 14: Consider implementing Comparable
+* Use of the relational operators *>* and *<* in *compareTo* methods is verbose and error-prone and no longer recommended.
+* Instead, use static *compare* methods existing in boxed primitives (introduced in Java 7).
+* Java 8: the *Comparator* interface was outfitted with a set of *comparator construction methods*, which enable fluent construction of comparators.
+
+## Chapter 4: Classes and Interfaces
+### Item 15: Minimize the accesibility of classes and members
 TBD
+
+## Chapter 5: Generics
+TBD
+
 
 ## General
 * Java 8: interfaces can contain static methods.
