@@ -115,7 +115,9 @@
 
 ## Chapter 4: Classes and Interfaces
 ### Item 15: Minimize the accesibility of classes and members
-TBD
+* Information hiding = encapsulation
+* Make each class or member as inaccessible as possible (private, protected and public)
+* Classes can only be *package-private* or *public*
 
 ## Chapter 5: Generics
 TBD
