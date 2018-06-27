@@ -10,7 +10,7 @@
 ## Chapter 2
 ### Item 1: consider static factory methods instead of constructors
 * Criticism: https://dzone.com/articles/constructors-or-static-factory-methods
-* Advantages: 
+* Advantages:
   * they have names
   * they're not required to create a new object each time they're invoked (singleton, immutable classes, noninstantiable, etc.)
   * they can return an object of any subtype of their return type: interface-based frameworks
@@ -118,6 +118,37 @@
 * Information hiding = encapsulation
 * Make each class or member as inaccessible as possible (private, protected and public)
 * Classes can only be *package-private* or *public*
+* It is wrong for a class to have a public static final array field, or an accessor that returns such a field.
+* Java 9: a module is a grouping of packages, like a package is a grouping of classes.
+
+### Item 16: In public classes, use accessor methods, not public fields
+* Encapsulation, enforce invariants.
+* Public classes should never expose mutable fields.
+* If a class is package-private or is a private nested class, there is nothing inherently wrong with expositing its data fields.
+
+### Item 17: minimize mutability
+* Don't provide methods that moify the object's state.
+* Ensure that the class can't be extended.
+  * Either by using `final` at the class declaration...
+  * or by using a private constructor with a public static factory.
+* Make all fields final.
+* Make all fields private.
+* Ensure exclusive access to any mutable components.
+* The major disadvantage of immutable classes is that they require a separate object for each distinct value.
+* `java.util.Date` and `java.util.Point` should have been made immutable.
+* Constructors should create fully initialized objects with all of their invariants established.
+
+## Item 18: Favor composition over inheritance
+* Inheritance violates encapsulation: a sublcass depends on the implementation details of its superclass for its proper function.
+  * Example: HashSet's addAll() method is implemented on top of its add() method.
+* Instead of inheriting: create a a private field with the superclass, and use *forwarding methods*.
+* You can create a *forwarding class*, e.g. `ForwardingSet<E>`. You extend your forwarding class, which implements all the interface methods in a forwarding way.
+* *Decorator* pattern = *wrapper* class.
+  * Delegation = composition + forwarding (though for being pure, the wrapper object should pass itself)
+  * Disadavantages: not usable for callback frameworks => the SELF problem.
+    * "In short, when you send a message to an object, it has a notion of "self" where it can find attributes and other methods. When that object delegates to another, then any reference to "self" always refers to the original message recipient."
+  * Guava provides forwarding classes for all of the collection interfaces.
+
 
 ## Chapter 5: Generics
 TBD
@@ -128,6 +159,10 @@ TBD
 * Java 8 requires all static members of an interface to be public.
 * Java 9 allows private static methods, but static fields and static member classes are still required to be public.
 * *Simulated self-type idiom*: workaround for the fact that Java lacks a self type.
-* `String.matches()`is not suitable for repeated use in performance-critical situations: 
+* `String.matches()`is not suitable for repeated use in performance-critical situations:
   * it internally creates a Pattern instance for the regex and uses it only once. Creating a Pattern instance is expensive because it requries compiling the regex into a finite state machine.
   * Solution: explicitly compile the regex into a Pattern instance (immutable) as part of class intialization, cache it and reuse the same instance for every invocation.
+
+
+## Bookmark
+Items 18/90
