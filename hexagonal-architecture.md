@@ -20,3 +20,10 @@ Code example: https://github.com/CodelyTV/cqrs-ddd-php-example
 ## Repository Pattern
 **Resources**
 * https://thinkinginobjects.com/2012/08/26/dont-use-dao-use-repository/
+
+**To do**
+* https://pro.codely.tv/library/arquitectura-hexagonal/66748/path/step/35626639/
+
+
+## Infrastructure Services
+TBD
