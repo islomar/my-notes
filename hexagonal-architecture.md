@@ -17,13 +17,14 @@ Code example: https://github.com/CodelyTV/cqrs-ddd-php-example
 * https://github.com/CodelyTV/scala-http-api/
 * https://github.com/CodelyTV/cqrs-ddd-php-example
 
-## Repository Pattern
-**Resources**
-* https://thinkinginobjects.com/2012/08/26/dont-use-dao-use-repository/
 
-**To do**
-* https://pro.codely.tv/library/arquitectura-hexagonal/66748/path/step/35626639/
+## Repository Pattern
+* https://thinkinginobjects.com/2012/08/26/dont-use-dao-use-repository/
 
 
 ## Infrastructure Services
-TBD
+* https://codely.tv/screencasts/errores-comunes-interfaces-solid/
+
+
+## TO DO
+* Review their example
