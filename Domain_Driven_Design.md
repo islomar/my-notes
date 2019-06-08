@@ -1,8 +1,8 @@
 # DDD
 
 ## CodelyTV: Learn DDD in 20 minutes
-Aprende DDD en 20 minutos >> https://www.youtube.com/watch?v=dH5aSQLXtKg
-DDD y CQRS: Preguntas Frecuentes >> https://www.youtube.com/watch?v=auEhX4WfCRA
+* Aprende DDD en 20 minutos >> https://www.youtube.com/watch?v=dH5aSQLXtKg
+* DDD y CQRS: Preguntas Frecuentes >> https://www.youtube.com/watch?v=auEhX4WfCRA
 
 PHP Example: https://github.com/CodelyTV/cqrs-ddd-php-example
 https://github.com/islomar/payments-api
