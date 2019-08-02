@@ -15,6 +15,7 @@
     - VPCs are always per account
     - VPC Peering for connecting different VPCs.
     - When there are tones of VPCs to connect: [VPC Transit Gateway](https://aws.amazon.com/transit-gateway/)
+    - **VPC Sharing** allows customers to share subnets with other AWS accounts within the same AWS Organization. Essentially, we can now decouple accounts and networks.
 * If I want to put an instance in the AZ A, I will have to tell AWS to use the subnet where that AZ is configured.
 * We can create several **subnets** in the same AZ, for example for having public vs private subnets (e.g. for having the database in the private subnet, so that it can only be accessed from my own subnets).
 * I can also have different VPCs for different environments in my company: a VPC for Production, another one for Staging, etc.
@@ -30,6 +31,18 @@
     * M3: general purpose
     * Rx: memory requirements
     * Cx: CPU requirements
+
+
+## SSH
+* User/password should be disable, and use SSH public/private key.
+    - https://linuxcode.wordpress.com/2009/08/08/autentificacion-mediante-claves-publicas-en-ssh/
+* AWS Console >> Network & Security >> Key Pair
+* I configure AWS with my public key, and Amazon will put it in the servers when instantiating them.
+
+
+## Security groups
+* [CIDR](https://blog.soporteti.net/que-es-el-cidr-subnetting-o-subneteo-parte-3/)
+
  
 ##  AWS multi-account
 * https://aws.amazon.com/answers/account-management/aws-multi-account-billing-strategy/
@@ -38,6 +51,8 @@
 * https://aws.amazon.com/blogs/networking-and-content-delivery/vpc-sharing-a-new-approach-to-multiple-accounts-and-vpc-management/
 * [AWS Organisations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html)
     - AWS Organizations is an account management service that enables you to consolidate multiple AWS accounts into an organization that you create and centrally manage. 
-    
-## Interesting links
+  
+  
+## Interesting links or tricks
 * Open source load testing tool: https://locust.io/    
+* `cat xxx | pbcopy`, for copying to the
