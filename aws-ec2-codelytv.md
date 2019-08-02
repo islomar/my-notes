@@ -36,12 +36,23 @@
 ## SSH
 * User/password should be disable, and use SSH public/private key.
     - https://linuxcode.wordpress.com/2009/08/08/autentificacion-mediante-claves-publicas-en-ssh/
+    - [Public key cryptography - Diffie-Hellman Key Exchange](https://www.youtube.com/watch?v=YEBfamv-_do)
+        - Exchange of `<generator> mod <prime_modulus>`, being a huge prime modulus (prime because it has the property of generating equally distributed values). Alice and Bob get each a private random number as the power (generator ^ random_power) and sends the result publicly to the other one. And then, the other part calculates the power again, usin as a base the result received. They both will get the same value, which is used as the secret.
+    * `sshd_config` file with `PasswordAuthentication no` and `PermitRootLogin no`
 * AWS Console >> Network & Security >> Key Pair
 * I configure AWS with my public key, and Amazon will put it in the servers when instantiating them.
+* The public key goes into `~/.ssh/authorized_keys`
 
-
-## Security groups
+## Security Groups (SG)
 * [CIDR](https://blog.soporteti.net/que-es-el-cidr-subnetting-o-subneteo-parte-3/)
+* To define who can access or not to a AWS instance.
+* It is a firewall.
+* It is in EC2 and VPC.
+* Like IPtables, but here the rules are only for ALLOWING inbound/outbound traffic: if a rule does not appear, it is not allowed.
+* A SG is always associated to a VPC.
+* You can configure as origin/destination either a CIDR or another SG identifier.
+* EC2 instances have dynamic IPs. AWS has a feature called Elastic IP's, which allows to reserve fixed IP addresses and assign them to the instances.
+* You can assign several SG to an instance.
 
  
 ##  AWS multi-account
@@ -55,4 +66,5 @@
   
 ## Interesting links or tricks
 * Open source load testing tool: https://locust.io/    
-* `cat xxx | pbcopy`, for copying to the
+* `cat xxx | pbcopy`, for copying to the clipboard
+* `shred -v  --remove id_rsa.pub` for securely delete a file: https://www.computerhope.com/unix/shred.htm
