@@ -43,6 +43,7 @@
 * I configure AWS with my public key, and Amazon will put it in the servers when instantiating them.
 * The public key goes into `~/.ssh/authorized_keys`
 
+
 ## Security Groups (SG)
 * [CIDR](https://blog.soporteti.net/que-es-el-cidr-subnetting-o-subneteo-parte-3/)
 * To define who can access or not to a AWS instance.
@@ -62,9 +63,24 @@
 * https://aws.amazon.com/blogs/networking-and-content-delivery/vpc-sharing-a-new-approach-to-multiple-accounts-and-vpc-management/
 * [AWS Organisations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html)
     - AWS Organizations is an account management service that enables you to consolidate multiple AWS accounts into an organization that you create and centrally manage. 
+
+
+## Create EC2 instance
+* Add a tag with key "Name".
+* `User data` configuration: it will be executed only the first time
+* Whatever you put in `/etc/rc.local` gets executed each time the machine restarts
+
+
+## Configure the domain with Route53
+* https://es.wikipedia.org/wiki/Sistema_de_nombres_de_dominio#Tipos_de_registros_DNS
+* https://howdns.works/ep1/
   
   
 ## Interesting links or tricks
 * Open source load testing tool: https://locust.io/    
 * `cat xxx | pbcopy`, for copying to the clipboard
 * `shred -v  --remove id_rsa.pub` for securely delete a file: https://www.computerhope.com/unix/shred.htm
+
+
+## To review at the company
+* EC2 config? e.g. `tenancy`
