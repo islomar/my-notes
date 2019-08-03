@@ -82,6 +82,13 @@
 * Hosted zone: a group of rules associated to a domain.
 * From a hosted zone, you can create several *Record Set* = DNS register.
 * `dig <domain_name>` to get the IP address for a domain
+* How to access the app without indicating a specific port?
+    - Option A: start the app in the port 80 (only possible as root, since it is a port < 1024, reserved).
+    - Option B: use a load balancer (ELB) in front of the EC2 instance, which redirects the port from 80 to whatever.
+
+
+## Creating your own AMI
+* From EC2 instance list: right-click > Image > Create image
 
   
 ## Interesting links or tricks
