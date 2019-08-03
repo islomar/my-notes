@@ -73,8 +73,16 @@
 
 ## Configure the domain with Route53
 * https://es.wikipedia.org/wiki/Sistema_de_nombres_de_dominio#Tipos_de_registros_DNS
+    - A, AAA, CNAME, NS, etc.
+    - `A`:  IPv4 addresss. We configure that, in order to resolve a domain name, it should use a specific IP.
+    - `CNAME` contains another DNS server to ask about.
 * https://howdns.works/ep1/
-  
+* We can register domain directly from Amazon.
+* You can manage the domains from Amazon, even if you didn't register it there. You have to configure the DNS type NameServers (NS) 
+* Hosted zone: a group of rules associated to a domain.
+* From a hosted zone, you can create several *Record Set* = DNS register.
+* `dig <domain_name>` to get the IP address for a domain
+
   
 ## Interesting links or tricks
 * Open source load testing tool: https://locust.io/    
