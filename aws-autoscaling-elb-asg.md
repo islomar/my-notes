@@ -27,8 +27,8 @@
   - The access register is disabled by default. You only pay for the S3 storage.
 * We can configure **two different target groups** for a load balancer: e.g. to discriminate depending on the path (e.g. `/pong`) or the host (e.g. for subdomains).
   - You can not do in creation time, only afterwards, edith the rule.
-
-
+* **Auto Scaling Group**: we tell it how many instances we want, and the ASG will manage them. If configure 3 instances for the ASG, it will keep always 3 up and running.
+* ALB - Target Groupt - ASG - EC2 instances
 
 ## Doubts
 * What is the algorithm for balancing? Pure round-robin?
