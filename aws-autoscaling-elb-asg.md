@@ -18,11 +18,18 @@
   - **Target Groups**: you define the group of EC2 instances than can receive the traffic from the LB.
   - **Listeners**: the ports where the LB will be listening to receive requests.
   - **Health check**: the path of the target group where, periodically, the LB will make a request to see if the EC2 instances are still alive.
-    - **Advanced health check settings**: threshold, timeout, interval, HTTP success status code 
+    - **Advanced health check settings**: healthy/unhealthy threshold (how many times the LB should receive an answer from an instace in order to consider it healthy/unhealthy), timeout, interval, HTTP success status code 
+    - Other possible states for the instance: **draining** (the instance is deregistering from the ELB and is getting freed  from connections)
   - **Register targets**: you select the EC2 instances that you want to be a part of the target group.
 * A LB does not send traffic to a new instance until having checked that it is healthy (it answers).   
-  
-  
-  ## Doubts
-  * What is the algorithm for balancing? Pure round-robin?
-  * Is it possible to configure an algorithm base on CPU-Memory consumption?
+* **LB access logs**: 
+  - https://docs.aws.amazon.com/es_es/elasticloadbalancing/latest/application/load-balancer-access-logs.html
+  - The access register is disabled by default. You only pay for the S3 storage.
+* We can configure **two different target groups** for a load balancer: e.g. to discriminate depending on the path (e.g. `/pong`) or the host (e.g. for subdomains).
+  - You can not do in creation time, only afterwards, edith the rule.
+
+
+
+## Doubts
+* What is the algorithm for balancing? Pure round-robin?
+* Is it possible to configure an algorithm base on CPU-Memory consumption?
