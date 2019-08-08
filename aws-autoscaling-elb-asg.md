@@ -28,7 +28,12 @@
 * We can configure **two different target groups** for a load balancer: e.g. to discriminate depending on the path (e.g. `/pong`) or the host (e.g. for subdomains).
   - You can not do in creation time, only afterwards, edith the rule.
 * **Auto Scaling Group**: we tell it how many instances we want, and the ASG will manage them. If configure 3 instances for the ASG, it will keep always 3 up and running.
+  - In order to create an ASG, we need to create a **Launch Configuration**: a template to define how we want that the ASG starts new instances (e.g. AMI to use, SG, keys, etc.)
+  - You can define that there will be an ELB in front of the ASG, and assign a Target Group: each time an instance is started in this ASG, it will belong to that TG, and so the ELB will dispatch requests to it.
+  - **Scaling policies**: I configure the ASG to react to some events, e.g. to add more instances if there is a lot of traffic, or downgrade the number of instances at night.
+    - You define the minimum and maximum number of instances.
 * ALB - Target Groupt - ASG - EC2 instances
+
 
 ## Doubts
 * What is the algorithm for balancing? Pure round-robin?
