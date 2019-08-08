@@ -32,6 +32,8 @@
   - You can define that there will be an ELB in front of the ASG, and assign a Target Group: each time an instance is started in this ASG, it will belong to that TG, and so the ELB will dispatch requests to it.
   - **Scaling policies**: I configure the ASG to react to some events, e.g. to add more instances if there is a lot of traffic, or downgrade the number of instances at night.
     - You define the minimum and maximum number of instances.
+    - `Increase/decrease group size`: e.g. when a Cloudwatch alarm gets triggered, from several metrics that you can configure (e.g. when CPU utilization is over 80% for 5 minutes). 
+    - You can configure several **Steps** for a policy
 * ALB - Target Groupt - ASG - EC2 instances
 
 
