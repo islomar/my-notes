@@ -17,6 +17,7 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
   - `kubectl run hello-world --image=fiunchinho/codely-docker:latest --port=80`
   - `kubectl port-forward deployment/hello-world 8000:80` , we need this command to expose the port to the host
 * Run `eval $(minikube docker-env)` to be able to use the Docker command from minikube
+* *kube-proxy* for load balancing
 
 
 ## Pods
@@ -25,7 +26,21 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 * Usually, 1 *pod* = 1 app
 * A *pod* gets one IP (all the containers in the same *pod* are reachable through the same IP). It is an internal IP.
 * Everything inside a *pod* belongs to a same cgroup, and they sare the same *namespace*.
+* Pods are ephymeral, they have a name.
+* A *service* is a group of pods
+* Probes
+  - *liveness*: healthy
+  - *readiness*: ready to service requests
+
+
+## Namespaces
+* Virtual clusters inside a physical cluster
+* resource names can be duplicated in different namespaces
+* it allows fine-grained resource usage (quotas) and authorization (access control)
 
 
 ## Interesting links
 * [Kubernetes: the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+* Alternatives to minikube:
+  - https://microk8s.io
+  - https://github.com/kubernetes-sigs/kind
