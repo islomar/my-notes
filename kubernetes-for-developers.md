@@ -18,12 +18,14 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
   - `kubectl port-forward deployment/hello-world 8000:80` , we need this command to expose the port to the host
 * Run `eval $(minikube docker-env)` to be able to use the Docker command from minikube
 
+
 ## Pods
 * It's the minimum unit of execution.
 * Several containers can run in a *pod*.
 * Usually, 1 *pod* = 1 app
 * A *pod* gets one IP (all the containers in the same *pod* are reachable through the same IP). It is an internal IP.
 * Everything inside a *pod* belongs to a same cgroup, and they sare the same *namespace*.
+
 
 ## Interesting links
 * [Kubernetes: the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
