@@ -31,6 +31,9 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 * Probes
   - *liveness*: healthy
   - *readiness*: ready to service requests
+* `kubectl run hello-world --image=fiunchinho/codely-docker:latest --restart=Never --port=80 --dry-run -o yaml > pod.yaml`: this is a **generator**, it generates an object in K8s, a *Pod*.
+* `kubectl create -f pod.yaml`: create the object defined in `pod.yaml`
+* `kubectl describe pod hello-world`
 
 
 ## Namespaces
@@ -43,6 +46,7 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 * [Kubernetes: the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 * https://platform9.com/blog/kubernetes-vs-ecs/
 * https://github.com/praqma-training/kubernetes-katas
+* https://github.com/vmware/octant
 * Alternatives to minikube:
   - https://microk8s.io
   - https://github.com/kubernetes-sigs/kind
