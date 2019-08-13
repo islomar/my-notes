@@ -41,6 +41,7 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 
 ## Interesting links
 * [Kubernetes: the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+* https://github.com/praqma-training/kubernetes-katas
 * Alternatives to minikube:
   - https://microk8s.io
   - https://github.com/kubernetes-sigs/kind
