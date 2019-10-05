@@ -4,6 +4,7 @@ https://www.goodreads.com/book/show/23398748-doing-good-better
 ## Reflections
 * What does this charity do?
 * How much impact in improving peopleś life does a programme have?
+  * [QUALY](https://en.wikipedia.org/wiki/Quality-adjusted_life_year)
 * How roubst is the evidence behind a charity programme?
 * How cost-effective is each programme area?
 * How well is the programme implemented?
@@ -15,7 +16,8 @@ https://www.goodreads.com/book/show/23398748-doing-good-better
 * https://www.givewell.org/
 * https://80000hours.org/
 * https://www.givingwhatwecan.org/
-* https://www.booksforafrica.org/
+* https://www.developmentmedia.net/
 * https://www.givedirectly.org/
 * Antimalarial bed nets
-* [QUALY](https://en.wikipedia.org/wiki/Quality-adjusted_life_year)
+* https://www.booksforafrica.org/
+
