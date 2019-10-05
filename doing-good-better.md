@@ -9,7 +9,7 @@ https://www.goodreads.com/book/show/23398748-doing-good-better
 * How cost-effective is each programme area?
 * How well is the programme implemented?
 * Does the charity needs additional funds?
-* They don't recommend micro-loans.
+* They don't recommend micro-loans: https://www.givingwhatwecan.org/post/2014/03/why-we-still-dont-recommend-microfinance/
 
 
 ## Some references
