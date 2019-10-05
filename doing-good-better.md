@@ -19,6 +19,7 @@ https://www.goodreads.com/book/show/23398748-doing-good-better
 * https://80000hours.org/
 * https://www.givingwhatwecan.org/
 * "Top" charities:
+  * https://www.givewell.org/charities/top-charities
   * https://www.givedirectly.org/
   * https://www.evidenceaction.org/dewormtheworld/
   * https://schistosomiasiscontrolinitiative.org/
