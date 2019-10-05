@@ -17,10 +17,16 @@ https://www.goodreads.com/book/show/23398748-doing-good-better
 * https://www.poverty-action.org/
 * https://80000hours.org/
 * https://www.givingwhatwecan.org/
-* https://www.givedirectly.org/
-* https://www.developmentmedia.net/
-* Antimalarial bed nets
-  * https://www.nothingbutnets.net/
-* https://www.againstmalaria.com/
+* Charities
+  * https://www.givedirectly.org/
+  * https://www.evidenceaction.org/dewormtheworld/
+  * https://schistosomiasiscontrolinitiative.org/
+  * https://www.againstmalaria.com/
+  * https://livinggoods.org/
+  * https://www.ign.org/
+* Others:  
+  * https://www.developmentmedia.net/
+  * Antimalarial bed nets
+    * https://www.nothingbutnets.net/
 * https://www.booksforafrica.org/
 
