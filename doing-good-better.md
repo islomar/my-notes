@@ -26,6 +26,11 @@ https://www.goodreads.com/book/show/23398748-doing-good-better
   * https://www.againstmalaria.com/
   * https://livinggoods.org/
   * https://www.ign.org/
+* Gas emissions
+  * [Cool Earth](https://www.coolearth.org/)
+* Animal suffering:
+  * Mercy for Animals
+  * The Human League
 * Others:  
   * https://www.developmentmedia.net/
   * Antimalarial bed nets
