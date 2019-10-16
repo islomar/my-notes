@@ -13,6 +13,7 @@ https://www.goodreads.com/book/show/23398748-doing-good-better
 
 
 ## Some references
+* https://www.effectivealtruism.org/
 * https://www.charitynavigator.org/
 * https://www.givewell.org/
 * https://www.poverty-action.org/
