@@ -16,6 +16,7 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 * Example of app deployed in minikube:
   - `kubectl run hello-world --image=fiunchinho/codely-docker:latest --port=80`
   - `kubectl port-forward deployment/hello-world 8000:80` , we need this command to expose the port to the host
+  - you can access it in http://localhost:8000 and see `Hello CodelyTV!`
 * Run `eval $(minikube docker-env)` to be able to use the Docker command from minikube
 * *kube-proxy* for load balancing
 
@@ -41,6 +42,11 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 * resource names can be duplicated in different namespaces
 * it allows fine-grained resource usage (quotas) and authorization (access control)
 
+## Pod resources
+* Inside the pod.yaml, we define which resources require my application: cpu and memory for
+  * Requests: the pod will be allocated in a node with AT LEAST these amound of resources.
+  * Limits: max resources that a pod is allowed to consume (k8s would kill the container if it is exceeded).
+
 
 ## Interesting links
 * [Kubernetes: the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -50,3 +56,4 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 * Alternatives to minikube:
   - https://microk8s.io
   - https://github.com/kubernetes-sigs/kind
+* https://github.com/fiunchinho/k8s-playground  
