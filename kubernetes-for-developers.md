@@ -7,7 +7,7 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
   - `kubectl get nodes`
   - `kubectl cluster-info`
 * You declare the expected state, and then, in an async way, the **reconciliation loop** gets eventually to that state.
-* K8s decides how to better use the existing resources (CPU, memory, disk, etc.)
+* K8s decides how to better use the existing resources of all the nodes (CPU, memory, disk, etc.)
 * `kubectl version --client` (use `--client` for not showing error if no K8s cluster is up and running.
 * **Minikube**: https://kubernetes.io/docs/tutorials/hello-minikube/
   - `minikube start --memory 4096` 
@@ -19,7 +19,7 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
   - you can access it in http://localhost:8000 and see `Hello CodelyTV!`
 * Run `eval $(minikube docker-env)` to be able to use the Docker command from minikube
 * *kube-proxy* for load balancing
-
+* A k8s cluster will have several nodes. A node is an instance, a machine, a server where pods will be allocated.
 
 ## Pods
 * It's the minimum unit of execution.
@@ -33,8 +33,10 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
   - *liveness*: healthy
   - *readiness*: ready to service requests
 * `kubectl run hello-world --image=fiunchinho/codely-docker:latest --restart=Never --port=80 --dry-run -o yaml > pod.yaml`: this is a **generator**, it generates an object in K8s, a *Pod*.
-* `kubectl create -f pod.yaml`: create the object defined in `pod.yaml`
+* `kubectl create -f pod.yaml`: create the object (pod) defined in `pod.yaml`
+  * Inside the `pod.yaml`, we define the docker image to use, resources, etc.
 * `kubectl describe pod hello-world`
+* `kubectl delete pod hello-world`
 
 
 ## Namespaces
