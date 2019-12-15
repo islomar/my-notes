@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-world
+spec:
+  rules:
+  - host: codely-k8s.com
+    http:
+      paths:
+      - path:
+        backend:
+          serviceName: hello-world
+          servicePort: 80

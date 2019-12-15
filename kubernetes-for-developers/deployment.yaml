@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: hello-world
+  name: hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: hello-world
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: hello-world
+    spec:
+      containers:
+      - image: fiunchinho/codely-docker:latest
+        name: hello-world
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}

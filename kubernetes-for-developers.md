@@ -66,12 +66,56 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
 * You create a `service.yaml` to define the service object.
 * Service types:
   * ClusterIP: the service gets assigned an IP which is purely internal (though stable). It wouldn't be accessible from the outside.
-  * NodePort: besides being assigned an IP, the pod port will be accessible.
+  * NodePort: besides being assigned an IP, the pod port will be accessible from the outside.
   * LoadBalancer: besides the IP and port, if you are in a cloud provider, it requests that cloud provider to create a load balancer (which will have a DNS address which is publicly accesible).
 * `kubectl expose pod/hello-world --port 80`: it creates a service object.
   * `kubectl expose pod/hello-world --port 80 --dry-run -o yaml`: it would generate the file with the service object definition.
 * `kubectl get svc`: to list the existing services.
 * `kubectl run --rm -i --tty my-client-app --image=alpine --restart=Never -- sh` and then, from inside, you can make a request to the service, e.g. `wget hello-world/index.php -qS0`
+
+
+## Kubernetes Deployments
+* **Pods** are tied to the node lifecycle. If the node disappears, the Pod will disappear with it. We usually do not create Pods manually.
+* **Deployments** are objects that we can create to be sure that the Pod stays alive, even when its cluster node fails (thanks to a reconciliation loop).
+* I can specify how many **replicas** I want of my Pod, and k8s assures that there will always be that number of replicas running.
+* To create a `deployment.yaml` using a generator: `kubectl run hello-world --image=fiunchinho/codely-docker:latest --port=80 --restart=Always --dry-run -o yaml > deployment.yaml`
+    * The difference with the generator to create a pod, is that the restart now is `Always` instead of `Never`. Not configuring that flag would do the same.
+    * The name of the pod generated my k8s in this case, will contain a suffix.
+* `kubectl get deployments,pods` to list both the deployments and the pods.
+    * Their alternatives with sort names: `kubectl get deploy,pod`
+* To change the numer of replicas:
+    * Option 1: `kubectl edit deploy hello-world`
+    * Option 2: `kubectl scale deployments hello-world --replicas=3`
+* `kubectl expose pod/hello-world --port 80 --type=NodePort`: to create a service of type `NodePort`, so that we can send requests to minikube.
+
+## Define Ingress rules
+* To send traffic to our application, we use the object Service, with type ClusterIP, NodePort, etc.
+    * The type `ClusterIP` has IPs which are only accessible from inside the cluster.
+* An **Ingress* is a collection of rules that describe how to forward requests from outside of the cluster to the `Service` objects.
+* **Ingress Controller**: it controls the Ingress rules, it watches them to apply them. There are lots of different implementations, one of the most famous is [the one from nginx](https://github.com/kubernetes/ingress-nginx). It would convert the Ingress rule to code for nginx.
+* `minikube addons list`
+* `minikube addons enable ingress`
+* There is no ingress generator, so we create manually an `ingress.yaml`.
+* `kubectl describe ingress hello-world`
+* `kubectl get ingress`
+    * To try it: edit `/etc/hosts` to add a line like: `<minikube-ip> codely-k8s.com`
+    * `curl -i codely-8ks.com` should use the ingress rule and return 200.
+* How do we do it for Production?: 
+    * we have a DNS pointing to a Load Balancer, behind which is our k8s cluster.
+    * We need to deploy an ingress controller, e.g. HAProxy or nginx.
+    * We create a **default backend**, a pod which always returns 404, for the case where no ingress rule matches.
+
+## Configuration and secrets for our apps
+TBD
+
+
+## Deploying a k8s cluster in the cloud
+TBD
+
+
+## Wrapping it up
+TBD
+
 
 ## Interesting links
 * [Kubernetes: the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
