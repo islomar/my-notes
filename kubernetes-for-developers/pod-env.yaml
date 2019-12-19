@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: hello-world
+  name: hello-world
+spec:
+  containers:
+  - image: fiunchinho/codely-docker:latest
+    name: hello-world
+    ports:
+    - containerPort: 80
+    resources: {}
+    #Define the environment variables
+    env:
+    - name: SOME_VARIABLE
+      value: "23"
+    - name: ANOTHER_VARIABLE
+      value: "12345"
+    - name: ERROR_REPORTING
+      value: "-1"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

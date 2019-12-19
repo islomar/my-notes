@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: hello-world
+  name: hello-world
+spec:
+  containers:
+  - image: fiunchinho/codely-docker:latest
+    name: hello-world
+    ports:
+    - containerPort: 80
+    resources: {}
+    volumeMounts:
+      # I want to mount the config-volume defined below, on the path /tmp
+      - name: config-volume
+        mountPath: /tmp
+  volumes:
+    - name: config-volume
+      configMap:
+        # Provide the name of the ConfigMap containing the files you want
+        # to add to the container. I.e.: in a configMap I am saving a whole file
+        # which is the configuration for an nginx
+        name: nginx-conf
+  restartPolicy: Never
+status: {}

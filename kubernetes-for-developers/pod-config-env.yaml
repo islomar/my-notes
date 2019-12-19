@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: hello-world
+  name: hello-world
+spec:
+  containers:
+  - image: fiunchinho/codely-docker:latest
+    name: hello-world
+    ports:
+    - containerPort: 80
+    resources: {}
+    #Define the environment variables
+    env:
+    - name: SOME_VARIABLE
+      valueFrom: 
+        configMapKeyRef:
+          # The ConfigMap containing the value you want to assign to the $SOME_VARIABLE env var
+          name: special-config
+          # Specify the key associated with the value
+          key: someValue
+    - name: ANOTHER_VARIABLE
+      valueFrom: 
+        configMapKeyRef:
+          # The ConfigMap containing the value you want to assign to the $SOME_VARIABLE env var
+          name: special-config
+          # Specify the key associated with the value
+          key: example.property
+    - name: ERROR_REPORTING
+      valueFrom: 
+        configMapKeyRef:
+          # The ConfigMap containing the value you want to assign to the $SOME_VARIABLE env var
+          name: special-config
+          # Specify the key associated with the value
+          key: example.property2
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

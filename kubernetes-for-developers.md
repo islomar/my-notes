@@ -37,6 +37,7 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
   * Inside the `pod.yaml`, we define the docker image to use, resources, etc.
 * `kubectl describe pod hello-world`
 * `kubectl delete pod hello-world`
+* To delete all pods: `kubectl delete --all pods`
 * `kubectl edit pod hello-world`: we can change the pod configuration (e.g. the required resources).
 
 
@@ -106,8 +107,42 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
     * We create a **default backend**, a pod which always returns 404, for the case where no ingress rule matches.
 
 ## Configuration and secrets for our apps
-TBD
+* You can define environment variables in the pod.yaml, e.g. `pod-env.yaml`
+* But the goal is to define the configuration in different files, to be able
+* `ConfigMap`: to store configuration values in a key:value format.
+* `Secrets` are like ConfigMaps but for sensitive data. The value is stored codified using base64.
+* To generate a configmap: `kubectl create configmap special-config --from-literal=example.property=hello --from-literal=example.property2=world`
+* `kubectl get configmaps`
+* `kubectl get configmaps special-config -o yaml`: to show the yaml corresponding to that configmap
+    * Same: `kubectl get cm special-config -o yaml`
+* `kubectl edit configmap special-config`: to edit the configuration
+* Always use String values.
+* We can access the values of ConfigMaps in different ways:
+    * Passing it to the application as environment variables.
+    * Including each key in a different file inside the container.
+    * Passing it to the application via command line.
+* We create `pod-config-env.yaml`: instead of hardcoding the value of the env vars, we reference the configmap keys.
+    * `kubectl create -f pod-config-env.yaml`
+    * Running `kubectl describe pod hello-world` we can see the environment variables configured (under `Environment`).
+    * `kubectl exec -ti hello-world -- /bin/bash` to get inside the pod and check the environment variables.
+* Another way to consume the ConfigMaps is to load it as files inside the container
+    * `pod-config-volume.yaml`
+    * Generate a configmap containing the file `nginx.conf`: `kubectl create configmap nginx-conf --from-file nginx.conf`
+    * You can see it like this: `kubectl get configmaps nginx-conf -o yaml`
 
+### Secrets
+* In order to store secrets, k8s uses a volume type called `secret`.
+* The secrets are stored in temporal volumes `tmpfs` and it is never written in the node disks.
+* Each element of the secret is stored in a different file, under the mount point specified in the volume.
+* See example in `pod-secret-env.yaml`
+* To generate a secret: `kubectl create secret generic test-secret --from-literal=username='islomar' --from-literal=password='1234'`
+* List all secrets: `kubectl get secrets`
+* `kubectl get secret test-secret -o yaml`
+* The values are encoded in base64, not really encrypted.
+* Decode the secrets to check that is correct: `echo aXNsb21hcg== | base64 -D`
+* Some examples:
+    * `pod-secret-envFrom.yaml`
+    * `pod-secret-volume.yaml`
 
 ## Deploying a k8s cluster in the cloud
 TBD
