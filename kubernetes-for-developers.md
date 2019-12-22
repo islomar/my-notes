@@ -145,11 +145,34 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
     * `pod-secret-volume.yaml`
 
 ## Deploying a k8s cluster in the cloud
-TBD
+* How does kubectl know where is minikube?
+    * kubectl has a config file where it is configured where the k8s cluster is.
+    * By default, there is nothing there. When we install minikube, it changes that config file and it includes itself there.
+* `$HOME/.kube/config`
+* We can see the content of the file with `kubectl config view`
+    * Inside the file you can have several contexts defined, e.g. minikube, AWS, etc.
+* To change the context: `kubectl config set-context <yourContextName>`
+* Comparison of k8s services in different cloud providers: https://kubedex.com/google-gke-vs-microsoft-aks-vs-amazon-eks/
+    * Google GKE seems to be the best.
 
-
-## Wrapping it up
-TBD
+### Microsoft Azure
+* To include in the prompt the context where you are: https://github.com/jonmosco/kube-ps1
+* https://pro.codely.tv/library/kubernetes-para-desarrolladores/81666/path/step/50648458/
+* `az login`
+* `az aks install-cli`
+* https://docs.microsoft.com/es-es/azure/aks/kubernetes-walkthrough
+    * https://shell.azure.com/
+* https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html
+* Create the cluster in the default region
+* To include in the kube config file azure, run: `az aks get-credentials --resource-group codely --name codelypro-k8s`
+* `az aks create --resource-group codely --name codelypro-k8s --node-count 1 --enable-addons monitoring --generate-ssh-keys`
+* `terraform import azurerm_azuread_service_principal.example`
+* Once you are in the context of Azure:
+    * `kubectl run hello-world --image=fiunchinho/codely-docker:latest --port=80`
+    * You can check that it was created correctly: `kubectl get deploy,pod`
+    * `kubectl expose deployment/hello-world --port 80 --type=LoadBalancer`, since by default the IPs created are private
+    * Using the public IP of the service just created, you can make a request and see "Hello CodelyTV"
+    * `kubectl scale deployments hello-world --replicas=3`
 
 
 ## Interesting links
