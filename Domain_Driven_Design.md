@@ -56,3 +56,7 @@ https://github.com/islomar/payments-api
 * Published Language
 * Conformist
     - E.g. two teams with different contexts. If I want to consume your service, I have to adapt to your API.
+
+
+## Patterns, Principles, and Practices of Domain-Driven Design
+* https://github.com/islomar/my-notes/blob/master/patterns-principles-practices-ddd.md
