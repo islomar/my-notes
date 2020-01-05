@@ -177,15 +177,34 @@ curl http://localhost:9200/_search -H "Content-Type: application/json" -d '{
 
 
 ## Logstash
-* Parse, save and filter logs.
+* Parse, save and filter logs. Pipeline based.
+* `Stash`: almacén.
+* Instead of sending logs from the application, it is much more performant to write to disk.
+* It takes the logs from files (and other sources), it normalizes it and sends to ElasticSearch.
+* Inputs (log sources, also possible with Elastic Beats) => Filters (we can transformt the logs to normalize the data) => Ouputs (where we want to send them, e.g. to ElasticSearch)
+* Logstash must be installed in every node where you are writing the log files.
+* Logstash docker-compose volumes: `pipeline` for sharing the Logstash configuration (input, filter, output) and `logs`(where the app writes the logs, Logstash needs to access).
+* `docker-compose up -d logstash`
+* `curl http://localhost:9600/\?pretty`
+* We need to normalize the logs, since they can be generated in different ways by different libraries, e.g. Monolog, log4j, etc.
+    * https://github.com/vy/log4j2-logstash-layout
+    * https://github.com/vy/log4j2-logstash-layout/blob/master/layout/src/main/resources/LogstashJsonEventLayoutV1.json
+    * We can create our own template. But it is not always possible or desirable, so another option is to do it in the Logstash pipeline.
+* Logstash has lots of plugins, and they can be installed from docker: https://github.com/elastic/logstash-docker/issues/43
+* For normalizing, we can install the Translate filter plugin: https://www.elastic.co/guide/en/logstash/current/plugins-filters-translate.html
+    * It comes with a dictionary to translate level strings to ints, e.g. ERROR to xxx.
+* Another option is the **Mutations**.
+
+
+## Beats
+* Data shipper, it can complement or substitute Logstash (it is lighter).
+* Logstash consumes a lot of resources in the instance where it is installed.
+
 
 
 ## Kibana
 * User interface
 
-
-## Beats
-* Data shipper, it can complement or substitute Logstash (it is lighter).
 
 
 ## Recap
