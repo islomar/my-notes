@@ -196,14 +196,36 @@ curl http://localhost:9200/_search -H "Content-Type: application/json" -d '{
 * Another option is the **Mutations**.
 
 
+## Kibana
+* User interface
+* `docker-compose up -d kibana`
+* http://localhost:5601/
+    * Flipping the port 5601, you can read... logs :-)
+* We need to configure Kibana to recognize the Elasticsearch indexes: Management -> Kibana -> Index patterns. E.g. `codelytv` in these examples. We add `@timestamp` as the Time filter.
+* Download file: `wget https://download.elastic.co/demos/kibana/gettingstarted/logs.jsonl.gz`
+* `curl -H 'Content-Type: application/x-ndjson' -XPOST 'localhost:9200/_bulk?pretty' --data-binary @logs.jsonl`
+* Best practice: havin an index of Elasticsearch per day. It is good for performance reasons.
+* Elasticsearch sometimes offers you properties in two flavor. It includes a `.keyword`, which is aggregable and allows exact match, though it loses fuzzy search capabilities.
+* Create a visualization for the different HTTP status codes:
+    * Chart: Vertical Bar
+    * Buckets - X-axis >> Aggregation: Date Histogram.
+    * `Split Charts` would generate several graphs.
+    * Add sub-bucket >> Split Series >> Terms >> response.keyword
+    * Split Charts >> Terms >> host.keyword >> show the HTTP status codes per host
+* Create a visualization for top referers:
+    * Chart: Data Table
+    * Split Rows >> Terms >> referer.keyword
+* Create a visualization to show in a Pie chart the user agents.
+    * E.g. useful for linking user agents with 500 errors.     
+* Create region map to see the origin of the requests:
+    * Chart: Region Map
+    * Shape field >> Terms >> geo.src
+* Create new dashboard
+    * We can clone it afterwards.
+
 ## Beats
 * Data shipper, it can complement or substitute Logstash (it is lighter).
 * Logstash consumes a lot of resources in the instance where it is installed.
-
-
-
-## Kibana
-* User interface
 
 
 

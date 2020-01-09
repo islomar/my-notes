@@ -60,3 +60,6 @@ https://github.com/islomar/payments-api
 
 ## Patterns, Principles, and Practices of Domain-Driven Design
 * https://github.com/islomar/my-notes/blob/master/patterns-principles-practices-ddd.md
+
+## Links
+* https://medium.com/nick-tune-tech-strategy-blog/mapper-contexts-supercontexts-decoupling-domain-specific-and-domain-generic-bounded-contexts-5eb6a1e7c5fc
