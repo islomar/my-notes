@@ -223,11 +223,23 @@ curl http://localhost:9200/_search -H "Content-Type: application/json" -d '{
 * Create new dashboard
     * We can clone it afterwards.
 
+
 ## Beats
+* https://www.elastic.co/products/beats
 * Data shipper, it can complement or substitute Logstash (it is lighter).
-* Logstash consumes a lot of resources in the instance where it is installed.
+* Logstash consumes a lot of resources in the instance where it is installed (it is JVM based).
+* Logstash and Beats are not incompatible, we can use both in a complementary way.
+* It is Go binaries.
+* There are different types of Beats: Filebeat, Metricbeat, Heartbeat, Auditbeat, Packetbeat, 
+* We need to map the volume of the application logs folder.
+* You can mutate, transform and filter: `filebeat.yml`
+* You can send not only to Elasticsearch, but also to Redis or any other output.
+* How do I write a processor plugin by myself?
+    * https://github.com/elastic/beats/issues/6760
+    * https://www.elastic.co/guide/en/beats/devguide/7.5/index.html
+* There is Docker logging drivers to send the standard output to wherever you want (files or anywhere else).
+* In case of outage (e.g. Elasticsearch is down), Beats and Logstash have memory and know where they stopped sending logs, so that they can resume when the service is up and running again.
 
 
-
-## Recap
+## Recap and FAQ
 TBD
