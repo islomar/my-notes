@@ -242,4 +242,22 @@ curl http://localhost:9200/_search -H "Content-Type: application/json" -d '{
 
 
 ## Recap and FAQ
-TBD
+* You can rename an index without losing the documents: POST /_reindex
+    * This creates a copy from one index to another one.
+* Elasticsearch use cases:
+    * autocomplete in search boxes.
+    * We could store the domain events in Elasticsearch.
+    * Traceability: communication between services, e.g. with `correlation_id`
+* Index rotation, several options for rolling out the indexes:
+    * If you create indexes per day (out of the box by Beats/Logstash), you can delete old indexes.
+    * https://www.elastic.co/guide/en/elasticsearch/client/curator/5.8/index.html
+* All the technologies of the Stack accept plugins.
+* SaaS
+    * Logz.io
+    * [AWS Elasticsearch](https://aws.amazon.com/elasticsearch-service/)
+    * [Elastic Cloud](https://www.elastic.co/cloud/). It is a wrapper over AWS Elasticsearch, with more features.
+* [X-Pack](https://www.elastic.co/what-is/open-x-pack)
+* [Docker logging drivers](https://docs.docker.com/config/containers/logging/configure/)
+    * The application does not write into a specific file, just writing the standard output, and then Docker will do whatever, e.g. with the driver `json-file`.
+    * `docker run -it --log-driver none alpine ash`
+* [ELK in Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)    
