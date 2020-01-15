@@ -1,4 +1,7 @@
 # DDD
+## CodelyTV: DDD
+* [Estructura de carpetas: DDD en PHP](https://www.youtube.com/watch?v=UFnABp2s8Y0)
+
 
 ## CodelyTV: Learn DDD in 20 minutes
 * Aprende DDD en 20 minutos >> https://www.youtube.com/watch?v=dH5aSQLXtKg
