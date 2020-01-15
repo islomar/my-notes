@@ -1,14 +1,13 @@
 # DDD
 ## CodelyTV: DDD
 * [Estructura de carpetas: DDD en PHP](https://www.youtube.com/watch?v=UFnABp2s8Y0)
+* [DDD en Laravel](https://www.youtube.com/watch?v=EInyOtPra44)
 
 
 ## CodelyTV: Learn DDD in 20 minutes
 * Aprende DDD en 20 minutos >> https://www.youtube.com/watch?v=dH5aSQLXtKg
 * DDD y CQRS: Preguntas Frecuentes >> https://www.youtube.com/watch?v=auEhX4WfCRA
-
-PHP Example: https://github.com/CodelyTV/cqrs-ddd-php-example
-https://github.com/islomar/payments-api
+* PHP Example: https://github.com/CodelyTV/cqrs-ddd-php-example
 
 ### Tactical Design
 * Model-Driven Design
