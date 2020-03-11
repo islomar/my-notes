@@ -1,6 +1,7 @@
 # Hexagonal Architecture
-
-Code example: https://github.com/CodelyTV/cqrs-ddd-php-example
+* [CodelyTV course](https://pro.codely.tv/library/arquitectura-hexagonal/about/)
+* Code example: https://github.com/CodelyTV/cqrs-ddd-php-example
+* Estimated time: 2-3 hours
 
 ## What is Hexagonal Architecture
 **Advantages**

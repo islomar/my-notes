@@ -2,15 +2,14 @@
 Notes from my readings or courses :-)
 
 * CodelyTV
-    * [Hexagonal architecture (by codely.tv)](hexagonal-architecture.md)
     * [AWS: your first deployment of EC2](aws-ec2-codelytv.md)
     * [AWS: autoscaling applications with ELB and ASG](aws-autoscaling-elb-asg.md)
     * [Kubernetes for developers](kubernetes-for-developers.md)
     * [ELK: Elastic Logstash Kibana](elk-codelytv.md)
     * [IntelliJ](intellij.md)
     * [SOLID](solid-principles-applied.md)
+    * [Hexagonal architecture](hexagonal-architecture.md)
     * Pending:
-        * [Hexagonal Architecture](https://pro.codely.tv/library/arquitectura-hexagonal/about/)
         * [Testing](https://pro.codely.tv/library/testing-introduccion-y-buenas-practicas/about/)
         * [CQRS](https://pro.codely.tv/library/cqrs-command-query-responsibility-segregation-3719e4aa/about/)
         * [Event-Driven Architecture](https://pro.codely.tv/library/comunicacion-entre-microservicios-event-driven-architecture/about/)
