@@ -109,6 +109,7 @@
 * Open Git Branches menu
 * "Complete Current Statement" (e.g. to add `;` at the end)
 * Copy Reference: to get the whole FQDN of the class
+* Show members (to see methods, attributes)
 
 
 ### Plugins
@@ -145,6 +146,7 @@
 * Create my own keymap
 * "Rocket" app for Mac: in order to show emojis, https://matthewpalmer.net/rocket/
 * Project Settings > Project: you can add an emoji at the beginning of the project name
+* Configure the "File and Code Templates" to create the classes as `final` by default.
 
 
 ### Plugins
