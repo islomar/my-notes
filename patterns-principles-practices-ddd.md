@@ -220,16 +220,80 @@
 
 
 ### Chapter 8: Applicatin Architecture
-TBD
+* DDD focuses on managing the challenges of building applictions with complex domain logic by isolating the business compelxities from the technical concerns
+* A layered architecture: Clean Architecture, Heagonal architecture (Ports & Adapters), Onion architecture...
+* Dependency niversion
+* **Domain Layer**
+    * It conains the abstract model, it does not depend on anythingn else and is agnostic to the technicalities of the licents it serves and data stores that persist the domain objects.
+* **Application Layer**
+    * It represents the use cases and behavior of the applicaiton.
+    * Coordination, orchestration
+    * Its responsiblitiy is to expose the capabilities and operations available to the application.
+    * Application services contain application logic only.
+    * It should be procedural in style an thin.
+    * It contains the workflow steps required tofulfill a business use case.
+    * **Read Models**: Sometimes it isi preferable for the application service layer to provide a specific view of domain state directly from the data source.
+        * To prevent the model from having to change because of presentation needs, you can store the view data separately in a data schemna that is best suited to querying. E.g. you can store changes that occur within the domain model and use these as the basis for reporting requirements (e.g. rasing events that are stored for querying)
+    * Application services should be ignorant to what consumes its functionality.        
+    * You can create a **process manager** to coordinate a business process that spans more than a single bounded context.    
+* **Infrastructural Layer**
+    * Enable the application to be consumed (e.g. UI, web service, message endpoints...)
+    * Technical implementation of storing information on the state of domain objects.
+    * Logging, security, notifcation and integration with other bounded contexts and applications.
+* **Testing**
+    * For the infrastructure layer, favor integration and end-to-end testing.
+    * The application service layer and the domain layer can be tested with unit tests and mocks/stubs for external resources
+* Communication across layers: e.g. DTOs, application event objects.
+* **Don't share data schema betweeen Bounded Contexts**
+    * Bounded contexts can share the same DB, but data shcemas should be separate.
+    * Ideally a bounded context should have its own database.
+* Applicationss can be composed of more than one bounded context.
+* Some people believe that the voundary of a bounded contewxt should extend to the presentation layer.
 
 
 ## Chapter 9: Common problems for teams starting out with DDD
-TBD
+* Overemphasizing the importance of tactical patterns.
+* Using the same architecture for all bounded contexts
+* Missing the real value of DDD: collaboration, communication, and context.
+* Lack of a shared language.
+* Lack of a domain expert.
+* Underestimating the cost of applying DDD.
+* Applying DDD to every problem
+* Sacrificing pragmatism for needless purity
+* **DDD is about the process of learning, refining, experimenting, and exploring in the quest to discover a useful model in collaboration**
 
 
 ### Chapter 10: Applyint the Principles, Practices , and Patterns of DDD
-TBD
-
+* DDD is not a silver bullet.
+* Don't sell DDD as a project methodology!!
+* **Focus on the  alignment with the business**
+* Technology can complicate problem solving.
+* Applying the principles of DDD
+    * Start simple
+    * Understand the Vision
+        * Align your team with stakeholder's expectations.
+        * What is the business goal/driver for this product?
+        * What value will this product bring to the business?
+        * How will you know if this is a successs? What does good look like?
+        * How is this different from what has been done before?
+* Capture the required behaviors. **The why part is essential**.
+* If you find that the problem domain is becoming too large to manage, you can ease cognitive load by abstracting the problem to a higher level by creating **subdomains**.
+* When there is little logic and merely data manipulation, you should follow a simpler method to manage domain logic, such as transaction script or active record.
+* Understand the reality of the landscape: **create and share a context map**
+* DDD doesn't work without a domain expert. Domain experts are your primary source of knowledge.
+* **Your initial model will be wrong**.
+* Start with an anemikc domain or simpler patterns, and refactor toward the rich domain model when needed.
+* Lean on the anticorruption layer pattern to create a boundary between your new code an the existing code.
+* Dopn't strive for perfect code; strive for perfect boundaries.
+* A useful model is arrived at through hundresds of small refactorings.
+* For a complex core domain, a team should produce at least three models.
+* Don't get attached to ideas.
+* **Design a model so that the most freque3nt modification of the model causes changes to the least number of types**.
+* Be careful of premature refactoring.
+* Any decisions you make in code need to be explicitly fed back to the domain experte and captured as a concept of the model.
+* A domain model should communicate the intent of the business.
+* Complex edge cases do not always need automated solutions.
+* Dont's assume anything, keep things simple, delay large design decisions, and wait for complexity or new behaviors to challenge your solution.
 
 
 ## PART II. Strategic patterns: communicating between bounded contexts
