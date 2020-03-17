@@ -11,6 +11,7 @@ Notes from my readings or courses :-)
     * [Hexagonal architecture](hexagonal-architecture.md)
     * [Testing](testing.md)
     * [ZSH terminal](zsh-terminal.md)
+    * [iTerm2](iterm2.md)
     * Pending:
         * [CQRS](https://pro.codely.tv/library/cqrs-command-query-responsibility-segregation-3719e4aa/about/)
         * [Event-Driven Architecture](https://pro.codely.tv/library/comunicacion-entre-microservicios-event-driven-architecture/about/)
