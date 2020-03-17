@@ -7,6 +7,10 @@
         * Integration tests: testing the repositories.
         * End to end: all the layers. No extensive test coverage here.
 
+### Resources
+* [Codesai intro to Hexagonal Architecture](https://docs.google.com/presentation/d/186JEuJai6H6vgmiX_PA25fH3qaz684Wu-8iJ563AnUo/edit#slide=id.p)
+    * https://github.com/Codesai/kata-social-networking-hexagonal-architecture
+
 
 ## CodelyTV course
 * [CodelyTV course](https://pro.codely.tv/library/arquitectura-hexagonal/about/)
@@ -94,10 +98,10 @@
 * [Named constructors aka Factory Methods](https://codely.tv/screencasts/constructores-semanticos/)
 
 
-## Testing Applicatin and Domain layers
+### Testing Applicatin and Domain layers
 * https://pro.codely.tv/library/arquitectura-hexagonal/66748/path/step/35626577/
 * [CreateVideoTest.php](https://github.com/CodelyTV/php-ddd-example/blob/af67faf454e29b608d57ea3ca7156e2b25696512/src/Context/Video/Module/Video/Tests/Behaviour/CreateVideoTest.php)
 
 
-## Testing Infrastructure Layer
+### Testing Infrastructure Layer
 * [VideoRepositoryTest.php](https://github.com/CodelyTV/php-ddd-example/blob/af67faf454/src/Context/Video/Module/Video/Tests/Infrastructure/VideoRepositoryTest.php)
