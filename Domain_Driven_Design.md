@@ -1,4 +1,8 @@
 # DDD
+
+## Book "Patterns, Principles and Practices of Domain-Driven Design"
+* [My notes for the book](patterns-principles-practices-ddd.md)
+
 ## CodelyTV: DDD
 * [Estructura de carpetas: DDD en PHP](https://www.youtube.com/watch?v=UFnABp2s8Y0)
 * [DDD en Laravel](https://www.youtube.com/watch?v=EInyOtPra44)

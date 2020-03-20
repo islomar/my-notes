@@ -1,5 +1,6 @@
 # Notes for the book "Patterns, Principles, and Practices of Domain-Driven Design"
 * http://wrox.com/go/domaindrivendesign
+* Source code: https://github.com/elbandit/PPPDDD/
 
 ## PART I. The principles and practices of Domain-Driven Design
 
@@ -302,7 +303,8 @@ TBD
 
 
 ### Chapter 12: Integratin via Messaging
-TBD
+* https://github.com/elbandit/PPPDDD/blob/master/12%20-%20Integrating%20Via%20Messaging/README.md
+
 
 ### Chapter 13: Integrating via HTTP with RPC and REST
 TBD
