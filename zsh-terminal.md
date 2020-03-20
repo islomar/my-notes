@@ -218,15 +218,6 @@ function progress_bar() {
         * E.g. `dot <TAB>` to show everything under a specific folder
 
 
-## Pending
-* autojump (j)
-* z
-* Specific files for aliases?
-
-
-gallbladder: vesícula biliar, 1st april
-
-
 ## Interesting links
 ### Tools
     * https://denysdovhan.com/spaceship-prompt/
@@ -237,6 +228,11 @@ gallbladder: vesícula biliar, 1st april
     * https://github.com/junegunn/fzf
     * https://github.com/ogham/exa
     * https://htr3n.github.io/2018/07/faster-zsh/ >> add zprof for profiling
+    * https://github.com/rupa/z
+        * https://askubuntu.com/questions/250012/how-do-i-install-z-script
+    * https://github.com/wting/autojump
+
 ### Readings    
     * https://www.reddit.com/r/zsh/comments/ak0vgi/a_comparison_of_all_the_zsh_plugin_mangers_i_used/
     * https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+    * https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
