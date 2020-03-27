@@ -16,7 +16,7 @@
 * Pact
     * https://github.com/form3tech-oss/go-pact-testing
 * Swagger/OpenAPI
-* Postman (you can mock an PI)
+* Postman (you can mock an API)
 * Hoverfly (open source API simulation tool): https://docs.hoverfly.io/en/latest/
 * [Mountebank](http://www.mbtest.org/)
     * open source tool to provide cross-platform, multi-protocol test doubles over the wire
