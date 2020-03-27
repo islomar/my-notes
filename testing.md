@@ -12,6 +12,7 @@
 
 
 ## Microservices / API
+* [Hilo interesante en Twitter](https://twitter.com/islomar/status/1238200594017529856)
 * Pact
     * https://github.com/form3tech-oss/go-pact-testing
 * Swagger/OpenAPI
