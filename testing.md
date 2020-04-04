@@ -32,6 +32,9 @@
 ## CodelyTV course
 * https://pro.codely.tv/library/testing-introduccion-y-buenas-practicas/90916/path/
 * Estimated time: ~4 hours
+* `assertSimilar()` instead of `assertEquals()`, to compare objects by their values.
+* User `clearUnitOfWork()` when working with Doctrine, to be sure that we are fetching the DB.
+
 
 ### General
 * [Pierden medio millón en criptomonedas y acusan al informático: "El error es de la empresa"](https://www.businessinsider.es/pierden-medio-millon-criptomonedas-culpan-informatico-error-es-empresa-198460)

@@ -302,7 +302,7 @@
 TBD
 
 
-### Chapter 12: Integratin via Messaging
+### Chapter 12: Integration via Messaging
 * https://github.com/elbandit/PPPDDD/blob/master/12%20-%20Integrating%20Via%20Messaging/README.md
 
 
