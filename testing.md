@@ -35,6 +35,11 @@
 * Estimated time: ~4 hours
 * `assertSimilar()` instead of `assertEquals()`, to compare objects by their values.
 * User `clearUnitOfWork()` when working with Doctrine, to be sure that we are fetching the DB.
+* It is good to ramdomize the test execution
+    * PHP: `phpunit --order-by=random`
+    * JUnit: Annotate with `@TestMethodOrder(MethodOrderer.Random.class)`
+    * JS + Jest: it is random by default.
+
 * *Deterministic tests*: do not use the constants from business code in the tests.
 * *Folder structure*: the tests should mimic the same folder structure than the business code.
 * [PHP traits](https://www.php.net/manual/en/language.oop5.traits.php)
