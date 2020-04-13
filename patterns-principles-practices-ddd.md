@@ -13,7 +13,7 @@
     * **Bounded contexts**: it ensures that the **integrity** of the models is retained.
     * **Context maps**: relationship between bounded contexts.
 * * The **Tactical Patterns** of DDD (aka *model building blocks*): collection of patterns that help to create effective models for complex bounded contexts.
-* The **Strategic patterns** shape the solution, while **tactical patterns* are used to impliment a rich domain model. Strategic patterns can be useful for any application but tactical patterns are only useful if your model is sufficiently rich in domain logic.
+* The **Strategic patterns** shape the solution, while **tactical patterns* are used to implement a rich domain model. Strategic patterns can be useful for any application but tactical patterns are only useful if your model is sufficiently rich in domain logic.
 * The **Problem Space** and the **Solution Space**
     * DDD's impact in the problem space is to reveal what is important and where to focus effort.
     * The solution side of DDD covers patterns that can shape the archictecture of your applications and make it easier to manage.
@@ -147,7 +147,7 @@
 * In a domain model each object is responsible for a specific task. Objects work together to fulfill business use cases by delegating to each other.
 
 #### Transaction Script
-* It follows a procdural style of development rather than an OO approach.
+* It follows a procedural style of development rather than an OO approach.
 * Useful for the parts of your domain that have little or no logic.
 * Typically a single procedure is created for each of your business transactions.
 * Problems when the application grows and the business logic complexities increase...
@@ -199,7 +199,7 @@
 
 
 ### Chapter 7: Context mapping
-* A context map should be simple enough to be understuood by domain experts and development teams alike.
+* A context map should be simple enough to be understood by domain experts and development teams alike.
 * It is a high-level, han drawn diagram that communicates a holitic picture of the contexts in play.
 * It must demonstrate the integration points and the flow of data between bounded contexts.
 * It is vital to understand who is responsible for each context that is required to change and how this change will take place.
@@ -207,8 +207,9 @@
     * **Anticorruption layer**
         * Used to avoid corruption and protect your model from external influences. The interface adapts and translates to the interface of the other ocntext.
     * **Shared kernel**
-        * Sharing part of the model to ease integration between two teams working on two separate bounded contexts that have a lot of crossover in therms of domain concepts and logic.
+        * Sharing part of the model to ease integration between two teams working on two separate bounded contexts that have a lot of crossover in terms of domain concepts and logic.
         * To be used if you have two bounded contexts in the same subdomain that share a subset of domain logic.
+        * Other possible things: id VOs.
     * **Open host service**    
         * If multiple consumers need the same transforrmation logic needed from our model, we can provide a set of services to expose the functinality of a context via a clear defined, explicit contract.
         * To communicate with me, here you have my API (support multiple clients)
