@@ -8,7 +8,7 @@
 * **Modules**: Inside the Bounded Context, each concept should be broken down into Modules. A Module will represent the related classes of a specific concept of that Bounded Context. So Modules represent important concepts inside of Bounded Contexts.
     * One aggregate per module.
 * They propose a monorepo.
-* **Applications**: the client of the Application Services. It could be a web, mobile, etc.
+* **Applications**: the client of the Application Services. It could be a web, mobile, etc. FMPOV it's the **primary ports**
     * They propose having the Applications outside the Bounded Contexts, since an Application might need to access several bounded contexts.
     * Example: https://github.com/CodelyTV/php-ddd-example/tree/master/apps
         * The `Backoffice Backend` would be the HTTP Controller, e.g. for an HTTP API (e.g. using Symfony).
@@ -27,7 +27,40 @@
 * **Shared kernel**: code shared by different bounded contexts.
 
 ## Folders structure in a monorepo
-TBD
+They use (*Mooc* and *Backoffice* are Bounded Contexts; the insides are Modules):
+```
+applications/
+    backoffice_backend
+    backoffice_frontend
+    mooc_backend
+    mooc_backend
+src/
+    Backoffice
+        Videos
+        Students
+        Payments
+        Retentions
+        Roadmap
+        ...
+        Shared
+    Mooc
+        Videos
+        ...
+        Shared
+    Shared
+        Domain
+        Infrastructure
+test/
+    applications/
+        backoffice_backend
+        backoffice_frontend
+        mooc_backend
+        mooc_backend
+    src/
+        Backoffice/
+        Mooc/
+        Shared/
+```
 
 Bookmark:
-https://pro.codely.tv/library/domain-driven-design-ddd/87157/path/step/54349099/
+https://pro.codely.tv/library/domain-driven-design-ddd/87157/path/step/54349102/
