@@ -62,5 +62,42 @@ test/
         Shared/
 ```
 
+## Our first use case
+* StudentPutController -> StudentSignUpper (Application Service) 
+    -> StudentFinder (Domain Service)
+    -> Student (Aggregate)
+    -> StudentRepository
+* They use the library [Phunctional](https://github.com/Lambdish/phunctional) for having a nice `get(key, defaultValue)`
+
+
+## Where to validate when you have a web form?
+* Strategies
+    * Validate both in front and back.
+    * Controller
+    * Use Case
+    * Entity/Value Object
+* Their recommendations:
+    * Duplicate the logic in the frontend/Controller AND the VO
+
+## Aggregates
+* Course: aggregate root
+    * Id (VO)
+    * Lessons (entity)
+    * Review (entity)
+        * StudentId (VO)
+        * Rating (VO)
+        * Comment (VO)
+    * Description (VO)
+    * Summary (VO)
+* The aggregate root Course in the entrypoint, the gateway. 
+* E.g. we do not handle Lessons independently, but only through the Course. 
+* And not through a `course.setLessons(lessons)`, but through the constructor or business methods.
+* The aggregate offers encapsulation and integrity restrictions (invariants)
+    * Instead of `course.lesson.name()`, directly from `course.lessonName()`
+* Possible issues:
+    * Course can grow too much, e.g. because the Review grew too much.
+    * We can extract the Review as another Aggregate.
+
+
 Bookmark:
-https://pro.codely.tv/library/domain-driven-design-ddd/87157/path/step/54349102/
+https://pro.codely.tv/library/domain-driven-design-ddd/87157/path/step/54349112/
