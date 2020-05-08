@@ -161,5 +161,14 @@ test/
     * We avoid having duplicated logic
 
 
+## Definiendo contratos a nivel de interfaces de dominio
+* Problem: legacy data model. E.g. the course Aggregate is currently being saved in several tables
+* Solution: `LegacyDbVideoRepository` which encapsulates a JOIN to all the required tables.
+
+
+## TBD
+TBD
+
+
 Bookmark:
 https://pro.codely.tv/library/domain-driven-design-ddd/87157/path/step/54349124/
