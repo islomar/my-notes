@@ -7,6 +7,11 @@ Estimated time ~ 1 hour
 * https://github.com/islomar/dotfiles
 
 
+## Other dotfiles apps
+* https://github.com/twpayne/chezmoi
+* https://github.com/CodelyTV/dotly
+
+
 ## General
 * They like cloning the `dotfiles` repo under `$HOME/.dotfiles`.
 * They move the dot files to the repo folder and then they create a symbolic link: `ln -s $HOME/.dotfiles/.bashrc $HOME/.bashrc`
