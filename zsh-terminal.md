@@ -219,18 +219,19 @@ function progress_bar() {
 
 
 ## Interesting links
-### Tools
-    * https://denysdovhan.com/spaceship-prompt/
-    * https://github.com/codelytv/dotfiles
-    * https://github.com/zsh-users/zsh-syntax-highlighting
-    * https://github.com/zsh-users/zsh-autosuggestions
-    * https://github.com/sharkdp/bat
-    * https://github.com/junegunn/fzf
-    * https://github.com/ogham/exa
-    * https://htr3n.github.io/2018/07/faster-zsh/ >> add zprof for profiling
-    * https://github.com/rupa/z
-        * https://askubuntu.com/questions/250012/how-do-i-install-z-script
-    * https://github.com/wting/autojump
+
+### Tools
+* https://denysdovhan.com/spaceship-prompt/
+* https://github.com/codelytv/dotfiles
+* https://github.com/zsh-users/zsh-syntax-highlighting
+* https://github.com/zsh-users/zsh-autosuggestions
+* https://github.com/sharkdp/bat
+* https://github.com/junegunn/fzf
+* https://github.com/ogham/exa
+* https://htr3n.github.io/2018/07/faster-zsh/ >> add zprof for profiling
+* https://github.com/rupa/z
+* https://askubuntu.com/questions/250012/how-do-i-install-z-script
+* https://github.com/wting/autojump
 
 ### Readings    
     * https://www.reddit.com/r/zsh/comments/ak0vgi/a_comparison_of_all_the_zsh_plugin_mangers_i_used/
