@@ -166,7 +166,7 @@ PROMPT='%{%F{$(prompt_exit_code)}%}%n%{%f%} @ %d$(git_prompt_info): '
 ### Lazy slow functions
 1. Extract your function to another file, e.g. to `algo_que_tarda.sh`
 2. Inside `.zshrc`, declare:
-````
+```
 function aqt {
     fname=$(declare -f -F algo_que_tarda)
 
