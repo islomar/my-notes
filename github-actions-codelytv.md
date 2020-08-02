@@ -138,6 +138,11 @@ https://pro.codely.tv/library/automatizacion-con-github-actions/113898/path/step
 * https://github.com/CodelyTV/no-pull-requests
 * https://github.com/CodelyTV/no-branches
 * https://github.com/sdras/awesome-actions
+* https://github.com/CodelyTV/ban-words
+    * E.g. to promote denylist/allowlist instead of blacklist/whitelist
+* Template for creating GitHub Actions: https://github.com/CodelyTV/bash-github_actions-skeleton
+* Testing in Bash: https://github.com/bats-core/bats-core
+
 
 
 ## Talks and posts
