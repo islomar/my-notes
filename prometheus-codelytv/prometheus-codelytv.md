@@ -29,7 +29,7 @@
 - **Logging**
   - events, usually enriched with a context
 
-## Types of metrics
+### Types of metrics
 
 - **Counters**:
   - it accumulates
@@ -39,10 +39,12 @@
   - Discrete measures which can go up or down.
   - e.g. like a termometer or a speedmeter, number of users currently using the system, use of RAM, etc.
 - **Histogram**
+  - https://prometheus.io/docs/practices/histograms/
   - Time-based values.
   - You can see WHEN something happened with a specific value. You can select a range (bucket) and see the values there. E.g. to see percentiles
   - It is accumulative, each bucket contains the previous buckets.
   - It is calculated on server-side.
+  - It measures latencies.
 - **Summary**
   - It is a type of histogram: it also provides a total count of observations and an addition of all its values.
   - To be used when you can not predict which bucket you want.
@@ -51,7 +53,7 @@
   - It uses quantiles (1-5) instead of percentiles (1-100).
   - It affects your client performance (it is published from the client) and you can not do some aggregation on the server-side.
 
-## Solutions in the industry (alternatives)
+### Solutions in the industry (alternatives)
 
 - **StatsD**
   - The "oldest" one, very popular, from Etsy, kind of standard.
@@ -77,7 +79,7 @@
   - OpenCensus: https://opencensus.io/
   - OpenTracing: https://opentracing.io/
 
-## Introduction to Prometheus
+## First steps with Prometheus
 
 ### Architecture
 
@@ -95,7 +97,7 @@
   - It also exists API clients and Prometheus web UI.
 - **Alertmanager**: alerts are pushed to the Alertmanager and then forwarded to email, PagerDuty, etc.
 
-## Metrics formats
+### Metrics formats
 
 - They are exposed as plain text.
 - Example: `api_http_requests_total{method="POST", uri="\"} 12`
@@ -122,7 +124,59 @@
   - `prometheus_summary_example_sum {label="value"} 1.620491025699e+06`
   - `prometheus_summary_example_count {label="value"} 1.11229e+09860`
 
+### Prometheus installation and configuration
+
+- https://github.com/CodelyTV/prometheus-course
+- `1.2-Instalacion-prometheus`
+- http://localhost:9090/metrics
+- http://localhost:9090/graph
+  - http://localhost:9090/graph?g0.range_input=1h&g0.expr=%0Aprometheus_http_requests_total&g0.tab=1
+  - `prometheus_http_requests_total`: if we show see, we will see the counters resets (not good!). In order to get better graphs we better use something like `rate(prometheus_http_requests_total)[5m]`: number of increments during the last 5 minutes, instead of measuring a "total" value. For a counter, it is better to measure a relative value, not an absolute one because of the restarts problem.
+
+## Exposing application metrics
+
+- Client libraries: https://prometheus.io/docs/instrumenting/clientlibs/
+
+### Go
+
+- Repository: 3.1-app-exporter-go
+  - http://localhost:8081/metrics
+  - http://localhost:9090/metrics
+  - http://localhost:9090/graph
+
+### PHP
+
+- https://pro.codely.tv/library/prometheus/115108/path/step/77913749/
+
+## Exposing infrastructure metrics
+
+TBD
+
+## How to ingest metrics
+
+TBD
+
+## How to create alerts
+
+TBD
+
+## Prometheus in k8s
+
+TBD
+
+## DDD and Prometheus
+
+TBD
+
+## Next steps
+
+TBD
+
 ## Resources
 
 - https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html
 - There is a Chrome plugin for colouring the output of calling the endpoints `/metrics`
+
+## To be read
+
+- https://prometheus.io/docs/practices/histograms/
