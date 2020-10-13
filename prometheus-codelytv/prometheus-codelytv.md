@@ -139,6 +139,7 @@
 
 ### Go
 
+- https://github.com/CodelyTV/prometheus-course/tree/master/3.1-app-exporter-go
 - Repository: 3.1-app-exporter-go
   - http://localhost:8081/metrics
   - http://localhost:9090/metrics
@@ -146,11 +147,32 @@
 
 ### PHP
 
+- https://github.com/CodelyTV/prometheus-course/tree/master/3.4-app-exporter-php
+- We install the apcu extension, `pecl install apcu`. It can be used as a memory cache.
+
+### Java
+
+- https://github.com/CodelyTV/prometheus-course/tree/master/3.2-app-exporter-java
+
+## Bookmark
+
 - https://pro.codely.tv/library/prometheus/115108/path/step/77913749/
 
 ## Exposing infrastructure metrics
 
-TBD
+### Docker metrics
+
+- https://github.com/CodelyTV/prometheus-course/tree/master/2.1-caad-exporter
+- An **exporter** is something between the Prom server and the agents (when needed because the metrics are not exposed in a native way).
+- You better install the exporter in the same machine where you want to measure.
+- The Docker exporter: https://github.com/google/cadvisor
+- Now Docker already exposes metrics in a native way (but in an experimental way, better still use CAdvisor): https://docs.docker.com/config/daemon/prometheus/
+- You can then create dashboards to visualize CPU, memory, number of instances, etc.
+
+### MySQL metrics
+
+- https://github.com/CodelyTV/prometheus-course/tree/master/2.2-mysql-exporter
+- E.g. to show slow queries.
 
 ## How to ingest metrics
 
