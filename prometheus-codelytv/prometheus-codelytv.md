@@ -154,10 +154,6 @@
 
 - https://github.com/CodelyTV/prometheus-course/tree/master/3.2-app-exporter-java
 
-## Bookmark
-
-- https://pro.codely.tv/library/prometheus/115108/path/step/77913749/
-
 ## Exposing infrastructure metrics
 
 ### Docker metrics
@@ -176,7 +172,23 @@
 
 ## How to ingest metrics
 
-TBD
+### Pushing
+
+- https://github.com/CodelyTV/prometheus-course/tree/master/4.1-push-gateway
+- https://github.com/prometheus/pushgateway
+- The `pushgateway` is just another exporter.
+- It is something between the App and Prometheus.
+  - The App pushes metrics to the Push Gateway, and then Prometheus pulls metrics from that Push Gateway.
+- It doesn't delete metrics and always remembers everything. E.g. if a pod disappears, its metrics remains.
+- To be used just for things like the cron jobs (one for all of them is OK).
+- It has a UI
+
+### Remote data store: Cortex
+
+- https://github.com/CodelyTV/prometheus-course/tree/master/4.2-remote-write-cortex
+- Cortex provides long term storage for Prometheus.
+- We do not want to store everything, just what it is relevant (e.g. different frequency depending on how old data is).
+- Other alternatives to Cortex: Elasticsearch, Kafka, InfluxDB.
 
 ## How to create alerts
 
@@ -202,3 +214,7 @@ TBD
 ## To be read
 
 - https://prometheus.io/docs/practices/histograms/
+
+## Bookmark
+
+- https://pro.codely.tv/library/prometheus/115108/path/step/71928246/
