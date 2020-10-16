@@ -226,15 +226,15 @@
 ## Prometheus in k8s
 
 - https://github.com/CodelyTV/prometheus-course/tree/master/7.1-prometheus-k8s
-- In the example, they use Help in order to deploy Prometheus and Grafana in a k8s cluster.
+- In the example, they use Helm in order to deploy Prometheus and Grafana in a k8s cluster.
+- Helm is a package manager for k8s: it offers templates already prepared.
 
 ## DDD and Prometheus
 
-TBD
-
-## Next steps
-
-TBD
+- https://github.com/CodelyTV/php-ddd-example/blob/master/src/Shared/Infrastructure/Bus/Event/WithMonitoring/WithPrometheusMonitoringEventBus.php
+  - this is a decorator. Since we are sending all the domain events from an EventBus, we could create a wraper that first monitors the event and then publishes it as usually to the eventBus.
+- We could have an EventSubscriber for all the events that we are interested in, and then send them to Prometheus. That means having it centralized.
+- Another way is that every service sends it.
 
 ## Resources
 
@@ -245,7 +245,3 @@ TBD
 ## To be read
 
 - https://prometheus.io/docs/practices/histograms/
-
-## Bookmark
-
-- https://pro.codely.tv/library/prometheus/115108/path/step/71928279/
