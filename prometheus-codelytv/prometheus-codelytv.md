@@ -225,7 +225,8 @@
 
 ## Prometheus in k8s
 
-TBD
+- https://github.com/CodelyTV/prometheus-course/tree/master/7.1-prometheus-k8s
+- In the example, they use Help in order to deploy Prometheus and Grafana in a k8s cluster.
 
 ## DDD and Prometheus
 
