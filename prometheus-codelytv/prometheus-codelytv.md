@@ -186,13 +186,42 @@
 ### Remote data store: Cortex
 
 - https://github.com/CodelyTV/prometheus-course/tree/master/4.2-remote-write-cortex
-- Cortex provides long term storage for Prometheus.
+- Prometheus does not support clustering.
+- Cortex provides long term storage for Prometheus. Permite escalado horizontal y aporta características como replicación de información y alta disponibilidad.
 - We do not want to store everything, just what it is relevant (e.g. different frequency depending on how old data is).
 - Other alternatives to Cortex: Elasticsearch, Kafka, InfluxDB.
+- Another well known alternative is Thanos.
+- Cortex uses the same PromQL and API contract.
+- Usually you want several Cortex instances.
+- We can use Grafana with Cortex.
+  - We can add Cortex as a Data Source (thought we select "Prometheus" type).
 
-## How to create alerts
+### PromQL
 
-TBD
+- https://github.com/CodelyTV/prometheus-course/tree/master/4.3-promql
+- If the app is restarted, the counters are restarted. So, we use the function `rate()`, which indicates the number of increments that happened for a `count` per second.
+  - E.g. if the counter went `1, 2, 3, 4, 0, 1, 2`, the `rate` will detect the restart and return `1, 2, 3, 4, 5, 6, 7`.
+  * You need to pass a vector to range, a range, e.g. 5 minutes `rate(node_network_receive_bytes_total[5m])`: this would aggregate every 5 minutes.
+- For regex, we use the symbol `~`
+- Some examples:
+  - Get every HTTP status code except 4xx`http_requests_total {status! ~ "4 .."}`
+  - Get every job which finishes with the string _server_: `http_requests_total {job = ~ ". * server"}`
+  - `max_over_time(sum(go_gorouteine{job="codely"})([10m:1m])`: mke the addition of all the gosubroutines during the last 10 minutes and give me the maximum value reached.
+
+## How to create alerts: Alertmanager
+
+- https://github.com/CodelyTV/prometheus-course/tree/master/6.3-alert-manager
+- https://www.robustperception.io/prometheus-and-alertmanager-architecture
+- There is an independent component called **Alertmanager**
+- The rules for the alerts are configured in Prometheus, but what to do is responsibility of the Alertmanager
+- The Alertmanager scales, you can create a cluster and it works fine.
+- Prometheus determines what is wrong and sends alerts. The Alertmanager takes these alerts, and converts them to notifications via email, PagerDuty, Slack etc.
+- Prom does not scale, you can not cluster them. The Prom instances do not talk to each other, so if we configured the alert notification in each node, we would receive them duplicated.
+- You could configure alerts in Grafana **BUT**:
+  - In Grafana the UI is very basic
+  - We couldn't use PromQL.
+  - You can not share alerts between Grafana instances, it does not scale.
+- You can test the Alerts in your pipeline.
 
 ## Prometheus in k8s
 
@@ -208,6 +237,7 @@ TBD
 
 ## Resources
 
+- I exists `promtool`, e.g. to check that rules are correctly configured: `promtool check rules ./etc/prometheus/alertmanager/rules.yml`
 - https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html
 - There is a Chrome plugin for colouring the output of calling the endpoints `/metrics`
 
@@ -217,4 +247,4 @@ TBD
 
 ## Bookmark
 
-- https://pro.codely.tv/library/prometheus/115108/path/step/71928246/
+- https://pro.codely.tv/library/prometheus/115108/path/step/71928279/
