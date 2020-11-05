@@ -1,0 +1,11 @@
+{
+  "name": "3.1-makefile_vs_task_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"All tests passed\""
+  },
+  "author": "",
+  "license": "ISC"
+}
