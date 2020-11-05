@@ -113,7 +113,3 @@ make deps-require package=cypress
 - "standardize" target names
 - use namespaces, e.g. for `cypress/`
 - pass country as make parameter for starting the servers
-
-## Bookmark
-
-https://pro.codely.tv/library/makefiles/168370/path/step/98238088/
