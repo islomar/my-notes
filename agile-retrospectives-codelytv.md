@@ -34,7 +34,12 @@ https://pro.codely.tv/library/agile-retrospectivas
   - https://www.youtube.com/watch?v=EoMW8VYb_GE
   - https://www.youtube.com/watch?v=D9aXaAHJkKA
 
-## Reading
+## Preparing a retrospective
+
+- https://www.smokingbrains.com/post/como-facilitar-una-retrospectiva-grande
+- https://retromat.org/es/?id=90-47-20-73-15
+
+## Readings
 
 - https://www.smokingbrains.com/post/mejora-continua
 - http://www.funretrospectives.com/
@@ -47,3 +52,12 @@ https://pro.codely.tv/library/agile-retrospectivas
 - https://management30.com/practice/kudo-cards/
 - https://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory
 - https://coachingleaders.co.uk/impact-positive-negative-feedback/
+- https://www.smokingbrains.com/post/como-facilitar-una-retrospectiva-grande
+- https://retromat.org/es/?id=90-47-20-73-15
+
+## Dislikes
+
+- "Devops team"
+- "hacer agile"
+- Focus on Scrum
+- Focus on "fun" dynamics
