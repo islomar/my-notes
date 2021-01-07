@@ -3,10 +3,17 @@
 https://commitment-thebook.com/
 
 - The "only" things that the Financial Option maths can tell us about options are:
-  - Options have values.
-  - Options expire.
-  - Never commit earlier unless you know why: committing to an option is when you decide to do something and it is no longer optional, but an obligation/commitment.
+  - **Options have a value**.
+  - **Options expire**.
+  - **Never commit earlier** unless you know why: committing to an option is when you decide to do something and it is no longer optional, but an obligation/commitment.
+- **How to avoid committing too early**:
+  - Postpone the commitment, collect more information.
+  - Choose the options that is easiest to change.
+  - Invest in a different approach that allows change to be easier.
+  - Sometimes the end solution is slightly more expensive, but it allows you to delay the commitment.
+- When to make a commitment: when we have the necessary information.
 - The biggest problems is that most people see commitments which are actually options.
+- How much are you willing to pay for a choice to be an option istead of a commitment?
 - An aversion to uncertainty means people make decisions early
 - Delaying commitments gives decision makers more flexibility as they continue to have options. It allows them to manage risk / uncertainty using their options.
   - There is value in paying to defer a commitment.
@@ -20,12 +27,12 @@ https://commitment-thebook.com/
   - Embedded options
     - An option that occurs in a legal contract which was NOT specifically intended to be an optino. This is a clause in a contract that allows the buyer some flexibility as a kind of service.
     - Operational tolerance
-  - Real options
+  - **Real options**
     - They are options that exist outside of legal frameworks.
     - Black-Scholes and its derivative cannot be used to value real options.
     - Anything you can do without the obligation to do it is a real option.
 - About relationships and knowledge options
-  - Knowledge options are those pieces of information I know just enough of.
+  - **Knowledge options** are those pieces of information I know just enough of.
   - I learn enoug about a subject to understand what can be done with the tools, and how long it will take me to learn the tools to the point that I can apply them.
   - Knowledge options explictly acknowledge the value of being consciously incompetent.
   - Conscious competent model by Noel Burch, 1970.
@@ -33,6 +40,78 @@ https://commitment-thebook.com/
 - **Slack**
   - It's better that people wait for work than the other way around.
   - The team members can use their slack time to thelp their colleagues and to think about general system improvements.
+- Focus on time rather than cost.
+- Focus on blocked items and the queues or waiting states.
+  - People working on more than one task means you have hidden queues.
+  - Workingon more than one task or task switching is ineffective: things are blocked but not reported as such.
+- Identify **dependencies** on your project.
+- **Technical debt** is like a dirty kitchen.
+- **Visualization boards**
+  - Origins at Toyota.
+  - **Identifie non value adding tasks**.
+  - **Value stream**: map out the steps that create value and the steps in-between that do not add value.
+  - Focus on the **delivery of value** and the **creation of knowledge**.
+  - The value of a can of cola is realised when the can is consumed.
+  - Visualize the waiting states or queues before and after the states where we add value.
+  - **Buffers**: "Ready for X".
+  - Other types of queues: waiting anad multitasking.
+  - **Theory of constraints**: how much a factory produces is determined by its slowest step. Adding additional capacity to anywhere in the system other than at the constraint will have no beneficial impact.
+  - We need people to be able to move between the roles freely.
+  - Deliver value in **small slices**.
+  - **Outcomes** over outputs.:
+    - outcomes are the result of the outputs.
+    - Find the outcome that the client need to identify the value: ask "why" to move the discussion in the direction of the outcomes.
+    - If you start at the end of the value stream, you cannot miss something that is needed to produce the outcome. AND you don't include things that are unnecessary.
+- Business value:
+  - Increase revenue or reduce costs.
+  - Other ways: protecting revenue or avoiding costs.
+- Feature injection:
+  - Continuous loop through:
+    - Hunt the value
+    - Inject the features
+    - Break the model
+  - Move toward the outcome until we encounter value.
+  - Value is created when a benefit is created for either the consumer or the producer of a product or service that they are willing to pay for.
+  - Why are Twitter and Instagram worth so much?: they build options to generate revenue, based on network and usage.
+- Understand where your value is coming from
+- Allocate the people with the most options last.
+- A constraint is anything that prevents us from reaching our objective.
+- Staff liquidity:
+  - there is value in shorter iterations of development: longer iterations are riskier to the business investor.
+  - shorter iterations provide the investor with more options. And more options means more ways to control the project and manage the risks.
+  - Staff liquidity: the time it takes from when the initial investment is approved to having a fully gelled and fully up to seed team working on the project. Low liquidity: it is hard to move staff aound on projects.
+  - How to achieve staff liquidity:
+    - no key man dependencies on a project.
+    - allocate staff with the fewest options first, staff with most options last
+    - let staff with most options cach and helt pthe staff with the least options.
+  - SL is another name for having options about how you deploy your staff.
+  - not the entire organization needs the ability to move to a different project immediately. A small fraction (5 - 10%) should be liquid.
+- Game Theory
+  - The Prisoner's Dilemma.
+  - Strategy of Conflict
+  - When the system fails, the participants start to collaborate.
+  - The main aspect of collaboration is information sharing.
+  - Insert enough uncertainty so that the group perceives the situation as failing and tip into collaboration.
+  - A reorganisation doen slowly is more damaging than one done quickly as it will damage collaboration.
+  - Anyone who bans or suppresses conflict prevents healthy group development.
+  - Look for people who do not communicate with each other, that is worse than "bad relationship".
+  - Most people are not rational. We hate uncertainty so much that we want to make a decision "now" even if it risks being wrong. Rather than have total uncertainty we have to create bounded or conditional uncertainty.
+  - Collaboration only occurs when everyone loses all the time.
+- Too much choice is a bad thing.
+  - Book "Paradox of choice: why less is more"
+  - TED talk from Sheen Iyengar
+  - Use option thinking for the important choices, not continuously (it is overwhelming) and "bad".
+- Recommendations
+  - Be deliberate about what to treat as an option.
+  - Be deliberate about making commitments.
+  - Don't expect too much
+- Scenario Planning
+  - It is another expression of real options.
+  - Popularised with "The Fifth Discipline".
+  - Prepare for multiple possible futures and have your options for each in place.
+- For every commitment we look for options to **make it reversible**.
+  - Develop rollback options for all the scenarios identified.
+  - Monitor solution to give early warning of any problems.
 
 ## InfoQ article: "Real Options" Underlie Agile Practices
 
