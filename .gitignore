@@ -1,4 +1,4 @@
 .terraform/
-
+.idea
 logs.jsonl
 **/var/
