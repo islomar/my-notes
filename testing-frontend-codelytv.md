@@ -89,7 +89,8 @@ https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit
 - https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/61-mocking
 
 * `coursesRepo.searchAll.mockResolvedValue()`
-* Al fina, se debe "limpiar" el doble. Hay varias maneras:
+* `coursesRepo.searchAll.mockResolvedValueOnce()`
+* Al final, se debe "limpiar" el doble. Hay varias maneras:
   - `coursesRepo.searchAll.clear()`: sólo borra el número de veces que ha sido llamado
   - `coursesRepo.searchAll.mockReset()`
   - `coursesRepo.searchAll.mockRestore()`
@@ -110,7 +111,73 @@ https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit
 ### Testeando animaciones
 
 - https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/63-animations
+- `await waitForElementToBeRemoved()`
+- Cambiar cuando sea posible la duración de la transición a 0 ms
+
+## Agilizando el proceso de testing
+
+### Mejorar la mantenibilidad de nuestros tests con custom renderers
+
+- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/71-custom-renderers
+- Cómo testear "mockeando" lo mínimo. Cómo pasar el store (e.g. vuex, redux), el router, etc.
+- Nos crearemos una función render propia en un archivo, que reciba los parámetros necesarios para configurar el componente (por ejemplo, el estado inicial) que también reexportará toda testing library.
+- `export * from "@testing-library/vue";` // re-exportamos Testing Library
+- Ejemplo en React: https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/redux-02.js
+  - Necesitas encapsular el component con un `<Provider>`
+
+### Agilizar la creación de datos fake con Test Object Factories
+
+- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/72-test-object-factory
+- Test Object Factories.
+  - https://github.com/thoughtbot/fishery
+    - Builder pattern
+    - Fishery is built with TypeScript in mind. Factories accept typed parameters and return typed objects, so you can be confident that the data used in your tests is valid.
+  - https://github.com/rosiejs/rosie
+- Librería de datos fake: https://github.com/marak/Faker.js/
+  - Ventaja: genera dinámicamente diferentes datos. Si alguno falla, se puede crear un test específico.
+- Naming: "object mother" vs "test object factory"
+  - https://twitter.com/mikesherov/status/1156200073535119361
+
+### Snapshot testing, ¿sí o no?
+
+- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/73-snapshots
+- https://jestjs.io/docs/en/snapshot-testing
+- Funciona bien para componentes representacionales... pero no son lo que más valor aporta testear de forma "aislada".
+
+## TDD con Testing Library
+
+### Implementando una nueva feature con TDD
+
+- [Punto de partida](https://github.com/CodelyTV/javascript-testing-frontend-course/commit/23e5d2341d89b430ab8ad9220007abb288fd4c24)
+- [Añadimos el test para validar que hay comentarios](https://github.com/CodelyTV/javascript-testing-frontend-course/commit/97dfb747b174a0f78b1e7dab619fa676adcef685)
+- [Añadimos el código](https://github.com/CodelyTV/javascript-testing-frontend-course/commit/744f5808a451b8cea5279614a9e54028d83f81cf)
+- [Arreglamos el test](https://github.com/CodelyTV/javascript-testing-frontend-course/commit/395048b26f6f03a47383c20fce448e3095db3e41)
+- [Hacemos refactoring](https://github.com/CodelyTV/javascript-testing-frontend-course/commit/f70c0210fe0ee713285b90d838ac1d4aef2841a1)
+
+### TDD hard mode con fake timers
+
+- [Fake timers de Jest](https://jestjs.io/docs/en/jest-object#mock-timers)
+  - Falsea las llamadas de `setInterval()` o `setTimeout()`
+- Los timers de Jest nos dan además una forma de forzar que los timers se ejecuten, como `runAllTimers` y `runOnlyPendingTimers`.
+
+## CI/CD: Integramos el testing en nuestra pipeline
+
+- https://github.com/CodelyTV/javascript-testing-frontend-course/blob/main/.github/workflows/test.yml
+- `.github/workflows`
+
+## Errores frecuentes con Testing Library
+
+- https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+- No usar el `container` en general.
+- No usar las queries adecuadas
+- Esperar tiempo aleatorio (e.g. `sleep(1000)`)
+- Side effects en [waitFor](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor)
+- Abusar de beforeEach
 
 ## Interesting stuff
 
 - `screen.debug()`: it shows the HTML rendered at that point.
+- https://github.com/kentcdodds/react-testing-library-course
+- Free fake API: https://jsonplaceholder.typicode.com/
+- https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+- https://testing-library.com/docs/queries/about/#types-of-queries
