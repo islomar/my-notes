@@ -127,6 +127,16 @@ The other change
 ```
 
 - `git pull --rebase --autostash`
+- Cómo resolver el conflicto que surge cuando se ha cambiado un mismo fichero en remoto y en local, y hay varios commits para los que git pide resolver el conflicto:
+  1. Hacer un Merge sobre nuestra rama de trabajo y resolver el conflicto: Con esto conseguimos que los cambios se apliquen como un único commit (merge commit) y por tanto resolvemos los conflictos una sola vez
+  2. Hacer un Rebase sobre nuestra rama de trabajo y, ante el conflicto, quedarnos con todo lo nuestro: Con esto conseguimos que se elimine el merge commit y quede limpio nuestro histórico de commits
+
+## Soluciones prácticas para problemas reales
+
+- Deshacer cambios locales:
+  - `reset --soft`: Los cambios se mantienen aplicados en nuestro local, dejándolos en el staging area
+  - `reset --mixed`: Los cambios se mantienen aplicados en nuestro local, dejándolos en el working tree
+  - `reset --hard`: Los cambios se eliminan completamente, descartándolos por completo
 
 ## More interesting links
 
