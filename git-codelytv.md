@@ -2,7 +2,12 @@
 
 - ETA: 12 hours
 
-### General
+## Annotations from xxx
+
+- HEAD: the active location. It usually points to a branch. But you can point it to a commit (that's when we talk about a _detached HEAD_).
+- `git branch -f [branchName] [commitHash]`: this way, we can change where a branch is pointing.
+
+## General
 
 ```
 # Nombre del autor
@@ -137,6 +142,45 @@ The other change
   - `reset --soft`: Los cambios se mantienen aplicados en nuestro local, dejándolos en el staging area
   - `reset --mixed`: Los cambios se mantienen aplicados en nuestro local, dejándolos en el working tree
   - `reset --hard`: Los cambios se eliminan completamente, descartándolos por completo
+- File under `~/dotfiles/git/bin/git-undo`: https://github.com/CodelyTV/dotfiles/blob/master/bin/git-undo
+- https://github.com/so-fancy/diff-so-fancy
+  - https://github.com/rgomezcasas/dotfiles/commit/d9435ffe5f76ae048fe43a33bda4bb7bec1fb49d
+- Muestra commits en el histórico que coincidan con el texto introducido: `git log --grep $string`
+- Muestra los commits de los últimos 15 días: `git log --since=$(date --date="15 days ago" + "%Y-%m-%d")`
+- `git log -S` (pickaxe): cuándo se introdujo o se eliminó una cadena de texto dentro del repositorio (o de un fichero concreto si necesitamos acotar la búsqueda)
+- `git bisect run "test -f bug"`
+
+## Conociendo las tripas de Git
+
+- Comandos
+  - Porcelana: los públicos
+  - Fontanería: los internos
+- ¿Qué es realmente una rama? Se trata de un fichero que guarda una referencia ligera y móvil a un commit (irá cambiando su referencia conforme vayamos haciendo nuevos commits)
+- ¿Y el HEAD? Consiste en una referencia simbólica a nuestra rama activa, en algunos casos puede apuntar directamente a un commit, como al hacer checkout sobre un commit
+- Al iniciar un repositorio desde cero, Git nos creará el directorio .git/ con una serie de subdirectorios, entre los cuales: hooks/ info/ refs/ **index/** **logs/** y **objects/**
+- Dentro de estos directorios, encontraremos cuatro tipos de datos 🗂:
+  - Blob (binary large object): Almacena datos en formato binario
+    - Para guardar audio, vídeo, textos, etc.
+  - Commit: Almacena información como el autor, la fecha, la referencia al tree…
+  - Tree: Directorio que almacena Blobs y otros Trees
+    - Carpeta que almacena por ejemplo las diferencias de un commit.
+  - Tag: Representa una referencia estática a un commit concreto. Dos tipos:
+    - Annotated: se les puede poner un nombre, son los que conocemos comúnmente.
+    - Light: no se puede poner un nombre ni nada, no se guardan.
+- El comando hash-object lo que nos permitirá será generar un SHA en base al contenido de nuestros cambios, almacenándolo bajo **objects/**
+
+```
+echo 'no tests no commit' | git hash-object --stdin -w
+>c83952c095fccfe1fdf22e14f51bf85038ed8074
+```
+
+- `git cat-file -t [hash]`: me indica de qué tipo es un hash (e.g. de tipo blob)
+- `git cat-file -p [hash]`: imprime el contenido de ese blob (e.g. el texto "no tests no commit")
+- Al hacer commit, Git genera:
+  - Un blob (si aún no existe) con el fichero
+  - Un objeto tree (que apunta al blob): una especie de "carpeta".
+  - Un objeto commit (que apunta al tree)
+- Git reutiliza los blobs siempre y cuando el contenido no haya cambiado, haciendo en su lugar que los distintos tree apunten al mismo blob.
 
 ## More interesting links
 
@@ -154,3 +198,6 @@ The other change
   - `dot git pretty-log`
   - https://github.com/CodelyTV/dotfiles/blob/97762e9d3b2bc0ede05454f39f3544eea382a686/scripts/git/pretty-log
 - Crear alias para `git undo` y que deshaga el último commit.
+- https://github.com/so-fancy/diff-so-fancy
+  - https://github.com/rgomezcasas/dotfiles/commit/d9435ffe5f76ae048fe43a33bda4bb7bec1fb49d
+  - https://github.com/rgomezcasas/dotfiles/blob/30ed29fd7035417ab5ba0680ceb576ec80c74d07/shell/aliases.sh#L21
