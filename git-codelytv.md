@@ -2,8 +2,10 @@
 
 - ETA: 12 hours
 
-## Annotations from xxx
+## Annotations from website learngitbranching
 
+- https://learngitbranching.js.org/
+- **HEAD** can point either to a branch (usually) or to a commit (_detached HEAD_)
 - HEAD: the active location. It usually points to a branch. But you can point it to a commit (that's when we talk about a _detached HEAD_).
 - `git branch -f [branchName] [commitHash]`: this way, we can change where a branch is pointing.
 
@@ -152,6 +154,8 @@ The other change
 
 ## Conociendo las tripas de Git
 
+### Conociendo la carpeta .git
+
 - Comandos
   - Porcelana: los públicos
   - Fontanería: los internos
@@ -182,8 +186,33 @@ echo 'no tests no commit' | git hash-object --stdin -w
   - Un objeto commit (que apunta al tree)
 - Git reutiliza los blobs siempre y cuando el contenido no haya cambiado, haciendo en su lugar que los distintos tree apunten al mismo blob.
 
+### Cómo recuperar commits perdidos
+
+- ¿Cómo puedo perder un commit?
+  1. Hago un detach HEAD yéndome a un commit específico
+  2. Ahí hago un nuevo commit
+  3. Vuelvo a la rama
+  4. ¡He perdido el commit que hice en el paso 2! (aunque sigue existiendo... en alguna parte)
+- Dos formas diferentes de recuperar commits perdidos:
+  1. A través de logs:
+  - En la carpeta _logs/_ se almacena `<commit-before><commit-after> ... <action><message>`
+  - E.g. lo que le haya ocurrido a la rama master estará en el fichero `.git/logs/refs/heads/master`
+  - Una vez identificado el [commit-after], ejecutamos: `git reset --hard 'hash_del_commit'`
+  2. Usando **reflog**
+  - `git reflog show [branch]`
+  - Muestra `<commit><acction>...<message>`
+- Git no borra automáticamente el contenido aunque nosotros hagamos un ‘reset’, sino que permanecen en torno a 90 días si no hacemos un Push o forzamos manualmente su vaciado.
+- También podemos recuperar cambios no commiteados que han estado en el staging area
+  - Todo eso se guarda en el `index/`
+  - `git fsck --unreachable --no-reflogs (--lost-found) (--no-progress)`
+  - Este comando nos ayudará a detectar los blogs que no hayan sido trackeadas por Git, es decir, todo aquello que en algún momento hemos añadido al índice pero no está en algún commit
+  - Tiene que haberse añadido al staging area en algún momento.
+  - Una vez identificado el blob, podemos utilizar el comando git cat-file -p <hash> para que nos muestre el contenido de dicho blob y, de este modo, acceder a los cambios
+
 ## More interesting links
 
+- https://training.github.com/
+- https://learngitbranching.js.org/
 - https://www.campusmvp.es/recursos/post/git-como-evitar-problemas-con-cambios-de-linea-al-trabajar-en-equipo.aspx
 - https://github.com/scmbreeze/scm_breeze
   - SCM Breeze is a set of shell scripts (for bash and zsh) that enhance your interaction with git. It integrates with your shell to give you numbered file shortcuts, a repository index with tab completion, and many other useful features.
@@ -201,3 +230,4 @@ echo 'no tests no commit' | git hash-object --stdin -w
 - https://github.com/so-fancy/diff-so-fancy
   - https://github.com/rgomezcasas/dotfiles/commit/d9435ffe5f76ae048fe43a33bda4bb7bec1fb49d
   - https://github.com/rgomezcasas/dotfiles/blob/30ed29fd7035417ab5ba0680ceb576ec80c74d07/shell/aliases.sh#L21
+- `git log -g --abbrev-commit -pretty=oneline`
