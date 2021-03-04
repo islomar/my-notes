@@ -81,8 +81,6 @@ git config --global user.email "rafa.gomez@codely.tv"
   - Admite crear feature branches.
   - Se despliega master a Producción en cuanto se hace el merge de una feature branch.
   - Release branches: copia de master, se hacen tags.
-- **Master-only**
-  - XXX
 
 ## Best practices
 
@@ -121,6 +119,12 @@ git config --global user.email "rafa.gomez@codely.tv"
 - `git pull --rebase` para que no haga merge de lo que traiga de origin en nuestro local (si hay algún commit local pendiente de pushear).
 - `git log --graph --abbrev-commit --decorate --all`
 
+## Asegurando convenciones de equipo con Git
+
+- From GitHub Settings, you can configure branches rules, e.g. to avoid pushing directly in the master branch, requiring PR reviews before merging, require code owners, require status checks to pass, etc.
+- Hooks:
+  - https://github.com/CodelyTV/scala-ddd-example/tree/master/doc/hooks
+
 ## Resolución de conflictos
 
 - Conflict:
@@ -151,6 +155,18 @@ The other change
 - Muestra los commits de los últimos 15 días: `git log --since=$(date --date="15 days ago" + "%Y-%m-%d")`
 - `git log -S` (pickaxe): cuándo se introdujo o se eliminó una cadena de texto dentro del repositorio (o de un fichero concreto si necesitamos acotar la búsqueda)
 - `git bisect run "test -f bug"`
+
+## Analizando nuestro repositorio: Extrayendo información en base a datos
+
+### Cómo priorizar esfuerzos de refactoring
+
+- https://github.com/tj/git-extras
+- **git-effort**, por ejemplo, lo que nos aportará es un resumen de qué ficheros son los que más se han modificado en el repositorio
+- https://github.com/islomar/your-code-as-a-crime-scene
+- https://github.com/smontanari/code-forensics
+  - https://dev.to/antoinega/analyze-your-git-5ej0
+  - https://hub.docker.com/r/jdevoo/code-forensic/
+  - https://github.com/smontanari/code-forensics/wiki
 
 ## Conociendo las tripas de Git
 
@@ -220,6 +236,8 @@ echo 'no tests no commit' | git hash-object --stdin -w
 - [GitHub Tree Explorer](https://chrome.google.com/webstore/detail/tree-explorer-for-github/caffoilocbbhnkdlpdcfanpbeholjdii)
 - https://github.com/CodelyTV/pr-size-labeler
 - https://mtlynch.io/code-review-love/
+- Firmar commits: https://docs.github.com/en/github/authenticating-to-github/signing-commits
+- https://www.industriallogic.com/blog/whats-this-about-micro-commits/
 
 ## TO DO
 
