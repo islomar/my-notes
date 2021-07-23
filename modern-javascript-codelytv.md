@@ -149,16 +149,91 @@
 
 ## Funciones
 
-TBD
+### Cuándo realmente merece la pena hacer binding de this
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/71-this
+- Dentro de una función, el valor de _this_ depende de como sea invocada la función (runtime binding).
+- Gracias a _bind_ podemos proveer el valor de _this_ de manera que no dependerá de quien llame a la función y coincidirá con el valor que pasamos a bind.
+
+### ¡Las Arrow functions NO son azúcar sintáctico! - Diferencias en el tratamiento de this
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/72-arrow
+- Las arrow functions no asocian el contexto en función de quién las invoque por lo que _this_ seguirá asociado al contexto donde la función ha sido definida.
+- [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [eslint prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback#:~:text=Arrow%20functions%20can%20be%20an,to%20their%20surrounding%20scope%2Fcontext.)
+
+### Trazas de errores semánticas aún con arrow functions
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/73-anonymous-functions
+- Cuando usamos funciones anónimas, ya sean arrow functions o funciones tradicionales, es posible que nos falte información cuando vamos a revisar el stack trace.
+- Una opción para mejorar este comportamiento es extraer las funciones anónimas a variables con nombre de manera que el stack trace tendrá más información al aparecer el nombre de cada una de las funciones.
 
 ## Asincronía
 
-TBD
+### De callbacks a promises usando fetch
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/81-async
+- **Promises** improve readability.
+- [fetch MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  - Fetch es una api disponible en todos los navegadores modernos y que nos permite realizar llamadas HTTP con promesas.
+- [promises MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- **async/await** is syntactic sugar to simplify the Promises.
+
+### Cuándo usar Async/await
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/82-async-await
+- When we use _await_ we are returning a Promise.
+- Cuando trabajamos con promesas es posible crear funciones asíncronas mediante el uso de la palabra reservada _async_.
+- El hecho de marcar una función como asincrona nos permite trabajar con las promesas de una forma distinta y en lugar de encadenarlas usando _then_ podemos bloquear el proceso y esperar al resultado de nuestras promesas a través del uso de la palabra reservada _await_.
+- Los _await_ dentro de una función _async_ bloquea pero sólo dentro de ese contexto.
+- **Promise.all**
+  - Promise all es una función que recibe un array de promises que ejecuta en paraleo y espera a que todas las promesas estén ejecutadas.
+  - Esto nos permite ejecutar más rápido un conjunto de promesas ya que no estamos bloqueando la ejecución ni esperando a que una promesa termine para empezar la siguiente.
+
+### Control de errores try-catch con asincronía
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/83-error-handling
+- Dentro del prototype de Promise nos encontramos el método _catch_ mediante el cual podemos recoger los errores que se pueden producir a la hora de resolver una promesa.
+- También es posible usar el bloque try/catch cuando usamos await en lugar del bloque catch.
+- Capturar excepciones con el mínimo scope posible.
+- Example:
+  ```
+    const responses = await Promise.all(requests).catch((e) => {
+      console.error(e);
+      return [];
+    });
+  ```
+- [Promise.prototype.catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
 
 ## Clases
 
-TBD
+### La herencia en JavaScript es una mentira
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/91-prototype
+- Para JavaScript las clases no son un ciudadano de primera ya que son un azucar sintáctico que es traducido internamente a prototipos, el verdadero sistema de delegación (herencia) con el que trabaja JavaScript.
+- El _prototype_ es el mecanismo por el que los objetos de JavaScript pueden heradar métodos de otros objetos.
+- Deberíamos hablar de _delegation_ más que de herencia.
+- Las arrow functions carecen de prototype por lo que no pueden ser usadas para hacer un objeto con herencia prototípica.
+- [Object prototype](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+
+### Échale azúcar a tus clases: this, visibilidad y encapsulación
+
+- https://github.com/CodelyTV/javascript-modern-course/tree/main/92-class
+- Es posible declarar métodos como privados en nuestras clases, para ello debemos de marcar los métodos con un _#_ delante del nombre.
+- Para añadir un método estático a una clase podemos hacerlo a través de la key _static_.
+- [Babel plugin private methods](https://babeljs.io/docs/en/babel-plugin-proposal-private-methods)
+- [Private class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+
+## Conclusiones y siguientes pasos
+
+### Alternativas a Webpack
+
+- esbuild
+- Snowpack
+- Vite
+- Webpack
 
 ## Qué pedir
 
 - Curso de optimización SEO
+- Haskell
