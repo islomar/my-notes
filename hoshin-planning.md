@@ -260,11 +260,15 @@
 - No hacer un Hoshin por departamento.
 - No perpetuar el comportamiento en silos. Problema de suboptimización.
 - Podría tener sentido montar un Hoshin por producto, por servicio/flujo de valor, por customer journey, etc...
-- "Jobs to be done":
+- **"Jobs to be done"**:
   - qué trabajos tenemos que hacer para el cliente.
   - entender qué necesita el cliente de mí
   - <https://jobs-to-be-done.com/jobs-to-be-done-a-framework-for-customer-needs-c883cbf61c90>
   - <https://hbr.org/2016/09/know-your-customers-jobs-to-be-done>
+  - “Job” is shorthand for what an individual really seeks to accomplish in a given circumstance.
+  - The circumstances are more important than customer characteristics, product attributes, new technologies, or trends.
+  - Jobs are never simply about function—they have powerful social and emotional dimensions.
+  - Good innovations solve problems that formerly had only inadequate solutions—or no solution.
 - Hoshin de equipo para medirlos, fiscalizarles, ponerles número, etc.: NEIN!
 
 ### Hoshin subsidiarios o anidados
@@ -288,12 +292,76 @@
 
 #### Indicadores agregados o compuestos
 
-- "Grosería": hacer la media de los N indicadores (no significa nada)
-- XXX
+- "Grosería": hacer la media de los N indicadores (no significa nada, WTF)
+- La tendencia por trimestre puede decirnos más...
+- Si algún indicador es más relevante, se pueden ponderar dándoles más peso de cara a la media.
 
 ## Section 3: Sobre el propósito y la visión
 
-- TBD
+- Líneas borrosas entre propósito, misión y visión.
+- Propósito de Improvement21: ayudar a las empresas a tomar consciencia.
+- **Propósito**: quiénes somos y por qué somos eso. Cuál es la diferencia de nuestra empresa respecto a otras. Relacionado con nuestros valores, nuestra cultura, nuestros principios. **Para qué** hacemos el producto/servicio y cómo se enlaza con los valores.
+- **Misión**: cómo lo vamos a hacer, qué vamos a construir. Lo que tenemos que hacer, lo que hemos venido a hacer. A veces describe el producto de la empresa.
+  - Mission statements de las empresas.
+- **Visión**: futuro. Cómo será el futuro una vez cumplamos con nuestras misión.
+- Huir de definiciones SMART e INVEST.
+- Buscamos que inspire.
+- Debe ser memorable.
+- El propósito tiene que estar conectado con la cultura y los valores de la empresa.
+- Debe ser claramente entendible, fácil de recordar. Simple.
+- Debe ser realista.
+- Simon Sinek tiene una charla TED titulada "How Great Leaders Inspire Action" en la que habla del círculo dorado (WHY - HOW - WHAT), lo que ha hecho que el video muchas veces sea referido como "Start With WHY" - comienza con el por qué / para qué.
+
+### Proyecto, Producto, Problema
+
+- Las empresas suelen estar muy centradas en **"Proyectos"**, muy centradas en indicadores de rendimiento: tiempo para entregar el producto, recursos con los que se cuenta, funcionalidades a entregar, etc. Proyectos exitosos que no sirven para nada.
+  - El Hoshin no debería ir orientado a un proyecto.
+  - El proyecto puede apoyar a los OKRs, no al contrario
+- **Producto**: Kodak. Se centró en el producto y se olvidó de sus usuarios, que estaban viendo ventajas en la fotografía digital.
+- Espacio **"Problema"**: Customer-centricity. Sólo es valor aquello que repercute en el cliente (sic).
+
+### Flujos de valor
+
+- Identificar quiénes son los clientes de la empresa.
+- El cliente nos da algo a cambio de resolverle el problema que sea.
+- Definir los "touchpoints", dónde toco al cliente. Empezar el Value Stream Mapping por el cliente: ¿qué recibe? ¿cómo?, etc. Ir hacia atrás. Comenzar siempre con el cliente, con la entrega de valor.
+- Reflexionar sobre a qué nos dedicamos en la empresa, cómo generamos valor, etc.
+- **Business Model Canvas**
+  - Key partners
+  - Key activities
+  - Key resources
+  - Cost structure
+  - Value proposition
+  - Customer relationships
+  - Channels
+  - Revenue streams
+  - Customer segments
+- **Lean UX Canvas**
+  - Business problem
+  - Users & Customers
+  - Hypotheses
+  - Solution Ideas
+  - What's the most important thing we need to learn first?
+  - Business Outcomes
+  - User Benefits
+  - What's the least amount of work we need to do to learn the next most important thing?
+- **Design Thinking**
+  - **Empathy maps**:
+    - Hear?
+    - Think & Feel?
+    - Say & Do?
+    - See?
+    - Pain
+    - Gain
+- The **Value Proposition Canvas**
+
+### Conectando el ecosistema
+
+- Clientes.
+- Stockholders: quienes financian.
+- Managers.
+- Empleados (los separa de los managers, WTF)
+- Proveedores.
 
 ## Section 4: Objetivos
 
@@ -321,12 +389,14 @@
 
 ## Dudas o comentarios
 
+- El audio no es nítido a veces.
 - Foco en outputs... no obviar los outcomes (e.g. aprendizaje)
 - Solution focus: cuidado con caer en culpabilizar a quien en realidad no tiene potestad y solo responsabilidad.
 - "Todo siempre en positivo". Hhhmm... cuidado.
 - "Coach de OKR": WTF
 - Valores -> responsabilidad: apropiarnos del sistema, mantener nuestros compromisos >>> WTF!!!! RED FLAG!!!!
 - Ejemplo de Hoshin subsidiariso: talento, etc.
+- Al cliente final le da igual todo lo que no le aporte valor, e.g. cuanto se paga a los trabajadores > WTF!!!!
 
 ## Q&A
 
