@@ -49,4 +49,43 @@
 
 - TBD
 
+## Real Example of a Deployment Pipeline in the Fintech Industry
+
+- <https://www.youtube.com/watch?v=bHKHdp4H-8w&t=1s>
+- [TransFICC](https://transficc.com/): API for eTrading
+- Tech. Stack
+  - Java running on Linux
+  - Built with Gradle
+  - Jenkins for CI
+  - Config Management via Ansible
+  - Custom, In-House Deployment tool running over SSH
+- When built from scratch, it takes 25 minutes to compile everything.
+  - But TransFICC operate an incremental build
+  - On average, the commit stage (build) usually takes around 3 minutes to run.
+- **Pipeline stages**
+  - Commit (build and "fast" tests)
+  - Integration tests
+  - Acceptance tests
+  - Performance tests
+  - Common Library Code
+  - Trading Venue Adaptors
+- **Integration tests**:
+  - testing things which are a little bit slow for running on the "commit" stage
+  - Integration tests don't deploy and start the system up!
+- **Acceptance tests**
+  - Evaluate the system as a whole.
+  - They have a DSL
+- Recommendation: run in parallel all the tests after the build stage (integration, acceptance, performance, common library and adaptors).
+- Example: require a digit in all passwords
+  - Start by writing the test.
+  - Pass the test locally.
+  - Build, deploy and test the system locally.
+  - Write an acceptance test first whenever possible.
+  - Commit and push
+  - It took only 11 minutes from the moment the developer looked at the requirement and it was pushed.
+- TransFICC practice Continuous Deployment
+  - If the pipeline passes, change is automatically deployed
+  - Trunk-Based Development (commits to the main branch)
+- In case you break the pipeline, you can block anybody else access until you fix it.
+
 Bookmark: page 8

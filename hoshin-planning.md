@@ -365,7 +365,102 @@
 
 ## Section 4: Objetivos
 
-- TBD
+- Los objetivos describen la estrategia de la compañía: éstas son las cosas importantes ahora mismo en la empresa.
+- Los objetivos deberían responder a la pregunta "para qué".
+
+### Reglas para Objetivos
+
+- Más que reglas serían principios o recomendaciones
+- Los objetivos deberían estar para dirigir el proceso de aprendizaje.
+- No conectados a bonos, incentivos, promociones, evaluaciones de promociones, etc.
+- Conectan con el propósito
+- Describen la estrategia
+- Responden a "Para qué"
+- Definir entre 1 y 4 objetivos por cada área/iniciativa/producto/equipo/persona.
+- Progresivos, no "binarios".
+- Tienen un "dueño": no la persona responsable que deba responder de ello, sino una persona que por ejemplo haga seguimiento, un "sirviente" del objetivo.
+- La mayoría debería ser emergentes o acordados: son los equipos de "primera línea" quienes los propongan a la "alta gestión".
+- Revisados frecuentemente: e.g. cada dos meses o cada mes (según la incertidumbre)
+- Ambiciosos, incluso "Moonshots": discrepo un poco
+  - No asociados a bonus.
+  - No asociados a premios/castigos.
+  - La gente no debería sentirse presionada por ellos.
+  - Cumplir entre un 60% y 80%.
+  - Colar sólo algún moonshot.
+  - Mantenerse en un "rango creativo" entre "demasiado fácil" y "estresante".
+- Balanceados entre muy específicos y más abiertos
+
+### 50 ejemplos de Objetivos - Objetivos de Compañía
+
+- Hoshin no es una herramienta que cree una estrategia ni ofrezca directamente unos objetivos.
+- "Aumentar ventas"
+- "Mejorar rentabilidad"
+- "Captar más mercado"
+  - Definir el funnel, identificar dónde tenemos las principales pérdidas
+- "Diversificar nuestra oferta"
+- "Reforzar nuestro nicho"
+- "Mejorar la calidad de nuestro producto"
+- "Diferenciarnos de la competencia"
+
+### 50 ejemplos de Objetivos - Objetivos de Marketing
+
+- "Crear una newsletter mensual"
+  - Es un objetivo de nivel de exigencia muy bajo. Falta preguntarse "el para qué". Es una acción binaria, no muy buen objetivo.
+- "Mejorar engagement/recurrencia"
+- "Mejorar la web"
+- "Generar más leads"
+- "Mejorar el proceso de adquisición"
+- "Aumentar la conversión"
+- "Implementar nuevo proceso de analíticas"
+- "Entender mejor a nuestros clientes"
+- "Ser la marca más reconocida"
+- "#1 en lista BrandList antes del 31 de Diciembre"
+
+### 50 ejemplos de Objetivos - Objetivos de CRM y RR.HH.
+
+- "Automatizar el proceso de CRM"
+  - Esto es "hacer cosas". Lo importante es "para qué".
+- "Mejorar el seguimiento de clientes"
+- "Respuestas más rápidas y de mejor calidad"
+- "Clientes más satisfechos"
+- "Mejorar el índice de satisfacción de clientes"
+- "Índice de satisfacción 95% antes del 1 de junio"
+  - Cerrado y prescriptivo.
+- "Reducir la tasa de rotación"
+- "Equilibrar nuestra oferta salarial"
+- "La mejor empresa en la que trabajar"
+  - Muy abierto. Tal vez más una misión o visión que un objetivo.
+- "Contrataciones más rápidas"
+- "Mejorar la motivación"
+- "Desarrollar un plan de carrera / programa de mentoring / proceso de Onboarding"
+  - Son cosas. Es un accionable, no un "para qué".
+- "Mejorar la comunicación interna"
+- "Liderazgo excepcional"
+- "Mejorar la oferta formativa"
+  - Peligroso.
+- "Aumentar cursos ofrecidos en un 50%"
+  - Peligroso: ¿la gente hace los cursos? ¿Cuál es el "para qué"?
+- "Apreciación de los cursos es mayor del 95% en Q2": mejor que los dos anteriores (en realidad para un KR)
+
+### 50 ejemplos de Objetivos - Objetivos de Operaciones, Equipos y Hoshin personales
+
+- "Lanzar la nueva versión antes de mitad de año"
+  - Es más bien un accionable.
+- "Mejorar la disponibilidad del servicio"
+- "Clientes más satisfechos / diferenciarnos de la competencia / merar calidad" - comunes con Marketing / Ventas
+- "Reforzar alianzas con proveedores": MEH
+- "Disminuir los fallos de la cadena de suministro"
+- "Mejorar tiempos de entrega"
+- Hoshin personales
+  - "Leer 12 libros"
+  - "Reducir mi estrés": mejor que el anterior
+  - "Llamar a mi hijo al menos 3 veces por semana"
+  - "Mejorar la relación con mi hijo"
+  - "Reconectar socialmente"
+  - "Mejorar mi salud física"
+  - "Adquirir nuevas habilidades"
+    - Mejor: "Mejorar mi empleabilidad"
+  - "Balancear vida personal y profesional"
 
 ## Section 5: Resultados clave (KR's)
 
@@ -379,7 +474,7 @@
 
 - TBD
 
-## Section 8: Ejemplosprácticos y entrevistas
+## Section 8: Ejemplos prácticos y entrevistas
 
 - TBD
 
@@ -405,3 +500,23 @@
     Por ejemplo: si decido que mi objetivo es reducir el tiempo de respuesta, entonces tiempo de respuesta es un KR. Pero si mi objetivo es mejorar la satisfacción del cliente o mejorar la calidad del producto, el tiempo de respuesta pasa a ser un KPI: me informa del rendimiento de mi trabajo, pero no me dice si estoy cerca del objetivo de satisfacción / calidad.
     Tanto en KPI’s como en KR’s los habrá lagging y los habrá leading, ya que al final en ambos casos se trata de métricas. De nuevo, la diferencia está en definir cuál o cuáles de estas métricas son las que me definen si el objetivo se está cumpliendo y cuáles complementan a nivel de rendimiento.
 - XXX
+
+## Otros links interesantes
+
+- https://aktiasolutions.com/es/tres-grandes-herramientas-estrategicas
+  - **Wardley maps**
+    - Usa un mapa de Wardley para comprender el paisaje, la posición y el movimiento de todos los jugadores.
+    - Wardley Maps es una herramienta de pensamiento estratégico, que no es lo mismo que una herramienta de planificación estratégica como los OKR o Hoshin Kanri.
+    - ¿Dónde vamos y por qué?
+    - ¿Cuál es nuestra situación actual?
+    - ¿Cuáles son los principales desafíos en el camino?
+    - ¿Dónde queremos jugar?
+    - ¿Cómo planeamos ganar?
+  - **Jobs to be done (JTBD)**
+    - Utiliza JTBD para comprender realmente lo que los clientes intentan hacer e identificar los segmentos de mercado adecuados.
+  - **Blue Ocean**
+    - El Marco de las Cuatro Acciones
+      - ¿Cuáles de los factores que la industria da por sentado deberían eliminarse?
+      - ¿Qué factores deberían reducirse muy por debajo del estándar de la industria?
+      - ¿Qué factores deberían elevarse muy por encima del estándar de la industria?
+      - ¿Qué factores deben crearse que la industria nunca ha ofrecido?

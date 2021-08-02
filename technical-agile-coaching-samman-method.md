@@ -25,7 +25,7 @@
 
 ## Part 2: Learning Hours
 
-- TBD
+- <https://sammancoaching.org/learning_hours/code_reading.html>
 
 ## Part 3: Samman Coaching Engagements
 
