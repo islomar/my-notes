@@ -1,7 +1,9 @@
 # Principles of real-time analytics on large datasets
 
 - https://www.tinybird.co/courses/principles-of-real-time-analytics-contents
+- https://www.youtube.com/playlist?list=PLZGPeFpwVFOQ2jMIZ3JBX4Lvd5LPyy-of
 - ETA ~ 3 hours
+- hi@tinybird.co
 
 ## Why and intro to hardware
 
@@ -170,20 +172,154 @@
 - 42 minutes
 - Se va a hablar de ClickHouse, pero los principios son los mismos para el resto.
 - Partimos de que ya tenemos todo bien guardado y ordenado en la base de datos.
-- How analytics databases work: parallelization, algorithms. Parallelization at many levels:
+- How analytics databases work: parallelization, algorithms. Aprovechar la paralelización a todos los niveles:
   - CPU: use different CPUs to process-splitting the load using the map-reduce algorithms
   - Vectorization: use SEE extension to process more than one value at a time
+    - [SSE](https://es.wikipedia.org/wiki/SSE)
   - Machines: process data in several machines. Approximate data structures.
+- No usan ORM
+- **Ejemplo de cómo se ejecutaría una query en dos máquinas**
+  - `select avg(column) from table`
+  - Tabla con 1 M de valores, repartidos en dos máquinas (500k en una máquina, 500k en otra)
+  1. Send the query to both machines
+  2. Every machine will split the part of the table in several chunks and will raise many threads.
+  3. Every thread will process the sum and count of several chunks
+  4. Inside every thread each core will use SSE instructions to add numbers if possible
+  5. Every machine will collect the partial sum/count processed for every thread and send it to one of them
+  6. That last machine sums and divide everything and prints the final number
+- **Consejos para escribir queries SQL**
+  - EXPLAIN ANALYZE
+  - "Everybody" knows how to write a SQL query. But a small inefficiency in a large system can turn into hours of wait.
+  - So let's introduce some important things to know when query large datasets...
+  - Query just the data you need!
+    - Less columns, use indices
+  - Lightweight and indexed operations first (filters, prefilters)
+    - Put complex operation later if possible. Use prefilters.
+  - Understanding algorithms complexity
+    - Not every query uses the same algorithms, that is clear, but you should take into account how complex are.
+    - Example: simple aggregation vs group (with different cardinality) vs quantiles
+      - table "taxi", small (72M rows)
+- **Query time** depends on: the scanned memory, the time it takes a CPU to cecompress the data / cores, the number of rows, the number of simple operations, the number of complex operations (agg, joins)
+- **Joins** are possible and sometimes are better than denormalization.
+  - Puedes preparar los datos en la ingesta para que después los _joins_ vayan más rápido.
+- Joins are usually "forbidden" because the are slow. But:
+  - Sometimes you can't avoid them
+  - They are not so slow if you do them in the right way
+  - Sometimes are better because they simplify ingestion
+- Si vas a hacer un join en una tabla y vas a filtrar por una de las filas... **filtra antes**, no después.
+- Algunas DBs tienen guías específicas para hacer JOINs óptimos: buscarlas.
+- Some final tips about joins
+  - Be careful with distributed joins. We never do distributed joins, we have a copy of the data to be joined in each machine.
+  - Sometimes is better to join before group, depending how much the cardinality is reduced.
+  - Leverage _lateral join_ and _IN (subquery)_ for filtering
+- Use the right algorithm and the best function for the job
+  - speed vs accuracy
+  - uniq vs uniqExact is a good example
+  - topK vs group by / order by
+- **Key points**
+  - If you query data scattered all over the memory it will be slow. Query sorted data.
+  - Query less data (leverage indices, filters).
+  - Understand query complexity.
 
 ## Views
 
 - <https://youtu.be/novN_Vcw0UI>
-- 34 minutes
+- **What's a view?**
+  - Materialized vs live
+    - Normalmente usan las materializadas.
+    - Se quiere crear una nueva versión de los datos preparadas para ciertos tipos de queries.
+    - Materialized views are a really useful performance feature, allowing you to pre-calcuate joins and aggregations, which can make applications and reports feel more responsive. The complication comes from the lag between the last refresh of the materialized view and subsequent DML changes to the base tables. Fast refreshes allow you to run refreshes more often, and in some cases you can make use of refreshes triggered on commit of changes to the base tables, but this can represent a significant overhead from a DML performance perspective.
+  - It's a way to make it easier for the queries doing some work in advance
+  - Main problems: size and maintenance (specially this last one)
+  - Sometimes called "\[data\] cubes"
+- **Duplicate data saves you money**
+  - $$$: 1 CPU vs 1 Gb RAM vs 1Gb disk (+1CPU -> $0.05/h, +1Gb $0.002/h)
+  - CPU is much more expensive than memory.
+  - You can sort the same data in different ways for different use cases.
+  - Views are usually way smaller than original tables (which you end up not using) so you might be saving 10x "duplicating" the data.
+- Las DBs deberían soportar **vistas materializadas incrementales**
+- Example with 7B rows
+  - Aggregation per year
+  - En lugar de un contador, en la vista se almacena un estado intermedio (en binario). Hay que hacer un `countMerge()` para poder leerlo.
+- **Incremental views**
+  - Views need to be recalculated: NO!
+  - Or be able to design incremental views
+  - Some databases support it, for others you need to design the schema and queries carefully
+- Views work in the background to merge and update the data.
+- Denormalization on ingest. We can create views with/where:
+  - Join with dimensions
+  - Precalculate something complex
+  - Prepare some columns to be joined
+- **Use arrays to denormalize**
+  - Sometimes denormalization makes things worse
+  - Join con un array en lugar de otra tabla
+  - Having **data in arrays** for secondary use cases could speed up everything
+- Special view types
+  - Summing
+  - Replacing
+  - Aggregating
+- View granularity layers (time tiles)
 
 ## Exposing the data
 
-- TBD
+- Hay que tener mucho cuidado y ofrecerlos para ser explotados de manera controlada.
+- Different ways to expose the data
+  - BI tools
+  - **API**
+    - The preferred method.
+    - Permite trabajar como con cualquier otra pieza de SW
+  - Excel / CSV / whatever
+- General advice: think about analytics like another piece more in your system, not like a database exposed to the world
+- **End to end ETL testing**
+  - This starts the project from scratch, pushes some sample data and test all the endpoints
+  - This usually runs on the CI each every push
+- Raw data test
+  - Numers should match:
+    - Numer of rows ingested
+    - Key aggregations (registers per hour)
+    - Missing dimension values
+  - Probar que los datos que están llegando se ingestan y guardan correctamente.
+  - Prueban que la cantidad de datos que llegan son más o menos los esperados.
+  - We have several endpoints that are run after ingestion or periodically (GH actions in this case)
+- **Quarantine tests**
+  - Todas las filas que no cuadran con el esquema, se guardan en una tabla de cuarentena.
+  - Monitor wrongly improted rows (usually as result of a bug or a application code change)
+  - We monitor this number with CloudWatch.
+- **Migration tests**
+  - Si se migra un sistema viejo a uno nuevo, se crean endpoints para verificar que los datos que devuelven ambos sistemas son idénticos
+  - We run tests that compare data from the old analytics system. Obviously only makes sense when you have an old system.
+  - Custom made Python scripts based on unittest framework that runs on GH Actions periodically
+- **Regression tests**
+  - Before pushing a new endpoint we check top requested calls return the same
+- **Import metadata tests**
+  - We create _endpoints_ tracking deviations on each periodic endpoint (and not periodic too)
+  - With that endpoint we add an alert in Google Monitor.
+- **Metrics**
+  - Typical things you measure: avg, q0.99
+  - But, if we have a dashboard that launches 10 requests at the same time and the average user sees 10 pages of that dashboard, if your 99% percentile is 10 seconds the 63.4% of the users will experience that 10 seconds request.
+  - So be careful with avg and percentile 0.99, use percentile histogram and real usage stats.
+- **Benchmarking**
+  - Be careful with benchmarking
+  - Create a benchmark as close as the user load (simple statistics help here)
+  - QPS / concurrency / filters (and probability) and in general query variability
+  - Generar modelos similares al comportamiento real de los usuarios.
 
 ## Scaling
 
-- TBD
+- Before scaling
+  - 1 -> 2 machines => complexity 1x -> 10x
+  - Try to scale vertically
+  - If you need to scale: more CPUs instead of higher MHz
+- **Sharding vs replication**
+  - definitions: sharding and replication
+  - sharding: more speed
+  - replication: redundancy (and also speed)
+  - They try to use replication instead of sharding.
+- **Load balancing**
+  - Query Per Second (QPS)
+  - Most databases load balance by themselves based on several things (latency, weight)
+  - Custom load balancing could be useful to leverage machine cache
+- **Ingestion vs Querying and async replication**
+  - You push data at the same time than you query data
+  - You can have one machine to do the job (and remove temporally some load)
+  - Machines to do hard work outside the database
