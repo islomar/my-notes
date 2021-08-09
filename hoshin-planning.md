@@ -464,9 +464,118 @@
 
 ## Section 5: Resultados clave (KR's)
 
+### KPI, Accionable, KR...
+
 - Sacar un producto al mercado no es un KR. Se debe medir si el producto tiene el resultado que estamos esperando (facturación, ingresos, market share, satisfacción de usuarios, etc.).
+- KPI: indicadores de rendimiento
+- KR: indicadores de resultado
+- Accionables: cosas que hacemos para ver si movemos la aguja de los KR.
+- KR: cosas que hacemos para lograr el objetivo
+
+### ¿Cómo determinar los KR para un objetivo?
+
+- No hay una respuesta para todos los casos.
+- Una manera es hacerse la **"pregunta milagro"**: anoche hubo un milagro y de repente hoy vemos que se cumplió el objetivo X; yo llego a la oficina sin saber nada... ¿cómo lo notaría, cómo me doy cuenta? (ejemplo de la felicidad de los empleados como objetivo, y que se notarían menos quejas o que nadie se iría de la empresa)
+- ¿Cómo sé que nos estamos moviendo en la dirección correcta?
+- ¿Cómo sé que NO estoy logrando el objetivo?
+- ¿Cómo sabes que está ocurriendo algo que consideras "no deseable"?
+
+### Reglas para KRs
+
+- **Recordatorio objetivos**
+  - Progresivos, revisados frecuentemente
+  - 1/4 por área/iniciativa/equipo...
+  - Tienen un dueño
+  - Emergentes, acordados
+  - Balanceados entre abiertos, cerrados, ambiciosos...
+  - Dirigen el proceso de aprendizaje, no conectados a bonos
+- Es bueno que los KRs sean:
+
+  - Cuantitativos
+  - Preferentemente "fehacientes" (evaluación objetiva)
+  - Progresivos (0-100%)
+  - 1 a 4 por cada objetivo
+  - Actualizados frecuentemente
+  - Influenciables por los interesados
+  - No conectados a bonos / incentivos / evaluaciones de rendimiento / promociones...
+
+### Ecosistema de métricas
+
+- Aparece en libro "Workout"
+- Define un propósito para la métrica
+- Mide desde diferentes perspectivas
+- Usar las métricas para mejorar
+- Sirve a todos los implicados
+- Desconfía de los números
+- Establece umbrales imprecisos
+- Sé propietario de tus métricas
+  - Que tú puedas obtener la métrica directamente
+  - Que yo pueda influenciar esa métrica
+- No conectes métricas a recompensas
+- Promueve valores y transparencia
+- Visualiza y humaniza
+- Mide a menudo y de forma temprana
+- Experimenta
+
+### Determinando umbrales
+
+- Tiende a no poner umbrales muy fijos, sino a poner el foco en cuál es la aguja y ver si la movemos.
+- A veces es mejor no poner umbrales: trabajar N meses haciéndolo lo mejor que podamos y ver...
+- Podemos echar un vistazo al histórico, pero teniendo en cuenta que las condiciones son similares.
+
+### KRs de control
+
+- Preguntarnos: si quisiéramos engañarnos (aunque fuera sin querer) con respecto a este KR, ¿cómo lo haríamos? Poner KRs para evitarlo.
+
+### KR's Proxy / Indicadores tempranos de innovación
+
+- E.g.: quiero "reconocimiento de marca".
+- Si tengo un objetivo a largo plazo y que va a tardar mucho tiempo en ocurrir, necesitamos métricas "intermedias" que nos den pistas de si voy por el buen camino o no.
+- Bajamos el dial de exigencia.
+
+### KRs compuestos
+
+- Objetivo estratégico: "ser más ágiles" (sic)
+- Cuadrante con:
+  - Valor
+  - Adaptación
+  - Colaboración
+  - Mejora continua
+
+### Algunos ejemplos de KR's
+
+- Posibles preguntas para determinar los KRs:
+  - ¿Cómo sé que NO he logrado el objetivo?
+  - ¿Cómo sé que lo estoy logrando?
+  - ¿Cómo sé que ya lo he logrado?
+- Objetivo: mejorar un producto
+  - KR: incidencias
+  - KR: devoluciones
+  - KR: defectos
+  - Accionable: desarrollar un protocolo de calidad
+- Objetivo: producto más escalable
+  - KR: capacidad del producto
+  - KR: tiempo / coste de escalar
+  - KR: caídas del sistema
+  - Accionable: implementar sistema de validación X, migrar plataforma Y
+- Objetivo: rentabilidad
+  - KR: rentabilidad
+  - Sub-KR: coste
+  - Sub-KR: beneficio
+  - Accionable: mejorar / aumentar sistema de ventas, nombrar responsables de negocio
+- Objetivo: satisfacción de clientes
+  - KR: retorno
+  - KR: referencias
+  - KR: churn
+  - Accionable: cumplir las fechas del roadmap
+- Objetivo: recuperar mercado LatAm
+  - KR: leads LatAm
+  - KR: % ventas LatAm
+  - Accionable: llamadas realizadas / campaña de publicidad en Colombia
 
 ## Section 6: Accionables
+
+### Tareas, proyectos, productos e iniciativas
 
 - TBD
 
