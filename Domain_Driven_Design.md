@@ -1,11 +1,14 @@
 # DDD
 
+## General
+* https://medium.com/nick-tune-tech-strategy-blog/what-is-a-domain-99f658b22d7d
+
 ## Book "Patterns, Principles and Practices of Domain-Driven Design"
 
 - [My notes for the book](patterns-principles-practices-ddd.md)
 
 ## CodelyTV: DDD
-
+- [Curso DDD de CodelyTV](ddd-codelytv.md)
 - [Estructura de carpetas: DDD en PHP](https://www.youtube.com/watch?v=UFnABp2s8Y0)
 - [DDD en Laravel](https://www.youtube.com/watch?v=EInyOtPra44)
 
