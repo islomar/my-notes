@@ -575,21 +575,129 @@
 
 ## Section 6: Accionables
 
-### Tareas, proyectos, productos e iniciativas
-
-- TBD
+- **Proyecto**: fecha de inicio, fecha de fin, alcance del proyecto. Cada cosa que hagamos para el proyecto es una tarea. Hay dependencias entre tareas. Suelen ser binarios: hechos o no. Pueden durar mucho tiempo.
+- **Accionables abiertos vs cerrados**
+- **Experimentos**
 
 ## Section 7: Proceso completo
 
-- TBD
+- Se trata de que Hoshin sustituya una parte de lo que se está haciendo, no "algo más" que hacer aparte de todo lo demás.
+
+### Visión general de un Hoshin plan
+
+![](hoshin-planning/Hoshin_plan_example.png)
+
+- [Hoshin plan tool](https://www.hoshinplan.com/)
+- Ejemplo Hoshin InfoJobs 2015:
+  - Alrededor de cuatro áreas: Candidatos, Empresas, Tecnología y Gente
+
+### Roles en Hoshin planning
+
+- No existen roles en Hoshin plan.
+- "Facilitador de OKRs" (sic): sabe de OKRs
+- "Líder de OKRs" (sic): sabe de negocio, estrategia, etc.
+
+### Eventos o procesos en Hoshin planning
+
+- No existen prescripciones al respecto.
+- Si estamos empezando de cero, empezaremos a hacer iteraciones sobre:
+  - Cuál es la visión y el propósito.
+  - Cuáles son las líneas estratégicas a priorizar.
+  - Objetivos a marcar.
+  - KRs
+  - Primeros accionables
+- Hasta tener un primer prototipo de Hoshin plan con todo lo anterior.
+- Mejor no tardar mucho en hacer esto.
+- Especie de "Inception"
+- Cada 2 semanas, reflexionar: Toyota Kata, Problema-Solución >> iteración
+- Cada 2 meses, replanificar: revisión del Hoshin, ver cómo vamos, si sigue teniendo sentido, si se quiere cambiar algo, siguientes dos meses, etc. Un día entero >> "capítulo/bimestre/incremento de programa"
+
+### Hoshin a escala
+
+- Los eventos de revisión de "capítulos" deberían hacerse entre todos los equipos.
+- "Big room planning": una o dos personas representando cada equipo
+
+### Artefactos: Tablones visuales
+
+- Tablón visual tipo el de la herramienta HoshinPlan.
+- Tablón visual para accionables: tablón Kanban.
+  - Pendiente
+  - En curso
+  - Terminado
+- Cada accionable: a qué objetivo y KR corresponde. Incluír la hipótesis: qué esperamos que ocurra cuando este accionable se haya llevado a cabo.
+- Lanes/carriles en el tablero Kanban con las líneas estratégicas.
+
+### Equilibrando con el trabajo diario / Business As Usual (BAU)
+
+- Usar un mismo tablero Kanban en los equipos para visualizar, en dos lanes diferentes, el BAU y los accionables Hoshin.
 
 ## Section 8: Ejemplos prácticos y entrevistas
 
-- TBD
+### Ejemplo completo: Agencia de Marketing Digital
+
+- Empresa que ha ido bajando en beneficios y rentabilidad.
+- Visión: Ayudar a las empresas a llegar a sus clientes
+- Objetivo: Rentabilidad
+- Líneas estratégicas:
+  1. Renovar producto estrella
+  - O1: recuperar competitividad
+    - KR1: Benchmrak
+    - KR2: precio
+    - KR3: rentabilidad
+  - O2: satisfacción clientes
+    - KR1: NPS
+    - KR2: Referencias
+    - KR3: Recurrencia
+  2. Innovar
+  - O1: diversificar ingresos
+    - KR1: Ventas producto antiguos
+    - KR2: ventas productos nuevos
+    - KR3: % ventas productos nuevos
+  3. Recuperar mercado
+  - O1: presencia LatAm
+    - KR1: Ventas LatAm
+    - KR2: % Ventas LatAm
+  - O2: presencia Europa
+    - KR1: Ventas Europa
+    - KR2: % Ventas Europa
+  4. Re-enganchar al equipo
+  - O1: motivados
+    - KR1: Índice motivación
+    - KR2: Quejas
+    - KR3: Bajas
+      KR4: Rotación
+  - O2: productivos
+    - KR1: Cumplimiento clientes
+    - KR2: Retraso acumulado
+
+### Entrevista: Gabriel Prat
+
+- https://www.linkedin.com/in/gabriprat
+- https://gabri.io/
+- 1.300 personas en 8 paises
+- 160 personas en su departamento de Producto+IT
+- Los objetivos deberían ser puestos de manera colaborativa: ni top-down ni bottom-up.
+- Eliminar objetivos individuales.
+- "Poner la infraestructura para cuando se tenga la cultura" (ejemplo paso de cebra y OKRs)
+- Para establecer los indicadores, partir de qué se necesita (el objetivo) e ir hacia atrás para ver qué necesitamos hacer.
+
+### Entrevista: Johnny Ordoñez
+
+- https://www.linkedin.com/in/johnnyordonez
+
+### Entrevista: Alex Rios
+
+- https://www.linkedin.com/in/arios/
 
 ## Section 9: Conclusiones
 
-- TBD
+- "Mide lo que importa"
+  - Resultado, impacto en lugar de rendimientos, esfuerzo y coste.
+  - "Empieza con el porqué"
+- El marco está pensado para ALINEAR
+  - De poco sirve si cada departamento o equipo se pone a hacer su propio mini-Hoshin: suboptimizaciones.
+- El objetivo es APRENDER.
+  - Probamos cosas para ver qué funciona y qué no funciona.
 
 ## Dudas o comentarios
 
@@ -606,9 +714,8 @@
 
 - ¿Diferencias entre KPI y KR?
   - Es una duda habitual, y parte de la razón es que dependiendo de cuál es tu objetivo, la misma métrica podría resultar un KPI o un KR.
-    Por ejemplo: si decido que mi objetivo es reducir el tiempo de respuesta, entonces tiempo de respuesta es un KR. Pero si mi objetivo es mejorar la satisfacción del cliente o mejorar la calidad del producto, el tiempo de respuesta pasa a ser un KPI: me informa del rendimiento de mi trabajo, pero no me dice si estoy cerca del objetivo de satisfacción / calidad.
-    Tanto en KPI’s como en KR’s los habrá lagging y los habrá leading, ya que al final en ambos casos se trata de métricas. De nuevo, la diferencia está en definir cuál o cuáles de estas métricas son las que me definen si el objetivo se está cumpliendo y cuáles complementan a nivel de rendimiento.
-- XXX
+    > Por ejemplo: si decido que mi objetivo es reducir el tiempo de respuesta, entonces tiempo de respuesta es un KR. Pero si mi objetivo es mejorar la satisfacción del cliente o mejorar la calidad del producto, el tiempo de respuesta pasa a ser un KPI: me informa del rendimiento de mi trabajo, pero no me dice si estoy cerca del objetivo de satisfacción / calidad.
+    > Tanto en KPI’s como en KR’s los habrá lagging y los habrá leading, ya que al final en ambos casos se trata de métricas. De nuevo, la diferencia está en definir cuál o cuáles de estas métricas son las que me definen si el objetivo se está cumpliendo y cuáles complementan a nivel de rendimiento.
 
 ## Otros links interesantes
 
