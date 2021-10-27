@@ -12,6 +12,7 @@
   - PowerPoint
   - Miro
 - https://academy.teamtopologies.com/
+- Book club facilitation guide: https://www.viktorcessan.com/book-club-facilitation-guides/
 
 ## Fundamental team types
 
