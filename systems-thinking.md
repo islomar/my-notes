@@ -53,6 +53,7 @@
     - https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system
     - These are places within a complex system (a corporation, an economy, a living body, a city, an ecosystem) where a small shift in one thing can produce big changes in everything.
     - In increasing order of effectiveness:
+    
         12. Constants, parameters, numbers (such as subsidies, taxes, standards).
         11. The sizes of buffers and other stabilizing stocks, relative to their flows.
         10. The structure of material stocks and flows (such as transport networks, population age structures).
