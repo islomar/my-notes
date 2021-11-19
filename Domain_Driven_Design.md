@@ -78,6 +78,7 @@
 ## Resources
 
 - https://github.com/ddd-crew
+- https://domorobo.to/
 - https://medium.com/nick-tune-tech-strategy-blog/mapper-contexts-supercontexts-decoupling-domain-specific-and-domain-generic-bounded-contexts-5eb6a1e7c5fc
 - Lots of talks about DDD, CQRS, Impact Mapping, etc: https://virtualddd.com/sessions
 - https://proophsoftware.github.io/fee-office/
