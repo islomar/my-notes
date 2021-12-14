@@ -56,6 +56,9 @@ Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-d
   * Typical health check. If it fails, k8s will restart the container (everything configurable).
 * **Readiness probe**
   * The pod is not only up and running, but ready to receive requests, everything is healthy and correct.
+* **Startup probe**
+  * Protect slow starting containers with startup probes
+  * https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-startup-probes
 
 
 ## Kubernetes Service Discovery
