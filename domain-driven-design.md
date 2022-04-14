@@ -1,5 +1,13 @@
 # DDD
 
+**Table of Contents**
+- [General](#general)
+- [Book "Patterns, Principles and Practices of Domain-Driven Design"](#book-patterns-principles-and-practices-of-domain-driven-design)
+- [CodelyTV: DDD](#codelytv-ddd)
+- [Patterns, Principles, and Practices of Domain-Driven Design](#patterns-principles-and-practices-of-domain-driven-design)
+- [DDD at Scale - using Domain Driven Design to build client centric products](#xxxx)
+- [Resources](#resources)
+
 ## General
 * https://medium.com/nick-tune-tech-strategy-blog/what-is-a-domain-99f658b22d7d
 * https://blog.avanscoperta.it/2021/04/22/about-team-topologies-and-context-mapping/
@@ -13,7 +21,7 @@
 - [Estructura de carpetas: DDD en PHP](https://www.youtube.com/watch?v=UFnABp2s8Y0)
 - [DDD en Laravel](https://www.youtube.com/watch?v=EInyOtPra44)
 
-## CodelyTV: Learn DDD in 20 minutes
+### CodelyTV: Learn DDD in 20 minutes
 
 - Aprende DDD en 20 minutos >> https://www.youtube.com/watch?v=dH5aSQLXtKg
 - DDD y CQRS: Preguntas Frecuentes >> https://www.youtube.com/watch?v=auEhX4WfCRA
@@ -64,7 +72,7 @@
 - Continuous Integration
 - Shared Kernel
   - Things that we can share. It could be between contexts (but it should be really light and small, e.g. the Value object for userId, base Entity, etc.)
-- Conformisst
+- Conformist
 - Open Host Service
   - To communicate with me, here you have my API (support multiple clients)
 - Published Language
@@ -75,8 +83,11 @@
 
 - https://github.com/islomar/my-notes/blob/master/patterns-principles-practices-ddd.md
 
-## Resources
+## DDD at Scale - using Domain Driven Design to build client centric products
+- https://www.meetup.com/es-ES/Software-Crafters-North/events/284995312/
 
+
+## Resources
 - https://github.com/ddd-crew
 - https://domorobo.to/
 - https://medium.com/nick-tune-tech-strategy-blog/mapper-contexts-supercontexts-decoupling-domain-specific-and-domain-generic-bounded-contexts-5eb6a1e7c5fc
