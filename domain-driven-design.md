@@ -5,7 +5,7 @@
 - [Book "Patterns, Principles and Practices of Domain-Driven Design"](#book-patterns-principles-and-practices-of-domain-driven-design)
 - [CodelyTV: DDD](#codelytv-ddd)
 - [Patterns, Principles, and Practices of Domain-Driven Design](#patterns-principles-and-practices-of-domain-driven-design)
-- [DDD at Scale - using Domain Driven Design to build client centric products](#xxxx)
+- [DDD at Scale - using Domain Driven Design to build client centric products](#ddd-at-scale-using-domain-driven-design-to-build-client-centric-products)
 - [Resources](#resources)
 
 ## General
@@ -83,8 +83,27 @@
 
 - https://github.com/islomar/my-notes/blob/master/patterns-principles-practices-ddd.md
 
-## DDD at Scale - using Domain Driven Design to build client centric products
+## DDD at Scale: using Domain Driven Design to build client centric products
 - https://www.meetup.com/es-ES/Software-Crafters-North/events/284995312/
+- Bob Gregory (Engineering Coach at Cazoo)
+- "Business-Driven Design"
+- We need to constantly evolve our models.
+- The actual domain model is the **shared understanding**. That's more valuable than the diagrams or the code.
+- DDD shines when modelling a complex problem. Not to apply if:
+  - Things are very simple. CRUD without business logic, static website, etc. There is no business model to articulate. Something really data-centric.
+  - ML: it's a black box (by design), you do not understand the rules. You can not build a shared understanding with the computer.
+- Trying to understand how are customers understand the problem.
+- **Aggregate**: course-grained consistency boundary.
+  - Order, order lines, delivery address.
+  - Whenever we save, we save the whole Order.
+  - If you get performance problems for saving it (e.g. because of having thousands of order lines). You can wonder if you really need consistency in all the thousands of order lines.
+- **Bounded context**:
+  - a linguistic boundary
+  - every term we use has single concrete definition
+  - in another context, the term could have a different meaning (e.g. "order" is different for a customer, for sales, logistics, etc.)
+  - the problem space can be huge, we cut in small chunks... Avoid being overwhelmed by complexity. Cognitive load.
+  - Small enough that we can hold it in our head.
+  - A bounded context might be a good fit for a microservice. What business process does this microservice cover?
 
 
 ## Resources
