@@ -31,7 +31,7 @@
   - Plus when the code is well-written and the design is flexible you’re more likely to get to introduce fun new tools and technology.
 - **Elevator pitch for Samman Technical
   Coaching**
-  - In order to be successful in modern development organizations, software developers need new skills. These skills are not easily learnt on a short training course or at a university. Practices like Continu- ous Integration and Test-Driven Development require developers to change their minute-by-minute habits and ways of working.
+  - In order to be successful in modern development organizations, software developers need new skills. These skills are not easily learnt on a short training course or at a university. Practices like Continuous Integration and Test-Driven Development require developers to change their minute-by-minute habits and ways of working.
 - **Day in the life of a Samman Technical Coach**
   - 08:00 Arrive, check messages, prepare for today’s sessions
   - 09:30 Ensemble working with first team
