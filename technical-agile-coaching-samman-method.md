@@ -6,6 +6,15 @@
 - https://www.sammancoaching.org/
 - The suggested hashtag for this book is #coachingsamman
 
+**Table of Contents**
+
+- [Foreword](#foreword)
+- [Introduction](#Introduction)
+- [Part 1: Ensemble Working](#part-1-ensemble-working)
+- [Part 2: Learning hours](#part-2-learning-hours)
+- [Part 3: Samman Coaching Engagements](#part-3-samman-coaching-engagements)
+- [Interesting links](#interesting-links)
+
 ## Foreword
 
 - SW development is a learning process.
@@ -59,7 +68,7 @@
       - After a while of coaching you hope to see teams meeting deadlines more reliably, reductions in production bugs
       - You also need to be aware of Goodhart’s law.
 
-## Part 1: Ensemble working
+## Part 1: Ensemble Working
 
 ### Ensemble Primer
 - As a Samman technical coach the majority of your day is spent sitting with teams working as an ensemble.
