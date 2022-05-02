@@ -115,13 +115,43 @@
 - **Retrospect**
   - When there is around 15-25 minutes left until the scheduled end of the session, I will call a halt. Preferably just after we made a commit.
   - The reason for stopping programming before the end, is to get the team to spend some time reflecting on what happened, so they can realize consciously what they have learnt
-- Breathing space between and during sessions
+- **Breathing space between and during sessions**
   - In the middle of a 2 hour session, I usually have the whole group take a 5 minute break. Everyone benefits from a short leg stretch and opportunity to get a coffee.
   - Similarly at the end of the session I’ll make sure to finish on time or perhaps a few minutes early.
   - Make sure you have a few minutes to rest before starting something new.
 
 ### Kindness, Consideration and Respect
-- XXX
+
+- Members of an ensemble should treat one another well and feel safe
+to express themselves. Often an ensemble will adopt this rule: We treat everyone with kindness, consideration and respect.
+- Woody's Legacy Code rule: "Honor the coder and their code. The constraints they endured are not mine to know."
+- If ensemble members feel unable to uphold their working agreements then the coach should encourage the ensemble to take some **time out for everyone to calm down**. Spend 15 minutes all going to get a coffee or taking a walk around the block. Some people may take longer to return than others, that should be fine. Start with a smaller group who are all **calm enough** to work together well. You want to re-establish **trust and respect**.
+- **Too much thinking at the keyboard**
+  - One ensemble role that does a lot of **listening** is the typist.
+  - The typist is not supposed to have their own ideas, they should be channeling the ideas from the navigator and the rest of the ensemble into the codebase.
+  - The design should be spoken by the navigator before it is coded by the typist
+  - The typist should hold their criticisms until they are in another role and can voice them with kindness, consideration and respect.
+- **I think <name> has a good idea we should listen to**
+  - Everyone in the ensemble should be listening to one another, and sometimes you get good ideas being spoken but no-one pays attention.
+- **Consideration means paying attention**
+  - increase the rotation speed so they end up leading the navigating more often.
+  - Draw their attention back to the task in hand.
+- **Call out bad behaviour that can’t wait until the retrospective**
+- A useful phrase is “we don’t do that here”
+
+### Coaching situations illustrated with stories
+
+- What should we do now?
+- Team, help your navigator
+- Can we do an experiment?
+- Discover scenarios
+- Intention, Location, Details
+- Reminder to test first
+- Typist, use your shortcuts
+- Consumer-First Design
+- How long is it since we saw feedback?
+- How long is it since we made a commit?
+- Only one person knows what’s going on
 
 ### Retrospectives
 - XXX
