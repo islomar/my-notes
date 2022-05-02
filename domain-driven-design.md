@@ -11,6 +11,7 @@
 ## General
 * https://medium.com/nick-tune-tech-strategy-blog/what-is-a-domain-99f658b22d7d
 * https://blog.avanscoperta.it/2021/04/22/about-team-topologies-and-context-mapping/
+* https://medium.com/@wps_de/visualizing-communication-between-bounded-contexts-6796af6ff1b9
 
 ## Book "Patterns, Principles and Practices of Domain-Driven Design"
 
