@@ -154,12 +154,34 @@ to express themselves. Often an ensemble will adopt this rule: We treat everyone
 - Only one person knows what’s going on
 
 ### Retrospectives
-- XXX
+- Each ensemble session should conclude with a short retrospective, about **15 minutes of a two hour session**.
+- People need to decide to behave differently.
+- Ask for Observations
+  - Ask everyone to write observations, one per note. 
+  - Give the group 5 -10 minutes.
+  - Read out loud, cluster, ask for clarification.
+  - If you read a sticky and agree, do say so or compliment the author if it’s a good observation.
+  - Be careful of disagreeing with what people have written. You don’t want to discourage people from making observations in future.
+- “Liked, Learned, Lacked” Observations
+- Turn up the good:
+  - Go around the circle and each person says one thing that happened in the session that was good. Just a sentence or two.
+- Your private retrospective
+  - It can help to make a few notes in your private team diary notebook.
+- Retrospective skills are essential
+  - It takes time to build the habit of noticing what is going on.
+  - Don’t drop the habit of retrospectives, even when the work seems to be going really well. There is always something that could be better.
 
 ### Remote Ensembles
-- XXX
-### Coaching Situations Illustrated with Stories
-- xxx
+- everyone can see everyone’s faces as well as the code 
+- be even more considerate with your comments
+  - If you are not the navigator, you have to be even more careful about timing your comments.
+  - If you want to speak, consider “raising a hand” in the videoconference software, or holding up a brightly coloured sticky note in your video feed. Be considerate and make space for others to speak.
+- **take breaks** 
+  - At least every hour, take five minutes to get a coffee or similar.
+- make it really quick to change typist, or do it less often
+- **Typist lag is deadly**: typist should not experience lag from key-presses and mouse movements
+- **Design discussions**: you will need additional tools for whiteboard sketches and retrospectives.
+
 ## Part 2: Learning Hours
 
 - <https://sammancoaching.org/learning_hours/code_reading.html>
@@ -173,4 +195,4 @@ to express themselves. Often an ensemble will adopt this rule: We treat everyone
 - https://twitter.com/ClareSudbery/status/1434130606976339968
 - TBD
 
-Bookmark: 40 / 170
+Bookmark: 67 / 170
