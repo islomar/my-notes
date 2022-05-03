@@ -185,6 +185,22 @@ to express themselves. Often an ensemble will adopt this rule: We treat everyone
 ## Part 2: Learning Hours
 
 - <https://sammancoaching.org/learning_hours/code_reading.html>
+- These are short training sessions where people practice coding skills and learn new techniques. When working with a team ensemble you’re primarily a **mentor and facilitator**. In the learning hour you’re more often acting as **teacher and coach**.
+
+### Explaining wahy you should hold a Learning Hour
+- TBD
+
+### The theory and practice of a teaching and learning
+- TBD
+
+### Sample learning hours
+- TBD
+
+### Learning topics
+- TBD
+
+### Remote learning hours
+- TBD
 
 ## Part 3: Samman Coaching Engagements
 
