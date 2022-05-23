@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-23T18:45:29.549Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" etag="CiWTmgjk_ir9n3baJ9MK" version="18.0.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-23T18:45:42.364Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" etag="IbM6xIatp9F58z5GpQW-" version="18.0.8" type="github" pages="2">
   <diagram id="rxDA70gnGnYBVUDP96AV" name="Clarity AI">
     <mxGraphModel dx="1350" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
@@ -164,7 +164,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Habitissimo" id="wsjdTFjTJYJ88p0QHnBH">
-    <mxGraphModel dx="1350" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1350" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0I47eGuxn-ymiGFHi8Th-0" />
         <mxCell id="0I47eGuxn-ymiGFHi8Th-1" parent="0I47eGuxn-ymiGFHi8Th-0" />
