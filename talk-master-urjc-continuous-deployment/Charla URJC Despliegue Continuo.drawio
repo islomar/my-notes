@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2022-05-23T18:45:42.364Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" etag="IbM6xIatp9F58z5GpQW-" version="18.0.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-24T18:03:50.118Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" etag="5Wprg4UQYm-FHcgBzmPv" version="18.1.1" type="github" pages="2">
   <diagram id="rxDA70gnGnYBVUDP96AV" name="Clarity AI">
     <mxGraphModel dx="1350" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="csLZaPP3TTO0ZnRpDxnA-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://nodesk.co/remote-companies/assets/logos/jetbrains_huc59163b73ad18763c3be194a4e81a6bc_11287_128x0_resize_q75_box.jpg;" vertex="1" parent="1">
+          <mxGeometry x="196.5" y="197" width="63" height="63" as="geometry" />
+        </mxCell>
         <mxCell id="-GmTl0F98BwwLJ5EqVgJ-25" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=default;" parent="1" vertex="1">
           <mxGeometry x="110" y="296" width="325" height="284" as="geometry" />
         </mxCell>
@@ -149,16 +152,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="gI6B3ajCeATYZI4nnPrf-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://miro.medium.com/max/256/0*xzfXdWrkrbDw7cIZ.png;" parent="1" vertex="1">
-          <mxGeometry x="229" y="246" width="50" height="50" as="geometry" />
+          <mxGeometry x="268" y="215.1" width="50" height="50" as="geometry" />
         </mxCell>
         <mxCell id="gI6B3ajCeATYZI4nnPrf-2" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" parent="1" vertex="1">
-          <mxGeometry x="153.4" y="216.20000000000002" width="45.6" height="61.800000000000004" as="geometry" />
+          <mxGeometry x="146.2" y="215.10000000000002" width="45.6" height="61.800000000000004" as="geometry" />
         </mxCell>
         <mxCell id="gI6B3ajCeATYZI4nnPrf-3" value="Local machine" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontStyle=5" parent="1" vertex="1">
-          <mxGeometry x="194.00000000000003" y="228.12" width="110" height="30" as="geometry" />
+          <mxGeometry x="208.00000000000003" y="260" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="gI6B3ajCeATYZI4nnPrf-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://tinusaur.com/wp-content/uploads/2022/01/GNU_Make_scfx.png;" parent="1" vertex="1">
-          <mxGeometry x="293" y="196" width="100" height="100" as="geometry" />
+          <mxGeometry x="318" y="196" width="100" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -176,12 +179,6 @@
         </mxCell>
         <mxCell id="0I47eGuxn-ymiGFHi8Th-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
           <mxGeometry x="50" y="325" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="0I47eGuxn-ymiGFHi8Th-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://miro.medium.com/max/256/0*xzfXdWrkrbDw7cIZ.png;" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
-          <mxGeometry x="229" y="246" width="50" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="0I47eGuxn-ymiGFHi8Th-5" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
-          <mxGeometry x="153.4" y="216.20000000000002" width="45.6" height="61.800000000000004" as="geometry" />
         </mxCell>
         <mxCell id="0I47eGuxn-ymiGFHi8Th-6" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/socialcones/508/Gitlab-128.png" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
           <mxGeometry x="857" y="40" width="90" height="90" as="geometry" />
@@ -306,9 +303,6 @@
             <mxPoint x="650" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0I47eGuxn-ymiGFHi8Th-39" value="Local machine" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontStyle=5" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
-          <mxGeometry x="194.00000000000003" y="228.12" width="110" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="3ds1P51kmiVwljqu24Zf-0" value="post-merge&lt;br&gt;Git hook" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;flipH=1;" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
           <mxGeometry x="210" y="630" width="140" height="50.5" as="geometry" />
         </mxCell>
@@ -329,9 +323,6 @@
             <mxPoint x="560" y="430" as="sourcePoint" />
             <mxPoint x="610" y="380" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="3ds1P51kmiVwljqu24Zf-9" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://tinusaur.com/wp-content/uploads/2022/01/GNU_Make_scfx.png;" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
-          <mxGeometry x="293" y="196" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="kUICdXbnsC4-eHDAgnKH-0" value="GitLab Container Registry" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=none;" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
           <mxGeometry x="478.8" y="210" width="119.5" height="68" as="geometry" />
@@ -374,6 +365,21 @@
         </mxCell>
         <mxCell id="V-74TZeZKxOKQqZcn5aF-0" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.turbonomic.com/wp-content/uploads/2020/11/AWS-EKS-logo-no-background.png;" parent="0I47eGuxn-ymiGFHi8Th-1" vertex="1">
           <mxGeometry x="740" y="165.47" width="102.56" height="94.67" as="geometry" />
+        </mxCell>
+        <mxCell id="DkfFCwP8Y9EH3rnOCy7q-0" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://nodesk.co/remote-companies/assets/logos/jetbrains_huc59163b73ad18763c3be194a4e81a6bc_11287_128x0_resize_q75_box.jpg;" vertex="1" parent="0I47eGuxn-ymiGFHi8Th-1">
+          <mxGeometry x="191.5" y="197" width="63" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="DkfFCwP8Y9EH3rnOCy7q-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://miro.medium.com/max/256/0*xzfXdWrkrbDw7cIZ.png;" vertex="1" parent="0I47eGuxn-ymiGFHi8Th-1">
+          <mxGeometry x="263" y="215.1" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DkfFCwP8Y9EH3rnOCy7q-2" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" vertex="1" parent="0I47eGuxn-ymiGFHi8Th-1">
+          <mxGeometry x="141.2" y="215.10000000000002" width="45.6" height="61.800000000000004" as="geometry" />
+        </mxCell>
+        <mxCell id="DkfFCwP8Y9EH3rnOCy7q-3" value="Local machine" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontStyle=5" vertex="1" parent="0I47eGuxn-ymiGFHi8Th-1">
+          <mxGeometry x="203.00000000000003" y="260" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DkfFCwP8Y9EH3rnOCy7q-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://tinusaur.com/wp-content/uploads/2022/01/GNU_Make_scfx.png;" vertex="1" parent="0I47eGuxn-ymiGFHi8Th-1">
+          <mxGeometry x="313" y="196" width="100" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
