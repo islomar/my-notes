@@ -157,7 +157,7 @@ to express themselves. Often an ensemble will adopt this rule: We treat everyone
 - Each ensemble session should conclude with a short retrospective, about **15 minutes of a two hour session**.
 - People need to decide to behave differently.
 - Ask for Observations
-  - Ask everyone to write observations, one per note. 
+  - Ask everyone to write observations, one per note.
   - Give the group 5 -10 minutes.
   - Read out loud, cluster, ask for clarification.
   - If you read a sticky and agree, do say so or compliment the author if it’s a good observation.
@@ -172,11 +172,11 @@ to express themselves. Often an ensemble will adopt this rule: We treat everyone
   - Don’t drop the habit of retrospectives, even when the work seems to be going really well. There is always something that could be better.
 
 ### Remote Ensembles
-- everyone can see everyone’s faces as well as the code 
+- everyone can see everyone’s faces as well as the code
 - be even more considerate with your comments
   - If you are not the navigator, you have to be even more careful about timing your comments.
   - If you want to speak, consider “raising a hand” in the videoconference software, or holding up a brightly coloured sticky note in your video feed. Be considerate and make space for others to speak.
-- **take breaks** 
+- **take breaks**
   - At least every hour, take five minutes to get a coffee or similar.
 - make it really quick to change typist, or do it less often
 - **Typist lag is deadly**: typist should not experience lag from key-presses and mouse movements
@@ -187,11 +187,64 @@ to express themselves. Often an ensemble will adopt this rule: We treat everyone
 - <https://sammancoaching.org/learning_hours/code_reading.html>
 - These are short training sessions where people practice coding skills and learn new techniques. When working with a team ensemble you’re primarily a **mentor and facilitator**. In the learning hour you’re more often acting as **teacher and coach**.
 
-### Explaining wahy you should hold a Learning Hour
-- TBD
+### Explaining why you should hold a Learning Hour
+- an organization to succeed in the modern world, it needs to be a **learning** organization.
+- Learning TDD is like learning to ski
+  - TDD is like parallel turns: Suddenly that straightforward bit of coding takes ten times longer. You have to shift mental balance to think about how to test the code before you can implement it. It’s disconcerting, uncomfortable.
+  - If that first experience of TDD goes badly, you might be tempted to just give up.
+  - Many people trying TDD will start directly in their production code. That’s a bit like attempting parallel turns on a steep slope with loose snow and moving obstacles in the form of other wobbly beginners skiing around you. What could possibly go wrong?!
+- **Learn together with an instructor**
+  - In the learning hour, it should be like have a fun safe skiing lesson together with friends
+- Why should you spend a whole hour every day on learning?
+  - If you learn skills and become better at your job, you will become more productive and happier.
+  - Small increases in productivity will quickly add up to more than compensate the time you spent on the learning sessions.
+  - As a software developer, learning is part of your job.
+  - Another benefit of doing learning hours daily, is it makes it less likely people will miss all the training by being ill or tired one day.
+- Who should come to the Learning
+Hour?
+  - You might have a separate learning hour for each team that you have ensemble sessions with.
+  - It’s always good to throw open the invitation to learning hours more widely than only the teams you are coaching.
 
 ### The theory and practice of a teaching and learning
-- TBD
+- Learning Outcomes and Objectives
+  - part of your planning will involve finding out what people already know.
+  - **Bloom’s taxonomy** (to describe learning objectives)
+    - Remembering
+    - Understanding
+    - Applying
+    - Analyzing
+    - Evaluating
+    - Creating
+  - Example learning hour planned outcomes
+    - _Describe_ some characteristics of Approval Testing.
+    - _Compare_ Approval Testing with assertion-based testing.
+    - _Use_ the Approvals framework to write test cases when a Printer already exists.
+  - How to use Bloom categories
+    - The Bloom categories help you to plan exercises and teaching materials at an appropriate level. You want to build up people’s confidence and knowledge from a good foundation. Start with materials to build Remembering, Understanding and Applying. When those thinking skills are in place, you can do more Analyzing, Evaluating and Creating.
+    - If you write good descriptions of what you expect a student to be able to do after your learning hour, it can help you to choose appropriate materials and keep on topic.
+- **The ‘4C’ learning model**:
+  - book ‘Training from the Back of the Room’
+  - The philosophy is very much that each person who comes to your learning hour has a unique background, and what they are going to learn needs to be integrated with what they already know for it to stick.
+  - _Connect_: Get people in the right head-space for learning about the topic together.
+  - _Concept_: Introduce the new skills or ideas or information you want the participants to learn.
+  - _Concrete_: Hands-on exercises to practice skills or figure out how things work.
+  - _Conclusions_: An opportunity for people to consolidate and internalize what they’ve learnt.
+  - You vary the specific activities in each part to hold people’s attention and keep them moving
+- **Design learning experiences that fit
+with how the brain works**
+  - Stronger emotions are more likely to cause long-term memories to form. Content that evokes no emotion is less likely to be remembered.
+  - Physical movement improves brain performance
+  - Movement trumps Sitting (move every 10-15 minutes)
+  - Talking trumps Listening
+  - Images trump Words
+  - Writing trumps Reading
+  - Shorter trumps Longer
+    - Divide your presentation into 10-20 minute chunks and in between spend at least 1-2 minutes on some other activity. Perhaps ask people to review or discuss the material presented so far.
+  - Different trumps Same
+    - Anything new or unexpected will catch people’s attention. Emotions generally and surprise in particular help learning to stick.
+    - Vary the format of your learning hours so that they are not too predictable. Games and simulations and exercises can contain built- in surprises. You can prepare code for an exercise that doesn’t behave the way people expect.
+    - (Look for more ideas in the original text)
+- **Deliberate practice**
 
 ### Sample learning hours
 - TBD
@@ -211,4 +264,4 @@ to express themselves. Often an ensemble will adopt this rule: We treat everyone
 - https://twitter.com/ClareSudbery/status/1434130606976339968
 - TBD
 
-Bookmark: 67 / 170
+Bookmark: 78 / 170
