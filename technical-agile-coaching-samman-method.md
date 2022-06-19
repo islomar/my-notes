@@ -245,12 +245,57 @@ with how the brain works**
     - Vary the format of your learning hours so that they are not too predictable. Games and simulations and exercises can contain built- in surprises. You can prepare code for an exercise that doesn’t behave the way people expect.
     - (Look for more ideas in the original text)
 - **Deliberate practice**
+  - This process of focusing on practicing one small skill at a time before composing them into a cohesive activity, is part of _deliberate practice_.
+  - For example, musicians often practice playing scales: sequences of notes going up and down. They practice them first slowly then faster and faster, maintaining accurate notes and even rhythm.
+  - As a teacher, I want to plan a series of learning hours that will be at just the right level so people don’t get bored, and don’t get overwhelmed or frustrated. I want to build up skills and work towards composing them into bigger skills like Test-Driven Development.
 
 ### Sample learning hours
-- TBD
+1. Incremental working, Driven by Tests
+  - Theme: small steps
+  - https://sammancoaching.org/ kata_descriptions/leap_years.html
+  - I like to use cyber-dojo¹¹ because it makes the red-green iterations visible.
+  - Session outline:
+    - 10 min Connect: divide into pairs, 3 benefits of TDD
+    - 15 min Concept: Demo leap years
+    - 20 min Concrete: Do Leap years in pairs
+    - 10 min Conclusions: Summary of main idea
+2. Selecting and ordering test cases
+  - Theme: small steps
+  - https://sammancoaching.org/kata_descriptions/fizzbuzz.html
+  - Triangulation
+    - https://www.devteams.at/red_green/2019/04/08/red_green_part_6_triangulation.html
+    - As tests get more specific, production code gets more generic.
+    - https://www.tddfellow.com/blog/2016/08/31/getting-stuck-while-doing-tdd-part-3-triangulation-to-the-rescue/
+3. Golden Rule of TDD
+  - https://sammancoaching.org/kata_descriptions/shopping_basket.html
+4. Names of Refactorings, especially "Extract Function"
+  - https://martinfowler.com/bliki/DefinitionOfRefactoring.html
+  - https://github.com/emilybache/Tennis-Refactoring-Kata
+5. Misconceptions about Refactoring
+  - https://github.com/emilybache/Tennis-Refactoring-Kata
+6. Make a test list
+  - https://sammancoaching.org/kata_descriptions/mars_rover.html
+  - https://sammancoaching.org/kata_descriptions/fractions.html
+  - https://sammancoaching.org/kata_descriptions/monty_hall.html
+7. Arrange - Act - Assert
+8. Start with the Assertion
+9. One function at a time
+10. Inspirational Demo
+
 
 ### Learning topics
-- TBD
+- Small steps
+- Refactoring Safely
+- Working with Legacy Code
+- Designing Testable Code
+- Designing Tests
+- Double-Loop TDD
+- Agile
+  - [Pipeline game](https://www.eficode.com/pipeline)
+  - [Kanban dot game](https://livebook.manning.com/book/kanban-in-action/chapter-13/)
+  - [Tasty Cupcakes](https://www.tastycupcakes.org/): games and simulations for understanding concepts like velocity, minimum viable product, self-organization etc.
+- **Add your own ideas**: Use what you know and put together your own learning hours. Look through your bookshelf and technical video collection. What topics and skills have you found most useful in your career so far?
+
 
 ### Remote learning hours
 - TBD
@@ -264,4 +309,4 @@ with how the brain works**
 - https://twitter.com/ClareSudbery/status/1434130606976339968
 - TBD
 
-Bookmark: 78 / 170
+Bookmark: 121 / 170
