@@ -292,21 +292,130 @@ with how the brain works**
 - Double-Loop TDD
 - Agile
   - [Pipeline game](https://www.eficode.com/pipeline)
+    - Play online: https://pipelinegame.eficode.com/login
   - [Kanban dot game](https://livebook.manning.com/book/kanban-in-action/chapter-13/)
   - [Tasty Cupcakes](https://www.tastycupcakes.org/): games and simulations for understanding concepts like velocity, minimum viable product, self-organization etc.
 - **Add your own ideas**: Use what you know and put together your own learning hours. Look through your bookshelf and technical video collection. What topics and skills have you found most useful in your career so far?
 
 
 ### Remote learning hours
-- TBD
+- Cyber-dojo
+- VNC:
+  - I set up a Linux machine on Amazon’s EC2 with a graphical desktop running a popular IDE.
+  - Everyone joins the same videoconference call, then we all use VNC to log into the machine.
+- Everyone uses their local machine and screenshares
+- Retrospectives
 
 ## Part 3: Samman Coaching Engagements
+### Finding an Organization and Teams to Engage with
+- **The department striving for Technical Excellence**
+  - I spoke warmly about how working in an ensemble fosters collaboration and teamwork.
+  - The one where all the really good developers wanted to work. The one with the latest technologies, the lowest bug counts, the most scalable products and the best agile teams.
+- **The company struggling with defects**
+  - They were spending about 50% of their developer effort on investigating and fixing defects, and only perhaps 20% on new feature development.
+  - The ability to increase in new feature development and happier customers would more than pay for my consultancy fees.
+- **The twenty-year-old codebase**
+  - I explained how I could help the developers to gain better control over the code through refactoring and adding more unit tests.
+- **Too stressed out and busy**
+  - I explained what I did and they booked a (paid) half day initial workshop. I would introduce myself and I would facilitate the team doing ensemble programming on a code kata.
+  - You have to be able to slow down before you can speed up.
 
+#### Sales and Marketing principles
+- Common thems from the stories above
+  - your **network** is crucial, people hire people they know.
+  - **listen** first to **discover** what their specific problems are
+  - **adapt your pitch** for the audience and their specific problems
+  - they have to be **willing to invest their time**, which can’t happen if they are too stressed out
+  - your best marketing department should be your **previous customers**
+- **Sales pitch**
+  - Read the book's section and create my own.
+  - I miss more "business value" speech.
+
+#### The Coaching Proposal
+- During the sales process, you’ll be making a **detailed proposal** to the potential client. Find a good way to convey the information to them. Perhaps a document, presentation slides or a video of you talking and sketching on a flipchart.
+- Each coaching day comprises 2 hours working in an ensemble with each team, plus a learning hour.
+  - Do not book more than 3 "net work hours" (breaks are important).
+  - In the learning hour, we practice skills and learn theory using exercises.
+  - In the ensemble sessions we usually take one of the ordinary tasks from the team backlog, and work through it together. We learn how to tackle it using new skills and techniques.
+- Before the main coaching begins with a team, we hold couple of **‘kick off’ meetings**.
+  - It’s important for the coach to get to know the team and to do more detailed planning.
+  - These workshops should be held at least a week before the main coaching begins.
+- During the coaching, the team will want to **reduce the number of tasks** they work on so that they have time and energy to devote to the coaching. As a rule of thumb, allocate 1/3 fewer tasks when planning the period when the coach is present.
+- **Questions from potential clients**
+  - Why only two or three teams at a time?
+  - Why only ensemble working for two hours with each team?
+  - What if there are less than 2 teams in the organization?
+  - We have about 10 teams, which ones should we start with?
+  - Why will the team work on fewer tasks while the coaching is going on?
+  - What if the team works in more than one programming language?
+  - What’s the difference between a Samman technical coach and a Tech Lead or Architect?
+    - A Samman Technical Coach doesn’t make individual contribution to the codebase as a Tech Lead would, but they do take part in coding activities. They aren’t a member of any one team, rather support several as an Architect would.
+    - The coach influences people through coaching techniques, facilitation, mentoring and training, but they do not take responsibility for design decisions or architectural strategies as a tech lead or architect would. People in the organization being coached take responsibility for those things.
+
+#### Proposal for a large organzation with hundreds of teams
 - TBD
 
+#### Closing the Deal
+- Read "Secrets of Consulting", by Gerry Weinberg.
+- Recommendation: have someone else do the negotiation with the client on his behalf.
+
+#### Identify your sponsor
+- Before you begin coaching any teams, be sure to get in touch with your sponsors. It’s good to begin a good working relationship with them as soon as possible.
+
+### Beginning coaching with a new organization
+- Present yourself
+  - How you present all this is up to you. You might have some slides prepared, that’s how I usually do this.
+- Kick-off workshop with each team
+  - Team introduction round (10 minutes)
+  - Architecture overview (15 minutes)
+  - Issues in the codebase (45 minutes)
+  - Structured discussion (30-40 minutes)
+    - https://www.liberatingstructures.com/6-making-space-with-triz/
+  - Takeaways (5 minutes)
+- Chartering workshop
+  - Coaching Chartering is about making
+an agreement between the coach and the team about the aims and
+contents of the coaching.
+  - Recap their top issues
+  - Structured discussion
+  - Team collaboration
+  - Iterative and incremental development
+  - Code quality and refactoring
+  - Test design
+  - Testable design
+  - Adding tests to existing code
+- Offer Samman Coaching
+- Persuading Reluctant Teams to be Coached
+  - We are too important
+  - We already know TDD, we’re too advanced for your coaching
+  - We aren’t writing any code, just configuring in yaml files
+  - It’s impossible for us to write unit tests
+- **Persuasion Principles**
+  - Listen to concerns and take them seriously
+  - Find out more about the code they are working on
+  - Find out more about the teamwork and relationships
+  - Offer to tailor how you coach depending on what you find out
+  - Involve the sponsor/manager in any decisions
+  - (Perhaps) accept rejection gracefully and move on
+  - (Perhaps) wait for a better time and try again later
+  - (Perhaps) the tailored coaching will be a huge success for you and the team
+### Practicalities before coaching begins
+- TBD
+
+### Turn up the good
+- TBD
+
+### A career as a Samman Technical Coach
+- TBD
+
+### Final thoughts
+- TBD
+
+### References
+- TBD
 ## Interesting links
 
 - https://twitter.com/ClareSudbery/status/1434130606976339968
 - TBD
 
-Bookmark: 121 / 170
+Bookmark: 151 / 170
