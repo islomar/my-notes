@@ -400,22 +400,60 @@ contents of the coaching.
   - (Perhaps) wait for a better time and try again later
   - (Perhaps) the tailored coaching will be a huge success for you and the team
 ### Practicalities before coaching begins
-- TBD
+- When should we hold the coaching?
+  - Remind everyone they should not expect quite as many tasks to be completed during the coaching period as usual. The team should have some time and energy available to devote to the coaching.
+  - Agree some dates to book in the team calendar.
+- What task should we work on in the ensemble?
+  - Ideally, this task should be one that the team was going to work on anyway. Perhaps not the highest priority task or anything with a deadline - you want the freedom to go slowly and learn rather than feel pressured to finish it.
+- What physical space should we use for ensemble working?
+- Should we use a branch for the code we write in an ensemble?
+  - You should probably use whatever branching strategy the team already uses.
+  - You’re aiming to change habits and make it normal to push to trunk at least daily.
+
 
 ### Turn up the good
-- TBD
+- After each set of 10 coaching days you will **have some time away from the teams** and can reflect yourself on what happened.
+- It might also make sense to send participants an **anonymous feedback survey**.
+- As well as asking whether the coaching met their **expectations** and what could be **improved**, you could ask if they have noticed any concrete outcomes. Are they collaborating better as a team? Are they writing more unit tests?
+- Decide on the next coaching
+  - In the original sales process with a new organization I recommend starting with two blocks of ten coaching days.
+- Enquire about bringing in a visiting coach or two
+- Networking
+   - Lunches
+   - Strategic phone calls to expand your network
+   - Keeping your sponsor involved
+   - Other coaches
+- Days spent away from the teams
+  - If you’re working on the schedule I mentioned before, with 10 coaching days spread over 3 weeks, then you should get a day or two each week to yourself. If you need to travel a long way to your client then that might not be the best choice.
+  - Other coaches I know will do 10 coaching days in 2 weeks then spend the third week at home.
 
 ### A career as a Samman Technical Coach
-- TBD
+I learnt many of the coaching techniques presented in this book by pairing with a more experienced coach, Llewellyn Falco.
+- Pair Coaching in a larger organization
+- A Visiting Coach Programme
+- Preparing for a Technical Coaching Career
+  - Ideas for how to get started
+  - Attend conferences and workshops
+  - Join an online walk-up ensemble or mob
+  - Shadowing
+- How I became a Technical Coach
+  - https://www.eficode.com/blog/agile-coaching
 
 ### Final thoughts
-- TBD
+- What is the most important thing to remember?
+  - The most important thing is that they like you.
 
 ### References
 - TBD
 ## Interesting links
-
+- https://www.eficode.com/blog/agile-coaching
+- https://www.digdeeproots.com/articles/on/naming-process/
 - https://twitter.com/ClareSudbery/status/1434130606976339968
-- TBD
+
+
+## Questions
+- Section "Keeping your sponsor involved"
+  - Isn't the daily email kind of opaque micromanagement?
+  - What would you do if they asked you for individual feedback?
 
 Bookmark: 151 / 170
