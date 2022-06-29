@@ -447,6 +447,7 @@ I learnt many of the coaching techniques presented in this book by pairing with 
 - TBD
 ## Interesting links
 - https://www.eficode.com/blog/agile-coaching
+- [Peel and Slice](https://github.com/jason-kerney/PeelAndSlice)
 - https://www.digdeeproots.com/articles/on/naming-process/
 - https://twitter.com/ClareSudbery/status/1434130606976339968
 
