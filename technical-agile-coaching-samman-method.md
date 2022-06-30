@@ -443,9 +443,8 @@ I learnt many of the coaching techniques presented in this book by pairing with 
 - What is the most important thing to remember?
   - The most important thing is that they like you.
 
-### References
-- TBD
 ## Interesting links
+- More learning hours: https://github.com/katalogs/learning-hours
 - https://www.eficode.com/blog/agile-coaching
 - [Peel and Slice](https://github.com/jason-kerney/PeelAndSlice)
 - https://www.digdeeproots.com/articles/on/naming-process/
@@ -456,5 +455,3 @@ I learnt many of the coaching techniques presented in this book by pairing with 
 - Section "Keeping your sponsor involved"
   - Isn't the daily email kind of opaque micromanagement?
   - What would you do if they asked you for individual feedback?
-
-Bookmark: 151 / 170
