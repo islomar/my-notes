@@ -1,0 +1,105 @@
+# Teamwork skills: Communicating Effectively in Groups
+- ETA: ~ 6-8 hours
+- https://www.coursera.org/learn/teamwork-skills-effective-communication/home/welcome
+- University of Colorado Boulder
+- Taught by:Matthew A. Koschmann, PhD
+- https://www.coursera.org/learn/teamwork-skills-effective-communication/discussions
+
+1. Week 1: Rethinking Communication
+- Communication as Transmission
+- Communication as Social Construction
+- Interaction design
+- Systems and Institutions
+
+2. Week 2: Group Development & Decision Making
+- Socialization, Norms, and Roles
+- Phase Models of Group Development
+- Multiple Sequence Model of Group Development
+- Hidden Traps in Decision Making
+- Dissent and debate!
+
+3. Week 3: Conflict, Difference, & Diversity
+- **How to have a Good Fight**
+    - "Hell is other people" (Jean-Paul Sartre)
+    - Interests and motivations
+    - Personal biases and irrational behavior
+    - Avoiding conflict perpetuates dysfunctionality
+    - [How Management Teams Can Have a Good Fight](https://www.womeninanesthesiology.org/wp-content/uploads/2018/02/HBR-how-management-teams-can-have-a-good-fight.pdf)
+        - Lack of conflict isn't harmony... it's apathy
+        - Conflict can be good for groups, it means we are engaged, surfacing differences, challenging decisions, exposing patterns, refining ideas.
+        - Don't eliminate conflict... mange conflict and respond more appropriately.
+        - Successful teams keep conflict **constructive** and focused on the **issues**
+        - Successful teams employ **six tactics** related to communication:
+            - They work with more information and debate on the basis of **facts** (not personalities)
+            - They develop multiple **alternatives**
+            - They have commonly **agreed-upon goals**
+            - They inject **humor** into their deliberations
+            - They maintain a **balanced power structure**: establish a sense of fairness and equity in the process.
+            - They resolve issues **without forcing consensus**
+- **Choosing the Right Words**
+    - Language **constructs** our social worlds. It creates reality.
+    - Meaning, interpretation and understanding.
+    - Ask the right questions and identify the key principles to choose the right words.
+    - We move in the realm of probability, not of certainty or chance.
+    - Questions to ask in a conflict situation to put us in a better mindset:
+        - What do I want to **say** vs what do I want to **accomplish**?
+        - What are we **making** together, and how could I **frame** things differently?
+        - Does this need to be **said**... **by me**... **right now**?
+        - What is this conflict **really about**?
+        - What **question** can I ask in this conflict situation, instead of what **statement** can I make?
+            - Can you help me understand?
+            - Can you explain more about?
+            - Can you clarify why?
+            - Asking questions is more invitational than adversarial.
+            - Asking questions is different to questioning
+        - How can I be **reflexive** in this conflict situation?
+            - The common denominator in your dysfunctional relationships... is YOU!
+- **Basics of effective negotiation**
+    - Positional bargaining : saving face and protecting their reputation
+    - Effective negotiation should strive to create value for all of the individuals involved in the decision.
+    - Book ["Getting to yes: Negotiating agreement without giving in"](https://www.goodreads.com/book/show/313605.Getting_to_Yes)
+    - 4 key concepts we need to consider in any negotiation:
+        - Problems
+            - Separate the problem from the **people**
+            - "okay, it might seem like I'm being attacked personally, but this issue really is about some other problem beyond me. I'm going to stay focused on that."
+            - Let's keep the conversation focused on the problem we're trying to solve, not the people involved.
+        - Interests:
+            - Focused on **interests**, not **positions**
+            - Story of two chefs and the orange.
+        - Options
+            - We need to create **multiple options** for **mutual gains**
+        - Standards
+            - Insist that the **results** of a negotiation be based on an **objective standard**
+    - We should always keep in mind our **BATNA**: Best Alternative To a Negotiated Agreement
+        - What is at stake if you don't reach an agreement?
+        - If you don't have a good alternative apart from negotiating, you need to reach an agreement, and probably have to be willing to accept some concessions.
+    - What if someone plays dirty tricks during the negotiation?
+        - Recognize the tactic
+        - Raise the issue explicitly
+        - Question whether or not that tactic is legitimate or desirable
+        - "Negotiation Jiu Jitsu"
+- **Diversity Matters**
+    - Difference and diversity are all about understanding and appreciating the unique characteristics that each member brings to the group.
+    - Most of us feel comfortable being around people who are similar to not different from us.
+    - Different people bring different perspectives and ideas to group work.
+    - It's usually difficult to talk about...
+    - Book ["Difference matters"](https://www.goodreads.com/book/show/24033326-difference-matters)
+    - The issues or categories or difference that are significant, e.g. gender, race, ethnicity, sexuality, physical ability, politics, religion, age and social class.
+    - Difference matters because it is important:
+        - **Factual**: it is a basic **demographic fact** of modern society
+        - **Strategic**: difference brings **strategic advantages** to our groups
+            - [Video from Starbucks](https://www.youtube.com/watch?v=Qc-M5cMKQCk): "Diversity is about who we are. Inclusion is about what we do".
+        - **Moral**: growing **moral imperative** to include those who have been historically marginalized
+            - Diversity will not happen without intention and initiative.
+            - Not enough to say "I'm not racist", we have think systemics.
+- **Understanding Identity**
+    - Who we are as a group. How we interact with each other, depending on how we see ourselves, how we see other people and how the group see itself as a collective.
+    - Identity is not fixed but a social construct that people create, maintain and alter through our interactions.
+    - Better to think about **social identity**.
+    - Identity is a **relational property**.
+    - **Essentialism**: the belief that social characteristics are **inherent** or essential to one's identity.
+    - Bookmark: 4:34
+- **Communication and Gender**
+
+4. Week 4: Group Communication & Technology
+- TBD
