@@ -2,7 +2,7 @@
 - ETA: ~ 6-8 hours
 - https://www.coursera.org/learn/teamwork-skills-effective-communication/home/welcome
 - University of Colorado Boulder
-- Taught by:Matthew A. Koschmann, PhD
+- Taught by: Matthew A. Koschmann, PhD
 - https://www.coursera.org/learn/teamwork-skills-effective-communication/discussions
 
 1. Week 1: Rethinking Communication
@@ -124,4 +124,18 @@
     - Our interpretation of interactions are likely to be gendered
 
 4. Week 4: Group Communication & Technology
-- TBD
+- Framework for thinking critically about technology in the context of communication.
+- Virtual work
+    - Technology is never neutral: it impacts how we interact to each other.
+    - Technology can not completely replace things.
+    - Article "The third wave of virtual work" by Tammy Johns and Lynda Gratton
+        - 3 waves of virtual work:
+            - First wave: 80s, data through the phone line. Virtual freelancers. Graphic design, report writing, etc. No connections to a gormal organization.
+            - Second wave: virtual corporate colleagues. Full-time employees who work remotely most of the time. 90s and early 2000s. Compromised conventional workplace benefits (informal conversations, face to face).
+            - Third wave: virtual coworkers. Regular times of colocation. Coworking spaces.
+- Using technology
+    - https://www.coursera.org/learn/teamwork-skills-effective-communication/lecture/MA3ig/2-how-groups-are-using-technology
+- Theoretical models
+- Practical considerations
+- Conceptual considerations
+- Sociomateriality
