@@ -93,13 +93,35 @@
             - Diversity will not happen without intention and initiative.
             - Not enough to say "I'm not racist", we have think systemics.
 - **Understanding Identity**
-    - Who we are as a group. How we interact with each other, depending on how we see ourselves, how we see other people and how the group see itself as a collective.
+    - Who we are as a group. It has a lot of influence on how we interact with each other, depending on how we see ourselves, how we see other people and how the group see itself as a collective.
     - Identity is not fixed but a social construct that people create, maintain and alter through our interactions.
     - Better to think about **social identity**.
     - Identity is a **relational property**.
-    - **Essentialism**: the belief that social characteristics are **inherent** or essential to one's identity.
-    - Bookmark: 4:34
+    - **Essentialism**: the belief that social characteristics are **inherent** or essential to one's identity. Dangerous, it equates behavior=character
+    - We tend to identify ourself with our profession, hobbies, etc. Usually we focus on the "social aspects" of our identity.
+    - A category only make sense because there exist other categories.
+    - **Fundamental attribution error**: mistake of attributing behavior to personal character rather than broader situational factors. We do the opposite for ourselves.
+    - **How we make sense of the actions of other people**
+        - Focus on **situational factors**, not on an "essential character".
+        - We need to take mental shortcuts. The temptation is to take the identity as an heuristic.
+        - Essentialism constrains the possibilities of our communication.
+        - Instead, consider the situational factors that influence people's actions.
+    - **How we manage our own identities**
+        - Communication helps construct a robust, complex identity.
+        - Presenting a **monolithic identity** makes it easier for others to discard or marginalize your ideas. Instead, tell others what **"hat"** you're wearing in your discussions.
+    - **Relational identity base on interaction**.
+    - **Collective identity**: distinct personality that transcends any individual group member. The WE-ness of the group.
 - **Communication and Gender**
+    - "Men are from Mars, women are from Venus" :-(
+    - Men and women are actually similar in their communication behavior
+        - Book "The myth of Mars and Venus", by Deborah Cameron
+        - Paper: "The gender similarities hypothesis" by Janet Shibley Hyde
+    - Differences are better explained in terms of socialization
+    - Culture socializes us into different roles, norms, and expectations
+    - **Linguistic style**: characteristic patterns of speech. It differs between men and women. It is more a result of socialization than genetics.
+    - Article: "The power of talk" by Deborah Tannen
+        - Communication is fundamentally **ritual**: rapport vs status (for children, girls vs boys)
+    - Our interpretation of interactions are likely to be gendered
 
 4. Week 4: Group Communication & Technology
 - TBD
