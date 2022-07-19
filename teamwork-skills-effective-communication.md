@@ -125,7 +125,7 @@
 
 4. Week 4: Group Communication & Technology
 - Framework for thinking critically about technology in the context of communication.
-- Virtual work
+- **Virtual work**
     - Technology is never neutral: it impacts how we interact to each other.
     - Technology can not completely replace things.
     - Article "The third wave of virtual work" by Tammy Johns and Lynda Gratton
@@ -133,9 +133,91 @@
             - First wave: 80s, data through the phone line. Virtual freelancers. Graphic design, report writing, etc. No connections to a gormal organization.
             - Second wave: virtual corporate colleagues. Full-time employees who work remotely most of the time. 90s and early 2000s. Compromised conventional workplace benefits (informal conversations, face to face).
             - Third wave: virtual coworkers. Regular times of colocation. Coworking spaces.
-- Using technology
-    - https://www.coursera.org/learn/teamwork-skills-effective-communication/lecture/MA3ig/2-how-groups-are-using-technology
-- Theoretical models
-- Practical considerations
-- Conceptual considerations
-- Sociomateriality
+- **How groups are using (digital) technology**
+    1. Conference calls
+        - Online video conference
+    2. Decision making
+        - Group Decision Support Systems (GDSS)
+        - Allow for anonimity
+        - Allow for candid feedback
+        - Help groups overcome power barriers
+        - Enable everyone to be heard
+    3. Telepresence robots
+    4. Collaboraton technologies
+        - Trello, Taskworld, Wrike, Jira, Basecamp, ProWorkFlow.
+        - What progress has been made to made and what is missing.
+        - Dashboards.
+        - File sharing programs, e.g. Google Drive, Dropbox.
+    5. Wearable technologies
+        - Company "Sociometric solutions"
+            - Results of the research (to find out general differences between "low" and "high" effective teams): https://hbr.org/2012/04/the-new-science-of-building-great-teams
+            - Everyone on the teams talks and listens in roughly equal measure; contributions are brief and concise.
+            - People face each other when they communicate; conversations and gestures are energetic.
+            - Team members connect directly with each other, not just the team leader.
+            - Team members carry on back channel or side conversations within the team.
+            - Members periodically go outside the team and bring back new information.
+    6. Gamification
+        - Narrative framework
+    7. Virtual reality and Augmented reality
+- **Theoretical models: media richness and dual capacity**
+    - **Model of media richness**
+        - Effective communication comes from matching the richness of the communication medium with the ambiguity of the task at hand.
+        - Face to face is the richest communication medium.
+        - A quick handwritten note is very thin/lean medium.
+        - Very interesting matrix: https://www.asamby.com/good-management-blog/media-richness
+    - **Dual capacity model**
+        - Communication is primarily about social construction. About meaning, interpretation and understanding.
+        - Every communication technology has:
+            - **Data-carrying capacity**
+            - **Symbol-carrying capacity**
+        - There are no neutral technologies. E.g. Email and texting have a meaning beyond the pure data-carrying capacity. There is a cultural significance.
+- **Practical considerations for technology**
+    1. **Compatibility**
+        - Wrong version of the SW, different OS, HW connectors, browser, etc.
+    2. **Optimization**
+        - For mobile, for laptop? For multiple internet browser or for one particular?
+    3. **Anonymity and confidentiality**
+        - E.g. can they make anonymous contribution to group decisions?
+    4. **Measuring productivity**
+        - WTF: micromanagement!!
+        - Eruding trust.
+    5. **Technology temperament**
+        - How people feel about including technology everywhere...
+        - Digital natives vs Digital immigrants
+- **Conceptual considerations for technology**
+    - Technology is designed: it enables some things and constraints others.
+    - 5 conceptual issues
+        - Social presence
+        - Embodiment
+            - It's very important to see body language (facial expressions, posture, etc.)
+        - Technological determinism
+            - Thinking that we can only do what our technology enables us to do.
+        - Technological optimism
+            - Thinking that the solution for anything will come from technology.
+        - Agency
+            - The capacity that people has to act on their own.
+            - Error: thinking that technology is neutral.
+            - Who or what is really in control?
+- **Sociomateriality**
+    - It's a mistake to see "Sociality" and "Materiality" as two independent things.
+    - Technology is infused in our everyday's lives.
+    - Papers from Wanda Orlikowski
+    - https://en.wikipedia.org/wiki/Sociomateriality
+    - Constitutive entanglement of the social and the material in everyday life.
+    - Examples:
+        - Googling something. We don't really think about how it works (PageRank). Google doesn't just "search" reality. Google actively "creates" that reality.
+        - Smartphones.
+    - All group work is "always and everywhere sociomaterial".
+
+## Suggested Readings
+    - [The Five Dysfunctions of a Team](https://www.amazon.com/Five-Dysfunctions-Team-Leadership-Fable/dp/0787960756/ref=sr_1_1?ie=UTF8&qid=1496250007&sr=8-1&keywords=five+dysfunctions+of+a+team)
+    - [Group Communication: Cases for Analysis, Appreciation, and Application](https://www.amazon.com/Group-Communication-Analysis-Appreciation-Application/dp/0757582958/ref=sr_1_1?ie=UTF8&qid=1496250055&sr=8-1&keywords=laura+black+group+communication)
+    - [An Invitation to Social Construction](https://www.amazon.com/Invitation-Social-Construction-Kenneth-Gergen/dp/1446296482/ref=sr_1_1?ie=UTF8&qid=1496250533&sr=8-1&keywords=an+invitation+to+social+construction)
+    - [Making Social Worlds: A Communication Perspective](https://www.amazon.com/Making-Social-Worlds-Communication-Perspective/dp/1405162600/ref=sr_1_1?ie=UTF8&qid=1496250643&sr=8-1&keywords=making+social+worlds)
+    - [Paradoxes of Group Life](https://www.amazon.com/Paradoxes-Group-Life-Understanding-Jossey-Bass/dp/B00HQ1LMDK/ref=sr_1_2?ie=UTF8&qid=1496250205&sr=8-2&keywords=Paradoxes+of+group+life)
+    - [Group Communication in Context](https://www.amazon.com/Group-Communication-Context-Studies-Groups/dp/0805831509/ref=sr_1_1?ie=UTF8&qid=1496250281&sr=8-1&keywords=group+communication+in+context)
+    - [In Mixed Company: Communicating in Small Groups](https://www.amazon.com/Mixed-Company-Communicating-Small-Groups/dp/1285444604/ref=sr_1_10?ie=UTF8&qid=1496250345&sr=8-10&keywords=group+communication)
+
+
+## My notes
+- Missing talking about a11y
