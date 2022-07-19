@@ -80,4 +80,5 @@ TBD
 
 ## My notes
 - Tuckman's model is basically "wrong" and it's the backbone of the book.
+    - https://medium.com/@DocOnDev/tuckman-was-wrong-e35e29716912
 - In the "feedback equation" model, emotions are basically removed, which is plain wrong from my point of view.
