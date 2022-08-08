@@ -189,3 +189,4 @@
   - https://microk8s.io
   - https://github.com/kubernetes-sigs/kind
 * https://github.com/fiunchinho/k8s-playground  
+* [Kubernetes ingress as reverse proxy to Application running outside cluster](https://medium.com/linux-shots/kubernetes-ingress-as-reverse-proxy-to-application-running-outside-cluster-206b6003f9cb)
