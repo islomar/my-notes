@@ -1,6 +1,7 @@
 # Kubernetes for developers
 - Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-desarrolladores)
 - Another AMAZING resource for learning the basics, from CNCF: https://www.cncf.io/phippy/
+- Learning resources which look great as well: https://kube.academy/
 
 ## General information
 * K8s is a REST API
