@@ -1,6 +1,6 @@
 # Testing without mocks
 
-- https://www.jamesshore.com/v2/blog/2018/testing-without-mocks
+- These are my notes after reading the article "Testing without mocks": https://www.jamesshore.com/v2/blog/2018/testing-without-mocks
 - Post from 2018
 - En teoría no va de "no usar dobles", sino de no usar mocks (aunque al final sí dice que no usa dobles... lo cual no es cierto):
   - Nullable infrastructure es un doble, ¡¡un fake!! (UsernameService.createNull)
@@ -27,4 +27,4 @@
   - but... that... is... not... true. For some parts, they use Fakes and Stubs :-/
   - and it uses "integration tests" (those which solely purpose is to interact with the infrastructure).
 
-![Testing strategy from CodelyTv](testing-strategy-codelytv.png)
+![Testing strategy from CodelyTv](testing-without-mocks/testing-strategy-codelytv.png)
