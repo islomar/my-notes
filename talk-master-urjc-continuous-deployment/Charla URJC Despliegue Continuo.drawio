@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-25T13:03:15.480Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" etag="uAD-yiTT_qIJNH1JhgZl" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-09-19T16:05:33.459Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="kLI8X-Xp0MWqTNNzgbk8" version="18.1.2" type="github" pages="2">
   <diagram id="rxDA70gnGnYBVUDP96AV" name="Clarity AI">
-    <mxGraphModel dx="1350" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="2062" dy="1160" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,8 +16,8 @@
         <mxCell id="BDgDIyLqdAixnrCIeVsv-6" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/socialcones/508/Gitlab-128.png" parent="1" vertex="1">
           <mxGeometry x="670" y="40" width="90" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="BDgDIyLqdAixnrCIeVsv-12" value="pre-commit&lt;br&gt;Git hook" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-          <mxGeometry x="143" y="329.75" width="120" height="50.5" as="geometry" />
+        <mxCell id="BDgDIyLqdAixnrCIeVsv-12" value="pre-commit&lt;br&gt;pre-push&lt;br&gt;post-merge&lt;br&gt;Git hook" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="143" y="325.13" width="120" height="60.25" as="geometry" />
         </mxCell>
         <mxCell id="BDgDIyLqdAixnrCIeVsv-17" value="GitLab pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="740" y="70" width="110" height="30" as="geometry" />
