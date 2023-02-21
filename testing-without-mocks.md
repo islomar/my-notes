@@ -2,22 +2,22 @@
 
 - These are my notes after reading the article "Testing without mocks": https://www.jamesshore.com/v2/blog/2018/testing-without-mocks
 - Post from 2018
-- En teoría no va de "no usar dobles", sino de no usar mocks (aunque al final sí dice que no usa dobles... lo cual no es cierto):
-  - Nullable infrastructure es un doble, ¡¡un fake!! (UsernameService.createNull)
-  - También habla de Stubs
+- I don't see that the article is about "not using doubles" but "not using mocks" (though at the end they say they don't use doubles... which it is not true):
+  - Nullable infrastructure is a double indeed, a "fake"!! (UsernameService.createNull)
+  - They also mention the Stubs
   - En ocasiones creo que no tiene muy claro que los mocks no son el único tipo de dobles :-/
 - Tampoco va de no crear ningún tipo de tests que llame realmente a la infraestsructura (ver "Focused Integration Tests", por ejemplo)
-- Y también habla de crear Stubs: "Embedded Stub"
+- They also talk about creating Stubs: "Embedded Stub"
 - Mi sensación: no tiene en cuenta las posibilidades y beneficios de una **arquitectura hexagonal combinada con algo de DDD** y una estrategia de testing donde el "unit" sea sociable por defecto y el "integration" son los tests de los "secondary adapters".
 - Logic patterns: **llevar ideas del mundo funcional** (separar "funciones puras" de funciones con I/O). Eso me parece bien.
-- "Don’t do significant work in constructors. Don’t connect to external systems, start services, or perform long calculations. " --> **obvio en DDD, evita el patrón Active Record**.
-- **"Signature Shielding"** --> Object Mother + Builder pattern, nada nuevo
-- Inyecta colaboradores.
-- **Collaborator-Based Isolation**: el test que muestra ahí es una típica mala práctica --> repite (acopla) la lógica del SUT en el test (".renderAsOneLine()")
+- "Don’t do significant work in constructors. Don’t connect to external systems, start services, or perform long calculations. " --> **obvious in DDD, avoid the Active Record pattern**.
+- **"Signature Shielding"** --> Object Mother + Builder pattern, nothing new
+- They inject collaborators.
+- **Collaborator-Based Isolation**: IMO the test shown there is a "bad practice" --> it repeates (couples) the SUT logic in the test ("renderAsOneLine()")
 - **Logic Sandwich**: ¿cómo testea que realmente funciona la infraestructura? ¿Cómo testea que realmente se comunica con una DB que guarda y recupera correctamente X?
-- "Now your application tests serve the same purpose as broad end-to-end tests:" --> WTF. En absoluto... no está testeando los límites, si las llamadas a la infraestructura funcionan (pueden no funcionar por mil motivos diferentes: SQL mal escrita, credenciales erróneas, URI errónea, no tener permisos, etc.). Y es crítico.
-- **Traffic Cop**: no lo he entendido.
-- **Spy server**: muy complejo. Mejor "spy objects" o algo tipo TetsContainers o LocalStack.
+- "Now your application tests serve the same purpose as broad end-to-end tests:" --> WTF. Not at all... they are not testing the boundaries, si las llamadas a la infraestructura funcionan (pueden no funcionar por mil motivos diferentes: SQL mal escrita, credenciales erróneas, URI errónea, no tener permisos, etc.). Y es crítico.
+- **Traffic Cop**: I didn't understand it.
+- **Spy server**: too complex. Better "spy objects" or something like TetsContainers or LocalStack.
 - **Focused Integration Tests**: al final sí testea la infraestructura... de hecho de la misma manera que lo hacemos nosotros :-)
 - **Nullable Infrastructure**
   - Sobre "focused integration tests": "they’re overkill for code that depends on that infrastructure code."  --> highly disagree y además es la única manera de tener tests "realmente" fiables.
