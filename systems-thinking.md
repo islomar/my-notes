@@ -10,6 +10,7 @@
 
 ## Tools
 - https://ncase.me/loopy/
+- https://insightmaker.com/
 
 ### Links
 - https://www.goodreads.com/book/show/3828902-thinking-in-systems
