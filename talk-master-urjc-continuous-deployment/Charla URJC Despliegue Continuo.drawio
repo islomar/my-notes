@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-09-19T16:08:53.258Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="flBVGkzVeNU1GtiqzMLY" version="18.1.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-06-14T17:03:15.602Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="SZWQvzn55cPgtC6a8kGR" version="21.3.8" type="github" pages="2">
   <diagram id="rxDA70gnGnYBVUDP96AV" name="Clarity AI">
-    <mxGraphModel dx="2062" dy="1160" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="2008" dy="1295" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -80,7 +80,7 @@
           <mxGeometry x="878.62" y="430" width="55.5" height="26" as="geometry" />
         </mxCell>
         <mxCell id="-GmTl0F98BwwLJ5EqVgJ-9" value="HTTP API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="869.99" y="470" width="72.75" height="26" as="geometry" />
+          <mxGeometry x="872.99" y="470" width="72.75" height="26" as="geometry" />
         </mxCell>
         <mxCell id="-GmTl0F98BwwLJ5EqVgJ-10" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="645.62" y="125" width="284.38" height="165" as="geometry" />
@@ -109,11 +109,11 @@
             <mxPoint x="613" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-GmTl0F98BwwLJ5EqVgJ-16" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Format&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Typing&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Helm validation&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Dockerfile validation&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Unit tests&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="138.62" y="427" width="128.75" height="89" as="geometry" />
+        <mxCell id="-GmTl0F98BwwLJ5EqVgJ-16" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Format&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Typing&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Helm validation&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Dockerfile validation&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Unit tests&lt;br&gt;&lt;/span&gt;Other validations&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="138.62" y="427" width="128.75" height="103" as="geometry" />
         </mxCell>
-        <mxCell id="-GmTl0F98BwwLJ5EqVgJ-17" value="Integration tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="283" y="427" width="110" height="26" as="geometry" />
+        <mxCell id="-GmTl0F98BwwLJ5EqVgJ-17" value="Integration tests (fast)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="283" y="427" width="110" height="33" as="geometry" />
         </mxCell>
         <mxCell id="-GmTl0F98BwwLJ5EqVgJ-18" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="-GmTl0F98BwwLJ5EqVgJ-17" target="BDgDIyLqdAixnrCIeVsv-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -172,17 +172,20 @@
             <mxPoint x="680" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rWMKzRTb6R41nfV9rOgR-1" value="post-merge&lt;br&gt;Git hook" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;flipH=1;" vertex="1" parent="1">
+        <mxCell id="rWMKzRTb6R41nfV9rOgR-1" value="post-merge&lt;br&gt;Git hook" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;flipH=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="570" width="140" height="50.5" as="geometry" />
         </mxCell>
-        <mxCell id="rWMKzRTb6R41nfV9rOgR-2" value="&amp;nbsp;Install missing library&amp;nbsp; &amp;nbsp;dependencies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" vertex="1" parent="1">
+        <mxCell id="rWMKzRTb6R41nfV9rOgR-2" value="&amp;nbsp;Install missing library&amp;nbsp; &amp;nbsp;dependencies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
           <mxGeometry x="207.5" y="668" width="145" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="rWMKzRTb6R41nfV9rOgR-3" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="rWMKzRTb6R41nfV9rOgR-1" target="rWMKzRTb6R41nfV9rOgR-2">
+        <mxCell id="rWMKzRTb6R41nfV9rOgR-3" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rWMKzRTb6R41nfV9rOgR-1" target="rWMKzRTb6R41nfV9rOgR-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="560" y="610" as="sourcePoint" />
             <mxPoint x="610" y="560" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="HGBy6a0jeHdCwUvM-lLc-2" value="ArgoCD Workflows linter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="872.99" y="511" width="72.75" height="49" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
