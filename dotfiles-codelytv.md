@@ -60,6 +60,15 @@ Hacemos un symlink del `~/.composer/composer.json`
 * Installer.
 
 
+## ¿Cómo crear la documentación "--help" de los scripts en bash?
+- https://pro.codely.com/library/todo-sobre-los-dotfiles-54672/137187/path/step/178646517/
+- `docs::eval "$@"`
+- http://docopt.org/
+- https://github.com/denisidoro/docpars
+- https://github.com/docopt/docopts
+- https://github.com/CodelyTV/dotly/blob/main/scripts/core/documentation.sh
+
+
 ## Recommended apps
 * [Alfred (OSX)](https://www.alfredapp.com/): for productivity, shortcuts, etc.
     * Alternatives in Linux: Albert and [rofi](https://github.com/davatorium/rofi)
