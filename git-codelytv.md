@@ -225,6 +225,24 @@ echo 'no tests no commit' | git hash-object --stdin -w
   - Tiene que haberse añadido al staging area en algún momento.
   - Una vez identificado el blob, podemos utilizar el comando git cat-file -p <hash> para que nos muestre el contenido de dicho blob y, de este modo, acceder a los cambios
 
+## Preguntas del Mundo Real
+### Versionado de configuración de producción y secretos
+- Ficheros en repo (glups)
+  - En todo caso, encriptado.
+- Variables de entorno
+- Vault
+- AWS Parameter Store
+- AWS Secrets Manager 
+
+### Exprimir Git log
+
+- `git log master feature-with-merge`: Nos muestra el histórico conjunto de todas las ramas/commits que le indiquemos (flattern) y no sólo el HEAD
+- `git log --all`: Nos muestra todas las ramas de nuestro repositorio, incluídos los diferentes remotes que tengamos
+- `git log master..feature-with-merge`: Recupera los commits que tenemos en la rama feature-with-merge y que no tiene master
+- `git log feature-with-merge..master`: Recupera los commits que tenemos en master y que aún no tenemos en la rama feature-with-merge
+- `git log master...feature-with-merge`: Mostrará aquellos commits que ambas ramas tienen distintos la una de la otra
+- `git log --left-right master...feature-with-merge`: Nos situa los commits exclusivos de la feature branch a la derecha y los exclusivos de la rama master a la izquierda
+
 ## More interesting links
 
 - https://training.github.com/
