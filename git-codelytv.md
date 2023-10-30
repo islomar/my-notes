@@ -243,6 +243,12 @@ echo 'no tests no commit' | git hash-object --stdin -w
 - `git log master...feature-with-merge`: Mostrará aquellos commits que ambas ramas tienen distintos la una de la otra
 - `git log --left-right master...feature-with-merge`: Nos situa los commits exclusivos de la feature branch a la derecha y los exclusivos de la rama master a la izquierda
 
+### Git worktree: Trabaja en varias ramas de forma independiente
+- https://git-scm.com/docs/git-worktree
+
+### Cómo mergeamos PRs: Merge commit vs Squash vs Rebase
+- https://www.davidchudzicki.com/posts/first-parent/
+
 ## More interesting links
 
 - https://training.github.com/
