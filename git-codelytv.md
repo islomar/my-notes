@@ -252,6 +252,7 @@ echo 'no tests no commit' | git hash-object --stdin -w
 ## More interesting links
 
 - https://training.github.com/
+- https://ohmygit.org/
 - https://learngitbranching.js.org/
 - https://www.campusmvp.es/recursos/post/git-como-evitar-problemas-con-cambios-de-linea-al-trabajar-en-equipo.aspx
 - https://github.com/scmbreeze/scm_breeze
