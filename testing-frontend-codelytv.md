@@ -94,7 +94,7 @@ https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit
   - `coursesRepo.searchAll.clear()`: sólo borra el número de veces que ha sido llamado
   - `coursesRepo.searchAll.mockReset()`
   - `coursesRepo.searchAll.mockRestore()`
-* Mejor ponerlo en el `jest.config.js`: `retoreMocks: true`
+* Mejor ponerlo en el `jest.config.js`: `restoreMocks: true`
 * [Testing library guiding principles](https://testing-library.com/docs/guiding-principles/)
 * [Jest Mock functions](https://jestjs.io/docs/en/mock-function-api)
 * [Jest manual mocks guide](https://jestjs.io/docs/en/manual-mocks)
