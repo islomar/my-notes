@@ -30,6 +30,7 @@
 - [Integration and e2e tests](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/03-testing/3-integration-e2e)
     - They use Cypress both for the integration (secondary adapters) and the e2e tests.
     - Jest does not have `fetch`, that's why we use Cypress also for integration tests, so that we use `fetch` in a more realistic way, from a browser.
+- Without HA: [example code for mocking internal dependencies](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/04-adding-hexagonal-architecture/2-you-might-not-need-hexagonal-architecture)    
 
 ### Peligros de doblar el fetch
 
@@ -40,8 +41,37 @@
   - en el `setupTests.js` configuramos que se levante, resetee y pare el servidor de MSW.
   - Útil para fácilmente testear código legacy antes de empezar el refactor y crear Repositories. Es una primera capa de seguridad.
 
+## Promises and Hexagonal Architecture
+- [Example code](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/05-one-more-step/1-promises)
+
+## Improving our tests
+- [Code example](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/05-one-more-step/2-object-mothers)
+- Generate fake data:
+    - https://ngneat.github.io/falso/docs/getting-started/
+    - https://github.com/faker-js/faker
+- Object Mother Factories: https://github.com/thoughtbot/fishery
+
+## Functional programming in HA
+- [Code example](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/06-different-approaches/1-functional)
+- Podemos separar los parámetros propios del caso de uso de sus dependencias mediante currying:
+```
+export function createCourse(courseRepository: CourseRepository) {
+	return async function (course: Course): Promise<void> {
+		ensureCourseIsValid(course);
+
+		await courseRepository.save(course);
+	};
+}
+```
+Y llamarlo de la siguiente manera
+
+`createCourse(repository)({id, title, imageUrl});`
+
 
 ## My thoughts
 - At high level, in React it looks like we can talk about "Views" and "Components".
 - I guess Components are reusable and so it would be good to be able to differentiate them somehow (folder name? Suffix?)
 - TBD
+
+## Resources
+- Posibilidad de añadir reglas de linter para controlar regla de dependencias ([eslint-plugin-hexagonal-architecture](https://www.npmjs.com/package/eslint-plugin-hexagonal-architecture))
