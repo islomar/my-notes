@@ -51,27 +51,39 @@
     - https://github.com/faker-js/faker
 - Object Mother Factories: https://github.com/thoughtbot/fishery
 
-## Functional programming in HA
-- [Code example](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/06-different-approaches/1-functional)
-- Podemos separar los parámetros propios del caso de uso de sus dependencias mediante currying:
-```
-export function createCourse(courseRepository: CourseRepository) {
-	return async function (course: Course): Promise<void> {
-		ensureCourseIsValid(course);
+## Different ways to implement HA
+- **Functional programming in HA**
+    - [Code example](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/06-different-approaches/1-functional)
+    - Podemos separar los parámetros propios del caso de uso de sus dependencias mediante **currying**:
+    ```
+    export function createCourse(courseRepository: CourseRepository) {
+        return async function (course: Course): Promise<void> {
+            ensureCourseIsValid(course);
 
-		await courseRepository.save(course);
-	};
-}
-```
-Y llamarlo de la siguiente manera
+            await courseRepository.save(course);
+        };
+    }
+    ```
+    Y llamarlo de la siguiente manera
 
-`createCourse(repository)({id, title, imageUrl});`
+    `createCourse(repository)({id, title, imageUrl});`
+
+- **Object Oriented Programming in HA**
+    - [Code example](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/06-different-approaches/2-object-oriented)
+
+- **Value Objects**
+    - [Functional example](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/06-different-approaches/3-value-objects/functional)
+    - [OO example](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/06-different-approaches/2-object-oriented)
+
+## HA in the real world
+- [Code example with HA for a localizations map](https://github.com/CodelyTV/frontend-hexagonal_architecture-course/tree/main/07-next-steps/1-more-examples/maps)
 
 
 ## My thoughts
 - At high level, in React it looks like we can talk about "Views" and "Components".
 - I guess Components are reusable and so it would be good to be able to differentiate them somehow (folder name? Suffix?)
 - TBD
+
 
 ## Resources
 - Posibilidad de añadir reglas de linter para controlar regla de dependencias ([eslint-plugin-hexagonal-architecture](https://www.npmjs.com/package/eslint-plugin-hexagonal-architecture))
