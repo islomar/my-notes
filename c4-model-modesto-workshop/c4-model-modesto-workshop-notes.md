@@ -33,6 +33,7 @@
     - Deployment
 
 ## Diagraming
+- [eShop Reference Application](https://media.licdn.com/dms/image/D4E22AQHNyBpOrNR3ag/feedshare-shrink_2048_1536/0/1700681707033?e=1718841600&v=beta&t=Q4Y28h2eSUIzE_MvfpUipjGmGix66dG46ZAZojPLkKY)
 - No diagrames, tú tienes que modelar y después usar un DSL como en Structurizr
 - Context diagram
     - Identify your actors
@@ -42,10 +43,11 @@
 
 ## Modeling
 - https://structurizr.com/dsl
-- VS Code extension: C4 DSL Extension
+    - VS Code extension: C4 DSL Extension (¡ojo con el rendering!   )
 - https://docs.structurizr.com/lite/quickstart
 - http://localhost:8080/workspace/diagrams
 - It converts the DSL to a JSON
 - It allows `!includes anotherfile.dsl`
 
 ## Some resources
+- https://c4model.tools/
