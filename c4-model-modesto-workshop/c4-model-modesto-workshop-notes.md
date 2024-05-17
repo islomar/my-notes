@@ -46,5 +46,6 @@
 - https://docs.structurizr.com/lite/quickstart
 - http://localhost:8080/workspace/diagrams
 - It converts the DSL to a JSON
+- It allows `!includes anotherfile.dsl`
 
 ## Some resources

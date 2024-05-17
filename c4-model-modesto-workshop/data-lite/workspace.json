@@ -1,14 +1,13 @@
 {
-  "configuration" : {
-    "scope" : "SoftwareSystem"
-  },
+  "configuration" : { },
   "description" : "Description",
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-javascript",
-  "lastModifiedDate" : "2024-05-17T16:23:54Z",
+  "lastModifiedDate" : "2024-05-17T17:04:04Z",
   "model" : {
     "people" : [ {
+      "description" : "A user of my software system.",
       "id" : "1",
       "location" : "Unspecified",
       "name" : "User",
@@ -18,9 +17,18 @@
       "relationships" : [ {
         "description" : "Uses",
         "destinationId" : "2",
-        "id" : "3",
+        "id" : "5",
         "properties" : {
-          "structurizr.dsl.identifier" : "d125e177-042b-4705-b7bb-557769671a7e"
+          "structurizr.dsl.identifier" : "8452e439-657a-4250-addc-3e0b76eda9db"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "3",
+        "id" : "6",
+        "properties" : {
+          "structurizr.dsl.identifier" : "8c0ffd0c-248a-486e-a5a2-f048356bb240"
         },
         "sourceId" : "1",
         "tags" : "Relationship"
@@ -28,32 +36,119 @@
       "tags" : "Element,Person"
     } ],
     "softwareSystems" : [ {
+      "containers" : [ {
+        "documentation" : { },
+        "id" : "3",
+        "name" : "Web Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "salessystem.webapp"
+        },
+        "relationships" : [ {
+          "destinationId" : "4",
+          "id" : "7",
+          "properties" : {
+            "structurizr.dsl.identifier" : "da31df86-5c16-45fe-9280-39398463b79d"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Description",
+        "documentation" : { },
+        "id" : "4",
+        "name" : "MySQL Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "salessystem.database"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "MySQL"
+      } ],
+      "description" : "My software system.",
       "documentation" : { },
       "id" : "2",
       "location" : "Unspecified",
       "name" : "Software System",
       "properties" : {
-        "structurizr.dsl.identifier" : "softwaresystem"
+        "structurizr.dsl.identifier" : "salessystem"
       },
       "tags" : "Element,Software System"
     } ]
   },
   "name" : "Name",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgdXNlciA9IHBlcnNvbiAiVXNlciIKICAgICAgICBzb2Z0d2FyZVN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJTb2Z0d2FyZSBTeXN0ZW0iCgogICAgICAgIHVzZXIgLT4gc29mdHdhcmVTeXN0ZW0gIlVzZXMiCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgc29mdHdhcmVTeXN0ZW0gIkRpYWdyYW0xIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KICAgIH0KCiAgICBjb25maWd1cmF0aW9uIHsKICAgICAgICBzY29wZSBzb2Z0d2FyZXN5c3RlbQogICAgfQoKfQo="
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgICFpZGVudGlmaWVycyBoaWVyYXJjaGljYWwKICAgIG1vZGVsIHsKICAgICAgICB1c2VyID0gcGVyc29uICJVc2VyIiAiQSB1c2VyIG9mIG15IHNvZnR3YXJlIHN5c3RlbS4iCiAgICAgICAgc2FsZXNTeXN0ZW0gPSBzb2Z0d2FyZVN5c3RlbSAiU29mdHdhcmUgU3lzdGVtIiAiTXkgc29mdHdhcmUgc3lzdGVtLiIgewogICAgICAgICAgICB3ZWJhcHAgPSBjb250YWluZXIgIldlYiBBcHBsaWNhdGlvbiIKICAgICAgICAgICAgZGF0YWJhc2UgPSBjb250YWluZXIgIk15U1FMIERhdGFiYXNlIiAiRGVzY3JpcHRpb24iICJNeVNRTCIgIkRhdGFiYXNlIgogICAgICAgIH0KCiAgICAgICAgdXNlciAtPiBzYWxlc1N5c3RlbSAiVXNlcyIKICAgICAgICB1c2VyIC0+IHNhbGVzU3lzdGVtLndlYmFwcCAiVXNlcyIKICAgICAgICBzYWxlc1N5c3RlbS53ZWJhcHAgLT4gc2FsZXNTeXN0ZW0uZGF0YWJhc2UKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtQ29udGV4dCBzYWxlc1N5c3RlbSAiU3lzdGVtQ29udGV4dCIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KICAgICAgICBjb250YWluZXIgc2FsZXNTeXN0ZW0gIkNvbnRhaW5lcnMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgICMgVGhpcyB0aGVtZSBjcmVhdGVzIGJ5IGRlZmF1bHQgdGhlIEMxLUMzIHZpZXdzLCB3ZSBjb3VsZCBkZWxldGUgdGhlIGVsZW1lbnRzIGZvciAiU29mdHdhcmUgU3lzdGVtIiBhbmQgIlBlcnNvbiIKICAgICAgICAgICAgdGhlbWUgZGVmYXVsdCAKICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMxMTY4YmQKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIHBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDg0MjdiCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgc2hhcGUgY3lsaW5kZXIKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KICAgIAp9Cg=="
   },
   "views" : {
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "Diagram1",
+      "lastSavedView" : "Containers",
       "metadataSymbols" : "SquareBrackets",
-      "styles" : { },
-      "terminology" : { }
+      "styles" : {
+        "elements" : [ {
+          "background" : "#1168bd",
+          "color" : "#ffffff",
+          "tag" : "Software System"
+        }, {
+          "background" : "#08427b",
+          "color" : "#ffffff",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#999999",
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
     },
-    "systemContextViews" : [ {
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
       "dimensions" : {
-        "height" : 1748,
-        "width" : 2480
+        "height" : 2091,
+        "width" : 890
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 245,
+        "y" : 200
+      }, {
+        "id" : "3",
+        "x" : 220,
+        "y" : 900
+      }, {
+        "id" : "4",
+        "x" : 220,
+        "y" : 1500
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "Containers",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "6"
+      }, {
+        "id" : "7"
+      } ],
+      "softwareSystemId" : "2"
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
       },
       "elements" : [ {
         "id" : "1",
@@ -61,15 +156,14 @@
         "y" : 0
       }, {
         "id" : "2",
-        "x" : 1015,
-        "y" : 724
+        "x" : 0,
+        "y" : 0
       } ],
       "enterpriseBoundaryVisible" : true,
-      "key" : "Diagram1",
+      "key" : "SystemContext",
       "order" : 1,
-      "paperSize" : "A5_Landscape",
       "relationships" : [ {
-        "id" : "3"
+        "id" : "5"
       } ],
       "softwareSystemId" : "2"
     } ]
