@@ -3,7 +3,7 @@
 - ETA: 2h 30 min
 
 ## Use cases for asynchronous JavaScript
-- TBD
+- [Code example: problems with Promises](https://github.com/CodelyTV/javascript-async-course/tree/main/01-async-types-and-utility/1-problems-with-promises)
 
 ## Promises: from callbacks to async/await
 - TBD
