@@ -5,6 +5,7 @@ Notes from my readings or courses :-)
 - CodelyTV
   - [AWS: your first deployment of EC2](aws-ec2-codelytv.md)
   - [AWS: autoscaling applications with ELB and ASG](aws-autoscaling-elb-asg.md)
+  - [Continuous Integration with GitHub Actions](https://pro.codely.tv/library/github-actions-de-0-a-integracion-continua/109857/about/)  
   - [Kubernetes for developers](kubernetes/kubernetes-for-developers.md)
   - [ELK: Elastic Logstash Kibana](elk-codelytv.md)
   - [IntelliJ](intellij.md)
@@ -25,9 +26,7 @@ Notes from my readings or courses :-)
   - WIP:
     - [DDD](ddd-codelytv.md)
   - Pending:
-    - [Continuous Integration with GitHub Actions](https://pro.codely.tv/library/github-actions-de-0-a-integracion-continua/109857/about/)
     - [Event-Driven Architecture](https://pro.codely.tv/library/comunicacion-entre-microservicios-event-driven-architecture/about/)
-    - [DDD in PHP](https://pro.codely.tv/library/ddd-en-php/about/)
 - [Outside-In TDD course of Pluralsight (by Mark Seemann)](outside-in-tdd-pluralsight.md)
 - [Working effectively with unit tests (by Jay Fields)](working-effectively-with-unit-tests.md)
 - [Practical Object-Oriented Design in Ruby (by Sandi Metz)](practical-object-oriented-design-in-ruby.md)
