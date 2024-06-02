@@ -137,15 +137,68 @@ process.on("unhandledRejection", () => {
 
 ## Practical example of Promise
 - **Evita peticiones innecesarias: cómo cancelar un fetch**
-    - TBD
-- TBD
+    - [Ejemplo de código: cancel fetch](https://github.com/CodelyTV/javascript-async-course/tree/main/07-promises-examples/1-cancel-fetch)
+    - E.g. en un campo de búsqueda, cancelar la búsqueda por "Fra" si has escrito "Frank"
+    - Hay que poner un "throttle", un **debounce** para esperar antes de enviar peticiones (no hacerlo continuamente). En el ejemplo usa un _timeout_.
+    - También cancelar fetch "antiguas", que ya no importen.
+    - Podemos usar `AbortController()`
+- **Bucles de promesas: ¿en paralelo o secuencial?**
+    - [Ejemplo de código: loops and promises](https://github.com/CodelyTV/javascript-async-course/tree/main/07-promises-examples/2-loops-and-promises)
+    - With a `for` loop the promises are resolved sequentially
+    - `Promise.all()`: el problema es que espera a la más lenta para resolver todo
+    - La mejor UX: with a `forEach` loop the promises are resolved in parallel
+- **Typescript y error en los catch: la magia del unknown**
+    - [Ejemplo de código](https://github.com/CodelyTV/javascript-async-course/tree/main/07-promises-examples/3-try-catch-typescript)
+    - En un `catch()` el error es `any` por defecto.
+    - Sin embargo, usando `try/catch` y con el flag `useUnknownInCatchVariables` del tsconfig (con strict a true también), el tipado por defecto de los errores se establece a unknown obligando a los desarrolladores a hacer narrowing antes de acceder a las propiedades del error.
+    - [Narrowing](https://pro.codely.com/library/typescript-avanzado-mas-alla-de-any-182513/418230/path/step/181818320/)
+    - [unknown](https://pro.codely.com/library/typescript-avanzado-mas-alla-de-any-182513/418230/path/step/181818205/)
+
 
 ## Testing async JS
-- TBD
+- **Reduce el tiempo de ejecución de tus tests: falsea la asincronía con fake timers**
+    - [Ejemplo de código: fake timers](https://github.com/CodelyTV/javascript-async-course/tree/main/08-async-in-testing/1-fake-timers)
+    - podemos inicializar los fakeTimers al ejecutar los tests
+```
+vi.useFakeTimers({
+    shouldAdvanceTime: false
+})
+```
+    - y luego gracias a ello manipularlos a nuestro antojo: `vi.advanceTimersByTime(5000)`
+    - Existe tanto en vitest como en jest.
+- **Evitando errores por asincronía en tus tests de front**
+    - [Ejemplo de código: async tests](https://github.com/CodelyTV/javascript-async-course/tree/main/08-async-in-testing/2-async-tests)
+    - `When testing, code that causes React state updates should be wrapped into act(...):`
+    - El warning lo que nos dice es que nos hemos olvidado de testear algo: hemos acabado el test, pero han ocurrido más cosas de las que estamos verificando...
+    - [Kent C. Dodds - Fix the “not wrapped in act(…)” warning](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning)
 
 
 ## Other ways of async JS
-- TBD
+- **Ejecuta scripts en segundo plano con Web Workers**
+    - [Ejemplo de código: web workers](https://github.com/CodelyTV/javascript-async-course/tree/main/09-other-examples/1-workers)
+    - Aunque JavaScript es single thread es posible ejecutar **procesos en paralelo** dentro del browser gracias a los **web workers**.
+    - Esta tecnología nos permite lanzar un proceso en un thread distinto al principal y tener una comunicación asíncrona con este para obtener los resultados de cálculos o procesos pesados.
+    - Para registar un worker podemos hacerlo de la siguiente manera:: `const myWorker = new Worker("worker.js", { type: "module" });`
+    - Una vez tenemos registrado un worker, podemos comunicarnos con este proceso de la siguiente manera.
+```
+myWorker.postMessage(nPrime);
+
+myWorker.onmessage = (e) => {
+	printResult("nPrimeWorkerResult", nPrime, e.data);
+};
+```
+    - https://github.com/israelss/simple-web-worker (An utility to simplify the use of web workers)
+- **Evita imágenes rotas en tu web gracias a los Services Workers**
+    - Es un tipo de web worker que tiene funcionalides de red, e.g. para interceptar peticiones. Es una especie de proxy entre nuestro cliente web y la red.
+    - [Ejemplo de código](https://github.com/CodelyTV/javascript-async-course/tree/main/09-other-examples/2-websockets)
+    - Es lo que usan las PWA por detrás (Progressive Web Apps)
+    - Dentro del service worker que acabamos de registrar podemos interceptar el tráfico y cachear los recursos que queramos.
+- **Comunicación entre clientes en tiempo real gracias a los Websockets**
+    - [Código de ejemplo: web sockets](https://github.com/CodelyTV/javascript-async-course/tree/main/09-other-examples/2-websockets)
+    - [Websockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+- **Buscador con fetch cancelable usando Rxjs**
+    - [Ejemplo de código con RxJS](https://github.com/CodelyTV/javascript-async-course/tree/main/09-other-examples/4-rxjs)
+    - [RxJs](https://rxjs.dev/): Reactive Extensions Library for JavaScript
 
 
 ## Resources
