@@ -39,21 +39,103 @@
         - useEffect
         - useRef
         - useContext
-    - useState
-    - useReducer
-    - useSyncExternalStore
-    - useEffect
-    - useLayoutEffect
-    - useInsertionEffect
-    - useRef
-    - useImperativeHandle
-    - useMemo
-    - useCallback
-    - useContext
-    - useTransition
-    - useDeferredValue
-    - useDebugValue
-    - useId
+    - **State Management**
+        - useState
+        - useReducer
+            - for more complex state management than useState
+            - good fit if you have a lot of related state, e.g. multiple inputs in a form
+            - "reducer" function to update state, it can greatly simplify state-related code
+        - useSyncExternalStore
+            - to integrate non-React state stores with React
+            - probably you will never use it (unless you want to build you own state management library from scratch)
+    - **Effect Hooks**: to perform side effect
+        - useEffect
+            - used to perform side effects in React
+                - Runs after React paints the UI
+                - Asynchronous
+            - let you synchronize with a system outside React
+            - types of effects
+                - Event-based (i.e. button click)
+                - Render-based (i.e. fetching data)
+                - **We should better NOT use `useEffect()` for any of those effects!!** 
+                    - Event-based: we should better run side effects in an event handler
+                        - `<button onClick={saveData}>
+                    - Render-based: use React query or framework tool (NextJS) for fetching data
+            - When to use?
+                - Ideal for syncing your React code with browser APIs
+                - E.g. 
+                ```
+                const ref = useRef(null)
+                const [tooltipHeight, setTooltipHeight] = useState(0)
+
+                useLayoutEffect(() => {
+                    const { height } = ref.current.getBoundingClientRect()
+                    setTooltipHeight(height)
+                }, [])
+                ```
+        - useLayoutEffect
+            - More limited
+            - Runs just before React painst the UI
+            - For synchornous operations
+            - Used less often
+            - Ideal when you want to set initial state from a browser API
+        - useInsertionEffect
+            - Made exclusive for CSS-in-JS libraries
+            - Runs before any effect hook
+            - used to insert styles
+    - **Ref Hooks**: to reference JS values in DOM values
+        - useRef
+             - refs are an "escape hatch", to step outside of React
+             - refs let us "remember" data like useState
+             - it does NOT trigger re-renders
+             - it only stores ONE value (accessible with `.current`)
+             - refs are mutable (unlike state)
+             - DOM elements can be stored in refs
+                1. Connect ref to ref prop, e.g. `const inputEl = useRef(null); <input ref={inputEl} type="text" />`
+        - useImperativeHandle
+            - a ref hook, but rarely used
+            - used only when you need to forward a ref, used in combination with forwardRef
+            - used to "expose" a method to the parent component
+    - **Performance Hooks**
+        - useMemo
+            - hook made to improve app performance
+            - uses memoizatin to "remember" values
+            - calcuates values only when dependencies change
+            - good for expensive computations
+            - similar to `useEffect` BUT is not for side effects and MUST return a value
+        - useCallback
+            - Similar to useMemo
+            - It's for functions, for callback functions, not computed values
+            - Great for functions passed as a prop
+            - prevents callback function from being re-made
+    - **Context Hooks**
+        - useContext
+            - It can read the context value
+            - If a component is wrapped in a `<Context.Provider value="value">`, we can read in the children the value passed.
+            - We can read it from any child: `const theme = useContext(ThemeContext)`
+    - **Transition Hooks**: for better UX
+        - useTransition
+            - All state updates are "urgent" by default
+            - to specify certain updates as non-urgent
+            - good for heavy computations
+            - transitions can make apps more responsive
+            - Typical use case: filtering a list based on user input. That avoids the problem of the UI to freeze because as long as you type there continuous rerenders and actions happening. We mark as non-urgent.
+        - useDeferredValue
+            - lets you "defer" updates to keep your app responsive
+            - schedules an update at an optimal time for us instead of us doing it ourselves
+            - great for filtering lists: just filter, no pending state
+    - **Random Hooks**
+        - useDebugValue
+            - Only if you use React DevTools, it lets you label your custom hook, that way you can find your custom hook easier in the React DevTools extension
+        - useId
+            - it creates a unique ids, no argument needed.
+            - Don't use it to generate keys in list. Keys should come from your data
+            - best for id prop on form fields, when input components are to be used in several places of the same page.
+    - **React 19 Hooks**
+        - useFormStatus
+        - useFormState
+        - useOptimistic
+        - use
 - **Reconciliation**
     - [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state)
         - State is isolated between components. 
