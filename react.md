@@ -110,6 +110,7 @@
         - It's for functions, for callback functions, not computed values
         - Great for functions passed as a prop
         - prevents callback function from being re-made
+        - it is called on each render
 - **Context Hooks**
     - useContext
         - It can read the context value
@@ -158,9 +159,9 @@
     - Heuristic algorithm for traversing the tree, node comparisons between current tree and WIP⁻tree. We get O(n) instead of O(n^3)
 
 ### React Fiber
-    - Introduced in React v16
-    - React Fiber is an internal engine change geared to make React faster and smarter. The **Fiber reconciler**, which became the default reconciler for React 16 and above, is a complete rewrite of React’s reconciliation algorithm to solve some long-standing issues in React.
-    - https://blog.logrocket.com/deep-dive-react-fiber/
+- Introduced in React v16
+- React Fiber is an internal engine change geared to make React faster and smarter. The **Fiber reconciler**, which became the default reconciler for React 16 and above, is a complete rewrite of React’s reconciliation algorithm to solve some long-standing issues in React.
+- https://blog.logrocket.com/deep-dive-react-fiber/
 
 ### React 19
 - Biggest change: React Compiler. It converts React code into regular JS code, in order to improve performance and reduce cognitive load.
@@ -228,6 +229,13 @@
         - Response to events with handlers
         - Fetch with React Query
 
+
+## Testing
+### React Hooks
+- `renderHook()`
+- [How to Test Custom React Hooks with React Testing Library](https://www.builder.io/blog/test-custom-hooks-react-testing-library)
+- [How to test custom React hooks (Kent C. Dodds)](https://kentcdodds.com/blog/how-to-test-custom-react-hooks)
+- [Testing a React Custom Hook](https://dev.to/manuartero/testing-a-custom-hook-like-a-pro-1b19)
 
 
 ## Courses
