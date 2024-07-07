@@ -241,6 +241,7 @@
 ## Courses
 - https://advancedreact.com/ (Wes Bos)
 - https://www.reactbootcamp.com/modules
+- https://courses.reacttraining.com/
 
 
 ## Interesting links
