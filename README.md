@@ -22,8 +22,8 @@ Notes from my readings or courses :-)
   - [Design patterns](design-patterns-codelytv.md)
   - [Hexagonal Architecture in the Frontend](hexagonal-architecture-in-frontend-codelytv/hexagonal-architecture-in-frontend-codelytv.md)
   - [Asynchronous JavaScript](asynchronous-javascript-codelytv.md)
-  - [DDD en TypeScript: Comunicación entre servicios y aplicaciones](ddd-typescript-communication-codelytv.md)
   - WIP:
+    - [DDD en TypeScript: Comunicación entre servicios y aplicaciones](ddd-typescript-communication-codelytv.md)
     - [DDD](ddd-codelytv.md)
   - Pending:
     - [Event-Driven Architecture](https://pro.codely.tv/library/comunicacion-entre-microservicios-event-driven-architecture/about/)
