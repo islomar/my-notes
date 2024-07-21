@@ -51,16 +51,34 @@ const print = (courseCategory: CourseCategory) => {
     - Se pueden mergear los tipos "oficiales" y algo tuyo propio
 
 ### Interfaces vs type alias
-- TBD
+- [Código de ejemplo](https://github.com/CodelyTV/awesome-typescript-examples/tree/main/src/interface-vs-type)
+- Recomendación oficial: usa `interface` hasta que necesites alguna característica de los `type`.
+- https://www.typescriptlang.org/play/?#example/types-vs-interfaces
+- https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces
+- [Personal notes about interfaces vs types](https://github.com/islomar/poc-typescript)
+- Things that can only be done with `types`, not with `interfaces`:
+    - Unions
+    - Typing a Tuple
+    - Typing a primitive
+- Things that can only be done with `interfaces`, not with `types`:
+    - Declaration merging
+
 
 ## Reaprovecha tu código y entiende firmas complejas gracias a los Genéricos
-- TBD
+- [Código de ejemplo con genéricos](https://github.com/CodelyTV/awesome-typescript-examples/tree/main/src/generics/generics-domain-restrictions-semantics)
+- Los genéricos nos permiten usar un tipo como valor en nuestras funciones y métodos para hacer código más reutilizable.
+- **Analizamos cómo Zustand hace uso de los genéricos**
+    - [Ejemplo de genéricos en Zustand](https://github.com/CodelyTV/awesome-typescript-examples/tree/main/src/generics/zustand)
+    - Analizamos cómo Zustand, la librería de gestión de estado, hace uso de los genéricos entrando directamente a los ficheros de definición.
+- **Cuándo nos estamos flipando y NO deberíamos usar genéricos**
+    - [Ejemplo de código](https://github.com/CodelyTV/awesome-typescript-examples/tree/main/src/generics/premature-abstraction)
+
 
 ## Aprovecha el potencial de tipos no tan conocidos: unknown y never
 - TBD
 
 ## Usos básicos de enums: Numéricos vs String vs Const vs Object as const
-- TBD
+- [External video: Enums considered harmful](Enums considered harmful)
 
 ## Enums avanzados: Gana semántica, robustez, y haz que tu código cumpla con SOLID
 - TBD
@@ -70,3 +88,6 @@ const print = (courseCategory: CourseCategory) => {
 
 ## Narrowing: Casting de tipos de forma implícita
 - TBD
+
+
+K7M2GJX
