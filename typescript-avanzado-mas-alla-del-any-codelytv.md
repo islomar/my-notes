@@ -75,7 +75,20 @@ const print = (courseCategory: CourseCategory) => {
 
 
 ## Aprovecha el potencial de tipos no tan conocidos: unknown y never
-- TBD
+- [Código de ejemplo](https://github.com/CodelyTV/awesome-typescript-examples/tree/main/src/unknown/ensure-return-type)
+- El tipo `unknown` es uno de los tipos especiales de TypeScript. Podemos definirlo como la alternativa segura de `any` ya que también nos permite almacenar cualquier valor sin embargo el transpilador nos obligará a castearlo a un tipo más específico si queremos hacer uso de él.
+- Resumido: mejor usar `unknown`, así obliga a castear antes de usarlo.
+- "compilerOptions" con "noImplicitAny: true"
+    - Para evitar los any explícitos: rule en eslintrc., "typescript/no-explicity-any": "warn"
+
+### El potencial oculto de unknown: Obliga a tipar argumentos de entrada opcionales
+- [Código de ejemplo](https://github.com/CodelyTV/awesome-typescript-examples/tree/main/src/unknown/default-generic-value)
+
+### En qué consiste el tipo never y diferencias con void
+- [Ejemplo de código](https://github.com/CodelyTV/awesome-typescript-examples/tree/main/src/useful-never)
+- `never` hace referencia a situaciones de código que no pueden ocurrir.  
+- Puede usarse como tipo para parámetro de salida o de entrada
+
 
 ## Usos básicos de enums: Numéricos vs String vs Const vs Object as const
 - [External video: Enums considered harmful](Enums considered harmful)
@@ -90,4 +103,7 @@ const print = (courseCategory: CourseCategory) => {
 - TBD
 
 
-K7M2GJX
+## Recomendaciones prácticas
+- Mejor usar `unknown` que `any`, así obliga a castear antes de usarlo.
+    - "compilerOptions" con "noImplicitAny: true"
+    - Para evitar los any explícitos: rule en eslintrc., "typescript/no-explicity-any": "warn"
