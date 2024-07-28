@@ -23,10 +23,11 @@ Notes from my readings or courses :-)
   - [Hexagonal Architecture in the Frontend](hexagonal-architecture-in-frontend-codelytv/hexagonal-architecture-in-frontend-codelytv.md)
   - [Asynchronous JavaScript](asynchronous-javascript-codelytv.md)
   - [TypeScript Avanzado: Mejora tu Developer eXperience](typescript-avanzado-devex-codelytv.md)
+  - [TypeScript Avanzado: Más allá del any](typescript-avanzado-mas-alla-del-any-codelytv.md)    
   - WIP:
-    - [TypeScript Avanzado: Más allá del any](typescript-avanzado-mas-alla-del-any-codelytv.md)    
-  - Pending:
     - [DDD en TypeScript: Comunicación entre servicios y aplicaciones](ddd-typescript-communication-codelytv.md)
+  - Pending:
+    - [DDD en TypeScript: Modelado y arquitectura](ddd-typescript-modelado-y-arquitectura-codelytv.md)
     - React  
     - [Event-Driven Architecture](https://pro.codely.tv/library/comunicacion-entre-microservicios-event-driven-architecture/about/)
     - [DDD](ddd-codelytv.md)    
