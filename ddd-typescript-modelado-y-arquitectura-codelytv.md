@@ -3,7 +3,7 @@
 - https://github.com/CodelyTV/typescript-ddd-example
 - https://github.com/CodelyTV/typescript-ddd-skeleton
 - Fer Vilas (Audiense)
-- Rubén (Genially)
+- Rubén (Genially, @rsaladocid)
 - Curso de 2021
 - ETA: ~ 6-7h
 
@@ -121,10 +121,31 @@ export class FileCourseRepository implements CourseRepository {
 
 ## Modelando el dominio: Agregado Course
 - **Utilizando objetos Request y Response para comunicarnos con el Application Service**
-    - XXXX
+    - DTOs
+    - interface [CourseCreatorRequest](https://github.com/RonroazX/cleck/blob/main/src/Contexts/Mooc/Courses/application/CourseCreatorRequest.ts)
+        - We can pass an object with the primitives from the [CoursePutController](https://github.com/RonroazX/cleck/blob/main/src/apps/mooc/backend/controllers/CoursePutController.ts#L25), we don't need to leak the explicit `CourseCreatorRequest` type.
+    - interface [CourseResponse](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Courses/application/SearchAll/CoursesResponse.ts)
+- **Refactoring a UUIDs como identificadores**    
+    - Validación del "id" en el Controller y en el VO
+    - Ventajas de que ID se pase desde el cliente: e.g. no necesidad de parámetro Nullable del ID. En realidad también se podría conseguir desacoplando los modelos de escritura y lectura.
+    - Uso de librería [uuid-validate](https://www.npmjs.com/package/uuid-validate)
+    - [UUID](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/domain/value-object/Uuid.ts)
+- **Constructor de agregados con Parameter Object+Destructuring**
+    - Inline type: el IDE detectaría los cambios de orden. Tipo "named arguments".
+        - https://cichocinski.dev/blog/5-reasons-why-destructuring-hurt-your-typescript-codebase
+        - https://mariusschulz.com/blog/typing-destructured-object-parameters-in-typescript
+    - ```
+    export class Course {
+        ...
+        constructor({ id, name, duration}: { id: Uuid; name: string; duration: string }) {
+        ...
+    ```
+    - Típica característica "idiomática"... que no parece lo más obvio y legible del mundo. Probablemente mejor crear un tipo (interface)
+
 
 ## Modelando el dominio: Value Objects e Implicaciones en tests
-- TBD
+- **Value Objects: Inmutabilidad y tips para agilizar desarrollo**
+    - TBD
 
 ## Guardar en base de datos con Mongo
 - TBD
