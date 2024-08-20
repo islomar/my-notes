@@ -145,22 +145,56 @@ export class FileCourseRepository implements CourseRepository {
 
 ## Modelando el dominio: Value Objects e Implicaciones en tests
 - **Value Objects: Inmutabilidad y tips para agilizar desarrollo**
-    - TBD
+    - [CourseName](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Courses/domain/CourseName.ts)
+- **Patrón ObjectMother para nuestros tests**
+    - [faker](https://www.npmjs.com/package/faker)
+        - https://fakerjs.dev/guide/
+    - [fishery](https://github.com/thoughtbot/fishery)
+    - [Test Data Builders and Object Mother: another look](https://blog.codeleak.pl/2014/06/test-data-builders-and-object-mother.html)
+    - [CourseMother](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Mooc/Courses/domain/CourseMother.ts)
+    - [CourseNameMother](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Mooc/Courses/domain/CourseNameMother.ts)
+        - [WordMother](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Shared/domain/WordMother.ts)
+            - Example with default parameters
+            - MotherCreator
+
 
 ## Guardar en base de datos con Mongo
-- TBD
+- **Integración de Mongo para guardar en base de datos por cada Bounded Context**
+    - TBD
+
 
 ## Bases de datos: Cómo enfocar los tests y tips para producción
 - TBD
 
+
 ## Alternativa almacenamiento con PostgreSQL y TypeORM
-- TBD
+- [Ejemplos de TypeORM](https://github.com/CodelyTV/typescript-ddd-example/tree/master/src/Contexts/Shared/infrastructure/persistence/typeorm)
+    - [TypeOrmCourseRepository](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Courses/infrastructure/persistence/TypeOrmCourseRepository.ts#L3)
+- Otras alternativas: Prisma
+    - https://www.prisma.io/docs/orm/more/comparisons/prisma-and-typeorm
+    - https://dev.to/afl_ext/prisma-vs-typeorm-description-and-comparison-4bob
+- [TypeOrmClientFactory](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/infrastructure/persistence/typeorm/TypeOrmClientFactory.ts)
+    - Manejo del pool de conexiones
+- [TypeOrmConfigFactory](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Shared/infrastructure/persistence/postgre/TypeOrmConfigFactory.ts)
+    - The  [configuration](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Shared/infrastructure/config/index.ts) uses [convict](https://github.com/mozilla/node-convict/tree/master/packages/convict)
+- **Test de integración PostgreSQL**
+    - [CourseRepository.test.ts](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Mooc/Courses/infrastructure/persistence/CourseRepository.test.ts)
+    - [TypeOrmEnvironmentArranger](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Shared/infrastructure/typeorm/TypeOrmEnvironmentArranger.ts)
+    - https://github.com/jorgechavezrnd/typescript-ddd-example/tree/9_alternativa_almacenamiento_con_postgresql_y_typeorm
+
 
 ## Conclusión y siguientes pasos
-- TBD
+- **Los tests me engañan**
+    - [BackofficeCourseCreator.test.ts](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Backoffice/Courses/application/Create/BackofficeCourseCreator.test.ts)
+        - Faltaba el `await` dentro del `async` test cuando se llamaba la acción.
+
 
 ## Links de interés
 - [NestJS](https://nestjs.com/): A progressive Node.js framework for building efficient, reliable and scalable server-side applications.
+- [Nullable](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/domain/Nullable.ts)
+    - Similar a Optional
+- [ValueObject](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/domain/value-object/ValueObject.ts)
+
 
 ## Lecturas pendientes
 - [Workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
