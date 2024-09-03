@@ -160,6 +160,19 @@ export class FileCourseRepository implements CourseRepository {
 
 ## Guardar en base de datos con Mongo
 - **Integración de Mongo para guardar en base de datos por cada Bounded Context**
+    - [mongo service in docker-compose](https://github.com/CodelyTV/typescript-ddd-example/blob/master/docker-compose.yml#L4)
+    - [moocConfig using convict to read the environment variables and exposing it internally as configuration](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Shared/infrastructure/config/index.ts)
+    - [MongoClientFactory](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/infrastructure/persistence/mongo/MongoClientFactory.ts)
+        - Cada contexto debería tener sus propias conexoines a base de datos
+        - Se crea un cliente de Mongo por cada bounded context
+        - Hay un pool de conexiones por cliente, por cada bounded context   
+    - [MongoConfigFactory](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Shared/infrastructure/persistence/mongo/MongoConfigFactory.ts)
+- **Evita que Mongo se filtre en tu dominio**
+    - [Cuando inyectamos MongoConfig](https://github.com/CodelyTV/typescript-ddd-example/blob/94717b07bf35517e17a2c018f13d17681f420af4/src/apps/mooc/backend/dependency-injection/Shared/application.yaml#L5), se devuelve la ejecución del método `createConfig` de la clase `MongoConfigFactory`
+    - [MongoCourseRepository](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Courses/infrastructure/persistence/MongoCourseRepository.ts)
+- **Agiliza la creación de repositorios**
+    - TBD
+- **TBD**
     - TBD
 
 
@@ -194,6 +207,7 @@ export class FileCourseRepository implements CourseRepository {
 - [Nullable](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/domain/Nullable.ts)
     - Similar a Optional
 - [ValueObject](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/domain/value-object/ValueObject.ts)
+- [Robo 3T: free open-source MongoDB UI Client](https://robomongo.org/)
 
 
 ## Lecturas pendientes
