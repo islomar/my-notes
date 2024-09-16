@@ -171,14 +171,32 @@ export class FileCourseRepository implements CourseRepository {
     - [Cuando inyectamos MongoConfig](https://github.com/CodelyTV/typescript-ddd-example/blob/94717b07bf35517e17a2c018f13d17681f420af4/src/apps/mooc/backend/dependency-injection/Shared/application.yaml#L5), se devuelve la ejecución del método `createConfig` de la clase `MongoConfigFactory`
     - [MongoCourseRepository](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Mooc/Courses/infrastructure/persistence/MongoCourseRepository.ts)
 - **Agiliza la creación de repositorios**
-    - TBD
-- **TBD**
-    - TBD
+    - Generic [MongoRepository](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/infrastructure/persistence/mongo/MongoRepository.ts#L6) que puede ser usado para cualquier Aggregate Root.
+    - [Nullable<T>](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/domain/Nullable.ts)
 
 
 ## Bases de datos: Cómo enfocar los tests y tips para producción
-- TBD
+### Test de integración Mongo
+- [EnvironmentArranger.ts](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Shared/infrastructure/arranger/EnvironmentArranger.ts)
+    - Ayuda a que los tests sean independientes y repetibles
+    - Inicializa y limpia al final. También cierra la conexión al final.
+    - [MongoEnvironmentArranger](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Shared/infrastructure/mongo/MongoEnvironmentArranger.ts)
+    - [Mooc.EnvironmentArranger](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/apps/mooc/backend/dependency-injection/application_test.yaml)
+    - La primera vez que lo hicieron, no se cerraba bien la conexión a DB.
+- [CourseRepository.test.ts](https://github.com/CodelyTV/typescript-ddd-example/blob/master/tests/Contexts/Mooc/Courses/infrastructure/persistence/CourseRepository.test.ts#L7)
 
+### Tips avanzados para Mongo en producción
+- Genially: 600 requests/second
+- Mejor NO usar el `upsert` en Producción: no funciona bien con alta carga en base de datos, ya que aunque sólo quisiéramos actualizar un atributo de un documento, estaríamos sobreeescribiendo todo.
+    - Podríamos usar [`mongoose`](https://mongoosejs.com/), que ya usa el patrón "Unit of Work", actualizando sólo lo que haya cambiado. Genially usa `mongoose`
+
+### Optimiza documentos de Mongo de tus agregados
+- Tip para mejorar el tamaño de nuestro documento.
+    - Cuando enviamos `undefined` para el atributo de un documento, está ocupando espacio, guarda un "null".
+        - Solución: `new MongoClient(_, {ignoreUndefined: true})`
+    - Mongo Atlas ofrece información interesante de rendimiento, e.g. para ver cuándo es necesario crear un índice.
+
+    
 
 ## Alternativa almacenamiento con PostgreSQL y TypeORM
 - [Ejemplos de TypeORM](https://github.com/CodelyTV/typescript-ddd-example/tree/master/src/Contexts/Shared/infrastructure/persistence/typeorm)
