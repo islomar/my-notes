@@ -120,6 +120,7 @@
 * PHP Docker
 * UML
 * CamelCase
+* Limited WIP
 
 
 ## More personal info about IntelliJ
