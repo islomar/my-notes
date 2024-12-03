@@ -7,6 +7,7 @@
 
 
 ## Comunicación entre módulos con EventBus asíncrono
+### Intro
 - [`abstract class DomainEvent`](https://github.com/CodelyTV/typescript-ddd-example/blob/master/src/Contexts/Shared/domain/DomainEvent.ts) 
 - `DomainEventSubscriber` 
 - `EventBus`
@@ -16,6 +17,18 @@ interface EventBus {
   addSubscribers(subscribers: Array<DomainEventSubscriber<DomainEvent>>): void;
 }
 ```
+
+### Definición de eventos de dominio y subscribers
+- TBD
+
+### TBD
+- TBD
+
+### TBD
+- TBD
+
+### TBD
+- TBD
 
 ## Comunicación entre Bounded Context con RabbitMQ
 TBD
