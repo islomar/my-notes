@@ -5,12 +5,12 @@
   - <https://www.virtualpairprogrammers.com/>
 - 10 hours
   - Stuyd plan: 1 hour per day
-- Last updated: February 2022
+- Last update: February 2022
 - Java versions 8 and 11
 - 25 sections
 - [Q&A](https://www.udemy.com/course/java-application-performance-and-memory-management/learn/lecture/14389010#questions)
-- Bookmark: video number 17 / 134
-  - Next day: sections 4, 5, and 6
+- Bookmark: video number 28 / 134
+  - Next day: sections 7 and 8
 
 ## Chapter 1- Introduction
 
@@ -28,7 +28,7 @@
 - PHP is not compiled but interpreted at runtime (half truth)
 - Some bytecode is run by the interpreter line by line and other blocks are run as **native machine code** (thanks to the JIT compilation).
 - **JIT compilation**
-  - It monitors which branches of code are run the most often and then the JVM can decide that a speicific block is executed a lot and if that block was compiled to native machine code it would be faster.
+  - It monitors which branches of code are run the most often and then the JVM can decide that a specific block is executed a lot and if that block was compiled to native machine code it would be faster.
   - Any sequence of bytecode can be compiled to native machine code.
   - This process is run in a separate thread.
     - The JVM is a multithreaded application itself
@@ -122,7 +122,7 @@
   - `-XX-TieredCompilation`: turn off tiered compilation, telling the JVM to run in interpreted mode only
     - E.g. for a one-line application, serverles
 - Answering questions
-  - How many threads are available to run this compiling process (JIT, C1 and C2)?
+  - **How many threads are available to run this compiling process (JIT, C1 and C2)?**
     - It depends on the number of CPUs of the computer: `> java -XX:+PrintFlagsFinal` >> CICompilerCount (12 in my case)
     - `jps`: you get the process id for all the running Java applications on a computer
     - `jinfo -flag <flag_name> <process_id>`, e.g. `jinfo -flat CICompilerCount 9636`
@@ -134,24 +134,124 @@
 
 ## Chapter 4 - How memory works - the stack and the heap
 
-- TBD
+- Three sections: the Stack, the Heap and the Metaspace
+- **How the Stack works**
+  - Local variables are stored on the Stack
+    - i.e. local variables are thread safe, since there is a Stack per thread
+  - Every thread will have its own Stack
+  - **Used only for simple data types like primitives, NOT for objects**
+  - Java knows exactly when data on the Stack can be destroyed
+  - The data is pushed to the top. We can only remove data on the top.
+    - LIFO
+  - Example with simple code:
+    - When the execution gets out of `calculate()`, all the data in the Stack from there is removed (ie `tempValue` and `newValue`)
+    - All **local variables** are created in the Stack.
+    - **Variable scoping**: when a closing curly brace is reached, all the memory used for the local variables during the execution is poped out of the stack and freed up.
+    ![](java-application-performance-tuning-and-memory-management/stack-example.png)
+- **How the Heap works**
+  - Here we **store objects**
+    - The pointers (variable references) to those objects are stored in the Stack
+  - All the data which is not in the Stack
+  - **Shared by all the threads**
+  ![](java-application-performance-tuning-and-memory-management/heap-example-1.png)
+- **The Heap and the Stack together: an example**
+  - Objects are stored on the Heap
+  - Variables are a reference to the object
+  - Local variables are stored on the Stack
+  - TBD
+  ![](java-application-performance-tuning-and-memory-management/heap-example-2.png)
+  ![](java-application-performance-tuning-and-memory-management/heap-example-3.png)
+
 
 ## Chapter 5 - Passing objects between methods
 
-- TBD
+- Java project "ExploringMemory"
+- Everything is **passed by value (copy)** between methods
+  ![](java-application-performance-tuning-and-memory-management/passing-values-1.png)
+- `final` keyword
+  - It is **not** the same as a constant
+  - `final` variables can only be assigned ONCE.
+    - That does NOT mean tha the referenced object can not be changed: IT CAN.
+    - **The `final` keyword doesn't stop an object's values from being changed**
+    ![](java-application-performance-tuning-and-memory-management/passing-values-2.png)
+  - `final` methods can not be overwritten by subclasses
+  - `final` classes can not be subclassed
+  - Good for performance: it allows the JVM compiler to optimize the code with **inline**
+- There is no **const** keyword
 
-## Chapter 6 - Memory exercise 1
-
-- TBD
 
 ## Chapter 7 - Escaping References
 
 - TBD
 
-## Chapter 6 - Memory exercise 2
+## Chapter 8 - Memory exercise 2
 
 - TBD
 
-## TBD
+## Chapter 9 - The Metaspace and internal JVM memory optimisations
+
+- TBD
+
+## Chapter 10 - Tuning the JVM's Memory Settings
+
+- TBD
+
+## Chapter 11 - Introducing Garbage Collection
+
+- TBD
+
+## Chapter 12 - Monitoring the Heap
+
+- TBD
+
+## Chapter 13 - Analysing a heap dump
+
+- TBD
+
+## Chapter 14
+
+- TBD
+
+## Chapter 15
+
+- TBD
+
+## Chapter 16
+
+- TBD
+
+## Chapter 17
+
+- TBD
+
+## Chapter 18
+
+- TBD
+
+## Chapter 19
+
+- TBD
+
+## Chapter 20
+
+- TBD
+
+## Chapter 21
+
+- TBD
+
+## Chapter 22
+
+- TBD
+
+## Chapter 23
+
+- TBD
+
+## Chapter 24
+
+- TBD
+
+## Chapter 25
 
 - TBD
