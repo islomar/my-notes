@@ -9,8 +9,8 @@
 - Java versions 8 and 11
 - 25 sections
 - [Q&A](https://www.udemy.com/course/java-application-performance-and-memory-management/learn/lecture/14389010#questions)
-- Bookmark: video number 28 / 134
-  - Next day: sections 7 and 8
+- Bookmark: video number 37 / 134
+  - Next day: chapters 9 and 10
 
 ## Chapter 1- Introduction
 
@@ -154,6 +154,7 @@
   - All the data which is not in the Stack
   - **Shared by all the threads**
   ![](java-application-performance-tuning-and-memory-management/heap-example-1.png)
+  - A primative `int` which is a class level attribute will be stored on the heap (it must be because it's only accessible from an object on the heap). It won't be stored as a pointer to another heap object though, simply as a value within the class level object.
 - **The Heap and the Stack together: an example**
   - Objects are stored on the Heap
   - Variables are a reference to the object
@@ -179,10 +180,38 @@
   - Good for performance: it allows the JVM compiler to optimize the code with **inline**
 - There is no **const** keyword
 
-
 ## Chapter 7 - Escaping References
 
-- TBD
+- What is an escaping reference?
+  - In a class, we have a method returning a pointer to a private object
+![](java-application-performance-tuning-and-memory-management/escaping-references-1.png)
+- **Strategy 1**: using an iterator
+  - It is not a perfect solution: you could still mutate the inner elements.
+  - Zero performance impact solution: no impact in the performance
+  ![](java-application-performance-tuning-and-memory-management/escaping-references-2.png)
+- **Strategy 2**: duplicating collections
+  - Still, the users might change the underlying objects of the collection (e.g. Customer A and B)
+  - They can also add more elements to the copy returned
+  ![](java-application-performance-tuning-and-memory-management/escaping-references-3.png)
+  - Performance impact:
+    - some overhead for copying the references to a new copy to be returned.
+    - small impact (e.g. 8 bytes per pointer)
+- **Strategy 3**: using immutable collections
+  - `Collections.unmodifiableXxx(existingXxx)`:
+    - this does not create a copy, it returns an unmodifiable view of the Xxx, e.g. [unmodifiableMap](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableMap-java.util.Map-)
+    - The underlying Map in the view can still be modified where the copy wouldn't.
+  - Java 10+: `Map.copyOf(existingMap)`: this does create a copy,
+    - e.g. you wouldn't be able to add another element to the Map
+- **Strategy 4**: duplicating objects
+  - Return a read-only copy of the object. See method `find()`:
+  ![](java-application-performance-tuning-and-memory-management/escaping-references-4.png)
+- **Strategy 5**: using interfaces to create immutable objects
+  - Create `ReadonlyCustomer` interface which only contains `getName()` and `toString()`, NOT `setName()`. That way, you can not change it from the outside. And you return that interface.
+  ![](java-application-performance-tuning-and-memory-management/escaping-references-5.png)
+  - This is duplicating the object in the Heap (only the references and it's short-lived, it is a low impact solution)
+- **Strategy 6**: using modules to hide the implementation
+  - Java 9+: you can use the module system to package
+  ![](java-application-performance-tuning-and-memory-management/escaping-references-6.png)
 
 ## Chapter 8 - Memory exercise 2
 
