@@ -4,13 +4,14 @@
 - [Matt Greencroft](https://www.udemy.com/user/mattthornfield/?srsltid=AfmBOopSLOHwP1m8JvyEz77iMNejq7ysygY9LwjXESViYbjvCxtJ0X1f)
   - <https://www.virtualpairprogrammers.com/>
 - 10 hours
-  - Stuyd plan: 1 hour per day
+  - Study plan: 1 hour per day
 - Last update: February 2022
 - Java versions 8 and 11
 - 25 sections
 - [Q&A](https://www.udemy.com/course/java-application-performance-and-memory-management/learn/lecture/14389010#questions)
-- Bookmark: video number 37 / 134
-  - Next day: chapters 9 and 10
+- [ChatGPT conversation about JVM](https://chatgpt.com/c/675b1645-b574-800f-afd0-01f8894aeb83)
+- Bookmark: video number 47 / 134
+  - Next day: chapters 11, 12 and 13
 
 ## Chapter 1- Introduction
 
@@ -213,17 +214,48 @@
   - Java 9+: you can use the module system to package
   ![](java-application-performance-tuning-and-memory-management/escaping-references-6.png)
 
-## Chapter 8 - Memory exercise 2
-
-- TBD
-
 ## Chapter 9 - The Metaspace and internal JVM memory optimisations
 
-- TBD
+- Metaspace is used to **store metadata**: information about classes, methods, which methods are being compiled in bytecode, which are compiled in native code
+- **Static primitives** are stored entirely in the Metaspace
+- **Static objects** are stored in the Heap, with the object pointer/reference living in the Metaspace
+- The static primitives and references are kept "for ever" in the Metaspace: their referenced objects in the Heap are NEVER collected.
+- All threads in a program have access to the Metaspace, that's why static elements can be accessed from anywhere.
+  ![](java-application-performance-tuning-and-memory-management/metaspace-1.png)
+- Metaspace exists from Java8. In Java7 and below it existed the **PermGen**
+  - there were problems with the PermGen: the possibility for applications using the PermGen for that area to be full (`java.lang.OutOfMemoryError: PermGen`; you could fix it tuning the JVM, `-XX:PermSize=N` and `-XX:MaxPermSize=N`). That should never happen with the Metaspace.
+- Are objects always created on the heap?
+  - Because objects are created in the Heap, they can be shared between methods.
+- In other languages, you can decide where to store objects: stack or heap area. Not in Java.
+- If the JVM detects that the object you declare inside a method is not going to be accessed outside a method, it might **create that object in the Stack**.
+- The **String pool**
+  - [Documentation from Digital Ocean about String Pool in Java](https://www.digitalocean.com/community/tutorials/what-is-java-string-pool)
+  - In Java6 and below, the String pool lives in the PermGen space. From Java7+, it **lives in the Heap** (and they can be garbage collected).
+  - Strings are immutable: two Stack variables point to the same String object in the Heap with the same value.
+  - `String name = "myName"` goes to the String pool
+  - `String name = new String("myName")`does NOT go to the String pool
+  - But it does not happen if the String is a calculated String, e.g. a conversion from another type (see screenshot). `i.toString()`is not placed in the String pool
+  ![](java-application-performance-tuning-and-memory-management/string-pool-1.png)
+  - **Interning Strings**
+    - Calling `.intern()` on a String will place it in the String pool. [More info](https://www.baeldung.com/string/intern).
+  ![](java-application-performance-tuning-and-memory-management/string-pool-2.png)
 
 ## Chapter 10 - Tuning the JVM's Memory Settings
 
-- TBD
+- The String pool
+  - is implemented using a HashMap.
+  - it is like buckets (by default, 16 buckets in a HashMap)
+  - the hash code of a string is used to see in which bucket will the String lives: there might be several strings in the same bucket
+  - this way of storing is very performant: for a new String, you don't have to go through all of them to see if it is already stored. You hash it and see if it's already contained in that bucket.
+- Possible problem: the size of the buckets
+- `-XX:+PrintStringTableStatistics`, we get info about the Strings in our application
+  - It does not work in OpenJDK 11
+- The bigger the bucket size, the less efficient (you have go through more elements to know if the String is already stored there)  
+- `-XX:StringTableSize=N`: how many buckets we want in our String Pool. To be optimal, **it should be a prime number**. If you raise a lot this number, the performance will probably improve (the bucket size will be lower)
+- The **heap size** must be big enough to contain the String pool.
+- It's better to configure an initial heap size (`-XX:InitialHeapSize=N`) a little big higher than the memory that we already know that it is needed.
+- Shortcut syntax for heap tuning flags
+  ![](java-application-performance-tuning-and-memory-management/shortcuts-heap-tuning-flags-1.png.png)
 
 ## Chapter 11 - Introducing Garbage Collection
 
@@ -284,3 +316,15 @@
 ## Chapter 25
 
 - TBD
+
+## General stuff
+- **Scalar Replacement**: If the JVM determines that the fields of an object can be broken into individual variables, it may avoid creating the object entirely.
+- JVM Options: **Escape Analysis** can be controlled with JVM options like:
+- `-XX:+DoEscapeAnalysis` (enabled by default since Java 6)
+- `-XX:+EliminateAllocations` (eliminates heap allocation where possible)
+- [Java String Interview Questions and Answers](https://www.digitalocean.com/community/tutorials/java-string-interview-questions-and-answers)
+
+## Questions
+
+ 1. TBD
+ 
