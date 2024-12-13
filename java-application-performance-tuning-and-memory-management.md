@@ -64,7 +64,7 @@
   - C2 (server compiler):
     - Native level 4
   - The client compiler begins compiling sooner than the server compiler does.
-  - Couldn’t the JVM start with the client compiler, and then use the server compiler as code gets hotter? That technique is known as **tiered compilation** (from Java 7, enabled by default from Java 8). With tiered compilation, code is first compiled by the client compiler; as it becomes hot, it is recompiled by the server compiler.
+  - Couldn’t the JVM start with the client compiler, and then use the server compiler as code gets hotter? That technique is known as [**tiered compilation**](https://docs.oracle.com/en/java/javase/17/vm/java-hotspot-virtual-machine-performance-enhancements.html#GUID-85BA7DE7-4AF9-47D9-BFCF-379230C66412) (from Java 7, enabled by default from Java 8). With tiered compilation, code is first compiled by the client compiler; as it becomes hot, it is recompiled by the server compiler.
     - Tiered compilation can achieve startup times very close to those obtained from the client compiler.
 - The **Code Cache**
   - [JEP 197: Segmented Code Cache](https://openjdk.org/jeps/197)
@@ -72,7 +72,7 @@
   - [Introduction to JVM Code Cache](https://www.baeldung.com/jvm-code-cache)
     - **JVM Code Cache is an area where JVM stores its bytecode compiled into native code**
     - The just-in-time (JIT) compiler is the biggest consumer of the code cache area. That’s why some developers call this memory a **JIT codecache**.
-  - From Java 9 onwards, the Code Cache has been [replaced by 3 code heaps](https://stackoverflow.com/questions/59189225/in-java-memory-pool-what-is-the-replacement-of-code-cache-replacement-in-java-11), each of which contains compiled code of a particular type. Such a design enables to separate code with different properties. 
+  - From Java 9 onwards, the Code Cache has been [replaced by 3 code heaps](https://stackoverflow.com/questions/59189225/in-java-memory-pool-what-is-the-replacement-of-code-cache-replacement-in-java-11), each of which contains compiled code of a particular type. Such a design enables to separate code with different properties.
     - There are three different top-level types of compiled code:
       - JVM internal (non-method) code
         - A non-method code heap containing non-method code, such as compiler buffers and bytecode interpreter. This code type will stay in the code cache forever.
@@ -242,7 +242,7 @@
 
 ## Chapter 10 - Tuning the JVM's Memory Settings
 
-- The String pool
+- The **String pool**
   - is implemented using a HashMap.
   - it is like buckets (by default, 16 buckets in a HashMap)
   - the hash code of a string is used to see in which bucket will the String lives: there might be several strings in the same bucket
@@ -259,7 +259,23 @@
 
 ## Chapter 11 - Introducing Garbage Collection
 
-- TBD
+- The garbage collection process takes place within the Virtual Machine and therefore uses threads available within the JVM.
+- Memory leaks shouldn't be possible in Java.
+- Garbage collection started in 1959 in Lisp
+- Any object in the Heap which is not reachable (including in a transitive way) from the Stack or Metaspace is eligible by the GC
+- [System.gc()](https://download.java.net/java/early_access/valhalla/docs/api/java.base/java/lang/System.html#gc())
+  - https://www.baeldung.com/java-system-gc
+  - There is no guarantee that this effort will recycle any particular number of unused objects, reclaim any particular amount of space, or complete at any particular time, if at all, before the method returns or ever.
+- Java 11's GC can give unused memory back to the OS
+  - There is an impact in the performance from this enhancement (if needed, the JVM would continuously request memory to the OS to grow). We can solve it configuring the -Xms (minimum heap size).
+- Wny it's not a good idea to run the System.gc() method?
+  - Because it might have an impact in the performance of the overall application. Just let the JVM decide when it needs to do it.
+  - You can run `Runtime.getRuntime().freeMemory()` to display the available memory (in bytes)
+- The `finalize()` method of an object is called when it's going to be garbage collected
+  - [Deprecated from Java 9](https://download.java.net/java/early_access/valhalla/docs/api/java.base/java/lang/Object.html#finalize())
+  - You don't know for sure if it's going to run and in case it were run, you don't know when.
+  - Better don't use it
+  - Use Cleaner and PhantomReference as safer ways to release resources when an object becomes unreachable. Alternatively, add a close method to explicitly release resources, and implement AutoCloseable to enable use of the try-with-resources statement.
 
 ## Chapter 12 - Monitoring the Heap
 
@@ -318,13 +334,37 @@
 - TBD
 
 ## General stuff
+
+- [JVM Memory Management](https://sridhar-rao.medium.com/jvm-memory-management-17c070e8d0)
 - **Scalar Replacement**: If the JVM determines that the fields of an object can be broken into individual variables, it may avoid creating the object entirely.
 - JVM Options: **Escape Analysis** can be controlled with JVM options like:
 - `-XX:+DoEscapeAnalysis` (enabled by default since Java 6)
 - `-XX:+EliminateAllocations` (eliminates heap allocation where possible)
 - [Java String Interview Questions and Answers](https://www.digitalocean.com/community/tutorials/java-string-interview-questions-and-answers)
 
+## Summary
+
+### Memory Areas
+
+- **Code Cache**
+  - **JVM Code Cache is an area where JVM stores its bytecode compiled into native code** (maximum optimization possible)
+  - The just-in-time (JIT) compiler is the biggest consumer of the code cache area. That’s why some developers call this memory a **JIT codecache**.
+  - From Java 9 onwards, the Code Cache has been **replaced by 3 code heaps**
+- **Stack** (aka "thread stacks")
+  - One Stack per Thread
+  - Local primitive variables
+  - Object references
+- **Heap**
+  - Accesible from any thread
+  - String pool (from Java7+)
+  - Objects
+  - Static objects
+- **Metaspace**
+  - Accesible from any thread
+  - Metadata: information about classes, methods, which methods are being compiled in bytecode, which are compiled in native code
+  - Static primitives
+  - References to static objects
+
 ## Questions
 
  1. TBD
- 
