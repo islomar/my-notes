@@ -12,6 +12,23 @@
   - [Uncommon Sense Teaching: teaching online](https://www.coursera.org/learn/teaching-online)
 - Jules White from Vanderbilt University
   - Coursera course "Prompt engineering for ChatGPT"
+- GPT stands for Generative Pre-trained Transformer
+- Additional reading recommended:
+  - Practical books
+    - "Teaching with AI", by José Bowen and C. Edward Watson.
+    - "ChatGPT and the future of AI"
+    - "Co-Intelligence", by Ethan Mollick
+  - Theoretical
+    - "The worlds I see", by Fr. Fei-Fei Li
+    - "The alignment problem", by Brian Christian.
+  - Worldwide overview:
+    - "AI super powers", by Kai-Fu Lee
+- Good courses on generative AI
+  - "Generative AI for everyone", at DeepLearning AI
+  - "Navigating Generative AI: a CEO Playbook", at Coursera
+  - "Generative AI Essentials: Overview and Impact", at University of Michigan
+  - "Introduction to Artificial Intelligence (AI)", at IBM
+  - Many courses from Jules White
 
 ## Module 1: GenAI Landscape and Neural Networks — Parallels in Machine and Human Learning
 
@@ -46,10 +63,10 @@
   - **The Metaphor Pattern**
     - we want to get the model to explain things to us using metaphors and analogies that we understand well.
     - Pattern: "Explain some topic using metaphors and analogies. [Here what you want to learn about]"
-    - E.g.: "Explain why we should learn about generative AI, even though the models are changing so rapidly. Use a car and engine analogy."
-    - E.g. with less direction: "Whenever you explain things to me, relate it to analogies and metaphors that I will understand. I know a lot about cars. Explain why we should learn about generative AI, even though the models are changing so rapidly."
+    - Example: "Explain why we should learn about generative AI, even though the models are changing so rapidly. Use a car and engine analogy."
+    - Example with less direction: "Whenever you explain things to me, relate it to analogies and metaphors that I will understand. I know a lot about cars. Explain why we should learn about generative AI, even though the models are changing so rapidly."
 - **Helping the Large Language Model Select Metaphors & Analogies**
-  - Example **Audience Persona Pattern**:
+  - Example:
 
   ```Plain text
   About me:
@@ -59,13 +76,108 @@
   Explain how the transformer model works using analogies and metaphors that will resonate with me.
   ```
 
-- **TBD**
-  - TBD
-- **TBD**
-  - TBD
-- **TBD**
-  - TBD
+- **Audience Persona Pattern**:
+  - Explain some topic to [some audience]
+  - Example: "Explain how the transformer model works to a fifth grader, which is our audience, using analogies and metaphors that will make sense to the audience."
+- **Large Language Models & the Brain**
+  - 7 international giants with their Foundational Large Language Models (**"Engines"**):
+    - Google: Gemini -- 1 million tokens
+    - Amazon: Claude (from Antrhopic)  - 200k tokens
+    - Microsoft: ChatGPT (from OpenAI)  - 128k tokens
+    - Meta: LLaMA 3 (70k tokens)
+    - Twitter: Grok
+    - LinkedIn (Microsoft): Inflection Pi
+    - Baidu: ERNIE
+    - Alibaba: Tongyi Qianwen
+    - Tencen: Hunyuan
+  - There are 149 foundational LLMs released in 2023 alone.
+  - **Context window**: number of tokens (how many words at a time can this model take in)
+    - There's basically a limit on how many tokens, which are basically a bit shorter than words that the transformers' attention can focus on at once.
+    - If your text has 50k words and your context window has 30k words (around 40k tokens), you're in trouble.
+      - And it doesn't only matter the input size: there must bu room for the output as well.
+    - The LLM can't remember information outside the context window.
+  - It's always good to **tell your engine to become an expert** in whatever subject is involved in your query.
+  - Two pathaways, two ways of learning:
+    - Hippocampus learning, declarative, going from the working memory to the long-term one. Conscious learning. Deliberative thinking.
+    - Basal ganglia. Unconscious learning, more experiential. Automatic way of thinking. Deep neural network.
+      - Not only for physical activities, it also happens with maths, for example.
+      - The automatic system gets less powerful when we grow older.
+  - AI **hallucinations** or confabulations.
+    - AI does not have the conscious hippocampus way of learning, only the experiental one. Odd outputs. Like a human with prefrontal cortex damaged.
+- **Learning in the Age of AI: More than "Cheating Lightly"**
+  - [The Flynn Effect](https://en.wikipedia.org/wiki/Flynn_effect): IQ tests are updated periodically. Raise from 30s to 70s (educatoin?). Decline from 70s (she thinks related with things like calculators and stopping learning and understanding some things).
+  - You can get practice materials from ChatGPT and alike. It's easier to learn.
+- **Prompting for Options & Perspectives, Not Answers**
+  - We don't want to start thinking less.
+  - **Never ask for ONE of anything**.
+    - Example: "Give me five completely different ways to build a chair out of Cheerios and compare and contrast them. The chair needs to be strong enough to support a real person."
+  - Ask to give us **multiple, conflicting interpretations of something**.
+    - Useful to overcome our bias.
+- **Prompting for questions**
+  - Example: "Help me understand this material better. What are five questions I should ask about it to deepen my understanding?"
+  - Example: "What are five questions that, if I can answer them, would show that I have a broad understanding of this material?"
+  - Generate questions instead of answers... Enhance your practice.
+- **Having fun with metaphors & analogies**
+  - "Explain [Insert a topic] using a metaphor or analogy related to [Insert a domain]."  
+- **Learning more & staying connected**
+  - [Prompt Engineering for ChatGPT](https://www.coursera.org/learn/prompt-engineering)
+  - <https://www.linkedin.com/in/jules-white-5717655/>
+  - Barb's courses: <https://www.coursera.org/instructor/barboakley>
+  - Jules' courses: <https://www.coursera.org/instructor/juleswhite>
+  - [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/abs/2302.11382)
 
 ## Module 2: AI-Enhanced Learning Strategies — Retrieval, Motivation, and Cognitive Amplification
 
-- TBD
+- **Mapping the Landscape of Large Language Models and GenAI Learning**
+  - ChatGPT:
+    - Writing assistants: Jjenni, Grammarly, Writesonic, Jasper
+    - Research: Quivr, Consensus, Elicit, Explainpaper, scite_, keenious, scholarcy, Connected papers, Semantic scholar, ResearchRabbit.
+    - Live to Internet: Copilot, Plus AI (PowerPoint maker).
+    - Teachers and instructors: Magic school, Eduaide.ai, TeachMateAI.
+    - Creative productivity platforms: Canva, Gamma
+    - Imagery: Dall-E, Midjourney, Stable Difussion
+  - Gemini
+    - Video: Pika, runaway, Kapwing, synthesia
+  - LLaMa
+    - HugginChat
+    - Coding: Codium, Tabnine
+- Beware of the results, a lot of "noise" and "garbage" in some cases.
+- Some tools are simple "wrappers" which don't add much value compared with what you could do yourself.
+- Each generative AI platform has its own individual characteristics
+  - ChatFPT is closed, we don't know what the weights are. Llama is open.
+  - Training data
+    - ChatGPT trained on a massive internet dataset.
+    - Meta AI trained on subset of internet, focused on conversational and interactive data.
+    - Semantich Scholar trained on 200 million research papers
+  - Tuning:
+    - Differently optimized for in-depth versus converstaional responses and other factors
+  - Personality
+- **AI-Driven Learning: Maximizing Retrieval Practice**
+  - **Retrieval practice**: much better for learning than any other approach.
+    - Teaching other people is actually *retrieval practice*
+  - You can ask ChatGPT for **pretesting questions**
+    - [Pretesting Reduces Mind Wandering and Enhances Learning During Online Lectures](https://www.researchgate.net/publication/347120870_Pretesting_Reduces_Mind_Wandering_and_Enhances_Learning_During_Online_Lectures)
+    - Often you don't know what is actually important among the things that you want to learn...
+    - Quiz done BEFORE starting to study.
+  - Ask for the "key ideas" to help caffold your learning.
+  - Example: "Can you provide a three-page synopsis in layperson's terms of the attached document?"
+    - layperson=lego
+    - <https://abreevy8.io>
+    - In Linux: <https://github.com/autokey/autokey/wiki>
+    - Flashcard system (space repetition):
+      - <https://www.idorecall.com/> (from Barbara Oakley)
+      - Quizlet
+      - Kahoot!
+      - Anki
+- **Flipped Interaction Pattern: AI-Driven Practice & Teaching**
+  - Rather than telling one of these models what to do, rather than asking it questions, **we want to get it to ask us questions**, and then based on our responses, dynamically adapt and flow through whatever it is that we're trying to achieve or practice.
+- **TBD**
+  - TBD
+- **TBD**
+  - TBD
+- **TBD**
+  - TBD
+- **TBD**
+  - TBD
+- **TBD**
+  - TBD
