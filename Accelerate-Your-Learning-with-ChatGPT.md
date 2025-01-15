@@ -171,13 +171,64 @@
       - Anki
 - **Flipped Interaction Pattern: AI-Driven Practice & Teaching**
   - Rather than telling one of these models what to do, rather than asking it questions, **we want to get it to ask us questions**, and then based on our responses, dynamically adapt and flow through whatever it is that we're trying to achieve or practice.
-- **TBD**
-  - TBD
-- **TBD**
-  - TBD
-- **TBD**
-  - TBD
-- **TBD**
-  - TBD
-- **TBD**
-  - TBD
+  - Example:
+
+  ```text
+   Please quiz me on phishing and techniques that are used to trick people.
+   
+   Break the topic down into individual topics that someone needs to learn. 
+   
+   Ask me questions one at a time to assess my knowledge of these topics. At the end, suggest topics that I should focus on to improve my understanding. 
+   
+   Ask me the first question.
+  ```
+
+  - Example:
+
+  ```text
+    Act as an expert in breaking down complex topics and teaching through simple analogies and metaphors. 
+    
+    Teach me how transformer models work one step at a time. After you teach me each topic, ask me a question to assess my understanding. Adapt what you teach next or review based on how well I answer the question. 
+    
+    Teach me the first thing.
+  ```
+
+- **Prompting for Feedback**
+  - **Question refinement pattern**
+    - Example: "Whenever I ask you a question, you will suggest a better version of my question that is clearer and more specific and ask me if you should answer it instead"
+  - **Cognitive verifier pattern**
+    - Example:
+
+    ```text
+    Act as an entrenched skeptic. Challenge my thinking on a presentation I'm about to give, identify my assumptions and challenge them.
+    
+    Ask me pointed questions one at a time to challenge my assumptions. Be persistent and don't let me off the hook easily. Challenge the assumptions underlying my answers. 
+    
+    Ask me the first question.
+    ```
+
+- **Unleashing curiosity and motivation**
+  - Two modes of learning and thinking
+    - Focused mode
+      - The task-positive network
+    - Diffuse mode
+      - The task-negative network
+      - e.g. wandering mind, daydreaming
+  - Pinbal metaphor to understand those two ways of learning and thinking.
+  - Dopamine: anticipatory hormone and neurons.
+  - Hooks and curiosity suppress diffues mode and enhace focus.
+  - Ask genAI for ideas to provoke curiosity!
+- **Multimodal prompting discovery**
+  - E.g. tranlating imagery into information.
+  - Examples:
+    - "I'm going to take pictures of things. And whenever I take pictures of things, you give me a crazy, fun, totally unique new game that I could play with them."
+    - "Tell me the physics of anything I take a picture of."
+    - "Tell me a world record related to anything I take a picture of."
+    - Food picture: "Give me step by step plans to make this. Create a complete list of materials with identifiers like one a, one b, and then output your step by step plan and reference the materials. "
+- **GenAI as a creative catalyst: supplementing working memory**
+  - Working memory: the part of your memory holding something temporarily.
+  - Long-term memory: the memory we hold all around our neocortex.
+    - Neocortex: the thin surface of the brain whre many of our memories are stored.
+- **The importance of classical study & memorization with respect to prompts**
+  - Example: "Write a letter to my boss asking for a raise **in the style of** William Faulkner"
+  - Example: "Create a SWOT analysis of this presentation"
