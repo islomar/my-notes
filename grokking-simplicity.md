@@ -13,24 +13,59 @@
 ## Chapters 1-3
 
 - **Side-effect**
-  - Something that might change depending on **when** it is executed or **how many times**.
   - Anything besides returning a value.
   - E.g. a read-only access to a DB would be considered a side-effect.
-- ACD
-  - **Actions**
-    - They have side-effects
-  - **Calculations**
-    - Pure functions, no side-effects
-  - **Data**
-    - "Data are facts about events". Probably biased towards CQRS.
+- **Actions**
+  - Aka "functions with side-effects", impure functions.
+  - Something that might change depending on **when** it is executed (ordering) or **how many times** (repetition).
+  - Actions can take many forms:
+    - Function calls
+    - Method calls
+    - Constructors
+    - Expressions
+    - Statements
+- **Calculations**
+  - Pure functions, mathematical functions, no side-effects.
+  - Computations from inputs to outputs.
+  - They don't affect anything outside of themselves, and hence it doesn't matter when or how many tmies they are run.
+  - Calculations are **­referentially transparent** because a call to a calculation can be replaced by its result.
+  - You don't have to worry about:
+    - What else is running at the same time.
+    - What has run in the past and what will run in the future.
+    - How many times you have alreadyrun it.
+- **Data**
+  - "Data are facts about events". Probably biased towards CQRS.
+  We record the facts immutably snice the facts don't change.
+  - **Immutability**. Functional programmers use two main disciplines for implementing immutable data:
+    1. **Copy-on-write**. Make a copy of data before you modify it.
+    2. **Defensive copying**. Make a copy of data you want to keep.
+  - Advantage of data
+    - Serializable
+    - Compare for equality
+    - Open for interpretation
 - **Stratified design**
   - Smell to Ports and adapters or Clean/Onion Architectures...
+  - Organizing code by "rate of change"
+    - (changes frequently) Business rules - Domain rules - Tech stack (changes seldom) 
 
 ## Chapters 4-5
 
-- TBD
+- Explicit inputs: arguments.
+- Explicit outputs: return value.
+- Implicit inputs and outputs: **side effects**
+- Improve testing and reusability (example)
+  - Don't depend on global variables.
+  - Separate business rules from DOM updates
+  - Don't assume the answer goes in the DOM
+  - Return the answer from the function
+- Reading a global variable is an **input** because data is entering the function.
+- Modifying a global array is an **output** because data is leaving the function.
+- Copying a mutable value before you modify it is a way to implement **immutability**. It's called **copy-on-write**.
+- We only have to find one action in afunction for the whole function to be an action.
+- "In  general, we "
+- "Design is about pulling things apart. They can always be put back together"
 
-## Chapter X-Y
+## Chapter 6-7
 
 - TBD
 
