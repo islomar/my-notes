@@ -62,7 +62,8 @@
 - Modifying a global array is an **output** because data is leaving the function.
 - Copying a mutable value before you modify it is a way to implement **immutability**. It's called **copy-on-write**.
 - We only have to find one action in afunction for the whole function to be an action.
-- "In  general, we "
+- "In general, we want to eliminate implicit inputs and outputs by replacing them with
+arguments and return values"
 - "Design is about pulling things apart. They can always be put back together"
 
 ## Chapter 6-7
