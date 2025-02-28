@@ -47,7 +47,7 @@
 - **Stratified design**
   - Smell to Ports and adapters or Clean/Onion Architectures...
   - Organizing code by "rate of change"
-    - (changes frequently) Business rules - Domain rules - Tech stack (changes seldom) 
+    - (changes frequently) Business rules - Domain rules - Tech stack (changes seldom)
 
 ## Chapters 4-5
 
@@ -67,7 +67,7 @@
 arguments and return values"
 - "Design is about pulling things apart. They can always be put back together"
 
-## Chapter 6
+## Chapter 6: Staying immutable in a mutable language
 
 - Data is **nested** when there are data structures within data structures, e.g. an array full of objects.
 - Data is **deeply nested** when the nesting goes on for a while.
@@ -89,41 +89,46 @@ arguments and return values"
   - When it's all immutable, structural sharing is very safe: it uses less memory and is faster than copying everything
 - The entire nested data structure has to remain unchanged for it to be immutable.
 
-## Chapter 7
-- TBD
+## Chapter 7: Staying immutable with untrusted code
+
+- **Legacy code**: existing code that we can't replace at the moment. We have to work with it as is.
+  - Very poor definition: can't you rename a local variable?
+- **Defensive copy**: used to exchange data with code that mutates data.
+  - it defends the immutable original
+  - make a **deep copy** before sending the data to the "unsafe zone" (zone where data is mutable)
+- You protect yourself by making copies: you copy data as it leaves your system, and you copy it as it comes back in.
+- **Deep copies** duplicate all levels of nested data structures, from the top all the way to the bottom.
+- **Defensive copying** is a discipline that maintains immutability when you have to exchange data with code that does not maintain immutability.
+  - Rule 1: copy as data leaves trusted code
+  - Rule 2: copy as data enters trusted code
+- **Shared nothing architecture**: when modules implement defensive copying when talking to each other. (the modules don't share references to any data)
+
+## Chapter 10: First-class functions: part 1
+
+- A **code smell** is a characteristic of a piece of code that might be a symptom of deeper problems.
+- There are two characteristics to the **implicit ­argument in function name** smell:
+  1. Very similar function implementations
+  2. Name of function indicates the difference in implementation
+- The function name difference is an implicit argument.
+  - From `setPriceByName()` and `setQuantityByName()` to `setFieldByName(field)`
+- **Data orientation** is a style of programming that uses generic data structures to represent facts about events and entities
+- **Higher-order functions** take other functions as arguments or return functions as their return values
+  - Refactor to allow it: **replace body with callback**
+- **Anonymous functions** are functions without names. They can be written inline - right where they are used.
+- There are three ways to define functions:
+  - Globally defined
+  - Locally defined
+  - Defined **inline**
+- **An inline function** is defined where it is used. For example, a function might be defined in the argument list.
+
+
+## Chapter 11: First-class functions: part 2
+
+- They apply HOF to create `trycatch(f, errorHandler)`
 
 ## PENDING
-- I don't think that in JS using `slice` will make immutable our data structure when the values are objects, it's a shallow copy. E.g. in an array of objects, I guess we copy the references pointing to the same object.
-```
-original_array = [{name: "Jane"}];
-copied_array = original_array.slice();
 
-console.log(original_array);
-console.log(copied_array);
-
-original_array[0].name = "John";
-
-console.log("---- AFTER MUTATION ----");
-console.log(original_array);
-console.log(copied_array);
-```
-  - Same for `Object.assign()`
-```
-original_object = {a: {value: 1}, b: 2};
-copied_object = Object.assign({}, original_object);
-
-console.log(original_object);
-console.log(copied_object);
-
-original_object.a.value = 42;
-
-console.log("---- AFTER MUTATION ----");
-console.log(original_object);
-console.log(copied_object);
-```
-
-  - Try with JSFiddle or anything similar
-
+- TBD
 
 ## Other resources
 
@@ -141,3 +146,4 @@ console.log(copied_object);
     - There is more to the domain model than the Entities/VO/Aggregates
 - [Railway-oriented programming in Java (video, 2021)](https://www.youtube.com/watch?v=4zpDZ8gwmc4)
 - [Restrict mutability of state](https://kevlinhenney.medium.com/restrict-mutability-of-state-1ac69d1ec5fe)
+- [Aplicando curry en JavaScript funcional](https://bootcamp.laboratoria.la/es/topics/functional/hof/currying)
