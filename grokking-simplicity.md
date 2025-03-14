@@ -147,3 +147,4 @@ arguments and return values"
 - [Railway-oriented programming in Java (video, 2021)](https://www.youtube.com/watch?v=4zpDZ8gwmc4)
 - [Restrict mutability of state](https://kevlinhenney.medium.com/restrict-mutability-of-state-1ac69d1ec5fe)
 - [Aplicando curry en JavaScript funcional](https://bootcamp.laboratoria.la/es/topics/functional/hof/currying)
+- https://builtin.com/software-engineering-perspectives/currying-javascript
