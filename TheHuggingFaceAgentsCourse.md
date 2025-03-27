@@ -10,9 +10,10 @@
 
 ## Unit 1. Introduction to Agents
 
+- <https://huggingface.co/learn/agents-course/unit1>
+
 ### What is an Agent?
 
-- <https://huggingface.co/learn/agents-course/unit1/what-are-agents>
 - Agentic programs are the **gateway to the outside world for LLMs**.
 - And this is what an Agent is: an AI model capable of reasoning, planning, and interacting with its environment.
   - We call it Agent because it has **agency**, aka it has the ability to interact with the environment.
@@ -221,6 +222,7 @@ agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel())
 
 agent.run("How many seconds would it take for a leopard at full speed to run through Pont des Arts?")
 ```
+
 - Example
   - <https://huggingface.co/spaces/islomar/First_agent_template?logs=build>
 - Examples from other students:
@@ -228,6 +230,7 @@ agent.run("How many seconds would it take for a leopard at full speed to run thr
   - <https://huggingface.co/spaces/ZainebS/First_agent_template>
   - <https://huggingface.co/spaces/anandp2901/First_agent_template>
 - Other models
+
 ```python
 client = InferenceClient("https://jc26mwg228mkj8dw.us-east-1.aws.endpoints.huggingface.cloud") #Suggested by Instructors
 client = InferenceClient("mistralai/Mistral-7B-Instruct-v0.2")
@@ -236,11 +239,37 @@ client = InferenceClient("deepseek-ai/DeepSeek-R1-Distill-Qwen-32B")
 
 ## Unit 2. Frameworks for AI Agents
 
-- TBD
+- <https://huggingface.co/learn/agents-course/unit2>
+
+- **When to Use an Agentic Framework**
+  - An agentic framework is not always needed when building an application around LLMs. They provide flexibility in the workflow to efficiently solve a specific task, but they’re not always necessary.
+  - Sometimes, predefined workflows are sufficient to fulfill user requests,
 
 ### Unit 2.1. The Smolagents framework
 
-- TBD
+- <https://huggingface.co/learn/agents-course/unit2/smolagents>
+- `smolagents` library: a lightweight framework for creating capable AI agents.
+  - <https://huggingface.co/blog/smolagents>
+  - <https://github.com/huggingface/smolagents>
+- `smolagents` is one of the many open-source agent frameworks available for application development. Alternative options include `LlamaIndex` and `LangGraph`.
+- `CodeAgents` are the **primary type of agent** in smolagents. Instead of generating JSON or text, these agents **produce Python code to perform actions**.
+- `ToolCallingAgents` are the second type of agent supported by smolagents. Unlike CodeAgents, which generate Python code, these agents rely on JSON/text blobs that the system must parse and interpret to execute actions.
+- `smolagents` is ideal when:
+  - You need a **lightweight and minimal solution**.
+  - You want to **experiment quickly** without complex configurations.
+  - Your **application logic is straightforward**.
+- Agents in smolagents operate as **multi-step agents**.
+- smolagents supports **flexible LLM integration**, allowing you to use any callable model that meets certain criteria.
+- **Building Agents That Use Code**
+  - Xxxx
+- **Tools**
+  - In smolagents, tools are defined using @tool decorator wrapping a python function or the Tool class.
+- **Retrieval Agents**
+  - Retrieval agents allow models access to knowledge bases, making it possible to search, synthesize, and retrieve information from multiple sources. They leverage vector stores for efficient retrieval and implement Retrieval-Augmented Generation (RAG) patterns. These agents are particularly useful for integrating web search with custom knowledge bases while maintaining conversation context through memory systems. This module explores implementation strategies, including fallback mechanisms for robust information retrieval.
+- **Multi-Agent Systems**
+  - TBD
+- **Vision and Browser agents**
+  - TBD
 
 ### Unit 2.2. The LlamaIndex framework
 
@@ -260,3 +289,8 @@ client = InferenceClient("deepseek-ai/DeepSeek-R1-Distill-Qwen-32B")
   - You can launch it in [Google Colab](https://colab.google/)
 - <https://philcalcado.com/2024/12/14/building-ai-products-part-i.html>
 - [NLP course at Hugging Face](https://huggingface.co/learn/nlp-course/chapter1/1)
+- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), by Anthropic
+  - [Cookbooks](https://github.com/anthropics/anthropic-cookbook/tree/main/patterns/agents)
+- [LangGraph Agents](https://langchain-ai.github.io/langgraph/)
+- [Agent Guidelines](https://huggingface.co/docs/smolagents/tutorials/building_good_agents)
+- [RAG Best Practices](https://www.pinecone.io/learn/retrieval-augmented-generation/)
