@@ -34,17 +34,25 @@
 ## Module 3 and 4
 
 - [Example code with Vite](./oreilly-react-fundamentals-2024/)
-    - <http://localhost:5173>
+  - <http://localhost:5173>
 - `<>` is the same than `<Fragment>`
 
 ## Module 5: Adding Interactivity with Events
+
 - In a browser console: `monitor(window)` will let you see all the events being triggered in the browser.
 
-## Module 6: Lists and Conditional Rendering in React
-- TBD
-
 ## Module 7: Styles and CSS in React
-- TBD
+
+- `className` with CSS selector from CSS file
+- Inline `style`
+- CSS modules
+  - E.g. Button.module.css, then we import it in our React file and we can access the styles programatically
 
 ## Module 8: React Hooks
-- TBD
+
+- Functions that allow you to use React lifecycle methods in functional components.
+- `useState`
+- `useEffect`
+  - Perform side effects in React
+  - Side effects - updating DOM, data fetching, managing subscriptions, setTimeouts
+  - Replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount

@@ -1,4 +1,5 @@
 import './App.css'
+import {useEffect, useState} from "react";
 
 const Name = (props) => {
     const {name} = props
@@ -35,6 +36,18 @@ const App = () => {
     // const names: string[] = ["Isi", "John", "Jane", "Doe"];
     const names: string[] = [];
 
+    const [age, setAge] = useState(25);
+    const [time, setTime] = useState(0);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setTime(prevTime => prevTime + 1);
+        }, 1000);
+
+        // Cleanup function to clear the interval when component unmounts
+        return () => clearInterval(intervalId);
+    }, [])
+
     return (
         <div className="App">
             <h1
@@ -44,6 +57,13 @@ const App = () => {
             <button className={"change-color-button"} onClick={handleClick}>Click me to change font color</button>
             <Name name={myName}/>
             <ProfilePicture imgSrc="https://cataas.com/cat"/>
+
+            <div>
+                <p>I am {age} years old</p>
+                <p>Time: {time} seconds</p>
+            </div>
+            <button onClick={() => setAge(age + 1)}>Increment age</button>
+
             <form onSubmit={handleFormSubmit}>
                 <input type="text" onChange={handleInputChange}/>
             </form>
