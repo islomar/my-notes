@@ -19,3 +19,12 @@
     border-radius: 50%;
     margin-bottom: 20px;
 }
+
+.change-color-button {
+    font-size: 30px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}

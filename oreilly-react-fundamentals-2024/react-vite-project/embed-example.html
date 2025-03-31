@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App Embedding Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .note {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>React App Embedding Example</h1>
+    
+    <div class="note">
+        <p><strong>Note:</strong> For this example to work, you need to have your React application running locally at http://localhost:5173</p>
+        <p>Start your application with: <code>npm run dev</code></p>
+    </div>
+    
+    <h2>Embedding using an iframe</h2>
+    <div class="container">
+        <iframe 
+            src="http://localhost:5173" 
+            width="100%" 
+            height="600px" 
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <h2>How to use this example</h2>
+    <ol>
+        <li>Start your React application with <code>npm run dev</code></li>
+        <li>Open this HTML file in a browser</li>
+        <li>You should see your React application embedded in the iframe above</li>
+    </ol>
+    
+    <div class="note">
+        <p>For production use, you would replace the localhost URL with your deployed application URL.</p>
+        <p>See the <code>run_and_embed_instructions.md</code> file for more embedding options.</p>
+    </div>
+</body>
+</html>

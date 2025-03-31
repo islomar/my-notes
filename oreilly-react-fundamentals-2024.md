@@ -31,8 +31,11 @@
   - `npm create vite@latest`
   - You could also use NextJS, Remix, start from scratch, etc.
 
-## Module 3: Understanding React Basics
+## Module 3 and 4
 
 - [Example code with Vite](./oreilly-react-fundamentals-2024/)
     - <http://localhost:5173>
-- TBD
+- `<>` is the same than `<Fragment>`
+
+## Module 5: Adding Interactivity with Events
+- In a browser console: `monitor(window)` will let you see all the events being triggered in the browser.
