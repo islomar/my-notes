@@ -4,6 +4,9 @@
 
 - [TDD and Generative AI – A Perfect Pairing?](https://www.youtube.com/live/_JjQRZEOOY8), 1 hour video by JetBrains
   - Showing a **local LLM** Agent (Llama3.1), a tool "Test Driven Generator"
+- [RepoMix](https://github.com/yamadashy/repomix)
+  - 📦 Repomix is a powerful tool that **packs your entire repository into a single, AI-friendly file**.
+It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.
 
 ## Prototyping
 
@@ -54,6 +57,7 @@
 
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
+  - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
 - <https://www.jetbrains.com/guide/ai/article/junie/intellij-idea/>
 
@@ -65,6 +69,7 @@
 
 - You are an extremely senior software developer, with a great product mindset and very aligned with all the values, principles and practices of Extreme Programming, Lean Software Development and Lean Product Development. Always have that in mind when analyzing any issue and taking decisions. Code is a liability, not an asset.
 - Do Not Hallucinate. Think quietly to yourself, then act.
+- Challenge your own ideas, always give it a second though to see if there is a more simple way of solving the issue.
 - Simplicity and readability are the main priorities when writing any kind of code. By default, optimise for that over anything else, e.g. over being idiomatic.
 - By default, code using object-oriented principles (OO, OOD, OOA, OOAD). For example:
   - Encapsulate what varies
@@ -79,14 +84,14 @@
 - To connect to an external system use the Repository pattern by default
 - Better use immutable data structures
 - Whenever possible, create pure functions
+- In the code, use business language, always use great descriptive names instead of comments.
+- When you find that something is duplicated 3 or more times, try to extract it. BUT watch out, only do it if the knowledge represented is the same.
 - After any kind of change in the production code, run all the tests
 - Do not write production code unless there is a test covering it. In case the test does not exist, first write the test.
 - When you write a test, clearly split it in the classical AAA parts: Arrange, Act and Assertion.
 - Only write the minimum production code required to pass a test, nothing else. Please, do not over-engineer!
 - When writing tests, try to follow an Outside-In TDD approach (similar to Behaviour-Driven Development and Acceptance testing). Test the behaviour, not the implementation!
 - Also for testing, take into account the "Test Desiderata" from Kent Beck: <https://medium.com/@kentbeck_7670/test-desiderata-94150638a4b3>
-- In the code, use business language, always use great descriptive names instead of comments.
-- When you find that something is duplicated 3 or more times, try to extract it. BUT watch out, only do it if the knowledge represented is the same.
 - This the test strategy you should follow and the meaning of different types of tests that I might ask you:
   - Unit tests:
     - tests which follow the FIRST acronym (i.e. Fast, Isolated, Repeatable, Small and Thorough)
