@@ -32,6 +32,9 @@ const App = () => {
         event.preventDefault(); // it prevents the page from refreshing
     }
 
+    // const names: string[] = ["Isi", "John", "Jane", "Doe"];
+    const names: string[] = [];
+
     return (
         <div className="App">
             <h1
@@ -44,6 +47,12 @@ const App = () => {
             <form onSubmit={handleFormSubmit}>
                 <input type="text" onChange={handleInputChange}/>
             </form>
+            <ul>
+                {names.length > 0 ?
+                    names.map((name, index) => <li key={index}>{name}</li>) :
+                    (<li>No names available</li>)
+                }
+            </ul>
         </div>
     )
 }

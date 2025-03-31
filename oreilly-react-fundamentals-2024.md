@@ -39,3 +39,12 @@
 
 ## Module 5: Adding Interactivity with Events
 - In a browser console: `monitor(window)` will let you see all the events being triggered in the browser.
+
+## Module 6: Lists and Conditional Rendering in React
+- TBD
+
+## Module 7: Styles and CSS in React
+- TBD
+
+## Module 8: React Hooks
+- TBD
