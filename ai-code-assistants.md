@@ -5,6 +5,31 @@
 - [TDD and Generative AI – A Perfect Pairing?](https://www.youtube.com/live/_JjQRZEOOY8), 1 hour video by JetBrains
   - Showing a **local LLM** Agent (Llama3.1), a tool "Test Driven Generator"
 
+## Prototyping
+
+- They also include some backend capabilities, including API integration, database and Auth.
+- [Lovable](https://lovable.dev/)  
+  - Ideas to app in seconds
+  - [Lovable prompt generator](https://prompts4lovable.netlify.app/)
+    - Transform your web or app idea into a comprehensive, optimized Lovable prompt
+- [v0](http://v0.dev/)
+- Bolt
+- Lovable vs v0
+  - <https://addyo.substack.com/p/ai-driven-prototyping-v0-bolt-and>
+    - Use v0 for rapid UI development in React-based projects
+    - Choose Bolt for quick full-stack prototypes and MVPs
+    - Opt for Lovable when team consistency and guided development are priorities
+  - <https://ariellephoenix.com/resources/lovable-vs-v0>
+  - <https://addyo.substack.com/p/ai-driven-prototyping-v0-bolt-and>
+
+### LLMs
+
+- [LiveBench: A Challenging, Contamination-Free LLM Benchmark](https://livebench.ai/#/)
+- Local LLM
+  - <https://github.com/simonw/LLM>
+  - <https://llm.datasette.io/>
+  - <https://llm.datasette.io/en/stable/templates.html>
+
 ## Cursor
 
 - [How to implement DDD code using Artificial Intelligence](https://www.youtube.com/watch?v=jYOKb_OuKxU), 9 min. video
@@ -21,14 +46,25 @@
 - [Copilot agent mode new features in Visual Studio Code | GitHub Checkout](https://www.youtube.com/watch?v=aKx5I0Mrr9g), 12 min. video
 - [Test like a pro with Playwright and GitHub Copilot](https://www.youtube.com/watch?v=rjbaIVOGfyo), 14 min. video
 
+## Other people's experiences
+
+- <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
+
 ## Prompting
 
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
+- <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
 - <https://www.jetbrains.com/guide/ai/article/junie/intellij-idea/>
+
+    ```text
+    Analyze the project structure and tech stack, and create a .junie/guidelines.md file with concise, well-structured information to help new developers. Include guidance on organizing the structure, running tests, executing scripts, and following best practices. Keep the content short, clear, and practical.
+    ```
 
 ### My own prompt
 
+- You are an extremely senior software developer, with a great product mindset and very aligned with all the values, principles and practices of Extreme Programming, Lean Software Development and Lean Product Development. Always have that in mind when analyzing any issue and taking decisions. Code is a liability, not an asset.
+- Do Not Hallucinate. Think quietly to yourself, then act.
 - Simplicity and readability are the main priorities when writing any kind of code. By default, optimise for that over anything else, e.g. over being idiomatic.
 - By default, code using object-oriented principles (OO, OOD, OOA, OOAD). For example:
   - Encapsulate what varies
