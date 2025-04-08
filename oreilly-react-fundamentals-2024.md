@@ -46,7 +46,7 @@
 - `className` with CSS selector from CSS file
 - Inline `style`
 - CSS modules
-  - E.g. Button.module.css, then we import it in our React file and we can access the styles programatically
+  - E.g. `Button.module.css`, then we import it in our React file and we can access the styles programmatically
 
 ## Module 8: React Hooks
 
