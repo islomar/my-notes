@@ -7,6 +7,9 @@
 - [RepoMix](https://github.com/yamadashy/repomix)
   - 📦 Repomix is a powerful tool that **packs your entire repository into a single, AI-friendly file**.
 It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.
+- [How to use AI to increase Software Development productivity](https://newsletter.eng-leadership.com/p/how-to-use-ai-to-increase-software)
+- [How to Choose the Right LLM](https://blog.jetbrains.com/ai/2025/03/how-to-choose-the-right-llm/)
+- [Enterprise AI Playbook](https://platforms.substack.com/p/how-to-win-at-enterprise-ai-a-playbook)
 
 ## Prototyping
 
@@ -37,6 +40,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 
 - [How to implement DDD code using Artificial Intelligence](https://www.youtube.com/watch?v=jYOKb_OuKxU), 9 min. video
   - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
+- [How to use Cursor AI to build side projects](https://newsletter.eng-leadership.com/p/how-to-use-cursor-ai-to-build-side)
 
 ## JetBrains Junie
 
@@ -53,12 +57,20 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
 
+### Vibe coding
+
+- <https://www.eferro.net/2025/04/vibe-coding-ii-when-flow-meets-tests.html>
+
 ## Prompting
 
+- <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
   - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
+- <https://dev.to/epilot/how-we-integrate-ai-in-epilot-chapter-1-aws-bedrock-prompt-engineering-17jh>
+  - XML tags
+  - AWS Bedrock
 - <https://www.jetbrains.com/guide/ai/article/junie/intellij-idea/>
 
     ```text
@@ -78,7 +90,8 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   - Classes are about behavior and functionality
 - Follow the SOLID development principles
 - Adhere to Clean Code practices
-- Favor delegation, composition and aggregation over inheritance
+- Favor delegation, composition and aggregation over inheritance.
+- Whenever possible, apply the "Tell, don't ask" principle
 - Design respecting the Hexagonal Architecture (aka "ports and adapters") practices and rules (including its dependency rule).
 - Avoid anemic models by default: try to follow the Value Object, Entity and Aggregate concepts from Domain-Driven Design whenever it could be applied.
 - To connect to an external system use the Repository pattern by default
@@ -99,3 +112,36 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   - Integration tests:
     - Tests that interact with our infrastructure
     - E.g. these are tests for the secondary adapters (according to "hexagonal architecture" terminology). E.g. tests for a Repository implementation.
+
+### "How to turn ChatGPT into your personal teacher"
+<https://www.linkedin.com/posts/ruben-hassid_how-to-turn-chatgpt-into-your-personal-teacher-activity-7314512192559579137-1Trs>
+
+"Act as an expert tutor who helps me master any topic through an interactive, interview-style course. The process must be recursive and personalized.
+
+Here’s what I want you to do:
+
+1. Ask me for a topic I want to learn.
+
+2. Break that topic into a structured syllabus of progressive lessons, starting with the fundamentals and building up to advanced concepts.
+
+3. For each lesson:
+
+- Explain the concept clearly and concisely, using analogies and real-world examples.
+
+- Ask me socratic-style questions to assess and deepen my understanding.
+
+- Give me one short exercise or thought experiment to apply what I’ve learned.
+
+- Ask if I’m ready to move on or if I need clarification.
+
+- If I say yes, move to the next concept.
+
+- If I say no, rephrase the explanation, provide additional examples, and guide me with hints until I understand.
+
+4. After each major section, provide a mini-review quiz or a structured summary.
+
+5. Once the entire topic is covered, test my understanding with a final integrative challenge that combines multiple concepts.
+
+6. Encourage me to reflect on what I’ve learned and suggest how I might apply it to a real-world project or scenario.
+
+Let’s begin: ask me what I want to learn."
