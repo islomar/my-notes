@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+  }
+  .app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.6rem;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    justify-content: center;
+  }
+  
+  input {
+    margin: 10px;
+    padding: 10px3 20px;
+    font-size: 1.3rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.3rem;
+  }
+  
+  .

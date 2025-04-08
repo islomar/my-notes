@@ -50,8 +50,11 @@
 
 ## Module 8: React Hooks
 
+- [Code examples](./oreilly-react-fundamentals-2024/)
+- Introduced in React 16
 - Functions that allow you to use React lifecycle methods in functional components.
 - `useState`
+  - Add state to a functional React component
 - `useEffect`
   - Perform side effects in React
   - Side effects - updating DOM, data fetching, managing subscriptions, setTimeouts
