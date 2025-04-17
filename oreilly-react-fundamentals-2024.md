@@ -59,3 +59,15 @@
   - Perform side effects in React
   - Side effects - updating DOM, data fetching, managing subscriptions, setTimeouts
   - Replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount
+
+## Module 9:  creating a Slideshow app
+
+- [Code examples](./oreilly-react-fundamentals-2024/slideshow/)
+
+## Module 10: fetching data
+
+-TBD
+
+## Module 11: Sharing data between components
+
+- TBD

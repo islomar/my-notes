@@ -1,7 +1,9 @@
-const Slide = () => {
+import "./style.css";
+
+const Slide = ({image}) => {
     return (
-        <div>
-            <h2>Slide component</h2>
+        <div className="slide">
+            <img src = {image?.url} alt={image?.alt} />
         </div>
     );
 };
