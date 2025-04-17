@@ -36,26 +36,41 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   - <https://llm.datasette.io/>
   - <https://llm.datasette.io/en/stable/templates.html>
 
-## Cursor
+## List of AI coding assistants
+
+- GitHub Copilot
+- Cursor
+- JetBrains AI Assistant
+- JetBrains Junie (AI Agent)
+- Augment Code
+  - https://bsky.app/profile/did:plc:7vmjo77otwy2dzx6op76r2rv
+  - What makes Augment different? Context. Every feature is context-aware. This means every suggestion, completion, and interaction reflects the components, APIs, and coding patterns in your codebase.
+- Windsurf
+
+### Cursor
 
 - [How to implement DDD code using Artificial Intelligence](https://www.youtube.com/watch?v=jYOKb_OuKxU), 9 min. video
   - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [How to use Cursor AI to build side projects](https://newsletter.eng-leadership.com/p/how-to-use-cursor-ai-to-build-side)
 
-## JetBrains Junie
+### JetBrains Junie
 
 - Yes, Junie and AI Assistant are separate products. The key difference lies in their approach. While the **AI Assistant** helps developers code faster by providing guidance and support for specific tasks, **Junie** works as a more autonomous coding agent. Junie can take on larger tasks step by step, either independently or in collaboration with you. It explores your project, writes code that fits, runs tests if necessary, and then shares the results for your review.
 - `.junie/guidelines.md`
 - [Can JetBrains Junie replace manual refactoring?](https://www.youtube.com/watch?v=vN2-VUFP784), 12 min. video
 
-## GitHub Copilot
+### GitHub Copilot
 
 - [Copilot agent mode new features in Visual Studio Code | GitHub Checkout](https://www.youtube.com/watch?v=aKx5I0Mrr9g), 12 min. video
 - [Test like a pro with Playwright and GitHub Copilot](https://www.youtube.com/watch?v=rjbaIVOGfyo), 14 min. video
 
-## Other people's experiences
+## Other people's experiences and examples
 
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
+- <https://fernandosouto.dev/blog/news/>
+- <https://github.com/ficiverson/trivia-quiz-ai-clean>
+- <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
+- <https://www.eferro.net/2025/04/ive-launched-eferro-picks-site-my.html>
 
 ### Vibe coding
 
@@ -76,6 +91,10 @@ It is perfect for when you need to feed your codebase to Large Language Models (
     ```text
     Analyze the project structure and tech stack, and create a .junie/guidelines.md file with concise, well-structured information to help new developers. Include guidance on organizing the structure, running tests, executing scripts, and following best practices. Keep the content short, clear, and practical.
     ```
+- <https://bsky.app/profile/xpmatteo.bsky.social/post/3lmjiigahec2v> (also with Kent Beck)
+  ```
+  Please think deeply about how @vaughnvernon.bsky.social would refactor [this code] according to DDD principles
+ ```
 
 ### My own prompt
 
