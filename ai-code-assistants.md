@@ -46,6 +46,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   - https://bsky.app/profile/did:plc:7vmjo77otwy2dzx6op76r2rv
   - What makes Augment different? Context. Every feature is context-aware. This means every suggestion, completion, and interaction reflects the components, APIs, and coding patterns in your codebase.
 - Windsurf
+- [OpenAI Codex CLI](https://github.com/openai/codex)
 
 ### Cursor
 
