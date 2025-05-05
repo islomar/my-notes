@@ -66,8 +66,8 @@
 
 ## Module 10: fetching data
 
--TBD
+-They use `useEffect()` in order to fetch images from an HTTP API
 
 ## Module 11: Sharing data between components
 
-- TBD
+- `useContext()`

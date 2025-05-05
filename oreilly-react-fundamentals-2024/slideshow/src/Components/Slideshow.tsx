@@ -1,7 +1,7 @@
 import Slide from "./Slide.tsx";
 import Controls from "./Controls.tsx";
 import "./style.css";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 const images = [
     {
@@ -18,14 +18,41 @@ const images = [
     },
 ];
 
+const API_URL = "https://dummyjson.com/products";
+
 const Slideshow = () => {
     const [imageIndex, setImageIndex] = useState(0);
+    const [products, setProducts] = useState({});
+
+    useEffect(() => {
+        const fetchData = async () => {
+
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+                const jsonData = await response.json();
+                setProducts(jsonData?.products);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    console.log({ products });
 
     return (
         <div className="slideshow-container">
             <h1>Slideshow component</h1>
-            <Slide image={ images[imageIndex] }/>
-            <Controls activeIndex={imageIndex} setActiveIndex={setImageIndex} numberOfImages={images.length}/>
+            {products.length > 0 && (
+                <>
+                    <Slide product={ products[imageIndex] }/>
+                    <Controls activeIndex={imageIndex} setActiveIndex={setImageIndex} numberOfImages={products.length}/>
+                </>
+            )};
         </div>
     );
 };

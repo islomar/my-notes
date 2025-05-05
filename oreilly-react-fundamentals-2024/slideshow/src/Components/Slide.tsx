@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Slide = ({image}) => {
+const Slide = ({product}) => {
     return (
         <div className="slide">
-            <img src = {image?.url} alt={image?.alt} />
+            <img src = {product?.images[0]} alt={product?.description} />
         </div>
     );
 };
