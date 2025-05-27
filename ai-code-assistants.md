@@ -33,6 +33,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - [LiveBench: A Challenging, Contamination-Free LLM Benchmark](https://livebench.ai/#/)
 - Local LLM
   - <https://github.com/simonw/LLM>
+  - [Warp](https://github.com/warpdotdev/Warp)
   - <https://llm.datasette.io/>
   - <https://llm.datasette.io/en/stable/templates.html>
 
@@ -45,8 +46,15 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - Augment Code
   - https://bsky.app/profile/did:plc:7vmjo77otwy2dzx6op76r2rv
   - What makes Augment different? Context. Every feature is context-aware. This means every suggestion, completion, and interaction reflects the components, APIs, and coding patterns in your codebase.
-- Windsurf
+- [Windsurf](https://codeium.com/windsurf)
+- [Cline](https://cline.bot/)
 - [OpenAI Codex CLI](https://github.com/openai/codex)
+- [Augment Code](https://www.augmentcode.com/)
+  - It can be integrated with both VSCode and IntelliJ
+- [KAgent](https://k8scockpit.tech/posts/kagent): Agentic AI for k8s
+  - <https://www.cncf.io/blog/2025/04/15/kagent-bringing-agentic-ai-to-cloud-native/>
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
+  - <https://plugins.jetbrains.com/plugin/27310-claude-code-beta->
 
 ### Cursor
 
@@ -59,6 +67,10 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - Yes, Junie and AI Assistant are separate products. The key difference lies in their approach. While the **AI Assistant** helps developers code faster by providing guidance and support for specific tasks, **Junie** works as a more autonomous coding agent. Junie can take on larger tasks step by step, either independently or in collaboration with you. It explores your project, writes code that fits, runs tests if necessary, and then shares the results for your review.
 - `.junie/guidelines.md`
 - [Can JetBrains Junie replace manual refactoring?](https://www.youtube.com/watch?v=vN2-VUFP784), 12 min. video
+- [IntelliJ IDEA Junie Playbook](https://www.jetbrains.com/guide/ai/article/junie/intellij-idea/)
+- You can use the `.junie/guidelines.md` file in the root directory to personalize Junie and make it truly effective for your team.
+- [Junie Guidelines](https://github.com/JetBrains/junie-guidelines)
+- [Beyond Auto-Complete: Junie Is Your Autonomous Coding Partner in JetBrains IDEs](https://www.youtube.com/watch?v=fcbSG8lm7So): 20 min. screencast video
 
 ### GitHub Copilot
 
@@ -72,6 +84,9 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - <https://github.com/ficiverson/trivia-quiz-ai-clean>
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://www.eferro.net/2025/04/ive-launched-eferro-picks-site-my.html>
+- [The role of developer skills in agentic coding](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
+- <https://alexbunardzic.substack.com/p/the-future-of-refactoring-part-1>
+- [How to Use Junie in IntelliJ IDEA](https://www.youtube.com/watch?v=oyKgaysS9_g): screencast
 
 ### Vibe coding
 
@@ -79,6 +94,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 
 ## Prompting
 
+- [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
@@ -96,42 +112,15 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   ```
   Please think deeply about how @vaughnvernon.bsky.social would refactor [this code] according to DDD principles
  ```
+- [My Blogging Routine: How I Write My Posts](https://flowchainsensei.wordpress.com/2025/04/26/my-blogging-routine-how-i-write-my-posts/)
+- https://kagent.dev/docs/getting-started/system-prompts
+- [Prompt Engineering for Unbeatable AI Agents](https://aiablog.medium.com/prompt-engineering-for-unbeatable-ai-agents-df4a1abf4bd8)
+- [Junie guidelines for Spring Boot project development](https://gist.github.com/sivaprasadreddy/9751db630b819b39e5e87f5ecfb53346)
+
 
 ### My own prompt
+- [General guidelines](.junie/general_guidelines.md)
 
-- You are an extremely senior software developer, with a great product mindset and very aligned with all the values, principles and practices of Extreme Programming, Lean Software Development and Lean Product Development. Always have that in mind when analyzing any issue and taking decisions. Code is a liability, not an asset.
-- Do Not Hallucinate. Think quietly to yourself, then act.
-- Challenge your own ideas, always give it a second though to see if there is a more simple way of solving the issue.
-- Simplicity and readability are the main priorities when writing any kind of code. By default, optimise for that over anything else, e.g. over being idiomatic.
-- By default, code using object-oriented principles (OO, OOD, OOA, OOAD). For example:
-  - Encapsulate what varies
-  - Code to an interface rather than to an implementation
-  - Each class in your application should have on ly one reason to change
-  - Classes are about behavior and functionality
-- Follow the SOLID development principles
-- Adhere to Clean Code practices
-- Favor delegation, composition and aggregation over inheritance.
-- Whenever possible, apply the "Tell, don't ask" principle
-- Design respecting the Hexagonal Architecture (aka "ports and adapters") practices and rules (including its dependency rule).
-- Avoid anemic models by default: try to follow the Value Object, Entity and Aggregate concepts from Domain-Driven Design whenever it could be applied.
-- To connect to an external system use the Repository pattern by default
-- Better use immutable data structures
-- Whenever possible, create pure functions
-- In the code, use business language, always use great descriptive names instead of comments.
-- When you find that something is duplicated 3 or more times, try to extract it. BUT watch out, only do it if the knowledge represented is the same.
-- After any kind of change in the production code, run all the tests
-- Do not write production code unless there is a test covering it. In case the test does not exist, first write the test.
-- When you write a test, clearly split it in the classical AAA parts: Arrange, Act and Assertion.
-- Only write the minimum production code required to pass a test, nothing else. Please, do not over-engineer!
-- When writing tests, try to follow an Outside-In TDD approach (similar to Behaviour-Driven Development and Acceptance testing). Test the behaviour, not the implementation!
-- Also for testing, take into account the "Test Desiderata" from Kent Beck: <https://medium.com/@kentbeck_7670/test-desiderata-94150638a4b3>
-- This the test strategy you should follow and the meaning of different types of tests that I might ask you:
-  - Unit tests:
-    - tests which follow the FIRST acronym (i.e. Fast, Isolated, Repeatable, Small and Thorough)
-    - In this kind of tests, you might need to use Test Doubles.
-  - Integration tests:
-    - Tests that interact with our infrastructure
-    - E.g. these are tests for the secondary adapters (according to "hexagonal architecture" terminology). E.g. tests for a Repository implementation.
 
 ### "How to turn ChatGPT into your personal teacher"
 <https://www.linkedin.com/posts/ruben-hassid_how-to-turn-chatgpt-into-your-personal-teacher-activity-7314512192559579137-1Trs>
@@ -165,3 +154,9 @@ Here’s what I want you to do:
 6. Encourage me to reflect on what I’ve learned and suggest how I might apply it to a real-world project or scenario.
 
 Let’s begin: ask me what I want to learn."
+
+## Pending
+- Create sections in my prompt.
+- Add mentions to parallel changes, tidy first, “make the change easy”, fast tests, separating behavior & structure changes, separating interface & implementation changes.
+- Include the use of TPP (Transformation-Priority Premise) for the baby steps
+  - "The transformation priority premise is to behavior changes what refactorings are to structure changes. When a test fails, use the lowest-numbered transformation to get it passing."
