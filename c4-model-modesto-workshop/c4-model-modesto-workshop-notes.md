@@ -7,6 +7,7 @@
     - https://miro.com/app/board/uXjVKGudTCk=/
 - https://structurizr.com/: Software architecture models as code
     - https://docs.structurizr.com/lite/quickstart
+        - Local Docker
 - [IcePanel workshop](https://icepanel.medium.com/c4-model-getting-started-workshop-f27dc3dca2aa)
 - Four levels
     - **Level 1: Context**
