@@ -87,6 +87,10 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - [The role of developer skills in agentic coding](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
 - <https://alexbunardzic.substack.com/p/the-future-of-refactoring-part-1>
 - [How to Use Junie in IntelliJ IDEA](https://www.youtube.com/watch?v=oyKgaysS9_g): screencast
+- [AI assisted coding in 2025](https://medium.com/clarityai-engineering/ai-assisted-coding-in-2025-6e800e4e61b5)
+- [Autonomous coding agents: A Codex example (martinfowler.com)](https://martinfowler.com/articles/exploring-gen-ai/autonomous-agents-codex-example.html)
+- [Building Custom Tooling with LLMs: A Case Study in Extending PlantUML](https://martinfowler.com/articles/exploring-gen-ai/16-building-custom-tooling-with-llms.html)
+
 
 ### Vibe coding
 
@@ -95,6 +99,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 ## Prompting
 
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
+- <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
@@ -112,6 +117,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   ```
   Please think deeply about how @vaughnvernon.bsky.social would refactor [this code] according to DDD principles
  ```
+- Knowledge/code duplication improvement (Kent Beck): `run the copy/paste detector over the whole codebase to see if there are missing abstractions`
 - [My Blogging Routine: How I Write My Posts](https://flowchainsensei.wordpress.com/2025/04/26/my-blogging-routine-how-i-write-my-posts/)
 - https://kagent.dev/docs/getting-started/system-prompts
 - [Prompt Engineering for Unbeatable AI Agents](https://aiablog.medium.com/prompt-engineering-for-unbeatable-ai-agents-df4a1abf4bd8)
