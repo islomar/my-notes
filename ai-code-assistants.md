@@ -56,6 +56,10 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
   - <https://plugins.jetbrains.com/plugin/27310-claude-code-beta->
 
+## General AI Agents
+- [Manus](manus.im)
+  - E.g. for research, resume screening, data analysis, etc.
+
 ### Cursor
 
 - [How to implement DDD code using Artificial Intelligence](https://www.youtube.com/watch?v=jYOKb_OuKxU), 9 min. video
