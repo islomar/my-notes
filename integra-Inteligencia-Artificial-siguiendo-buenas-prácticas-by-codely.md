@@ -202,15 +202,34 @@
 ### 🧾 Consigue respuestas más robustas: Tipado con JSON Schema
 
 - [Ejemplo de código para añadir tipos](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/07-good_practices/3-add_types)
-- <https://zod.dev/>
+- <https://zod.dev/>: permite tipar. Se podría hacer con TS, pero los tipos en TS desaparecen al ser transpilados a JS. Por otra parte, permite convertirlo en un JSon Schema. Bastante usada, e.g. para las requests de HTTP que llegan o formularios web.
+- Evitas tener que parsear la respuesta. Queremos tener una respuesta tipada por parte del LLM.
+- [Ejemplo parseardor con Zod](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/07-good_practices/3-add_types/src/contexts/mooc/user_course_suggestions/infrastructure/OllamaMistralCourseSuggestionsGenerator.ts#L34-L34)
 
 ## ✅ Testea la integración con tu LLM
 
-- TBD
+### 🐛 Feedback loop más rápido para depurar tu prompt
+- [Ejemplo de código: debug prompt](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/08-testing/1-debug_prompt)
+- Cómo iterar los prompts rápidamente.
+  1. `ollama run mistral`
+  2. Copiar el prompt y ver qué devuelve
+  3. Modificar lo necesario y volver al punto 1
+
+### 🧪 Cómo hacer tests de integración a tu LLM
+- [Código con tests de integración del LLM](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/08-testing/2-integration_tests)
+- [OllamaMistralCourseSuggestionsGenerator.test.ts](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/08-testing/2-integration_tests/tests/contexts/mooc/user_course_suggestions/infrastructure/OllamaMistralCourseSuggestionsGenerator.test.ts#L1-L1)
+- Se basa en el evaluator de LangChain... pero usa un prompt diferente en el código de test respecto a producción (comentan que por el JSon Schema), pero IMO eso invalida la confianza y relevancia de los tests :-/
+
+### ♻️ Configura tu entorno de CI para Ollama y GPT
+- [Ejemplo de código con CI](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/
+main/08-testing/3-llm_ci)
+- Para ejecutar `OpenAIChatGPT35CourseSuggestionsGenerator` sólo en la pipeline, usa nomenclatura `.ci.test` y filtra en los npm scripts (`test` vs `test:ci`)
 
 ## 🔜 Conclusiones y siguientes pasos
 
-- TBD
+- Más cursos
+  - [IA: Embeddings y RAG](https://pro.codely.com/library/ia-buscador-con-datos-propios-usando-rag-230838/655241/about/)
+  - [Embeddings automáticos en Postgres](https://pro.codely.com/library/embeddings-automaticos-en-postgres-236271/702554/about/)
 
 ## More links
 
