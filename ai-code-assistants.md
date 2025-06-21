@@ -49,6 +49,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - [Windsurf](https://codeium.com/windsurf)
 - [Cline](https://cline.bot/)
 - [OpenAI Codex CLI](https://github.com/openai/codex)
+  - https://openai.com/index/introducing-codex/
 - [Augment Code](https://www.augmentcode.com/)
   - It can be integrated with both VSCode and IntelliJ
 - [KAgent](https://k8scockpit.tech/posts/kagent): Agentic AI for k8s
