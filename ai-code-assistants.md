@@ -10,6 +10,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - [How to use AI to increase Software Development productivity](https://newsletter.eng-leadership.com/p/how-to-use-ai-to-increase-software)
 - [How to Choose the Right LLM](https://blog.jetbrains.com/ai/2025/03/how-to-choose-the-right-llm/)
 - [Enterprise AI Playbook](https://platforms.substack.com/p/how-to-win-at-enterprise-ai-a-playbook)
+- <https://models.dev/>
 
 ## Prototyping
 
@@ -43,6 +44,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - Cursor
 - JetBrains AI Assistant
 - JetBrains Junie (AI Agent)
+  - Use `.junie/general-guidelines.md`
 - Augment Code
   - https://bsky.app/profile/did:plc:7vmjo77otwy2dzx6op76r2rv
   - What makes Augment different? Context. Every feature is context-aware. This means every suggestion, completion, and interaction reflects the components, APIs, and coding patterns in your codebase.
@@ -50,6 +52,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - [Cline](https://cline.bot/)
 - [OpenAI Codex CLI](https://github.com/openai/codex)
   - https://openai.com/index/introducing-codex/
+  - Use `AGENTS.md`
 - [Augment Code](https://www.augmentcode.com/)
   - It can be integrated with both VSCode and IntelliJ
 - [KAgent](https://k8scockpit.tech/posts/kagent): Agentic AI for k8s
@@ -105,6 +108,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
+- [Development guidelines for Claude](https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md)
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
