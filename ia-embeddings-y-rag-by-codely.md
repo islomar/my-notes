@@ -52,9 +52,14 @@
 - En algunos tutoriales se propone tener una tabla con todos los embeddings, no tenerlos en las propias tablas de negocios.
   - Pero es más sencillo empezar por añadir el campo `embedding` a la tabla
 - Las diferentes formas de añadir embeddings
-  - Specific field
-  - Specific table
-  - Generic table
+  - **Specific field**
+    - A la tabla `courses` le añado un campo `embedding`
+  - **Specific table**
+    - Tengo una tabla`course_embeddings` (desnormalización)
+    - Probablemente la mejor.
+  - **Generic table** (con todos los embeddings dentro)
+    - Tengo una tabla genérica `embeddings`
+    - IMO demasiada abstracción, demasiada generalización
 
 ## 👨‍💻 Optimiza tu RAG añadiendo más contexto
 - TBD
