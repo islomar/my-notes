@@ -235,6 +235,7 @@ main/08-testing/3-llm_ci)
 
 - <https://www.youtube.com/playlist?list=PLZVwXPbHD1KMRRUApy-cVI7q6B5QhoF3H>
 - [Deploy ANY Open-Source LLM with Ollama on an AWS EC2 + GPU in 10 Min (Llama-3.1, Gemma-2 etc.)](https://www.youtube.com/watch?v=SAhUc9ywIiw)
+  - <https://github.com/developersdigest/aws-ec2-cuda-ollama>
 
 ## Feedback
 
