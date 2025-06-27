@@ -6,7 +6,7 @@
   - Showing a **local LLM** Agent (Llama3.1), a tool "Test Driven Generator"
 - [RepoMix](https://github.com/yamadashy/repomix)
   - 📦 Repomix is a powerful tool that **packs your entire repository into a single, AI-friendly file**.
-It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.
+  - It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.
 - [How to use AI to increase Software Development productivity](https://newsletter.eng-leadership.com/p/how-to-use-ai-to-increase-software)
 - [How to Choose the Right LLM](https://blog.jetbrains.com/ai/2025/03/how-to-choose-the-right-llm/)
 - [Enterprise AI Playbook](https://platforms.substack.com/p/how-to-win-at-enterprise-ai-a-playbook)
@@ -20,7 +20,7 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   - [Lovable prompt generator](https://prompts4lovable.netlify.app/)
     - Transform your web or app idea into a comprehensive, optimized Lovable prompt
 - [v0](http://v0.dev/)
-- Bolt
+- [Bolt](https://bolt.new)
 - Lovable vs v0
   - <https://addyo.substack.com/p/ai-driven-prototyping-v0-bolt-and>
     - Use v0 for rapid UI development in React-based projects
@@ -46,12 +46,12 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - JetBrains Junie (AI Agent)
   - Use `.junie/general-guidelines.md`
 - Augment Code
-  - https://bsky.app/profile/did:plc:7vmjo77otwy2dzx6op76r2rv
+  - <https://bsky.app/profile/did:plc:7vmjo77otwy2dzx6op76r2rv>
   - What makes Augment different? Context. Every feature is context-aware. This means every suggestion, completion, and interaction reflects the components, APIs, and coding patterns in your codebase.
 - [Windsurf](https://codeium.com/windsurf)
 - [Cline](https://cline.bot/)
 - [OpenAI Codex CLI](https://github.com/openai/codex)
-  - https://openai.com/index/introducing-codex/
+  - <https://openai.com/index/introducing-codex/>
   - Use `AGENTS.md`
 - [Augment Code](https://www.augmentcode.com/)
   - It can be integrated with both VSCode and IntelliJ
@@ -61,8 +61,10 @@ It is perfect for when you need to feed your codebase to Large Language Models (
   - <https://plugins.jetbrains.com/plugin/27310-claude-code-beta->
 
 ## General AI Agents
+
 - [Manus](manus.im)
   - E.g. for research, resume screening, data analysis, etc.
+- [warp](https://www.warp.dev/): 
 
 ### Cursor
 
@@ -98,22 +100,38 @@ It is perfect for when you need to feed your codebase to Large Language Models (
 - [AI assisted coding in 2025](https://medium.com/clarityai-engineering/ai-assisted-coding-in-2025-6e800e4e61b5)
 - [Autonomous coding agents: A Codex example (martinfowler.com)](https://martinfowler.com/articles/exploring-gen-ai/autonomous-agents-codex-example.html)
 - [Building Custom Tooling with LLMs: A Case Study in Extending PlantUML](https://martinfowler.com/articles/exploring-gen-ai/16-building-custom-tooling-with-llms.html)
-
+- [An engineer's guide to vibe design (with prompts)](https://newsletter.posthog.com/p/an-engineers-guide-to-vibe-design)
 
 ### Vibe coding
 
 - <https://www.eferro.net/2025/04/vibe-coding-ii-when-flow-meets-tests.html>
+
+## Courses
+
+- [Accelerate Your Learning with ChatGPT](https://www.coursera.org/learn/learning-chatgpt)
+- [Anthropic's Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
+  - This tutorial also exists on [Google Sheets using Anthropic's Claude for Sheets extension](https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit?usp=sharing)
+- [Thinking Different with AI: A Self-Paced Collaborative Course](https://flowchainsensei.wordpress.com/2025/05/30/thinking-different-with-ai-a-self-paced-collaborative-course/)
+- [Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic](https://www.youtube.com/watch?v=kQmXtrmQ5Zg)
+- [Codely Courses](https://codely.com/en/courses)
+  - Add Artificial Intelligence Following Best Practices
+  - AI: Embeddings & RAG
+  - Automatic Embeddings in Postgres
 
 ## Prompting
 
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
 - [Development guidelines for Claude](https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md)
+- [From DDD Crew: AI DDD prompts and rules](https://github.com/ddd-crew/ai-ddd-prompts-and-rules/tree/main)
+  - [Domain terminology by Nick Tune](https://github.com/ddd-crew/ai-ddd-prompts-and-rules/blob/main/rules/domain-terminology-mismatch/domain-terminology.mdc)
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
   - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
+- [Vibe designing prompting: wireframe with an LLM](https://newsletter.posthog.com/i/165773384/step-wireframe-with-an-llm)
+  - Tools for color palette: [Coolors](https://coolors.co) or [Figma's palette generator](https://www.figma.com/color-palette-generator)
 - <https://dev.to/epilot/how-we-integrate-ai-in-epilot-chapter-1-aws-bedrock-prompt-engineering-17jh>
   - XML tags
   - AWS Bedrock
@@ -122,22 +140,21 @@ It is perfect for when you need to feed your codebase to Large Language Models (
     ```text
     Analyze the project structure and tech stack, and create a .junie/guidelines.md file with concise, well-structured information to help new developers. Include guidance on organizing the structure, running tests, executing scripts, and following best practices. Keep the content short, clear, and practical.
     ```
+
 - <https://bsky.app/profile/xpmatteo.bsky.social/post/3lmjiigahec2v> (also with Kent Beck)
-  ```
-  Please think deeply about how @vaughnvernon.bsky.social would refactor [this code] according to DDD principles
- ```
+  - `Please think deeply about how @vaughnvernon.bsky.social would refactor [this code] according to DDD principles`
 - Knowledge/code duplication improvement (Kent Beck): `run the copy/paste detector over the whole codebase to see if there are missing abstractions`
 - [My Blogging Routine: How I Write My Posts](https://flowchainsensei.wordpress.com/2025/04/26/my-blogging-routine-how-i-write-my-posts/)
-- https://kagent.dev/docs/getting-started/system-prompts
+- <https://kagent.dev/docs/getting-started/system-prompts>
 - [Prompt Engineering for Unbeatable AI Agents](https://aiablog.medium.com/prompt-engineering-for-unbeatable-ai-agents-df4a1abf4bd8)
 - [Junie guidelines for Spring Boot project development](https://gist.github.com/sivaprasadreddy/9751db630b819b39e5e87f5ecfb53346)
 
+### My own prompts
 
-### My own prompt
-- [General guidelines](.junie/general_guidelines.md)
-
+- [General guidelines, Spring Boot, project onboarding, etc.](.junie)
 
 ### "How to turn ChatGPT into your personal teacher"
+
 <https://www.linkedin.com/posts/ruben-hassid_how-to-turn-chatgpt-into-your-personal-teacher-activity-7314512192559579137-1Trs>
 
 "Act as an expert tutor who helps me master any topic through an interactive, interview-style course. The process must be recursive and personalized.
@@ -171,6 +188,7 @@ Here’s what I want you to do:
 Let’s begin: ask me what I want to learn."
 
 ## Pending
+
 - Create sections in my prompt.
 - Add mentions to parallel changes, tidy first, “make the change easy”, fast tests, separating behavior & structure changes, separating interface & implementation changes.
 - Include the use of TPP (Transformation-Priority Premise) for the baby steps
