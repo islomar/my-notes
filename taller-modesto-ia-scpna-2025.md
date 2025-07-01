@@ -65,3 +65,7 @@ Intenta obtener:
 - `llm` CLI:
   - Puedes crear templates
     - `cat repomix-XXX | llm -t aisecops`
+- Pedir a la IA que haga un plan para después pasárselo y que lo haga.
+- Se le puede pedir que te dé opciones.
+- **[LangFlow](https://www.langflow.org/)**: como n8n pero para IA. NoCode.
+    - [Step by step no-code RAG application using Langflow](https://www.youtube.com/watch?v=RWo4GDTZIsE)
