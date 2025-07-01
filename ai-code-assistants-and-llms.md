@@ -121,7 +121,7 @@
   - AI: Embeddings & RAG
   - Automatic Embeddings in Postgres
 
-## Prompting
+## Rules and Prompting
 
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
@@ -133,6 +133,8 @@
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
   - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
+- https://github.com/steipete/agent-rules
+  - A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
 - [Vibe designing prompting: wireframe with an LLM](https://newsletter.posthog.com/i/165773384/step-wireframe-with-an-llm)
   - Tools for color palette: [Coolors](https://coolors.co) or [Figma's palette generator](https://www.figma.com/color-palette-generator)
 - <https://dev.to/epilot/how-we-integrate-ai-in-epilot-chapter-1-aws-bedrock-prompt-engineering-17jh>
