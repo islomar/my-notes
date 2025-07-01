@@ -1,4 +1,4 @@
-# AI Code Assistants
+# AI Code Assistants & LLMs
 
 ## General
 
@@ -11,6 +11,8 @@
 - [How to Choose the Right LLM](https://blog.jetbrains.com/ai/2025/03/how-to-choose-the-right-llm/)
 - [Enterprise AI Playbook](https://platforms.substack.com/p/how-to-win-at-enterprise-ai-a-playbook)
 - <https://models.dev/>
+- [LangSmith](https://www.langchain.com/langsmith): observability
+  - LangSmith is a unified observability & evals platform where teams can debug, test, and monitor AI app performance — whether building with LangChain or not.
 
 ## Prototyping
 
@@ -64,7 +66,8 @@
 
 - [Manus](manus.im)
   - E.g. for research, resume screening, data analysis, etc.
-- [warp](https://www.warp.dev/): 
+- [warp](https://www.warp.dev/)
+  - Warp is the fastest way to build with multiple AI agents—from writing code to shipping it.
 
 ### Cursor
 

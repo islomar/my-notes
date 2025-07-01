@@ -136,6 +136,7 @@
 ![](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias_2.png)
 - `UserCourseSuggestionsGenerated`
 ![](ai-best-practices-codelytv/flujo_proyectar_sugerencias.png)
+  - Suggestion projection generation
 - More simple solution: just a join between both tables (the table with the user suggestions and the user table)
 
 ![](ai-best-practices-codelytv/flujo_total_completar_curso.png)

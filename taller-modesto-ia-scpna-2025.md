@@ -17,6 +17,7 @@
 - [Google AI Studio](https://aistudio.google.com)
   - Se puede usar [Gemini normal](https://gemini.google.com/) y corriente: la cuenta de pago te garantiza que no almacenan tu código, etc.
   - Le pasamos el XML de repomix
+- <https://github.com/dotnet/eShop>
 - Ejemplos de prompts:
 
 ```text
