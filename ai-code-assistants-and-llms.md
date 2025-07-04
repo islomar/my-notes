@@ -130,6 +130,7 @@
   - [Domain terminology by Nick Tune](https://github.com/ddd-crew/ai-ddd-prompts-and-rules/blob/main/rules/domain-terminology-mismatch/domain-terminology.mdc)
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
+- [Dan Abramov](https://bsky.app/profile/danabra.mov/post/3lt5mebcpw22y)
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
   - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
