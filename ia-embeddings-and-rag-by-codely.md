@@ -20,7 +20,7 @@
     - e.g. "lístame los cursos introductorios de arquitectura y diseño de software". No contiene la palabra "intro" necesariamente, e.g. el de "Clean Code".
     - Solución: búsqueda vectorial aka búsqueda semántica.
     - `SELECT * FROM courses ORDER BY (embedding <=> ${generateEmbedding("Intro a Arq. y diseño de software")}) LIMIT 10;`
-- RAG is a technique that enhances the capabilities of LLMs by **integrating them with external knowledge sources** to provide more accurate, relevant, and up-to-date responses. 
+- RAG is a technique that enhances the capabilities of LLMs by **integrating them with external knowledge sources** to provide more accurate, relevant, and up-to-date responses.
 
 ### 🧮 Qué es una búsqueda semántica y qué son los embeddings
 
@@ -146,6 +146,7 @@ const availableCourses = await this.courseRepository.searchAll();
 - "Solución": [guardar en Postgres únicamente los embeddings](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/04-what_db_to_choose/3-combine_databases/src/contexts/mooc/courses/infrastructure/MySqlCourseRepository.ts#L55-L55)
 
 ## 🍽️ Ingesta en base de datos vectorial datos de terceros
+
 - Veremos
   - Ingesta de PDFs
   - Ingesta de PDFs con la API declarativa
@@ -156,35 +157,38 @@ const availableCourses = await this.courseRepository.searchAll();
 - [Ejemplo de código: importa PDFs con LangChain](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/05-3r_party_data/1-pdfs)
   - Versión **imperativa** con la librería de LangChain.
   - Usa pgvector, no pgai
-  - http://localhost:3012/
+  - <http://localhost:3012/>
   - Importamos PDFs de un directorio (usando LangChain), generamos `documents` y a partir de ellos los embeddings y los almacenamos en un [vectorStore](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/05-3r_party_data/1-pdfs/src/app/scripts/scrape-posts.ts#L28-L28).
   - El embedding se genera a partir del [content](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/05-3r_party_data/1-pdfs/src/app/scripts/scrape-posts.ts#L45-L45)
 - LangChain permite formas sencillas de escrapear documentas, generar embeddings, buscar embeddings, etc.
   - Como un SQL.
-- Usamos [rlm/rag-prompt](https://smith.langchain.com/hub/rlm/rag-prompt): 
+- Usamos [rlm/rag-prompt](https://smith.langchain.com/hub/rlm/rag-prompt):
   - No tenemos que picar nuestra query de prompt, [esto nos proporciona el prompt](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/05-3r_party_data/1-pdfs/src/app/scripts/search-posts.ts#L23-L23)
     - El `context` que se le pasa es el texto del PDF que haya encontrado haciendo RAG. Esto hace RAG por debajo para saber qué pedazo me tiene que traer.
 - `npm run scrape-posts`
 - `npm run search-posts -- "En qué minuto se habla de dónde publicar eventos de dominio"`
 
 ### 🗣️ Importa PDFs con la API declarativa de LanchChain
+
 - Versión **declarativa** con la librería de LangChain
 - [Código de ejemplo](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/05-3r_party_data/2-declarative_pdfs)
 - Se simplifica, ya no es necesario dos llamadas diferentes. Por otra parte, el uso de `RunnablePassthrough()` hace que no haya que pasar la `query` dos veces como hacíamos en la primera versión imperativa.
 
 ### 🕸️ Scrapping web con Playwright y LangChain
+
 - [Código de ejemplo: web scrapping](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/05-3r_party_data/3-web_scrapping)
-- Uso de LangChain: [webpages, with Playwright](https://js.langchain.com/docs/integrations/document_loaders/web_loaders/web_playwright/): how to parse data from webpages using Playwright. 
+- Uso de LangChain: [webpages, with Playwright](https://js.langchain.com/docs/integrations/document_loaders/web_loaders/web_playwright/): how to parse data from webpages using Playwright.
   - No está pensada para usarla recursivamente
   - No podemos usar `RecursiveUrlLoader` porque no interpreta JS a la hora de escrapear.
 - Usamos el `chromium` de Playwright, no el de LangChain, porque este último no permite tener varias sesiones abiertas a la vez (paralelismo).  
-- http://localhost:3012/
+- <http://localhost:3012/>
 - Si en la tabla de DB intentas meter un UUID que no es válido, LangChain no peta y en su lugar te lo inserta creando un UUID: cuidado con eso para evitar insertar filas duplicadas.
 - La respuesta tarda demasiado porque hay demasiado contexto. Troceando mejorará.
 
 ## 🍄 Mejora la búsqueda por embeddings con datos de terceros
 
 ### ✂️ Formas de cortar los datos para guardarlos de forma optimizada: Chunking
+
 - 4 ways of chunking
   - **Length-based**
     - Character-based: cada N caracteres
@@ -193,7 +197,19 @@ const availableCourses = await this.courseRepository.searchAll();
     - Por párrafos: se puede limitar el tamaño de los párrafos
     - Paragraphs > sentences > words > chars
   - **Document-structed based**
+    - Split on HTML tags, CSS classes, fns...
   - **Semantic meaning based**
+    - El "mejor"
+    - Bloques según lo que contengan
+    - Para hacerlo, primero habría que pasar un LLM para generar esos chunks.
+      - Crea embeddings por frase y los compara, mira si hay algún "semantic breakpoint". Si no lo hay, las juntamos. Si la hay, es otro chunk nuevo.
+      - Técnica overlapping: aumentamos algunos chunks para pillar un poco del chunk anterior o posterior, porque probablemente estarán relacionados.
+- Anthropic le ha dado una vuelta de tuerca: es semantic, pero desde un chunk hace referencias a otros chunks.
+
+### 🪈 Pipeline de optimización de datos
+
+- [Código de ejemplo: optimize import pipeline](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/06-chunking/2-optimize_import_pipeline)
+- [Genera resúmenes de los PDFs sobre los que hacer los embeddings y las búsquedas posteriores](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/06-chunking/2-optimize_import_pipeline/src/app/scripts/scrape-posts.ts#L32-L32)
 
 ## 🔜 Conclusiones y siguientes pasos
 
