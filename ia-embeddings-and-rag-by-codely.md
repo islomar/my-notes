@@ -20,6 +20,7 @@
     - e.g. "lístame los cursos introductorios de arquitectura y diseño de software". No contiene la palabra "intro" necesariamente, e.g. el de "Clean Code".
     - Solución: búsqueda vectorial aka búsqueda semántica.
     - `SELECT * FROM courses ORDER BY (embedding <=> ${generateEmbedding("Intro a Arq. y diseño de software")}) LIMIT 10;`
+- RAG is a technique that enhances the capabilities of LLMs by **integrating them with external knowledge sources** to provide more accurate, relevant, and up-to-date responses. 
 
 ### 🧮 Qué es una búsqueda semántica y qué son los embeddings
 
@@ -92,16 +93,19 @@ const availableCourses = await this.courseRepository.searchAll();
 ## 👨‍💻 Optimiza tu RAG añadiendo más contexto
 
 ### 🛖 Qué valores guardar como embedding
+
 - [Ejemplo de código: qué guardar en el embedding](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/03-add_rag/1-what_to_store_embedding)
 - A la hora de crear el embedding, [añadimos más información](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/03-add_rag/1-what_to_store_embedding/src/app/scripts/search-courses-by-ids.ts#L30-L30): guardar no únicamente el nombre del curso, sino también un resumen y las categorías. De esa manera, obtengo una información más precisa.
 - [LangSmith](https://www.langchain.com/langsmith): observabilidad existente en LangChain
   - LangSmith is a unified observability & evals platform where teams can debug, test, and monitor AI app performance — whether building with LangChain or not.
 
 ### 🗣️ Añade más contexto en los embeddings: Búsquedas granulares
+
 - [Código de ejemplo: cómo añadir más contexto en los embeddings](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/03-add_rag/2-add_embedding_context)
 - Para el embedding, [añadimos el ID, nombre, summary y categorías](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/03-add_rag/2-add_embedding_context/src/contexts/mooc/user-course-suggestions/infrastructure/OllamaLlama31CourseSuggestionsGenerator.ts#L108-L108), en formato `yaml` (porque cuantos menos caracteres metamos para el embedding, mejor, si no se creerá que importan - mejor no usar json o XML para esto)
 
 ### ⏳ Ordena los resultados de una búsqueda por embeddings
+
 - Interesa hacerlo por ejemplo si queremos los N cursos similares más recientes, por orden.
 - [Código de ejemplo: ordenación RAG más reciente](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/03-add_rag/3-rag_sort_by_recent)
 - [En la SQL, ordenamos por la combinación del embedding y la recencia (con un peso, 0.001, por prueba y error, se puede empezar por 0.1)](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/03-add_rag/3-rag_sort_by_recent/src/contexts/mooc/courses/infrastructure/PostgresCourseRepository.ts#L86-L86)
@@ -109,15 +113,87 @@ const availableCourses = await this.courseRepository.searchAll();
 ## 🔥 Qué base de datos elegir para hacer búsqueda por embeddings
 
 ### ⛓️ Cómo delegar a infraestructura la generación de embeddings
-- TBD
+
+- [Código de ejemplo de pgai](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/04-what_db_to_choose/1-pgai)
+- Cómo delegar la lógica de la evolución de los embeddings.
+- Uso de [pgai Vectorizer](https://github.com/timescale/pgai): Power your RAG and Agentic applications with PostgreSQL
+  - No es lo mismo que pgvector. `pgai` es una capa por encima de pgvector. Es otra extensión que [se tiene que habilitar](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/04-what_db_to_choose/1-pgai/1-simple_example/databases/0-enable-pgai.sql#L1-L1)
+  - [Docker container con postgres_pgai](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/04-what_db_to_choose/1-pgai/1-simple_example/compose.yml#L3-L3)
+- Vamos a generar los embeddings automáticamente: cada vez que se haga un insert, se genera su embedding.
+  - Nos apoyamos en el [pgai-vectorizer_worker](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/04-what_db_to_choose/1-pgai/1-simple_example/compose.yml#L15-L15)
+    - Cada 5 segundos mira si hay algo que actualizar. En Producción no sería así: hay un Kafka de por medio y se enchufan a un stream de datos.
+    - El worker necesita algo para generar los embeddings. En este ejemplo, con Ollama.
+  - Es necesario [configurar a `ai` cómo se deben generar los embeddings](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/04-what_db_to_choose/1-pgai/1-simple_example/databases/2-add_vectorizer_to_courses.sql#L1-L1)
+    - Configuramos que el campo importante es `summary`
+  - Tabla `courses_embedding_store`: la crea pg ai y no la tocamos directamente.
+    - Lo que sí usaremos será la vista `courses_embedding` que se ha creado también automáticamente
+- Creamos el embedding de la query [durante el SELECT](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/04-what_db_to_choose/1-pgai/1-simple_example/src/app/scripts/search-courses.ts#L15-L15)
+  - Te quitas dependencias
+
+### 🥊 Qué base de datos vectorial elegir: AWS vs Pinecone vs Postgres vs Supabase vs Timescale vs Redis
+
+- pgai no depende de Timescale. Es decir, podríamos usar pgai en cualquier base de datos Postgres.
+- Postgres + pgvector (e.g. AWS Aurora, Supabase) VS Postgres + pgai (e.g. Timescale) VS Private (Pinecone, AWS Kendra) VS SqLite vec VS Mongo (Mongo Atlas) VS Redis (Redis Labs)
+- Opinión de opción más sensata: **Postgres + pgvector**
+  - Para embebidos: SQLite vec
+
+![](ai-embeddings-and-rag-codely/vector_database_table_comparisons.png)
+
+### 🐦‍🔥 Cómo añadir RAG utilizando una base de datos sin soporte nativo a tipos vectoriales
+
+- [Código de ejemplo: combine databases](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/04-what_db_to_choose/3-combine_databases)
+- E.g. si usas MySQL. Podríamos almacenar los embeddings pero NO hacer la búsqueda por distancia vectorial
+- "Solución": [guardar en Postgres únicamente los embeddings](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/04-what_db_to_choose/3-combine_databases/src/contexts/mooc/courses/infrastructure/MySqlCourseRepository.ts#L55-L55)
 
 ## 🍽️ Ingesta en base de datos vectorial datos de terceros
+- Veremos
+  - Ingesta de PDFs
+  - Ingesta de PDFs con la API declarativa
+  - Scraping web
 
-- TBD
+### 📄 Ingesta PDFs a tu IA para hacer RAG con LanchChain
+
+- [Ejemplo de código: importa PDFs con LangChain](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/05-3r_party_data/1-pdfs)
+  - Versión **imperativa** con la librería de LangChain.
+  - Usa pgvector, no pgai
+  - http://localhost:3012/
+  - Importamos PDFs de un directorio (usando LangChain), generamos `documents` y a partir de ellos los embeddings y los almacenamos en un [vectorStore](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/05-3r_party_data/1-pdfs/src/app/scripts/scrape-posts.ts#L28-L28).
+  - El embedding se genera a partir del [content](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/05-3r_party_data/1-pdfs/src/app/scripts/scrape-posts.ts#L45-L45)
+- LangChain permite formas sencillas de escrapear documentas, generar embeddings, buscar embeddings, etc.
+  - Como un SQL.
+- Usamos [rlm/rag-prompt](https://smith.langchain.com/hub/rlm/rag-prompt): 
+  - No tenemos que picar nuestra query de prompt, [esto nos proporciona el prompt](https://github.com/CodelyTV/ai-search_engine_with_rag-course/blob/c966d5ac6c5d21d6eafbc7932a36a7ec3fcf61b4/05-3r_party_data/1-pdfs/src/app/scripts/search-posts.ts#L23-L23)
+    - El `context` que se le pasa es el texto del PDF que haya encontrado haciendo RAG. Esto hace RAG por debajo para saber qué pedazo me tiene que traer.
+- `npm run scrape-posts`
+- `npm run search-posts -- "En qué minuto se habla de dónde publicar eventos de dominio"`
+
+### 🗣️ Importa PDFs con la API declarativa de LanchChain
+- Versión **declarativa** con la librería de LangChain
+- [Código de ejemplo](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/05-3r_party_data/2-declarative_pdfs)
+- Se simplifica, ya no es necesario dos llamadas diferentes. Por otra parte, el uso de `RunnablePassthrough()` hace que no haya que pasar la `query` dos veces como hacíamos en la primera versión imperativa.
+
+### 🕸️ Scrapping web con Playwright y LangChain
+- [Código de ejemplo: web scrapping](https://github.com/CodelyTV/ai-search_engine_with_rag-course/tree/main/05-3r_party_data/3-web_scrapping)
+- Uso de LangChain: [webpages, with Playwright](https://js.langchain.com/docs/integrations/document_loaders/web_loaders/web_playwright/): how to parse data from webpages using Playwright. 
+  - No está pensada para usarla recursivamente
+  - No podemos usar `RecursiveUrlLoader` porque no interpreta JS a la hora de escrapear.
+- Usamos el `chromium` de Playwright, no el de LangChain, porque este último no permite tener varias sesiones abiertas a la vez (paralelismo).  
+- http://localhost:3012/
+- Si en la tabla de DB intentas meter un UUID que no es válido, LangChain no peta y en su lugar te lo inserta creando un UUID: cuidado con eso para evitar insertar filas duplicadas.
+- La respuesta tarda demasiado porque hay demasiado contexto. Troceando mejorará.
 
 ## 🍄 Mejora la búsqueda por embeddings con datos de terceros
 
-- TBD
+### ✂️ Formas de cortar los datos para guardarlos de forma optimizada: Chunking
+- 4 ways of chunking
+  - **Length-based**
+    - Character-based: cada N caracteres
+    - Token-based
+  - **Text-structured based**
+    - Por párrafos: se puede limitar el tamaño de los párrafos
+    - Paragraphs > sentences > words > chars
+  - **Document-structed based**
+  - **Semantic meaning based**
 
 ## 🔜 Conclusiones y siguientes pasos
 
