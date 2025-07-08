@@ -193,6 +193,9 @@ Here’s what I want you to do:
 
 Let’s begin: ask me what I want to learn."
 
+## General tools
+- [QuizFoo: Create custom quizzes on any topic in seconds](https://www.quizfoo.com/en)
+
 ## Pending
 
 - Create sections in my prompt.
