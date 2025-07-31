@@ -13,6 +13,8 @@
 - <https://models.dev/>
 - [LangSmith](https://www.langchain.com/langsmith): observability
   - LangSmith is a unified observability & evals platform where teams can debug, test, and monitor AI app performance — whether building with LangChain or not.
+- [12-Factor Agents - Principles for building reliable LLM applications](https://github.com/humanlayer/12-factor-agents?)
+- [Turn off your AI Assistant for Code Katas](https://coding-is-like-cooking.info/2025/07/turn-off-your-ai-assistant-for-code-katas/)
 
 ## Prototyping
 
@@ -104,6 +106,18 @@
 - [Autonomous coding agents: A Codex example (martinfowler.com)](https://martinfowler.com/articles/exploring-gen-ai/autonomous-agents-codex-example.html)
 - [Building Custom Tooling with LLMs: A Case Study in Extending PlantUML](https://martinfowler.com/articles/exploring-gen-ai/16-building-custom-tooling-with-llms.html)
 - [An engineer's guide to vibe design (with prompts)](https://newsletter.posthog.com/p/an-engineers-guide-to-vibe-design)
+- [A Structured Workflow for "Vibe Coding" Full-Stack Apps](https://dev.to/wasp/a-structured-workflow-for-vibe-coding-full-stack-apps-352l)
+- https://github.com/HelloThisIsFlo/SoCraTes-Buddy
+- https://www.linkedin.com/posts/j-birch_i-have-a-new-ai-workflow-in-place-for-my-activity-7356250364938973184-9Nl3
+  ```
+  Now that GitHub supports Copilot Agents and the ability to assign issues directly to Copilot, this unlocked an opportunity. If I could get those issues from Linear into GitHub issue, Copilot would be able to execute those tasks for me. This would allow me to keep the same workflow that I have now for myself, having AI go through the same project management flow as me. Using a combination of Zapier and GitHub Actions, I now have AI agents working on my tasks from Linear in parallel to things I am working on:
+
+  - I start by labelling an issue in linear with “Android AI Assist”
+  - My Zapier workflow will detect this update to the issue, cloning its content to a GitHub issue. This includes both text content and any images
+  - A GitHub action will detect a new issue has been added, assigning it to copilot
+  - Copilot will work on the issue and create a PR when finished
+  - I can then review the PR and copilot will iterate on any changes that are required from my comments
+  ```
 
 ### Vibe coding
 
@@ -154,6 +168,7 @@
 - <https://kagent.dev/docs/getting-started/system-prompts>
 - [Prompt Engineering for Unbeatable AI Agents](https://aiablog.medium.com/prompt-engineering-for-unbeatable-ai-agents-df4a1abf4bd8)
 - [Junie guidelines for Spring Boot project development](https://gist.github.com/sivaprasadreddy/9751db630b819b39e5e87f5ecfb53346)
+- https://github.com/HelloThisIsFlo/SoCraTes-Buddy/tree/main/.cursor/rules
 
 ### My own prompts
 
@@ -193,8 +208,17 @@ Here’s what I want you to do:
 
 Let’s begin: ask me what I want to learn."
 
+### Prompt injection
+- https://gandalf.lakera.ai/
+- [What Is a Prompt Injection Attack? [Examples & Prevention]](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
+- [Prompt Injection](https://learnprompting.org/docs/prompt_hacking/injection)
+
 ## General tools
 - [QuizFoo: Create custom quizzes on any topic in seconds](https://www.quizfoo.com/en)
+
+## Critical thinking
+- [Are developers slowed down by AI? Evaluating an RCT (?) and what it tells us about developer productivity](https://www.fightforthehuman.com/are-developers-slowed-down-by-ai-evaluating-an-rct-and-what-it-tells-us-about-developer-productivity/)
+
 
 ## Pending
 
