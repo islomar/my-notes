@@ -42,7 +42,7 @@
   - <https://llm.datasette.io/>
   - <https://llm.datasette.io/en/stable/templates.html>
 
-## List of AI coding assistants
+## List of AI coding assistants and tools
 
 - GitHub Copilot
 - Cursor
@@ -58,11 +58,24 @@
   - <https://openai.com/index/introducing-codex/>
   - Use `AGENTS.md`
 - [Augment Code](https://www.augmentcode.com/)
-  - It can be integrated with both VSCode and IntelliJ
+  - It can be integrated with both VSCode and JetBrains
+  - Sponsor of Kent Beck
 - [KAgent](https://k8scockpit.tech/posts/kagent): Agentic AI for k8s
   - <https://www.cncf.io/blog/2025/04/15/kagent-bringing-agentic-ai-to-cloud-native/>
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
   - <https://plugins.jetbrains.com/plugin/27310-claude-code-beta->
+- [Repo Prompt](https://repoprompt.com/)
+  - [Getting started with Repo Prompt](https://www.youtube.com/watch?v=fm3VreCt-5E)
+  - [Giving Claude Code access to ChatGPT - Claude Code Pair Programming with o3 via Repo Prompt's Chat](https://www.youtube.com/watch?v=JzVnXzmZweg)
+  - "Repo Prompt's Pair Programming mode. It provides a powerful chat tool to Claude Code, and lets Sonnet or Opus manage context and spoon feed o3 the context necessary to work through your most complicated problems."
+- [Gemini](https://gemini.google.com/) and [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+  - Gemini CLI is an open-source AI agent that brings the power of Gemini directly into your terminal.
+  - [Gemini MCP tool](https://github.com/jamubc/gemini-mcp-tool)
+- [Jules](http://jules.google/)
+  - An Asynchronous Coding Agent
+- [Goose](https://github.com/block/goose)
+  - Runs locally.
+  - goose is your on-machine AI agent, capable of automating complex development tasks from start to finish. More than just code suggestions, goose can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows, and interact with external APIs - autonomously.
 
 ## General AI Agents
 
@@ -118,6 +131,8 @@
   - Copilot will work on the issue and create a PR when finished
   - I can then review the PR and copilot will iterate on any changes that are required from my comments
   ```
+- https://x.com/steipete/status/1955274140832731203
+  - "Building a new feature, I let Opus 4.1 pair program with GPT-5 High via @RepoPrompt. Opus directs, GPT-5 implements, Gemini Flash applies file edits."
 
 ### Vibe coding
 
@@ -140,8 +155,12 @@
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
 - [Development guidelines for Claude](https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md)
+- Kent Beck
+  - https://tidyfirst.substack.com/i/166781850/appendix-system-prompt
+  - https://github.com/KentBeck/BPlusTree3/blob/main/.claude/system_prompt_additions.md
 - [From DDD Crew: AI DDD prompts and rules](https://github.com/ddd-crew/ai-ddd-prompts-and-rules/tree/main)
   - [Domain terminology by Nick Tune](https://github.com/ddd-crew/ai-ddd-prompts-and-rules/blob/main/rules/domain-terminology-mismatch/domain-terminology.mdc)
+- [Can We Make AI Code Assistants Smarter by Asking Them to Write Their Own Rules?](https://nik1379616.substack.com/p/can-we-make-ai-code-assistants-smarter)
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Dan Abramov](https://bsky.app/profile/danabra.mov/post/3lt5mebcpw22y)
@@ -169,6 +188,7 @@
 - [Prompt Engineering for Unbeatable AI Agents](https://aiablog.medium.com/prompt-engineering-for-unbeatable-ai-agents-df4a1abf4bd8)
 - [Junie guidelines for Spring Boot project development](https://gist.github.com/sivaprasadreddy/9751db630b819b39e5e87f5ecfb53346)
 - https://github.com/HelloThisIsFlo/SoCraTes-Buddy/tree/main/.cursor/rules
+- TDD: `Let’s implement this using strict outside-in TDD, whereby we write the simplest possible failing test, followed by the smallest amount of implementation code that will satisfy it, and iterate from there`
 
 ### My own prompts
 
