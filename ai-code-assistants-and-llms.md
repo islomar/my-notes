@@ -70,11 +70,15 @@
   - "Repo Prompt's Pair Programming mode. It provides a powerful chat tool to Claude Code, and lets Sonnet or Opus manage context and spoon feed o3 the context necessary to work through your most complicated problems."
 - [Gemini](https://gemini.google.com/) and [Gemini CLI](https://github.com/google-gemini/gemini-cli)
   - Gemini CLI is an open-source AI agent that brings the power of Gemini directly into your terminal.
+  - Local utility.
   - [Gemini MCP tool](https://github.com/jamubc/gemini-mcp-tool)
 - [Jules](http://jules.google/)
-  - An Asynchronous Coding Agent
+  - An Asynchronous Coding Agent for your GitHub repositories.
+  - [Jules in 90 seconds](https://www.youtube.com/watch?v=M2G27_B7BBM)
+  - Powered by Gemini
+  - Web-based
 - [Goose](https://github.com/block/goose)
-  - Runs locally.
+  - Local utility.
   - goose is your on-machine AI agent, capable of automating complex development tasks from start to finish. More than just code suggestions, goose can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows, and interact with external APIs - autonomously.
 
 ## General AI Agents
@@ -120,8 +124,9 @@
 - [Building Custom Tooling with LLMs: A Case Study in Extending PlantUML](https://martinfowler.com/articles/exploring-gen-ai/16-building-custom-tooling-with-llms.html)
 - [An engineer's guide to vibe design (with prompts)](https://newsletter.posthog.com/p/an-engineers-guide-to-vibe-design)
 - [A Structured Workflow for "Vibe Coding" Full-Stack Apps](https://dev.to/wasp/a-structured-workflow-for-vibe-coding-full-stack-apps-352l)
-- https://github.com/HelloThisIsFlo/SoCraTes-Buddy
-- https://www.linkedin.com/posts/j-birch_i-have-a-new-ai-workflow-in-place-for-my-activity-7356250364938973184-9Nl3
+- <https://github.com/HelloThisIsFlo/SoCraTes-Buddy>
+- <https://www.linkedin.com/posts/j-birch_i-have-a-new-ai-workflow-in-place-for-my-activity-7356250364938973184-9Nl3>
+
   ```
   Now that GitHub supports Copilot Agents and the ability to assign issues directly to Copilot, this unlocked an opportunity. If I could get those issues from Linear into GitHub issue, Copilot would be able to execute those tasks for me. This would allow me to keep the same workflow that I have now for myself, having AI go through the same project management flow as me. Using a combination of Zapier and GitHub Actions, I now have AI agents working on my tasks from Linear in parallel to things I am working on:
 
@@ -131,7 +136,8 @@
   - Copilot will work on the issue and create a PR when finished
   - I can then review the PR and copilot will iterate on any changes that are required from my comments
   ```
-- https://x.com/steipete/status/1955274140832731203
+
+- <https://x.com/steipete/status/1955274140832731203>
   - "Building a new feature, I let Opus 4.1 pair program with GPT-5 High via @RepoPrompt. Opus directs, GPT-5 implements, Gemini Flash applies file edits."
 
 ### Vibe coding
@@ -156,8 +162,8 @@
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
 - [Development guidelines for Claude](https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md)
 - Kent Beck
-  - https://tidyfirst.substack.com/i/166781850/appendix-system-prompt
-  - https://github.com/KentBeck/BPlusTree3/blob/main/.claude/system_prompt_additions.md
+  - <https://tidyfirst.substack.com/i/166781850/appendix-system-prompt>
+  - <https://github.com/KentBeck/BPlusTree3/blob/main/.claude/system_prompt_additions.md>
 - [From DDD Crew: AI DDD prompts and rules](https://github.com/ddd-crew/ai-ddd-prompts-and-rules/tree/main)
   - [Domain terminology by Nick Tune](https://github.com/ddd-crew/ai-ddd-prompts-and-rules/blob/main/rules/domain-terminology-mismatch/domain-terminology.mdc)
 - [Can We Make AI Code Assistants Smarter by Asking Them to Write Their Own Rules?](https://nik1379616.substack.com/p/can-we-make-ai-code-assistants-smarter)
@@ -167,7 +173,7 @@
 - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
   - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
-- https://github.com/steipete/agent-rules
+- <https://github.com/steipete/agent-rules>
   - A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
 - [Vibe designing prompting: wireframe with an LLM](https://newsletter.posthog.com/i/165773384/step-wireframe-with-an-llm)
   - Tools for color palette: [Coolors](https://coolors.co) or [Figma's palette generator](https://www.figma.com/color-palette-generator)
@@ -187,7 +193,7 @@
 - <https://kagent.dev/docs/getting-started/system-prompts>
 - [Prompt Engineering for Unbeatable AI Agents](https://aiablog.medium.com/prompt-engineering-for-unbeatable-ai-agents-df4a1abf4bd8)
 - [Junie guidelines for Spring Boot project development](https://gist.github.com/sivaprasadreddy/9751db630b819b39e5e87f5ecfb53346)
-- https://github.com/HelloThisIsFlo/SoCraTes-Buddy/tree/main/.cursor/rules
+- <https://github.com/HelloThisIsFlo/SoCraTes-Buddy/tree/main/.cursor/rules>
 - TDD: `Let’s implement this using strict outside-in TDD, whereby we write the simplest possible failing test, followed by the smallest amount of implementation code that will satisfy it, and iterate from there`
 
 ### My own prompts
@@ -229,16 +235,23 @@ Here’s what I want you to do:
 Let’s begin: ask me what I want to learn."
 
 ### Prompt injection
-- https://gandalf.lakera.ai/
+
+- <https://gandalf.lakera.ai/>
 - [What Is a Prompt Injection Attack? [Examples & Prevention]](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
 - [Prompt Injection](https://learnprompting.org/docs/prompt_hacking/injection)
 
 ## General tools
+
 - [QuizFoo: Create custom quizzes on any topic in seconds](https://www.quizfoo.com/en)
 
 ## Critical thinking
-- [Are developers slowed down by AI? Evaluating an RCT (?) and what it tells us about developer productivity](https://www.fightforthehuman.com/are-developers-slowed-down-by-ai-evaluating-an-rct-and-what-it-tells-us-about-developer-productivity/)
 
+- [Are developers slowed down by AI? Evaluating an RCT (?) and what it tells us about developer productivity](https://www.fightforthehuman.com/are-developers-slowed-down-by-ai-evaluating-an-rct-and-what-it-tells-us-about-developer-productivity/)
+- [Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task](https://arxiv.org/abs/2506.08872)
+- [But don't forget the downsides](https://blog.korny.info/2025/07/18/a-real-world-ai-coding-case-sample#but-dont-forget-the-downsides)
+
+## Other readings
+- [Gemini CLI or Jules: Which tool is for you?](https://medium.com/@denisetkwan/gemini-cli-or-jules-which-tool-is-for-you-20b7d857641d)
 
 ## Pending
 
