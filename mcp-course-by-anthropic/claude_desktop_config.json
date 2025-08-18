@@ -1,0 +1,27 @@
+{
+    "mcpServers": {
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "~/workspace/my-notes/mcp-course-by-anthropic"
+            ]
+        },
+        "research": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "~/workspace/my-notes/mcp-course-by-anthropic",
+                "run",
+                "research_server.py"
+            ]
+        },
+        "fetch": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-fetch"
+            ]
+        }
+    }
+}

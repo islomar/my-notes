@@ -5,6 +5,13 @@
 - <https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/>
 - 1 h 38 min
 - 11 video lessons
+- [Community](https://community.deeplearning.ai/c/short-course-q-a/mcp-build-rich-context-ai-apps-with-anthropic/525)
+- Other DeepLearning.AI courses: https://www.deeplearning.ai/courses/
+  - https://www.deeplearning.ai/short-courses/pair-programming-llm/
+  - https://www.deeplearning.ai/short-courses/post-training-of-llms/
+  - https://www.deeplearning.ai/short-courses/pydantic-for-llm-workflows/
+  - https://www.aihero.dev/mcp-prerequisites (with TypeScript)
+  - [Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic](https://www.youtube.com/watch?v=kQmXtrmQ5Zg)
 
 ## Lesson 1: Why MCP
 
@@ -109,16 +116,48 @@ uv run mcp_chatbot.py
 
 ## Lesson 8: Configuring Servers for Claude Desktop
 
-- TBD
+- It shows how to connect Claude Desktop to the local MCP Servers.
+- From the Claude Desktop UI, it configures the [claude_desktop_config.json](./mcp-course-by-anthropic/claude_desktop_config.json)
+- [MCP Clients](https://modelcontextprotocol.io/clients)
 
 ## Lesson 9: Creating and deploying remote servers
 
-- TBD
+- We use [Render](https://render.com/) to deploy our MCP Server.
+  - It does not suppor `uv`, so we need to make it compatible with pip: `uv pip compile pyproject.toml > requirements.txt`
+  - We also do `echo "python-3.11.11" > runtime.txt`
+- We need a GitHub repository so that Render deploys it from there.  
+  - https://github.com/hsalami/remote-research
+- From Render dashboard
+  - Select the GH repo
+  - Start Command: `python research_server.py`
+  - Deploy
+  - https://remote-research.onrender.com/sse
+- Resources
+  - Deploy Remote MCP servers on CloudFlare [link](https://developers.cloudflare.com/agents/guides/remote-mcp-server/)
+  - Streamable HTTP transport [link](https://github.com/modelcontextprotocol/python-sdk/blob/main/README.md#streamable-http-transport)
 
-## Lesson 10: TBD
+## Lesson 10: Conclusion
 
-- TBD
+- Not covered:
+  - Authentication: the March 2025 specification update enables MCP clients and servers to make use of OAuth 2.1
+  - Roots: 
+    - it's a URI that a client suggests a server should operate.
+    - "Only look in these specific folders for the files I need".
+    - When a client connects to a server, it declares which roots the server should work with.
+- Sampling
+  - It allows a server to **request inference from the LLM** they're connected to via the MCP client, giving the user application full control over security, privacy, and cost.
+  - It's a way for servers to leverage the LLM's intelligence as part of their processing pipeline.
+- **Composability**: an MCP client can be a server and vice-versa
+  - Sampling + Composability
+  - An orchestrator agent, using an Analysis Agent, a Coding Agent, a Research Agent, etc.
+- An official **MCP Registry API**
+  1. Discovery
+  2. Centralization
+  3. Verification
+- An MCP server registry helps make agents **self-evolving** by letting them discover and choose their own tools.
+  - E.g. published under a [well-known](https://en.wikipedia.org/wiki/Well-known_URI) folder: https://shopify.com/.well-known/mcp.json
 
-## Lesson 11: TBD
+
+## Appendix - Tips and Help
 
 - TBD
