@@ -73,7 +73,14 @@
 
 ## Understanding Language Models: Encoding and Decoding Context with Attention
 
-- TBD
+![](How-Transformer-LLMs-Work-Anthropic-course/encoding-and-decoding-context.png)
+
+- Word2Vec creates static embeddings: the same embedding is generated for the word "bank" regardless of the context.
+- **Recurrent Neural Networks (RNNs)** can be used to model entire sequences.
+- Each step in this architecture is **autoregressive**:
+  - the output from one pass becomes the input for the next one.
+- Most models are autoregressive and **they generate a single token each time**
+![](How-Transformer-LLMs-Work-Anthropic-course/autoregressive.png)
 
 ## Understanding Language Models: Transformers
 
