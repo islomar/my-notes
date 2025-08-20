@@ -77,26 +77,147 @@
 
 - Word2Vec creates static embeddings: the same embedding is generated for the word "bank" regardless of the context.
 - **Recurrent Neural Networks (RNNs)** can be used to model entire sequences.
+  - RNN: Recurrent Neural Network
 - Each step in this architecture is **autoregressive**:
   - the output from one pass becomes the input for the next one.
 - Most models are autoregressive and **they generate a single token each time**
 ![](How-Transformer-LLMs-Work-Anthropic-course/autoregressive.png)
+- Word2Vec
+  - Encoder (RNN): it represents language
+    - It generates the context in the form of an embedding: one single **context embedding** representing the entire input.
+  - Decoder (RNN): it generate language
+  - Issue: the **context embedding** is for the whole sentence, problem if the sentence is too complex
+![](How-Transformer-LLMs-Work-Anthropic-course/word2vec_encoding_and_decoding_context.png)
+- **Attention** (2014) allows a model to focus on **parts** of the input that are relevant to on another.
+  - Attention selectively determines which words are most important in a given sentence.
+
+  - The attention Encoder does not pass a single "context embedding", but the hidden states of all input words. A stateful word is an internal vector from a hidden layer of an RNN that contains the information about the previous words.
+  - The Decoder then uses the Attention mechanism to look at the entire sequence.
+    - The result is better because now you look at the entire sequence using embedding **for each token** or words instead of the smaller and more limited context embedding.
+![](How-Transformer-LLMs-Work-Anthropic-course/Attention.png)
 
 ## Understanding Language Models: Transformers
 
-- TBD
+- Two big models
+  - **Representation Models**
+    - Embedding models
+  - **Generative Models**
+- Paper "Attention is all you need" (2017)
+  - <https://en.wikipedia.org/wiki/Attention_Is_All_You_Need>
+  - [Paper in PDF](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
+  - "The name 'Transformer' was picked because Jakob Uszkoreit, one of the paper's authors, liked the sound of that word."
+  - A key reason for why the architecture is preferred by most modern LLMs is the parallelizability of the architecture over its predecessors. This ensures that the operations necessary for training can be accelerated on a GPU allowing both faster training times and models of bigger sizes to be trained.
+  - Since the Transformer model is not a seq2seq model and does not rely on the sequence of the text in order to perform encoding and decoding, the paper relied on the use of sine and cosine wave functions to encode the position of the token into the embedding.
+  - For their 100M-parameter Transformer model, the authors increased the learning rate linearly for the first 4000 (warmup) steps and decreased it proportionally to inverse square root of the current step number.
+- The Transformer architecture is based solely in **attention**, without the Recurrent Neural Network.
+- Could be trained in parallel which speeds up calculation significantly.
+- **Self-attention**
+  - Self-attention, sometimes called intra-attention is an attention mechanism relating different positions
+of a single sequence in order to compute a representation of the sequence.
+  - E.g. attention only in the input sequence.
+- The Transformer Decoder can take any previously generated words and pass it to the masked self-attention.
+  - Intermediate embeddings are generated and passed to another attention network together with the embeddings of the encoder.
+- It randomly initializes the embeddings
+- The original Transformer serves well to translation tasks but not others like text classification.  
+![](How-Transformer-LLMs-Work-Anthropic-course/transformers-1.png)
+![](How-Transformer-LLMs-Work-Anthropic-course/transformers-2.png)
+- In 2018, a new architecture called **BERT (Bidirectional Encoder Representations from Transformers)** was introduced that could be leveraged for wide variety of tasks.
+  - **Encoder only** architecture, focused on representing language and generating contextual word embeddings.
+  - The input contains an additional token: **CLS or "Classification Token"**, used as a representation for the entire input.
+![](How-Transformer-LLMs-Work-Anthropic-course/bert-1.png)
+![](How-Transformer-LLMs-Work-Anthropic-course/bert-2png)
+![](How-Transformer-LLMs-Work-Anthropic-course/training-steps.png)
+- **Generative models** use a different architecture.
+  - Randomly initialized embeddings.
+  - The input is passed to the **Decoders only**, as generative models tend to only stack decoders.
+  - One of the first implementations was GPT
+![](How-Transformer-LLMs-Work-Anthropic-course/transformer-models.png)
+- **Context Length**
+  - Both models have it.
+  - It includes both the input and the output
+  ![](How-Transformer-LLMs-Work-Anthropic-course/context-length.png)
+- Parameters
+  - GPT-1 had 117 Million parameters
+  - GPT-2 had 1.5 Billion parameters
+  - GPT-3 had 175 Billion parameters
+  - GPT-4 had 1.8 Trillion parameters
+  - GPT-5 had 1.5 Trillion parameters (unconfirmed)
+  - Claude 4 had 50-100 Billion parameters (unconfirmed)
+  ![](How-Transformer-LLMs-Work-Anthropic-course/year-of-generative-ai.png)
+
 
 ## Tokenizers
 
-- TBD
+- See [Jupyter Notebook with example](./How-Transformer-LLMs-Work-Anthropic-course/L2_tokenizers.ipynb)
+  - Vocabulary length: 28.996
+  - Tokenizers used in the example:
+    - bert-base-cased
+    - bert-base-uncased
+    - Xenova/gpt-4
+    - gpt2
+    - google/flan-t5-small
+    - bigcode/starcoder2-15b
+    - microsoft/Phi-3-mini-4k-instruct
+    - Qwen/Qwen2-VL-7B-Instruct
+- Break down the text into smaller pieces
+- Embeddings: turn tokens into numeric representations
+  - Embeddings are static and created independently of every other token.
+- These embeddings are passed to the Language Model and converted into **Contextualized Embeddings**  
+  - There is one contextualized embedding per token, but ALL other tokens have been considered to generate it.
+- Tokens can be words or parts of a word. It's necessary because tokenizers have a limited number of tokens or **vocabulary** 
+- Each token has a fixed ID which is used to represent the token and it's fed to the Language Model to generate the token embedding.
+- The output of the Language Model is an output Token ID, which is decoded to represent an actual token or word.
+  ![](How-Transformer-LLMs-Work-Anthropic-course/tokenizers-1.png)
+- A helpful rule of thumb is that one token generally corresponds to ~4 characters of text for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).
+-`SEP`: separation token, it signifies the end of a sentence.
+- **Trade-off**: the larger the vocabulary, the more embeddings need to be calculated.
+
 
 ## Architectural Overview
 
-- TBD
+- The Transformer LLM generates tokens one by one
+- The Transformer is compound of three major components:
+  - Tokenizer
+  - Stack of Transformer Blocks: this is the neural networks
+  - Language Modelling Head (LM Head)
+- The model has "Token embeddings" associated to these tokens.  
+- What happens at the end is a kind of **scoring** or **token probability calculation**
+- **Decoding strategy**
+  - You choose one of the output tokens
+  - You can choose the top scoring token but there are other options.
+  - *Greedy decoding*: when temperature is 0, you always choose the top scoring token.
+  - Other methods
+    - Choose top_p
+    - Add randomness (temperature > 0)
+![](How-Transformer-LLMs-Work-Anthropic-course/architectural-overview-1.png)
+- Transformers process all their input tokens in parallel; that parallelization makes it time efficient.
+- The number of tracks (parallel tokens flowing through the system) is the **context size** of the model
+- Once we generate our first output token, now we feed that entire prompt with the token that we've generated into the transformer again. It's a **loop**.
+- **KV caching**: during the previous loop, we cache the calculation for those tokens before the next one to calculate.
+- **Time to first token**: how long the model takes to process the input sequence in order to generate the first token.
+  - The process to generate the next one is slightly different (with the previous caching mentioned)
+![](How-Transformer-LLMs-Work-Anthropic-course/architectural-overview-2.png)
+
 
 ## The Transformer Block
 
-- TBD
+- We have associated embedding vectors for each token.
+- We try to predict what the next word is.
+- Each Transformer Block has two components:
+  - **Self-Attention**
+    - it allows to attend to previous tokens and incorporates the context of the token that it's looking at
+    - this is an NLP task called **coreference resolution**
+    - It does two things:
+      - Relevance scoring
+      - Combining information
+  - **Feed Forward Neural Network** 
+    - storage of information and statistics of the next word that comes in after the input token
+    - kind of "high level intuition"
+    - what it most frequently appears as next word
+![](How-Transformer-LLMs-Work-Anthropic-course/transformer-block-1.png)
+
+![](How-Transformer-LLMs-Work-Anthropic-course/feed-forward-neural-network-intuition.png)
+
 
 ## Self-Attention
 
