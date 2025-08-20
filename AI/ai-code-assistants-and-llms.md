@@ -80,6 +80,9 @@
 - [Goose](https://github.com/block/goose)
   - Local utility.
   - goose is your on-machine AI agent, capable of automating complex development tasks from start to finish. More than just code suggestions, goose can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows, and interact with external APIs - autonomously.
+- [SpecStory](https://github.com/specstoryai/getspecstory)
+  - They export your AI chats in searchable structured Markdown that you can version.
+  - When enabled, our extensions automatically save your AI chats to your local project's `.specstory` directory.
 
 ## General AI Agents
 
