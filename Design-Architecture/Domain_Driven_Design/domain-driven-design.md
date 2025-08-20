@@ -107,10 +107,11 @@
   - A bounded context might be a good fit for a microservice. What business process does this microservice cover?
 
 
-## Resources
+## More interesting links or resources
 - https://github.com/ddd-crew
 - https://domorobo.to/
 - https://medium.com/nick-tune-tech-strategy-blog/mapper-contexts-supercontexts-decoupling-domain-specific-and-domain-generic-bounded-contexts-5eb6a1e7c5fc
 - Lots of talks about DDD, CQRS, Impact Mapping, etc: https://virtualddd.com/sessions
 - https://proophsoftware.github.io/fee-office/
 - https://www.infoq.com/articles/ddd-contextmapping/
+- [DDD is not what they told you](https://dev.to/franiglesias/ddd-is-not-what-they-told-you-3jem)
