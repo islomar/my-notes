@@ -145,7 +145,6 @@ of a single sequence in order to compute a representation of the sequence.
   - Claude 4 had 50-100 Billion parameters (unconfirmed)
   ![](How-Transformer-LLMs-Work-Anthropic-course/year-of-generative-ai.png)
 
-
 ## Tokenizers
 
 - See [Jupyter Notebook with example](./How-Transformer-LLMs-Work-Anthropic-course/L2_tokenizers.ipynb)
@@ -164,14 +163,13 @@ of a single sequence in order to compute a representation of the sequence.
   - Embeddings are static and created independently of every other token.
 - These embeddings are passed to the Language Model and converted into **Contextualized Embeddings**  
   - There is one contextualized embedding per token, but ALL other tokens have been considered to generate it.
-- Tokens can be words or parts of a word. It's necessary because tokenizers have a limited number of tokens or **vocabulary** 
+- Tokens can be words or parts of a word. It's necessary because tokenizers have a limited number of tokens or **vocabulary**
 - Each token has a fixed ID which is used to represent the token and it's fed to the Language Model to generate the token embedding.
 - The output of the Language Model is an output Token ID, which is decoded to represent an actual token or word.
   ![](How-Transformer-LLMs-Work-Anthropic-course/tokenizers-1.png)
 - A helpful rule of thumb is that one token generally corresponds to ~4 characters of text for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).
 -`SEP`: separation token, it signifies the end of a sentence.
 - **Trade-off**: the larger the vocabulary, the more embeddings need to be calculated.
-
 
 ## Architectural Overview
 
@@ -198,7 +196,6 @@ of a single sequence in order to compute a representation of the sequence.
   - The process to generate the next one is slightly different (with the previous caching mentioned)
 ![](How-Transformer-LLMs-Work-Anthropic-course/architectural-overview-2.png)
 
-
 ## The Transformer Block
 
 - We have associated embedding vectors for each token.
@@ -210,7 +207,7 @@ of a single sequence in order to compute a representation of the sequence.
     - It does two things:
       - Relevance scoring
       - Combining information
-  - **Feed Forward Neural Network** 
+  - **Feed Forward Neural Network (FFNN)**
     - storage of information and statistics of the next word that comes in after the input token
     - kind of "high level intuition"
     - what it most frequently appears as next word
@@ -218,27 +215,86 @@ of a single sequence in order to compute a representation of the sequence.
 
 ![](How-Transformer-LLMs-Work-Anthropic-course/feed-forward-neural-network-intuition.png)
 
-
 ## Self-Attention
 
-- TBD
+- Specific course: "Attention in Transformers: Concepts and Code in PyTorch"
+- The final goal of the **relevance scoring** is getting relevance of each previous token for estimating the next one.
+![](How-Transformer-LLMs-Work-Anthropic-course/self-attention-1.png)
+![](How-Transformer-LLMs-Work-Anthropic-course/self-attention-2.png)
+- [Ring Attention Explained](https://coconut-mode.com/posts/ring-attention)
+- Second step: **Combining information** from the relevant tokens
+  - it is done using the values vectors associated with each of these tokens
+![](How-Transformer-LLMs-Work-Anthropic-course/self-attention-3.png)
+- The same operation happens **in parallel** in multiple attention heads.
+  - Each Attention Head has its own set of queries, values, weight matrices, etc.
+- We first split the information into heads
+![](How-Transformer-LLMs-Work-Anthropic-course/self-attention-4.png)
+- Improvements in Self-Attention
+  - Shared keys and values matrix, instead of having each Attention head its own. It's a kind of compression, it will be faster.
+  - Even more efficient: **group query attention** or **multi-query attention**
+![](How-Transformer-LLMs-Work-Anthropic-course/self-attention-5.png)
+- **Sparse attention**
+  - Full attention vs Sparse attention
+  - Since "total attention" is too expensive, we get sparse attention: local attention boosts performance by only paying attention to a small number of previous positions/tokens. E.g. only the last 4 tokens.
+  - Global autoregressive self-attention vs Local autoregressive self-attention.
+  - Paper [Generating long sequences with sparse transformers](https://arxiv.org/abs/1904.10509)
+- [Ring Attention](https://coconut-mode.com/posts/ring-attention)
+  - It enables enlarging the context
+  - We can divide up attention calculation across the sequence dimension into chunks.
+  - we can map the divided up attention calculation on multiple GPUs and orchestrate the computation in a way that adds minimal overhead, by cleverly overlapping communication and computation.
+- Paper "The Llama 3 Herd of Models" (November 2024)
+  - <https://ai.meta.com/research/publications/the-llama-3-herd-of-models/>
+  - <https://arxiv.org/abs/2407.21783>
+![](How-Transformer-LLMs-Work-Anthropic-course/the-llama-3-herd-of-models.png)  
 
 ## Model Example
 
-- TBD
+- Example using the Hugging Face Transformer library.
+- In this lesson, you will reinforce your understanding of the transformer architecture by exploring the decoder-only model [`microsoft/Phi-3-mini-4k-instruct`](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct).
+  - The Phi-3-Mini-4K-Instruct is a 3.8B parameters, lightweight, state-of-the-art open model trained with the Phi-3 datasets that includes both synthetic data and the filtered publicly available websites data with a focus on high-quality and reasoning dense properties.
+  - The vocabulary size is 32064 tokens, and the size of the vector embedding for each token is 3072.
+  - The model never sees the text, just numbers, the token ids.
 
 ## Recent improvements
 
-- TBD
+- Original Transformers had both an Encoder and a Decoder. Current ones have mostly only a Decoder (no Encoder).
+- Transformer decoder architecture from 2017:
+![](How-Transformer-LLMs-Work-Anthropic-course/transformer-decoders-comparison.png)
+- Efficient organization of training data requires specific positional encoding properties.
+- Static positional encoding:
+![](How-Transformer-LLMs-Work-Anthropic-course/organization-of-training-data.png)
+- **Rotary embeddings** (RoPE) add positional information at the self-attention layer
 
 ## Mixture of Experts (MoE)
 
-- TBD
+- It uses multiple sub-modules to improve the quality of LLMs.
+- In each layer you have multiple sub-neural networks, ech one we all "an expert", and then a **router** in each layer that decides which expert should process this token or this vector (it creates probability scores).
+  - The router is a FFNN itself, like the experts.
+- [A Visual Guide to Mixture of Experts (MoE)](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mixture-of-experts)
+![](How-Transformer-LLMs-Work-Anthropic-course/mixture-of-experts-1.png)
+- Know that an “expert” is not specialized in a specific domain like “Psychology” or “Biology”. At most, it learns syntactic information on a word level instead:
+![](How-Transformer-LLMs-Work-Anthropic-course/mixture-of-experts-2.png)
+- More specifically, their expertise is in handling specific tokens in specific contexts.
+![](How-Transformer-LLMs-Work-Anthropic-course/mixture-of-experts-3.png)
+![](How-Transformer-LLMs-Work-Anthropic-course/mixture-of-experts-4.png)
+![](How-Transformer-LLMs-Work-Anthropic-course/mixture-of-experts-5.png)
+- An **FFNN** allows the model to use the contextual information created by the attention mechanism, transforming it further to capture more complex relationships in the data.
+- Expert = FFNN
+- The MoE replaces **the dense layers**
+  - The FFNN in a traditional Transformer is called a dense model since all parameters (its weights and biases) are activated. Nothing is left behind and everything is used to calculate the output.
+![](How-Transformer-LLMs-Work-Anthropic-course/dense-neural-network.png)
 
-## Conclusion
+- Sparse Model = MoE layer
+![](How-Transformer-LLMs-Work-Anthropic-course/moe-layer.png)
+![](How-Transformer-LLMs-Work-Anthropic-course/moe-layer-2.png)
+- All experts are loaded despite only using one of them
+- Sparse parameters
+![](How-Transformer-LLMs-Work-Anthropic-course/sparse-parameters.png)
+- Active parameters: only those used
+![](How-Transformer-LLMs-Work-Anthropic-course/active-parameters.png)
+- Example: Mistral 8x7B
+  - 8 experts, each with 7B parameters
+  - The largest number of parameters can be found in the Attention mechanism
+![](How-Transformer-LLMs-Work-Anthropic-course/example-mistral-model.png)
+![](How-Transformer-LLMs-Work-Anthropic-course/pros-and-cons-moe.png)
 
-- TBD
-
-## TBD
-
-- TBD

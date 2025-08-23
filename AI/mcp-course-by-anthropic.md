@@ -6,12 +6,7 @@
 - 1 h 38 min
 - 11 video lessons
 - [Community](https://community.deeplearning.ai/c/short-course-q-a/mcp-build-rich-context-ai-apps-with-anthropic/525)
-- Other DeepLearning.AI courses: https://www.deeplearning.ai/courses/
-  - https://www.deeplearning.ai/short-courses/pair-programming-llm/
-  - https://www.deeplearning.ai/short-courses/post-training-of-llms/
-  - https://www.deeplearning.ai/short-courses/pydantic-for-llm-workflows/
-  - https://www.aihero.dev/mcp-prerequisites (with TypeScript)
-  - [Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic](https://www.youtube.com/watch?v=kQmXtrmQ5Zg)
+
 
 ## Lesson 1: Why MCP
 
