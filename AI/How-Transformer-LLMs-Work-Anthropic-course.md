@@ -298,3 +298,6 @@ of a single sequence in order to compute a representation of the sequence.
 ![](How-Transformer-LLMs-Work-Anthropic-course/example-mistral-model.png)
 ![](How-Transformer-LLMs-Work-Anthropic-course/pros-and-cons-moe.png)
 
+
+## Further readings
+- [LLMs: Common terms explained, simply](https://newsletter.eng-leadership.com/p/llms-common-terms-explained-simply)

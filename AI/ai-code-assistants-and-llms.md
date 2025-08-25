@@ -44,6 +44,8 @@
 
 ## List of AI coding assistants and tools
 
+- [AI Engineering in the real world](https://newsletter.pragmaticengineer.com/p/ai-engineering-in-the-real-world) (The Pragmatic Engineer)
+  - Several tools, tech stacks and real life use cases mentioned
 - GitHub Copilot
 - Cursor
 - JetBrains AI Assistant
@@ -106,6 +108,9 @@
 - You can use the `.junie/guidelines.md` file in the root directory to personalize Junie and make it truly effective for your team.
 - [Junie Guidelines](https://github.com/JetBrains/junie-guidelines)
 - [Beyond Auto-Complete: Junie Is Your Autonomous Coding Partner in JetBrains IDEs](https://www.youtube.com/watch?v=fcbSG8lm7So): 20 min. screencast video
+- Pairing with Duncan screencasts:
+  - [Full-stack Junie - Adding a New Feature with an Agent](https://www.youtube.com/watch?v=ao1LmxHGSK0)
+  - [Competition or Collaboration? Claude Code & Junie](https://www.youtube.com/watch?v=z6donXPeLaY)
 
 ### GitHub Copilot
 
@@ -246,6 +251,7 @@ Let’s begin: ask me what I want to learn."
 ## General tools
 
 - [QuizFoo: Create custom quizzes on any topic in seconds](https://www.quizfoo.com/en)
+-[ Build Anything with OpenAI’s New OSS Models (n8n Agents)](https://www.youtube.com/watch?v=Myjo1amUZ08): interesting screencast using Ollama
 
 ## Critical thinking
 

@@ -1,6 +1,6 @@
 # AI
 
-## Learning resources
+## Learning resources (training, courses)
 
 - <https://github.com/rasbt/LLMs-from-scratch>
 - <https://www.aihero.dev/mcp-prerequisites> (with TypeScript)
@@ -21,4 +21,8 @@
 
 ## Other resources
 - [The AI Engineering Stack (The Pragmatic Engineer)](https://newsletter.pragmaticengineer.com/p/the-ai-engineering-stack)
+- [LLMs: Common terms explained, simply](https://newsletter.eng-leadership.com/p/llms-common-terms-explained-simply)
 - [Build vs Buy in the Age of AI](https://www.svpg.com/article-build-vs-buy-in-the-age-of-ai/)
+- [Can LLM translate text accurately, without human help?](https://lokalise.com/blog/can-llm-translate-text-accurately)
+- [How Do LLMs Work? A Guide to Large Language Models](https://autogenai.com/blog/how-do-llms-work/)
+- [Unreasonable Claim of Reasoning Ability of LLM: Part 1](https://pkghosh.wordpress.com/2023/11/24/unreasonable-claim-of-reasoning-ability-of-llm/)
