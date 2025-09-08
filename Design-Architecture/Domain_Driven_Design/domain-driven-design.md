@@ -7,6 +7,7 @@
 - [Patterns, Principles, and Practices of Domain-Driven Design](#patterns-principles-and-practices-of-domain-driven-design)
 - [DDD at Scale - using Domain Driven Design to build client centric products](#ddd-at-scale-using-domain-driven-design-to-build-client-centric-products)
 - [Resources](#resources)
+- [My notes for O'Reilly course "DDD, Event Storming & Clean Architecture (Oliver Zihler & Alina Liburkina)"](https://www.notion.so/islomar/DDD-Event-Storming-Clean-Architecture-Oliver-Zihler-Alina-Liburkina-82a5ff16ba764cfaa82a98972babf861)
 
 ## General
 * https://medium.com/nick-tune-tech-strategy-blog/what-is-a-domain-99f658b22d7d
