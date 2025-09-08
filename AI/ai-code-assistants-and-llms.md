@@ -183,6 +183,7 @@
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
 - <https://github.com/steipete/agent-rules>
   - A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
+- [An engineer's guide to vibe design (with prompts)](https://posthog.com/newsletter/vibe-designing)
 - [Vibe designing prompting: wireframe with an LLM](https://newsletter.posthog.com/i/165773384/step-wireframe-with-an-llm)
   - Tools for color palette: [Coolors](https://coolors.co) or [Figma's palette generator](https://www.figma.com/color-palette-generator)
 - <https://dev.to/epilot/how-we-integrate-ai-in-epilot-chapter-1-aws-bedrock-prompt-engineering-17jh>
@@ -245,8 +246,10 @@ Let’s begin: ask me what I want to learn."
 ### Prompt injection
 
 - <https://gandalf.lakera.ai/>
+- <https://gandalf.lakera.ai/agent-breaker>
 - [What Is a Prompt Injection Attack? [Examples & Prevention]](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
 - [Prompt Injection](https://learnprompting.org/docs/prompt_hacking/injection)
+- [Prompt Injection & the Rise of Prompt Attacks: All You Need to Know](https://www.lakera.ai/blog/guide-to-prompt-injection)
 
 ## General tools
 

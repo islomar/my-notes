@@ -14,6 +14,8 @@
   - <https://www.deeplearning.ai/short-courses/pair-programming-llm/>
   - <https://www.deeplearning.ai/short-courses/post-training-of-llms/>
   - <https://www.deeplearning.ai/short-courses/pydantic-for-llm-workflows/>
+- [Transformer Explainer: LLM Transformer Model Visually Explained](https://poloclub.github.io/transformer-explainer/)
+
 
 ## Language
 - [Multilingual Evaluations in LLMs — a comparison](https://medium.com/@vbsowmya/multilingual-evaluations-in-llms-a-comparison-1d58b0fd9848)
@@ -26,3 +28,4 @@
 - [Can LLM translate text accurately, without human help?](https://lokalise.com/blog/can-llm-translate-text-accurately)
 - [How Do LLMs Work? A Guide to Large Language Models](https://autogenai.com/blog/how-do-llms-work/)
 - [Unreasonable Claim of Reasoning Ability of LLM: Part 1](https://pkghosh.wordpress.com/2023/11/24/unreasonable-claim-of-reasoning-ability-of-llm/)
+- https://poloclub.github.io/transformer-explainer/ (Transformer visually explained)

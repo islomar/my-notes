@@ -301,3 +301,4 @@ of a single sequence in order to compute a representation of the sequence.
 
 ## Further readings
 - [LLMs: Common terms explained, simply](https://newsletter.eng-leadership.com/p/llms-common-terms-explained-simply)
+- https://poloclub.github.io/transformer-explainer/ (Transformer visually explained)
