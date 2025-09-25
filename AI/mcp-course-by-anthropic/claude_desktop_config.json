@@ -5,14 +5,14 @@
             "args": [
                 "-y",
                 "@modelcontextprotocol/server-filesystem",
-                "~/workspace/my-notes/mcp-course-by-anthropic"
+                "~/workspace/my-notes/AI/mcp-course-by-anthropic"
             ]
         },
         "research": {
             "command": "uv",
             "args": [
                 "--directory",
-                "~/workspace/my-notes/mcp-course-by-anthropic",
+                "~/workspace/my-notes/AI/mcp-course-by-anthropic",
                 "run",
                 "research_server.py"
             ]
