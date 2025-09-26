@@ -144,9 +144,22 @@
   - Copilot will work on the issue and create a PR when finished
   - I can then review the PR and copilot will iterate on any changes that are required from my comments
   ```
-
 - <https://x.com/steipete/status/1955274140832731203>
   - "Building a new feature, I let Opus 4.1 pair program with GPT-5 High via @RepoPrompt. Opus directs, GPT-5 implements, Gemini Flash applies file edits."
+- **Llewellyn Falco's** code principles for GenAI:
+  - We prefer simple, clean, maintainable solutions over clever or complex ones.
+  - Readability and maintainability are primary concerns
+  - Self-documenting names and code.
+  - Small functions.
+  - Follow single responsibility principle in classes and functions.
+- [Emily Bache's mental model when working with Agentic AI](https://www.youtube.com/watch?v=U6PM8WehhJg)
+  - Start with user needs
+  - Break down the problem into smaller chunks that can be solved separately
+  - Take a suitable chunk and specify the needed behaviour in some detail.
+  - Also specify coding standards
+  - Get the tool to write some code
+  - The first design it comes up with will probably need improvement
+  - Take the next suitable chunk and specify it in an executable test.
 
 ### Vibe coding
 
@@ -169,6 +182,7 @@
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
 - [Development guidelines for Claude](https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md)
+-[TDD Guard: Automated Test-Driven Development enforcement for Claude Code](https://github.com/nizos/tdd-guard)
 - Kent Beck
   - <https://tidyfirst.substack.com/i/166781850/appendix-system-prompt>
   - <https://github.com/KentBeck/BPlusTree3/blob/main/.claude/system_prompt_additions.md>
