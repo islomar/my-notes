@@ -24,6 +24,7 @@
   - [Lovable prompt generator](https://prompts4lovable.netlify.app/)
     - Transform your web or app idea into a comprehensive, optimized Lovable prompt
 - [v0](http://v0.dev/)
+- [Replit](https://replit.com/)
 - [Bolt](https://bolt.new)
 - Lovable vs v0
   - <https://addyo.substack.com/p/ai-driven-prototyping-v0-bolt-and>
@@ -48,6 +49,7 @@
   - Several tools, tech stacks and real life use cases mentioned
 - GitHub Copilot
 - Cursor
+- [Kiro (from AWS)](https://kiro.dev/): Agentic development environment
 - JetBrains AI Assistant
 - JetBrains Junie (AI Agent)
   - Use `.junie/general-guidelines.md`
@@ -92,6 +94,10 @@
   - E.g. for research, resume screening, data analysis, etc.
 - [warp](https://www.warp.dev/)
   - Warp is the fastest way to build with multiple AI agents—from writing code to shipping it.
+
+### Antrhopic Claude
+- [A practical guide to the Claude code context window size](https://www.eesel.ai/blog/claude-code-context-window-size)
+  - "Lost in the middle" problem
 
 ### Cursor
 
@@ -160,6 +166,12 @@
   - Get the tool to write some code
   - The first design it comes up with will probably need improvement
   - Take the next suitable chunk and specify it in an executable test.
+- [Designing agentic loops](https://simonwillison.net/2025/Sep/30/designing-agentic-loops/)
+- [Peppe Silletti: Your Codebase is AI’s Playground: My Step By Step Process To Redesign A Feature With Cursor + Claude Sonnet 4.0](https://peppesilletti.substack.com/p/your-codebase-is-ais-playground-my)
+  - Step-by-step adventure in untangling a confusing interface using Cursor and Claude Sonnet 4.0.
+- [Anchoring AI to a reference application](https://martinfowler.com/articles/exploring-gen-ai/anchoring-to-reference.html)
+  - Use of an MCP server that checks an up-to-date reference application (from a golden path)
+
 
 ### Vibe coding
 
@@ -218,6 +230,8 @@
 - [Junie guidelines for Spring Boot project development](https://gist.github.com/sivaprasadreddy/9751db630b819b39e5e87f5ecfb53346)
 - <https://github.com/HelloThisIsFlo/SoCraTes-Buddy/tree/main/.cursor/rules>
 - TDD: `Let’s implement this using strict outside-in TDD, whereby we write the simplest possible failing test, followed by the smallest amount of implementation code that will satisfy it, and iterate from there`
+- [Claude Code Development Guidelines](https://gist.github.com/nikeyes/df5a882a116995e308f8b9db510b8044)
+
 
 ### My own prompts
 
@@ -269,6 +283,10 @@ Let’s begin: ask me what I want to learn."
 
 - [QuizFoo: Create custom quizzes on any topic in seconds](https://www.quizfoo.com/en)
 -[ Build Anything with OpenAI’s New OSS Models (n8n Agents)](https://www.youtube.com/watch?v=Myjo1amUZ08): interesting screencast using Ollama
+- [LiteLLM](https://litellm.ai/): LLM Gateway
+- [Braintrust](https://www.braintrust.dev/): LLM evaluation
+  - https://eng.pleo.io/the-3-stages-of-ai-enablement-50068f49d46c
+  - "We A/B test new prompt approaches on small segments, measuring accuracy before rollout."
 
 ## Critical thinking
 
@@ -278,6 +296,7 @@ Let’s begin: ask me what I want to learn."
 
 ## Other readings
 - [Gemini CLI or Jules: Which tool is for you?](https://medium.com/@denisetkwan/gemini-cli-or-jules-which-tool-is-for-you-20b7d857641d)
+
 
 ## Pending
 

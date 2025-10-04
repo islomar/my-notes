@@ -1,5 +1,12 @@
 # AI
 
+## Glossary
+
+- **LLM**:    Large Language Model
+- **RAG**:    Retrieval-Augmented Generation
+- **MCW**:    Maximum Context Window
+- **MECW**:   Maximum Effective Context Window
+
 ## Learning resources (training, courses)
 
 - <https://github.com/rasbt/LLMs-from-scratch>
@@ -29,3 +36,18 @@
 - [How Do LLMs Work? A Guide to Large Language Models](https://autogenai.com/blog/how-do-llms-work/)
 - [Unreasonable Claim of Reasoning Ability of LLM: Part 1](https://pkghosh.wordpress.com/2023/11/24/unreasonable-claim-of-reasoning-ability-of-llm/)
 - https://poloclub.github.io/transformer-explainer/ (Transformer visually explained)
+- [Context Is What You Need: The Maximum Effective Context Window for Real World Limits of LLMs](https://www.arxiv.org/abs/2509.21361)
+  - "A few top of the line models in our test group failed with as little as 100 tokens in context; most had severe degradation in accuracy by 1000 tokens in context. All models fell far short of their Maximum Context Window by as much as 99 percent."
+  - [Chat with ChatGPT 5 about the paper](https://chatgpt.com/share/68dcc26b-fcb4-8011-8b20-fb4d9c81fcb9)
+- [Tokenizer and token counter (GPT, Claude, Gemini, Grok)](https://gptforwork.com/tools/tokenizer)
+- Brown M&Ms
+  - You bury an instruction in your prompt or context, and then thoroughly check the output to see if the model ignores it.
+  - If you want to get a feel for the **effective context window of your model**, you can try the "Brown M&Ms" test. Here's one I did where the mighty GPT-5 was forgetting details by the second interaction (Jason Gorman)
+    - https://chatgpt.com/share/68dcf4b8-86b0-8011-ac2b-5a722244b87a
+- [Building a Bootstrapped B2B Product with Gen AI (0 to 1)](https://elsevanderberg.substack.com/p/building-a-bootstrapped-b2b-product)
+  - Hair-on-Fire product market fit archetype
+  - Sell before you build
+  - ICP: Ideal Customer Profile
+    - In sales and marketing, an ICP is a detailed description of the type of company or customer that would be the most valuable for a business to target
+- [21 Ways to Use AI at Work (And Build Your AI Product Toolbox)](https://www.producttalk.org/21-ways-to-use-ai-at-work)
+- [15 Ways to Use AI at Home (and Fill Your AI Product Toolbox)](https://www.producttalk.org/15-ways-to-use-ai-at-home/)
