@@ -51,3 +51,4 @@
     - In sales and marketing, an ICP is a detailed description of the type of company or customer that would be the most valuable for a business to target
 - [21 Ways to Use AI at Work (And Build Your AI Product Toolbox)](https://www.producttalk.org/21-ways-to-use-ai-at-work)
 - [15 Ways to Use AI at Home (and Fill Your AI Product Toolbox)](https://www.producttalk.org/15-ways-to-use-ai-at-home/)
+- [Agentic Design Patterns](https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/preview?tab=t.0): it includes examples in Python

@@ -231,6 +231,9 @@
 - <https://github.com/HelloThisIsFlo/SoCraTes-Buddy/tree/main/.cursor/rules>
 - TDD: `Let’s implement this using strict outside-in TDD, whereby we write the simplest possible failing test, followed by the smallest amount of implementation code that will satisfy it, and iterate from there`
 - [Claude Code Development Guidelines](https://gist.github.com/nikeyes/df5a882a116995e308f8b9db510b8044)
+- [Claude Code System prompt](https://docs.claude.com/en/release-notes/system-prompts#september-29-2025)
+  - https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude_Sonnet-4.5_Sep-29-2025.txt
+  - https://github.com/marckrenn/cc-mvp-prompts/blob/main/cc-prompt.md
 
 
 ### My own prompts
