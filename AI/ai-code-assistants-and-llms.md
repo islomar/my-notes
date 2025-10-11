@@ -296,9 +296,12 @@ Let’s begin: ask me what I want to learn."
 - [Are developers slowed down by AI? Evaluating an RCT (?) and what it tells us about developer productivity](https://www.fightforthehuman.com/are-developers-slowed-down-by-ai-evaluating-an-rct-and-what-it-tells-us-about-developer-productivity/)
 - [Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task](https://arxiv.org/abs/2506.08872)
 - [But don't forget the downsides](https://blog.korny.info/2025/07/18/a-real-world-ai-coding-case-sample#but-dont-forget-the-downsides)
+- [AI Coding Sucks](https://www.youtube.com/watch?v=0ZUkQF6boNg)
+
 
 ## Other readings
 - [Gemini CLI or Jules: Which tool is for you?](https://medium.com/@denisetkwan/gemini-cli-or-jules-which-tool-is-for-you-20b7d857641d)
+- [Cómo ser del 5% que sí genera valor con IA generativa](https://nikeyes.github.io/como-ser-el-5-por-ciento-que-si-generan-valor-con-IA-generativa-es/)
 
 
 ## Pending
