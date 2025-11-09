@@ -28,6 +28,10 @@
 - [Multilingual Evaluations in LLMs — a comparison](https://medium.com/@vbsowmya/multilingual-evaluations-in-llms-a-comparison-1d58b0fd9848)
 - [Responsible Disclosure and Multilingual LLMs](https://medium.com/@vbsowmya/responsible-disclosure-and-multilingual-llms-0aef03d470f6)
 
+## List of interesting MCPs
+- https://www.eventcatalog.dev/docs/development/developer-tools/mcp-server/introduction
+- 
+
 ## Other resources
 - [The AI Engineering Stack (The Pragmatic Engineer)](https://newsletter.pragmaticengineer.com/p/the-ai-engineering-stack)
 - [LLMs: Common terms explained, simply](https://newsletter.eng-leadership.com/p/llms-common-terms-explained-simply)
