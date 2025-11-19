@@ -30,7 +30,48 @@
 
 ## List of interesting MCPs
 - https://www.eventcatalog.dev/docs/development/developer-tools/mcp-server/introduction
-- 
+
+
+## TDD, LLM, TBD: PDQ, OK?
+- Tim Ottinger
+- https://www.youtube.com/watch?v=dCxw-K9Fc7w
+- Steps
+  - Clean start: 
+    - put the system in a known "valid" state and prove it before beginning the next unit of work.
+  - Easy recovery
+    - Save and validate intermediate steps as we work, so we can always make a "safe retreat"
+    - Save your game
+    - `git commit`
+  - Fast feedback
+    - Ensure we are doing work that matters and doing it well
+    - All tests pass, teaming, Staging/Prod
+  - Easy integration
+    - https://www.industriallogic.com/blog/easy-integration/
+    - Detect and fix integration problems early and often, as they occur
+    - prepare & CI
+  - Safe release
+    - Make releasing software a predictable and deterministic non-even
+    - CD
+- MD file describing the core scripts
+  - prepare or clean_start
+    - `git clean`
+  - run_tests
+    - [bandit](https://bandit.readthedocs.io/en/latest/): check security
+  - fixup
+    - in pre-commit
+    - [pyupgrade](https://github.com/asottile/pyupgrade): automatically upgrade syntax for newer versions of the language.
+  - run  
+- Gee Paw Hill: you go from a "ready state" to the next "ready state"
+- "In anticipation of this, write a test..." --> after describing the expected production behaviour.
+- https://github.com/tottinge/python-starter/blob/main/TDD_PROCESS.md
+- https://typer.tiangolo.com/
+- gitpython
+  - https://github.com/gitpython-developers/GitPython
+  - https://gitpython.readthedocs.io/en/stable/
+- He uses Warp + JetBrains
+  - [Warp](https://www.warp.dev/) selects between different models...
+- "Show me 3 different ways you could have written this function"
+
 
 ## Other resources
 - [The AI Engineering Stack (The Pragmatic Engineer)](https://newsletter.pragmaticengineer.com/p/the-ai-engineering-stack)
