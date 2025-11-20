@@ -35,3 +35,24 @@
   - "All processes have a core of complexity that cannot be designed away and therefore must be assumed by either the system or the user"
   - The Design of Everyday Things
     - Users shouldn't be need to be trained to do something
+- Daily meeting asking "Is there anyone blocked or any blocker?" is a smell for lack of real-time communication.
+- [Understanding the four stages of the creative process](https://www.wework.com/ideas/professional-development/creativity-culture/understanding-the-four-stages-of-the-creative-process)
+  - Preparation
+  - Incubation
+  - Illumination
+  - Verification
+- The Window of Consciousness
+    - https://medium.com/@r.wilms/the-window-of-consciousness-a-soul-dialogue-beyond-mind-and-machine-a80771740634
+- Book "Dialogue: The Art Of Thinking Together" (William Isaacs)
+  - https://tmiberia.wordpress.com/2013/03/17/dialogue-the-art-of-thinking-together-by-william-isaacs/
+- Queuing is at the root of issues in product development.
+- We need to get better in collaboration.
+- [Alistair Cockburn's Effectiveness of Communication](https://agilonomics.com/altistair-cockburns-effectiveness-of-communication/)
+  - Co-creation, collaboration...
+- Our ancestors needed the group to survive.
+- Learning to actually do the work together, not only talking about the work (e.g. meetings, documents)
+- "It is in the doing of the work that we actually discover the work to do"
+
+What do you do when you find a team who don't see the problems 
+
+Thanks a lot for sharing! 🙏
