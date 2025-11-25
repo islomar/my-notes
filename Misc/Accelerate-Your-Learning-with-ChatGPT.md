@@ -92,6 +92,7 @@
     - Tencen: Hunyuan
   - There are 149 foundational LLMs released in 2023 alone.
   - **Context window**: number of tokens (how many words at a time can this model take in)
+    - [Most devs don’t understand how context windows work (Matt Pocock)](https://www.youtube.com/watch?v=-uW5-TaVXu4)
     - There's basically a limit on how many tokens, which are basically a bit shorter than words that the transformers' attention can focus on at once.
     - If your text has 50k words and your context window has 30k words (around 40k tokens), you're in trouble.
       - And it doesn't only matter the input size: there must bu room for the output as well.
