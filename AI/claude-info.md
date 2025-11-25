@@ -13,6 +13,7 @@
 ## Pending
 
 - https://medium.com/nick-tune-tech-strategy-blog/minimalist-claude-code-task-management-workflow-7b7bdcbc4cc1
+- https://www.anthropic.com/engineering/code-execution-with-mcp
 - https://refactoring.fm/p/managing-context-for-ai-coding
 - https://support.claude.com/en/articles/11647753-understanding-usage-and-length-limits
 - https://nizar.se/lean-claude-code-for-production/

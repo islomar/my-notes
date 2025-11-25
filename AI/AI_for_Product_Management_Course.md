@@ -37,7 +37,8 @@
   - Generating user stories and personas
   - Backlog management
   - Optimizing the product roadmap
-  - Creating in-app copy or content
+  - Creating **in-app** copy or content
+    - Analyze data to identify the right moments for in-app messages
 - Two areas that AI will never replace
   - Being **customer-centric**
   - Having good **business sense**
@@ -91,11 +92,55 @@
 
 ## Module 5: Powering product-lead growth with AI
 
-- TBD
+- Product-led growth (PLG) is a go-to-market business strategy that focuses on placing a company's software product at the center of the buying journey. 
+- **Six principles of product-led growth (PLG)**
+  https://www.pendo.io/pendo-blog/6-principles-of-product-led-growth/
+  1. Providing a free user experience
+    - Free trials
+    - Freemium products
+    - Product tours
+  2. Delivering an "aha" moment as soon as possible
+    - E.g. an in-app guide
+    - AI can help identify what to offer in the free vs paid versions. E.g. identify users who engage with X feature Y times in the first three months, go on to stay engaged in the product for the remainder of their subscription term.
+  3. Committing to best-in-class usability
+  4. Delighting users to encourage stickiness
+  5. Making purchasing feel like the natural next step
+    - In-app notification to take to the buying page
+  6. Building in virality at every turn
+- **Examples of applying AI to the six PLG principles**
+  - Analyzing product usage and conversion data to identify aha moments
+  - Creating hyper-personalized onboarding experiences and pricing strategies
+  - Extracting themes from feedback to ensure you’re building sticky features
+  - Generating in-app content to prompt users to share and collaborate
 
 ## Module 6: Making product development smarter
 
-- TBD
+- **Product Management Life Cycle**: A cyclical framework for how great products are built and improved.
+- **Phases of the Product Management Life Cycle**
+  - Phase 0: Define a Business Outcome
+    - Start with a clear business objective that you're looking to achieve
+  - Phase 1: Discover
+    - Uncover the pain points of both your customers and the larger market.
+  - Phase 2: Validate
+    - Determine the right solution to move forward with
+    - AI-powered tools can allow for **quick analysis of data points** across mediums (e.g. interviews, surveys, in-app polls, service request tickets, etc.) and make recommendations based on the findings
+  - Phase 3: Build
+    - Partner with engineers and product designers to ensure your idea comes to life as intended
+  - Phase 4: Launch
+    - Build a launch plan to make sure customers adopt and continue using new functionality
+  - Phase 5: Evaluate
+    - Use quantitative and qualitative data to evaluate the success of a launch
+  - Phase 6: Iterate
+    - Determine how you can improve what you've built
+- Example: we want to increase customer retention by a certain percentage. Questions to ask during discovery:
+  - What do typical user flows look like?
+  - What's stopping users who churn from achieving their goals?
+  - Is there a workflow where users who churn tend to get stuck?
+  - What are the trends in user feedback, and is that feedback getting acted upon?
+  - Do highly satisfied or "power users" tend to engage in certain behaviors?
+  - What features do retained customers engage with the most?
+    - Do those usage patterns exist in the rest of your user base?
+
 
 ## Module 7: AI for Product Management Course next steps
 
