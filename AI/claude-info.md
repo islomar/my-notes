@@ -1,5 +1,10 @@
 # Claude info
 
+## General
+- `/context`
+- `/compact`
+- `/clear`
+
 ## Interesting readings
 
 - [Claude Code: What It Is, How It's Different, and Why Non-Technical People Should Use It (Teresa Torres)](https://www.producttalk.org/claude-code-what-it-is-and-how-its-different/)

@@ -30,7 +30,7 @@
 
 ## List of interesting MCPs
 - https://www.eventcatalog.dev/docs/development/developer-tools/mcp-server/introduction
-
+- MCP servers can bloat your context window quite rapidly by providing large numbers of tool definitions
 
 ## TDD, LLM, TBD: PDQ, OK?
 - Tim Ottinger
@@ -94,6 +94,10 @@
   - Sell before you build
   - ICP: Ideal Customer Profile
     - In sales and marketing, an ICP is a detailed description of the type of company or customer that would be the most valuable for a business to target
+- [CLI agent to pull customer quotes related to an opportunity (Else van der Berg)](https://www.youtube.com/watch?v=IOAX32v00ME)
+  - https://www.notion.so/Prompts-for-Product-Discovery-1c9660ca2b52805f8a06e17de26801f8
+- [Vibe coding an AI native MVP product as a non-technical PM (Dr. Else van der Berg)](https://www.youtube.com/watch?v=lDsQkCiqG1A)
+  - https://elsevanderberg.substack.com/p/vibe-coding-an-ai-native-rag-product
 - [21 Ways to Use AI at Work (And Build Your AI Product Toolbox)](https://www.producttalk.org/21-ways-to-use-ai-at-work)
 - [15 Ways to Use AI at Home (and Fill Your AI Product Toolbox)](https://www.producttalk.org/15-ways-to-use-ai-at-home/)
 - [Agentic Design Patterns](https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/preview?tab=t.0): it includes examples in Python

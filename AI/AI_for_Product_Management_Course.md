@@ -121,7 +121,7 @@
     - Start with a clear business objective that you're looking to achieve
   - Phase 1: Discover
     - Uncover the pain points of both your customers and the larger market.
-  - Phase 2: Validate
+  - Phase 2: Validate / Ideation
     - Determine the right solution to move forward with
     - AI-powered tools can allow for **quick analysis of data points** across mediums (e.g. interviews, surveys, in-app polls, service request tickets, etc.) and make recommendations based on the findings
   - Phase 3: Build
