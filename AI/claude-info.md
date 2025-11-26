@@ -4,6 +4,10 @@
 - `/context`
 - `/compact`
 - `/clear`
+-  "think" < "think hard" < "think harder" < "ultrathink" 
+- `ultrathink`
+    - For planning
+    - https://claudelog.com/faqs/what-is-ultrathink/
 
 ## Interesting readings
 

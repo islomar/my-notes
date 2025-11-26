@@ -32,6 +32,14 @@
 - https://www.eventcatalog.dev/docs/development/developer-tools/mcp-server/introduction
 - MCP servers can bloat your context window quite rapidly by providing large numbers of tool definitions
 
+## AI and Product Management
+- [AI for Product Management Course](./AI_for_Product_Management_Course.md)
+- [Customer discovery data: connecting to Opportunity Solution Tree (OST)](https://www.linkedin.com/posts/mjocon_opened-claude-code-yesterday-and-had-it-pull-activity-7399160036792434688-W35p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAE0FsUBFxH4_8dPPJp8bMcEG_t1xxaaVPk)
+- https://substack.com/@elsevanderberg/posts
+  - https://www.youtube.com/@ElsevanderBerg
+  - [Product analytics 101 - Understanding onboarding flows](https://www.youtube.com/watch?v=tknpwEmTJh8)
+
+
 ## TDD, LLM, TBD: PDQ, OK?
 - Tim Ottinger
 - https://www.youtube.com/watch?v=dCxw-K9Fc7w
@@ -101,3 +109,7 @@
 - [21 Ways to Use AI at Work (And Build Your AI Product Toolbox)](https://www.producttalk.org/21-ways-to-use-ai-at-work)
 - [15 Ways to Use AI at Home (and Fill Your AI Product Toolbox)](https://www.producttalk.org/15-ways-to-use-ai-at-home/)
 - [Agentic Design Patterns](https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/preview?tab=t.0): it includes examples in Python
+- [bd - Beads Issue Tracker](https://github.com/steveyegge/beads)
+  - Give your coding agent a memory upgrade
+  - I think for working with GitHub/GitLab issues...
+  - https://steve-yegge.medium.com/introducing-beads-a-coding-agent-memory-system-637d7d92514a
