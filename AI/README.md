@@ -33,6 +33,7 @@
 - MCP servers can bloat your context window quite rapidly by providing large numbers of tool definitions
 
 ## AI and Product Management
+- [Claude Code for Product Managers](https://ccforpms.com/)
 - [AI for Product Management Course](./AI_for_Product_Management_Course.md)
 - [Customer discovery data: connecting to Opportunity Solution Tree (OST)](https://www.linkedin.com/posts/mjocon_opened-claude-code-yesterday-and-had-it-pull-activity-7399160036792434688-W35p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAE0FsUBFxH4_8dPPJp8bMcEG_t1xxaaVPk)
 - https://substack.com/@elsevanderberg/posts
@@ -81,7 +82,14 @@
 - "Show me 3 different ways you could have written this function"
 
 
+## LangGraph
+- https://academy.langchain.com/courses/intro-to-langgraph (official one, 6 hours)
+- https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/ (creator, 1.5 hours)
+- [LangChain- Develop AI Agents with LangChain & LangGraph](https://www.udemy.com/course/langchain/?couponCode=CP251120G2V2) (18 hours, Ambassador)
+- [LangGraph Agents](https://langchain-ai.github.io/langgraph/)
+
 ## Other resources
+- [Pocket Flow](https://github.com/The-Pocket/PocketFlow): 100-line minimalist LLM framework
 - [The AI Engineering Stack (The Pragmatic Engineer)](https://newsletter.pragmaticengineer.com/p/the-ai-engineering-stack)
 - [LLMs: Common terms explained, simply](https://newsletter.eng-leadership.com/p/llms-common-terms-explained-simply)
 - [Build vs Buy in the Age of AI](https://www.svpg.com/article-build-vs-buy-in-the-age-of-ai/)

@@ -126,7 +126,8 @@
 ## Other people's experiences and examples
 
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
-- <https://fernandosouto.dev/blog/news/>
+- <https://fernandosouto.dev/blog/news/> --> GREAT ONES
+  - [Building an AI-Powered newspaper article approval system with Human-in-the-Loop](https://fernandosouto.dev/blog/news-ai-editor/)
 - <https://github.com/ficiverson/trivia-quiz-ai-clean>
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://www.eferro.net/2025/04/ive-launched-eferro-picks-site-my.html>
@@ -191,6 +192,7 @@
 
 ## Rules and Prompting
 
+- [vibe-rules](https://github.com/FutureExcited/vibe-rules): A powerful CLI tool for managing and sharing AI rules (prompts, configurations) across different editors and tools.
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
 - [Development guidelines for Claude](https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md)
@@ -204,11 +206,7 @@
 - <https://www.eferro.net/2025/03/vibe-coding-building-things-from.html>
 - <https://codely.com/en/blog/how-to-implement-ddd-code-using-ai>
 - [Dan Abramov](https://bsky.app/profile/danabra.mov/post/3lt5mebcpw22y)
-- [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
-  - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
-- <https://github.com/steipete/agent-rules>
-  - A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
 - [An engineer's guide to vibe design (with prompts)](https://posthog.com/newsletter/vibe-designing)
 - [Vibe designing prompting: wireframe with an LLM](https://newsletter.posthog.com/i/165773384/step-wireframe-with-an-llm)
   - Tools for color palette: [Coolors](https://coolors.co) or [Figma's palette generator](https://www.figma.com/color-palette-generator)
@@ -235,6 +233,18 @@
   - https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude_Sonnet-4.5_Sep-29-2025.txt
   - https://github.com/marckrenn/cc-mvp-prompts/blob/main/cc-prompt.md
 
+### Other people prompts/rules
+
+- Edu Ferro
+  - [My Base Setup for Augmented Coding with AI](https://www.eferro.net/2025/11/my-base-setup-for-augmented-coding-with.html)
+    - https://github.com/eferro/augmentedcode-configuration
+  - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
+    - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
+- [Llewellyn Falco](https://github.com/LearnWithLlew/AgenticAi.Java.StarterProject/tree/master/.windsurf): TDD, testing, code principles, communication style, etc.
+- <https://github.com/steipete/agent-rules>
+  - A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
+- [Nick Tune: minimalist Claude Code Task Management Workflow](https://medium.com/nick-tune-tech-strategy-blog/minimalist-claude-code-task-management-workflow-7b7bdcbc4cc1)
+  - https://github.com/NTCoding/claude-skillz/tree/main/lightweight-task-workflow
 
 ### My own prompts
 

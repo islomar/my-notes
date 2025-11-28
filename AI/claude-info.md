@@ -18,6 +18,12 @@
 ## Claude plugins
 
 - https://github.com/animalzinc/claude-plugins
+- [Bokata slicer CC](https://github.com/abrahamvallez/bokata-slicer-cc)
+    - Intelligent vertical slicing and feature decomposition for Claude Code using the Hamburger Method and radical vertical slicing techniques.
+
+## Ideas for agents
+- `/create-plan`
+
 
 ## Pending
 
