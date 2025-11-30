@@ -34,6 +34,9 @@
 
 ## AI and Product Management
 - [Claude Code for Product Managers](https://ccforpms.com/)
+  - [PRDs](https://ccforpms.com/advanced/write-prd)
+    - [Template from Lenny Rachitsky](https://docs.google.com/document/d/1ETJHLA6dpzIKw-mf5GBA3HpFKqkgzMcfkdxUiXHHMvs/edit?tab=t.0)
+    - https://uxdesign.cc/how-to-solve-problems-6bf14222e424
 - [AI for Product Management Course](./AI_for_Product_Management_Course.md)
 - [Customer discovery data: connecting to Opportunity Solution Tree (OST)](https://www.linkedin.com/posts/mjocon_opened-claude-code-yesterday-and-had-it-pull-activity-7399160036792434688-W35p?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAE0FsUBFxH4_8dPPJp8bMcEG_t1xxaaVPk)
 - https://substack.com/@elsevanderberg/posts

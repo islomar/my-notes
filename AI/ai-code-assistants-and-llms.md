@@ -233,7 +233,7 @@
   - https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude_Sonnet-4.5_Sep-29-2025.txt
   - https://github.com/marckrenn/cc-mvp-prompts/blob/main/cc-prompt.md
 
-### Other people prompts/rules
+### Other people prompts, rules or agents
 
 - Edu Ferro
   - [My Base Setup for Augmented Coding with AI](https://www.eferro.net/2025/11/my-base-setup-for-augmented-coding-with.html)
@@ -245,6 +245,7 @@
   - A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
 - [Nick Tune: minimalist Claude Code Task Management Workflow](https://medium.com/nick-tune-tech-strategy-blog/minimalist-claude-code-task-management-workflow-7b7bdcbc4cc1)
   - https://github.com/NTCoding/claude-skillz/tree/main/lightweight-task-workflow
+- https://github.com/RichardBray/dotfiles/tree/opencode/.claude/agents
 
 ### My own prompts
 
@@ -313,6 +314,63 @@ Let’s begin: ask me what I want to learn."
 - [Gemini CLI or Jules: Which tool is for you?](https://medium.com/@denisetkwan/gemini-cli-or-jules-which-tool-is-for-you-20b7d857641d)
 - [Cómo ser del 5% que sí genera valor con IA generativa](https://nikeyes.github.io/como-ser-el-5-por-ciento-que-si-generan-valor-con-IA-generativa-es/)
 
+## AI Talks - Lada Kesseler: Augmented Coding: Mapping the Uncharted Territory
+- https://www.youtube.com/watch?v=_LSK2bVf0Lc
+- https://lexler.github.io/augmented-coding-patterns
+- LLMs cannot learn from you
+  - Fixed model weights
+  - It is stateless
+- Context rot: "lost in the middle"
+- LLM has limited focus
+  - Better focused specialists than generalist files
+  - Main development agent with ground rules to catch bad practices. Same rules as a focused committer agent. The main agent never warned about committing node_modules or style violations. The focused committer caught both immediately.
+- Reference docs
+  - Ground rules always on, and loading specific files only when needed:
+    - Guides
+      - python_style.md
+      - bash_style.md
+    - Knowledge
+      - approval_tests.md
+      - scrubbers.md
+      - nullables.md
+      - uv.md
+    - Playbooks
+      - TDD.process.md
+      - refactoring.process.md
+      - new_repo.process.md
+      - git_issue.process.md
+    - Maps & knowledge
+      - project.md
+      - architecture.md
+      - map.md
+      - technical_stack.md
+      - test_plan.md
+      - frontend_style.md
+    - TODOs & scratchpads
+      - todo.md
+      - spike.md
+      - scratchpad.md
+- Ground rules
+  - "Prefer simple solutions"
+  - "Be very honest. Tell me something I need to know even if I don't want to hear it"
+  - "Be proactive and flag issues before they become problems"
+  - "use ./speak.sh tool to talk to me out loud when you warn me about issues"  
+- Semantic zoom
+  - We can zoom in and out of text
+    - Make it more succint
+    - Make it shorter
+    - Give me a TLDR of this
+    - Tell me more about...
+    - What do you mean by...?
+- Knowledge Checkpoint
+  - Before attempting implementation, checkpoint the plan:
+  - Example: spend 30 minutes outlining feature architecture with AI. Extract to project.md, commit. AI's implementation fails. Reset in under a minute, try again - your planning is preserved. You can course correct, but you're starting from a known good state.
+- Parallel implementations  
+- Offload Determinism
+  - Script everything that can be scripted
+  - Example "Capturing screenshots": Need to update app screenshot frequently. Don't ask AI each time to "take screenshot using Puppeteer" - unreliable.
+    - Instead: "Make me a shell script to capture screenshot at iPhone dimensions." AI figures out Puppeteer, dimensions, error handling. Script fails first try - puppeteer not installed. AI adds Safari fallback. Now you have capture_screenshot.sh. Run it anytime - reliable every time.
+    - `./capture_screenshot.sh`
 
 ## Pending
 
