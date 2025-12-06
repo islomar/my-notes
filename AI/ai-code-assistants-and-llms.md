@@ -371,6 +371,39 @@ Let’s begin: ask me what I want to learn."
   - Example "Capturing screenshots": Need to update app screenshot frequently. Don't ask AI each time to "take screenshot using Puppeteer" - unreliable.
     - Instead: "Make me a shell script to capture screenshot at iPhone dimensions." AI figures out Puppeteer, dimensions, error handling. Script fails first try - puppeteer not installed. AI adds Safari fallback. Now you have capture_screenshot.sh. Run it anytime - reliable every time.
     - `./capture_screenshot.sh`
+- **Playground**: Need a safe space for AI to experiment, test assumptions, and explore libraries without affecting production code or committing throwaway experiments.
+- **Reminders**
+  - AI forgets your priorities. Ground rules get ignored in long conversations. 
+  - Turn complex work into explicit checkboxes. AI checks off each step.
+  - https://github.com/lexler/claude-code-user-reminders
+- **Silent Misalignment**: give AI Permission to Push Back
+  - Add to ground rules: “Ask questions when unclear, flag contradictions, point out mistakes”
+  - Explicitly allow: “Tell me if my instructions don’t make sense”
+- **Active partner**
+```
+This is EXTREMELY IMPORTANT:
+- Don't flatter me. Be charming and nice, but very honest. Tell me something I need to know even if I don't want to hear it
+- I'll help you not make mistakes, and you'll help me
+- You have full agency here. Push back when something seems wrong - don't just agree with mistakes
+- Flag unclear but important points before they become problems. Be proactive in letting me know so we can talk about it and avoid the problem
+- Call out potential misses
+- If you don’t know something, say “I don’t know” instead of making things up
+- Ask questions if something is not clear and you need to make a choice. Don't choose randomly if it's important for what we're doing
+- When you show me a potential error or miss, start your response with❗️emoji
+```
+- **Check Alignment**: before letting AI implement, make it show its understanding:
+  - "Tell me what you're going to do before you do it"
+  - "Show me your plan" or "Draw an architecture diagram"
+  - "What questions do you have?" (not "ask me 3 questions" - let it surface real confusion)
+  - "What are you trying to achieve?"
+  - Force it to be very succinct - makes what it tells you scannable.
+- **Context Markers**: use visual markers (emojis) to signal active context:
+  - Start every response with a marker showing current mode
+  - Different markers for different contexts/roles
+  - Stack markers when multiple contexts active
+  - Special markers for specific actions (errors, re-reads)
+  - Can be impromptu one-offs for crucial instructions (when adding an important instruction mid-conversation, ask it to reply to you with an additional emoji)
+
 
 ## Pending
 
