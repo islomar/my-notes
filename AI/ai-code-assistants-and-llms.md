@@ -285,13 +285,14 @@ Here’s what I want you to do:
 
 Let’s begin: ask me what I want to learn."
 
-### Prompt injection
+### Prompt injection and hacking
 
 - <https://gandalf.lakera.ai/>
 - <https://gandalf.lakera.ai/agent-breaker>
 - [What Is a Prompt Injection Attack? [Examples & Prevention]](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
 - [Prompt Injection](https://learnprompting.org/docs/prompt_hacking/injection)
 - [Prompt Injection & the Rise of Prompt Attacks: All You Need to Know](https://www.lakera.ai/blog/guide-to-prompt-injection)
+- https://www.genbeta.com/inteligencia-artificial/censura-chatgpt-gemini-se-termina-cuando-entra-juego-rima-investigacion
 
 ## General tools
 

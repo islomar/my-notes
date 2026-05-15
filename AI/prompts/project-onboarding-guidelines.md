@@ -10,3 +10,8 @@ Please explore this codebase and provide a clear overview of what this project i
 9. What domain or industry is this project designed for?
 
 Please focus on helping me understand what this project is and how it works at a conceptual level rather than implementation details.
+
+
+→ What's the core domain concept here?
+→ What responsibilities are mixed?
+→ Where should this logic live?
