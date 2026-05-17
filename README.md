@@ -27,6 +27,7 @@ Notes from my readings or courses :-)
   - [DDD en TypeScript: Modelado y arquitectura](ddd-typescript-modelado-y-arquitectura-codelytv.md)
   - **IN PROGRESS**:
     - [DDD en TypeScript: Comunicación entre servicios y aplicaciones](ddd-typescript-communication-codelytv.md)
+    - [Course of Dependabot: Keep your repo up to date, securely and automatically](https://codely.com/en/courses/dependabot-keep-your-repo-up-to-date-securely-and-automatically-d3p3)
   - **Pending**:
     - React  
     - [Event-Driven Architecture](https://pro.codely.tv/library/comunicacion-entre-microservicios-event-driven-architecture/about/)

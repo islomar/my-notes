@@ -1,6 +1,7 @@
 # Course of Dependabot: Keep your repo up to date, securely and automatically
 
-- https://codely.com/en/courses/dependabot-keep-your-repo-up-to-date-securely-and-automatically-d3p3
+- <https://codely.com/en/courses/dependabot-keep-your-repo-up-to-date-securely-and-automatically-d3p3>
+- [GitHub repo with the code for the course](https://github.com/CodelyTV/dependabot-course)
 - ETA: ~1.5 hours
 
 In this course:
@@ -11,18 +12,82 @@ In this course:
 
 With all this, you will have a repository always updated without dedicating manual time and with the peace of mind of having mitigated the risks of a Supply Chain Attack.
 
+## Introduction: example of Axios Supply Chain Attack
+
+- <https://unit42.paloaltonetworks.com/axios-supply-chain-attack/>
+- <https://www.elastic.co/security-labs/how-we-caught-the-axios-supply-chain-attack>
+- How we can defend ourselves
+  - Update deps **only** on CI
+  - **Cooldown**: we install dependencies after several days have elapsed since its publication (e.g. 7 days)
+  - **Provenance**: ensure that the library contains the same code than GitHub
+- **Versioning**
+  - <https://semver.org/>
+    - Watch out!: if it's a `0.x.y` version, it is established that a minor change might break the contracts...
+  - <https://docs.npmjs.com/about-semantic-versioning>
+  - [npm SemVer Calculator](https://semver.npmjs.com/)
+  - [npm version cheatsheet](https://gist.github.com/jonlabelle/706b28d50ba75bf81d40782aa3c84b3e): don't trust it blindly
+  - caret (aka hat) symbol, `^`: Include everything that does not increment the first non-zero portion of semver
+    - i.e. it can udpdate both minor and patch versions
+  - tilde symbol, `~`: Include everything greater than a particular version in the same minor range
+    - i.e. only updates patch versions
+  - `x`: includes any minor or patch version depending on where it is used, e.g. `1.x` would include `1.0.0`, `1.2.1`, `1.0.1`, etc.
+    - Also possible to have `1.2.x`
+    - Use `CODEOWNERS` file instead.
+
 ## Dependabot: the maintenance cost in your repo
-- TBD
+
+- [How to start configuring Dependabot](https://github.com/CodelyTV/dependabot-course/tree/main/02-dependabot/1-deps)
+- `dependabot.yml`:
+  - [Include JSON schema as first line](# yaml-language-server: $schema=<https://json.schemastore.org/dependabot-2.0.json>) in the YAML file
+  - [`versioning-strategy`](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#versioning-strategy--). Recommendations from GitHub:
+    - `widen` when it's a library (to support the maximum possible number of versions)
+    - `increase` when it's an application
+- To avoid having tones of PRs and that stopping people from reviewing them:
+  - `open-pull-requests-limit` (e.g. with 5)
+- You can configure it to have them only once per week, e.g. with
+
+  ```yaml
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Madrid"
+  ```
+
+  - `reviewers`: deprecated
+    - [Dependabot reviewers configuration option being replaced by code owners](https://github.blog/changelog/2025-04-29-dependabot-reviewers-configuration-option-being-replaced-by-code-owners/)
+- **Good practice**: when manually reviewing the update you detect something breaking, introduce an automated test.
+- For enhanced stability and security in GitHub Actions, it's especially important to use the SHA version instead of the tags
+  - <https://docs.github.com/en/actions/reference/security/secure-use#using-third-party-actions>
+    - "Pin actions to a full-length commit SHA"
+    - "Pinning an action to a full-length commit SHA is currently the only way to use an action as an immutable release. Pinning to a particular SHA helps mitigate the risk of a bad actor adding a backdoor to the action's repository, as they would need to generate a SHA-1 collision for a valid Git object payload."
+  - <https://medium.com/@vv-devops/safeguard-your-workflow-the-power-of-referencing-specific-versions-in-github-actions-e083a03fef11>
+  - E.g. `uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2`
+  - [Code example](https://github.com/CodelyTV/dependabot-course/blob/main/02-dependabot/2-docker_github_actions/.github/workflows/ci-sha.yml)
+
 
 ## Advanced configuration of Dependabot
+
+### Avoid PR spam and cut CI costs: grouping
+
+- https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#groups--
+- https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/optimizing-pr-creation-version-updates
+- [Code example](https://github.com/CodelyTV/dependabot-course/blob/main/03-advanced_config/1-groups/.github/dependabot.yml#L16)
+- Group names can be anything you want.
+- This could be great for splitting the development ones from production.
+
+### Ignore optional dependency updates
+
 - TBD
 
 ## Protect yourself from Supply Chain Attacks
+
 - TBD
 
 ## Next steps
+
 - TBD
 
-¡Hola gente! Espero que estéis bien 😃 Os echaba de menos, así que en lugar de acabar otros cursos, he decidido empezar uno nuevo que ahora mismo me vendrá muy bien en el trabajo, el de Dependabot.
-Os escribo por un typo que he visto: en el título del curso aparece escrito "Depedabot" en lugar de "Dependabot" (falta la ene).
-Ya está, esa tontería. ¡Un abrazo! 🙏
+##  Interesting links
+
+- [Dependabot options reference](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates#configuration-options-for-dependabotyml)
