@@ -3,3 +3,6 @@
 logs.jsonl
 **/var/
 .vscode/
+
+__MACOSX/
+.DS_Store
