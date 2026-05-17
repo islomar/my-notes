@@ -6,3 +6,6 @@ logs.jsonl
 
 __MACOSX/
 .DS_Store
+
+node_modules/
+dist/
