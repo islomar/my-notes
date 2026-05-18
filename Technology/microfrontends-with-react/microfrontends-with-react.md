@@ -38,7 +38,8 @@
 
 ## Section 2: The basics of module federations
 
-- TBD
+- You need to use the webpack plugin `webpack/lib/container/ModuleFederationPlugin`
+- For asynchronous loading, it renamed the Container's `index.js` to `bootstrap.js` and created an `index.js`
 
 ## Section 3: Sharing dependencies between apps
 
