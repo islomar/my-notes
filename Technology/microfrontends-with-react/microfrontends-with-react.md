@@ -32,7 +32,7 @@
   - Hardest to setup and understand: it makes sense to cover it in great detail.
   - Most flexible and performant solution around right now.
 - Webpack combines many dependencies and JS files into a single one, usually called `bundle.js` or `main.js`
-- http://localhost:8081/main.js
+- <http://localhost:8081/main.js>
   - This shows the content of the bundled main.js. To actually show what we want, we need to creat a `public` folder with an `index.html` that loads the `main.js` script.
 - HTML Webpack plugin: needed because the bundle JS files created for the Webpack Dev Server have random names, e.g. `1k4j43.bundle.js`, `46j3ji.vendor.js`, etc.
 
@@ -42,7 +42,8 @@
 - For **asynchronous loading**, it renamed the Container's `index.js` to `bootstrap.js` and created an `index.js` which imports `bootstrap.js`
 - When the container and the remote share a library, we can avoid fetching it twice with `shared: ['faker'],`
   - That works only if the major version matches. Otherwise, it would load 2 different versions.
-- With 
+- With
+
 ```
     shared: {
         faker: {
@@ -50,11 +51,12 @@
         }
     },
 ```
+
 you would load only 1 version, even if the different versioins differ in the major part (a warning is shown in the browser console)
+
 - **Sub-App Execution Context**
   - TBD
 - TBD
-
 
 ## Section 3: Sharing dependencies between apps
 
@@ -100,8 +102,8 @@ you would load only 1 version, even if the different versioins differ in the maj
 
 - TBD
 
-
 ## Other resources
+
 - [React Micro frontends with Module Federation](https://nearform.com/digital-community/react-micro-frontends-with-module-federation/)
 - [What is NOT a Micro-Frontend: Clearing the Confusion](https://dev.to/managerfx/cosa-non-e-un-micro-frontend-facciamo-chiarezza-5lh)
 - [Micro-Frontend Seamless Integration vs Iframes](https://medium.com/@p.aditya.198/micro-frontend-seamless-integration-vs-iframes-5fca85c67fda)

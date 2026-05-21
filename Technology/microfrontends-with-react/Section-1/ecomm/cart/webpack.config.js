@@ -11,13 +11,9 @@ module.exports = {
             name: 'cart',
             filename: 'remoteEntry.js',
             exposes: {
-                './CartShow': './src/index'
+                './CartShow': './src/bootstrap' //we expose the bootstrap file instead of the index file, because it's where we export the mount function for the CONTAINER.
             },
-            shared: {
-                faker: {
-                    singleton: true,
-                }
-            },
+            shared: ['faker'],
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html'
