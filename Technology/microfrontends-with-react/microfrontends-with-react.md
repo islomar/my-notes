@@ -39,7 +39,22 @@
 ## Section 2: The basics of module federations
 
 - You need to use the webpack plugin `webpack/lib/container/ModuleFederationPlugin`
-- For asynchronous loading, it renamed the Container's `index.js` to `bootstrap.js` and created an `index.js`
+- For **asynchronous loading**, it renamed the Container's `index.js` to `bootstrap.js` and created an `index.js` which imports `bootstrap.js`
+- When the container and the remote share a library, we can avoid fetching it twice with `shared: ['faker'],`
+  - That works only if the major version matches. Otherwise, it would load 2 different versions.
+- With 
+```
+    shared: {
+        faker: {
+            singleton: true,
+        }
+    },
+```
+you would load only 1 version, even if the different versioins differ in the major part (a warning is shown in the browser console)
+- **Sub-App Execution Context**
+  - TBD
+- TBD
+
 
 ## Section 3: Sharing dependencies between apps
 
@@ -84,3 +99,10 @@
 ## Section 13: Using other frontend frameworks
 
 - TBD
+
+
+## Other resources
+- [React Micro frontends with Module Federation](https://nearform.com/digital-community/react-micro-frontends-with-module-federation/)
+- [What is NOT a Micro-Frontend: Clearing the Confusion](https://dev.to/managerfx/cosa-non-e-un-micro-frontend-facciamo-chiarezza-5lh)
+- [Micro-Frontend Seamless Integration vs Iframes](https://medium.com/@p.aditya.198/micro-frontend-seamless-integration-vs-iframes-5fca85c67fda)
+- [How Microfrontends Work: From iframes to Module Federation](https://www.freecodecamp.org/news/how-microfrontends-work-iframes-to-module-federation/)
