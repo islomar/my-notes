@@ -8,7 +8,7 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'cart',
+            name: 'cart', // it has to match the preffix in the remote ModuleFederationPlugin on webpack.config.js
             filename: 'remoteEntry.js',
             exposes: {
                 './CartShow': './src/bootstrap' //we expose the bootstrap file instead of the index file, because it's where we export the mount function for the CONTAINER.

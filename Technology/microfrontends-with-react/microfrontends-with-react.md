@@ -39,6 +39,9 @@
 ## Section 2: The basics of module federations
 
 - You need to use the webpack plugin `webpack/lib/container/ModuleFederationPlugin`
+
+## Section 3: Sharing dependencies between apps
+
 - For **asynchronous loading**, it renamed the Container's `index.js` to `bootstrap.js` and created an `index.js` which imports `bootstrap.js`
 - When the container and the remote share a library, we can avoid fetching it twice with `shared: ['faker'],`
   - That works only if the major version matches. Otherwise, it would load 2 different versions.
@@ -55,12 +58,8 @@
 you would load only 1 version, even if the different versioins differ in the major part (a warning is shown in the browser console)
 
 - **Sub-App Execution Context**
-  - TBD
-- TBD
-
-## Section 3: Sharing dependencies between apps
-
-- TBD
+- It exists a bug when the HTML element "id" for the HTML element matches the id for the ModuleFederationPlugin id.
+  - `<div id="cart></div>` --> your browser creates a global variable `cart` for this `div` element... which overrides the `cart` global variable created by the `remoteEntry.js`
 
 ## Section 4: Linking multiple apps together
 
@@ -101,6 +100,16 @@ you would load only 1 version, even if the different versioins differ in the maj
 ## Section 13: Using other frontend frameworks
 
 - TBD
+
+## About iFrames
+- While iframes technically allow embedding different applications, they create more problems than they solve and represent an outdated approach that many beginners mistakenly consider "micro-frontends."
+- Why it fails:
+  - **Styling nightmare**: Each iframe has its own CSS context, making it impossible to create consistent spacing, fonts, and colors across applications.
+  - **Communication barriers**: Parent and child applications struggle to share data or coordinate actions (like showing loading states).
+  - **Accessibility issues**: Screen readers and keyboard navigation break across iframe boundaries, failing users with disabilities.
+  - **Performance bottlenecks**: Each iframe loads a complete HTML document with its own CSS and JavaScript, consuming unnecessary resources.
+  - **Poor mobile responsiveness**: Iframes do not play well on mobile devices, leading to scrolling issues and touch interaction problems.
+  - **SEO challenges**: Search engines have difficulty correctly indexing content within iframes.
 
 ## Other resources
 
