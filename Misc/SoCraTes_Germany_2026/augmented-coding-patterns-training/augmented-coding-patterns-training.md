@@ -157,3 +157,4 @@
 - Search for Arlo Belshee prompt for Reverse Direction (slide 145)
 - Try https://github.com/kenn-io/roborev
 - Do exercise 10-refinement
+- https://discord.com/channels/1318670464435880058/1542258668945277109/1542637562038853703
