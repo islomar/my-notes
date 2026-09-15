@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Claude info](#claude-info)
+  - [General](#general)
+  - [Cost management](#cost-management)
+  - [Claude plugins](#claude-plugins)
+  - [Sub-agents](#sub-agents)
+  - [Hooks](#hooks)
+  - [Ideas for commands](#ideas-for-commands)
+  - [Agent Skills](#agent-skills)
+  - [Courses](#courses)
+  - [Models in Claude](#models-in-claude)
+  - [Interesting readings](#interesting-readings)
+  - [Pending](#pending)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Claude info
 
 ## General
@@ -32,11 +51,13 @@
   - How they stack: Levels combine (don’t replace). All rules apply simultaneously, with more specific levels overriding on conflicts.
 - To encourage more proactive subagent use, include phrases like "use PROACTIVELY" or "MUST BE USED" in your `description` field in the subagent file.
 
-## Interesting readings
+## Cost management
 
-- [Claude Code: What It Is, How It's Different, and Why Non-Technical People Should Use It (Teresa Torres)](https://www.producttalk.org/claude-code-what-it-is-and-how-its-different/)
-- [Playwright Test Agents](https://playwright.dev/docs/test-agents)
-- [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices)
+- `/usage`
+- <https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor>
+  - `ccm`
+- <https://ccusage.com/>
+  - `bunx ccusage`
 
 ## Claude plugins
 
@@ -48,7 +69,7 @@
 ## Sub-agents
 
 - Specialized roles
-- https://code.claude.com/docs/en/sub-agents
+- <https://code.claude.com/docs/en/sub-agents>
 - <https://ccforpms.com/fundamentals/custom-subagents>
 - <https://github.com/nikeyes/stepwise-dev>
 - [Awesome Claude Code Sub-Agents](https://github.com/VoltAgent/awesome-claude-code-subagents) - Collection of community sub-agent templates
@@ -56,8 +77,9 @@
 - [SubAgents.cc](https://www.subagents.cc/) - Sub-agent template generator
 
 ## Hooks
+
 - [Auto-reviewing Claude's Code](https://github.com/NTCoding/claude-skillz/tree/main/automatic-code-review) by Nick Tune
-  - https://medium.com/nick-tune-tech-strategy-blog/auto-reviewing-claudes-code-cb3a58d0a3d0
+  - <https://medium.com/nick-tune-tech-strategy-blog/auto-reviewing-claudes-code-cb3a58d0a3d0>
 - [Claude Code Reminder Hook](https://github.com/lexler/claude-code-user-reminders)
 - [How Claude Code Hooks Save Me HOURS Daily](https://www.youtube.com/watch?v=Q4gsvJvRjCU) (video, 3 min.)
   - E.g. Hook that avoid using npm and forces bun
@@ -71,22 +93,41 @@
 - <https://github.com/nikeyes/stepwise-dev>
 
 ## Agent Skills
+
 - [Claude Agent Skills Explained](https://www.youtube.com/watch?v=fOxC44g8vig)
-- https://github.com/anthropics/skills
-- https://www.claude.com/blog/skills-explained
-- https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+- <https://github.com/anthropics/skills>
+- <https://www.claude.com/blog/skills-explained>
+- <https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills>
 - Skills are folders that include instructions, scripts, and resources that Claude can load when needed.
 - Claude will only access a skill when it's relevant to the task at hand. When used, skills make Claude better at specialized tasks like working with Excel or following your organization's brand guidelines.
 - Skills are composable
 - Difference between skills and subagents
   - Subagents have their own context window, context prompt and specific tool permissions
   - Skills provide portable expertise that any subagent can use
-- Subagent is not fully loaded from the beginning; its workflow is dynamically loaded on a need-to-use basis, similar to how Claude Skills work. When a Claude Code session begins, only the subagent's name and description are loaded to keep the system efficient. The full functionality and resources are only loaded when a specific task requires that subagent's expertise. 
+- Subagent is not fully loaded from the beginning; its workflow is dynamically loaded on a need-to-use basis, similar to how Claude Skills work. When a Claude Code session begins, only the subagent's name and description are loaded to keep the system efficient. The full functionality and resources are only loaded when a specific task requires that subagent's expertise.
   - Skills use **progressive disclosure** to keep Claude efficient. When working on tasks, Claude first scans Skill metadata (descriptions and summaries) to identify relevant matches. If a Skill matches, Claude loads the full instructions. Finally, if the Skill includes executable code or reference files, those load only when needed.
   - This architecture means you can have many Skills available without overwhelming Claude's context window. Claude accesses exactly what it needs, when it needs it.
 - **Use Skills when**: You want capabilities that any Claude instance can load and use. Skills are like training materials—they make Claude better at specific tasks across all conversations.
 - **Use subagents when**: You need complete, self-contained agents designed for specific purposes that handle workflows independently. Subagents are like specialized employees with their own context and tool permissions.
 - **Use them together when**: You want subagents with specialized expertise. For example, a code-review subagent can use Skills for language-specific best practices, combining the independence of a subagent with the portable expertise of Skills.
+
+## Courses
+
+- <https://pro.codely.com/library/ia-en-local-privacidad-y-escalabilidad-243087> (2026)
+- <https://master.dev/courses/claude-code> (2026, by Anthropic SWE)
+  - [Here my notes](./introduction-to-claude-code-mini-course.md)
+
+## Models in Claude
+
+- **Sonnet 5**
+  - TBD
+- TBD
+
+## Interesting readings
+
+- [Claude Code: What It Is, How It's Different, and Why Non-Technical People Should Use It (Teresa Torres)](https://www.producttalk.org/claude-code-what-it-is-and-how-its-different/)
+- [Playwright Test Agents](https://playwright.dev/docs/test-agents)
+- [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices)
 
 ## Pending
 
