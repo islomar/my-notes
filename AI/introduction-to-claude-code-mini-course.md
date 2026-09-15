@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Introduction to Claude Code](#introduction-to-claude-code)
+  - [Claude Code Under the Hood](#claude-code-under-the-hood)
+- [Permissions, Skills, & Hooks](#permissions-skills--hooks)
+  - [CLAUDE.md & Plan mode](#claudemd--plan-mode)
+  - [Permissions](#permissions)
+  - [Effort & Context Windows](#effort--context-windows)
+  - [Skills](#skills)
+  - [Ideas to implement](#ideas-to-implement)
+  - [To read](#to-read)
+  - [Questions](#questions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Introduction to Claude Code
 
 - Lydia Hallie
@@ -48,6 +65,8 @@
 
 - The **agentic loop** is the continuous back-and-forth process between the harness (Claude Code) and the API/model.
 
+# Permissions, Skills, & Hooks
+
 ## CLAUDE.md & Plan mode
 
 - <https://github.com/lydiahallie/demo-issue-tracker>
@@ -88,8 +107,31 @@
 
 - `/advisor`
   - Let Claude consult a stronger model at key moments
+  - https://claude.com/blog/the-advisor-strategy
+- If the model says that it can not do something, sometimes it's related to the Effort level.
+  - Trade off when using max: setting the effort level to max provides deeper reasoning but results in higher inference costs and more expensive usage. The model may also overthink simple tasks that don't require extensive reasoning.
+- The thing that it affects the most the size of a context window is **resuming** an old conversation. The conversation is cached for some time, but if you resume it and it not cached, it costs tokens for you.
+- Her experience: when it passes 300k-400k tokens, depending on the model, she just compacts it herself or clears it or starts a new session.
+- The model does not read the entire conversation on every call because there's also  a prompt caching happening in the API. 
+  - The entire prefix of your prompt gets cached on the API layer.
+  - Only the newly appended assistant message and the user message actually get read by the API at that point
+- The standard context window is 200,000 tokens, but it can be extended up to 1 million tokens.
+
+## Skills
+
+- TBD
+- TBD
 
 ## Ideas to implement
 
 - Permissions
 - TBD
+- Use of advisor
+
+## To read
+- https://claude.com/blog/the-advisor-strategy
+- <https://code.claude.com/docs/en/server-managed-settings>
+- https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work
+
+## Questions
+- What is the influence in the token consumption switching between efforts in a model?
