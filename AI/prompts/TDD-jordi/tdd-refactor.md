@@ -1,3 +1,7 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Estoy siguiendo un ciclo de desarrollo de TDD.
 
 En la conversación que tenemos, hemos realizado el paso RED (test), GREEN (implement), y ahora nos queda el refactor.

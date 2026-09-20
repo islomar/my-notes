@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [ChatGPT: prompt Engineering for developers](#chatgpt-prompt-engineering-for-developers)
+  - [Other resources](#other-resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # ChatGPT: prompt Engineering for developers
 - https://learn.deeplearning.ai/chatgpt-prompt-eng/
 - https://platform.openai.com/docs/guides/chat

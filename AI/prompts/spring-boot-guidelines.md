@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Spring Boot Guidelines](#spring-boot-guidelines)
+  - [1. Prefer Constructor Injection over Field/Setter Injection](#1-prefer-constructor-injection-over-fieldsetter-injection)
+  - [2. Prefer package-private over public for Spring components](#2-prefer-package-private-over-public-for-spring-components)
+  - [3. Organize Configuration with Typed Properties](#3-organize-configuration-with-typed-properties)
+  - [4. Define Clear Transaction Boundaries](#4-define-clear-transaction-boundaries)
+  - [5. Disable Open Session in View Pattern](#5-disable-open-session-in-view-pattern)
+  - [6. Separate Web Layer from Persistence Layer](#6-separate-web-layer-from-persistence-layer)
+  - [7. Follow REST API Design Principles](#7-follow-rest-api-design-principles)
+  - [8. Use Command Objects for Business Operations](#8-use-command-objects-for-business-operations)
+  - [9. Centralize Exception Handling](#9-centralize-exception-handling)
+  - [10. Actuator](#10-actuator)
+  - [11. Internationalization with ResourceBundles](#11-internationalization-with-resourcebundles)
+  - [12. Use Testcontainers for integration tests](#12-use-testcontainers-for-integration-tests)
+  - [13. Use random port for integration tests](#13-use-random-port-for-integration-tests)
+  - [14. Logging](#14-logging)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Spring Boot Guidelines
 
 ## 1. Prefer Constructor Injection over Field/Setter Injection

@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Convenciones adicionales para TDD (implement)](#convenciones-adicionales-para-tdd-implement)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Estoy siguiendo un ciclo de desarrollo de TDD.
 
 Hemos modificado el test. Y ahora tenemos que modificar la funcionalidad para que el test pase. Debes implementar la menor funcionalidad que hará que el test pase. No implementes funcionalidad adicional.

@@ -1,3 +1,7 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 1. Spot the Flaws
 
 Prompt: Act as a recruiter for [your industry/role]. Review my resume below and highlight weak areas, overused buzzwords, and missing metrics. Be brutally honest.

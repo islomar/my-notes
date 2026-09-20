@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [AI for Product Management Course](#ai-for-product-management-course)
+  - [Module 1: welcome to the AI for Product Management Course](#module-1-welcome-to-the-ai-for-product-management-course)
+  - [Module 2: An overview of AI and product management](#module-2-an-overview-of-ai-and-product-management)
+  - [Module 3: Adapting your software strategy in the AI era](#module-3-adapting-your-software-strategy-in-the-ai-era)
+    - [Laying a foundation with AI principles (Pendo's ones)](#laying-a-foundation-with-ai-principles-pendos-ones)
+    - [Four levels of AI](#four-levels-of-ai)
+  - [Module 4: AI and the product-led organization](#module-4-ai-and-the-product-led-organization)
+  - [Module 5: Powering product-lead growth with AI](#module-5-powering-product-lead-growth-with-ai)
+  - [Module 6: Making product development smarter](#module-6-making-product-development-smarter)
+  - [Module 7: AI for Product Management Course next steps](#module-7-ai-for-product-management-course-next-steps)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # AI for Product Management Course
 
 - Pendo + Google Cloud + Mind the product

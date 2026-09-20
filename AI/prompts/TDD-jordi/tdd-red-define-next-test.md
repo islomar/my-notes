@@ -1,3 +1,7 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Estamos en un ciclo de desarrollo TDD de una funcionalidad definida al inicio de esta conversación (en el plan inicial de desarrollo).
 Es momento de definir el siguiente test a realizar. Responde con cuál es el siguiente test que harías, basado en el scope de dónde estamos en la conversación actual y el estado de desarrollo actual. Céntrate en los últimos pasos discutidos.
 

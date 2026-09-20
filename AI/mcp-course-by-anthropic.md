@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [MCP: Build Rich-Context AI Apps with Anthropic](#mcp-build-rich-context-ai-apps-with-anthropic)
+  - [Lesson 1: Why MCP](#lesson-1-why-mcp)
+  - [Lesson 2: MCP Architecture](#lesson-2-mcp-architecture)
+  - [Lesson 3: Chatbot example](#lesson-3-chatbot-example)
+  - [Lesson 4: Creating an MCP Server](#lesson-4-creating-an-mcp-server)
+  - [Lesson 5: Creating an MCP Client](#lesson-5-creating-an-mcp-client)
+  - [Lesson 6: Connecting the MCP Chatbot to Reference Servers](#lesson-6-connecting-the-mcp-chatbot-to-reference-servers)
+  - [Lesson 7: Adding Prompt & Resource Features](#lesson-7-adding-prompt--resource-features)
+  - [Lesson 8: Configuring Servers for Claude Desktop](#lesson-8-configuring-servers-for-claude-desktop)
+  - [Lesson 9: Creating and deploying remote servers](#lesson-9-creating-and-deploying-remote-servers)
+  - [Lesson 10: Conclusion](#lesson-10-conclusion)
+  - [Appendix - Tips and Help](#appendix---tips-and-help)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # MCP: Build Rich-Context AI Apps with Anthropic
 
 - Instructor: Elie Schoppik

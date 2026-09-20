@@ -1,3 +1,28 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [The Hugging Face Agents Course](#the-hugging-face-agents-course)
+  - [Unit 1. Introduction to Agents](#unit-1-introduction-to-agents)
+    - [What is an Agent?](#what-is-an-agent)
+    - [What is a Large Language Model?](#what-is-a-large-language-model)
+    - [Messages and Special Tokens](#messages-and-special-tokens)
+    - [What are Tools?](#what-are-tools)
+    - [Understanding AI Agents through the Thought-Action-Observation Cycle](#understanding-ai-agents-through-the-thought-action-observation-cycle)
+    - [Thought: Internal Reasoning and the Re-Act Approach](#thought-internal-reasoning-and-the-re-act-approach)
+    - [Actions: Enabling the Agent to Engage with Its Environment](#actions-enabling-the-agent-to-engage-with-its-environment)
+    - [Observe: Integrating Feedback to Reflect and Adapt](#observe-integrating-feedback-to-reflect-and-adapt)
+    - [Dummy Agent Library](#dummy-agent-library)
+    - [Let’s Create Our First Agent Using smolagents](#lets-create-our-first-agent-using-smolagents)
+  - [Unit 2. Frameworks for AI Agents](#unit-2-frameworks-for-ai-agents)
+    - [Unit 2.1. The Smolagents framework](#unit-21-the-smolagents-framework)
+    - [Unit 2.2. The LlamaIndex framework](#unit-22-the-llamaindex-framework)
+  - [Unit 3. Use Cases](#unit-3-use-cases)
+  - [Unit 4. Final Assessment with Benchmark](#unit-4-final-assessment-with-benchmark)
+  - [Resources](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # The Hugging Face Agents Course
 
 - Topic: AI Agents

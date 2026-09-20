@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Hello World MCP](#hello-world-mcp)
+  - [How to run the server](#how-to-run-the-server)
+  - [How to run the client](#how-to-run-the-client)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Hello World MCP
 
 ## How to run the server

@@ -1,3 +1,32 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Integra Inteligencia Artificial siguiendo buenas prácticas (OpenAI GPT, Ollama y LangChain)](#integra-inteligencia-artificial-siguiendo-buenas-pr%C3%A1cticas-openai-gpt-ollama-y-langchain)
+  - [General](#general)
+  - [🚀 ¿Cómo empezar con la Inteligencia Artificial como Developer?](#-c%C3%B3mo-empezar-con-la-inteligencia-artificial-como-developer)
+    - [Conceptos de integración con IA](#conceptos-de-integraci%C3%B3n-con-ia)
+    - [Primeros pasos con OLLaMA](#primeros-pasos-con-ollama)
+    - [Desmitifica apps con IA: LangChain vs ModelFusion](#desmitifica-apps-con-ia-langchain-vs-modelfusion)
+  - [💡 Arquitectura de software: Cómo encaja la IA en tu app](#-arquitectura-de-software-c%C3%B3mo-encaja-la-ia-en-tu-app)
+  - [👤 Caso práctico: Perfil de usuario con sugerencias de cursos](#-caso-pr%C3%A1ctico-perfil-de-usuario-con-sugerencias-de-cursos)
+  - [⌨️ Caso práctico: Prompting con Ollama](#-caso-pr%C3%A1ctico-prompting-con-ollama)
+  - [✍️ Traslada el coste computacional al momento de escritura](#-traslada-el-coste-computacional-al-momento-de-escritura)
+  - [🗣️ Cómo integrar tu app con OpenAI GPT](#-c%C3%B3mo-integrar-tu-app-con-openai-gpt)
+  - [🏁 Buenas prácticas aplicadas en la integración con LLM](#-buenas-pr%C3%A1cticas-aplicadas-en-la-integraci%C3%B3n-con-llm)
+    - [📖 Técnicas de Prompting: Zero-shot vs Few-shot vs Chain-of-Thought](#-t%C3%A9cnicas-de-prompting-zero-shot-vs-few-shot-vs-chain-of-thought)
+    - [🔫 Implementa Few-Shot Prompting con LangChain](#-implementa-few-shot-prompting-con-langchain)
+    - [🧾 Consigue respuestas más robustas: Tipado con JSON Schema](#-consigue-respuestas-m%C3%A1s-robustas-tipado-con-json-schema)
+  - [✅ Testea la integración con tu LLM](#-testea-la-integraci%C3%B3n-con-tu-llm)
+    - [🐛 Feedback loop más rápido para depurar tu prompt](#-feedback-loop-m%C3%A1s-r%C3%A1pido-para-depurar-tu-prompt)
+    - [🧪 Cómo hacer tests de integración a tu LLM](#-c%C3%B3mo-hacer-tests-de-integraci%C3%B3n-a-tu-llm)
+    - [♻️ Configura tu entorno de CI para Ollama y GPT](#-configura-tu-entorno-de-ci-para-ollama-y-gpt)
+  - [🔜 Conclusiones y siguientes pasos](#-conclusiones-y-siguientes-pasos)
+  - [More links](#more-links)
+  - [Feedback](#feedback)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Integra Inteligencia Artificial siguiendo buenas prácticas (OpenAI GPT, Ollama y LangChain)
 
 ## General

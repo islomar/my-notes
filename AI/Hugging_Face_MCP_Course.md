@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Hugging Face MCP Course](#hugging-face-mcp-course)
+  - [1. MCP Fundamentals, Architecture and Core Concepts](#1-mcp-fundamentals-architecture-and-core-concepts)
+    - [The Communication Protocol](#the-communication-protocol)
+    - [Understanding MCP Capabilities](#understanding-mcp-capabilities)
+    - [MCP SDK](#mcp-sdk)
+    - [MCP Clients](#mcp-clients)
+    - [Gradio MCP Integration](#gradio-mcp-integration)
+  - [2.End-to-end Use case: MCP in Action](#2end-to-end-use-case-mcp-in-action)
+  - [3. Deployed Use case: MCP in Action](#3-deployed-use-case-mcp-in-action)
+  - [4. Bonus Units](#4-bonus-units)
+  - [Other Hugging Face courses](#other-hugging-face-courses)
+  - [Other MCP courses](#other-mcp-courses)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Hugging Face MCP Course
 
 - <https://huggingface.co/mcp-course>

@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Modelado del dominio: Value Objects](#modelado-del-dominio-value-objects)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Modelado del dominio: Value Objects
 - https://pro.codely.com/library/modelado-del-dominio-value-objects-201826/510524
 - https://github.com/CodelyTV/value_objects-course

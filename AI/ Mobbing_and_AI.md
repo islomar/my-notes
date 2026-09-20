@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Mobbing and AI - Thinking Together with AI](#mobbing-and-ai---thinking-together-with-ai)
+  - [My notes](#my-notes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 #  Mobbing and AI - Thinking Together with AI
 - https://www.eventbrite.com/e/mobbing-and-ai-thinking-together-with-ai-tickets-1968659211697?
 - Woody Zuill and James Herr

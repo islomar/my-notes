@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [How Transformer LLMs Work (Anthropic course)](#how-transformer-llms-work-anthropic-course)
+  - [Introduction](#introduction)
+  - [Understanding Language Models: Language as a Bag-of-Words](#understanding-language-models-language-as-a-bag-of-words)
+  - [Understanding Language Models: (Word) Embeddings](#understanding-language-models-word-embeddings)
+  - [Understanding Language Models: Encoding and Decoding Context with Attention](#understanding-language-models-encoding-and-decoding-context-with-attention)
+  - [Understanding Language Models: Transformers](#understanding-language-models-transformers)
+  - [Tokenizers](#tokenizers)
+  - [Architectural Overview](#architectural-overview)
+  - [The Transformer Block](#the-transformer-block)
+  - [Self-Attention](#self-attention)
+  - [Model Example](#model-example)
+  - [Recent improvements](#recent-improvements)
+  - [Mixture of Experts (MoE)](#mixture-of-experts-moe)
+  - [Further readings](#further-readings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # How Transformer LLMs Work (Anthropic course)
 
 - <https://www.deeplearning.ai/short-courses/how-transformer-llms-work/>

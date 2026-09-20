@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [DDD ft LLMs](#ddd-ft-llms)
+  - [General](#general)
+  - [Susurrando DDD a la IA. Un enfoque para controlar la variabilidad de los LLMs](#susurrando-ddd-a-la-ia-un-enfoque-para-controlar-la-variabilidad-de-los-llms)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # DDD ft LLMs
 
 ## General

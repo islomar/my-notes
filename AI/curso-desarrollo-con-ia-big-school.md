@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Curso de Desarrollo con IA Gratis](#curso-de-desarrollo-con-ia-gratis)
+  - [Sesión 1: Descubre cómo pasar de idea a prototipo en horas, mediante el diseño de prompts técnicos para obtener código de calidad](#sesi%C3%B3n-1-descubre-c%C3%B3mo-pasar-de-idea-a-prototipo-en-horas-mediante-el-dise%C3%B1o-de-prompts-t%C3%A9cnicos-para-obtener-c%C3%B3digo-de-calidad)
+  - [Sesión 2: Descubre cómo dominar la Inteligencia Artificial para desarrollar proyectos seguros, mediante la creación de un equipo de IA con el que implementar, testear y documentar un proyecto haciendo que colaboren entre sí](#sesi%C3%B3n-2-descubre-c%C3%B3mo-dominar-la-inteligencia-artificial-para-desarrollar-proyectos-seguros-mediante-la-creaci%C3%B3n-de-un-equipo-de-ia-con-el-que-implementar-testear-y-documentar-un-proyecto-haciendo-que-colaboren-entre-s%C3%AD)
+  - [Sesión 3: Descubre cómo automatizar tus procesos de desarrollo con IA y conviértete en un perfil más competitivo en el panorama actual](#sesi%C3%B3n-3-descubre-c%C3%B3mo-automatizar-tus-procesos-de-desarrollo-con-ia-y-convi%C3%A9rtete-en-un-perfil-m%C3%A1s-competitivo-en-el-panorama-actual)
+  - [References](#references)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Curso de Desarrollo con IA Gratis
 - De 0 a MVP con IA
 - https://thebigschool.com/sp/curso-desarrollo-ia-a-rrss-brais/

@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Convenciones de testing para el proyecto](#convenciones-de-testing-para-el-proyecto)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Estoy siguiendo un ciclo de desarrollo de TDD.
 
 Para hacer la fase de "RED", tenemos que crear un test, que falle. 

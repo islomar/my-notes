@@ -1,3 +1,33 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [AI Code Assistants & LLMs](#ai-code-assistants--llms)
+  - [General](#general)
+  - [Prototyping](#prototyping)
+    - [LLMs](#llms)
+  - [List of AI coding assistants and tools](#list-of-ai-coding-assistants-and-tools)
+  - [General AI Agents](#general-ai-agents)
+    - [Antrhopic Claude](#antrhopic-claude)
+    - [Cursor](#cursor)
+    - [JetBrains Junie](#jetbrains-junie)
+    - [GitHub Copilot](#github-copilot)
+  - [Other people's experiences and examples](#other-peoples-experiences-and-examples)
+    - [Vibe coding](#vibe-coding)
+  - [Courses](#courses)
+  - [Rules and Prompting](#rules-and-prompting)
+    - [Other people prompts, rules or agents](#other-people-prompts-rules-or-agents)
+    - [My own prompts](#my-own-prompts)
+    - ["How to turn ChatGPT into your personal teacher"](#how-to-turn-chatgpt-into-your-personal-teacher)
+    - [Prompt injection and hacking](#prompt-injection-and-hacking)
+  - [General tools](#general-tools)
+  - [Critical thinking](#critical-thinking)
+  - [Other readings](#other-readings)
+  - [AI Talks - Lada Kesseler: Augmented Coding: Mapping the Uncharted Territory](#ai-talks---lada-kesseler-augmented-coding-mapping-the-uncharted-territory)
+  - [Pending](#pending)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # AI Code Assistants & LLMs
 
 ## General

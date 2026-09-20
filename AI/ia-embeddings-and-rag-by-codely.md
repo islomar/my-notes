@@ -1,3 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [IA: Embeddings y RAG](#ia-embeddings-y-rag)
+  - [🚀 ¿Qué es RAG y los embeddings?, ¿qué aprenderás en el curso?](#-qu%C3%A9-es-rag-y-los-embeddings-qu%C3%A9-aprender%C3%A1s-en-el-curso)
+    - [🧮 Qué es una búsqueda semántica y qué son los embeddings](#-qu%C3%A9-es-una-b%C3%BAsqueda-sem%C3%A1ntica-y-qu%C3%A9-son-los-embeddings)
+    - [🧑‍🏫 Implementa RAG básico con PgVector + Langchain: Búsqueda de cursos similares](#-implementa-rag-b%C3%A1sico-con-pgvector--langchain-b%C3%BAsqueda-de-cursos-similares)
+  - [🔤 Embeddings: Búsqueda de curso por significado](#-embeddings-b%C3%BAsqueda-de-curso-por-significado)
+    - [🐳 Las diferentes formas de añadir embeddings](#-las-diferentes-formas-de-a%C3%B1adir-embeddings)
+    - [📤 Contexto: Cómo es una aplicación EDA con sugerencias LLM](#-contexto-c%C3%B3mo-es-una-aplicaci%C3%B3n-eda-con-sugerencias-llm)
+    - [➕ Añade RAG a una aplicación EDA existente](#-a%C3%B1ade-rag-a-una-aplicaci%C3%B3n-eda-existente)
+  - [👨‍💻 Optimiza tu RAG añadiendo más contexto](#-optimiza-tu-rag-a%C3%B1adiendo-m%C3%A1s-contexto)
+    - [🛖 Qué valores guardar como embedding](#-qu%C3%A9-valores-guardar-como-embedding)
+    - [🗣️ Añade más contexto en los embeddings: Búsquedas granulares](#-a%C3%B1ade-m%C3%A1s-contexto-en-los-embeddings-b%C3%BAsquedas-granulares)
+    - [⏳ Ordena los resultados de una búsqueda por embeddings](#-ordena-los-resultados-de-una-b%C3%BAsqueda-por-embeddings)
+  - [🔥 Qué base de datos elegir para hacer búsqueda por embeddings](#-qu%C3%A9-base-de-datos-elegir-para-hacer-b%C3%BAsqueda-por-embeddings)
+    - [⛓️ Cómo delegar a infraestructura la generación de embeddings](#-c%C3%B3mo-delegar-a-infraestructura-la-generaci%C3%B3n-de-embeddings)
+    - [🥊 Qué base de datos vectorial elegir: AWS vs Pinecone vs Postgres vs Supabase vs Timescale vs Redis](#-qu%C3%A9-base-de-datos-vectorial-elegir-aws-vs-pinecone-vs-postgres-vs-supabase-vs-timescale-vs-redis)
+    - [🐦‍🔥 Cómo añadir RAG utilizando una base de datos sin soporte nativo a tipos vectoriales](#-c%C3%B3mo-a%C3%B1adir-rag-utilizando-una-base-de-datos-sin-soporte-nativo-a-tipos-vectoriales)
+  - [🍽️ Ingesta en base de datos vectorial datos de terceros](#-ingesta-en-base-de-datos-vectorial-datos-de-terceros)
+    - [📄 Ingesta PDFs a tu IA para hacer RAG con LanchChain](#-ingesta-pdfs-a-tu-ia-para-hacer-rag-con-lanchchain)
+    - [🗣️ Importa PDFs con la API declarativa de LanchChain](#-importa-pdfs-con-la-api-declarativa-de-lanchchain)
+    - [🕸️ Scrapping web con Playwright y LangChain](#-scrapping-web-con-playwright-y-langchain)
+  - [🍄 Mejora la búsqueda por embeddings con datos de terceros](#-mejora-la-b%C3%BAsqueda-por-embeddings-con-datos-de-terceros)
+    - [✂️ Formas de cortar los datos para guardarlos de forma optimizada: Chunking](#-formas-de-cortar-los-datos-para-guardarlos-de-forma-optimizada-chunking)
+    - [🪈 Pipeline de optimización de datos](#-pipeline-de-optimizaci%C3%B3n-de-datos)
+  - [🔜 Conclusiones y siguientes pasos](#-conclusiones-y-siguientes-pasos)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # IA: Embeddings y RAG
 
 - <https://pro.codely.com/library/ia-embeddings-y-rag-230838/655241/path/>

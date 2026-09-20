@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [AI](#ai)
+  - [Glossary](#glossary)
+  - [Learning resources (training, courses)](#learning-resources-training-courses)
+  - [Language](#language)
+  - [List of interesting MCPs](#list-of-interesting-mcps)
+  - [AI and Product Management](#ai-and-product-management)
+  - [TDD, LLM, TBD: PDQ, OK?](#tdd-llm-tbd-pdq-ok)
+  - [LangGraph](#langgraph)
+  - [Other resources](#other-resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # AI
 
 ## Glossary
