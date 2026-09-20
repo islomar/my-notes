@@ -10,6 +10,7 @@
   - [AI and Product Management](#ai-and-product-management)
   - [TDD, LLM, TBD: PDQ, OK?](#tdd-llm-tbd-pdq-ok)
   - [LangGraph](#langgraph)
+  - [LLM tooling comparison](#llm-tooling-comparison)
   - [Other resources](#other-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -106,6 +107,10 @@
 - https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/ (creator, 1.5 hours)
 - [LangChain- Develop AI Agents with LangChain & LangGraph](https://www.udemy.com/course/langchain/?couponCode=CP251120G2V2) (18 hours, Ambassador)
 - [LangGraph Agents](https://langchain-ai.github.io/langgraph/)
+
+## LLM tooling comparison
+[LLM tooling comparison](./llm-tooling-comparison.md)
+
 
 ## Other resources
 - [Pocket Flow](https://github.com/The-Pocket/PocketFlow): 100-line minimalist LLM framework
