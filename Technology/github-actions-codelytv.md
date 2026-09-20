@@ -1,3 +1,27 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Automate you workflow with GitHub Actions](#automate-you-workflow-with-github-actions)
+  - [Our first GitHub Action](#our-first-github-action)
+  - [How to test locally the GitHub Action](#how-to-test-locally-the-github-action)
+  - [How to publish an Action in GH Marketplace](#how-to-publish-an-action-in-gh-marketplace)
+  - [Parameterize the GH Action](#parameterize-the-gh-action)
+  - [Validate PR descriptions](#validate-pr-descriptions)
+  - [Require PR reviews to people depending on the folder (monorepo)](#require-pr-reviews-to-people-depending-on-the-folder-monorepo)
+  - [Notify when a PR/issue is open for too long](#notify-when-a-prissue-is-open-for-too-long)
+  - [Refactor GitHub Action](#refactor-github-action)
+  - [Notify if a critical file is being modified](#notify-if-a-critical-file-is-being-modified)
+  - [Notify if a secret gets committed](#notify-if-a-secret-gets-committed)
+  - [Comment a PR if there is a non green commit](#comment-a-pr-if-there-is-a-non-green-commit)
+  - [Trunk-based development](#trunk-based-development)
+  - [Publish a tweet for every release](#publish-a-tweet-for-every-release)
+  - [Popular actions](#popular-actions)
+  - [Tools](#tools)
+  - [Talks and posts](#talks-and-posts)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Automate you workflow with GitHub Actions
 * https://pro.codely.tv/library/automatizacion-con-github-actions/113898/path/
 * ETA: 2h 30 min

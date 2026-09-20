@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Leading Technical Change](#leading-technical-change)
+  - [Resources from the sessions](#resources-from-the-sessions)
+  - [Proposals](#proposals)
+  - [Other stuff](#other-stuff)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Leading Technical Change
 - By GeePaw Hill
 - 12 people

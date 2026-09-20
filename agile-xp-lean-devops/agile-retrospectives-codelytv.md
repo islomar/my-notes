@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Agile retrospectives](#agile-retrospectives)
+  - [Structure](#structure)
+  - [Gathering info](#gathering-info)
+  - [Generating ideas:](#generating-ideas)
+  - [How to decide what to do](#how-to-decide-what-to-do)
+  - [Closing the retrospective](#closing-the-retrospective)
+  - [Preparing a retrospective](#preparing-a-retrospective)
+  - [Readings](#readings)
+  - [Dislikes](#dislikes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Agile retrospectives
 
 https://pro.codely.tv/library/agile-retrospectivas

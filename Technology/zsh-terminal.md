@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [ZSH Terminal](#zsh-terminal)
+  - [Bash vs Zsh vs Fish](#bash-vs-zsh-vs-fish)
+  - [Terminal vs Console vs Shell](#terminal-vs-console-vs-shell)
+  - [Terminals](#terminals)
+  - [Install and configure zsh](#install-and-configure-zsh)
+  - [Aliases](#aliases)
+  - [Bindings](#bindings)
+  - [Performanceraptor](#performanceraptor)
+  - [Zsh themes](#zsh-themes)
+  - [Oh My Zsh](#oh-my-zsh)
+    - [Plugins](#plugins)
+    - [Alias](#alias)
+  - [Improve performance](#improve-performance)
+    - [Another option: ZIM](#another-option-zim)
+    - [Lazy slow functions](#lazy-slow-functions)
+    - [Feedback](#feedback)
+  - [Other tips](#other-tips)
+  - [Interesting links](#interesting-links)
+    - [Tools](#tools)
+    - [Readings](#readings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # ZSH Terminal
 * https://pro.codely.tv/library/terminal-zsh/about/
 * https://github.com/codelytv/dotfiles

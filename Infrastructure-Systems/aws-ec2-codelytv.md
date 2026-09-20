@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [AWS: your first deploy to EC2](#aws-your-first-deploy-to-ec2)
+  - [General information](#general-information)
+  - [SSH](#ssh)
+  - [Security Groups (SG)](#security-groups-sg)
+  - [AWS multi-account](#aws-multi-account)
+  - [Create EC2 instance](#create-ec2-instance)
+  - [Configure the domain with Route53](#configure-the-domain-with-route53)
+  - [Creating your own AMI](#creating-your-own-ami)
+  - [Interesting links or tricks](#interesting-links-or-tricks)
+  - [To review at the company](#to-review-at-the-company)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # AWS: your first deploy to EC2
 
 * https://pro.codely.tv/library/aws-deploy-en-ec2/62577/path/

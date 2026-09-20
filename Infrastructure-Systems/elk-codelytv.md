@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Elastic Stack (Elastic + Logstash + Kibana + Beats)](#elastic-stack-elastic--logstash--kibana--beats)
+  - [Introduction](#introduction)
+  - [Elasticsearch](#elasticsearch)
+    - [Cluster, nodes and shards](#cluster-nodes-and-shards)
+    - [Adding information](#adding-information)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Elastic Stack (Elastic + Logstash + Kibana + Beats)
 * Rubén Cougil, Javier Ferrer
 * https://pro.codely.tv/library/elkbeats-centraliza-la-gestion-de-logs-con-the-elastic-stack/88971/

@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [DDD](#ddd)
+  - [General](#general)
+  - [Book "Patterns, Principles and Practices of Domain-Driven Design"](#book-patterns-principles-and-practices-of-domain-driven-design)
+  - [CodelyTV: DDD](#codelytv-ddd)
+    - [CodelyTV: Learn DDD in 20 minutes](#codelytv-learn-ddd-in-20-minutes)
+    - [Tactical Design](#tactical-design)
+    - [Strategic Design](#strategic-design)
+  - [Patterns, Principles, and Practices of Domain-Driven Design](#patterns-principles-and-practices-of-domain-driven-design)
+  - [DDD at Scale: using Domain Driven Design to build client centric products](#ddd-at-scale-using-domain-driven-design-to-build-client-centric-products)
+  - [More interesting links or resources](#more-interesting-links-or-resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # DDD
 
 **Table of Contents**

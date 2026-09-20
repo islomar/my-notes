@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Dialogue and the Art of Thinking Together](#dialogue-and-the-art-of-thinking-together)
+  - [Summary](#summary)
+  - [Notes](#notes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Dialogue and the Art of Thinking Together
 - https://www.eventbrite.com/e/dialogue-and-the-art-of-thinking-together-tickets-1962727573006
 - Woody Zuill & Chris Pipito

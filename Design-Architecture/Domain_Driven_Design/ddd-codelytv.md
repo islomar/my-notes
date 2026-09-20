@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Domain-Driven Design (DDD)](#domain-driven-design-ddd)
+  - [How to define Bounded Contexts](#how-to-define-bounded-contexts)
+  - [Differences between Subdomains, Bounded contexts, Modules and Microservices](#differences-between-subdomains-bounded-contexts-modules-and-microservices)
+  - [Folders structure in a monorepo](#folders-structure-in-a-monorepo)
+  - [Our first use case](#our-first-use-case)
+  - [Where to validate when you have a web form?](#where-to-validate-when-you-have-a-web-form)
+  - [Aggregates](#aggregates)
+  - [Failing miserably](#failing-miserably)
+  - [Repositories](#repositories)
+  - [Role interfaces vs Header interfaces](#role-interfaces-vs-header-interfaces)
+  - [Communication between Modules: Application Services vs Repositories](#communication-between-modules-application-services-vs-repositories)
+  - [Definiendo contratos a nivel de interfaces de dominio](#definiendo-contratos-a-nivel-de-interfaces-de-dominio)
+  - [TBD](#tbd)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Domain-Driven Design (DDD)
 * https://pro.codely.tv/library/domain-driven-design-ddd/about/
 * https://github.com/CodelyTV/php-ddd-example

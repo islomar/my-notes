@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Augmented coding patterns](#augmented-coding-patterns)
+  - [Patterns](#patterns)
+  - [Prompts](#prompts)
+    - [Feedback-flip prompt](#feedback-flip-prompt)
+  - [General notes](#general-notes)
+  - [Questions](#questions)
+  - [Next week](#next-week)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Augmented coding patterns
 
 - Lada Kesseler

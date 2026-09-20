@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [BDD best practices with Gherkin](#bdd-best-practices-with-gherkin)
+  - [Introduction](#introduction)
+  - [Cucumber](#cucumber)
+  - [e2e testing](#e2e-testing)
+  - [Script Antipattern](#script-antipattern)
+  - [Page Object pattern](#page-object-pattern)
+  - [Example mapping](#example-mapping)
+  - [One specification against multiple implementations](#one-specification-against-multiple-implementations)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # BDD best practices with Gherkin
 * https://pro.codely.tv/library/buenas-practicas-de-bdd-con-cucumber/65209/about/
 * Examples in Java: https://github.com/codingstones/cucumber-java

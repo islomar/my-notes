@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Makefiles course by CodelyTV](#makefiles-course-by-codelytv)
+  - [General](#general)
+  - [Phony](#phony)
+  - [Namespaces](#namespaces)
+  - [Parametrize commands](#parametrize-commands)
+  - [Common tasks](#common-tasks)
+  - [Useful targets](#useful-targets)
+    - [PHP](#php)
+  - [Other best practices](#other-best-practices)
+  - [Famous Makefiles](#famous-makefiles)
+  - [Interesting links](#interesting-links)
+  - [Ideas for Hab](#ideas-for-hab)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Makefiles course by CodelyTV
 
 - ETA ~ 90 minutes

@@ -1,3 +1,38 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Continuous Delivery Pipelines (How to Build Better Software Faster)](#continuous-delivery-pipelines-how-to-build-better-software-faster)
+  - [Deployment Pipeline Foundations](#deployment-pipeline-foundations)
+    - [Three Key Ideas](#three-key-ideas)
+    - [Seven Essential Techniques](#seven-essential-techniques)
+    - [What is a Deployment Pipeline?](#what-is-a-deployment-pipeline)
+    - [How to build a Deployment Pipeline](#how-to-build-a-deployment-pipeline)
+    - [Test-Driven Development](#test-driven-development)
+    - [Automate nearly everything](#automate-nearly-everything)
+    - [Version control](#version-control)
+  - [Deployment pipeline anatomy](#deployment-pipeline-anatomy)
+    - [The Development environment](#the-development-environment)
+    - [The Commit Cycle](#the-commit-cycle)
+    - [The Artifact repository](#the-artifact-repository)
+    - [The Acceptance Stage](#the-acceptance-stage)
+    - [Manual Testing](#manual-testing)
+    - [Performance testing](#performance-testing)
+    - [Testing Non-Functional Requirements](#testing-non-functional-requirements)
+    - [Testing Data and Data Migration](#testing-data-and-data-migration)
+    - [Release Into Production](#release-into-production)
+  - [Whole pipeline considerations](#whole-pipeline-considerations)
+    - [Infrastructure as code](#infrastructure-as-code)
+    - [Regulation and compliance](#regulation-and-compliance)
+    - [Measuring Success](#measuring-success)
+    - [The LMAX Case Study](#the-lmax-case-study)
+    - [The Role of the Deployment Pipeline](#the-role-of-the-deployment-pipeline)
+  - [My reflections](#my-reflections)
+  - [Lessons learned](#lessons-learned)
+  - [Real Example of a Deployment Pipeline in the Fintech Industry](#real-example-of-a-deployment-pipeline-in-the-fintech-industry)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Continuous Delivery Pipelines (How to Build Better Software Faster)
 
 - Author: Dave Farley

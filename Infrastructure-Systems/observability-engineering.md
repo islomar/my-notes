@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Observability Engineering](#observability-engineering)
+  - [General](#general)
+  - [Analyzing events to achieve observability](#analyzing-events-to-achieve-observability)
+  - [Applying o11y practices in your team](#applying-o11y-practices-in-your-team)
+  - [Observability-Driven Development](#observability-driven-development)
+  - [Instrumentation: shared client libraries and dimensions](#instrumentation-shared-client-libraries-and-dimensions)
+  - [O11y and the Softwar Supply Chain](#o11y-and-the-softwar-supply-chain)
+  - [Efficient Data Storage](#efficient-data-storage)
+  - [Observability Maturity Model (OMM)](#observability-maturity-model-omm)
+  - [Tools](#tools)
+  - [Other resources](#other-resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Observability Engineering
 - Author(s): Charity Majors, Liz Fong-Jones, George Miranda
 - Release date: May 2022

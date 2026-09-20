@@ -1,3 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Notes for CQRS course from CodelyTV](#notes-for-cqrs-course-from-codelytv)
+  - [Introduction](#introduction)
+    - [Advantages](#advantages)
+  - [What is a Command?](#what-is-a-command)
+  - [What is a Query?](#what-is-a-query)
+  - [Command/Query Bus](#commandquery-bus)
+  - [End to end Command Example](#end-to-end-command-example)
+  - [Our first Command: creating a VideoLike](#our-first-command-creating-a-videolike)
+  - [Async Commands](#async-commands)
+  - [ID generation strategies](#id-generation-strategies)
+  - [End to end Query Example](#end-to-end-query-example)
+  - [Async queries (example in Scala)](#async-queries-example-in-scala)
+  - [QueryHandler](#queryhandler)
+  - [Testing](#testing)
+  - [PHP related](#php-related)
+  - [Readings](#readings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Notes for CQRS course from CodelyTV
 * Command Query Responsibility Segregation
 * https://pro.codely.tv/library/cqrs-command-query-responsibility-segregation-3719e4aa/about/

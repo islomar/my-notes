@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Loosely Coupled - Beyond symptoms, A deeper dive into identifying problems](#loosely-coupled---beyond-symptoms-a-deeper-dive-into-identifying-problems)
+  - [My notes](#my-notes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Loosely Coupled - Beyond symptoms, A deeper dive into identifying problems
 
 - <https://www.linkedin.com/events/7392177746753454080/>

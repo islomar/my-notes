@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Testing](#testing)
+  - [General](#general)
+  - [Frontend](#frontend)
+  - [Microservices / API](#microservices--api)
+  - [CodelyTV course](#codelytv-course)
+    - [General](#general-1)
+    - [PHP testing with PHPUnit](#php-testing-with-phpunit)
+    - [Testing skeletons for several languages](#testing-skeletons-for-several-languages)
+    - [CodelyTV vision about testing scope:](#codelytv-vision-about-testing-scope)
+    - [Testing patterns](#testing-patterns)
+    - [Test doubles](#test-doubles)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Testing
 
 ## General

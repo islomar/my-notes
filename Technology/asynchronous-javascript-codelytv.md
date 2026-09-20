@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Asynchronous JavaScript Codely Course notes](#asynchronous-javascript-codely-course-notes)
+  - [Use cases for asynchronous JavaScript](#use-cases-for-asynchronous-javascript)
+  - [Promises: from callbacks to async/await](#promises-from-callbacks-to-asyncawait)
+  - [Deep dive into Promises](#deep-dive-into-promises)
+  - [Event loop](#event-loop)
+  - [Methods in Promise](#methods-in-promise)
+  - [Deep dive into async/await](#deep-dive-into-asyncawait)
+  - [Practical example of Promise](#practical-example-of-promise)
+  - [Testing async JS](#testing-async-js)
+  - [Other ways of async JS](#other-ways-of-async-js)
+  - [Resources](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Asynchronous JavaScript Codely Course notes
 - https://pro.codely.com/library/asincronia-en-javascript-200638/504512/about/
 - ETA: 3 hours

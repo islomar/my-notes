@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Grokking Simplicity](#grokking-simplicity)
+  - [Chapters 1-3](#chapters-1-3)
+  - [Chapters 4-5](#chapters-4-5)
+  - [Chapter 6: Staying immutable in a mutable language](#chapter-6-staying-immutable-in-a-mutable-language)
+  - [Chapter 7: Staying immutable with untrusted code](#chapter-7-staying-immutable-with-untrusted-code)
+  - [Chapter 10: First-class functions: part 1](#chapter-10-first-class-functions-part-1)
+  - [Chapter 11: First-class functions: part 2](#chapter-11-first-class-functions-part-2)
+  - [PENDING](#pending)
+  - [Other resources](#other-resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Grokking Simplicity
 
 - [Shared notes for the book club](https://docs.google.com/document/d/1KbOP8MYSf2g2K87wBFUzhzxWEX9Rb_o-ELwInWUSjGw/edit?tab=t.0#heading=h.zg785j5y7zw0)

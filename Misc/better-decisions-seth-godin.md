@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [The Secret to Better Decisions: Stop Hoarding Chips](#the-secret-to-better-decisions-stop-hoarding-chips)
+  - [The secret to better decisions](#the-secret-to-better-decisions)
+  - [The steps to better decisions](#the-steps-to-better-decisions)
+  - [Bonus: interview with Annie Duke](#bonus-interview-with-annie-duke)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # The Secret to Better Decisions: Stop Hoarding Chips
 
 - By Seth Godin

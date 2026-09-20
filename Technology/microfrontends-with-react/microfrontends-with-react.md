@@ -1,3 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Microfrontends with React - A Complete Developer's Guide](#microfrontends-with-react---a-complete-developers-guide)
+  - [Section 1: The basics of microfrontends](#section-1-the-basics-of-microfrontends)
+  - [Section 2: The basics of module federations](#section-2-the-basics-of-module-federations)
+  - [Section 3: Sharing dependencies between apps](#section-3-sharing-dependencies-between-apps)
+  - [Section 4: Linking multiple apps together](#section-4-linking-multiple-apps-together)
+  - [Section 5: Generic ties between projects](#section-5-generic-ties-between-projects)
+  - [Section 6: Implementing a CI/CD pipeline](#section-6-implementing-a-cicd-pipeline)
+  - [Section 7: Deployment to Amazon Web Services](#section-7-deployment-to-amazon-web-services)
+  - [Section 8: Microfrontend-Specific AWS config](#section-8-microfrontend-specific-aws-config)
+  - [Section 9: Handling CSS in microfrontends](#section-9-handling-css-in-microfrontends)
+  - [Section 10: Implementing Multi-Tier Navigation](#section-10-implementing-multi-tier-navigation)
+  - [Section 11: Performance considerations](#section-11-performance-considerations)
+  - [Section 12: Authentication in microfrontends](#section-12-authentication-in-microfrontends)
+  - [Section 13: Using other frontend frameworks](#section-13-using-other-frontend-frameworks)
+  - [About iFrames](#about-iframes)
+  - [Other resources](#other-resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Microfrontends with React - A Complete Developer's Guide
 
 - <https://www.udemy.com/course/microfrontend-course>

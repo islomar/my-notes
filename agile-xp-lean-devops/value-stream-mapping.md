@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Value Stream Mapping](#value-stream-mapping)
+  - [General](#general)
+  - [More resources](#more-resources)
+  - [What to do with freed capacity](#what-to-do-with-freed-capacity)
+  - [Design questions](#design-questions)
+    - [General Questions](#general-questions)
+    - [Specific Questions](#specific-questions)
+      - [Touch Points](#touch-points)
+      - [Delays](#delays)
+      - [Sequencing and Pacing](#sequencing-and-pacing)
+      - [Variation Management](#variation-management)
+      - [Technology](#technology)
+      - [Quality](#quality)
+      - [Labor Effort](#labor-effort)
+      - [Value Stream Management](#value-stream-management)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Value Stream Mapping
 
 ## General

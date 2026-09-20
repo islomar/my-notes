@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Working effectively with unit tests](#working-effectively-with-unit-tests)
+  - [Preface](#preface)
+  - [Unit testing, a first example](#unit-testing-a-first-example)
+  - [Motivators](#motivators)
+  - [Types of tests](#types-of-tests)
+  - [Improving assertions](#improving-assertions)
+  - [Improving test cases](#improving-test-cases)
+  - [Improving test suites](#improving-test-suites)
+  - [Further readings](#further-readings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Working effectively with unit tests
 
 Author: Jay Fields (http://blog.jayfields.com/)

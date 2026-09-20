@@ -1,3 +1,41 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Testing en frontend (CodelyTV)](#testing-en-frontend-codelytv)
+  - [¿Por qué el testing en FE está roto?](#por-qu%C3%A9-el-testing-en-fe-est%C3%A1-roto)
+  - [Las bases de Testing Library: testeando un componente simple](#las-bases-de-testing-library-testeando-un-componente-simple)
+  - [Definición de nuestra estrategia de testing](#definici%C3%B3n-de-nuestra-estrategia-de-testing)
+    - [Agnóstica del framework: ejemplo con React vs Vue vs Angular](#agn%C3%B3stica-del-framework-ejemplo-con-react-vs-vue-vs-angular)
+    - [Redefiniendo el testing en frontend](#redefiniendo-el-testing-en-frontend)
+  - [Buenas prácticas del testing en frontend](#buenas-pr%C3%A1cticas-del-testing-en-frontend)
+    - [Testeando lo que de verdad importa](#testeando-lo-que-de-verdad-importa)
+    - [Ejemplo con Testing Library: testing centrado en el usuario](#ejemplo-con-testing-library-testing-centrado-en-el-usuario)
+    - [fireEvent vs userEvent](#fireevent-vs-userevent)
+    - [Tests semánticos y más legibles](#tests-sem%C3%A1nticos-y-m%C3%A1s-legibles)
+  - [Testeando accesibilidad](#testeando-accesibilidad)
+    - [Automatizar tests de accesibilidad con Jest Axe](#automatizar-tests-de-accesibilidad-con-jest-axe)
+    - [Selectores accesibles](#selectores-accesibles)
+  - [Cómo escribir nuestros tests](#c%C3%B3mo-escribir-nuestros-tests)
+    - [La estructura de nuestro test: Arrange, Act, Assert](#la-estructura-de-nuestro-test-arrange-act-assert)
+    - [Los tests que emocionaron a Cervantes](#los-tests-que-emocionaron-a-cervantes)
+  - [Testeando componentes complejos](#testeando-componentes-complejos)
+    - [Entendiendo cuándo es necesario mockear](#entendiendo-cu%C3%A1ndo-es-necesario-mockear)
+    - [Peligros de doblar el fetch](#peligros-de-doblar-el-fetch)
+    - [Testeando animaciones](#testeando-animaciones)
+  - [Agilizando el proceso de testing](#agilizando-el-proceso-de-testing)
+    - [Mejorar la mantenibilidad de nuestros tests con custom renderers](#mejorar-la-mantenibilidad-de-nuestros-tests-con-custom-renderers)
+    - [Agilizar la creación de datos fake con Test Object Factories](#agilizar-la-creaci%C3%B3n-de-datos-fake-con-test-object-factories)
+    - [Snapshot testing, ¿sí o no?](#snapshot-testing-s%C3%AD-o-no)
+  - [TDD con Testing Library](#tdd-con-testing-library)
+    - [Implementando una nueva feature con TDD](#implementando-una-nueva-feature-con-tdd)
+    - [TDD hard mode con fake timers](#tdd-hard-mode-con-fake-timers)
+  - [CI/CD: Integramos el testing en nuestra pipeline](#cicd-integramos-el-testing-en-nuestra-pipeline)
+  - [Errores frecuentes con Testing Library](#errores-frecuentes-con-testing-library)
+  - [Interesting stuff](#interesting-stuff)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Testing en frontend (CodelyTV)
 
 - https://pro.codely.tv/library/testing-frontend/196940/path/

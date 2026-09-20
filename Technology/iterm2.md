@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [iTerm2: terminal for macOS](#iterm2-terminal-for-macos)
+  - [Shortcuts](#shortcuts)
+  - [Toolbelt](#toolbelt)
+  - [Shell integration](#shell-integration)
+  - [Scripting](#scripting)
+  - [Status Bar](#status-bar)
+  - [Configuration versioning](#configuration-versioning)
+  - [Captured Output](#captured-output)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # iTerm2: terminal for macOS
 * https://www.iterm2.com/
 * https://www.jetbrains.com/help/idea/2020.1/tuning-the-ide.html?_ga=2.126106949.913947388.1584706716-389991166.1584706716#default-dirs

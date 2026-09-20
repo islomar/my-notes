@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Systems thinking](#systems-thinking)
+  - [Book "Thinking in Systems"](#book-thinking-in-systems)
+  - [Tools](#tools)
+    - [Links](#links)
+    - [Ideas](#ideas)
+  - [Resources](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Systems thinking
 - https://systemsthinking.dev/
     - https://systemsthinking.dev/2021/02/02/gamestop-stocks/

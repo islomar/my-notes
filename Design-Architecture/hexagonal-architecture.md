@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Hexagonal Architecture](#hexagonal-architecture)
+  - [General](#general)
+    - [Resources](#resources)
+  - [CodelyTV course](#codelytv-course)
+    - [Software architecture](#software-architecture)
+    - [What is Hexagonal Architecture](#what-is-hexagonal-architecture)
+    - [Repository Pattern](#repository-pattern)
+    - [Infrastructure Services](#infrastructure-services)
+    - [Application services vs. Domain services](#application-services-vs-domain-services)
+    - [Modelling our doamin and publishing events](#modelling-our-doamin-and-publishing-events)
+    - [Testing Applicatin and Domain layers](#testing-applicatin-and-domain-layers)
+    - [Testing Infrastructure Layer](#testing-infrastructure-layer)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Hexagonal Architecture
 
 ## General

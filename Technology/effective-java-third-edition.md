@@ -1,3 +1,35 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Notes from "Effective Java: Third Edition"](#notes-from-effective-java-third-edition)
+  - [Chapter 1: Introduction](#chapter-1-introduction)
+  - [Chapter 2](#chapter-2)
+    - [Item 1: consider static factory methods instead of constructors](#item-1-consider-static-factory-methods-instead-of-constructors)
+    - [Item 2: Consider a builder when faced with many constructor parameters](#item-2-consider-a-builder-when-faced-with-many-constructor-parameters)
+    - [Item 3: Enforce the singleton property with a private constructor or an enum type](#item-3-enforce-the-singleton-property-with-a-private-constructor-or-an-enum-type)
+    - [Item 4: Enforce noninstantiability with a private constructor](#item-4-enforce-noninstantiability-with-a-private-constructor)
+    - [Item 5: Prefer dependency injection to hardwiring resources](#item-5-prefer-dependency-injection-to-hardwiring-resources)
+    - [Item 6: Avoid creating unnecessary objects](#item-6-avoid-creating-unnecessary-objects)
+    - [Item 7: Eliminate obsolete object references](#item-7-eliminate-obsolete-object-references)
+    - [Item 8: Avoid finalizers and cleaners](#item-8-avoid-finalizers-and-cleaners)
+  - [Chapter 3: Methods common to all objects](#chapter-3-methods-common-to-all-objects)
+    - [Item 10: Obey the general contract when overriding equals](#item-10-obey-the-general-contract-when-overriding-equals)
+    - [Item 11: Always override hashCode when you override equals](#item-11-always-override-hashcode-when-you-override-equals)
+    - [Item 12: Always override toString](#item-12-always-override-tostring)
+    - [Item 13: Override clone judiciously](#item-13-override-clone-judiciously)
+    - [Item 14: Consider implementing Comparable](#item-14-consider-implementing-comparable)
+  - [Chapter 4: Classes and Interfaces](#chapter-4-classes-and-interfaces)
+    - [Item 15: Minimize the accesibility of classes and members](#item-15-minimize-the-accesibility-of-classes-and-members)
+    - [Item 16: In public classes, use accessor methods, not public fields](#item-16-in-public-classes-use-accessor-methods-not-public-fields)
+    - [Item 17: minimize mutability](#item-17-minimize-mutability)
+  - [Item 18: Favor composition over inheritance](#item-18-favor-composition-over-inheritance)
+  - [Chapter 5: Generics](#chapter-5-generics)
+  - [General](#general)
+  - [Bookmark](#bookmark)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Notes from "Effective Java: Third Edition"
 
 ## Chapter 1: Introduction

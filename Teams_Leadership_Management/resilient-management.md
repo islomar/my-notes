@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Resilient management](#resilient-management)
+  - [Introduction](#introduction)
+  - [Chapter 1. Meet your team](#chapter-1-meet-your-team)
+  - [Chapter 2. Grow your teammates](#chapter-2-grow-your-teammates)
+  - [Chapter 3. Set clear expectations](#chapter-3-set-clear-expectations)
+  - [Chapter 4. Communicate effectively](#chapter-4-communicate-effectively)
+  - [Chapter 5. Build Resiliency](#chapter-5-build-resiliency)
+  - [Conclusion](#conclusion)
+  - [My notes](#my-notes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Resilient management
 - Laura Hogan: https://twitter.com/lara_hogan
 - https://resilient-management.com/

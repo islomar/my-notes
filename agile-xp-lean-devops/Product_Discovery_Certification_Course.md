@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Product Discovery Certification Course](#product-discovery-certification-course)
+  - [Module 1: welcome to the product discovery certification course](#module-1-welcome-to-the-product-discovery-certification-course)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Product Discovery Certification Course
 
 - Pendo + Google Cloud + Mind the product

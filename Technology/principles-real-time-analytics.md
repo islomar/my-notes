@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Principles of real-time analytics on large datasets](#principles-of-real-time-analytics-on-large-datasets)
+  - [Why and intro to hardware](#why-and-intro-to-hardware)
+  - [Databases](#databases)
+  - [Source data and ingestion](#source-data-and-ingestion)
+  - [Storing data](#storing-data)
+  - [Querying](#querying)
+  - [Views](#views)
+  - [Exposing the data](#exposing-the-data)
+  - [Scaling](#scaling)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Principles of real-time analytics on large datasets
 
 - https://www.tinybird.co/courses/principles-of-real-time-analytics-contents

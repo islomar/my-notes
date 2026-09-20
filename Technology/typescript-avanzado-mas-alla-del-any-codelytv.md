@@ -1,3 +1,27 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [TypeScript Avanzado: Más allá de any](#typescript-avanzado-m%C3%A1s-all%C3%A1-de-any)
+  - [[GRATIS] 🚀 TypeScript es mucho más que JavaScript con tipos: Tu nuevo ayudante para desarrollar](#gratis--typescript-es-mucho-m%C3%A1s-que-javascript-con-tipos-tu-nuevo-ayudante-para-desarrollar)
+    - [5 cosas que no sabías de TypeScript](#5-cosas-que-no-sab%C3%ADas-de-typescript)
+    - [Repaso rápido de ejemplos del día a día](#repaso-r%C3%A1pido-de-ejemplos-del-d%C3%ADa-a-d%C3%ADa)
+    - [Interfaces vs type alias](#interfaces-vs-type-alias)
+  - [Reaprovecha tu código y entiende firmas complejas gracias a los Genéricos](#reaprovecha-tu-c%C3%B3digo-y-entiende-firmas-complejas-gracias-a-los-gen%C3%A9ricos)
+  - [Aprovecha el potencial de tipos no tan conocidos: unknown y never](#aprovecha-el-potencial-de-tipos-no-tan-conocidos-unknown-y-never)
+    - [El potencial oculto de unknown: Obliga a tipar argumentos de entrada opcionales](#el-potencial-oculto-de-unknown-obliga-a-tipar-argumentos-de-entrada-opcionales)
+    - [En qué consiste el tipo never y diferencias con void](#en-qu%C3%A9-consiste-el-tipo-never-y-diferencias-con-void)
+  - [Usos básicos de enums: Numéricos vs String vs Const vs Object as const](#usos-b%C3%A1sicos-de-enums-num%C3%A9ricos-vs-string-vs-const-vs-object-as-const)
+  - [Enums avanzados: Gana semántica, robustez, y haz que tu código cumpla con SOLID](#enums-avanzados-gana-sem%C3%A1ntica-robustez-y-haz-que-tu-c%C3%B3digo-cumpla-con-solid)
+    - [Deja atrás los booleanos y modela el estado de tu aplicación con Enums](#deja-atr%C3%A1s-los-booleanos-y-modela-el-estado-de-tu-aplicaci%C3%B3n-con-enums)
+    - [Usos de enums en código del mundo real (Next.js y Prisma)](#usos-de-enums-en-c%C3%B3digo-del-mundo-real-nextjs-y-prisma)
+  - [Extiende el comportamiento de tus métodos y clases con los decoradores.](#extiende-el-comportamiento-de-tus-m%C3%A9todos-y-clases-con-los-decoradores)
+  - [Narrowing: Casting de tipos de forma implícita](#narrowing-casting-de-tipos-de-forma-impl%C3%ADcita)
+  - [Conclusión y siguientes pasos](#conclusi%C3%B3n-y-siguientes-pasos)
+  - [Recomendaciones prácticas](#recomendaciones-pr%C3%A1cticas)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # TypeScript Avanzado: Más allá de any
 - https://github.com/CodelyTV/awesome-typescript-examples
 - ETA: ~ 4 horas

@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Cómo fijar objetivos cuando todo parece prioritario](#c%C3%B3mo-fijar-objetivos-cuando-todo-parece-prioritario)
+  - [Entiende mejor tu contexto, entiéndete mejor a ti](#entiende-mejor-tu-contexto-enti%C3%A9ndete-mejor-a-ti)
+  - [Cómo llevamos estos principios a la práctica](#c%C3%B3mo-llevamos-estos-principios-a-la-pr%C3%A1ctica)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Cómo fijar objetivos cuando todo parece prioritario
 
 - https://www.linkedin.com/learning/como-fijar-objetivos-cuando-todo-parece-prioritario

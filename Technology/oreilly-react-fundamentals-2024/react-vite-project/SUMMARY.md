@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Running and Embedding the React Application - Summary](#running-and-embedding-the-react-application---summary)
+  - [Answer to "Can I run this React application here embedded somehow?"](#answer-to-can-i-run-this-react-application-here-embedded-somehow)
+  - [Quick Start](#quick-start)
+  - [Resources Created](#resources-created)
+  - [Next Steps](#next-steps)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Running and Embedding the React Application - Summary
 
 ## Answer to "Can I run this React application here embedded somehow?"

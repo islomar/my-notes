@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Course of Dependabot: Keep your repo up to date, securely and automatically](#course-of-dependabot-keep-your-repo-up-to-date-securely-and-automatically)
+  - [Introduction: example of Axios Supply Chain Attack](#introduction-example-of-axios-supply-chain-attack)
+  - [Dependabot: the maintenance cost in your repo](#dependabot-the-maintenance-cost-in-your-repo)
+  - [Advanced configuration of Dependabot](#advanced-configuration-of-dependabot)
+    - [Avoid PR spam and cut CI costs: grouping](#avoid-pr-spam-and-cut-ci-costs-grouping)
+    - [Ignore optional dependency updates](#ignore-optional-dependency-updates)
+  - [Protect yourself from Supply Chain Attacks](#protect-yourself-from-supply-chain-attacks)
+    - [ Prevent supply chain attacks: Cooldown](#prevent-supply-chain-attacks-cooldown)
+    - [ How to securely install dependencies in CI](#how-to-securely-install-dependencies-in-ci)
+    - [The standard the industry needs: Provenance](#the-standard-the-industry-needs-provenance)
+  - [ Interesting links](#interesting-links)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Course of Dependabot: Keep your repo up to date, securely and automatically
 
 - <https://codely.com/en/courses/dependabot-keep-your-repo-up-to-date-securely-and-automatically-d3p3>

@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Realtime Analytics for e-commerce at scale](#realtime-analytics-for-e-commerce-at-scale)
+  - [About this Session](#about-this-session)
+    - [Challenges inherent to any analytics project at scale:‍](#challenges-inherent-to-any-analytics-project-at-scale‍)
+    - [Specific to e-commerce:](#specific-to-e-commerce)
+    - [Additional "small" details:](#additional-small-details)
+  - [About Tinybird](#about-tinybird)
+  - [The challenges of analytics-at-scale for any project](#the-challenges-of-analytics-at-scale-for-any-project)
+  - [Schema design and trade-offs](#schema-design-and-trade-offs)
+  - [The data life cycle. Moving data out of the production DB](#the-data-life-cycle-moving-data-out-of-the-production-db)
+  - [Handling time zones](#handling-time-zones)
+  - [Interesting readings](#interesting-readings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Realtime Analytics for e-commerce at scale
 
 - https://www.tinybird.co/courses/real-time-analytics-for-ecommerce-at-scale

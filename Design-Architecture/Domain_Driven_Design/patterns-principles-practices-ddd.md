@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Notes for the book "Patterns, Principles, and Practices of Domain-Driven Design"](#notes-for-the-book-patterns-principles-and-practices-of-domain-driven-design)
+  - [PART I. The principles and practices of Domain-Driven Design](#part-i-the-principles-and-practices-of-domain-driven-design)
+    - [Chapter 1: what is Domain-Driven Design](#chapter-1-what-is-domain-driven-design)
+    - [Chapter 2: Distilling the problem domain](#chapter-2-distilling-the-problem-domain)
+    - [Chapter 3: Focusing on the Core Domain](#chapter-3-focusing-on-the-core-domain)
+    - [Chapter 4: Model-Driven Design](#chapter-4-model-driven-design)
+    - [Chapter 5: Domain Model Implementation Patterns](#chapter-5-domain-model-implementation-patterns)
+      - [Domain model](#domain-model)
+      - [Transaction Script](#transaction-script)
+      - [Table module](#table-module)
+    - [Chapter 6: Maintaining the Integrity of Domain Models with Bounded Contexts](#chapter-6-maintaining-the-integrity-of-domain-models-with-bounded-contexts)
+    - [Chapter 7: Context mapping](#chapter-7-context-mapping)
+    - [Chapter 8: Applicatin Architecture](#chapter-8-applicatin-architecture)
+  - [Chapter 9: Common problems for teams starting out with DDD](#chapter-9-common-problems-for-teams-starting-out-with-ddd)
+    - [Chapter 10: Applyint the Principles, Practices , and Patterns of DDD](#chapter-10-applyint-the-principles-practices--and-patterns-of-ddd)
+  - [PART II. Strategic patterns: communicating between bounded contexts](#part-ii-strategic-patterns-communicating-between-bounded-contexts)
+    - [Chapter 11: Introduction to Bounded Context Integration](#chapter-11-introduction-to-bounded-context-integration)
+    - [Chapter 12: Integration via Messaging](#chapter-12-integration-via-messaging)
+    - [Chapter 13: Integrating via HTTP with RPC and REST](#chapter-13-integrating-via-http-with-rpc-and-rest)
+  - [Extra readings](#extra-readings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Notes for the book "Patterns, Principles, and Practices of Domain-Driven Design"
 * http://wrox.com/go/domaindrivendesign
 * Source code: https://github.com/elbandit/PPPDDD/

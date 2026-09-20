@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Dotfiles course from CodelyTV](#dotfiles-course-from-codelytv)
+  - [Other dotfiles apps](#other-dotfiles-apps)
+  - [General](#general)
+  - [How to export all the programs installed](#how-to-export-all-the-programs-installed)
+  - [Performance issues](#performance-issues)
+  - [dotly](#dotly)
+  - [¿Cómo crear la documentación "--help" de los scripts en bash?](#c%C3%B3mo-crear-la-documentaci%C3%B3n---help-de-los-scripts-en-bash)
+  - [Recommended apps](#recommended-apps)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Dotfiles course from CodelyTV
 Estimated time ~ 1 hour
 

@@ -1,3 +1,35 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Monitoring with Prometheus (CodelyTV)](#monitoring-with-prometheus-codelytv)
+  - [Introduction](#introduction)
+    - [Observability](#observability)
+    - [Types of metrics](#types-of-metrics)
+    - [Solutions in the industry (alternatives)](#solutions-in-the-industry-alternatives)
+  - [First steps with Prometheus](#first-steps-with-prometheus)
+    - [Architecture](#architecture)
+    - [Metrics formats](#metrics-formats)
+    - [Prometheus installation and configuration](#prometheus-installation-and-configuration)
+  - [Exposing application metrics](#exposing-application-metrics)
+    - [Go](#go)
+    - [PHP](#php)
+    - [Java](#java)
+  - [Exposing infrastructure metrics](#exposing-infrastructure-metrics)
+    - [Docker metrics](#docker-metrics)
+    - [MySQL metrics](#mysql-metrics)
+  - [How to ingest metrics](#how-to-ingest-metrics)
+    - [Pushing](#pushing)
+    - [Remote data store: Cortex](#remote-data-store-cortex)
+    - [PromQL](#promql)
+  - [How to create alerts: Alertmanager](#how-to-create-alerts-alertmanager)
+  - [Prometheus in k8s](#prometheus-in-k8s)
+  - [DDD and Prometheus](#ddd-and-prometheus)
+  - [Resources](#resources)
+  - [To be read](#to-be-read)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Monitoring with Prometheus (CodelyTV)
 
 - https://pro.codely.tv/library/prometheus/115108/about/

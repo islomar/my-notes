@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Kubernetes for developers](#kubernetes-for-developers)
+  - [General information](#general-information)
+  - [Pods](#pods)
+  - [Namespaces](#namespaces)
+  - [Pod resources](#pod-resources)
+  - [Health checks](#health-checks)
+  - [Kubernetes Service Discovery](#kubernetes-service-discovery)
+  - [Kubernetes Deployments](#kubernetes-deployments)
+  - [Define Ingress rules](#define-ingress-rules)
+  - [Configuration and secrets for our apps](#configuration-and-secrets-for-our-apps)
+    - [Secrets](#secrets)
+  - [Deploying a k8s cluster in the cloud](#deploying-a-k8s-cluster-in-the-cloud)
+    - [Microsoft Azure](#microsoft-azure)
+  - [Interesting links](#interesting-links)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Kubernetes for developers
 - Training course from [Codely.tv](https://pro.codely.tv/library/kubernetes-para-desarrolladores)
 - Another AMAZING resource for learning the basics, from CNCF: https://www.cncf.io/phippy/

@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Notes about React](#notes-about-react)
+  - [Charla "Crea una librería de componentes con React desde 0"](#charla-crea-una-librer%C3%ADa-de-componentes-con-react-desde-0)
+  - [Concepts](#concepts)
+    - [React Server Components (RSC)](#react-server-components-rsc)
+    - [React hooks](#react-hooks)
+      - [Custom Hooks](#custom-hooks)
+    - [Reconciliation](#reconciliation)
+    - [React Fiber](#react-fiber)
+    - [React 19](#react-19)
+    - [7 React Lessons I Wish I Knew Earlier: 7 minutes](#7-react-lessons-i-wish-i-knew-earlier-7-minutes)
+  - [Testing](#testing)
+    - [React Hooks](#react-hooks-1)
+  - [Courses](#courses)
+  - [Interesting links](#interesting-links)
+    - [Videos](#videos)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Notes about React
 
 ## Charla "Crea una librería de componentes con React desde 0"

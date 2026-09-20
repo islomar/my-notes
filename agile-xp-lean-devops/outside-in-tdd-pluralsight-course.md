@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Outside-In TDD](#outside-in-tdd)
+  - [WALKING SKELETON](#walking-skeleton)
+    - [BDD vs Outside-In TDD](#bdd-vs-outside-in-tdd)
+    - [Outside-In vs Bottom-Up](#outside-in-vs-bottom-up)
+  - [SPIKING](#spiking)
+  - [TRIANGULATION](#triangulation)
+  - [BEHAVIOUR VERIFICATION](#behaviour-verification)
+  - [DISCUSSION](#discussion)
+  - [REFERENCIAS](#referencias)
+  - [TRANSCRIPT](#transcript)
+  - [Behavior Verification](#behavior-verification)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Outside-In TDD
 
 Examples of Outside-In TDD course of Pluralsight with Mark Seemann

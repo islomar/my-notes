@@ -1,3 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Git course from CodelyTV](#git-course-from-codelytv)
+  - [Annotations from website learngitbranching](#annotations-from-website-learngitbranching)
+  - [General](#general)
+    - [Automatizando tareas del día a días](#automatizando-tareas-del-d%C3%ADa-a-d%C3%ADas)
+    - [Git Areas](#git-areas)
+    - [Labels vs GitHub Project vs PR status](#labels-vs-github-project-vs-pr-status)
+  - [Workflows](#workflows)
+  - [Best practices](#best-practices)
+  - [Estrategias de integración de ramas](#estrategias-de-integraci%C3%B3n-de-ramas)
+  - [Asegurando convenciones de equipo con Git](#asegurando-convenciones-de-equipo-con-git)
+  - [Resolución de conflictos](#resoluci%C3%B3n-de-conflictos)
+  - [Soluciones prácticas para problemas reales](#soluciones-pr%C3%A1cticas-para-problemas-reales)
+  - [Analizando nuestro repositorio: Extrayendo información en base a datos](#analizando-nuestro-repositorio-extrayendo-informaci%C3%B3n-en-base-a-datos)
+    - [Cómo priorizar esfuerzos de refactoring](#c%C3%B3mo-priorizar-esfuerzos-de-refactoring)
+  - [Conociendo las tripas de Git](#conociendo-las-tripas-de-git)
+    - [Conociendo la carpeta .git](#conociendo-la-carpeta-git)
+    - [Cómo recuperar commits perdidos](#c%C3%B3mo-recuperar-commits-perdidos)
+  - [Preguntas del Mundo Real](#preguntas-del-mundo-real)
+    - [Versionado de configuración de producción y secretos](#versionado-de-configuraci%C3%B3n-de-producci%C3%B3n-y-secretos)
+    - [Exprimir Git log](#exprimir-git-log)
+    - [Git worktree: Trabaja en varias ramas de forma independiente](#git-worktree-trabaja-en-varias-ramas-de-forma-independiente)
+    - [Cómo mergeamos PRs: Merge commit vs Squash vs Rebase](#c%C3%B3mo-mergeamos-prs-merge-commit-vs-squash-vs-rebase)
+  - [More interesting links](#more-interesting-links)
+  - [TO DO](#to-do)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Git course from CodelyTV
 
 - ETA: 12 hours

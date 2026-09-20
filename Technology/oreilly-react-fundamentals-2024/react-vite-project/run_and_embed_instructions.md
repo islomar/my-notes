@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Running and Embedding the React Application](#running-and-embedding-the-react-application)
+  - [Running Locally](#running-locally)
+  - [Embedding Options](#embedding-options)
+    - [1. Embedding in an iframe](#1-embedding-in-an-iframe)
+    - [2. Building and Hosting as a Static Site](#2-building-and-hosting-as-a-static-site)
+    - [3. Embedding as a Component in Another React Application](#3-embedding-as-a-component-in-another-react-application)
+    - [4. Using Web Components (Advanced)](#4-using-web-components-advanced)
+  - [Development Considerations](#development-considerations)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Running and Embedding the React Application
 
 ## Running Locally

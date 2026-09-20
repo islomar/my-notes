@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [SOLID principles applied](#solid-principles-applied)
+  - [Single Responsibility Principle (SRP)](#single-responsibility-principle-srp)
+  - [Open-Closed Principle (OCP)](#open-closed-principle-ocp)
+  - [Liskov substitution principle (LSP)](#liskov-substitution-principle-lsp)
+  - [Interface Segregation Principle (ISP)](#interface-segregation-principle-isp)
+  - [Dependency Inversion Principle (DSP)](#dependency-inversion-principle-dsp)
+  - [General things](#general-things)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # SOLID principles applied
 
 * CodelyTV course: https://pro.codely.tv/library/principios-solid-aplicados/77070/path/

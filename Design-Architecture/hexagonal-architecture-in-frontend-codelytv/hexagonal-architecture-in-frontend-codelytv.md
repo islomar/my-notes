@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Hexagonal Architecture in the Frontend](#hexagonal-architecture-in-the-frontend)
+  - [Frameworks](#frameworks)
+  - [Your first Use Case using Hexagonal Architecture](#your-first-use-case-using-hexagonal-architecture)
+  - [Testing strategy](#testing-strategy)
+    - [Peligros de doblar el fetch](#peligros-de-doblar-el-fetch)
+  - [Promises and Hexagonal Architecture](#promises-and-hexagonal-architecture)
+  - [Improving our tests](#improving-our-tests)
+  - [Different ways to implement HA](#different-ways-to-implement-ha)
+  - [HA in the real world](#ha-in-the-real-world)
+  - [My thoughts](#my-thoughts)
+  - [Resources](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Hexagonal Architecture in the Frontend
 - Estimated durantion: 2 hours
 - https://pro.codely.com/library/arquitectura-hexagonal-en-frontend-197663

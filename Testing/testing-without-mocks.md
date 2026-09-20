@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Testing without mocks](#testing-without-mocks)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Testing without mocks
 
 - These are my notes after reading the article "Testing without mocks": https://www.jamesshore.com/v2/blog/2018/testing-without-mocks

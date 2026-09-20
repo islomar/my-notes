@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Accelerate Your Learning with ChatGPT](#accelerate-your-learning-with-chatgpt)
+  - [Module 1: GenAI Landscape and Neural Networks — Parallels in Machine and Human Learning](#module-1-genai-landscape-and-neural-networks--parallels-in-machine-and-human-learning)
+  - [Module 2: AI-Enhanced Learning Strategies — Retrieval, Motivation, and Cognitive Amplification](#module-2-ai-enhanced-learning-strategies--retrieval-motivation-and-cognitive-amplification)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Accelerate Your Learning with ChatGPT
 
 - <https://www.coursera.org/learn/learning-chatgpt>

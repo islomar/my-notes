@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Practical Object-Oriented design in Ruby (POODR)](#practical-object-oriented-design-in-ruby-poodr)
+  - [Chapter 1: Object-Oriented Design](#chapter-1-object-oriented-design)
+  - [Chapter 2: Designing Classes with a Single Responsibility](#chapter-2-designing-classes-with-a-single-responsibility)
+  - [Chapter 3: Managing Dependencies](#chapter-3-managing-dependencies)
+  - [Chapter 4: Creating Flexible Interfaces](#chapter-4-creating-flexible-interfaces)
+  - [Chapter 5: Reducing Costs with Duck Typing](#chapter-5-reducing-costs-with-duck-typing)
+  - [Chapter 6: Acquiring Behavior Through Inheritance](#chapter-6-acquiring-behavior-through-inheritance)
+  - [Chapter 7: Sharing Role Behavior with Modules](#chapter-7-sharing-role-behavior-with-modules)
+  - [Chapter 8: Combining Objects with Composition](#chapter-8-combining-objects-with-composition)
+  - [Chapter 9: Designing Cost-Effective Tests](#chapter-9-designing-cost-effective-tests)
+  - [Interesting Links](#interesting-links)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Practical Object-Oriented design in Ruby (POODR)
 
 Author: Sandi Metz

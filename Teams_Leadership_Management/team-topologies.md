@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Team Topologies: Organizing Business and Technology Teams for Fast Flow](#team-topologies-organizing-business-and-technology-teams-for-fast-flow)
+  - [Fundamental team types](#fundamental-team-types)
+  - [Team interaction modes](#team-interaction-modes)
+  - [Other key ideas](#other-key-ideas)
+  - [Readings](#readings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Team Topologies: Organizing Business and Technology Teams for Fast Flow
 
 - Matthew Skelton and Manuel Pais

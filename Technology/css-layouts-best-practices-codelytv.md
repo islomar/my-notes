@@ -1,3 +1,32 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [CSS Layouts Best Practices](#css-layouts-best-practices)
+  - [5 Errores comunes trabajando con CSS layouts](#5-errores-comunes-trabajando-con-css-layouts)
+  - [Cuándo usar cada tipo de unidad: más allá del píxel](#cu%C3%A1ndo-usar-cada-tipo-de-unidad-m%C3%A1s-all%C3%A1-del-p%C3%ADxel)
+  - [Filtros responsive sin media queries con flex](#filtros-responsive-sin-media-queries-con-flex)
+  - [Galería responsive sin media queries con grid](#galer%C3%ADa-responsive-sin-media-queries-con-grid)
+  - [Buenas prácticas con flex y grid](#buenas-pr%C3%A1cticas-con-flex-y-grid)
+    - [Grid areas y order](#grid-areas-y-order)
+    - [Cuando usar Flex vs Grid](#cuando-usar-flex-vs-grid)
+  - [Maquetar Modales y Menús: entendiendo Position](#maquetar-modales-y-men%C3%BAs-entendiendo-position)
+    - [Modal: position relative, absolute y fixed](#modal-position-relative-absolute-y-fixed)
+    - [Menú: position sticky](#men%C3%BA-position-sticky)
+    - [Entendiendo z-index y los stacking contexts](#entendiendo-z-index-y-los-stacking-contexts)
+  - [Más métodos de layout!](#m%C3%A1s-m%C3%A9todos-de-layout)
+    - [Block formatting contexts: Float sin clearfix!](#block-formatting-contexts-float-sin-clearfix)
+  - [Más métodos de layout!](#m%C3%A1s-m%C3%A9todos-de-layout-1)
+    - [Multi-column: efecto masonry CSS-only](#multi-column-efecto-masonry-css-only)
+  - [Conclusiones y siguientes pasos](#conclusiones-y-siguientes-pasos)
+    - [Subgrid](#subgrid)
+    - [Siguientes pasos](#siguientes-pasos)
+  - [Buscar](#buscar)
+  - [Best practices](#best-practices)
+  - [To be shared](#to-be-shared)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # CSS Layouts Best Practices
 
 - https://github.com/CodelyTV/css-layouts-best-practises-course

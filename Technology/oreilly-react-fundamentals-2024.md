@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [React Fundamentals: Building Modern, Interactive Web Applications with React's Component-Based Architecture](#react-fundamentals-building-modern-interactive-web-applications-with-reacts-component-based-architecture)
+  - [Module 1: Introduction to React and Getting Started](#module-1-introduction-to-react-and-getting-started)
+  - [Module 3 and 4](#module-3-and-4)
+  - [Module 5: Adding Interactivity with Events](#module-5-adding-interactivity-with-events)
+  - [Module 7: Styles and CSS in React](#module-7-styles-and-css-in-react)
+  - [Module 8: React Hooks](#module-8-react-hooks)
+  - [Module 9:  creating a Slideshow app](#module-9--creating-a-slideshow-app)
+  - [Module 10: fetching data](#module-10-fetching-data)
+  - [Module 11: Sharing data between components](#module-11-sharing-data-between-components)
+  - [Module 13: Testing and Debugging](#module-13-testing-and-debugging)
+  - [Module 14: Introduction to React 18](#module-14-introduction-to-react-18)
+  - [Module 15: Preparing for Tech Interviews](#module-15-preparing-for-tech-interviews)
+  - [Next Steps](#next-steps)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # React Fundamentals: Building Modern, Interactive Web Applications with React's Component-Based Architecture
 
 - Author: Shruti Kapoor

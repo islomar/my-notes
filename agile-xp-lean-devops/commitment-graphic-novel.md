@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Commitment: novel about managing project risk](#commitment-novel-about-managing-project-risk)
+  - [InfoQ article: "Real Options" Underlie Agile Practices](#infoq-article-real-options-underlie-agile-practices)
+  - [Other readins about "Real Options"](#other-readins-about-real-options)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Commitment: novel about managing project risk
 
 https://commitment-thebook.com/

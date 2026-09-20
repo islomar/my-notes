@@ -1,3 +1,38 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Java Application Performance Tuning and Memory Management](#java-application-performance-tuning-and-memory-management)
+  - [Chapter 1- Introduction](#chapter-1--introduction)
+  - [Chapter 2 - Just in Time compilation and the code cache](#chapter-2---just-in-time-compilation-and-the-code-cache)
+  - [Chapter 3 - Selecting the JVM](#chapter-3---selecting-the-jvm)
+  - [Chapter 4 - How memory works - the stack and the heap](#chapter-4---how-memory-works---the-stack-and-the-heap)
+  - [Chapter 5 - Passing objects between methods](#chapter-5---passing-objects-between-methods)
+  - [Chapter 7 - Escaping References](#chapter-7---escaping-references)
+  - [Chapter 9 - The Metaspace and internal JVM memory optimisations](#chapter-9---the-metaspace-and-internal-jvm-memory-optimisations)
+  - [Chapter 10 - Tuning the JVM's Memory Settings](#chapter-10---tuning-the-jvms-memory-settings)
+  - [Chapter 11 - Introducing Garbage Collection](#chapter-11---introducing-garbage-collection)
+  - [Chapter 12 - Monitoring the Heap](#chapter-12---monitoring-the-heap)
+  - [Chapter 13 - Analysing a heap dump](#chapter-13---analysing-a-heap-dump)
+  - [Chapter 14](#chapter-14)
+  - [Chapter 15](#chapter-15)
+  - [Chapter 16](#chapter-16)
+  - [Chapter 17](#chapter-17)
+  - [Chapter 18](#chapter-18)
+  - [Chapter 19](#chapter-19)
+  - [Chapter 20](#chapter-20)
+  - [Chapter 21](#chapter-21)
+  - [Chapter 22](#chapter-22)
+  - [Chapter 23](#chapter-23)
+  - [Chapter 24](#chapter-24)
+  - [Chapter 25](#chapter-25)
+  - [General stuff](#general-stuff)
+  - [Summary](#summary)
+    - [Memory Areas](#memory-areas)
+  - [Questions](#questions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Java Application Performance Tuning and Memory Management
 
 - <https://www.udemy.com/course/java-application-performance-and-memory-management>

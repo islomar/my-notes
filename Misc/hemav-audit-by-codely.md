@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Auditoría Hemav](#auditor%C3%ADa-hemav)
+  - [Diseño de código](#dise%C3%B1o-de-c%C3%B3digo)
+  - [Arquitectura de software](#arquitectura-de-software)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Auditoría Hemav
 
 - <https://pro.codely.com/library/auditoria-hemav-231549>

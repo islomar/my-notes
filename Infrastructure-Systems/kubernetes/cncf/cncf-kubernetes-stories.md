@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [CNCF Kubernetes stories](#cncf-kubernetes-stories)
+  - [General](#general)
+  - [The Illustrated Children’s Guide to Kubernetes](#the-illustrated-childrens-guide-to-kubernetes)
+  - [Phippy Goes to the Zoo](#phippy-goes-to-the-zoo)
+  - [Admiral Bash’s Island Adventure](#admiral-bashs-island-adventure)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # CNCF Kubernetes stories
 - https://www.cncf.io/phippy/
 

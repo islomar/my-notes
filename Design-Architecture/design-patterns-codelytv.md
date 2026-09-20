@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Patrones de diseño (curso Codely TV)](#patrones-de-dise%C3%B1o-curso-codely-tv)
+  - [Patrones creacionales](#patrones-creacionales)
+    - [Singleton](#singleton)
+    - [Refactoring de Singleton a Dependency Injection: Rompiendo la dependencia con MySql](#refactoring-de-singleton-a-dependency-injection-rompiendo-la-dependencia-con-mysql)
+    - [Garantizar una instancia única sin Singletons: DomainEventPublisher](#garantizar-una-instancia-%C3%BAnica-sin-singletons-domaineventpublisher)
+  - [Las Factorías](#las-factor%C3%ADas)
+    - [Factory Method](#factory-method)
+    - [Factorias: cuando la cosa se complica](#factorias-cuando-la-cosa-se-complica)
+      - [Crea la instancia en Runtime con Factory Method parametrizado](#crea-la-instancia-en-runtime-con-factory-method-parametrizado)
+      - [Exhaustividad en la instanciación: La magia del tipado](#exhaustividad-en-la-instanciaci%C3%B3n-la-magia-del-tipado)
+    - [Abstract Factory: Crear familias de objetos](#abstract-factory-crear-familias-de-objetos)
+    - [Builder: Facilitar la construcción de objetos](#builder-facilitar-la-construcci%C3%B3n-de-objetos)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Patrones de diseño (curso Codely TV)
 
 - Tipos de patrones (según GoF):

@@ -1,3 +1,50 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [JavaScript moderno: Buenas prácticas para empezar y refactorizar aplicaciones](#javascript-moderno-buenas-pr%C3%A1cticas-para-empezar-y-refactorizar-aplicaciones)
+  - [Refactorizando JavaScript: de legacy a ES2020 y más allá](#refactorizando-javascript-de-legacy-a-es2020-y-m%C3%A1s-all%C3%A1)
+    - [Grandes refactors de la historia](#grandes-refactors-de-la-historia)
+    - [Crear una aplicación JavaScript en 2021 y los problemas del legacy](#crear-una-aplicaci%C3%B3n-javascript-en-2021-y-los-problemas-del-legacy)
+  - [A dónde queremos llegar: buenas prácticas creando una aplicación moderna con JavaScript](#a-d%C3%B3nde-queremos-llegar-buenas-pr%C3%A1cticas-creando-una-aplicaci%C3%B3n-moderna-con-javascript)
+    - [La entrada a nuestra aplicación: package.json](#la-entrada-a-nuestra-aplicaci%C3%B3n-packagejson)
+    - [Asegurar compatibilidad de nuevas features con Webpack y Babel](#asegurar-compatibilidad-de-nuevas-features-con-webpack-y-babel)
+    - [Estilo y buenas prácticas con ESLint y Prettier](#estilo-y-buenas-pr%C3%A1cticas-con-eslint-y-prettier)
+    - [CI y suite testing!](#ci-y-suite-testing)
+  - [Modernizando nuestra app progresivamente](#modernizando-nuestra-app-progresivamente)
+    - [ES Modules: jQuery de fichero a dependencia](#es-modules-jquery-de-fichero-a-dependencia)
+    - [Cubrir de tests nuestra app](#cubrir-de-tests-nuestra-app)
+    - [De jQuery a JavaScript vanilla](#de-jquery-a-javascript-vanilla)
+  - [Cambios de sintaxis para Productivity Raptors](#cambios-de-sintaxis-para-productivity-raptors)
+    - [Código menos verboso con rest, spread y destructuring](#c%C3%B3digo-menos-verboso-con-rest-spread-y-destructuring)
+    - [Strings más legibles con template literals](#strings-m%C3%A1s-legibles-con-template-literals)
+    - [Simplificar condicionales con nullish coalescing y optional chaining](#simplificar-condicionales-con-nullish-coalescing-y-optional-chaining)
+  - [Variables](#variables)
+    - [Control de la reasignación y mutabilidad con let y const](#control-de-la-reasignaci%C3%B3n-y-mutabilidad-con-let-y-const)
+    - [A refactorizar: solucionamos un bug gracias a let!](#a-refactorizar-solucionamos-un-bug-gracias-a-let)
+    - [Internals: Hoisting y Temporal Dead Zone](#internals-hoisting-y-temporal-dead-zone)
+  - [Arrays & Objetos](#arrays--objetos)
+    - [Aplicando novedades de la API de Array: desde ES2015 hasta ES2020](#aplicando-novedades-de-la-api-de-array-desde-es2015-hasta-es2020)
+    - [Iterando: NodeList... ¡no es un array!](#iterando-nodelist-no-es-un-array)
+    - [Aplicando novedades de la API de Object: desde ES2015 hasta ES2020](#aplicando-novedades-de-la-api-de-object-desde-es2015-hasta-es2020)
+    - [¿Vale la pena seguir usando lodash? Analizando performance](#vale-la-pena-seguir-usando-lodash-analizando-performance)
+  - [Funciones](#funciones)
+    - [Cuándo realmente merece la pena hacer binding de this](#cu%C3%A1ndo-realmente-merece-la-pena-hacer-binding-de-this)
+    - [¡Las Arrow functions NO son azúcar sintáctico! - Diferencias en el tratamiento de this](#las-arrow-functions-no-son-az%C3%BAcar-sint%C3%A1ctico---diferencias-en-el-tratamiento-de-this)
+    - [Trazas de errores semánticas aún con arrow functions](#trazas-de-errores-sem%C3%A1nticas-a%C3%BAn-con-arrow-functions)
+  - [Asincronía](#asincron%C3%ADa)
+    - [De callbacks a promises usando fetch](#de-callbacks-a-promises-usando-fetch)
+    - [Cuándo usar Async/await](#cu%C3%A1ndo-usar-asyncawait)
+    - [Control de errores try-catch con asincronía](#control-de-errores-try-catch-con-asincron%C3%ADa)
+  - [Clases](#clases)
+    - [La herencia en JavaScript es una mentira](#la-herencia-en-javascript-es-una-mentira)
+    - [Échale azúcar a tus clases: this, visibilidad y encapsulación](#%C3%A9chale-az%C3%BAcar-a-tus-clases-this-visibilidad-y-encapsulaci%C3%B3n)
+  - [Conclusiones y siguientes pasos](#conclusiones-y-siguientes-pasos)
+    - [Alternativas a Webpack](#alternativas-a-webpack)
+  - [Qué pedir](#qu%C3%A9-pedir)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # JavaScript moderno: Buenas prácticas para empezar y refactorizar aplicaciones
 
 - https://pro.codely.tv/library/js-moderno

@@ -1,3 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [DDD en TypeScript: Modelado y arquitectura](#ddd-en-typescript-modelado-y-arquitectura)
+  - [Creación del proyecto: Bounded Context y Submodules](#creaci%C3%B3n-del-proyecto-bounded-context-y-submodules)
+  - [Health check de la aplicación: Nuestro primer endpoint](#health-check-de-la-aplicaci%C3%B3n-nuestro-primer-endpoint)
+  - [Desarrollo Outside-in: Implementación del caso de uso para crear curso](#desarrollo-outside-in-implementaci%C3%B3n-del-caso-de-uso-para-crear-curso)
+  - [Refactorizando aprovechando el potencial de TypeScript](#refactorizando-aprovechando-el-potencial-de-typescript)
+  - [Modelando el dominio: Agregado Course](#modelando-el-dominio-agregado-course)
+  - [Modelando el dominio: Value Objects e Implicaciones en tests](#modelando-el-dominio-value-objects-e-implicaciones-en-tests)
+  - [Guardar en base de datos con Mongo](#guardar-en-base-de-datos-con-mongo)
+  - [Bases de datos: Cómo enfocar los tests y tips para producción](#bases-de-datos-c%C3%B3mo-enfocar-los-tests-y-tips-para-producci%C3%B3n)
+    - [Test de integración Mongo](#test-de-integraci%C3%B3n-mongo)
+    - [Tips avanzados para Mongo en producción](#tips-avanzados-para-mongo-en-producci%C3%B3n)
+    - [Optimiza documentos de Mongo de tus agregados](#optimiza-documentos-de-mongo-de-tus-agregados)
+  - [Alternativa almacenamiento con PostgreSQL y TypeORM](#alternativa-almacenamiento-con-postgresql-y-typeorm)
+  - [Conclusión y siguientes pasos](#conclusi%C3%B3n-y-siguientes-pasos)
+  - [Links de interés](#links-de-inter%C3%A9s)
+  - [Lecturas pendientes](#lecturas-pendientes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # DDD en TypeScript: Modelado y arquitectura
 - https://pro.codely.com/library/ddd-en-typescript-modelado-y-arquitectura-172533/375662/path/
 - https://github.com/CodelyTV/typescript-ddd-example

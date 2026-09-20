@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Teamwork skills: Communicating Effectively in Groups](#teamwork-skills-communicating-effectively-in-groups)
+  - [Suggested Readings](#suggested-readings)
+  - [My notes](#my-notes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Teamwork skills: Communicating Effectively in Groups
 - ETA: ~ 6-8 hours
 - https://www.coursera.org/learn/teamwork-skills-effective-communication/home/welcome

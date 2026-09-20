@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Notas tal.er C4 model](#notas-taler-c4-model)
+  - [Introduction](#introduction)
+  - [Diagraming](#diagraming)
+  - [Modeling](#modeling)
+  - [Some resources](#some-resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Notas tal.er C4 model
 - SCPNA 2024, taller de Modesto San Juan
 

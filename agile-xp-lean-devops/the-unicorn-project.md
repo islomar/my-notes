@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [The Unicorn Project](#the-unicorn-project)
+  - [The four ideals](#the-four-ideals)
+  - [Geoffrey Moore’s Four Zones and Three Horizons:](#geoffrey-moores-four-zones-and-three-horizons)
+  - [Core vs Context](#core-vs-context)
+  - [Quotes and ideas](#quotes-and-ideas)
+  - [Links](#links)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # The Unicorn Project
 
 https://itrevolution.com/tup-downloads-extra-materials/

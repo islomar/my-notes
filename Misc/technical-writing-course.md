@@ -1,3 +1,28 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Technical writing course](#technical-writing-course)
+  - [Technical Writing One](#technical-writing-one)
+    - [Words](#words)
+    - [Active voice](#active-voice)
+    - [Clear sentences](#clear-sentences)
+    - [Short sentences](#short-sentences)
+    - [Lists and tables](#lists-and-tables)
+    - [Paragraphs](#paragraphs)
+    - [Audience](#audience)
+    - [Documents](#documents)
+    - [Punctuation](#punctuation)
+    - [Summary](#summary)
+  - [Technical Writing Two](#technical-writing-two)
+    - [Self-editing](#self-editing)
+    - [Organizing large documents](#organizing-large-documents)
+    - [Illustrating](#illustrating)
+    - [Creating sample code](#creating-sample-code)
+  - [Resources](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Technical writing course
 
 - https://developers.google.com/tech-writing/overview

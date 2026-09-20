@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Notes for course "AWS: autoscaling applications with ELB and ASG"](#notes-for-course-aws-autoscaling-applications-with-elb-and-asg)
+  - [Doubts](#doubts)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Notes for course "AWS: autoscaling applications with ELB and ASG"
 
 * Ping PHP: https://gist.github.com/fiunchinho/2ee6013ce85a05f2b60a08c415973a12

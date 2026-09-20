@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Machine Learning Crash Course with TensorFlow APIs](#machine-learning-crash-course-with-tensorflow-apis)
+  - [Prerequisites](#prerequisites)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Machine Learning Crash Course with TensorFlow APIs
 - https://developers.google.com/machine-learning/crash-course
 - 15 hours

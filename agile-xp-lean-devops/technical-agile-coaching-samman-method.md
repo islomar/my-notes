@@ -1,3 +1,40 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Technical Agile Coaching with the Samman method](#technical-agile-coaching-with-the-samman-method)
+  - [Foreword](#foreword)
+  - [Introduction](#introduction)
+  - [Part 1: Ensemble Working](#part-1-ensemble-working)
+    - [Ensemble Primer](#ensemble-primer)
+    - [Let the Ensemble give you Superpowers](#let-the-ensemble-give-you-superpowers)
+    - [Kindness, Consideration and Respect](#kindness-consideration-and-respect)
+    - [Coaching situations illustrated with stories](#coaching-situations-illustrated-with-stories)
+    - [Retrospectives](#retrospectives)
+    - [Remote Ensembles](#remote-ensembles)
+  - [Part 2: Learning Hours](#part-2-learning-hours)
+    - [Explaining why you should hold a Learning Hour](#explaining-why-you-should-hold-a-learning-hour)
+    - [The theory and practice of a teaching and learning](#the-theory-and-practice-of-a-teaching-and-learning)
+    - [Sample learning hours](#sample-learning-hours)
+    - [Learning topics](#learning-topics)
+    - [Remote learning hours](#remote-learning-hours)
+  - [Part 3: Samman Coaching Engagements](#part-3-samman-coaching-engagements)
+    - [Finding an Organization and Teams to Engage with](#finding-an-organization-and-teams-to-engage-with)
+      - [Sales and Marketing principles](#sales-and-marketing-principles)
+      - [The Coaching Proposal](#the-coaching-proposal)
+      - [Proposal for a large organzation with hundreds of teams](#proposal-for-a-large-organzation-with-hundreds-of-teams)
+      - [Closing the Deal](#closing-the-deal)
+      - [Identify your sponsor](#identify-your-sponsor)
+    - [Beginning coaching with a new organization](#beginning-coaching-with-a-new-organization)
+    - [Practicalities before coaching begins](#practicalities-before-coaching-begins)
+    - [Turn up the good](#turn-up-the-good)
+    - [A career as a Samman Technical Coach](#a-career-as-a-samman-technical-coach)
+    - [Final thoughts](#final-thoughts)
+  - [Interesting links](#interesting-links)
+  - [Questions](#questions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Technical Agile Coaching with the Samman method
 
 - Author: Emily Bache

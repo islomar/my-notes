@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Writing idiomatic Python 3.3+](#writing-idiomatic-python-33)
+  - [Chapter 1: Control structures and functions](#chapter-1-control-structures-and-functions)
+  - [Chapter 2: Working with data](#chapter-2-working-with-data)
+  - [Chapter 3: Organizing your code](#chapter-3-organizing-your-code)
+  - [Chapter 4: General advice](#chapter-4-general-advice)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Writing idiomatic Python 3.3+
 Author Jeff Knupp
 

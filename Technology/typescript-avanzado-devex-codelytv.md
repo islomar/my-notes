@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [TypeScript Avanzado: Mejora tu Developer eXperience](#typescript-avanzado-mejora-tu-developer-experience)
+  - [[GRATIS] ¿Qué aprenderás en este curso?](#gratis-qu%C3%A9-aprender%C3%A1s-en-este-curso)
+  - [Transformaciones de tipos gracias a los Utility Types](#transformaciones-de-tipos-gracias-a-los-utility-types)
+  - [Conserva tus literal types gracias a los nuevos const type parameters](#conserva-tus-literal-types-gracias-a-los-nuevos-const-type-parameters)
+  - [Mejora el tipado de tus variables con el operador satisfies](#mejora-el-tipado-de-tus-variables-con-el-operador-satisfies)
+  - [Interesting links](#interesting-links)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # TypeScript Avanzado: Mejora tu Developer eXperience
 - https://pro.codely.com/library/typescript-avanzado-mejora-tu-developer-experience-204725/524595/path/?path_id=8145829
 - https://github.com/CodelyTV/awesome-typescript-examples
