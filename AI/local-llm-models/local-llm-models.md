@@ -12,3 +12,7 @@
 - https://www.reddit.com/r/LocalLLM/comments/1u4mrz0/laptop_recommendations_for_local_llm_use/
 - [Extract about local LLM models from AI Community of Practice](./extract-ai-community-of-practice-about-local-llm-models.md)
 - **VRAM (Video RAM)** provides ultra-high-speed, dedicated workspace exclusively for a discrete graphics card, while **unified memory** creates a single shared pool accessed instantly by both the CPU and GPU without data copying.
+
+# In the cloud
+
+- https://www.runpod.io/

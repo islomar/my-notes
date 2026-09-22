@@ -32,3 +32,7 @@
   - Frontier-level intelligence for System 1 tasks
     - On tasks that call for instinctive judgment and common sense over large bodies of text and structure, Jev approaches frontier reasoning models.
     - This is the hardest claim to defend, and no one in the field has found a good way to prove it. We hope you experiment with Jev and see for yourself.
+
+
+## Pending to read
+- https://simonwillison.net/2026/Sep/21/jev/
