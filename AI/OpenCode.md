@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [OpenCode](#opencode)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # OpenCode
 
 - <https://opencode.ai>
@@ -29,6 +37,7 @@
   - OpenCode’s primary agents can then invoke subagents automatically based on their descriptions, and each subagent can have its own configured model.
   - There is also a separate [`small_model`](https://github.com/mudrii/opencode-docs/blob/main/docs/official/config.md#models) setting for lightweight internal tasks such as title generation, so OpenCode already has the idea of using a cheaper model for some work built into its configuration.
   - There is also already a third-party project called [opencode-model-router](https://github.com/marco-jardim/opencode-model-router) specifically designed to add automatic tier-based routing such as fast, medium, and heavy, mapping task types to different configured models.
+  - Another routing tool: [NVIDIA NeMo Switchyard](https://github.com/NVIDIA-NeMo/Switchyard)
   
   ```text
   OpenCode primary agent

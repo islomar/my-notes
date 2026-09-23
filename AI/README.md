@@ -10,7 +10,7 @@
   - [AI and Product Management](#ai-and-product-management)
   - [TDD, LLM, TBD: PDQ, OK?](#tdd-llm-tbd-pdq-ok)
   - [LangGraph](#langgraph)
-  - [LLM tooling comparison](#llm-tooling-comparison)
+  - [LLM tooling and comparisons](#llm-tooling-and-comparisons)
   - [Other resources](#other-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -108,8 +108,11 @@
 - [LangChain- Develop AI Agents with LangChain & LangGraph](https://www.udemy.com/course/langchain/?couponCode=CP251120G2V2) (18 hours, Ambassador)
 - [LangGraph Agents](https://langchain-ai.github.io/langgraph/)
 
-## LLM tooling comparison
-[LLM tooling comparison](./llm-tooling-comparison.md)
+## LLM tooling and comparisons
+- [LLM tooling comparison](./llm-tooling-comparison.md)
+- https://kanzai.io/
+  - Your local kanban board for coding agents, from backlog to delivery.
+  - The columns do the work. Drag a card into Development and an agent starts. Drag it into Approved and the merge queue runs. Agents work in parallel, each on its own branch.
 
 
 ## Other resources

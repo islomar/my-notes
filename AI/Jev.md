@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Jev](#jev)
+  - [Pending to read](#pending-to-read)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -36,3 +37,4 @@
 
 ## Pending to read
 - https://simonwillison.net/2026/Sep/21/jev/
+- [Can You Run Any LLM in Jev Mode Using llama.cpp?](https://www.youtube.com/watch?v=bcGO7xre46o)

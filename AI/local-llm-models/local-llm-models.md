@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Local LLM models](#local-llm-models)
+- [In the cloud](#in-the-cloud)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
