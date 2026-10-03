@@ -244,14 +244,23 @@
 ### Claude Code Desktop GitHub Workflow
 
 - From Claude Design, you can "Send to Claude Code Web" and implement the design.
+- [Claude Code Web](http://claude.ai/code)
+- `/compact`: call to the model to compact the relevant information of the context. You can compact with a hint, to know what to keep or prioritize.
+- `/clear` whenever you are starting a brand new task in the same session
+- [How Claude remembers your project](https://code.claude.com/docs/en/memory)
+  - CLAUDE.md files
+  - Auto memory (`memory.md`), not specific per project.
 
 ### Cowork
 
-- TBD
+- [Claude Cowork](https://claude.com/es/product/cowork)
+- She uses it for all her Slack messages, all her calendar, all her email, getting up to speed with Slack, etc.
+- You can do the same than with Claude Code, just a different UI, more for non-technical taska.
 
 ### Agent SDK
 
-- TBD
+- [Agent SDK overview](https://code.claude.com/docs/en/agent-sdk/overview)
+- [AskUserQuestion tool](https://code.claude.com/docs/en/tools-reference#askuserquestion-tool-behavior)
 
 ## Other interesting commands
 
@@ -282,7 +291,3 @@
 - <https://claude.com/blog/the-advisor-strategy>
 - <https://code.claude.com/docs/en/server-managed-settings>
 - <https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work>
-
-## Questions
-
-- What is the influence in the token consumption switching between efforts in a model?

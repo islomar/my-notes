@@ -33,8 +33,10 @@
   - Frontier-level intelligence for System 1 tasks
     - On tasks that call for instinctive judgment and common sense over large bodies of text and structure, Jev approaches frontier reasoning models.
     - This is the hardest claim to defend, and no one in the field has found a good way to prove it. We hope you experiment with Jev and see for yourself.
+- [Top 9 places to use Jev (by ByteByteGo)](https://lnkd.in/p/evgMWuGr)
 
 
 ## Pending to read
 - https://simonwillison.net/2026/Sep/21/jev/
 - [Can You Run Any LLM in Jev Mode Using llama.cpp?](https://www.youtube.com/watch?v=bcGO7xre46o)
+- https://drive.google.com/file/d/17h982xvsL3E7b80iGmOCfKp9qTOW9ohv/view
