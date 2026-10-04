@@ -24,7 +24,7 @@ Slimbook Executive, Ubuntu 24.04. Checked on 2026-10-04.
 | dGPU | NVIDIA RTX 3050 Ti Laptop, 4 GB VRAM, driver 580, CUDA 13.0 | Main bottleneck |
 | iGPU | Intel Iris Xe | Not useful |
 | NPU | Intel GNA | Cannot run LLMs |
-| Disk | Samsung 980 PRO 1 TB NVMe. `/`: 17 GB free (95% used). Second partition: 195 GB free. | Fast model loading. `/` is almost full. |
+| Disk | Samsung 980 PRO 1 TB NVMe. `/`: 28 GB free (91% used). Data partition (`nvme0n1p3`): 184 GB free, holds the Ollama models. | Fast model loading. Download models to the data partition. |
 | Tooling | Ollama 0.34.2 with qwen3:4b, qwen3:8b, gemma3:4b, Qwen3-Embedding-0.6B | |
 
 ### What fits
@@ -50,8 +50,24 @@ Layers offloaded to the 4 GB GPU run faster, so partial offload raises these num
 
 ### Pending
 
-- Move Ollama model storage off `/`. The systemd service stores models under `/usr/share/ollama`. Set `OLLAMA_MODELS` to a folder on the 195 GB partition via a systemd override. That partition mounts under `/media/...` by UUID, so it needs an fstab entry before Ollama can depend on it.
-- Try a Qwen3-30B-A3B Q4 quant after moving the storage.
+- Try a Qwen3-30B-A3B Q4 quant.
+
+### Ollama model storage
+
+Moved on 2026-10-04. Models live on the data partition and are bind-mounted onto the path Ollama already uses.
+
+- Real location: `/media/islomar/11795f86-ef0a-4162-b620-f8be882cf63f/ollama-models` (owner `ollama:ollama`)
+- Path Ollama sees: `/usr/share/ollama/.ollama/models` (no `OLLAMA_MODELS` change)
+- `/etc/fstab` line:
+  ```
+  /media/islomar/11795f86-ef0a-4162-b620-f8be882cf63f/ollama-models /usr/share/ollama/.ollama/models none bind,nofail,x-systemd.requires-mounts-for=/media/islomar/11795f86-ef0a-4162-b620-f8be882cf63f 0 0
+  ```
+- Drop-in `/etc/systemd/system/ollama.service.d/models-mount.conf` sets `RequiresMountsFor=/usr/share/ollama/.ollama/models`. If the mount fails, Ollama does not start, so it cannot fill `/` again.
+- Backup of the previous fstab: `/etc/fstab.bak.2026-10-04`
+
+Why a bind mount: the `ollama` user cannot enter `/media/islomar` (permissions `other::---`), so pointing `OLLAMA_MODELS` there fails. An ACL on that folder could be reset by udisks.
+
+Check: `findmnt /usr/share/ollama/.ollama/models` and `ollama list`.
 
 
 ## General
