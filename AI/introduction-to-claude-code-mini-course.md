@@ -24,7 +24,6 @@
   - [Ideas to implement/try](#ideas-to-implementtry)
   - [To share](#to-share)
   - [To read](#to-read)
-  - [Questions](#questions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

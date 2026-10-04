@@ -8,6 +8,7 @@
   - [Claude plugins](#claude-plugins)
   - [Sub-agents](#sub-agents)
   - [Hooks](#hooks)
+  - [Existing commands](#existing-commands)
   - [Ideas for commands](#ideas-for-commands)
   - [Agent Skills](#agent-skills)
   - [Courses](#courses)
@@ -86,6 +87,24 @@
   - E.g. hook that saves to a file every bash command executed by Claude (e.g. auditing?)
   - E.g. hook to block from accessing certain paths
   - E.g. notification and stop hooks which play audio once it has finished...
+
+## Existing commands
+
+- `/doctor`
+  - runs a setup checkup that diagnoses installation and configuration issues and can fix them
+  - diagnose any issues you might have with claude files/memory/skils/etc.. it can also help trim down the claude.md to ensure you don't go over the token allowance in a jiffy.
+- `/powerup`
+  - this one was completely new to me. It teaches you Claude Code features through short interactive lessons and animated demos. If you already use Claude Code, just try it. Seriously.
+- `/insights`
+  - generates an HTML report analysing how you’ve actually been using Claude Code: your projects, patterns, where things go wrong, and features you might want to try. Apparently something worth running every few weeks rather than every day.
+- `/advisor`
+  - lets Claude consult a stronger model at key moments. I really like the idea of not paying for maximum reasoning all the time, but escalating when it actually matters.
+- `/branch`
+  - fork the current conversation and try a different approach without losing where you were. Obvious once you know it exists. Very useful.
+- `/fewer-permission-prompts`
+  - analyses the tool calls you’ve repeatedly approved in previous sessions and adjusts your permissions accordingly. Small thing, but potentially a *lot* less friction.
+- `/remote-control` and `/teleport`
+  - take a running Claude Code session to another device, or move it between your local machine and the cloud. I had no idea these existed either.
 
 ## Ideas for commands
 

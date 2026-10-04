@@ -6,6 +6,7 @@
   - [Trazar el camino](#trazar-el-camino)
   - [Montar tu agencia](#montar-tu-agencia)
   - [Escalado y automatizado](#escalado-y-automatizado)
+  - [Dudas](#dudas)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

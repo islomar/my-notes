@@ -9,3 +9,6 @@ __MACOSX/
 
 node_modules/
 dist/
+
+# TDD Guard data auto-created in subfolders (root copy stays tracked)
+*/**/.claude/tdd-guard/

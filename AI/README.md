@@ -7,6 +7,7 @@
   - [Learning resources (training, courses)](#learning-resources-training-courses)
   - [Language](#language)
   - [List of interesting MCPs](#list-of-interesting-mcps)
+  - [List of interesting skills](#list-of-interesting-skills)
   - [AI and Product Management](#ai-and-product-management)
   - [TDD, LLM, TBD: PDQ, OK?](#tdd-llm-tbd-pdq-ok)
   - [LangGraph](#langgraph)
