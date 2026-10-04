@@ -31,9 +31,11 @@ Slimbook Executive, Ubuntu 24.04. Checked on 2026-10-04.
 
 - **Fully on GPU (about 30–60 tok/s):** models up to about 4B at Q4, with short context. Example: qwen3:4b, gemma3:4b.
 - **GPU + CPU split (about 8–20 tok/s):** dense 7–9B at Q4, such as qwen3:8b (5.2 GB). They exceed 4 GB VRAM, so Ollama offloads layers to the CPU.
-- **Best fit: MoE models with few active parameters**, such as Qwen3-30B-A3B or gpt-oss-20b at Q4 (about 12–19 GB). The weights sit in RAM. About 3B parameters are active per token. Measured: Qwen3-30B-A3B runs at 10–13 tok/s (see [Benchmark](#benchmark-qwen330b-a3b)). Better quality than any 8B dense model.
+- **Best fit: MoE models with few active parameters**, such as Qwen3-30B-A3B or gpt-oss-20b at Q4 (about 12–19 GB). The weights sit in RAM. About 3B parameters are active per token. Measured: Qwen3-30B-A3B runs at about 10 tok/s (see [Benchmark](#benchmark-qwen330b-a3b)). Better quality than any 8B dense model.
 - **Dense 14B at Q4:** a few tok/s. Too slow for interactive use.
 - **Dense 32B+:** loads in RAM, but runs at about 1–3 tok/s.
+
+Models of about 3–4B parameters at Q4 quantization would run fully on the GPU. Larger models will be split between GPU and CPU and run noticeably slower.
 
 Only Qwen3-30B-A3B is measured. The other speed figures are estimates.
 
@@ -41,7 +43,7 @@ CPU speed ceiling: each generated token reads all active weights from RAM once. 
 
 | Model (Q4) | Active weights per token | Ceiling | Expected on CPU |
 |---|---|---|---|
-| MoE, 3B active (Qwen3-30B-A3B) | about 1.8 GB | about 28 tok/s | measured: 10–13 tok/s |
+| MoE, 3B active (Qwen3-30B-A3B) | about 1.8 GB | about 28 tok/s | measured: about 10 tok/s |
 | Dense 8B | about 5 GB | about 10 tok/s | about 5–7 tok/s |
 | Dense 14B | about 9 GB | about 6 tok/s | about 3–4 tok/s |
 | Dense 32B | about 19 GB | about 2.7 tok/s | about 1.5–2 tok/s |
@@ -67,14 +69,23 @@ Thread count (warm run, 4k context, 256 tokens):
 
 Two runs per setting. Differences of about ±1 tok/s are noise.
 
+Retest with the 12-thread variant, alternating both models, 3 warm runs each:
+
+| Model | Runs | Median |
+|---|---|---|
+| `qwen3:30b-a3b` (6 threads) | 10.5, 9.7, 9.7 | 9.7 tok/s |
+| `qwen3:30b-a3b-t12` (12 threads) | 11.0, 10.1, 10.0 | 10.1 tok/s |
+
+The 13.4 tok/s result did not repeat. 12 threads gives about +4%, within noise. CPU temperature reached 74 °C during the runs.
+
 Findings:
 
 - Ollama splits the model well on its own: attention layers and KV cache on the GPU (CUDA, flash attention on), expert weights in RAM. `ollama ps` shows 86% CPU / 14% GPU.
-- Ollama uses 6 threads by default (the P-cores). 8–12 threads give about +25%. 14 threads is slower, because the E-cores hold back the rest.
+- Ollama uses 6 threads by default (the P-cores). More threads give little or no gain (see retest). 14 threads is slower, because the E-cores hold back the rest.
 - Long context costs a lot: at 16k context, generation drops to about 5 tok/s.
 - 10 tok/s × 1.8 GB per token is about 18 GB/s, roughly 35% of the 51 GB/s RAM peak.
 
-Variant with 12 threads (same weights, no extra disk space):
+Variant with 12 threads, created as `qwen3:30b-a3b-t12` (same weights, no extra disk space):
 
 ```bash
 printf 'FROM qwen3:30b-a3b\nPARAMETER num_thread 12\n' > /tmp/Modelfile
@@ -83,7 +94,6 @@ ollama create qwen3:30b-a3b-t12 -f /tmp/Modelfile
 
 ### Pending
 
-- Create the 12-thread variant.
 - Test the "Performance" power profile.
 
 ### Ollama model storage

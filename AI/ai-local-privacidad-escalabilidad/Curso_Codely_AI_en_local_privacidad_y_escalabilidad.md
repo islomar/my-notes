@@ -1,0 +1,117 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [IA en local: Privacidad y escalabilidad](#ia-en-local-privacidad-y-escalabilidad)
+  - [🌼 Estrategia de modelos y arquitectura independiente del proveedor](#-estrategia-de-modelos-y-arquitectura-independiente-del-proveedor)
+  - [🏗️ Caso práctico: Sugerencias y traducciones en local](#-caso-pr%C3%A1ctico-sugerencias-y-traducciones-en-local)
+  - [🚀 Modelos locales en producción](#-modelos-locales-en-producci%C3%B3n)
+  - [🔜 Conclusiones y siguientes pasos](#-conclusiones-y-siguientes-pasos)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# IA en local: Privacidad y escalabilidad
+
+- <https://pro.codely.com/library/ia-en-local-privacidad-y-escalabilidad-243087/752700/about/>
+- ~95 min
+- Creado en ¿febrero de 2026?
+
+## Intro
+
+- El inferidor más habitual: **llama.cpp**
+  - <https://github.com/ggml-org/llama.cpp>
+  - The main goal of llama.cpp is to enable LLM (and VLM) inference with minimal setup and state-of-the-art performance on a wide range of hardware - locally and in the cloud.
+  - El inferidor llama al modelo (fichero con binario), por ejemplo:
+    - GPT-OSS
+    - Mistral AI
+    - Gemma
+- API / SDKs - Inferer+ / Server - Model
+- Which to choose?
+  - <https://github.com/CodelyTV/ai-local_models-course/tree/main/01-infer/2-which_to_choose>
+  - Opciones
+    - [Ollama](https://ollama.com/)
+      - Created by ex-employees from Docker
+      - Ollama is the most popular way to build with open models.
+      - La API es compatible con ChatGPT y Anthropic (`ollama launch claude`).
+      - Se podría enganchar Claude Code con tu servidor de Ollama
+      - These models are much slower and less "intelligent"
+      - [Lista de modelos en Ollama](https://ollama.com/search)
+        - They are curated, you know they will work perfectly fine
+    - [LM Studio](https://lmstudio.ai/)
+      - Bionic
+      - <https://lmstudio.ai/models>
+        - All the Hugging Face models (HF es el GitHub de los modelos, el catálogo global)
+        - They are not curated
+        - <https://lmstudio.ai/models/mistralai/ministral-3-3b>
+          - `lms get mistralai/ministral-3-3b`
+          - The smallest model in the Ministral 3 family, combining a 3.4B language model with a 0.4B vision encoder for efficient edge deployment.
+          - Supports context length of 256k tokens.
+      - Principal competidor de Ollama
+      - Nació como alternativa a ChatGPT, pero también admite usarlo como servidor local
+    - **Docker Models**
+      - <https://github.com/docker/model-runner>
+        - Docker Model Runner (DMR) makes it easy to manage, run, and deploy AI models using Docker.
+        - Designed for developers, Docker Model Runner streamlines the process of pulling, running, and serving large language models (LLMs) and other AI models directly from Docker Hub or any OCI-compliant registry.
+      - <https://www.docker.com/products/model-runner/>
+      - <https://docs.docker.com/ai/model-runner/>
+      - [Introducing Docker Model Runner: A Better Way to Build and Run GenAI Models Locally](https://www.docker.com/blog/introducing-docker-model-runner/)
+      - It accepts the same requests as the OpenAI API
+      - [Define AI Models in Docker Compose applications](https://docs.docker.com/ai/compose/models-and-compose/)
+      - `docker model install-runner --gpu cuda`
+      - `docker model run ai/smollm2 "Say hello in one sentence."`
+        - ai/smollm2 is about 360M parameters, so it downloads fast.
+      - `docker model ls`
+      - <https://hub.docker.com/u/ai> --> all the models
+
+      ```bash
+      docker model search                          # all models in Docker Hub's ai/ namespace
+      docker model search qwen                     # filter by name or description
+      docker model search --source=huggingface phi # search Hugging Face instead
+      docker model search -n 50 gemma              # show more results (the default is 32)
+      ```
+
+      - **IMPORTANT**: in Mac, it does not work well, it is very slow
+    - **LlamaBarn**
+    - Only for Mac 🤷
+    - <https://github.com/ggml-org/Llama-macOS>
+    - <https://remotebrowser.substack.com/p/llamabarn-no-frills-local-llms-for>
+
+![Comparativa de inferidores de AI](comparativa-inferidores-ai.png)
+
+## 🌼 Estrategia de modelos y arquitectura independiente del proveedor
+
+- Criteria to follow when choosing a model
+  - **Capabilities** (e.g. generate image, etc.)
+  - **RAM** (HW consumption)
+    - VRAM is the graphic display RAM
+    - FromMacBook M1: RAM and VRAM are unified
+  - **Context size** (e.g. for longer conversations)
+- The RAM requirements can be calculated with the lower value between:
+  - RAM (G) ≃ params * 1.2  (e.g. params = 8 billions)
+  - RAM (G) ≃ size * 1.5    (e.g. size = 6 GB)
+- https://github.com/AlexsJones/llmfit
+  - To check if a model will run correctly in your system
+- FP: Floating Point
+  - FP16 = 16 bits per weight (per parameter)
+- Q: Quantization
+  - Scale to reduce the capabilities of the model
+  - Lobotomization
+![Quantization](quantization.png)
+
+- **🎩 Cómo ser agnóstico del servidor de inferencia**
+  - [AiSdkChatGateway](https://github.com/CodelyTV/ai-local_models-course/blob/main/02-models/2-inference/src/contexts/chat/infrastructure/AiSdkChatGateway.ts)
+    - The model is injected... but this is not recommended, since each model needs different ways of using the prompt.
+    - [AiSdkMinistral3ChatGateway](https://github.com/CodelyTV/ai-local_models-course/blob/main/02-models/2-inference/src/contexts/chat/infrastructure/AiSdkMinistral3ChatGateway.ts)
+    - 
+
+## 🏗️ Caso práctico: Sugerencias y traducciones en local
+
+- TBD
+
+## 🚀 Modelos locales en producción
+
+- TBD
+
+## 🔜 Conclusiones y siguientes pasos
+
+- TBD
