@@ -24,33 +24,67 @@ Slimbook Executive, Ubuntu 24.04. Checked on 2026-10-04.
 | dGPU | NVIDIA RTX 3050 Ti Laptop, 4 GB VRAM, driver 580, CUDA 13.0 | Main bottleneck |
 | iGPU | Intel Iris Xe | Not useful |
 | NPU | Intel GNA | Cannot run LLMs |
-| Disk | Samsung 980 PRO 1 TB NVMe. `/`: 28 GB free (91% used). Data partition (`nvme0n1p3`): 184 GB free, holds the Ollama models. | Fast model loading. Download models to the data partition. |
-| Tooling | Ollama 0.34.2 with qwen3:4b, qwen3:8b, gemma3:4b, Qwen3-Embedding-0.6B | |
+| Disk | Samsung 980 PRO 1 TB NVMe, PCIe 4.0 x4. `/` (`nvme0n1p2`): 112 GB free (63% used). Data partition (`nvme0n1p3`): 157 GB free (73% used). Both partitions are on the same drive and run at the same speed. | Ollama models live on the data partition. |
+| Tooling | Ollama 0.34.2 with qwen3:30b-a3b, qwen3:4b, qwen3:8b, gemma3:4b, Qwen3-Embedding-0.6B | |
 
 ### What fits
 
 - **Fully on GPU (about 30–60 tok/s):** models up to about 4B at Q4, with short context. Example: qwen3:4b, gemma3:4b.
 - **GPU + CPU split (about 8–20 tok/s):** dense 7–9B at Q4, such as qwen3:8b (5.2 GB). They exceed 4 GB VRAM, so Ollama offloads layers to the CPU.
-- **Best fit: MoE models with few active parameters**, such as Qwen3-30B-A3B or gpt-oss-20b at Q4 (about 12–18 GB). The weights sit in RAM. About 3B parameters are active per token, so expect about 10–20 tok/s on CPU, more with attention/shared layers on the GPU. Better quality than any 8B dense model.
+- **Best fit: MoE models with few active parameters**, such as Qwen3-30B-A3B or gpt-oss-20b at Q4 (about 12–19 GB). The weights sit in RAM. About 3B parameters are active per token. Measured: Qwen3-30B-A3B runs at 10–13 tok/s (see [Benchmark](#benchmark-qwen330b-a3b)). Better quality than any 8B dense model.
 - **Dense 14B at Q4:** a few tok/s. Too slow for interactive use.
 - **Dense 32B+:** loads in RAM, but runs at about 1–3 tok/s.
 
-The speed figures are estimates. I have not benchmarked them on this laptop.
+Only Qwen3-30B-A3B is measured. The other speed figures are estimates.
 
 CPU speed ceiling: each generated token reads all active weights from RAM once. Max tok/s ≈ 51 GB/s ÷ active weight size. Real throughput is about 50–70% of that.
 
 | Model (Q4) | Active weights per token | Ceiling | Expected on CPU |
 |---|---|---|---|
-| MoE, 3B active (Qwen3-30B-A3B) | about 1.8 GB | about 28 tok/s | about 12–18 tok/s |
+| MoE, 3B active (Qwen3-30B-A3B) | about 1.8 GB | about 28 tok/s | measured: 10–13 tok/s |
 | Dense 8B | about 5 GB | about 10 tok/s | about 5–7 tok/s |
 | Dense 14B | about 9 GB | about 6 tok/s | about 3–4 tok/s |
 | Dense 32B | about 19 GB | about 2.7 tok/s | about 1.5–2 tok/s |
 
 Layers offloaded to the 4 GB GPU run faster, so partial offload raises these numbers.
 
+### Benchmark: qwen3:30b-a3b
+
+Run on 2026-10-04. Ollama 0.34.2, Q4_K_M (18 GB), thinking off, temperature 0, AC power, power profile "balanced", about 24 GB RAM used by other apps.
+
+| Run | Context | Prompt processing | Generation |
+|---|---|---|---|
+| Cold start (load 36 s) | 4k | 18 tok | 8.0 tok/s |
+| Warm, code prompt | 4k | 25 tok | 9.6 tok/s |
+| Warm, explanation | 4k | 19 tok | 10.1 tok/s |
+| Long prompt | 16k | 5,441 tok at 114 tok/s | 4.8 tok/s |
+
+Thread count (warm run, 4k context, 256 tokens):
+
+| `num_thread` | 6 (default) | 8 | 12 | 14 |
+|---|---|---|---|---|
+| Generation | 10.1 tok/s | 12.3 tok/s | 13.4 tok/s | 11.2 tok/s |
+
+Two runs per setting. Differences of about ±1 tok/s are noise.
+
+Findings:
+
+- Ollama splits the model well on its own: attention layers and KV cache on the GPU (CUDA, flash attention on), expert weights in RAM. `ollama ps` shows 86% CPU / 14% GPU.
+- Ollama uses 6 threads by default (the P-cores). 8–12 threads give about +25%. 14 threads is slower, because the E-cores hold back the rest.
+- Long context costs a lot: at 16k context, generation drops to about 5 tok/s.
+- 10 tok/s × 1.8 GB per token is about 18 GB/s, roughly 35% of the 51 GB/s RAM peak.
+
+Variant with 12 threads (same weights, no extra disk space):
+
+```bash
+printf 'FROM qwen3:30b-a3b\nPARAMETER num_thread 12\n' > /tmp/Modelfile
+ollama create qwen3:30b-a3b-t12 -f /tmp/Modelfile
+```
+
 ### Pending
 
-- Try a Qwen3-30B-A3B Q4 quant.
+- Create the 12-thread variant.
+- Test the "Performance" power profile.
 
 ### Ollama model storage
 
