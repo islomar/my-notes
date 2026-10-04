@@ -20,7 +20,7 @@ Slimbook Executive, Ubuntu 24.04. Checked on 2026-10-04.
 | Component | Spec | Relevance for local LLMs |
 |---|---|---|
 | CPU | Intel i7-12700H: 14 cores (6P + 8E), 20 threads. AVX2, AVX-VNNI, FMA, F16C. No AVX-512. | Fine for CPU inference with llama.cpp/Ollama |
-| RAM | 64 GB, plus 16 GB swap. About 39 GB free with normal desktop use. | Main asset |
+| RAM | 64 GB DDR4-3200, 2 modules (dual channel, about 51 GB/s peak). 16 GB swap. About 39 GB free with normal desktop use. | Main asset. Bandwidth sets the CPU speed limit. |
 | dGPU | NVIDIA RTX 3050 Ti Laptop, 4 GB VRAM, driver 580, CUDA 13.0 | Main bottleneck |
 | iGPU | Intel Iris Xe | Not useful |
 | NPU | Intel GNA | Cannot run LLMs |
@@ -37,10 +37,20 @@ Slimbook Executive, Ubuntu 24.04. Checked on 2026-10-04.
 
 The speed figures are estimates. I have not benchmarked them on this laptop.
 
+CPU speed ceiling: each generated token reads all active weights from RAM once. Max tok/s ≈ 51 GB/s ÷ active weight size. Real throughput is about 50–70% of that.
+
+| Model (Q4) | Active weights per token | Ceiling | Expected on CPU |
+|---|---|---|---|
+| MoE, 3B active (Qwen3-30B-A3B) | about 1.8 GB | about 28 tok/s | about 12–18 tok/s |
+| Dense 8B | about 5 GB | about 10 tok/s | about 5–7 tok/s |
+| Dense 14B | about 9 GB | about 6 tok/s | about 3–4 tok/s |
+| Dense 32B | about 19 GB | about 2.7 tok/s | about 1.5–2 tok/s |
+
+Layers offloaded to the 4 GB GPU run faster, so partial offload raises these numbers.
+
 ### Pending
 
 - Move Ollama model storage off `/`. The systemd service stores models under `/usr/share/ollama`. Set `OLLAMA_MODELS` to a folder on the 195 GB partition via a systemd override. That partition mounts under `/media/...` by UUID, so it needs an fstab entry before Ollama can depend on it.
-- Check RAM type and speed: `sudo dmidecode -t memory | grep -E 'Type:|Speed'`. CPU token speed depends mostly on memory bandwidth (DDR4-3200 is about 51 GB/s, DDR5-4800 about 77 GB/s).
 - Try a Qwen3-30B-A3B Q4 quant after moving the storage.
 
 
