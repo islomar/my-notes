@@ -255,6 +255,22 @@ Configuration file prompts answered during the upgrade:
 
 - `/etc/adduser.conf`: kept (N). Custom `EXTRA_GROUPS` / `ADD_EXTRA_GROUPS=1` only affect future accounts.
 - `/etc/bash.bashrc`: replaced (Y). The only customisation was the Nix block, and Nix is unused.
+- `/etc/default/grub`: kept. Contains the Slimbook panel fix `drm.edid_firmware=eDP-1:edid/edid.bin` (file in `/lib/firmware/edid/`), the Slimbook GRUB theme and `GRUB_GFXMODE`.
+- `/etc/gdm3/custom.conf`: replaced (Y). Only a disabled auto-login for the unused `beibi` account.
+
+Obsolete packages: 323 removed (answered y). Checked before confirming:
+
+- Third-party apps not affected (1Password, Chrome, VS Code, Docker, Claude Desktop, ChatGPT, Obsidian, DBeaver, Zoom, LM Studio, Slimbook tools).
+- Kernel safe: 26.04 `linux-generic 7.0.0-38` with headers installed; only 24.04 HWE metapackages and kernel 6.8.0-146 removed.
+- Removed: X.org, Python 3.12, old LLVM, GNOME apps replaced in 26.04 (Evince, Eog, Totem, Cheese, System Monitor).
+
+Reinstall after the upgrade:
+
+- `pipx reinstall-all`: all pipx venvs (streamdeck-linux-gui, poetry, uv, black) were built for Python 3.12 and now point to 3.14. Stream Deck will not start until this runs.
+- `sudo apt install pass` (`~/.password-store` is intact).
+- If needed: `wl-clipboard`, `graphviz`, `tldr`, `fastfetch` (replaces `neofetch`), newer Ruby or g++.
+
+Later cleanup: many stale folders in `/lib/modules/` from kernels removed years ago (5.15 to 6.8). Check with `dpkg -S` before deleting.
 
 #### Uninstall Nix (unused)
 
