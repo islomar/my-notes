@@ -79,7 +79,7 @@ Verbatim portable drive, Samsung HM100UI 1 TB, NTFS, label `Backup`, about 12,40
 - Buy a new external drive and format it ext4.
 - NTFS structures are damaged (`MFT: expect seq=…`, `Inode is not in use`). `ntfsfix -d` only cleared the dirty flag.
 - 2026-10-06 18:26: a FreeFileSync scan wrote a lock file to the disk and the `ntfs3` driver crashed (`kernel BUG at fs/iomap/buffered-io.c:1061`). FreeFileSync hung in state `D`; only a reboot clears it. No files were deleted.
-- From now on, mount it read-only and never write to it: `udisksctl mount -b /dev/sdd1 -o ro`.
+- From now on, mount it read-only and never write to it. The forced power-off left it dirty again; do not run `ntfsfix` (it writes). Use `sudo ntfs-3g -o ro /dev/sdX1 /mnt/oldbackup`. Device names change per boot (`sdd` before, `sdb` after the reboot); check with `lsblk`.
 - Re-run `zstd -t` on the archive once after the reboot. If it fails, Copy 2 is the only full backup.
 
 ## Next steps
@@ -106,15 +106,17 @@ Restore Copy 1 if needed:
 tar --zstd -xpf /media/islomar/Backup/home-islomar-2026-10-06.tar.zst -C /home/islomar
 ```
 
-Eject the external disk before unplugging: `udisksctl unmount -b /dev/sdd1 && udisksctl power-off -b /dev/sdd`. Keep it unplugged until the upgrade is done.
+Eject the external disk before unplugging: `udisksctl unmount -b /dev/sdX1 && udisksctl power-off -b /dev/sdX` (check the name with `lsblk`). Keep it unplugged until the upgrade is done.
 
 ### 2. Timeshift snapshot of the system
 
 Timeshift saves the system (`/usr`, `/etc`, `/var`, `/opt`), not `/home`. The "Backups" app (Déjà Dup) is a different tool for personal files.
 
-Location: the root partition `nvme0n1p2` (98 GB free). The data partition `nvme0n1p3` has only 49 GB free after Copy 2, and the system without Docker takes about 46–47 GB. Both partitions are on the same NVMe disk, so neither location protects against disk failure.
+Location: the root partition `nvme0n1p2` (98 GB free). The data partition `nvme0n1p3` has only 49 GB free after Copy 2. Both partitions are on the same NVMe disk, so neither location protects against disk failure.
 
-Excluded: `/var/lib/docker` (26 GB, images can be pulled again).
+Excluded: `/var/lib/docker` (26 GB, images can be pulled again) and `/usr/share/ollama` (32 GB of models; excluded paths are left untouched on restore).
+
+Done 2026-10-06 19:05: snapshot `2026-10-06_19-05-27`, 65.4 GB, 36 GB left free on `/`. A first attempt without the Ollama exclusion took 94.5 GB and left 3.5 GB free; it was deleted. The 46 GB estimate missed folders readable only by root.
 
 Reboot first (kernel crash on 2026-10-06, see the external disk section). Then:
 
@@ -128,17 +130,17 @@ Open Timeshift from the app menu:
 2. Location: the 320 GB ext4 partition (`nvme0n1p2`, where `/` lives).
 3. Schedule: untick everything.
 4. Users: "Exclude All" for `root` and `islomar`.
-5. Settings → Filters → Add `/var/lib/docker/***`.
+5. Settings → Filters → Add `/var/lib/docker/***` and `/usr/share/ollama/***`.
 6. Create, comment "before 26.04 upgrade".
 
 Verify:
 
 ```bash
 sudo timeshift --list
-df -h /   # expect about 50 GB free
+df -h /   # expect about 36 GB free
 ```
 
-**Delete this snapshot about 2 weeks after the upgrade** (Google Calendar reminder set for 2026-10-23). It uses about 46 GB of `/`.
+**Delete this snapshot about 2 weeks after the upgrade** (Google Calendar reminder set for 2026-10-23). It uses about 65 GB of `/`.
 
 ### 3. Bootable live USB
 
@@ -162,15 +164,32 @@ Log out, gear icon, choose "Ubuntu" (not "Ubuntu on Xorg"). Check:
 
 Do not upgrade if a blocker has no workaround.
 
+Findings (test started 2026-10-06, after the reboot logged into Wayland):
+
+1. Saved monitor layouts did not apply. Cause: X11 and Wayland name outputs differently (`HDMI-1` vs `HDMI-A-1`, `DP-3-1` vs `DP-5`). Fixed by arranging once in Settings → Displays; GNOME keeps both layouts in `~/.config/monitors.xml`.
+2. GNOME Terminal 3.52 crashed on the layout change and closed every window. Workaround: tmux for long tasks. 26.04 ships Ptyxis as the default terminal; recheck after the upgrade.
+
 ### 5. Upgrade
 
-On mains power and a stable connection:
+On mains power and a stable connection. Run it inside tmux, so a terminal crash does not cut the upgrade in half:
 
 ```bash
+tmux new -s upgrade
 sudo do-release-upgrade
 ```
 
-Read the summary of disabled repos and removed packages before confirming.
+If the terminal window closes, open a new one and reattach:
+
+```bash
+tmux attach -t upgrade
+```
+
+Why: on 2026-10-06 GNOME Terminal 3.52 crashed (`SEGV`) on Wayland right after a display layout change, and all terminal windows closed at once. An interrupted `do-release-upgrade` leaves a mix of old and new packages.
+
+During the upgrade:
+
+- Do not plug or unplug monitors, and do not change display settings.
+- Read the summary of disabled repos and removed packages before confirming.
 
 ### 6. After the reboot
 
@@ -205,10 +224,10 @@ Delete both when all of these are true:
 rm -rf /media/islomar/<data-partition-uuid>/home-backup-2026-10-06
 sudo timeshift --list
 sudo timeshift --delete --snapshot '<name from list>'
-df -h /   # expect about 46 GB more free
+df -h /   # expect about 65 GB more free
 ```
 
-Copy 2 uses 89 GB of the data partition. The snapshot uses about 46 GB of `/`. After two weeks, a Timeshift rollback would undo too much.
+Copy 2 uses 89 GB of the data partition. The snapshot uses about 65 GB of `/`. After two weeks, a Timeshift rollback would undo too much.
 
 Reminder: Google Calendar event on 2026-10-23. Move it if the upgrade happens later than 2026-10-09.
 
