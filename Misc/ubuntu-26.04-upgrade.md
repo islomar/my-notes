@@ -251,6 +251,38 @@ Then:
 - Check the NVIDIA container toolkit with a CUDA container.
 - Optional cleanup: `rm -rf /etc/apt/sources.list.d.bak-2026-10-06 /etc/pam.d.bak-2026-10-06` once everything works.
 
+Configuration file prompts answered during the upgrade:
+
+- `/etc/adduser.conf`: kept (N). Custom `EXTRA_GROUPS` / `ADD_EXTRA_GROUPS=1` only affect future accounts.
+- `/etc/bash.bashrc`: replaced (Y). The only customisation was the Nix block, and Nix is unused.
+
+#### Uninstall Nix (unused)
+
+Multi-user install from 2023-09-19 (official installer, no `/nix/receipt.json`). The user profile has no packages. Pieces found:
+
+- systemd: `nix-daemon.service`, `nix-daemon.socket`; `/etc/tmpfiles.d/nix-daemon.conf`
+- `/nix`, `/etc/nix`, `/etc/profile.d/nix.sh`
+- Shell hooks: `/etc/zsh/zshrc` (backup `/etc/zsh/zshrc.backup-before-nix`), `/etc/bashrc`, `/etc/zshrc` (5-line files created by the installer), `/etc/bash.bashrc.backup-before-nix`
+- Build users `nixbld1…` and group `nixbld`
+- User files: `~/.nix-profile`, `~/.nix-defexpr`, `~/.local/state/nix`
+
+Steps (follow the official multi-user uninstall in the Nix manual; back up every `/etc` file first):
+
+```bash
+sudo systemctl stop nix-daemon.service nix-daemon.socket
+sudo systemctl disable nix-daemon.service nix-daemon.socket
+sudo rm /etc/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.socket
+sudo systemctl daemon-reload
+# shell hooks: restore zshrc from its backup if the upgrade did not replace it; drop the installer-only files
+sudo cp /etc/zsh/zshrc /etc/zsh/zshrc.with-nix && sudo mv /etc/zsh/zshrc.backup-before-nix /etc/zsh/zshrc
+sudo rm /etc/bashrc /etc/zshrc /etc/profile.d/nix.sh /etc/tmpfiles.d/nix-daemon.conf /etc/bash.bashrc.backup-before-nix
+sudo rm -rf /etc/nix /nix /root/.nix-channels /root/.nix-defexpr /root/.nix-profile /root/.cache/nix
+for i in $(seq 1 32); do sudo userdel nixbld$i 2>/dev/null; done; sudo groupdel nixbld
+rm -rf ~/.nix-profile ~/.nix-defexpr ~/.nix-channels ~/.local/state/nix ~/.cache/nix
+```
+
+Check the `/etc/zsh/zshrc` step against the upgrade first: if 26.04 shipped a new zshrc, remove only the Nix block instead of restoring the 2023 backup. Verify: `systemctl status nix-daemon` (not found), `ls /nix` (missing), new zsh and bash shells start without errors.
+
 ## When to delete the backups
 
 ### Copy 2 and the Timeshift snapshot: about 2 weeks after the upgrade
