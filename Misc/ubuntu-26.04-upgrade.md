@@ -187,7 +187,56 @@ It is the only copy outside the laptop. Keep it until a new, healthy disk holds 
 
 ### Ongoing backups
 
-Both copies freeze the state of 2026-10-06. Buy a new external drive (ext4) and set up a weekly backup: Déjà Dup, restic or borg.
+Both copies freeze the state of 2026-10-06. See the plan below.
+
+## Periodic backup plan (after the upgrade)
+
+Goal: 3-2-1. Three copies, two devices, one offsite.
+
+### New external disk
+
+10 Gbps USB-C SSD, 2 TB, formatted ext4. The laptop has 10 Gbps USB and Thunderbolt; 20 Gbps drives bring no gain.
+
+| Option | Approx. price on Amazon.es (2026-10) | Warranty |
+|---|---|---|
+| Samsung T7 Shield 2TB (MU-PE2T0), preferred | €218–229 | 3 years |
+| Crucial X9 Pro 2TB (CT2000X9PROSSD902) | €239–250 | 5 years |
+| WD Elements Portable 4TB (HDD) | €158 | 2 years |
+
+Avoid SanDisk Extreme (2023 data-loss firmware issue) and the WD HDD (same failure type as the current disk).
+
+### Tool: restic
+
+- Encrypted on the laptop before upload.
+- Deduplicated: weekly runs store only changes.
+- One tool and one restore process for both destinations.
+- `restic mount` exposes snapshots as browsable folders.
+- Install: `sudo apt install restic`.
+
+### Destinations
+
+1. External SSD. Backup runs when the disk is plugged in (systemd unit triggered by the mount).
+2. Offsite, weekly. Verify current prices before choosing:
+   - Hetzner Storage Box (Germany), about €4/month for 1 TB, SFTP.
+   - Backblaze B2, EU region (Amsterdam), about $6–7 per TB per month.
+
+### Schedule
+
+systemd user timer with `OnCalendar=weekly` and `Persistent=true`, so a missed run (laptop asleep) runs on next wake.
+
+### Rules
+
+- Store the restic repository password in 1Password. Without it the backups cannot be read.
+- Exclude caches, `node_modules`, Trash, and optionally `~/.lmstudio/models`.
+- Restore one file every month to prove the backups work.
+
+### Alternatives considered
+
+- Pika Backup (Borg GUI): good if a GUI is preferred. Offsite needs a Borg-capable server (BorgBase, Hetzner over SSH).
+- Déjà Dup: default backend keeps incremental chains that get slow and fragile to restore.
+- rsync script: no encryption, no history.
+- Dropbox: sync propagates deletions and corruption.
+- Timeshift: system rollback only.
 
 ## Sources
 
