@@ -329,11 +329,23 @@ Done after the reboot:
 - **NVIDIA transitional packages**: `nvidia-driver-515` (22.04) pointed to 535, which in 26.04 points to 580. Both 535 and 580 were marked auto, so removing 515 would have let `autoremove` delete the real driver. Fixed with `sudo apt-mark manual nvidia-driver-580` before `apt purge nvidia-driver-515`.
 - **autoremove** (52 packages): old Qt5/QML, Clutter, 32-bit codec libraries, ImageMagick 6 (ImageMagick 7 still provides `convert`/`magick`), `postgresql-client-16` (`psql` now from client 18), `nvidia-driver-535`, and the neofetch leftovers `chafa`, `jp2a`, `toilet`, `caca-utils`.
 
+- **OBS on Wayland** (OBS 32.1):
+  - Recording buttons: the old Stream Deck buttons focused OBS with `wmctrl` (X11-only) and sent `Ctrl+R/P/U`. Replaced by OBS's built-in WebSocket remote control (Tools → WebSocket Server Settings → enabled, authentication on, port 4455).
+  - Script `~/.local/bin/obs-ctl` (`record-toggle`, `record-start`, `record-stop`, `pause`, `resume`, `pause-toggle`, `status`): a `uv` script using `obsws-python`, reads host, port and password from `~/.config/obs-studio/plugin_config/obs-websocket/config.json`, shows a notification. Shebang uses the full path to `uv`, because the Stream Deck process may not have `~/.local/bin` in `PATH`.
+  - Stream Deck: "Record OBS" → `obs-ctl record-toggle`, "Pause OBS" → `obs-ctl pause`, "Unpause OBS recording" → `obs-ctl resume`; key sequences removed.
+  - Screen capture sources ("Screen Capture (PipeWire)") need GNOME permission; OBS stores a `RestoreToken` per source in the scene file. Cancelling the startup dialog leaves the source black.
+  - The DisplayPort monitor ("Left DELL") asks again whenever its connector is renamed (`DP-5` / `DP-6`).
+  - At startup OBS opens all three captures at once; GNOME delivers one and the others can time out (`Error retrieving pipewire fd: Timeout was reached`). Usually "Laptop monitor" stays black. Re-applying settings over WebSocket does not restart it. Workaround (chosen): Properties → Reopen selector when that screen is needed.
+- **Cleanup**:
+  - `gpac` (unused, 24.04 build) purged with `libxml2`; `autoremove --purge` then removed the old 24.04 codec libraries (`libavcodec60` and others). Reinstallable from ESM: `sudo apt install gpac`.
+  - `sudo apt purge '~c'`: settings of 283 removed packages (230 old kernels, PHP 8.1/8.3, VirtualBox, PulseAudio, Ulauncher, Notion, old NVIDIA pieces, Python 2.7).
+  - 79 orphan folders in `/lib/modules/` removed; only `7.0.0-34-generic` and `7.0.0-38-generic` remain.
+  - Remaining `apt list '?obsolete'`: only apps from downloaded `.deb` files, Slimbook tools, DNIe tools (`libassuan0` is theirs), printer driver.
+  - `xbindkeys` autostart disabled for this user with `~/.config/autostart/xbindkeys.desktop` (`Hidden=true`, overrides the package file `/etc/xdg/autostart/xbindkeys.desktop`); running process stopped. Undo: delete that file. `~/.xbindkeysrc` left in place.
+
 Still to do:
 
-- Stream Deck buttons using `wmctrl -xa obs` (X11-only): replace with OBS global hotkeys or OBS WebSocket.
-- Old 24.04 libraries still listed by `apt list '?obsolete'`, and stale folders in `/lib/modules/`.
-- After Wayland settles: remove `xbindkeys` autostart, decide on Gradia Capture extension, retest `Ctrl+Shift+Space` and GNOME Terminal vs Ptyxis.
+- After Wayland settles: decide on Gradia Capture extension, retest GNOME Terminal vs Ptyxis.
 - Backup folders to delete once stable: `/etc/apt/sources.list.d.bak-*`, `/etc/pam.d.bak-*`, `/root/nix-uninstall-backup`.
 - Timeshift snapshot and Copy 2: delete per "When to delete the backups" (calendar reminder 2026-10-23).
 
