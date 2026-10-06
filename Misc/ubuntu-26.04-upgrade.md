@@ -163,6 +163,32 @@ Then:
 - Check the NVIDIA container toolkit with a CUDA container.
 - Optional cleanup: `rm -rf /etc/apt/sources.list.d.bak-2026-10-06 /etc/pam.d.bak-2026-10-06` once everything works.
 
+## When to delete the backups
+
+### Copy 2 and the Timeshift snapshot: about 2 weeks after the upgrade
+
+Delete both when all of these are true:
+
+- Post-upgrade checks pass (NVIDIA, DKMS, Docker, Dropbox, Howdy).
+- 1–2 weeks of normal use without problems.
+- Opened at least once: SSH keys, browser profiles, LM Studio models, Obsidian vault, DBeaver connections.
+
+```bash
+rm -rf /media/islomar/<data-partition-uuid>/home-backup-2026-10-06
+sudo timeshift --list --snapshot-device /dev/nvme0n1p3
+sudo timeshift --delete --snapshot '<name from list>'
+```
+
+Copy 2 uses 92 GB of 136 GB free. After two weeks, a Timeshift rollback would undo too much.
+
+### Copy 1 (external archive): only after a replacement exists
+
+It is the only copy outside the laptop. Keep it until a new, healthy disk holds a verified backup. After that, delete it or leave it on the old drive as a pre-upgrade snapshot.
+
+### Ongoing backups
+
+Both copies freeze the state of 2026-10-06. Buy a new external drive (ext4) and set up a weekly backup: Déjà Dup, restic or borg.
+
 ## Sources
 
 - [Has anyone upgraded from 24.04 LTS to 26.04.1? (Ubuntu Discourse)](https://discourse.ubuntu.com/t/has-anyone-upgraded-from-24-04-lts-to-26-04-1/86517)
