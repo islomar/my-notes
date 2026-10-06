@@ -55,6 +55,9 @@ claude --resume 1029b552-f07b-4082-b9c8-078858fbcf5f
 - kubectl 1.37.1 installed from `pkgs.k8s.io/core:/stable:/v1.37`. Dead `~/.kube/config` removed.
 - k3d updated to v5.9.0 (default k3s 1.35). Create clusters with `--image rancher/k3s:v1.37.1-k3s1` to match kubectl.
 - External backup disk fixed: NTFS volume was dirty, cleared with `ntfsfix -d`.
+- Copy 1 of `/home` done: `/media/islomar/Backup/home-islomar-2026-10-06.tar.zst` (52 GB). `zstd -t` passed.
+  - tar exited with failure status because of skipped sockets, files changed during the run, and 3 root-owned files in an unused Firefox profile. No needed data skipped.
+- Unused Firefox profile `wodubqpd.default` deleted and removed from `profiles.ini`. Active profile: `nx0r733b.default-release`.
 
 ### Side effects to know
 
@@ -77,26 +80,29 @@ Verbatim portable drive, Samsung HM100UI 1 TB, NTFS, label `Backup`, about 12,40
 
 ## Next steps
 
-### 1. Back up `/home` (in progress)
+### 1. Back up `/home`
 
-Close Dropbox, browsers, Docker Desktop and LM Studio first.
+Copy 1 (external disk archive) is done and verified. Remaining: Copy 2.
 
 ```bash
-# Copy 1: archive on the external disk
-tar --zstd -cpf /media/islomar/Backup/home-islomar-2026-10-06.tar.zst \
-  --exclude=./.cache --exclude=./.local/share/Trash \
-  -C /home/islomar .
-zstd -t /media/islomar/Backup/home-islomar-2026-10-06.tar.zst && echo "ARCHIVE OK"
-
 # Copy 2: plain copy on the internal data partition
 rsync -aHAX --info=progress2 \
   --exclude='.cache/' --exclude='.local/share/Trash/' \
   /home/islomar/ /media/islomar/<data-partition-uuid>/home-backup-2026-10-06/
+du -sh /media/islomar/<data-partition-uuid>/home-backup-2026-10-06   # expect ~90 GB
 ```
 
-If `zstd -t` fails, the bad sectors hit the archive. Rely on copy 2 and get a new disk.
+Exit code 0 is expected now that the Firefox profile with root-owned files is gone. Code 23 means some files were unreadable; check which.
 
-Eject the external disk before unplugging: `udisksctl unmount -b /dev/sdd1 && udisksctl power-off -b /dev/sdd`.
+Copy 2 is on the same physical disk as the system. It protects against a failed upgrade, not against NVMe failure.
+
+Restore Copy 1 if needed:
+
+```bash
+tar --zstd -xpf /media/islomar/Backup/home-islomar-2026-10-06.tar.zst -C /home/islomar
+```
+
+Eject the external disk before unplugging: `udisksctl unmount -b /dev/sdd1 && udisksctl power-off -b /dev/sdd`. Keep it unplugged until the upgrade is done.
 
 ### 2. Timeshift snapshot of the system
 
@@ -109,6 +115,11 @@ sudo timeshift --list --snapshot-device /dev/nvme0n1p3
 ### 3. Bootable live USB
 
 Ubuntu 24.04 or 26.04. Needed to restore Timeshift if the system does not boot.
+
+- Write the ISO with GNOME Disks ("Restore Disk Image") or balenaEtcher.
+- Test that the laptop boots from it (boot menu key at power-on, usually F7 or F12).
+
+Steps 2 and 3 can run during the Wayland test.
 
 ### 4. Wayland test (1–2 days)
 
