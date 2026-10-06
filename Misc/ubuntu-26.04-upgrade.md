@@ -299,6 +299,44 @@ rm -rf ~/.nix-profile ~/.nix-defexpr ~/.nix-channels ~/.local/state/nix ~/.cache
 
 Check the `/etc/zsh/zshrc` step against the upgrade first: if 26.04 shipped a new zshrc, remove only the Nix block instead of restoring the 2023 backup. Verify: `systemctl status nix-daemon` (not found), `ls /nix` (missing), new zsh and bash shells start without errors.
 
+## Post-upgrade results (2026-10-06)
+
+Upgrade to 26.04.1 completed on 2026-10-06 (about 22:15). Live USB: the existing 22.04.4 pendrive (1.9 GB) is the rescue system; a 26.04 image does not fit on it.
+
+| Check | Result |
+|---|---|
+| System | Ubuntu 26.04.1 LTS, GNOME 50.1, Wayland, kernel 7.0.0-38 |
+| NVIDIA | RTX 3050 Ti, driver 580.178.04, on-demand |
+| DKMS | `nvidia` and `slimbook-qc71` built for 7.0.0-38 |
+| Docker | 29.8.2, running |
+| Dropbox | Up to date |
+| Free space on `/` | 39 GB (with the Timeshift snapshot) |
+
+Done after the reboot:
+
+- **Ubuntu Pro**: the first-login wizard failed because the machine was already attached (free personal subscription, attach survived the upgrade). `pro status` lists every service as `n/a` on 26.04 for now, although the `resolute-apps` and `resolute-infra` ESM repos respond. Recheck in a few weeks: `sudo pro refresh && pro status`. Never paste the Pro token in notes.
+- **pipx**: `pipx reinstall-all` rebuilt streamdeck-linux-gui, poetry, uv and black on Python 3.14. Stream Deck launcher icon path updated from `python3.12` to `python3.14` in `~/.local/share/applications/streamdeck.desktop`. Repeat both after any Python version change.
+- **Third-party repos re-enabled** (backup `/etc/apt/sources.list.d.bak-post-upgrade`):
+  - `.sources` switched to `Enabled: yes`: 1Password, ChatGPT, Google Chrome, VS Code.
+  - `.list.disabled` restored to `.list` (uncommented `deb` line): Claude Desktop, Kubernetes v1.37, NVIDIA container toolkit, Docker (`noble` changed to `resolute`; Docker publishes for 26.04).
+  - Leftover `1password.list` files removed (1Password uses `1password.sources`).
+  - Still disabled, no 26.04 build: Slimbook PPA (latest is noble), gencfsm PPA.
+  - `sudo apt full-upgrade`: Docker packages rebuilt for 26.04 (same 29.8.2), Chrome 154 → 155.
+- **pass** reinstalled (`~/.password-store` and GPG key intact).
+- **Howdy removed**. The upgrade removed `libpam-python` and `dlib` has no Python 3.14 build, so every `sudo`/`pkexec` logged `PAM unable to dlopen(pam_python.so)`. Steps: PAM backup `/etc/pam.d.bak-howdy-2026-10-06/`, root shell kept open, Howdy lines deleted from `sudo`, `polkit-1`, `common-auth`, `apt purge howdy dlib-models`, PPA file deleted, `sudo -k; sudo true` and `pkexec true` verified.
+- **Nix removed** (backup `/root/nix-uninstall-backup/`, kept with `cp --parents` because `/etc/zsh/zshrc` and `/etc/zshrc` share a name). `systemctl disable --now` already deleted the unit links, so the separate `rm` was skipped. Verified: no Nix lines in `/etc/zsh/zshrc`, no `/nix`, no `nixbld` users or group, zsh and bash start cleanly.
+- **GNOME Software "failed" unit**: started twice at first login (autostart + service), the second instance could not take the bus name. Harmless; cleared with `systemctl --user reset-failed gnome-software.service`.
+- **NVIDIA transitional packages**: `nvidia-driver-515` (22.04) pointed to 535, which in 26.04 points to 580. Both 535 and 580 were marked auto, so removing 515 would have let `autoremove` delete the real driver. Fixed with `sudo apt-mark manual nvidia-driver-580` before `apt purge nvidia-driver-515`.
+- **autoremove** (52 packages): old Qt5/QML, Clutter, 32-bit codec libraries, ImageMagick 6 (ImageMagick 7 still provides `convert`/`magick`), `postgresql-client-16` (`psql` now from client 18), `nvidia-driver-535`, and the neofetch leftovers `chafa`, `jp2a`, `toilet`, `caca-utils`.
+
+Still to do:
+
+- Stream Deck buttons using `wmctrl -xa obs` (X11-only): replace with OBS global hotkeys or OBS WebSocket.
+- Old 24.04 libraries still listed by `apt list '?obsolete'`, and stale folders in `/lib/modules/`.
+- After Wayland settles: remove `xbindkeys` autostart, decide on Gradia Capture extension, retest `Ctrl+Shift+Space` and GNOME Terminal vs Ptyxis.
+- Backup folders to delete once stable: `/etc/apt/sources.list.d.bak-*`, `/etc/pam.d.bak-*`, `/root/nix-uninstall-backup`.
+- Timeshift snapshot and Copy 2: delete per "When to delete the backups" (calendar reminder 2026-10-23).
+
 ## When to delete the backups
 
 ### Copy 2 and the Timeshift snapshot: about 2 weeks after the upgrade
