@@ -204,7 +204,7 @@ Issues and fixes:
    - Script `~/.local/bin/touchpad-toggle`: toggles `org.gnome.desktop.peripherals.touchpad send-events` with `/usr/bin/gsettings` and shows a notification.
    - GNOME custom shortcut `Super+Ctrl+T` → `/home/islomar/.local/bin/touchpad-toggle`.
    - Recovery if it stays off: `/usr/bin/gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled`.
-   - `xbindkeys` is now unused; remove its autostart after the upgrade.
+   - `xbindkeys` autostart disabled after the upgrade (see Post-upgrade results).
 
 The Wayland test is complete. No blocker found.
 
