@@ -77,6 +77,10 @@ Verbatim portable drive, Samsung HM100UI 1 TB, NTFS, label `Backup`, about 12,40
 - `Current_Pending_Sector = 8`: the drive has unreadable sectors. Do not use it as the only backup.
 - Contains an older home backup `BackupHomeSlimbook/` (July 2025). Do not delete.
 - Buy a new external drive and format it ext4.
+- NTFS structures are damaged (`MFT: expect seq=…`, `Inode is not in use`). `ntfsfix -d` only cleared the dirty flag.
+- 2026-10-06 18:26: a FreeFileSync scan wrote a lock file to the disk and the `ntfs3` driver crashed (`kernel BUG at fs/iomap/buffered-io.c:1061`). FreeFileSync hung in state `D`; only a reboot clears it. No files were deleted.
+- From now on, mount it read-only and never write to it: `udisksctl mount -b /dev/sdd1 -o ro`.
+- Re-run `zstd -t` on the archive once after the reboot. If it fails, Copy 2 is the only full backup.
 
 ## Next steps
 
@@ -106,11 +110,35 @@ Eject the external disk before unplugging: `udisksctl unmount -b /dev/sdd1 && ud
 
 ### 2. Timeshift snapshot of the system
 
+Timeshift saves the system (`/usr`, `/etc`, `/var`, `/opt`), not `/home`. The "Backups" app (Déjà Dup) is a different tool for personal files.
+
+Location: the root partition `nvme0n1p2` (98 GB free). The data partition `nvme0n1p3` has only 49 GB free after Copy 2, and the system without Docker takes about 46–47 GB. Both partitions are on the same NVMe disk, so neither location protects against disk failure.
+
+Excluded: `/var/lib/docker` (26 GB, images can be pulled again).
+
+Reboot first (kernel crash on 2026-10-06, see the external disk section). Then:
+
 ```bash
 sudo apt install timeshift
-sudo timeshift --create --snapshot-device /dev/nvme0n1p3 --comments "before 26.04 upgrade"
-sudo timeshift --list --snapshot-device /dev/nvme0n1p3
 ```
+
+Open Timeshift from the app menu:
+
+1. Snapshot type: RSYNC.
+2. Location: the 320 GB ext4 partition (`nvme0n1p2`, where `/` lives).
+3. Schedule: untick everything.
+4. Users: "Exclude All" for `root` and `islomar`.
+5. Settings → Filters → Add `/var/lib/docker/***`.
+6. Create, comment "before 26.04 upgrade".
+
+Verify:
+
+```bash
+sudo timeshift --list
+df -h /   # expect about 50 GB free
+```
+
+**Delete this snapshot about 2 weeks after the upgrade** (Google Calendar reminder set for 2026-10-23). It uses about 46 GB of `/`.
 
 ### 3. Bootable live USB
 
@@ -175,11 +203,14 @@ Delete both when all of these are true:
 
 ```bash
 rm -rf /media/islomar/<data-partition-uuid>/home-backup-2026-10-06
-sudo timeshift --list --snapshot-device /dev/nvme0n1p3
+sudo timeshift --list
 sudo timeshift --delete --snapshot '<name from list>'
+df -h /   # expect about 46 GB more free
 ```
 
-Copy 2 uses 92 GB of 136 GB free. After two weeks, a Timeshift rollback would undo too much.
+Copy 2 uses 89 GB of the data partition. The snapshot uses about 46 GB of `/`. After two weeks, a Timeshift rollback would undo too much.
+
+Reminder: Google Calendar event on 2026-10-23. Move it if the upgrade happens later than 2026-10-09.
 
 ### Copy 1 (external archive): only after a replacement exists
 
