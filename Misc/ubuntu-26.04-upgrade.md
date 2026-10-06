@@ -166,8 +166,37 @@ Do not upgrade if a blocker has no workaround.
 
 Findings (test started 2026-10-06, after the reboot logged into Wayland):
 
+| Test | Result |
+|---|---|
+| Screen sharing (Meet, Zoom) | Tested |
+| OBS | Works with a "Screen Capture (PipeWire)" source |
+| NVIDIA GPU | Works (`switcherooctl launch glxgears`, resize OK) |
+| Touchpad gestures | Work (GNOME built-in) |
+| Moving windows between screens | Works |
+| `pbcopy` / `pbpaste` (xclip aliases) | Work |
+| Emote | Works via GNOME shortcut, then `Ctrl+V` |
+| 1Password Quick Access | Works via GNOME shortcut |
+| Stream Deck | Works after autostart fix; X11-only buttons still to replace |
+| Screenshots with annotation | Gradia replaces ksnip |
+| Touchpad toggle key (`xbindkeys`), Slimbook keys, fractional scaling, unplugging a screen | Pending |
+
+Issues and fixes:
+
 1. Saved monitor layouts did not apply. Cause: X11 and Wayland name outputs differently (`HDMI-1` vs `HDMI-A-1`, `DP-3-1` vs `DP-5`). Fixed by arranging once in Settings → Displays; GNOME keeps both layouts in `~/.config/monitors.xml`.
 2. GNOME Terminal 3.52 crashed on the layout change and closed every window. Workaround: tmux for long tasks. 26.04 ships Ptyxis as the default terminal; recheck after the upgrade.
+3. Baba Is You (old Chowdren engine) crashes on window resize when run on the NVIDIA GPU. Works on Intel. Do not launch the whole Steam client with "Launch using Discrete Graphics Card"; set NVIDIA per game in Properties → Launch Options:
+   `__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only %command%`
+4. Emote cannot catch its global shortcut or type into other windows. Fix: GNOME custom shortcut `Ctrl+Alt+E` → `/snap/bin/emote`, then paste with `Ctrl+V`.
+5. 1Password cannot register its global shortcut. Fix: GNOME custom shortcut `Ctrl+Shift+Space` → `/usr/bin/1password --quick-access`.
+6. Stream Deck (`streamdeck-linux-gui`, pipx) did not start. The autostart entry had `Exec=streamdeck &` (no full path, invalid `&`). Fixed to `Exec=/home/islomar/.local/bin/streamdeck`; launcher added to the app grid (`~/.local/share/applications/streamdeck.desktop`). Only one instance can run; a second launch exits silently. Reopen the window from the top-bar icon → Configure.
+   - Still to replace: buttons using `wmctrl -xa obs` (X11-only).
+7. ksnip cannot capture on GNOME Wayland. Replaced by Gradia (Flathub `be.alexandervanhee.gradia`):
+   - Command: `/usr/bin/flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE`
+   - GNOME shortcut `Super+Shift+S`, and the Stream Deck "Annotate" button (page 2) with the Gradia logo.
+   - ksnip removed: `sudo snap remove --purge ksnip`; its Stream Deck button cleared.
+   - After the upgrade, consider the Gradia Capture extension (GNOME 49/50 only, not yet on extensions.gnome.org; review its build script first).
+
+Gotcha found on the way: `gsettings` resolved to Homebrew's copy, which writes to `~/.config/glib-2.0/settings/keyfile` and never reaches GNOME. Fixed with `alias gsettings=/usr/bin/gsettings` in `~/.zshrc`. Set shortcuts in Settings → Keyboard, or verify with `dconf read`.
 
 ### 5. Upgrade
 
