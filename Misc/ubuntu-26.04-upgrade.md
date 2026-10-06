@@ -178,7 +178,10 @@ Findings (test started 2026-10-06, after the reboot logged into Wayland):
 | 1Password Quick Access | Works via GNOME shortcut |
 | Stream Deck | Works after autostart fix; X11-only buttons still to replace |
 | Screenshots with annotation | Gradia replaces ksnip |
-| Touchpad toggle key (`xbindkeys`), Slimbook keys, fractional scaling, unplugging a screen | Pending |
+| Slimbook keys (brightness, volume, Fn lock, Super lock, silent mode, Intel Controller) | Work |
+| Fractional scaling | 150% on the built-in display; Chrome sharp (native Wayland). XWayland apps (Steam, Zoom, JetBrains Toolbox, Emote) may look soft |
+| Unplugging and replugging a screen | Layout lost: see issue 8 |
+| Touchpad lock | Replaced by a shortcut: see issue 9 |
 
 Issues and fixes:
 
@@ -195,6 +198,15 @@ Issues and fixes:
    - GNOME shortcut `Super+Shift+S`, and the Stream Deck "Annotate" button (page 2) with the Gradia logo.
    - ksnip removed: `sudo snap remove --purge ksnip`; its Stream Deck button cleared.
    - After the upgrade, consider the Gradia Capture extension (GNOME 49/50 only, not yet on extensions.gnome.org; review its build script first).
+
+8. Replugging the HDMI screen reset the layout. Cause: the DisplayPort screen came back as `DP-6` instead of `DP-5`, and GNOME only restores a saved layout when every connector name matches. Not Wayland-specific (X11 layouts show the same `DP-3-1` / `DP-3-2` swap). Fix: save the layout once per connector name in Settings → Displays; GNOME keeps all variants.
+9. The touchpad corner lock (top-right, LED) does not lock on Wayland. The tap never reaches the OS (`libinput debug-events` shows no key), and the touchpad keeps sending motion on `event5`, only degraded. On X11 the Slimbook script used `xinput`, which has no effect on Wayland; the `xbindkeys` entries listen for a Ctrl+Super combination this touchpad never sends. Replacement:
+   - Script `~/.local/bin/touchpad-toggle`: toggles `org.gnome.desktop.peripherals.touchpad send-events` with `/usr/bin/gsettings` and shows a notification.
+   - GNOME custom shortcut `Super+Ctrl+T` → `/home/islomar/.local/bin/touchpad-toggle`.
+   - Recovery if it stays off: `/usr/bin/gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled`.
+   - `xbindkeys` is now unused; remove its autostart after the upgrade.
+
+The Wayland test is complete. No blocker found.
 
 Gotcha found on the way: `gsettings` resolved to Homebrew's copy, which writes to `~/.config/glib-2.0/settings/keyfile` and never reaches GNOME. Fixed with `alias gsettings=/usr/bin/gsettings` in `~/.zshrc`. Set shortcuts in Settings → Keyboard, or verify with `dconf read`.
 
