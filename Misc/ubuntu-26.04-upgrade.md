@@ -224,6 +224,24 @@ Avoid SanDisk Extreme (2023 data-loss firmware issue) and the WD HDD (same failu
 
 systemd user timer with `OnCalendar=weekly` and `Persistent=true`, so a missed run (laptop asleep) runs on next wake.
 
+### Keeping the external disk plugged in
+
+The hardware tolerates it: an idle SSD does not wear, uses under 1 W, and regular power helps data retention.
+
+The risk is exposure. An always-mounted disk shares the laptop's fate:
+
+- Ransomware or malware running as the user can encrypt or delete it.
+- A wrong `rm -rf` or a buggy script can reach it.
+- Theft, fire or a spill takes laptop and disk together.
+- Unplugging without ejecting leaves the filesystem dirty (what happened to the old disk).
+
+Rules:
+
+- Acceptable only while the offsite copy exists.
+- The backup job mounts the disk, runs restic, then unmounts it. The disk stays attached but invisible the rest of the time.
+- Eject before moving the laptop: `udisksctl unmount -b /dev/sdX && udisksctl power-off -b /dev/sdX`.
+- Alternative: plug in only to back up, with the plug-in trigger running restic automatically.
+
 ### Rules
 
 - Store the restic repository password in 1Password. Without it the backups cannot be read.
