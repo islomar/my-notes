@@ -100,13 +100,26 @@
 
 - **🎩 Cómo ser agnóstico del servidor de inferencia**
   - [AiSdkChatGateway](https://github.com/CodelyTV/ai-local_models-course/blob/main/02-models/2-inference/src/contexts/chat/infrastructure/AiSdkChatGateway.ts)
-    - The model is injected... but this is not recommended, since each model needs different ways of using the prompt.
-    - [AiSdkMinistral3ChatGateway](https://github.com/CodelyTV/ai-local_models-course/blob/main/02-models/2-inference/src/contexts/chat/infrastructure/AiSdkMinistral3ChatGateway.ts)
-    - 
+    - The model is injected... but this is **not recommended**, since each model needs different ways of using the prompt.
+  - [OllamaAiSdkMinistral3ChatGateway](https://github.com/CodelyTV/ai-local_models-course/blob/main/02-models/2-inference/src/contexts/chat/infrastructure/OllamaAiSdkMinistral3ChatGateway.ts)
+    - También descartada porque el códigno NO va a cambiar en base al servidor: da igual que lo infiera Ollama o LMStudio.
+  - [AiSdkMinistral3ChatGateway](https://github.com/CodelyTV/ai-local_models-course/blob/main/02-models/2-inference/src/contexts/chat/infrastructure/AiSdkMinistral3ChatGateway.ts)
+    - Nos quedamos con esto, porque el modelo sí influye
+
 
 ## 🏗️ Caso práctico: Sugerencias y traducciones en local
 
-- TBD
+- Aplicación "Neveraly"
+- [Código fuente en GitHub](https://github.com/CodelyTV/ai-local_models-course/tree/main/03-text_use_cases/1-text)
+- [AiSdkMinistral3DishByIngredientsSuggesterGateway](https://github.com/CodelyTV/ai-local_models-course/blob/main/04-prod/1-ollama_ci/1-ci/src/contexts/dishes/dishes/infraestructure/AiSdkMinistral3DishByIngredientsSuggesterGateway.ts)
+  - Usa la librería [AI SDK](https://ai-sdk.dev/)
+    - A unified TypeScript SDK for building AI apps with modern streaming, fallbacks, and multi-model support
+  - Define un esquema usando [`zod`](https://zod.dev/) con la respuesta esperada tras llamar al AI SDK
+- **🪆 Generar embeddings utilizando un modelo específico**
+   - [Código de ejemplo](https://github.com/CodelyTV/ai-local_models-course/tree/main/03-text_use_cases/2-embeddings)
+   - Cuando pedimos un plato, en la base de datos añade una nueva fila que contiene un campo `embedding`
+   - Embedding: vector multidimensional que representa semánticamente
+   - [PostgresCookedDishRepository](https://github.com/CodelyTV/ai-local_models-course/blob/d4608176042775a98469c833a5b4d956896912cf/03-text_use_cases/2-embeddings/src/contexts/dishes/cooked-dishes/infrastructure/PostgresCookedDishRepository.ts)
 
 ## 🚀 Modelos locales en producción
 
