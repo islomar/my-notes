@@ -80,7 +80,7 @@ Verbatim portable drive, Samsung HM100UI 1 TB, NTFS, label `Backup`, about 12,40
 - NTFS structures are damaged (`MFT: expect seq=…`, `Inode is not in use`). `ntfsfix -d` only cleared the dirty flag.
 - 2026-10-06 18:26: a FreeFileSync scan wrote a lock file to the disk and the `ntfs3` driver crashed (`kernel BUG at fs/iomap/buffered-io.c:1061`). FreeFileSync hung in state `D`; only a reboot clears it. No files were deleted.
 - From now on, mount it read-only and never write to it. The forced power-off left it dirty again; do not run `ntfsfix` (it writes). Use `sudo ntfs-3g -o ro /dev/sdX1 /mnt/oldbackup`. Device names change per boot (`sdd` before, `sdb` after the reboot); check with `lsblk`.
-- Re-run `zstd -t` on the archive once after the reboot. If it fails, Copy 2 is the only full backup.
+- Archive re-checked after the reboot (mounted read-only with `ntfs-3g`): `zstd -t` passed, 96 GB of data. Copy 1 is intact.
 
 ## Next steps
 
