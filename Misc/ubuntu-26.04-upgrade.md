@@ -384,7 +384,7 @@ Goal: 3-2-1. Three copies, two devices, one offsite.
 
 ### New external disk
 
-10 Gbps USB-C SSD, 2 TB, formatted ext4. The laptop has 10 Gbps USB and Thunderbolt; 20 Gbps drives bring no gain.
+10 Gbps USB-C SSD, 1 TB (2 TB only if the price difference is small), formatted ext4. The laptop has 10 Gbps USB and Thunderbolt; 20 Gbps drives bring no gain.
 
 | Option | Approx. price on Amazon.es (2026-10) | Warranty |
 |---|---|---|
@@ -401,6 +401,50 @@ Avoid SanDisk Extreme (2023 data-loss firmware issue) and the WD HDD (same failu
 - One tool and one restore process for both destinations.
 - `restic mount` exposes snapshots as browsable folders.
 - Install: `sudo apt install restic`.
+
+### What to back up
+
+Principle: skip anything that can be downloaded again or rebuilt. Measured on 2026-10-06:
+
+| Excluded (re-downloadable) | Size |
+|---|---|
+| `~/.lmstudio` (LLM models) | 6.6 GB |
+| `~/.nvm` | 5.5 GB |
+| `~/.local/share/Steam` (games) | 5.1 GB |
+| `~/.gradle` | 3.4 GB |
+| `~/.vscode/extensions` | 3.2 GB |
+| `~/pinokio` | 3.0 GB |
+| `~/.sdkman`, `~/.pyenv`, `~/.npm`, `~/.m2` | 5.4 GB |
+| Build folders in `~/workspace` (`node_modules`, `.venv`, `venv`, `target`, `build`, `dist`) | 2.2 GB |
+| `~/.cache`, `~/.local/share/Trash` | ~25 GB |
+
+Result: about 55–60 GB to back up (home is ~117 GB).
+
+Keep despite looking re-downloadable:
+
+- `~/workspace` (4.7 GB): GitHub only has pushed work. Unpushed branches, stashes, uncommitted changes, `.env` files and local-only repos would be lost. Exclude only its build folders.
+- `~/snap`: contains user data, including the Firefox profile.
+- Docker volumes live in `/var/lib/docker`, outside the home backup. Dump any database with hand-made data into the home folder before relying on "recreate it".
+
+### Size estimate and disk choice
+
+- First backup about 60 GB; weekly changes typically 1–5 GB.
+- With the retention rule below, the repository stays near one full copy plus the changes kept in about 23 snapshots.
+- 1 TB is plenty. 2 TB only adds room for one-off full copies (like the 52 GB archive or 65 GB Timeshift snapshot) or many large recordings.
+
+### How restic handles history
+
+- Every snapshot is complete and restorable on its own; there is no full + incremental chain.
+- Data is split into chunks stored once; unchanged files take no new space.
+- No periodic "new full backup" is needed (that is a requirement of chain-based tools like duplicity, Déjà Dup's default).
+- Retention, run after each backup:
+
+```bash
+restic forget --keep-weekly 8 --keep-monthly 12 --keep-yearly 3 --prune
+```
+
+- Verification: `restic check` monthly, plus `restic check --read-data-subset=10%` so all data gets read over time.
+- Optional: start a fresh repository about once a year as protection against repository corruption. The independent offsite repository covers the same risk.
 
 ### Destinations
 
@@ -434,7 +478,7 @@ Rules:
 ### Rules
 
 - Store the restic repository password in 1Password. Without it the backups cannot be read.
-- Exclude caches, `node_modules`, Trash, and optionally `~/.lmstudio/models`.
+- Back up only what cannot be downloaded or rebuilt (see "What to back up").
 - Restore one file every month to prove the backups work.
 
 ### Alternatives considered
