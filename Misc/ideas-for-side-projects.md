@@ -1,6 +1,8 @@
 # Ideas for side projects
 
 - https://app.notion.com/p/islomar/1891f44926324ed6b8a6ce39604a1f60?v=748ac8bb97e64a9182d9fd3d8a96fbe3&source=copy_link
+- Crear aplicación para iVoox para la tele
+  - https://developer.samsung.com/smarttv/develop/getting-started/quick-start-guide.html
 - Table tennis trainer
   - Using the camera, being able to correct your movements
 - NVC

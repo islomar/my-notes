@@ -59,6 +59,8 @@
   - Agent skill: make LLMs write docs in ASD-STE100 Simplified Technical
 - <https://www.skills.sh/mattpocock/skills/grill-me>
 - https://www.skills.sh/juliusbrussee/caveman/caveman
+- https://skills.wheresryan.sh/anatomy
+  - Name an idea in one line, and Claude draws the machine that does it.
 
 ## AI and Product Management
 
