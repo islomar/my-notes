@@ -8,6 +8,10 @@
 
 # Ideas for side projects
 
+- Estimar el consumo de electricidad y agua de una sesión de Claude Code (u otros asistentes de programación con IA)
+  - Basarse en los tokens de entrada/salida, modelo utilizado, número de peticiones y duración de la sesión, cuando estén disponibles
+  - Mostrar estimaciones de energía (Wh/kWh) y agua (litros), con desglose por sesión o proyecto
+  - Documentar fuentes, supuestos y márgenes de incertidumbre: distinguir estimaciones de mediciones reales
 - <https://app.notion.com/p/islomar/1891f44926324ed6b8a6ce39604a1f60?v=748ac8bb97e64a9182d9fd3d8a96fbe3&source=copy_link>
 - Crear aplicación para iVoox para la tele
   - <https://developer.samsung.com/smarttv/develop/getting-started/quick-start-guide.html>
