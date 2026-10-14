@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Claude info](#claude-info)
   - [General](#general)
@@ -40,8 +40,8 @@
   - Link to those docs from CLAUDE.md
 - Adding rules on the fly: You can add rules using the # symbol at the start of a line
 - Four levels:
-  - `~/.claude/CLAUDE.md`              # 1. Global (all your projects)
-  - `/project-root/CLAUDE.md`          # 2. Project-specific
+  - `~/.claude/CLAUDE.md` # 1. Global (all your projects)
+  - `/project-root/CLAUDE.md` # 2. Project-specific
   - `/project-root/frontend/CLAUDE.md` # 3. Directory-specific
   - `/project-root/CLAUDE.local.md`    # 4. Personal (gitignored)
 - Priority Order. Most specific wins:
@@ -49,8 +49,10 @@
   - Project-level (e.g., /project-root/CLAUDE.md)
   - Global (e.g., ~/.claude/CLAUDE.md)
 - User prompts (least priority)
-  - How they stack: Levels combine (don’t replace). All rules apply simultaneously, with more specific levels overriding on conflicts.
-- To encourage more proactive subagent use, include phrases like "use PROACTIVELY" or "MUST BE USED" in your `description` field in the subagent file.
+  - How they stack: Levels combine (don’t replace). All rules apply simultaneously, with more specific levels overriding
+    on conflicts.
+- To encourage more proactive subagent use, include phrases like "use PROACTIVELY" or "MUST BE USED" in your
+  `description` field in the subagent file.
 
 ## Cost management
 
@@ -65,7 +67,8 @@
 - <https://github.com/NTCoding/claude-skillz> --> VERY INTERESTING
 - <https://github.com/animalzinc/claude-plugins>
 - [Bokata slicer CC](https://github.com/abrahamvallez/bokata-slicer-cc)
-  - Intelligent vertical slicing and feature decomposition for Claude Code using the Hamburger Method and radical vertical slicing techniques.
+  - Intelligent vertical slicing and feature decomposition for Claude Code using the Hamburger Method and radical
+    vertical slicing techniques.
 
 ## Sub-agents
 
@@ -73,7 +76,8 @@
 - <https://code.claude.com/docs/en/sub-agents>
 - <https://ccforpms.com/fundamentals/custom-subagents>
 - <https://github.com/nikeyes/stepwise-dev>
-- [Awesome Claude Code Sub-Agents](https://github.com/VoltAgent/awesome-claude-code-subagents) - Collection of community sub-agent templates
+- [Awesome Claude Code Sub-Agents](https://github.com/VoltAgent/awesome-claude-code-subagents) - Collection of community
+  sub-agent templates
 - [Sub-Agent Examples](https://github.com/wshobson/agents) - Real-world agent configurations
 - [SubAgents.cc](https://www.subagents.cc/) - Sub-agent template generator
 
@@ -92,19 +96,27 @@
 
 - `/doctor`
   - runs a setup checkup that diagnoses installation and configuration issues and can fix them
-  - diagnose any issues you might have with claude files/memory/skils/etc.. it can also help trim down the claude.md to ensure you don't go over the token allowance in a jiffy.
+  - diagnose any issues you might have with claude files/memory/skils/etc.. it can also help trim down the claude.md to
+    ensure you don't go over the token allowance in a jiffy.
 - `/powerup`
-  - this one was completely new to me. It teaches you Claude Code features through short interactive lessons and animated demos. If you already use Claude Code, just try it. Seriously.
+  - this one was completely new to me. It teaches you Claude Code features through short interactive lessons and
+    animated demos. If you already use Claude Code, just try it. Seriously.
 - `/insights`
-  - generates an HTML report analysing how you’ve actually been using Claude Code: your projects, patterns, where things go wrong, and features you might want to try. Apparently something worth running every few weeks rather than every day.
+  - generates an HTML report analysing how you’ve actually been using Claude Code: your projects, patterns, where things
+    go wrong, and features you might want to try. Apparently something worth running every few weeks rather than every
+    day.
 - `/advisor`
-  - lets Claude consult a stronger model at key moments. I really like the idea of not paying for maximum reasoning all the time, but escalating when it actually matters.
+  - lets Claude consult a stronger model at key moments. I really like the idea of not paying for maximum reasoning all
+    the time, but escalating when it actually matters.
 - `/branch`
-  - fork the current conversation and try a different approach without losing where you were. Obvious once you know it exists. Very useful.
+  - fork the current conversation and try a different approach without losing where you were. Obvious once you know it
+    exists. Very useful.
 - `/fewer-permission-prompts`
-  - analyses the tool calls you’ve repeatedly approved in previous sessions and adjusts your permissions accordingly. Small thing, but potentially a *lot* less friction.
+  - analyses the tool calls you’ve repeatedly approved in previous sessions and adjusts your permissions accordingly.
+    Small thing, but potentially a *lot* less friction.
 - `/remote-control` and `/teleport`
-  - take a running Claude Code session to another device, or move it between your local machine and the cloud. I had no idea these existed either.
+  - take a running Claude Code session to another device, or move it between your local machine and the cloud. I had no
+    idea these existed either.
 
 ## Ideas for commands
 
@@ -118,17 +130,28 @@
 - <https://www.claude.com/blog/skills-explained>
 - <https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills>
 - Skills are folders that include instructions, scripts, and resources that Claude can load when needed.
-- Claude will only access a skill when it's relevant to the task at hand. When used, skills make Claude better at specialized tasks like working with Excel or following your organization's brand guidelines.
+- Claude will only access a skill when it's relevant to the task at hand. When used, skills make Claude better at
+  specialized tasks like working with Excel or following your organization's brand guidelines.
 - Skills are composable
 - Difference between skills and subagents
   - Subagents have their own context window, context prompt and specific tool permissions
   - Skills provide portable expertise that any subagent can use
-- Subagent is not fully loaded from the beginning; its workflow is dynamically loaded on a need-to-use basis, similar to how Claude Skills work. When a Claude Code session begins, only the subagent's name and description are loaded to keep the system efficient. The full functionality and resources are only loaded when a specific task requires that subagent's expertise.
-  - Skills use **progressive disclosure** to keep Claude efficient. When working on tasks, Claude first scans Skill metadata (descriptions and summaries) to identify relevant matches. If a Skill matches, Claude loads the full instructions. Finally, if the Skill includes executable code or reference files, those load only when needed.
-  - This architecture means you can have many Skills available without overwhelming Claude's context window. Claude accesses exactly what it needs, when it needs it.
-- **Use Skills when**: You want capabilities that any Claude instance can load and use. Skills are like training materials—they make Claude better at specific tasks across all conversations.
-- **Use subagents when**: You need complete, self-contained agents designed for specific purposes that handle workflows independently. Subagents are like specialized employees with their own context and tool permissions.
-- **Use them together when**: You want subagents with specialized expertise. For example, a code-review subagent can use Skills for language-specific best practices, combining the independence of a subagent with the portable expertise of Skills.
+- Subagent is not fully loaded from the beginning; its workflow is dynamically loaded on a need-to-use basis, similar to
+  how Claude Skills work. When a Claude Code session begins, only the subagent's name and description are loaded to keep
+  the system efficient. The full functionality and resources are only loaded when a specific task requires that
+  subagent's expertise.
+  - Skills use **progressive disclosure** to keep Claude efficient. When working on tasks, Claude first scans Skill
+    metadata (descriptions and summaries) to identify relevant matches. If a Skill matches, Claude loads the full
+    instructions. Finally, if the Skill includes executable code or reference files, those load only when needed.
+  - This architecture means you can have many Skills available without overwhelming Claude's context window. Claude
+    accesses exactly what it needs, when it needs it.
+- **Use Skills when**: You want capabilities that any Claude instance can load and use. Skills are like training
+  materials—they make Claude better at specific tasks across all conversations.
+- **Use subagents when**: You need complete, self-contained agents designed for specific purposes that handle workflows
+  independently. Subagents are like specialized employees with their own context and tool permissions.
+- **Use them together when**: You want subagents with specialized expertise. For example, a code-review subagent can use
+  Skills for language-specific best practices, combining the independence of a subagent with the portable expertise of
+  Skills.
 
 ## Courses
 

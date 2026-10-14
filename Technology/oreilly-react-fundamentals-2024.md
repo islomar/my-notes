@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [React Fundamentals: Building Modern, Interactive Web Applications with React's Component-Based Architecture](#react-fundamentals-building-modern-interactive-web-applications-with-reacts-component-based-architecture)
   - [Module 1: Introduction to React and Getting Started](#module-1-introduction-to-react-and-getting-started)
@@ -8,9 +8,10 @@
   - [Module 5: Adding Interactivity with Events](#module-5-adding-interactivity-with-events)
   - [Module 7: Styles and CSS in React](#module-7-styles-and-css-in-react)
   - [Module 8: React Hooks](#module-8-react-hooks)
-  - [Module 9:  creating a Slideshow app](#module-9--creating-a-slideshow-app)
+  - [Module 9: creating a Slideshow app](#module-9-creating-a-slideshow-app)
   - [Module 10: fetching data](#module-10-fetching-data)
   - [Module 11: Sharing data between components](#module-11-sharing-data-between-components)
+  - [Module 12: Advanced React](#module-12-advanced-react)
   - [Module 13: Testing and Debugging](#module-13-testing-and-debugging)
   - [Module 14: Introduction to React 18](#module-14-introduction-to-react-18)
   - [Module 15: Preparing for Tech Interviews](#module-15-preparing-for-tech-interviews)
@@ -47,7 +48,8 @@
   - Codesandbox
     - <https://codesandbox.io/p/sandbox/react-new>
 - Local setup
-  - Recommendation: use Vite, so that you don't have to worry about Webpack, babel, etc. The industry has moved away from `create-react-app`to Vite.
+  - Recommendation: use Vite, so that you don't have to worry about Webpack, babel, etc. The industry has moved away
+    from `create-react-app`to Vite.
   - `npm create vite@latest`
   - You could also use NextJS, Remix, start from scratch, etc.
 
@@ -80,7 +82,7 @@
   - Side effects - updating DOM, data fetching, managing subscriptions, setTimeouts
   - Replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount
 
-## Module 9:  creating a Slideshow app
+## Module 9: creating a Slideshow app
 
 - [Code examples](./oreilly-react-fundamentals-2024/slideshow/)
 
@@ -94,7 +96,8 @@
 - Defining your own Hooks:
   - Share stateful logic
   - Must start with `use`
-  - Example: [`useTheme`](oreilly-react-fundamentals-2024/oreilly-react-exercises/5-hooks/useContext/src/hooks/useTheme.js)
+  - Example:
+    [`useTheme`](oreilly-react-fundamentals-2024/oreilly-react-exercises/5-hooks/useContext/src/hooks/useTheme.js)
 - Using Reducers
   - Hard to manage state when there are a lot of "setStates" in a component
   - We can move it to one single file - reducer
@@ -104,38 +107,39 @@
     - `const [products, dispatch] = useReducer(productsReducer, {});`
   - example: [productsReducer](oreilly-react-fundamentals-2024/slideshow/src/Components/productsReducer.js)
 
-  ## Module 12: Advanced React
+## Module 12: Advanced React
 
-  - `useMemo`
-    - It caches a value
-    - e.g. if a calculation takes more than 1 ms.
-  - `useCallback`
-    - It caches a function
-    - React will return and not call your function back during initial render.
-    - Helpful when you pass it as a prop to a component wrapped in memo.
-    - Use the React Developer Tools profiler to see which components would benefit the most from memoization.
-  - `useRefs`
-    - Lets you persist values between re-renders
-    - Updating a ref doesn't trigger re-rendering
-    - Current value is accessed using `ref.current`
-    - Helpful to access DOM elements
-  - **How React updates the DOM**
-    - React updates the DOM by using its virtual DOM and reconciliation process.
-    - Three phases: Trigger, Render and Commit phase
-    - **Trigger** (component triggered to render)
-      - Initial render
-      - Parents re-rendered
-      - Something in the component changed
-    - **Render**
-      - After you trigger a render, React calls the component to figure out what to display on screen
-      - Initial render calls root component.
-      - For subsequent renders, React calls the component whose state update triggered the render
-    - **Commit**
-      - When React has figured out what component to re-render.
-      - After rendering, React will modify the DOM
-      - For the initial render, React uses the appendchild DOM API to display all the created DOM nodes on the screen.
-      - For subsequent renders, react determines the minimal changes required and only applies the necessary updates to make the DOM match the latest rendering output.
-      - React alters the DOM nodes **only when there are differences between renders**.
+- `useMemo`
+  - It caches a value
+  - e.g. if a calculation takes more than 1 ms.
+- `useCallback`
+  - It caches a function
+  - React will return and not call your function back during initial render.
+  - Helpful when you pass it as a prop to a component wrapped in memo.
+  - Use the React Developer Tools profiler to see which components would benefit the most from memoization.
+- `useRefs`
+  - Lets you persist values between re-renders
+  - Updating a ref doesn't trigger re-rendering
+  - Current value is accessed using `ref.current`
+  - Helpful to access DOM elements
+- **How React updates the DOM**
+  - React updates the DOM by using its virtual DOM and reconciliation process.
+  - Three phases: Trigger, Render and Commit phase
+  - **Trigger** (component triggered to render)
+    - Initial render
+    - Parents re-rendered
+    - Something in the component changed
+  - **Render**
+    - After you trigger a render, React calls the component to figure out what to display on screen
+    - Initial render calls root component.
+    - For subsequent renders, React calls the component whose state update triggered the render
+  - **Commit**
+    - When React has figured out what component to re-render.
+    - After rendering, React will modify the DOM
+    - For the initial render, React uses the appendchild DOM API to display all the created DOM nodes on the screen.
+    - For subsequent renders, react determines the minimal changes required and only applies the necessary updates to
+      make the DOM match the latest rendering output.
+    - React alters the DOM nodes **only when there are differences between renders**.
 
 ## Module 13: Testing and Debugging
 
@@ -163,10 +167,12 @@
 
 - Question 1: create a typeahead component in React that implements debouncing
 - Question 2: create an app that calls an API and renders data on the page
-- Question 3: create a form app that has a different state of UI when a field is selected, has value or is visited (uses onFocus, onBlur events)
+- Question 3: create a form app that has a different state of UI when a field is selected, has value or is visited (uses
+  onFocus, onBlur events)
 - Question 4: given a mock, use React to render on the page
 
 ## Next Steps
+
 - Manage state using a state management library, e.g: Redux
 - Learn how to consume a GraphQL API
 - Leverage a framework such as NextJS or Remix

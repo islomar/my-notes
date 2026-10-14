@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Grokking Simplicity](#grokking-simplicity)
   - [Chapters 1-3](#chapters-1-3)
@@ -114,10 +114,12 @@ arguments and return values"
   - make a **deep copy** before sending the data to the "unsafe zone" (zone where data is mutable)
 - You protect yourself by making copies: you copy data as it leaves your system, and you copy it as it comes back in.
 - **Deep copies** duplicate all levels of nested data structures, from the top all the way to the bottom.
-- **Defensive copying** is a discipline that maintains immutability when you have to exchange data with code that does not maintain immutability.
+- **Defensive copying** is a discipline that maintains immutability when you have to exchange data with code that does
+  not maintain immutability.
   - Rule 1: copy as data leaves trusted code
   - Rule 2: copy as data enters trusted code
-- **Shared nothing architecture**: when modules implement defensive copying when talking to each other. (the modules don't share references to any data)
+- **Shared nothing architecture**: when modules implement defensive copying when talking to each other. (the modules
+  don't share references to any data)
 
 ## Chapter 10: First-class functions: part 1
 
@@ -127,7 +129,8 @@ arguments and return values"
   2. Name of function indicates the difference in implementation
 - The function name difference is an implicit argument.
   - From `setPriceByName()` and `setQuantityByName()` to `setFieldByName(field)`
-- **Data orientation** is a style of programming that uses generic data structures to represent facts about events and entities
+- **Data orientation** is a style of programming that uses generic data structures to represent facts about events and
+  entities
 - **Higher-order functions** take other functions as arguments or return functions as their return values
   - Refactor to allow it: **replace body with callback**
 - **Anonymous functions** are functions without names. They can be written inline - right where they are used.
@@ -136,7 +139,6 @@ arguments and return values"
   - Locally defined
   - Defined **inline**
 - **An inline function** is defined where it is used. For example, a function might be defined in the argument list.
-
 
 ## Chapter 11: First-class functions: part 2
 
@@ -148,19 +150,27 @@ arguments and return values"
 
 ## Other resources
 
-- Vladimir Khorikov escribe sobre las tensiones de un modelo de dominio tiene que ver con esto: [Domain model purity vs. domain model completeness (DDD Trilemma)](https://enterprisecraftsmanship.com/posts/domain-model-purity-completeness/)
-  - A **complete domain model** is a model that contains all the application’s domain logic. In other words, there’s no domain logic fragmentation.
+- Vladimir Khorikov escribe sobre las tensiones de un modelo de dominio tiene que ver con esto:
+  [Domain model purity vs. domain model completeness (DDD Trilemma)](https://enterprisecraftsmanship.com/posts/domain-model-purity-completeness/)
+  - A **complete domain model** is a model that contains all the application’s domain logic. In other words, there’s no
+    domain logic fragmentation.
   - **Domain logic fragmentation** is when the domain logic resides in layers other than the domain layer.
-  - **Domain model purity**: a pure domain model is a model that doesn’t reach out to out-of-process dependencies (e.g. an Entity without any repository reference).
+  - **Domain model purity**: a pure domain model is a model that doesn’t reach out to out-of-process dependencies (e.g.
+    an Entity without any repository reference).
   - Trilemma: domain model completeness vs domain model purity vs performance.
   - 3 options:
-    - **Push all external reads and writes to the edges of a business operation** — Preserves domain model completeness and purity but concedes performance.
-    - **Inject out-of-process dependencies into the domain model** — Keeps performance and domain model completeness, but at the expense of domain model purity.
-    - **Split the decision-making process between the domain layer and controllers** — Helps with both performance and domain model purity but concedes completeness. With this approach, you need to introduce decision-making points (business logic) in the controller.
-  - "I strongly recommend that you choose domain model purity over domain model completeness, and go with the third approach: splitting the decision-making process between the domain layer and controllers."
+    - **Push all external reads and writes to the edges of a business operation** — Preserves domain model completeness
+      and purity but concedes performance.
+    - **Inject out-of-process dependencies into the domain model** — Keeps performance and domain model completeness,
+      but at the expense of domain model purity.
+    - **Split the decision-making process between the domain layer and controllers** — Helps with both performance and
+      domain model purity but concedes completeness. With this approach, you need to introduce decision-making points
+      (business logic) in the controller.
+  - "I strongly recommend that you choose domain model purity over domain model completeness, and go with the third
+    approach: splitting the decision-making process between the domain layer and controllers."
   - IMO the **domain services** is the place for this kind of domain logic.
     - There is more to the domain model than the Entities/VO/Aggregates
 - [Railway-oriented programming in Java (video, 2021)](https://www.youtube.com/watch?v=4zpDZ8gwmc4)
 - [Restrict mutability of state](https://kevlinhenney.medium.com/restrict-mutability-of-state-1ac69d1ec5fe)
 - [Aplicando curry en JavaScript funcional](https://bootcamp.laboratoria.la/es/topics/functional/hof/currying)
-- https://builtin.com/software-engineering-perspectives/currying-javascript
+- <https://builtin.com/software-engineering-perspectives/currying-javascript>

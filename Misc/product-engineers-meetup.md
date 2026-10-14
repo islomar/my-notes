@@ -2,9 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 The 1st online meetup of the Product Engineers Community
-
 
 <https://www.youtube.com/watch?v=kgqMbSuvBEs>
 
@@ -39,4 +37,5 @@ Embrace change, stay optimistic.
 
 Hire for attitude, not for tech.
 
-Luis Soares: they do pairing by default. Mention to XP. They do a lot of TDD and pairing. TBD, no branches. "Focus your energy on impact, not on tools". Experimentation culture. "Don't estimate". It's about splitting as much as possible.
+Luis Soares: they do pairing by default. Mention to XP. They do a lot of TDD and pairing. TBD, no branches. "Focus your
+energy on impact, not on tools". Experimentation culture. "Don't estimate". It's about splitting as much as possible.

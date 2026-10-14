@@ -1,16 +1,16 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Cómo fijar objetivos cuando todo parece prioritario](#c%C3%B3mo-fijar-objetivos-cuando-todo-parece-prioritario)
-  - [Entiende mejor tu contexto, entiéndete mejor a ti](#entiende-mejor-tu-contexto-enti%C3%A9ndete-mejor-a-ti)
-  - [Cómo llevamos estos principios a la práctica](#c%C3%B3mo-llevamos-estos-principios-a-la-pr%C3%A1ctica)
+- [Cómo fijar objetivos cuando todo parece prioritario](#cómo-fijar-objetivos-cuando-todo-parece-prioritario)
+  - [Entiende mejor tu contexto, entiéndete mejor a ti](#entiende-mejor-tu-contexto-entiéndete-mejor-a-ti)
+  - [Cómo llevamos estos principios a la práctica](#cómo-llevamos-estos-principios-a-la-práctica)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # Cómo fijar objetivos cuando todo parece prioritario
 
-- https://www.linkedin.com/learning/como-fijar-objetivos-cuando-todo-parece-prioritario
+- <https://www.linkedin.com/learning/como-fijar-objetivos-cuando-todo-parece-prioritario>
 - Aprende a definir objetivos claros cuando todo parece urgente y sientes que te faltan horas en el día.
 - [Mi certificado de LinkedIn](https://www.linkedin.com/learning/certificates/71f9082c804dc78907094b7516276cb88b269fac9cbb549e76171661b2e63577?trk=share_certificate)
 
@@ -37,11 +37,13 @@
   - Obsidian
   - Todoist
   - any.do  
-  - https://www.rememberthemilk.com/
+  - <https://www.rememberthemilk.com/>
 - Top 3 diario o semanal  
 - "La mejor lista es la que realmente usas"
-- "Hard landscape": lo que da estructura. Las citas, reuniones, recordatorios de entregas, prioridades. Hacerla durante la revisión semanal.
-- "Soft landscape": todo aquello que debo atender pero ocupa los huecos que dejan las cosas más importantes. Imprevistos y tareas menos trascendentes.
+- "Hard landscape": lo que da estructura. Las citas, reuniones, recordatorios de entregas, prioridades. Hacerla durante
+  la revisión semanal.
+- "Soft landscape": todo aquello que debo atender pero ocupa los huecos que dejan las cosas más importantes. Imprevistos
+  y tareas menos trascendentes.
 - Primero pensar en cómo colocar los elementos del "hard landscape".
 - Priorización
   - Blanco de valor (metáfora de diana)
@@ -50,7 +52,7 @@
   - Matriz de Eisenhower
     - Tabla con Urgencia-Importancia
   - Post-mortem de tu organización
-    - ¿Qué asuntos que parecían importantísimos hace un mes/año y finalmente no lo fue? Y viceversa. 
+    - ¿Qué asuntos que parecían importantísimos hace un mes/año y finalmente no lo fue? Y viceversa.
     - Ideal para fines de ciclo y comienzo del siguiente.
 - Horas de oro, plata, bronce: no todas las horas valen lo mismo, no en todas tenemos la misma energía.
 - Presupuestos de tiempos
@@ -71,7 +73,7 @@
     - [Forest](https://play.google.com/store/apps/details?id=cc.forestapp&hl=en) (móvil)
     - Habitica: web y móvil
       - Transforma las tareas en un juego de rol
-      - https://habitica.com/
-      - https://play.google.com/store/apps/details?id=com.habitrpg.android.habitica
+      - <https://habitica.com/>
+      - <https://play.google.com/store/apps/details?id=com.habitrpg.android.habitica>
 - Fatiga decisional
 - Reservar la excelencia para los puntos clave

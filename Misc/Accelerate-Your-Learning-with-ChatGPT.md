@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Accelerate Your Learning with ChatGPT](#accelerate-your-learning-with-chatgpt)
   - [Module 1: GenAI Landscape and Neural Networks — Parallels in Machine and Human Learning](#module-1-genai-landscape-and-neural-networks--parallels-in-machine-and-human-learning)
@@ -42,7 +42,8 @@
 
 ## Module 1: GenAI Landscape and Neural Networks — Parallels in Machine and Human Learning
 
-- "AI won't replace humans, but humans who use AI will replace humans that don't." (Fei Fei Li, Stanford professor, AI researcher)
+- "AI won't replace humans, but humans who use AI will replace humans that don't." (Fei Fei Li, Stanford professor, AI
+  researcher)
 - ChatGPT:
   - predicting the next word in a sentence.
   - it relates words in sentences to one another
@@ -73,8 +74,11 @@
   - **The Metaphor Pattern**
     - we want to get the model to explain things to us using metaphors and analogies that we understand well.
     - Pattern: "Explain some topic using metaphors and analogies. [Here what you want to learn about]"
-    - Example: "Explain why we should learn about generative AI, even though the models are changing so rapidly. Use a car and engine analogy."
-    - Example with less direction: "Whenever you explain things to me, relate it to analogies and metaphors that I will understand. I know a lot about cars. Explain why we should learn about generative AI, even though the models are changing so rapidly."
+    - Example: "Explain why we should learn about generative AI, even though the models are changing so rapidly. Use a
+      car and engine analogy."
+    - Example with less direction: "Whenever you explain things to me, relate it to analogies and metaphors that I will
+      understand. I know a lot about cars. Explain why we should learn about generative AI, even though the models are
+      changing so rapidly."
 - **Helping the Large Language Model Select Metaphors & Analogies**
   - Example:
 
@@ -88,12 +92,13 @@
 
 - **Audience Persona Pattern**:
   - Explain some topic to [some audience]
-  - Example: "Explain how the transformer model works to a fifth grader, which is our audience, using analogies and metaphors that will make sense to the audience."
+  - Example: "Explain how the transformer model works to a fifth grader, which is our audience, using analogies and
+    metaphors that will make sense to the audience."
 - **Large Language Models & the Brain**
   - 7 international giants with their Foundational Large Language Models (**"Engines"**):
     - Google: Gemini -- 1 million tokens
-    - Amazon: Claude (from Antrhopic)  - 200k tokens
-    - Microsoft: ChatGPT (from OpenAI)  - 128k tokens
+    - Amazon: Claude (from Antrhopic) - 200k tokens
+    - Microsoft: ChatGPT (from OpenAI) - 128k tokens
     - Meta: LLaMA 3 (70k tokens)
     - Twitter: Grok
     - LinkedIn (Microsoft): Inflection Pi
@@ -103,30 +108,38 @@
   - There are 149 foundational LLMs released in 2023 alone.
   - **Context window**: number of tokens (how many words at a time can this model take in)
     - [Most devs don’t understand how context windows work (Matt Pocock)](https://www.youtube.com/watch?v=-uW5-TaVXu4)
-    - There's basically a limit on how many tokens, which are basically a bit shorter than words that the transformers' attention can focus on at once.
+    - There's basically a limit on how many tokens, which are basically a bit shorter than words that the transformers'
+      attention can focus on at once.
     - If your text has 50k words and your context window has 30k words (around 40k tokens), you're in trouble.
       - And it doesn't only matter the input size: there must bu room for the output as well.
     - The LLM can't remember information outside the context window.
   - It's always good to **tell your engine to become an expert** in whatever subject is involved in your query.
   - Two pathaways, two ways of learning:
-    - Hippocampus learning, declarative, going from the working memory to the long-term one. Conscious learning. Deliberative thinking.
+    - Hippocampus learning, declarative, going from the working memory to the long-term one. Conscious learning.
+      Deliberative thinking.
     - Basal ganglia. Unconscious learning, more experiential. Automatic way of thinking. Deep neural network.
       - Not only for physical activities, it also happens with maths, for example.
       - The automatic system gets less powerful when we grow older.
   - AI **hallucinations** or confabulations.
-    - AI does not have the conscious hippocampus way of learning, only the experiental one. Odd outputs. Like a human with prefrontal cortex damaged.
+    - AI does not have the conscious hippocampus way of learning, only the experiental one. Odd outputs. Like a human
+      with prefrontal cortex damaged.
 - **Learning in the Age of AI: More than "Cheating Lightly"**
-  - [The Flynn Effect](https://en.wikipedia.org/wiki/Flynn_effect): IQ tests are updated periodically. Raise from 30s to 70s (educatoin?). Decline from 70s (she thinks related with things like calculators and stopping learning and understanding some things).
+  - [The Flynn Effect](https://en.wikipedia.org/wiki/Flynn_effect): IQ tests are updated periodically. Raise from 30s to
+    70s (educatoin?). Decline from 70s (she thinks related with things like calculators and stopping learning and
+    understanding some things).
   - You can get practice materials from ChatGPT and alike. It's easier to learn.
 - **Prompting for Options & Perspectives, Not Answers**
   - We don't want to start thinking less.
   - **Never ask for ONE of anything**.
-    - Example: "Give me five completely different ways to build a chair out of Cheerios and compare and contrast them. The chair needs to be strong enough to support a real person."
+    - Example: "Give me five completely different ways to build a chair out of Cheerios and compare and contrast them.
+      The chair needs to be strong enough to support a real person."
   - Ask to give us **multiple, conflicting interpretations of something**.
     - Useful to overcome our bias.
 - **Prompting for questions**
-  - Example: "Help me understand this material better. What are five questions I should ask about it to deepen my understanding?"
-  - Example: "What are five questions that, if I can answer them, would show that I have a broad understanding of this material?"
+  - Example: "Help me understand this material better. What are five questions I should ask about it to deepen my
+    understanding?"
+  - Example: "What are five questions that, if I can answer them, would show that I have a broad understanding of this
+    material?"
   - Generate questions instead of answers... Enhance your practice.
 - **Having fun with metaphors & analogies**
   - "Explain [Insert a topic] using a metaphor or analogy related to [Insert a domain]."  
@@ -142,7 +155,8 @@
 - **Mapping the Landscape of Large Language Models and GenAI Learning**
   - ChatGPT:
     - Writing assistants: Jjenni, Grammarly, Writesonic, Jasper
-    - Research: Quivr, Consensus, Elicit, Explainpaper, scite_, keenious, scholarcy, Connected papers, Semantic scholar, ResearchRabbit.
+    - Research: Quivr, Consensus, Elicit, Explainpaper, scite_, keenious, scholarcy, Connected papers, Semantic scholar,
+      ResearchRabbit.
     - Live to Internet: Copilot, Plus AI (PowerPoint maker).
     - Teachers and instructors: Magic school, Eduaide.ai, TeachMateAI.
     - Creative productivity platforms: Canva, Gamma
@@ -181,7 +195,9 @@
       - Kahoot!
       - Anki
 - **Flipped Interaction Pattern: AI-Driven Practice & Teaching**
-  - Rather than telling one of these models what to do, rather than asking it questions, **we want to get it to ask us questions**, and then based on our responses, dynamically adapt and flow through whatever it is that we're trying to achieve or practice.
+  - Rather than telling one of these models what to do, rather than asking it questions,
+    **we want to get it to ask us questions**, and then based on our responses, dynamically adapt and flow through
+    whatever it is that we're trying to achieve or practice.
   - Example:
 
   ```text
@@ -206,7 +222,8 @@
 
 - **Prompting for Feedback**
   - **Question refinement pattern**
-    - Example: "Whenever I ask you a question, you will suggest a better version of my question that is clearer and more specific and ask me if you should answer it instead"
+    - Example: "Whenever I ask you a question, you will suggest a better version of my question that is clearer and more
+      specific and ask me if you should answer it instead"
   - **Cognitive verifier pattern**
     - Example:
 
@@ -232,10 +249,12 @@
 - **Multimodal prompting discovery**
   - E.g. tranlating imagery into information.
   - Examples:
-    - "I'm going to take pictures of things. And whenever I take pictures of things, you give me a crazy, fun, totally unique new game that I could play with them."
+    - "I'm going to take pictures of things. And whenever I take pictures of things, you give me a crazy, fun, totally
+      unique new game that I could play with them."
     - "Tell me the physics of anything I take a picture of."
     - "Tell me a world record related to anything I take a picture of."
-    - Food picture: "Give me step by step plans to make this. Create a complete list of materials with identifiers like one a, one b, and then output your step by step plan and reference the materials. "
+    - Food picture: "Give me step by step plans to make this. Create a complete list of materials with identifiers like
+      one a, one b, and then output your step by step plan and reference the materials. "
 - **GenAI as a creative catalyst: supplementing working memory**
   - Working memory: the part of your memory holding something temporarily.
   - Long-term memory: the memory we hold all around our neocortex.

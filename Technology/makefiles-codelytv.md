@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [Makefiles course by CodelyTV](#makefiles-course-by-codelytv)
   - [General](#general)
@@ -20,7 +20,7 @@
 # Makefiles course by CodelyTV
 
 - ETA ~ 90 minutes
-- https://github.com/CodelyTV/makefiles-course
+- <https://github.com/CodelyTV/makefiles-course>
 
 ## General
 
@@ -39,7 +39,7 @@
   - another way to declare the default target is `.DEFAULT_GOAL := <targetName>`
 - Another idea for the default target is some kind of `help`:
 
-```
+```text
 help: ## Prints this help.
     @grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
@@ -50,7 +50,8 @@ start: ## start docker composer
 ## Phony
 
 - `make <name>` will try to compile anything that it finds with that name, including a folder.
-- We use `.PHONY: <targetName>` To avoid collisions of target names which have the same name than a folder or another file (e.g. a `build` folder).
+- We use `.PHONY: <targetName>` To avoid collisions of target names which have the same name than a folder or another
+  file (e.g. a `build` folder).
 - Recommendation: include a `.PHONY` over each specific target, for the things you need for that target.
 
 ## Namespaces
@@ -59,15 +60,17 @@ start: ## start docker composer
   - `composer/xx`, with alias `deps: composer/install`
   - `npm/xx`, `sbt/xx`
   - `cypress/open`, `cypress/run`
-- Usually you only have one Makefile, but you could create a folder to split multiple Makefiles (e.g. creating a `build` folder).
+- Usually you only have one Makefile, but you could create a folder to split multiple Makefiles (e.g. creating a `build`
+  folder).
   - Then, from the root Makefile, you can do things like `@cd build && make`
-- We could have several Makefiles at the same level, but they would need to have different names and executed like `make --directory <folderName> -f <fileName>`
+- We could have several Makefiles at the same level, but they would need to have different names and executed like
+  `make --directory <folderName> -f <fileName>`
 
 ## Parametrize commands
 
-- https://github.com/CodelyTV/makefiles-course/blob/master/lessons/3.2-parametrize_commands/Makefile
+- <https://github.com/CodelyTV/makefiles-course/blob/master/lessons/3.2-parametrize_commands/Makefile>
 
-```
+```text
 #Makefile
 deps-install: CMD=install
 deps-update: CMD=update
@@ -86,7 +89,8 @@ make deps-require package=cypress
   - Creating a jar, a zip, an executable, etc.
   - It is quite common to use it as default target for the `make`
 - install
-  - E.g. to be executed in production, copying whatever it needs to the right place as well as taking anything else that would be needed to run it afterwards, etc.
+  - E.g. to be executed in production, copying whatever it needs to the right place as well as taking anything else that
+    would be needed to run it afterwards, etc.
   - Usually you need to have run `build` first.
 - deps
   - Popular after Golang.
@@ -98,7 +102,7 @@ make deps-require package=cypress
 
 ### PHP
 
-- https://github.com/CodelyTV/makefiles-course/blob/master/lessons/4.1-useful_in_php/Makefile
+- <https://github.com/CodelyTV/makefiles-course/blob/master/lessons/4.1-useful_in_php/Makefile>
 - `build: composer/install`
 - `composer/install`
 - `composer/update`
@@ -114,17 +118,17 @@ make deps-require package=cypress
 ## Famous Makefiles
 
 - Docker:
-  - https://github.com/docker/docker-ce/blob/master/Makefile
+  - <https://github.com/docker/docker-ce/blob/master/Makefile>
   - phony per target
   - help target
 - Kubernetes
-  - https://github.com/kubernetes/kubernetes/blob/master/Makefile
+  - <https://github.com/kubernetes/kubernetes/blob/master/Makefile>
 - Linux
-  - https://github.com/torvalds/linux/blob/master/Makefile
+  - <https://github.com/torvalds/linux/blob/master/Makefile>
 
 ## Interesting links
 
-- https://github.com/skilla/makefile_for_developers
+- <https://github.com/skilla/makefile_for_developers>
 
 ## Ideas for Hab
 

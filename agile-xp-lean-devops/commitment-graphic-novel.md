@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Commitment: novel about managing project risk](#commitment-novel-about-managing-project-risk)
   - [InfoQ article: "Real Options" Underlie Agile Practices](#infoq-article-real-options-underlie-agile-practices)
@@ -10,12 +10,13 @@
 
 # Commitment: novel about managing project risk
 
-https://commitment-thebook.com/
+<https://commitment-thebook.com/>
 
 - The "only" things that the Financial Option maths can tell us about options are:
   - **Options have a value**.
   - **Options expire**.
-  - **Never commit earlier** unless you know why: committing to an option is when you decide to do something and it is no longer optional, but an obligation/commitment.
+  - **Never commit earlier** unless you know why: committing to an option is when you decide to do something and it is
+    no longer optional, but an obligation/commitment.
 - **How to avoid committing too early**:
   - Postpone the commitment, collect more information.
   - Choose the options that is easiest to change.
@@ -25,9 +26,10 @@ https://commitment-thebook.com/
 - The biggest problems is that most people see commitments which are actually options.
 - How much are you willing to pay for a choice to be an option istead of a commitment?
 - An aversion to uncertainty means people make decisions early
-- Delaying commitments gives decision makers more flexibility as they continue to have options. It allows them to manage risk / uncertainty using their options.
+- Delaying commitments gives decision makers more flexibility as they continue to have options. It allows them to manage
+  risk / uncertainty using their options.
   - There is value in paying to defer a commitment.
-- A **commitment** is something we _have to_ do. Things like tax, children and death.
+- A **commitment** is something we *have to* do. Things like tax, children and death.
 - More than one person knows about one topic.
 - It's motivating for a team to feel that they're doing quality work.
 - Three kind of options
@@ -35,7 +37,8 @@ https://commitment-thebook.com/
     - Black-Scholes equation.
     - The buyer of the option willingly pays a premium for the option.
   - Embedded options
-    - An option that occurs in a legal contract which was NOT specifically intended to be an optino. This is a clause in a contract that allows the buyer some flexibility as a kind of service.
+    - An option that occurs in a legal contract which was NOT specifically intended to be an optino. This is a clause in
+      a contract that allows the buyer some flexibility as a kind of service.
     - Operational tolerance
   - **Real options**
     - They are options that exist outside of legal frameworks.
@@ -43,7 +46,8 @@ https://commitment-thebook.com/
     - Anything you can do without the obligation to do it is a real option.
 - About relationships and knowledge options
   - **Knowledge options** are those pieces of information I know just enough of.
-  - I learn enoug about a subject to understand what can be done with the tools, and how long it will take me to learn the tools to the point that I can apply them.
+  - I learn enoug about a subject to understand what can be done with the tools, and how long it will take me to learn
+    the tools to the point that I can apply them.
   - Knowledge options explictly acknowledge the value of being consciously incompetent.
   - Conscious competent model by Noel Burch, 1970.
 - It is more important that the team know the status than the management does.
@@ -65,13 +69,16 @@ https://commitment-thebook.com/
   - Visualize the waiting states or queues before and after the states where we add value.
   - **Buffers**: "Ready for X".
   - Other types of queues: waiting anad multitasking.
-  - **Theory of constraints**: how much a factory produces is determined by its slowest step. Adding additional capacity to anywhere in the system other than at the constraint will have no beneficial impact.
+  - **Theory of constraints**: how much a factory produces is determined by its slowest step. Adding additional capacity
+    to anywhere in the system other than at the constraint will have no beneficial impact.
   - We need people to be able to move between the roles freely.
   - Deliver value in **small slices**.
   - **Outcomes** over outputs.:
     - outcomes are the result of the outputs.
-    - Find the outcome that the client need to identify the value: ask "why" to move the discussion in the direction of the outcomes.
-    - If you start at the end of the value stream, you cannot miss something that is needed to produce the outcome. AND you don't include things that are unnecessary.
+    - Find the outcome that the client need to identify the value: ask "why" to move the discussion in the direction of
+      the outcomes.
+    - If you start at the end of the value stream, you cannot miss something that is needed to produce the outcome. AND
+      you don't include things that are unnecessary.
 - Business value:
   - Increase revenue or reduce costs.
   - Other ways: protecting revenue or avoiding costs.
@@ -81,21 +88,25 @@ https://commitment-thebook.com/
     - Inject the features
     - Break the model
   - Move toward the outcome until we encounter value.
-  - Value is created when a benefit is created for either the consumer or the producer of a product or service that they are willing to pay for.
+  - Value is created when a benefit is created for either the consumer or the producer of a product or service that they
+    are willing to pay for.
   - Why are Twitter and Instagram worth so much?: they build options to generate revenue, based on network and usage.
 - Understand where your value is coming from
 - Allocate the people with the most options last.
 - A constraint is anything that prevents us from reaching our objective.
 - Staff liquidity:
   - there is value in shorter iterations of development: longer iterations are riskier to the business investor.
-  - shorter iterations provide the investor with more options. And more options means more ways to control the project and manage the risks.
-  - Staff liquidity: the time it takes from when the initial investment is approved to having a fully gelled and fully up to seed team working on the project. Low liquidity: it is hard to move staff aound on projects.
+  - shorter iterations provide the investor with more options. And more options means more ways to control the project
+    and manage the risks.
+  - Staff liquidity: the time it takes from when the initial investment is approved to having a fully gelled and fully
+    up to seed team working on the project. Low liquidity: it is hard to move staff aound on projects.
   - How to achieve staff liquidity:
     - no key man dependencies on a project.
     - allocate staff with the fewest options first, staff with most options last
     - let staff with most options cach and helt pthe staff with the least options.
   - SL is another name for having options about how you deploy your staff.
-  - not the entire organization needs the ability to move to a different project immediately. A small fraction (5 - 10%) should be liquid.
+  - not the entire organization needs the ability to move to a different project immediately. A small fraction (5 - 10%)
+    should be liquid.
 - Game Theory
   - The Prisoner's Dilemma.
   - Strategy of Conflict
@@ -105,7 +116,8 @@ https://commitment-thebook.com/
   - A reorganisation doen slowly is more damaging than one done quickly as it will damage collaboration.
   - Anyone who bans or suppresses conflict prevents healthy group development.
   - Look for people who do not communicate with each other, that is worse than "bad relationship".
-  - Most people are not rational. We hate uncertainty so much that we want to make a decision "now" even if it risks being wrong. Rather than have total uncertainty we have to create bounded or conditional uncertainty.
+  - Most people are not rational. We hate uncertainty so much that we want to make a decision "now" even if it risks
+    being wrong. Rather than have total uncertainty we have to create bounded or conditional uncertainty.
   - Collaboration only occurs when everyone loses all the time.
 - Too much choice is a bad thing.
   - Book "Paradox of choice: why less is more"
@@ -125,23 +137,31 @@ https://commitment-thebook.com/
 
 ## InfoQ article: "Real Options" Underlie Agile Practices
 
-- https://www.infoq.com/articles/real-options-enhance-agility/
-- Real Options is about "deferring decisions to the last responsible moment," which is an explicit principle in the Lean Software approach.
+- <https://www.infoq.com/articles/real-options-enhance-agility/>
+- Real Options is about "deferring decisions to the last responsible moment," which is an explicit principle in the Lean
+  Software approach.
   - TDD
   - Test doubles
   - Pairing
-- When the client requests a feature the team is free to act, because they are not tied up working on unwanted features. This is only possible with short iterations and a fast turnaround on regression testing.
+- When the client requests a feature the team is free to act, because they are not tied up working on unwanted features.
+  This is only possible with short iterations and a fast turnaround on regression testing.
 - There are two aspects to Real Options, the mathematics and the psychology.
   - The mathematics of Real Options, which is based on Financial Option Theory, provide us an optimal decision process
-  - The psychology of uncertainty and decision making (based on Neuro Linguistic Programming and Cognitive Behavioural theory) tells us why people do not follow this optimal decision process and make irrational decisions as a result.
+  - The psychology of uncertainty and decision making (based on Neuro Linguistic Programming and Cognitive Behavioural
+    theory) tells us why people do not follow this optimal decision process and make irrational decisions as a result.
 - Real Options are real world decisions.
-- Rather than decisions, Real Options is really about commitments. Quite often people make a decision which becomes an emotional commitment to an idea. They do not realise that they can change their minds.
+- Rather than decisions, Real Options is really about commitments. Quite often people make a decision which becomes an
+  emotional commitment to an idea. They do not realise that they can change their minds.
 - There is value in paying to defer a commitment.
-- An aversion to uncertainty means people make decisions early. Real Options address this aversion to uncertainty by defining the exact date or conditions to be met before the decision should be made.
-  - Delaying commitments gives decision makers more flexibility as they continue to have options. It allows them to manage risk / uncertainty using their options.
-- Real Options works most effectively if participants cooperate with each other. This goes against common practice of hiding our intent.
-- Your most experienced team members with the most options (most skills etc.) should be allocated last. This means your most experienced staff can be deployed to address any emergent issues.
+- An aversion to uncertainty means people make decisions early. Real Options address this aversion to uncertainty by
+  defining the exact date or conditions to be met before the decision should be made.
+  - Delaying commitments gives decision makers more flexibility as they continue to have options. It allows them to
+    manage risk / uncertainty using their options.
+- Real Options works most effectively if participants cooperate with each other. This goes against common practice of
+  hiding our intent.
+- Your most experienced team members with the most options (most skills etc.) should be allocated last. This means your
+  most experienced staff can be deployed to address any emergent issues.
 
 ## Other readins about "Real Options"
 
-- https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model
+- <https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model>

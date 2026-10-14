@@ -1,32 +1,32 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Testing en frontend (CodelyTV)](#testing-en-frontend-codelytv)
-  - [¿Por qué el testing en FE está roto?](#por-qu%C3%A9-el-testing-en-fe-est%C3%A1-roto)
+  - [¿Por qué el testing en FE está roto?](#por-qué-el-testing-en-fe-está-roto)
   - [Las bases de Testing Library: testeando un componente simple](#las-bases-de-testing-library-testeando-un-componente-simple)
-  - [Definición de nuestra estrategia de testing](#definici%C3%B3n-de-nuestra-estrategia-de-testing)
-    - [Agnóstica del framework: ejemplo con React vs Vue vs Angular](#agn%C3%B3stica-del-framework-ejemplo-con-react-vs-vue-vs-angular)
+  - [Definición de nuestra estrategia de testing](#definición-de-nuestra-estrategia-de-testing)
+    - [Agnóstica del framework: ejemplo con React vs Vue vs Angular](#agnóstica-del-framework-ejemplo-con-react-vs-vue-vs-angular)
     - [Redefiniendo el testing en frontend](#redefiniendo-el-testing-en-frontend)
-  - [Buenas prácticas del testing en frontend](#buenas-pr%C3%A1cticas-del-testing-en-frontend)
+  - [Buenas prácticas del testing en frontend](#buenas-prácticas-del-testing-en-frontend)
     - [Testeando lo que de verdad importa](#testeando-lo-que-de-verdad-importa)
     - [Ejemplo con Testing Library: testing centrado en el usuario](#ejemplo-con-testing-library-testing-centrado-en-el-usuario)
     - [fireEvent vs userEvent](#fireevent-vs-userevent)
-    - [Tests semánticos y más legibles](#tests-sem%C3%A1nticos-y-m%C3%A1s-legibles)
+    - [Tests semánticos y más legibles](#tests-semánticos-y-más-legibles)
   - [Testeando accesibilidad](#testeando-accesibilidad)
     - [Automatizar tests de accesibilidad con Jest Axe](#automatizar-tests-de-accesibilidad-con-jest-axe)
     - [Selectores accesibles](#selectores-accesibles)
-  - [Cómo escribir nuestros tests](#c%C3%B3mo-escribir-nuestros-tests)
+  - [Cómo escribir nuestros tests](#cómo-escribir-nuestros-tests)
     - [La estructura de nuestro test: Arrange, Act, Assert](#la-estructura-de-nuestro-test-arrange-act-assert)
     - [Los tests que emocionaron a Cervantes](#los-tests-que-emocionaron-a-cervantes)
   - [Testeando componentes complejos](#testeando-componentes-complejos)
-    - [Entendiendo cuándo es necesario mockear](#entendiendo-cu%C3%A1ndo-es-necesario-mockear)
+    - [Entendiendo cuándo es necesario mockear](#entendiendo-cuándo-es-necesario-mockear)
     - [Peligros de doblar el fetch](#peligros-de-doblar-el-fetch)
     - [Testeando animaciones](#testeando-animaciones)
   - [Agilizando el proceso de testing](#agilizando-el-proceso-de-testing)
     - [Mejorar la mantenibilidad de nuestros tests con custom renderers](#mejorar-la-mantenibilidad-de-nuestros-tests-con-custom-renderers)
-    - [Agilizar la creación de datos fake con Test Object Factories](#agilizar-la-creaci%C3%B3n-de-datos-fake-con-test-object-factories)
-    - [Snapshot testing, ¿sí o no?](#snapshot-testing-s%C3%AD-o-no)
+    - [Agilizar la creación de datos fake con Test Object Factories](#agilizar-la-creación-de-datos-fake-con-test-object-factories)
+    - [Snapshot testing, ¿sí o no?](#snapshot-testing-sí-o-no)
   - [TDD con Testing Library](#tdd-con-testing-library)
     - [Implementando una nueva feature con TDD](#implementando-una-nueva-feature-con-tdd)
     - [TDD hard mode con fake timers](#tdd-hard-mode-con-fake-timers)
@@ -38,10 +38,10 @@
 
 # Testing en frontend (CodelyTV)
 
-- https://pro.codely.tv/library/testing-frontend/196940/path/
+- <https://pro.codely.tv/library/testing-frontend/196940/path/>
 - Núria Soriano
-- https://twitter.com/nuria_codes
-- https://github.com/CodelyTV/javascript-testing-frontend-course
+- <https://twitter.com/nuria_codes>
+- <https://github.com/CodelyTV/javascript-testing-frontend-course>
 - ETA ~ 3 hours
 
 ## ¿Por qué el testing en FE está roto?
@@ -51,7 +51,7 @@
 
 ## Las bases de Testing Library: testeando un componente simple
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/blob/main/12-first-test/src/tests/01-Form.test.js
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/blob/main/12-first-test/src/tests/01-Form.test.js>
 - `fireEvent.chabge()`
 - Mejor cuando sea posible `userEvent.type()` o `userEvent.click()`
 - `screen.getByLabelText()`
@@ -60,34 +60,37 @@
 
 ### Agnóstica del framework: ejemplo con React vs Vue vs Angular
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/21-frameworks
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/21-frameworks>
 - Mejor `screen.getByRole()` que `screen.getByText()` o que `screen.getByTextId()`
 
 ### Redefiniendo el testing en frontend
 
-https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit-test
+<https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit-test>
 
 ## Buenas prácticas del testing en frontend
 
 ### Testeando lo que de verdad importa
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/31-testing-important-stuff
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/31-testing-important-stuff>
 - Uso del Page Object.
 - Muestran ejemplo con test regulero para ver su evolución.
 
 ### Ejemplo con Testing Library: testing centrado en el usuario
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/32-testing-as-a-user
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/32-testing-as-a-user>
 
 ### fireEvent vs userEvent
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/32-testing-as-a-user
-- Problema **sólo en Vue**: Vue Testing Library exporta una versión de fireEvent asíncrona. En cambio, userEvent es una librería independiente y exporta una función síncrona. Eso hace que el cambio no va a ser un reemplazo simple, ya que en ocasiones tendremos que esperar a que el DOM reaccione al evento que hemos ejecutado. Si te encuentras con este problema, lo que puedes hacer es usar waitFor justo después del evento, o usar la query findByX, que es asíncrona.
-- https://github.com/testing-library/vue-testing-library/pull/182/files#diff-c7a45ea411c9f388c189672e754a9255e1a7aba60a356ba219abf552bfea2496R46
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/32-testing-as-a-user>
+- Problema **sólo en Vue**: Vue Testing Library exporta una versión de fireEvent asíncrona. En cambio, userEvent es una
+  librería independiente y exporta una función síncrona. Eso hace que el cambio no va a ser un reemplazo simple, ya que
+  en ocasiones tendremos que esperar a que el DOM reaccione al evento que hemos ejecutado. Si te encuentras con este
+  problema, lo que puedes hacer es usar waitFor justo después del evento, o usar la query findByX, que es asíncrona.
+- <https://github.com/testing-library/vue-testing-library/pull/182/files#diff-c7a45ea411c9f388c189672e754a9255e1a7aba60a356ba219abf552bfea2496R46>
 
 ### Tests semánticos y más legibles
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/34-semantic-tests
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/34-semantic-tests>
 - add `import "@testing-library/jest-dom";`
 - `expect(message).toBeTruthy()` >> `expect(message).toBeInTheDocument();`
 - `expect(message.innerHTML).toMatch(/contact us/i);` >> `expect(message).toHaveTextContent(/contact us/i);`
@@ -96,59 +99,60 @@ https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit
 
 ### Automatizar tests de accesibilidad con Jest Axe
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/41-a11y-axe
-- https://github.com/pa11y/pa11y-ci
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/41-a11y-axe>
+- <https://github.com/pa11y/pa11y-ci>
 
 ### Selectores accesibles
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/42-a11y-selectors
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/42-a11y-selectors>
 - [Prioridad de queries en Testing Library](https://testing-library.com/docs/queries/about/#priority)
 - [Roles de accesibilidad](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#roles)
 - Si es interactivo (e.g. un botón, link, etc.), usar `screen.getByRole()`
 - Para un texto, `screen.getByText()`
-- Para inputs, `screen.getByLabelText()`. Si no, también se podría usar `screen.getByPlaceholderText()` o `getByDisplayValue()`
+- Para inputs, `screen.getByLabelText()`. Si no, también se podría usar `screen.getByPlaceholderText()` o
+  `getByDisplayValue()`
 
 ## Cómo escribir nuestros tests
 
 ### La estructura de nuestro test: Arrange, Act, Assert
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/51-test-structure
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/51-test-structure>
 - Tests con errores de valicación.
 
 ### Los tests que emocionaron a Cervantes
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/52-test-description
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/52-test-description>
 - Posible estructuración para `describe` y `it`
 
 ## Testeando componentes complejos
 
 ### Entendiendo cuándo es necesario mockear
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/61-mocking
-
-* `coursesRepo.searchAll.mockResolvedValue()`
-* `coursesRepo.searchAll.mockResolvedValueOnce()`
-* Al final, se debe "limpiar" el doble. Hay varias maneras:
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/61-mocking>
+- `coursesRepo.searchAll.mockResolvedValue()`
+- `coursesRepo.searchAll.mockResolvedValueOnce()`
+- Al final, se debe "limpiar" el doble. Hay varias maneras:
   - `coursesRepo.searchAll.clear()`: sólo borra el número de veces que ha sido llamado
   - `coursesRepo.searchAll.mockReset()`
   - `coursesRepo.searchAll.mockRestore()`
-* Mejor ponerlo en el `jest.config.js`: `restoreMocks: true`
-* [Testing library guiding principles](https://testing-library.com/docs/guiding-principles/)
-* [Jest Mock functions](https://jestjs.io/docs/en/mock-function-api)
-* [Jest manual mocks guide](https://jestjs.io/docs/en/manual-mocks)
+- Mejor ponerlo en el `jest.config.js`: `restoreMocks: true`
+- [Testing library guiding principles](https://testing-library.com/docs/guiding-principles/)
+- [Jest Mock functions](https://jestjs.io/docs/en/mock-function-api)
+- [Jest manual mocks guide](https://jestjs.io/docs/en/manual-mocks)
 
 ### Peligros de doblar el fetch
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/62-mocking-fetch
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/62-mocking-fetch>
 - Alternativa: usar el MSW (Mock Service Worker)
-  - https://mswjs.io/
+  - <https://mswjs.io/>
   - Se intercepta la llamada de red del fetch, no se dobla el fetch.
   - en el `setupTests.js` configuramos que se levante, resetee y pare el servidor de MSW.
-  - Útil para fácilmente testear código legacy antes de empezar el refactor y crear Repositories. Es una primera capa de seguridad.
+  - Útil para fácilmente testear código legacy antes de empezar el refactor y crear Repositories. Es una primera capa de
+    seguridad.
 
 ### Testeando animaciones
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/63-animations
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/63-animations>
 - `await waitForElementToBeRemoved()`
 - Cambiar cuando sea posible la duración de la transición a 0 ms
 
@@ -156,30 +160,32 @@ https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit
 
 ### Mejorar la mantenibilidad de nuestros tests con custom renderers
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/71-custom-renderers
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/71-custom-renderers>
 - Cómo testear "mockeando" lo mínimo. Cómo pasar el store (e.g. vuex, redux), el router, etc.
-- Nos crearemos una función render propia en un archivo, que reciba los parámetros necesarios para configurar el componente (por ejemplo, el estado inicial) que también reexportará toda testing library.
+- Nos crearemos una función render propia en un archivo, que reciba los parámetros necesarios para configurar el
+  componente (por ejemplo, el estado inicial) que también reexportará toda testing library.
 - `export * from "@testing-library/vue";` // re-exportamos Testing Library
-- Ejemplo en React: https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/redux-02.js
+- Ejemplo en React: <https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/redux-02.js>
   - Necesitas encapsular el component con un `<Provider>`
 
 ### Agilizar la creación de datos fake con Test Object Factories
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/72-test-object-factory
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/72-test-object-factory>
 - Test Object Factories.
-  - https://github.com/thoughtbot/fishery
+  - <https://github.com/thoughtbot/fishery>
     - Builder pattern
-    - Fishery is built with TypeScript in mind. Factories accept typed parameters and return typed objects, so you can be confident that the data used in your tests is valid.
-  - https://github.com/rosiejs/rosie
-- Librería de datos fake: https://github.com/marak/Faker.js/
+    - Fishery is built with TypeScript in mind. Factories accept typed parameters and return typed objects, so you can
+      be confident that the data used in your tests is valid.
+  - <https://github.com/rosiejs/rosie>
+- Librería de datos fake: <https://github.com/marak/Faker.js/>
   - Ventaja: genera dinámicamente diferentes datos. Si alguno falla, se puede crear un test específico.
 - Naming: "object mother" vs "test object factory"
-  - https://twitter.com/mikesherov/status/1156200073535119361
+  - <https://twitter.com/mikesherov/status/1156200073535119361>
 
 ### Snapshot testing, ¿sí o no?
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/73-snapshots
-- https://jestjs.io/docs/en/snapshot-testing
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/73-snapshots>
+- <https://jestjs.io/docs/en/snapshot-testing>
 - Funciona bien para componentes representacionales... pero no son lo que más valor aporta testear de forma "aislada".
 
 ## TDD con Testing Library
@@ -196,16 +202,17 @@ https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit
 
 - [Fake timers de Jest](https://jestjs.io/docs/en/jest-object#mock-timers)
   - Falsea las llamadas de `setInterval()` o `setTimeout()`
-- Los timers de Jest nos dan además una forma de forzar que los timers se ejecuten, como `runAllTimers` y `runOnlyPendingTimers`.
+- Los timers de Jest nos dan además una forma de forzar que los timers se ejecuten, como `runAllTimers` y
+  `runOnlyPendingTimers`.
 
 ## CI/CD: Integramos el testing en nuestra pipeline
 
-- https://github.com/CodelyTV/javascript-testing-frontend-course/blob/main/.github/workflows/test.yml
+- <https://github.com/CodelyTV/javascript-testing-frontend-course/blob/main/.github/workflows/test.yml>
 - `.github/workflows`
 
 ## Errores frecuentes con Testing Library
 
-- https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+- <https://kentcdodds.com/blog/common-mistakes-with-react-testing-library>
 - No usar el `container` en general.
 - No usar las queries adecuadas
 - Esperar tiempo aleatorio (e.g. `sleep(1000)`)
@@ -215,7 +222,7 @@ https://github.com/CodelyTV/javascript-testing-frontend-course/tree/main/22-unit
 ## Interesting stuff
 
 - `screen.debug()`: it shows the HTML rendered at that point.
-- https://github.com/kentcdodds/react-testing-library-course
-- Free fake API: https://jsonplaceholder.typicode.com/
-- https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
-- https://testing-library.com/docs/queries/about/#types-of-queries
+- <https://github.com/kentcdodds/react-testing-library-course>
+- Free fake API: <https://jsonplaceholder.typicode.com/>
+- <https://kentcdodds.com/blog/common-mistakes-with-react-testing-library>
+- <https://testing-library.com/docs/queries/about/#types-of-queries>

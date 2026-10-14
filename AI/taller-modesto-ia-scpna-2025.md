@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [AI Driven ¿Development?](#ai-driven-development)
   - [Notas](#notas)
@@ -24,7 +24,8 @@
 - <https://repomix.com/>: empaqueta todo tu código en un XML
   - `repomix --ignore "**/*svg,README.md"`
 - [Google AI Studio](https://aistudio.google.com)
-  - Se puede usar [Gemini normal](https://gemini.google.com/) y corriente: la cuenta de pago te garantiza que no almacenan tu código, etc.
+  - Se puede usar [Gemini normal](https://gemini.google.com/) y corriente: la cuenta de pago te garantiza que no
+    almacenan tu código, etc.
   - Le pasamos el XML de repomix
 - <https://github.com/dotnet/eShop>
 - Ejemplos de prompts:
@@ -56,8 +57,10 @@ Intenta obtener:
 
 ```
 
-- Si te da un Mermaid erróneo, puedes pedirle a la IA que te genere un prompt para arreglarlo en el futuro (e.g. pasando un fichero con un diagrama incorrecto y el mismo corregido).
-- Se puede integrar en la pipeline la generación de esta documentacion de C4 (tal vez no para ser ejecutada con cada push)
+- Si te da un Mermaid erróneo, puedes pedirle a la IA que te genere un prompt para arreglarlo en el futuro (e.g. pasando
+  un fichero con un diagrama incorrecto y el mismo corregido).
+- Se puede integrar en la pipeline la generación de esta documentacion de C4 (tal vez no para ser ejecutada con cada
+  push)
 - Si me paso de tokens (repomix):
   - Ignorar recursos del repositorio (e.g. svg)
   - Divide
@@ -71,11 +74,12 @@ Intenta obtener:
   - [Getting 4.1 to behave like Claude](https://www.reddit.com/r/GithubCopilot/comments/1llewl7/getting_41_to_behave_like_claude/)
 - Ejemplo para Incident Reports:
   - Tienen un documento describiendo cómo es un IR.
-  - Se ha conectado Claude con el MCP de Atlassian para pedir que evalúe si un IR se ajusta bien a las expectativas de un IR.
+  - Se ha conectado Claude con el MCP de Atlassian para pedir que evalúe si un IR se ajusta bien a las expectativas de
+    un IR.
 - `llm` CLI:
   - Puedes crear templates
     - `cat repomix-XXX | llm -t aisecops`
 - Pedir a la IA que haga un plan para después pasárselo y que lo haga.
 - Se le puede pedir que te dé opciones.
 - **[LangFlow](https://www.langflow.org/)**: como n8n pero para IA. NoCode.
-    - [Step by step no-code RAG application using Langflow](https://www.youtube.com/watch?v=RWo4GDTZIsE)
+  - [Step by step no-code RAG application using Langflow](https://www.youtube.com/watch?v=RWo4GDTZIsE)

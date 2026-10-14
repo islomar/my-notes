@@ -1,10 +1,10 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Hoshin Planning: Estrategia Ágil con Hoshin Kanri y OKR's](#hoshin-planning-estrategia-%C3%A1gil-con-hoshin-kanri-y-okrs)
-  - [Section 1: Introducción](#section-1-introducci%C3%B3n)
-  - [Section 2: Descripción general del marco Hoshin Planning](#section-2-descripci%C3%B3n-general-del-marco-hoshin-planning)
+- [Hoshin Planning: Estrategia Ágil con Hoshin Kanri y OKR's](#hoshin-planning-estrategia-ágil-con-hoshin-kanri-y-okrs)
+  - [Section 1: Introducción](#section-1-introducción)
+  - [Section 2: Descripción general del marco Hoshin Planning](#section-2-descripción-general-del-marco-hoshin-planning)
     - [Problemas a resolver](#problemas-a-resolver)
     - [Hoshin Kanri](#hoshin-kanri)
     - [Cuadrante de Covey](#cuadrante-de-covey)
@@ -15,46 +15,46 @@
     - [Otro ejemplo: Agencia de Marketing](#otro-ejemplo-agencia-de-marketing)
     - [Principios y valores](#principios-y-valores)
     - [Diferencias con sistemas anteriores](#diferencias-con-sistemas-anteriores)
-    - [Vídeo de Dan Pink](#v%C3%ADdeo-de-dan-pink)
+    - [Vídeo de Dan Pink](#vídeo-de-dan-pink)
     - [El problema de los incentivos monetarios](#el-problema-de-los-incentivos-monetarios)
-    - [Hoshin personales: ¿sí o no?](#hoshin-personales-s%C3%AD-o-no)
+    - [Hoshin personales: ¿sí o no?](#hoshin-personales-sí-o-no)
     - [CFR's](#cfrs)
     - [El dial de exigencia](#el-dial-de-exigencia)
-    - [¿Dónde usar un Hoshin?](#d%C3%B3nde-usar-un-hoshin)
+    - [¿Dónde usar un Hoshin?](#dónde-usar-un-hoshin)
     - [Hoshin subsidiarios o anidados](#hoshin-subsidiarios-o-anidados)
       - [Indicadores agregados o compuestos](#indicadores-agregados-o-compuestos)
-  - [Section 3: Sobre el propósito y la visión](#section-3-sobre-el-prop%C3%B3sito-y-la-visi%C3%B3n)
+  - [Section 3: Sobre el propósito y la visión](#section-3-sobre-el-propósito-y-la-visión)
     - [Proyecto, Producto, Problema](#proyecto-producto-problema)
     - [Flujos de valor](#flujos-de-valor)
     - [Conectando el ecosistema](#conectando-el-ecosistema)
   - [Section 4: Objetivos](#section-4-objetivos)
     - [Reglas para Objetivos](#reglas-para-objetivos)
-    - [50 ejemplos de Objetivos - Objetivos de Compañía](#50-ejemplos-de-objetivos---objetivos-de-compa%C3%B1%C3%ADa)
+    - [50 ejemplos de Objetivos - Objetivos de Compañía](#50-ejemplos-de-objetivos---objetivos-de-compañía)
     - [50 ejemplos de Objetivos - Objetivos de Marketing](#50-ejemplos-de-objetivos---objetivos-de-marketing)
-    - [50 ejemplos de Objetivos - Objetivos de CRM y RR.HH.](#50-ejemplos-de-objetivos---objetivos-de-crm-y-rrhh)
+    - [50 ejemplos de Objetivos - Objetivos de CRM y RR.HH](#50-ejemplos-de-objetivos---objetivos-de-crm-y-rrhh)
     - [50 ejemplos de Objetivos - Objetivos de Operaciones, Equipos y Hoshin personales](#50-ejemplos-de-objetivos---objetivos-de-operaciones-equipos-y-hoshin-personales)
   - [Section 5: Resultados clave (KR's)](#section-5-resultados-clave-krs)
-    - [KPI, Accionable, KR...](#kpi-accionable-kr)
-    - [¿Cómo determinar los KR para un objetivo?](#c%C3%B3mo-determinar-los-kr-para-un-objetivo)
+    - [KPI, Accionable, KR](#kpi-accionable-kr)
+    - [¿Cómo determinar los KR para un objetivo?](#cómo-determinar-los-kr-para-un-objetivo)
     - [Reglas para KRs](#reglas-para-krs)
-    - [Ecosistema de métricas](#ecosistema-de-m%C3%A9tricas)
+    - [Ecosistema de métricas](#ecosistema-de-métricas)
     - [Determinando umbrales](#determinando-umbrales)
     - [KRs de control](#krs-de-control)
-    - [KR's Proxy / Indicadores tempranos de innovación](#krs-proxy--indicadores-tempranos-de-innovaci%C3%B3n)
+    - [KR's Proxy / Indicadores tempranos de innovación](#krs-proxy--indicadores-tempranos-de-innovación)
     - [KRs compuestos](#krs-compuestos)
     - [Algunos ejemplos de KR's](#algunos-ejemplos-de-krs)
   - [Section 6: Accionables](#section-6-accionables)
   - [Section 7: Proceso completo](#section-7-proceso-completo)
-    - [Visión general de un Hoshin plan](#visi%C3%B3n-general-de-un-hoshin-plan)
+    - [Visión general de un Hoshin plan](#visión-general-de-un-hoshin-plan)
     - [Roles en Hoshin planning](#roles-en-hoshin-planning)
     - [Eventos o procesos en Hoshin planning](#eventos-o-procesos-en-hoshin-planning)
     - [Hoshin a escala](#hoshin-a-escala)
     - [Artefactos: Tablones visuales](#artefactos-tablones-visuales)
     - [Equilibrando con el trabajo diario / Business As Usual (BAU)](#equilibrando-con-el-trabajo-diario--business-as-usual-bau)
-  - [Section 8: Ejemplos prácticos y entrevistas](#section-8-ejemplos-pr%C3%A1cticos-y-entrevistas)
+  - [Section 8: Ejemplos prácticos y entrevistas](#section-8-ejemplos-prácticos-y-entrevistas)
     - [Ejemplo completo: Agencia de Marketing Digital](#ejemplo-completo-agencia-de-marketing-digital)
     - [Entrevista: Gabriel Prat](#entrevista-gabriel-prat)
-    - [Entrevista: Johnny Ordoñez](#entrevista-johnny-ordo%C3%B1ez)
+    - [Entrevista: Johnny Ordoñez](#entrevista-johnny-ordoñez)
     - [Entrevista: Alex Rios](#entrevista-alex-rios)
   - [Section 9: Conclusiones](#section-9-conclusiones)
   - [Dudas o comentarios](#dudas-o-comentarios)
@@ -71,7 +71,8 @@
 - ETA: ~ 13 horas
 - Como lograr la Agilidad empresarial, alinear a tus equipos y lograr tus objetivos con un marco Ágil estratégico
 - <https://en.wikipedia.org/wiki/Hoshin_Kanri>
-  - It is a 7-step process used in strategic planning in which strategic goals are communicated throughout the company and then put into action.
+  - It is a 7-step process used in strategic planning in which strategic goals are communicated throughout the company
+    and then put into action.
     1. Identificar las claves del negocio
     2. Establecer objetivos cuantificados de negocio
     3. Definir la visión global y las metas
@@ -79,13 +80,15 @@
     5. Determinar los planes de acción (tácticas y objetivos) para cada estrategia
     6. Establecer indicadores que midan el rendimiento de cada proceso
     7. Revisión
-  - Also called "Policy Deployment": method for ensuring that the strategic goals of a company drive progress and action at every level within that company.
+  - Also called "Policy Deployment": method for ensuring that the strategic goals of a company drive progress and action
+    at every level within that company.
   - Translated from Japanese, Hoshin Kanri aptly means "compass management".
   - The individual words "hoshin" and "kanri" mean direction and administration, respectively.
 - <https://leansisproductividad.com/que-es-el-hoshin-kanri-y-por-que-se-va-a-poner-tan-de-moda>
 - <https://www.leanproduction.com/hoshin-kanri.html>
 - <http://www.mcts.com/Hoshin-History.htm>
-  - In 1965, Bridgestone Tire published a report analyzing the planning techniques used by Deming Prize winning companies. The techniques described were given the name Hoshin Kanri. By 1975, Hoshin was widely accepted in Japan.
+  - In 1965, Bridgestone Tire published a report analyzing the planning techniques used by Deming Prize winning
+    companies. The techniques described were given the name Hoshin Kanri. By 1975, Hoshin was widely accepted in Japan.
 - <http://mcts.com/Hoshin-Origins.htm>
 - <https://www.researchgate.net/publication/303721323_Hoshin_Kanri_How_Toyota_Creates_a_Culture_of_Continuous_Improvement_to_Achieve_Lean_Goals>
 - El poder de Hoshin kanri reside en el foco en los objetivos importantes.
@@ -93,8 +96,16 @@
 - Priorización (6/7 items como máximo) y monitorización
 - **¿Qué es Hoshin Planning?**
   Hoshin Planning se compone de dos enfoques principales:
-  - En primer lugar, Hoshin Kanri, una marco metodológico creado por Toyota y que revolucionó la industria desde los años 90. La palabra japonesa Hoshin puede traducirse como «brújula»: el sistema funciona realmente como una brújula que marca el norte verdadero para toda la organización. La esencia de Hoshin Kanri es la comunicación entre todas las áreas y estamentos de la empresa para colaborar en la consecución de un mismo objetivo común.
-  - El segundo pilar de Hoshin Planning son los OKR (Objetivos y Resultados Clave), una metodología desarrollada en Intel y posteriormente empleada por Google y otros gigantes tecnológicos. Los OKR definen objetivos estratégicos, y a diferencia de otras organizaciones que miden constantemente aspectos relacionados con costes, tiempos o alcances, los KR se centran en medir el impacto real en el cliente, los resultados logrados por los diferentes proyectos emprendidos en la búsqueda de los objetivos. En las palabras de su creador, John Doerr, se trata de «medir lo que realmente importa»
+  - En primer lugar, Hoshin Kanri, una marco metodológico creado por Toyota y que revolucionó la industria desde los
+    años 90. La palabra japonesa Hoshin puede traducirse como «brújula»: el sistema funciona realmente como una brújula
+    que marca el norte verdadero para toda la organización. La esencia de Hoshin Kanri es la comunicación entre todas
+    las áreas y estamentos de la empresa para colaborar en la consecución de un mismo objetivo común.
+  - El segundo pilar de Hoshin Planning son los OKR (Objetivos y Resultados Clave), una metodología desarrollada en
+    Intel y posteriormente empleada por Google y otros gigantes tecnológicos. Los OKR definen objetivos estratégicos, y
+    a diferencia de otras organizaciones que miden constantemente aspectos relacionados con costes, tiempos o alcances,
+    los KR se centran en medir el impacto real en el cliente, los resultados logrados por los diferentes proyectos
+    emprendidos en la búsqueda de los objetivos. En las palabras de su creador, John Doerr, se trata de «medir lo que
+    realmente importa»
 
 ## Section 1: Introducción
 
@@ -131,7 +142,10 @@
 
 - Herramienta, modelo de pensamiento, marco de trabajo.
 - Libro "Lean Thinking"
-- Marco de decisiones estratégica. Foco en las iniciativas críticas para los objetivos de la empresa. Se seleccionan entre 3 y 5 objetivos y otros son claramente deseleccionados. Unifica y alinea los recursos y establece métricas claras que nos puede decir si estamos alcanzando los objetivos o no. Estas métricas se revisan de una manera frecuente.
+- Marco de decisiones estratégica. Foco en las iniciativas críticas para los objetivos de la empresa. Se seleccionan
+  entre 3 y 5 objetivos y otros son claramente deseleccionados. Unifica y alinea los recursos y establece métricas
+  claras que nos puede decir si estamos alcanzando los objetivos o no. Estas métricas se revisan de una manera
+  frecuente.
 - Hoshin: brújula, dirección.
 - Kanri: acción.
 
@@ -146,7 +160,8 @@
 - Urgente y no importante: delegar
 - Importante pero no urgente (cuadrante II): cuadrante de la mejora, se suele sacrificar por el I.
 - Urgente e importante (cuadrante I): nos quedamos aquí.
-- Piensa en algo que si lo empezaras hoy, sería un cambio importante en tu vida. Me recuerda al Horizon del Proyecto Unicornio. Suele ser el cuadrante II.
+- Piensa en algo que si lo empezaras hoy, sería un cambio importante en tu vida. Me recuerda al Horizon del Proyecto
+  Unicornio. Suele ser el cuadrante II.
 - Slack, holgura. Importane que las organizaciones del conocimiento tenga tiempo para pensar, cambiar, innovar, mejorar.
 
 ### Toyota Kata
@@ -189,7 +204,9 @@
     - % de usuarios que repiten
     - Tiempo de vida de usuarios
   - Accionable: renegociar contratos con proveedores para evitar overbooking.
-  - Cliente que se quejaban de encontrarse con overbooking en el hotel y culpaban a Booking.com. Booking puso una política para que los hoteles se hicieran responsables de ello. Algunos hoteles rechazaron esa condición y simplemente redujeron su parque de hoteles.
+  - Cliente que se quejaban de encontrarse con overbooking en el hotel y culpaban a Booking.com. Booking puso una
+    política para que los hoteles se hicieran responsables de ello. Algunos hoteles rechazaron esa condición y
+    simplemente redujeron su parque de hoteles.
   - Una vez consiguieron la retención, se centraron en volumen.
 
 ### Ejemplo concreto
@@ -220,7 +237,8 @@
 
 - Empresa que ha ido bajando en beneficios y rentabilidad.
 - Proceso para analizar qué está pasando. Posibles líneas estratégicas:
-  - Problema con los productos y servicios que ofrecen: se centraron en uno hace 2 años, se concentraron mucho ahí, pero hoy en día ese producot (que se llevó ese foco)
+  - Problema con los productos y servicios que ofrecen: se centraron en uno hace 2 años, se concentraron mucho ahí, pero
+    hoy en día ese producot (que se llevó ese foco)
     - Tal vez actualizar el producto estrella.
     - Desarrollar nueva oferta de productos.
       - Lo que
@@ -241,7 +259,8 @@
     - No usar HK para optimizar una parte.
   - Aprendizaje y mejora vs Alcanzar cotas
     - Outcomes over outputs
-    - No es una herramienta para medir a las personas, sino para aprender y mejorar, para mantenernos alineados y enfocados a lo que realmente aporta valor.
+    - No es una herramienta para medir a las personas, sino para aprender y mejorar, para mantenernos alineados y
+      enfocados a lo que realmente aporta valor.
   - Colaboración y participación vs Órdenes y control
 - Valores:
   - simplicidad: menos es más
@@ -274,21 +293,35 @@
 
 - Historia de niños jugando al fútbol y dando balonazos a una puerta.
 - Historia de hackaton con premios dados por el management.
-- En el momento en el que se ponga un bono, la gente sólo va a ser eso... y se va a pervertir el funcionamiento del sistema.
-- Ejemplo de WellsFargo: objetivo de dar muchos préstamos... los dieron a cascoporro, a gente con alto riesgo de no devolverlo.
+- En el momento en el que se ponga un bono, la gente sólo va a ser eso... y se va a pervertir el funcionamiento del
+  sistema.
+- Ejemplo de WellsFargo: objetivo de dar muchos préstamos... los dieron a cascoporro, a gente con alto riesgo de no
+  devolverlo.
 
 ### Hoshin personales: ¿sí o no?
 
 - No lo recomienda, la idea es la globalidad.
-- Si se relaja el "dial de exigencia", puede ser una herramienta tipo "plan de carrera"; en lugar de ser "igual para todo el mundo", que sirva para acompañar a cada individuo, con objetivos, retos, seguimiento, etc.
+- Si se relaja el "dial de exigencia", puede ser una herramienta tipo "plan de carrera"; en lugar de ser "igual para
+  todo el mundo", que sirva para acompañar a cada individuo, con objetivos, retos, seguimiento, etc.
 - No usarlo para evaluar el rendimiento.
 - Los OKRs no deben llegar a las personas. No poner métricas a las personas.
 
 ### CFR's
 
 - Conversation, Feedback, Recognition
-- CFR's son las iniciales de "Conversaciones, Feedback, Reconocimiento". John Doerr los describe como "los hermanos de los OKR", y en cierto modo pensamos que su introducción en el marco de trabajo de OKR's obedece precisamente a los aspectos que hemos comentado en los videos anteriores sobre los OKR personales. Posiblemente, se trata de un esfuerzo para resaltar el papel de los OKR como marco para el aprendizaje y el desarrollo, no para establecer metas numéricas y realizar evaluaciones individuales de rendimiento. Esto, unido al caracter continuo de los OKR, nos lleva a que sea importante mantener conversaciones frecuentes con nuestro equipo acerca del propósito, la meta, la visión, la estrategia... Conforme vamos aprendiendo y vemos comportamientos que se desvían de nuestro norte verdadero,es el papel de líderes, facilitadores y también de los propios compañeros el proporcionar feedback y proponer nuevas acciones que nos devuelvan a nuestro rumbo. De igual forma, cuando los resultados nos dicen que estamos logrando nuestros objetivos, es importante otorgar reconocimiento y celebración del aprendizaje obtenido.
-- De alguna forma, lo lógico en una organización que abraza el marco de trabajo Hoshin Planning es ir abandonando paulatinamente el concepto de evaluaciones de rendimiento anuales para sustituirlo por el **desarrollo y aprendizaje continuo**.
+- CFR's son las iniciales de "Conversaciones, Feedback, Reconocimiento". John Doerr los describe como "los hermanos de
+  los OKR", y en cierto modo pensamos que su introducción en el marco de trabajo de OKR's obedece precisamente a los
+  aspectos que hemos comentado en los videos anteriores sobre los OKR personales. Posiblemente, se trata de un esfuerzo
+  para resaltar el papel de los OKR como marco para el aprendizaje y el desarrollo, no para establecer metas numéricas y
+  realizar evaluaciones individuales de rendimiento. Esto, unido al caracter continuo de los OKR, nos lleva a que sea
+  importante mantener conversaciones frecuentes con nuestro equipo acerca del propósito, la meta, la visión, la
+  estrategia... Conforme vamos aprendiendo y vemos comportamientos que se desvían de nuestro norte verdadero,es el papel
+  de líderes, facilitadores y también de los propios compañeros el proporcionar feedback y proponer nuevas acciones que
+  nos devuelvan a nuestro rumbo. De igual forma, cuando los resultados nos dicen que estamos logrando nuestros
+  objetivos, es importante otorgar reconocimiento y celebración del aprendizaje obtenido.
+- De alguna forma, lo lógico en una organización que abraza el marco de trabajo Hoshin Planning es ir abandonando
+  paulatinamente el concepto de evaluaciones de rendimiento anuales para sustituirlo por el
+  **desarrollo y aprendizaje continuo**.
 
 ### El dial de exigencia
 
@@ -365,8 +398,11 @@
 
 - Líneas borrosas entre propósito, misión y visión.
 - Propósito de Improvement21: ayudar a las empresas a tomar consciencia.
-- **Propósito**: quiénes somos y por qué somos eso. Cuál es la diferencia de nuestra empresa respecto a otras. Relacionado con nuestros valores, nuestra cultura, nuestros principios. **Para qué** hacemos el producto/servicio y cómo se enlaza con los valores.
-- **Misión**: cómo lo vamos a hacer, qué vamos a construir. Lo que tenemos que hacer, lo que hemos venido a hacer. A veces describe el producto de la empresa.
+- **Propósito**: quiénes somos y por qué somos eso. Cuál es la diferencia de nuestra empresa respecto a otras.
+  Relacionado con nuestros valores, nuestra cultura, nuestros principios. **Para qué** hacemos el producto/servicio y
+  cómo se enlaza con los valores.
+- **Misión**: cómo lo vamos a hacer, qué vamos a construir. Lo que tenemos que hacer, lo que hemos venido a hacer. A
+  veces describe el producto de la empresa.
   - Mission statements de las empresas.
 - **Visión**: futuro. Cómo será el futuro una vez cumplamos con nuestras misión.
 - Huir de definiciones SMART e INVEST.
@@ -375,21 +411,27 @@
 - El propósito tiene que estar conectado con la cultura y los valores de la empresa.
 - Debe ser claramente entendible, fácil de recordar. Simple.
 - Debe ser realista.
-- Simon Sinek tiene una charla TED titulada "How Great Leaders Inspire Action" en la que habla del círculo dorado (WHY - HOW - WHAT), lo que ha hecho que el video muchas veces sea referido como "Start With WHY" - comienza con el por qué / para qué.
+- Simon Sinek tiene una charla TED titulada "How Great Leaders Inspire Action" en la que habla del círculo dorado (WHY -
+  HOW - WHAT), lo que ha hecho que el video muchas veces sea referido como "Start With WHY" - comienza con el por qué /
+  para qué.
 
 ### Proyecto, Producto, Problema
 
-- Las empresas suelen estar muy centradas en **"Proyectos"**, muy centradas en indicadores de rendimiento: tiempo para entregar el producto, recursos con los que se cuenta, funcionalidades a entregar, etc. Proyectos exitosos que no sirven para nada.
+- Las empresas suelen estar muy centradas en **"Proyectos"**, muy centradas en indicadores de rendimiento: tiempo para
+  entregar el producto, recursos con los que se cuenta, funcionalidades a entregar, etc. Proyectos exitosos que no
+  sirven para nada.
   - El Hoshin no debería ir orientado a un proyecto.
   - El proyecto puede apoyar a los OKRs, no al contrario
-- **Producto**: Kodak. Se centró en el producto y se olvidó de sus usuarios, que estaban viendo ventajas en la fotografía digital.
+- **Producto**: Kodak. Se centró en el producto y se olvidó de sus usuarios, que estaban viendo ventajas en la
+  fotografía digital.
 - Espacio **"Problema"**: Customer-centricity. Sólo es valor aquello que repercute en el cliente (sic).
 
 ### Flujos de valor
 
 - Identificar quiénes son los clientes de la empresa.
 - El cliente nos da algo a cambio de resolverle el problema que sea.
-- Definir los "touchpoints", dónde toco al cliente. Empezar el Value Stream Mapping por el cliente: ¿qué recibe? ¿cómo?, etc. Ir hacia atrás. Comenzar siempre con el cliente, con la entrega de valor.
+- Definir los "touchpoints", dónde toco al cliente. Empezar el Value Stream Mapping por el cliente: ¿qué recibe? ¿cómo?,
+  etc. Ir hacia atrás. Comenzar siempre con el cliente, con la entrega de valor.
 - Reflexionar sobre a qué nos dedicamos en la empresa, cómo generamos valor, etc.
 - **Business Model Canvas**
   - Key partners
@@ -443,8 +485,10 @@
 - Responden a "Para qué"
 - Definir entre 1 y 4 objetivos por cada área/iniciativa/producto/equipo/persona.
 - Progresivos, no "binarios".
-- Tienen un "dueño": no la persona responsable que deba responder de ello, sino una persona que por ejemplo haga seguimiento, un "sirviente" del objetivo.
-- La mayoría debería ser emergentes o acordados: son los equipos de "primera línea" quienes los propongan a la "alta gestión".
+- Tienen un "dueño": no la persona responsable que deba responder de ello, sino una persona que por ejemplo haga
+  seguimiento, un "sirviente" del objetivo.
+- La mayoría debería ser emergentes o acordados: son los equipos de "primera línea" quienes los propongan a la "alta
+  gestión".
 - Revisados frecuentemente: e.g. cada dos meses o cada mes (según la incertidumbre)
 - Ambiciosos, incluso "Moonshots": discrepo un poco
   - No asociados a bonus.
@@ -470,7 +514,8 @@
 ### 50 ejemplos de Objetivos - Objetivos de Marketing
 
 - "Crear una newsletter mensual"
-  - Es un objetivo de nivel de exigencia muy bajo. Falta preguntarse "el para qué". Es una acción binaria, no muy buen objetivo.
+  - Es un objetivo de nivel de exigencia muy bajo. Falta preguntarse "el para qué". Es una acción binaria, no muy buen
+    objetivo.
 - "Mejorar engagement/recurrencia"
 - "Mejorar la web"
 - "Generar más leads"
@@ -481,7 +526,7 @@
 - "Ser la marca más reconocida"
 - "#1 en lista BrandList antes del 31 de Diciembre"
 
-### 50 ejemplos de Objetivos - Objetivos de CRM y RR.HH.
+### 50 ejemplos de Objetivos - Objetivos de CRM y RR.HH
 
 - "Automatizar el proceso de CRM"
   - Esto es "hacer cosas". Lo importante es "para qué".
@@ -529,9 +574,10 @@
 
 ## Section 5: Resultados clave (KR's)
 
-### KPI, Accionable, KR...
+### KPI, Accionable, KR
 
-- Sacar un producto al mercado no es un KR. Se debe medir si el producto tiene el resultado que estamos esperando (facturación, ingresos, market share, satisfacción de usuarios, etc.).
+- Sacar un producto al mercado no es un KR. Se debe medir si el producto tiene el resultado que estamos esperando
+  (facturación, ingresos, market share, satisfacción de usuarios, etc.).
 - KPI: indicadores de rendimiento
 - KR: indicadores de resultado
 - Accionables: cosas que hacemos para ver si movemos la aguja de los KR.
@@ -540,7 +586,9 @@
 ### ¿Cómo determinar los KR para un objetivo?
 
 - No hay una respuesta para todos los casos.
-- Una manera es hacerse la **"pregunta milagro"**: anoche hubo un milagro y de repente hoy vemos que se cumplió el objetivo X; yo llego a la oficina sin saber nada... ¿cómo lo notaría, cómo me doy cuenta? (ejemplo de la felicidad de los empleados como objetivo, y que se notarían menos quejas o que nadie se iría de la empresa)
+- Una manera es hacerse la **"pregunta milagro"**: anoche hubo un milagro y de repente hoy vemos que se cumplió el
+  objetivo X; yo llego a la oficina sin saber nada... ¿cómo lo notaría, cómo me doy cuenta? (ejemplo de la felicidad de
+  los empleados como objetivo, y que se notarían menos quejas o que nadie se iría de la empresa)
 - ¿Cómo sé que nos estamos moviendo en la dirección correcta?
 - ¿Cómo sé que NO estoy logrando el objetivo?
 - ¿Cómo sabes que está ocurriendo algo que consideras "no deseable"?
@@ -590,12 +638,14 @@
 
 ### KRs de control
 
-- Preguntarnos: si quisiéramos engañarnos (aunque fuera sin querer) con respecto a este KR, ¿cómo lo haríamos? Poner KRs para evitarlo.
+- Preguntarnos: si quisiéramos engañarnos (aunque fuera sin querer) con respecto a este KR, ¿cómo lo haríamos? Poner KRs
+  para evitarlo.
 
 ### KR's Proxy / Indicadores tempranos de innovación
 
 - E.g.: quiero "reconocimiento de marca".
-- Si tengo un objetivo a largo plazo y que va a tardar mucho tiempo en ocurrir, necesitamos métricas "intermedias" que nos den pistas de si voy por el buen camino o no.
+- Si tengo un objetivo a largo plazo y que va a tardar mucho tiempo en ocurrir, necesitamos métricas "intermedias" que
+  nos den pistas de si voy por el buen camino o no.
 - Bajamos el dial de exigencia.
 
 ### KRs compuestos
@@ -640,17 +690,19 @@
 
 ## Section 6: Accionables
 
-- **Proyecto**: fecha de inicio, fecha de fin, alcance del proyecto. Cada cosa que hagamos para el proyecto es una tarea. Hay dependencias entre tareas. Suelen ser binarios: hechos o no. Pueden durar mucho tiempo.
+- **Proyecto**: fecha de inicio, fecha de fin, alcance del proyecto. Cada cosa que hagamos para el proyecto es una
+  tarea. Hay dependencias entre tareas. Suelen ser binarios: hechos o no. Pueden durar mucho tiempo.
 - **Accionables abiertos vs cerrados**
 - **Experimentos**
 
 ## Section 7: Proceso completo
 
-- Se trata de que Hoshin sustituya una parte de lo que se está haciendo, no "algo más" que hacer aparte de todo lo demás.
+- Se trata de que Hoshin sustituya una parte de lo que se está haciendo, no "algo más" que hacer aparte de todo lo
+  demás.
 
 ### Visión general de un Hoshin plan
 
-![](hoshin-planning/Hoshin_plan_example.png)
+![Hoshin plan example](hoshin-planning/Hoshin_plan_example.png)
 
 - [Hoshin plan tool](https://www.hoshinplan.com/)
 - Ejemplo Hoshin InfoJobs 2015:
@@ -675,7 +727,8 @@
 - Mejor no tardar mucho en hacer esto.
 - Especie de "Inception"
 - Cada 2 semanas, reflexionar: Toyota Kata, Problema-Solución >> iteración
-- Cada 2 meses, replanificar: revisión del Hoshin, ver cómo vamos, si sigue teniendo sentido, si se quiere cambiar algo, siguientes dos meses, etc. Un día entero >> "capítulo/bimestre/incremento de programa"
+- Cada 2 meses, replanificar: revisión del Hoshin, ver cómo vamos, si sigue teniendo sentido, si se quiere cambiar algo,
+  siguientes dos meses, etc. Un día entero >> "capítulo/bimestre/incremento de programa"
 
 ### Hoshin a escala
 
@@ -689,7 +742,8 @@
   - Pendiente
   - En curso
   - Terminado
-- Cada accionable: a qué objetivo y KR corresponde. Incluír la hipótesis: qué esperamos que ocurra cuando este accionable se haya llevado a cabo.
+- Cada accionable: a qué objetivo y KR corresponde. Incluír la hipótesis: qué esperamos que ocurra cuando este
+  accionable se haya llevado a cabo.
 - Lanes/carriles en el tablero Kanban con las líneas estratégicas.
 
 ### Equilibrando con el trabajo diario / Business As Usual (BAU)
@@ -737,22 +791,23 @@
 
 ### Entrevista: Gabriel Prat
 
-- https://www.linkedin.com/in/gabriprat
-- https://gabri.io/
+- <https://www.linkedin.com/in/gabriprat>
+- <https://gabri.io/>
 - 1.300 personas en 8 paises
 - 160 personas en su departamento de Producto+IT
 - Los objetivos deberían ser puestos de manera colaborativa: ni top-down ni bottom-up.
 - Eliminar objetivos individuales.
 - "Poner la infraestructura para cuando se tenga la cultura" (ejemplo paso de cebra y OKRs)
-- Para establecer los indicadores, partir de qué se necesita (el objetivo) e ir hacia atrás para ver qué necesitamos hacer.
+- Para establecer los indicadores, partir de qué se necesita (el objetivo) e ir hacia atrás para ver qué necesitamos
+  hacer.
 
 ### Entrevista: Johnny Ordoñez
 
-- https://www.linkedin.com/in/johnnyordonez
+- <https://www.linkedin.com/in/johnnyordonez>
 
 ### Entrevista: Alex Rios
 
-- https://www.linkedin.com/in/arios/
+- <https://www.linkedin.com/in/arios/>
 
 ## Section 9: Conclusiones
 
@@ -778,23 +833,30 @@
 ## Q&A
 
 - ¿Diferencias entre KPI y KR?
-  - Es una duda habitual, y parte de la razón es que dependiendo de cuál es tu objetivo, la misma métrica podría resultar un KPI o un KR.
-    > Por ejemplo: si decido que mi objetivo es reducir el tiempo de respuesta, entonces tiempo de respuesta es un KR. Pero si mi objetivo es mejorar la satisfacción del cliente o mejorar la calidad del producto, el tiempo de respuesta pasa a ser un KPI: me informa del rendimiento de mi trabajo, pero no me dice si estoy cerca del objetivo de satisfacción / calidad.
-    > Tanto en KPI’s como en KR’s los habrá lagging y los habrá leading, ya que al final en ambos casos se trata de métricas. De nuevo, la diferencia está en definir cuál o cuáles de estas métricas son las que me definen si el objetivo se está cumpliendo y cuáles complementan a nivel de rendimiento.
+  - Es una duda habitual, y parte de la razón es que dependiendo de cuál es tu objetivo, la misma métrica podría
+    resultar un KPI o un KR.
+    > Por ejemplo: si decido que mi objetivo es reducir el tiempo de respuesta, entonces tiempo de respuesta es un KR.
+    > Pero si mi objetivo es mejorar la satisfacción del cliente o mejorar la calidad del producto, el tiempo de
+    > respuesta pasa a ser un KPI: me informa del rendimiento de mi trabajo, pero no me dice si estoy cerca del objetivo
+    > de satisfacción / calidad. Tanto en KPI’s como en KR’s los habrá lagging y los habrá leading, ya que al final en
+    > ambos casos se trata de métricas. De nuevo, la diferencia está en definir cuál o cuáles de estas métricas son las
+    > que me definen si el objetivo se está cumpliendo y cuáles complementan a nivel de rendimiento.
 
 ## Otros links interesantes
 
-- https://aktiasolutions.com/es/tres-grandes-herramientas-estrategicas
+- <https://aktiasolutions.com/es/tres-grandes-herramientas-estrategicas>
   - **Wardley maps**
     - Usa un mapa de Wardley para comprender el paisaje, la posición y el movimiento de todos los jugadores.
-    - Wardley Maps es una herramienta de pensamiento estratégico, que no es lo mismo que una herramienta de planificación estratégica como los OKR o Hoshin Kanri.
+    - Wardley Maps es una herramienta de pensamiento estratégico, que no es lo mismo que una herramienta de
+      planificación estratégica como los OKR o Hoshin Kanri.
     - ¿Dónde vamos y por qué?
     - ¿Cuál es nuestra situación actual?
     - ¿Cuáles son los principales desafíos en el camino?
     - ¿Dónde queremos jugar?
     - ¿Cómo planeamos ganar?
   - **Jobs to be done (JTBD)**
-    - Utiliza JTBD para comprender realmente lo que los clientes intentan hacer e identificar los segmentos de mercado adecuados.
+    - Utiliza JTBD para comprender realmente lo que los clientes intentan hacer e identificar los segmentos de mercado
+      adecuados.
   - **Blue Ocean**
     - El Marco de las Cuatro Acciones
       - ¿Cuáles de los factores que la industria da por sentado deberían eliminarse?

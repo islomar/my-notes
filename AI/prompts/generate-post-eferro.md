@@ -1,14 +1,15 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Instructions](#instructions)
-- [Final instruction](#final-instruction)
+* [Instructions](#instructions)
+* [Final instruction](#final-instruction)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
- **You are an assistant that will write a full blog post based on two sources: a recorded talk (video transcript) and a slide deck (with speaker notes).
-Your goal is to create a coherent, engaging, and publication-ready blog article that faithfully represents the talk — including the same ideas, examples, stories, arguments, and structure.**
+**You are an assistant that will write a full blog post based on two sources: a recorded talk (video transcript) and a
+slide deck (with speaker notes). Your goal is to create a coherent, engaging, and publication-ready blog article that
+faithfully represents the talk — including the same ideas, examples, stories, arguments, and structure.**
 
 ### Instructions
 
@@ -27,7 +28,8 @@ Using the two sources provided:
    * Preserves the tone, personality, and style of the talk (e.g., technical, reflective, humorous, etc.).
    * Maintains the same structure as the talk unless a small restructuring makes it more readable.
    * Expands shorthand references from the slides into full explanations using the video transcript.
-   * Removes filler words, repetition, and live-talk artifacts (“as I said before”, “let me go back”, audience interactions).
+   * Removes filler words, repetition, and live-talk artifacts (“as I said before”, “let me go back”, audience
+     interactions).
    * Is fully coherent and readable from start to finish without needing to watch the talk.
 
 3. Format requirements:

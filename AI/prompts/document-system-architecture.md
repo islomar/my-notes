@@ -3,6 +3,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 Document the system architecture:
+
 1. High-level overview
 2. Component interactions
 3. Data flow diagrams

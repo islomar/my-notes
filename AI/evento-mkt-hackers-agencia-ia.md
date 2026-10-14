@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Lanza tu agencia de IA en 48 horas](#lanza-tu-agencia-de-ia-en-48-horas)
   - [Trazar el camino](#trazar-el-camino)
@@ -17,7 +17,7 @@
   - [MKT Hackers](https://inicial.mkthackers.com/)
     - <https://maldita.es/buloteca/claim/mkt-hackers-permite-generar-mas-de-4000-euros-al-mes-instalando-agentes-creados-con-ia>
     - <https://www.ocu.org/reclamar/empresas/edib-business-school-slu/c214befc044de63b38>
-    - https://es.trustpilot.com/review/edibschool.com
+    - <https://es.trustpilot.com/review/edibschool.com>
       - "Hemos retirado varias opiniones falsas sobre esta empresa."
   - <https://www.instagram.com/miriam_lao>
   - Vive en Andorra
@@ -30,7 +30,6 @@
 - Recepcionista tradicional 24k vs agente 1.4-1.8k
 - Make + n8n + GoHighLevel
   - <https://marketplace.gohighlevel.com/>
-
 - Ejemplo: agente de WhatsApp para citas
 - Según la AI Act, por ley se debe identificar como inteligencia artificial
 - Tu inmobiliaria atendida por agentes de IA (agente de voz)
@@ -59,7 +58,8 @@
 -5 pilares: Tráfico, escaparate, local, empleados, producto/servicio
 
 - **Tráfico**
-  - PDF con propuesta de valor: pides a ChatGPT un prompt para [gamma.app](https://gamma.app/es), para que genere un PDF para (lo que sea).
+  - PDF con propuesta de valor: pides a ChatGPT un prompt para [gamma.app](https://gamma.app/es), para que genere un PDF
+    para (lo que sea).
     - ¿A quién enviar la propuesta?: sacar los leads [de aquí](https://www.scraperedibs.com/)
     - Debemos "calentar" el sistema, enviar los correos poco a poco para no ser marcado como spam
   - Tráfico pasivo: e.g. en Meta
@@ -71,7 +71,7 @@
   - Para generación de vídeos
     - [Higgsfield](https://higgsfield.ai/)
     - [Runway](https://runway.com/product/ai-video-generator)
-  - Generative media platform: https://fal.ai/
+  - Generative media platform: <https://fal.ai/>
     - Incluye todos los modelos, e.g. Nano banana
     - The world's best generative image, video, and audio models, all in one place
   - Para los guiones:
@@ -79,7 +79,8 @@
     - ChatGPT Astra
 - **Local**
   - Hay que tener web
-  - El tráfico no se envía a la web, sino al embudo de ventas (sales funnel): que el usuario se registre, agende una llamada, o compre.
+  - El tráfico no se envía a la web, sino al embudo de ventas (sales funnel): que el usuario se registre, agende una
+    llamada, o compre.
 - **Empleados**
   - Bot WhatsApp
   - Software CRM

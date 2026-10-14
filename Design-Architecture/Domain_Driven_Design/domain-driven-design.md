@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [DDD](#ddd)
   - [General](#general)
@@ -18,38 +18,41 @@
 # DDD
 
 **Table of Contents**
+
 - [General](#general)
 - [Book "Patterns, Principles and Practices of Domain-Driven Design"](#book-patterns-principles-and-practices-of-domain-driven-design)
 - [CodelyTV: DDD](#codelytv-ddd)
 - [Patterns, Principles, and Practices of Domain-Driven Design](#patterns-principles-and-practices-of-domain-driven-design)
 - [DDD at Scale - using Domain Driven Design to build client centric products](#ddd-at-scale-using-domain-driven-design-to-build-client-centric-products)
-- [Resources](#resources)
 - [My notes for O'Reilly course "DDD, Event Storming & Clean Architecture (Oliver Zihler & Alina Liburkina)"](https://www.notion.so/islomar/DDD-Event-Storming-Clean-Architecture-Oliver-Zihler-Alina-Liburkina-82a5ff16ba764cfaa82a98972babf861)
 
 ## General
-* https://medium.com/nick-tune-tech-strategy-blog/what-is-a-domain-99f658b22d7d
-* https://blog.avanscoperta.it/2021/04/22/about-team-topologies-and-context-mapping/
-* https://medium.com/@wps_de/visualizing-communication-between-bounded-contexts-6796af6ff1b9
+
+- <https://medium.com/nick-tune-tech-strategy-blog/what-is-a-domain-99f658b22d7d>
+- <https://blog.avanscoperta.it/2021/04/22/about-team-topologies-and-context-mapping/>
+- <https://medium.com/@wps_de/visualizing-communication-between-bounded-contexts-6796af6ff1b9>
 
 ## Book "Patterns, Principles and Practices of Domain-Driven Design"
 
 - [My notes for the book](patterns-principles-practices-ddd.md)
 
 ## CodelyTV: DDD
+
 - [Curso DDD de CodelyTV](ddd-codelytv.md)
 - [Estructura de carpetas: DDD en PHP](https://www.youtube.com/watch?v=UFnABp2s8Y0)
 - [DDD en Laravel](https://www.youtube.com/watch?v=EInyOtPra44)
 
 ### CodelyTV: Learn DDD in 20 minutes
 
-- Aprende DDD en 20 minutos >> https://www.youtube.com/watch?v=dH5aSQLXtKg
-- DDD y CQRS: Preguntas Frecuentes >> https://www.youtube.com/watch?v=auEhX4WfCRA
-- PHP Example: https://github.com/CodelyTV/cqrs-ddd-php-example
+- Aprende DDD en 20 minutos >> <https://www.youtube.com/watch?v=dH5aSQLXtKg>
+- DDD y CQRS: Preguntas Frecuentes >> <https://www.youtube.com/watch?v=auEhX4WfCRA>
+- PHP Example: <https://github.com/CodelyTV/cqrs-ddd-php-example>
 
 ### Tactical Design
 
 - Model-Driven Design
-  - Map from our business/context, model it to our application. Drive the design based in the already existing model. Expressed in Services.
+  - Map from our business/context, model it to our application. Drive the design based in the already existing model.
+    Expressed in Services.
 - Services
   - Application Services
   - Domain Services
@@ -77,7 +80,8 @@
 
 - Ubiquitous Language
 - Bounded Context
-  - A "same thing" could be managed in a different way in different contexts. E.g. a "video" or a "user" can be different.
+  - A "same thing" could be managed in a different way in different contexts. E.g. a "video" or a "user" can be
+    different.
   - You can have several bounded contexts in a monorepo or several repos, and even in several languages.
 - Big Ball of Mud
 - Anticorruption Layer
@@ -90,7 +94,8 @@
 - Customer/Supplier Teams
 - Continuous Integration
 - Shared Kernel
-  - Things that we can share. It could be between contexts (but it should be really light and small, e.g. the Value object for userId, base Entity, etc.)
+  - Things that we can share. It could be between contexts (but it should be really light and small, e.g. the Value
+    object for userId, base Entity, etc.)
 - Conformist
 - Open Host Service
   - To communicate with me, here you have my API (support multiple clients)
@@ -100,36 +105,41 @@
 
 ## Patterns, Principles, and Practices of Domain-Driven Design
 
-- https://github.com/islomar/my-notes/blob/master/patterns-principles-practices-ddd.md
+- <https://github.com/islomar/my-notes/blob/master/patterns-principles-practices-ddd.md>
 
 ## DDD at Scale: using Domain Driven Design to build client centric products
-- https://www.meetup.com/es-ES/Software-Crafters-North/events/284995312/
+
+- <https://www.meetup.com/es-ES/Software-Crafters-North/events/284995312/>
 - Bob Gregory (Engineering Coach at Cazoo)
 - "Business-Driven Design"
 - We need to constantly evolve our models.
 - The actual domain model is the **shared understanding**. That's more valuable than the diagrams or the code.
 - DDD shines when modelling a complex problem. Not to apply if:
-  - Things are very simple. CRUD without business logic, static website, etc. There is no business model to articulate. Something really data-centric.
-  - ML: it's a black box (by design), you do not understand the rules. You can not build a shared understanding with the computer.
+  - Things are very simple. CRUD without business logic, static website, etc. There is no business model to articulate.
+    Something really data-centric.
+  - ML: it's a black box (by design), you do not understand the rules. You can not build a shared understanding with the
+    computer.
 - Trying to understand how are customers understand the problem.
 - **Aggregate**: course-grained consistency boundary.
   - Order, order lines, delivery address.
   - Whenever we save, we save the whole Order.
-  - If you get performance problems for saving it (e.g. because of having thousands of order lines). You can wonder if you really need consistency in all the thousands of order lines.
+  - If you get performance problems for saving it (e.g. because of having thousands of order lines). You can wonder if
+    you really need consistency in all the thousands of order lines.
 - **Bounded context**:
   - a linguistic boundary
   - every term we use has single concrete definition
-  - in another context, the term could have a different meaning (e.g. "order" is different for a customer, for sales, logistics, etc.)
+  - in another context, the term could have a different meaning (e.g. "order" is different for a customer, for sales,
+    logistics, etc.)
   - the problem space can be huge, we cut in small chunks... Avoid being overwhelmed by complexity. Cognitive load.
   - Small enough that we can hold it in our head.
   - A bounded context might be a good fit for a microservice. What business process does this microservice cover?
 
-
 ## More interesting links or resources
-- https://github.com/ddd-crew
-- https://domorobo.to/
-- https://medium.com/nick-tune-tech-strategy-blog/mapper-contexts-supercontexts-decoupling-domain-specific-and-domain-generic-bounded-contexts-5eb6a1e7c5fc
-- Lots of talks about DDD, CQRS, Impact Mapping, etc: https://virtualddd.com/sessions
-- https://proophsoftware.github.io/fee-office/
-- https://www.infoq.com/articles/ddd-contextmapping/
+
+- <https://github.com/ddd-crew>
+- <https://domorobo.to/>
+- <https://medium.com/nick-tune-tech-strategy-blog/mapper-contexts-supercontexts-decoupling-domain-specific-and-domain-generic-bounded-contexts-5eb6a1e7c5fc>
+- Lots of talks about DDD, CQRS, Impact Mapping, etc: <https://virtualddd.com/sessions>
+- <https://proophsoftware.github.io/fee-office/>
+- <https://www.infoq.com/articles/ddd-contextmapping/>
 - [DDD is not what they told you](https://dev.to/franiglesias/ddd-is-not-what-they-told-you-3jem)

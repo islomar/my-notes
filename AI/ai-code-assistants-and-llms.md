@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [AI Code Assistants & LLMs](#ai-code-assistants--llms)
   - [General](#general)
@@ -36,13 +36,15 @@
   - Showing a **local LLM** Agent (Llama3.1), a tool "Test Driven Generator"
 - [RepoMix](https://github.com/yamadashy/repomix)
   - 📦 Repomix is a powerful tool that **packs your entire repository into a single, AI-friendly file**.
-  - It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.
+  - It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude,
+    ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.
 - [How to use AI to increase Software Development productivity](https://newsletter.eng-leadership.com/p/how-to-use-ai-to-increase-software)
 - [How to Choose the Right LLM](https://blog.jetbrains.com/ai/2025/03/how-to-choose-the-right-llm/)
 - [Enterprise AI Playbook](https://platforms.substack.com/p/how-to-win-at-enterprise-ai-a-playbook)
 - <https://models.dev/>
 - [LangSmith](https://www.langchain.com/langsmith): observability
-  - LangSmith is a unified observability & evals platform where teams can debug, test, and monitor AI app performance — whether building with LangChain or not.
+  - LangSmith is a unified observability & evals platform where teams can debug, test, and monitor AI app performance —
+    whether building with LangChain or not.
 - [12-Factor Agents - Principles for building reliable LLM applications](https://github.com/humanlayer/12-factor-agents?)
 - [Turn off your AI Assistant for Code Katas](https://coding-is-like-cooking.info/2025/07/turn-off-your-ai-assistant-for-code-katas/)
 
@@ -75,7 +77,8 @@
 
 ## List of AI coding assistants and tools
 
-- [AI Engineering in the real world](https://newsletter.pragmaticengineer.com/p/ai-engineering-in-the-real-world) (The Pragmatic Engineer)
+- [AI Engineering in the real world](https://newsletter.pragmaticengineer.com/p/ai-engineering-in-the-real-world) (The
+  Pragmatic Engineer)
   - Several tools, tech stacks and real life use cases mentioned
 - GitHub Copilot
 - Cursor
@@ -85,7 +88,8 @@
   - Use `.junie/general-guidelines.md`
 - Augment Code
   - <https://bsky.app/profile/did:plc:7vmjo77otwy2dzx6op76r2rv>
-  - What makes Augment different? Context. Every feature is context-aware. This means every suggestion, completion, and interaction reflects the components, APIs, and coding patterns in your codebase.
+  - What makes Augment different? Context. Every feature is context-aware. This means every suggestion, completion, and
+    interaction reflects the components, APIs, and coding patterns in your codebase.
 - [Windsurf](https://codeium.com/windsurf)
 - [Cline](https://cline.bot/)
 - [OpenAI Codex CLI](https://github.com/openai/codex)
@@ -101,7 +105,8 @@
 - [Repo Prompt](https://repoprompt.com/)
   - [Getting started with Repo Prompt](https://www.youtube.com/watch?v=fm3VreCt-5E)
   - [Giving Claude Code access to ChatGPT - Claude Code Pair Programming with o3 via Repo Prompt's Chat](https://www.youtube.com/watch?v=JzVnXzmZweg)
-  - "Repo Prompt's Pair Programming mode. It provides a powerful chat tool to Claude Code, and lets Sonnet or Opus manage context and spoon feed o3 the context necessary to work through your most complicated problems."
+  - "Repo Prompt's Pair Programming mode. It provides a powerful chat tool to Claude Code, and lets Sonnet or Opus
+    manage context and spoon feed o3 the context necessary to work through your most complicated problems."
 - [Gemini](https://gemini.google.com/) and [Gemini CLI](https://github.com/google-gemini/gemini-cli)
   - Gemini CLI is an open-source AI agent that brings the power of Gemini directly into your terminal.
   - Local utility.
@@ -113,19 +118,22 @@
   - Web-based
 - [Goose](https://github.com/block/goose)
   - Local utility.
-  - goose is your on-machine AI agent, capable of automating complex development tasks from start to finish. More than just code suggestions, goose can build entire projects from scratch, write and execute code, debug failures, orchestrate workflows, and interact with external APIs - autonomously.
+  - goose is your on-machine AI agent, capable of automating complex development tasks from start to finish. More than
+    just code suggestions, goose can build entire projects from scratch, write and execute code, debug failures,
+    orchestrate workflows, and interact with external APIs - autonomously.
 - [SpecStory](https://github.com/specstoryai/getspecstory)
   - They export your AI chats in searchable structured Markdown that you can version.
   - When enabled, our extensions automatically save your AI chats to your local project's `.specstory` directory.
 
 ## General AI Agents
 
-- [Manus](manus.im)
+- [Manus](https://manus.im)
   - E.g. for research, resume screening, data analysis, etc.
 - [warp](https://www.warp.dev/)
   - Warp is the fastest way to build with multiple AI agents—from writing code to shipping it.
 
 ### Antrhopic Claude
+
 - [A practical guide to the Claude code context window size](https://www.eesel.ai/blog/claude-code-context-window-size)
   - "Lost in the middle" problem
 
@@ -137,20 +145,27 @@
 
 ### JetBrains Junie
 
-- Yes, Junie and AI Assistant are separate products. The key difference lies in their approach. While the **AI Assistant** helps developers code faster by providing guidance and support for specific tasks, **Junie** works as a more autonomous coding agent. Junie can take on larger tasks step by step, either independently or in collaboration with you. It explores your project, writes code that fits, runs tests if necessary, and then shares the results for your review.
+- Yes, Junie and AI Assistant are separate products. The key difference lies in their approach. While the
+  **AI Assistant** helps developers code faster by providing guidance and support for specific tasks, **Junie** works as
+  a more autonomous coding agent. Junie can take on larger tasks step by step, either independently or in collaboration
+  with you. It explores your project, writes code that fits, runs tests if necessary, and then shares the results for
+  your review.
 - `.junie/guidelines.md`
 - [Can JetBrains Junie replace manual refactoring?](https://www.youtube.com/watch?v=vN2-VUFP784), 12 min. video
 - [IntelliJ IDEA Junie Playbook](https://www.jetbrains.com/guide/ai/article/junie/intellij-idea/)
-- You can use the `.junie/guidelines.md` file in the root directory to personalize Junie and make it truly effective for your team.
+- You can use the `.junie/guidelines.md` file in the root directory to personalize Junie and make it truly effective for
+  your team.
 - [Junie Guidelines](https://github.com/JetBrains/junie-guidelines)
-- [Beyond Auto-Complete: Junie Is Your Autonomous Coding Partner in JetBrains IDEs](https://www.youtube.com/watch?v=fcbSG8lm7So): 20 min. screencast video
+- [Beyond Auto-Complete: Junie Is Your Autonomous Coding Partner in JetBrains IDEs](https://www.youtube.com/watch?v=fcbSG8lm7So):
+  20 min. screencast video
 - Pairing with Duncan screencasts:
   - [Full-stack Junie - Adding a New Feature with an Agent](https://www.youtube.com/watch?v=ao1LmxHGSK0)
   - [Competition or Collaboration? Claude Code & Junie](https://www.youtube.com/watch?v=z6donXPeLaY)
 
 ### GitHub Copilot
 
-- [Copilot agent mode new features in Visual Studio Code | GitHub Checkout](https://www.youtube.com/watch?v=aKx5I0Mrr9g), 12 min. video
+- [Copilot agent mode new features in Visual Studio Code | GitHub Checkout](https://www.youtube.com/watch?v=aKx5I0Mrr9g),
+  12 min. video
 - [Test like a pro with Playwright and GitHub Copilot](https://www.youtube.com/watch?v=rjbaIVOGfyo), 14 min. video
 
 ## Other people's experiences and examples
@@ -172,7 +187,7 @@
 - <https://github.com/HelloThisIsFlo/SoCraTes-Buddy>
 - <https://www.linkedin.com/posts/j-birch_i-have-a-new-ai-workflow-in-place-for-my-activity-7356250364938973184-9Nl3>
 
-  ```
+  ```text
   Now that GitHub supports Copilot Agents and the ability to assign issues directly to Copilot, this unlocked an opportunity. If I could get those issues from Linear into GitHub issue, Copilot would be able to execute those tasks for me. This would allow me to keep the same workflow that I have now for myself, having AI go through the same project management flow as me. Using a combination of Zapier and GitHub Actions, I now have AI agents working on my tasks from Linear in parallel to things I am working on:
 
   - I start by labelling an issue in linear with “Android AI Assist”
@@ -181,8 +196,10 @@
   - Copilot will work on the issue and create a PR when finished
   - I can then review the PR and copilot will iterate on any changes that are required from my comments
   ```
+
 - <https://x.com/steipete/status/1955274140832731203>
-  - "Building a new feature, I let Opus 4.1 pair program with GPT-5 High via @RepoPrompt. Opus directs, GPT-5 implements, Gemini Flash applies file edits."
+  - "Building a new feature, I let Opus 4.1 pair program with GPT-5 High via @RepoPrompt. Opus directs, GPT-5
+    implements, Gemini Flash applies file edits."
 - **Llewellyn Falco's** code principles for GenAI:
   - We prefer simple, clean, maintainable solutions over clever or complex ones.
   - Readability and maintainability are primary concerns
@@ -203,7 +220,6 @@
 - [Anchoring AI to a reference application](https://martinfowler.com/articles/exploring-gen-ai/anchoring-to-reference.html)
   - Use of an MCP server that checks an up-to-date reference application (from a golden path)
 
-
 ### Vibe coding
 
 - <https://www.eferro.net/2025/04/vibe-coding-ii-when-flow-meets-tests.html>
@@ -212,7 +228,8 @@
 
 - [Accelerate Your Learning with ChatGPT](https://www.coursera.org/learn/learning-chatgpt)
 - [Anthropic's Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
-  - This tutorial also exists on [Google Sheets using Anthropic's Claude for Sheets extension](https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit?usp=sharing)
+  - This tutorial also exists on
+    [Google Sheets using Anthropic's Claude for Sheets extension](https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit?usp=sharing)
 - [Thinking Different with AI: A Self-Paced Collaborative Course](https://flowchainsensei.wordpress.com/2025/05/30/thinking-different-with-ai-a-self-paced-collaborative-course/)
 - [Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic](https://www.youtube.com/watch?v=kQmXtrmQ5Zg)
 - [Codely Courses](https://codely.com/en/courses)
@@ -222,7 +239,8 @@
 
 ## Rules and Prompting
 
-- [vibe-rules](https://github.com/FutureExcited/vibe-rules): A powerful CLI tool for managing and sharing AI rules (prompts, configurations) across different editors and tools.
+- [vibe-rules](https://github.com/FutureExcited/vibe-rules): A powerful CLI tool for managing and sharing AI rules
+  (prompts, configurations) across different editors and tools.
 - [Junie guidelines](https://github.com/JetBrains/junie-guidelines/tree/main)
 - <https://github.com/tw-haiven/haiven/tree/main/.cursor/rules>
 - [Development guidelines for Claude](https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md)
@@ -239,7 +257,8 @@
 - <https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/>
 - [An engineer's guide to vibe design (with prompts)](https://posthog.com/newsletter/vibe-designing)
 - [Vibe designing prompting: wireframe with an LLM](https://newsletter.posthog.com/i/165773384/step-wireframe-with-an-llm)
-  - Tools for color palette: [Coolors](https://coolors.co) or [Figma's palette generator](https://www.figma.com/color-palette-generator)
+  - Tools for color palette: [Coolors](https://coolors.co) or
+    [Figma's palette generator](https://www.figma.com/color-palette-generator)
 - <https://dev.to/epilot/how-we-integrate-ai-in-epilot-chapter-1-aws-bedrock-prompt-engineering-17jh>
   - XML tags
   - AWS Bedrock
@@ -251,47 +270,53 @@
 
 - <https://bsky.app/profile/xpmatteo.bsky.social/post/3lmjiigahec2v> (also with Kent Beck)
   - `Please think deeply about how @vaughnvernon.bsky.social would refactor [this code] according to DDD principles`
-- Knowledge/code duplication improvement (Kent Beck): `run the copy/paste detector over the whole codebase to see if there are missing abstractions`
+- Knowledge/code duplication improvement (Kent Beck):
+  `run the copy/paste detector over the whole codebase to see if there are missing abstractions`
 - [My Blogging Routine: How I Write My Posts](https://flowchainsensei.wordpress.com/2025/04/26/my-blogging-routine-how-i-write-my-posts/)
 - <https://kagent.dev/docs/getting-started/system-prompts>
 - [Prompt Engineering for Unbeatable AI Agents](https://aiablog.medium.com/prompt-engineering-for-unbeatable-ai-agents-df4a1abf4bd8)
 - [Junie guidelines for Spring Boot project development](https://gist.github.com/sivaprasadreddy/9751db630b819b39e5e87f5ecfb53346)
 - <https://github.com/HelloThisIsFlo/SoCraTes-Buddy/tree/main/.cursor/rules>
-- TDD: `Let’s implement this using strict outside-in TDD, whereby we write the simplest possible failing test, followed by the smallest amount of implementation code that will satisfy it, and iterate from there`
+- TDD:
+  `Let’s implement this using strict outside-in TDD, whereby we write the simplest possible failing test, followed by
+  the smallest amount of implementation code that will satisfy it, and iterate from there`
 - [Claude Code Development Guidelines](https://gist.github.com/nikeyes/df5a882a116995e308f8b9db510b8044)
 - [Claude Code System prompt](https://docs.claude.com/en/release-notes/system-prompts#september-29-2025)
-  - https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude_Sonnet-4.5_Sep-29-2025.txt
-  - https://github.com/marckrenn/cc-mvp-prompts/blob/main/cc-prompt.md
+  - <https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude_Sonnet-4.5_Sep-29-2025.txt>
+  - <https://github.com/marckrenn/cc-mvp-prompts/blob/main/cc-prompt.md>
 
 ### Other people prompts, rules or agents
 
 - Edu Ferro
   - [My Base Setup for Augmented Coding with AI](https://www.eferro.net/2025/11/my-base-setup-for-augmented-coding-with.html)
-    - https://github.com/eferro/augmentedcode-configuration
+    - <https://github.com/eferro/augmentedcode-configuration>
   - [Edu's rules for AI](https://bsky.app/profile/eferro.net/post/3lhyov244fs27)
     - <https://gist.github.com/islomar/d15902c0c3b0cdbe2b592e14c0837af3>
-- [Llewellyn Falco](https://github.com/LearnWithLlew/AgenticAi.Java.StarterProject/tree/master/.windsurf): TDD, testing, code principles, communication style, etc.
+- [Llewellyn Falco](https://github.com/LearnWithLlew/AgenticAi.Java.StarterProject/tree/master/.windsurf): TDD, testing,
+  code principles, communication style, etc.
 - <https://github.com/steipete/agent-rules>
   - A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
 - [Nick Tune: minimalist Claude Code Task Management Workflow](https://medium.com/nick-tune-tech-strategy-blog/minimalist-claude-code-task-management-workflow-7b7bdcbc4cc1)
-  - https://github.com/NTCoding/claude-skillz/tree/main/lightweight-task-workflow
-- https://github.com/RichardBray/dotfiles/tree/opencode/.claude/agents
+  - <https://github.com/NTCoding/claude-skillz/tree/main/lightweight-task-workflow>
+- <https://github.com/RichardBray/dotfiles/tree/opencode/.claude/agents>
 
 ### My own prompts
 
-- [General guidelines, Spring Boot, project onboarding, etc.](.junie)
+- [General guidelines, Spring Boot, project onboarding, etc.](prompts)
 
 ### "How to turn ChatGPT into your personal teacher"
 
 <https://www.linkedin.com/posts/ruben-hassid_how-to-turn-chatgpt-into-your-personal-teacher-activity-7314512192559579137-1Trs>
 
-"Act as an expert tutor who helps me master any topic through an interactive, interview-style course. The process must be recursive and personalized.
+"Act as an expert tutor who helps me master any topic through an interactive, interview-style course. The process must
+be recursive and personalized.
 
 Here’s what I want you to do:
 
 1. Ask me for a topic I want to learn.
 
-2. Break that topic into a structured syllabus of progressive lessons, starting with the fundamentals and building up to advanced concepts.
+2. Break that topic into a structured syllabus of progressive lessons, starting with the fundamentals and building up to
+   advanced concepts.
 
 3. For each lesson:
 
@@ -309,7 +334,8 @@ Here’s what I want you to do:
 
 4. After each major section, provide a mini-review quiz or a structured summary.
 
-5. Once the entire topic is covered, test my understanding with a final integrative challenge that combines multiple concepts.
+5. Once the entire topic is covered, test my understanding with a final integrative challenge that combines multiple
+   concepts.
 
 6. Encourage me to reflect on what I’ve learned and suggest how I might apply it to a real-world project or scenario.
 
@@ -322,15 +348,16 @@ Let’s begin: ask me what I want to learn."
 - [What Is a Prompt Injection Attack? [Examples & Prevention]](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
 - [Prompt Injection](https://learnprompting.org/docs/prompt_hacking/injection)
 - [Prompt Injection & the Rise of Prompt Attacks: All You Need to Know](https://www.lakera.ai/blog/guide-to-prompt-injection)
-- https://www.genbeta.com/inteligencia-artificial/censura-chatgpt-gemini-se-termina-cuando-entra-juego-rima-investigacion
+- <https://www.genbeta.com/inteligencia-artificial/censura-chatgpt-gemini-se-termina-cuando-entra-juego-rima-investigacion>
 
 ## General tools
 
 - [QuizFoo: Create custom quizzes on any topic in seconds](https://www.quizfoo.com/en)
--[ Build Anything with OpenAI’s New OSS Models (n8n Agents)](https://www.youtube.com/watch?v=Myjo1amUZ08): interesting screencast using Ollama
+-[Build Anything with OpenAI’s New OSS Models (n8n Agents)](https://www.youtube.com/watch?v=Myjo1amUZ08): interesting
+screencast using Ollama
 - [LiteLLM](https://litellm.ai/): LLM Gateway
 - [Braintrust](https://www.braintrust.dev/): LLM evaluation
-  - https://eng.pleo.io/the-3-stages-of-ai-enablement-50068f49d46c
+  - <https://eng.pleo.io/the-3-stages-of-ai-enablement-50068f49d46c>
   - "We A/B test new prompt approaches on small segments, measuring accuracy before rollout."
 
 ## Critical thinking
@@ -340,21 +367,23 @@ Let’s begin: ask me what I want to learn."
 - [But don't forget the downsides](https://blog.korny.info/2025/07/18/a-real-world-ai-coding-case-sample#but-dont-forget-the-downsides)
 - [AI Coding Sucks](https://www.youtube.com/watch?v=0ZUkQF6boNg)
 
-
 ## Other readings
+
 - [Gemini CLI or Jules: Which tool is for you?](https://medium.com/@denisetkwan/gemini-cli-or-jules-which-tool-is-for-you-20b7d857641d)
 - [Cómo ser del 5% que sí genera valor con IA generativa](https://nikeyes.github.io/como-ser-el-5-por-ciento-que-si-generan-valor-con-IA-generativa-es/)
 
 ## AI Talks - Lada Kesseler: Augmented Coding: Mapping the Uncharted Territory
-- https://www.youtube.com/watch?v=_LSK2bVf0Lc
-- https://lexler.github.io/augmented-coding-patterns
+
+- <https://www.youtube.com/watch?v=_LSK2bVf0Lc>
+- <https://lexler.github.io/augmented-coding-patterns>
 - LLMs cannot learn from you
   - Fixed model weights
   - It is stateless
 - Context rot: "lost in the middle"
 - LLM has limited focus
   - Better focused specialists than generalist files
-  - Main development agent with ground rules to catch bad practices. Same rules as a focused committer agent. The main agent never warned about committing node_modules or style violations. The focused committer caught both immediately.
+  - Main development agent with ground rules to catch bad practices. Same rules as a focused committer agent. The main
+    agent never warned about committing node_modules or style violations. The focused committer caught both immediately.
 - Reference docs
   - Ground rules always on, and loading specific files only when needed:
     - Guides
@@ -395,23 +424,30 @@ Let’s begin: ask me what I want to learn."
     - What do you mean by...?
 - Knowledge Checkpoint
   - Before attempting implementation, checkpoint the plan:
-  - Example: spend 30 minutes outlining feature architecture with AI. Extract to project.md, commit. AI's implementation fails. Reset in under a minute, try again - your planning is preserved. You can course correct, but you're starting from a known good state.
+  - Example: spend 30 minutes outlining feature architecture with AI. Extract to project.md, commit. AI's implementation
+    fails. Reset in under a minute, try again - your planning is preserved. You can course correct, but you're starting
+    from a known good state.
 - Parallel implementations  
 - Offload Determinism
   - Script everything that can be scripted
-  - Example "Capturing screenshots": Need to update app screenshot frequently. Don't ask AI each time to "take screenshot using Puppeteer" - unreliable.
-    - Instead: "Make me a shell script to capture screenshot at iPhone dimensions." AI figures out Puppeteer, dimensions, error handling. Script fails first try - puppeteer not installed. AI adds Safari fallback. Now you have capture_screenshot.sh. Run it anytime - reliable every time.
+  - Example "Capturing screenshots": Need to update app screenshot frequently. Don't ask AI each time to "take
+    screenshot using Puppeteer" - unreliable.
+    - Instead: "Make me a shell script to capture screenshot at iPhone dimensions." AI figures out Puppeteer,
+      dimensions, error handling. Script fails first try - puppeteer not installed. AI adds Safari fallback. Now you
+      have capture_screenshot.sh. Run it anytime - reliable every time.
     - `./capture_screenshot.sh`
-- **Playground**: Need a safe space for AI to experiment, test assumptions, and explore libraries without affecting production code or committing throwaway experiments.
+- **Playground**: Need a safe space for AI to experiment, test assumptions, and explore libraries without affecting
+  production code or committing throwaway experiments.
 - **Reminders**
-  - AI forgets your priorities. Ground rules get ignored in long conversations. 
+  - AI forgets your priorities. Ground rules get ignored in long conversations.
   - Turn complex work into explicit checkboxes. AI checks off each step.
-  - https://github.com/lexler/claude-code-user-reminders
+  - <https://github.com/lexler/claude-code-user-reminders>
 - **Silent Misalignment**: give AI Permission to Push Back
   - Add to ground rules: “Ask questions when unclear, flag contradictions, point out mistakes”
   - Explicitly allow: “Tell me if my instructions don’t make sense”
 - **Active partner**
-```
+
+```text
 This is EXTREMELY IMPORTANT:
 - Don't flatter me. Be charming and nice, but very honest. Tell me something I need to know even if I don't want to hear it
 - I'll help you not make mistakes, and you'll help me
@@ -422,6 +458,7 @@ This is EXTREMELY IMPORTANT:
 - Ask questions if something is not clear and you need to make a choice. Don't choose randomly if it's important for what we're doing
 - When you show me a potential error or miss, start your response with❗️emoji
 ```
+
 - **Check Alignment**: before letting AI implement, make it show its understanding:
   - "Tell me what you're going to do before you do it"
   - "Show me your plan" or "Draw an architecture diagram"
@@ -433,12 +470,14 @@ This is EXTREMELY IMPORTANT:
   - Different markers for different contexts/roles
   - Stack markers when multiple contexts active
   - Special markers for specific actions (errors, re-reads)
-  - Can be impromptu one-offs for crucial instructions (when adding an important instruction mid-conversation, ask it to reply to you with an additional emoji)
-
+  - Can be impromptu one-offs for crucial instructions (when adding an important instruction mid-conversation, ask it to
+    reply to you with an additional emoji)
 
 ## Pending
 
 - Create sections in my prompt.
-- Add mentions to parallel changes, tidy first, “make the change easy”, fast tests, separating behavior & structure changes, separating interface & implementation changes.
+- Add mentions to parallel changes, tidy first, “make the change easy”, fast tests, separating behavior & structure
+  changes, separating interface & implementation changes.
 - Include the use of TPP (Transformation-Priority Premise) for the baby steps
-  - "The transformation priority premise is to behavior changes what refactorings are to structure changes. When a test fails, use the lowest-numbered transformation to get it passing."
+  - "The transformation priority premise is to behavior changes what refactorings are to structure changes. When a test
+    fails, use the lowest-numbered transformation to get it passing."

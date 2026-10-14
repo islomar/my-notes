@@ -1,8 +1,8 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Difference between Omniroute, pi, Hermes, Opencode...](#difference-between-omniroute-pi-hermes-opencode)
+- [Difference between Omniroute, pi, Hermes, Opencode](#difference-between-omniroute-pi-hermes-opencode)
   - [1. Pi: the engineer's toolkit](#1-pi-the-engineers-toolkit)
   - [2. OpenCode: the pragmatic middle ground](#2-opencode-the-pragmatic-middle-ground)
   - [3. Claude Code: probably the most mature turnkey experience](#3-claude-code-probably-the-most-mature-turnkey-experience)
@@ -25,9 +25,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Difference between Omniroute, pi, Hermes, Opencode...
+# Difference between Omniroute, pi, Hermes, Opencode
 
-For an experienced engineer who cares about **TDD, small safe steps, understanding the changes, and retaining control over the workflow**, the differences are more important than simply “which model is smartest.”
+For an experienced engineer who cares about
+**TDD, small safe steps, understanding the changes, and retaining control over the workflow**, the differences are more
+important than simply “which model is smartest.”
 
 Here’s the practical comparison as of **September 2026**.
 
@@ -45,7 +47,9 @@ Here’s the practical comparison as of **September 2026**.
 | Provider lock-in           | **Very low**              | **Very low**                    | Anthropic-centric                 | OpenAI-centric               |
 | Best fit                   | Build your own workflow   | Flexible daily driver           | Turnkey Claude experience         | Turnkey GPT/Codex experience |
 
-There is one important caveat: **agent quality = harness × model**. Comparing OpenCode to Claude Code, for example, isn't entirely fair if OpenCode is running a weaker model. OpenCode or Pi can themselves run Claude, GPT-family models, Gemini, etc.
+There is one important caveat: **agent quality = harness × model**. Comparing OpenCode to Claude Code, for example,
+isn't entirely fair if OpenCode is running a weaker model. OpenCode or Pi can themselves run Claude, GPT-family models,
+Gemini, etc.
 
 ## 1. Pi: the engineer's toolkit
 
@@ -60,7 +64,8 @@ edit
 bash
 ```
 
-Pi then expects you to build upward using **TypeScript extensions, skills, prompt templates and packages**. It also supports `AGENTS.md`/`CLAUDE.md` project instructions and multiple providers. ([Pi][1])
+Pi then expects you to build upward using **TypeScript extensions, skills, prompt templates and packages**. It also
+supports `AGENTS.md`/`CLAUDE.md` project instructions and multiple providers. ([Pi][1])
 
 This means that instead of accepting:
 
@@ -94,9 +99,11 @@ clean implementation
 test entire relevant suite
 ```
 
-Pi's skill system is explicitly designed for packaging these kinds of workflows, and it can even create skills itself. ([Pi][2])
+Pi's skill system is explicitly designed for packaging these kinds of workflows, and it can even create skills itself.
+([Pi][2])
 
-And there are already packages that add isolated specialist agents, model groups, explicit read-only modes and context handoffs. ([Pi][3])
+And there are already packages that add isolated specialist agents, model groups, explicit read-only modes and context
+handoffs. ([Pi][3])
 
 That is why I think **Pi becomes more attractive the more opinionated you are about software development**.
 
@@ -145,10 +152,10 @@ security-reviewer
 
 Each can have:
 
-* its own model
-* its own prompt
-* its own tools
-* its own permissions
+- its own model
+- its own prompt
+- its own tools
+- its own permissions
 
 For example, a review agent can literally be configured to have:
 
@@ -220,9 +227,13 @@ and tunes them together.
 
 That vertically integrated approach has real advantages.
 
-Claude's models are explicitly trained/prompted around long-running agentic work, remaining-context awareness, context compaction and subagent orchestration. Anthropic's current model guidance specifically discusses using Claude across multiple context windows and delegating to isolated subagents. ([Claude Platform Docs][7])
+Claude's models are explicitly trained/prompted around long-running agentic work, remaining-context awareness, context
+compaction and subagent orchestration. Anthropic's current model guidance specifically discusses using Claude across
+multiple context windows and delegating to isolated subagents. ([Claude Platform Docs][7])
 
-Claude Code has also become a substantial production product rather than an experiment. Anthropic's analysis of roughly **400,000 actual Claude Code sessions** found that usage has moved beyond simple autocomplete/debugging into end-to-end building, testing, deployment and operations. ([Anthropic][8])
+Claude Code has also become a substantial production product rather than an experiment. Anthropic's analysis of roughly
+**400,000 actual Claude Code sessions** found that usage has moved beyond simple autocomplete/debugging into end-to-end
+building, testing, deployment and operations. ([Anthropic][8])
 
 The experience is therefore more like:
 
@@ -269,9 +280,11 @@ That's a meaningful distinction.
 
 Codex now occupies a position fairly analogous to Claude Code, but around OpenAI's coding models.
 
-The notable difference is where the current OpenAI models put a lot of their strength: **long-horizon reasoning over difficult engineering tasks**.
+The notable difference is where the current OpenAI models put a lot of their strength:
+**long-horizon reasoning over difficult engineering tasks**.
 
-OpenAI currently describes GPT-5.3-Codex as an agentic coding model, while the newer general GPT models are also available in Codex depending on the plan/configuration. ([OpenAI Developers][9])
+OpenAI currently describes GPT-5.3-Codex as an agentic coding model, while the newer general GPT models are also
+available in Codex depending on the plan/configuration. ([OpenAI Developers][9])
 
 Codex is particularly interesting for something like:
 
@@ -292,9 +305,11 @@ Nobody knows whether the bug is in:
 Investigate it.
 ```
 
-That sort of task benefits enormously from a model willing to spend considerable compute reasoning, searching, running tests and iterating.
+That sort of task benefits enormously from a model willing to spend considerable compute reasoning, searching, running
+tests and iterating.
 
-OpenAI now treats Codex as its dedicated software-development product, distinct from normal ChatGPT and the more general Work agent. ([OpenAI Help Center][10])
+OpenAI now treats Codex as its dedicated software-development product, distinct from normal ChatGPT and the more general
+Work agent. ([OpenAI Help Center][10])
 
 ---
 
@@ -428,7 +443,8 @@ And potentially give different agents access to different directories.
 
 That distinction — **workflow enforced by tooling versus workflow requested through prompting** — is important.
 
-For someone accustomed to disciplined TDD, pairing, trunk-based development and small safe steps, I'd pay particular attention to that rather than benchmark scores alone.
+For someone accustomed to disciplined TDD, pairing, trunk-based development and small safe steps, I'd pay particular
+attention to that rather than benchmark scores alone.
 
 ---
 
@@ -511,9 +527,11 @@ CONTEXT FULL
 
 Modern coding agents instead compact or hand off state.
 
-Claude's current models explicitly understand remaining context and Anthropic recommends persistent external state for long-running agent work. ([Claude Platform Docs][7])
+Claude's current models explicitly understand remaining context and Anthropic recommends persistent external state for
+long-running agent work. ([Claude Platform Docs][7])
 
-Pi exposes this philosophy especially clearly. For example, its agenticoding package offers a `handoff` mechanism so you can deliberately start a clean phase without dragging the entire old conversation forward. ([Pi][3])
+Pi exposes this philosophy especially clearly. For example, its agenticoding package offers a `handoff` mechanism so you
+can deliberately start a clean phase without dragging the entire old conversation forward. ([Pi][3])
 
 That can produce:
 
@@ -546,7 +564,8 @@ There are two different ways to pay.
 
 Claude Code can consume usage included with applicable Claude subscriptions.
 
-Codex can consume the Codex allowance included in eligible ChatGPT plans; signing into Codex with ChatGPT uses that plan's usage rather than API billing. ([Anthropic][11])
+Codex can consume the Codex allowance included in eligible ChatGPT plans; signing into Codex with ChatGPT uses that
+plan's usage rather than API billing. ([Anthropic][11])
 
 So if you're already paying for one ecosystem, its CLI can have very attractive marginal cost.
 
@@ -651,17 +670,20 @@ That leads to the simplest characterization:
 
 **Pi:** “Give me the primitives and let me design what an AI coding agent should be.”
 
-For **your style of software development**, I would investigate **OpenCode first and Pi second**. Not because they're inherently “better” than Claude Code or Codex, but because your development process itself is unusually explicit; the ability to encode that process rather than merely prompt for it has disproportionate value. Claude Code and Codex would remain very useful as either complementary tools or, indirectly, model/agent backends for particular tasks.
+For **your style of software development**, I would investigate **OpenCode first and Pi second**. Not because they're
+inherently “better” than Claude Code or Codex, but because your development process itself is unusually explicit; the
+ability to encode that process rather than merely prompt for it has disproportionate value. Claude Code and Codex would
+remain very useful as either complementary tools or, indirectly, model/agent backends for particular tasks.
 
 [1]: https://pi.dev/docs/latest?utm_source=chatgpt.com "Pi Documentation · Documentation · Pi"
 [2]: https://pi.dev/docs/latest/skills?utm_source=chatgpt.com "Skills · Documentation · Pi"
 [3]: https://pi.dev/packages/pi-agenticoding?utm_source=chatgpt.com "pi-agenticoding · Packages · Pi"
-[4]: https://opencode.ai/en/docs?utm_source=chatgpt.com "Intro | AI coding agent built for the terminal"
-[5]: https://opencode.ai/v2/docs/agents?utm_source=chatgpt.com "Agents | OpenCode"
+[4]: https://opencode.ai/en/docs?utm_source=chatgpt.com "Intro - AI coding agent built for the terminal"
+[5]: https://opencode.ai/v2/docs/agents?utm_source=chatgpt.com "Agents - OpenCode"
 [6]: https://opencode.ai/v2/docs/permissions?utm_source=chatgpt.com "Permissions | OpenCode"
 [7]: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables?utm_source=chatgpt.com "Prompting best practices - Claude Platform Docs"
 [8]: https://www.anthropic.com/research/claude-code-expertise?hl=en-US&utm_source=chatgpt.com "How Claude Code is used in practice \ Anthropic"
-[9]: https://developers.openai.com/api/docs/models/all?utm_source=chatgpt.com "All models | OpenAI API"
+[9]: https://developers.openai.com/api/docs/models/all?utm_source=chatgpt.com "All models - OpenAI API"
 [10]: https://help.openai.com/en/articles/20001275/?utm_source=chatgpt.com "ChatGPT Work and Codex | OpenAI Help Center"
 [11]: https://www.anthropic.com/news/higher-limits-spacex?utm_source=chatgpt.com "Higher usage limits and a SpaceX compute deal \ Anthropic"
 [12]: https://www.anthropic.com/news/claude-sonnet-5?utm_source=chatgpt.com "Introducing Claude Sonnet 5 \ Anthropic"

@@ -1,4 +1,45 @@
-# Ubuntu 24.04 → 26.04.1 LTS upgrade
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Ubuntu 24.04 to 26.04.1 LTS upgrade](#ubuntu-2404-to-26041-lts-upgrade)
+  - [Resume the Claude Code session](#resume-the-claude-code-session)
+  - [System facts](#system-facts)
+  - [Why upgrade](#why-upgrade)
+  - [Risks](#risks)
+  - [Done](#done)
+    - [Side effects to know](#side-effects-to-know)
+  - [Remaining obsolete packages (expected)](#remaining-obsolete-packages-expected)
+  - [External backup disk warning](#external-backup-disk-warning)
+  - [Next steps](#next-steps)
+    - [1. Back up `/home`](#1-back-up-home)
+    - [2. Timeshift snapshot of the system](#2-timeshift-snapshot-of-the-system)
+    - [3. Bootable live USB](#3-bootable-live-usb)
+    - [4. Wayland test (1–2 days)](#4-wayland-test-12-days)
+    - [5. Upgrade](#5-upgrade)
+    - [6. After the reboot](#6-after-the-reboot)
+      - [Uninstall Nix (unused)](#uninstall-nix-unused)
+  - [Post-upgrade results (2026-10-06)](#post-upgrade-results-2026-10-06)
+  - [When to delete the backups](#when-to-delete-the-backups)
+    - [Copy 2 and the Timeshift snapshot: about 2 weeks after the upgrade](#copy-2-and-the-timeshift-snapshot-about-2-weeks-after-the-upgrade)
+    - [Copy 1 (external archive): only after a replacement exists](#copy-1-external-archive-only-after-a-replacement-exists)
+    - [Ongoing backups](#ongoing-backups)
+  - [Periodic backup plan (after the upgrade)](#periodic-backup-plan-after-the-upgrade)
+    - [New external disk](#new-external-disk)
+    - [Tool: restic](#tool-restic)
+    - [What to back up](#what-to-back-up)
+    - [Size estimate and disk choice](#size-estimate-and-disk-choice)
+    - [How restic handles history](#how-restic-handles-history)
+    - [Destinations](#destinations)
+    - [Schedule](#schedule)
+    - [Keeping the external disk plugged in](#keeping-the-external-disk-plugged-in)
+    - [Rules](#rules)
+    - [Alternatives considered](#alternatives-considered)
+  - [Sources](#sources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# Ubuntu 24.04 to 26.04.1 LTS upgrade
 
 Session date: 2026-10-06. Laptop: Slimbook.
 
@@ -13,7 +54,8 @@ claude --resume 1029b552-f07b-4082-b9c8-078858fbcf5f
 
 - `claude --continue` in the same directory resumes the most recent session there.
 - `claude --resume` with no ID opens a picker.
-- Transcript file: `~/.claude/projects/-home-islomar-workspace-my-notes-AI-local-llm-models/1029b552-f07b-4082-b9c8-078858fbcf5f.jsonl`
+- Transcript file:
+  `~/.claude/projects/-home-islomar-workspace-my-notes-AI-local-llm-models/1029b552-f07b-4082-b9c8-078858fbcf5f.jsonl`
 
 ## System facts
 
@@ -43,32 +85,41 @@ claude --resume 1029b552-f07b-4082-b9c8-078858fbcf5f
 ## Done
 
 - Backups: `/etc/apt/sources.list.d.bak-2026-10-06/`, `/etc/pam.d.bak-2026-10-06/`.
-- Deleted dead repo files: archivebox, azlux, dropbox, heroku, skype, teams, cdrom, mozillateam, ulauncher, obsproject, nordvpn, `disabled/` (kubernetes, tor), all `.save` and `.distUpgrade` files.
+- Deleted dead repo files: archivebox, azlux, dropbox, heroku, skype, teams, cdrom, mozillateam, ulauncher, obsproject,
+  nordvpn, `disabled/` (kubernetes, tor), all `.save` and `.distUpgrade` files.
 - 1Password repo restored; the package migrated it to `1password.sources`.
 - All pending updates installed (0 upgradable).
 - OBS switched from the jammy PPA build to `30.2.3+dfsg-3~bpo24.04.1` (noble-backports).
-- Purged: `libssl1.1`, adobereader-enu (i386), skypeforlinux, teams, deb.torproject.org-keyring, nordvpn, nordvpn-release, heroku, kubectl 1.28, gnome-encfs-manager, stremio, lmstudio-bionic, dropbox package, `libmpv1`, `libpango1.0-0`, and orphaned 22.04 libraries.
+- Purged: `libssl1.1`, adobereader-enu (i386), skypeforlinux, teams, deb.torproject.org-keyring, nordvpn,
+  nordvpn-release, heroku, kubectl 1.28, gnome-encfs-manager, stremio, lmstudio-bionic, dropbox package, `libmpv1`,
+  `libpango1.0-0`, and orphaned 22.04 libraries.
 - `uidmap`, `libsubid4`, `slirp4netns` marked manual (needed for rootless Docker).
 - Howdy disabled: `sudo howdy disable 1`.
 - Dropbox launcher restored with `nautilus-dropbox` (Ubuntu universe). `~/Dropbox` and `~/.dropbox` untouched.
-- LM Studio 0.4.25 installed from the official `.deb` (`lm-studio`, `/opt/LM-Studio`, AppArmor profile). Models in `~/.lmstudio` kept.
+- LM Studio 0.4.25 installed from the official `.deb` (`lm-studio`, `/opt/LM-Studio`, AppArmor profile). Models in
+  `~/.lmstudio` kept.
 - kubectl 1.37.1 installed from `pkgs.k8s.io/core:/stable:/v1.37`. Dead `~/.kube/config` removed.
 - k3d updated to v5.9.0 (default k3s 1.35). Create clusters with `--image rancher/k3s:v1.37.1-k3s1` to match kubectl.
 - External backup disk fixed: NTFS volume was dirty, cleared with `ntfsfix -d`.
 - Copy 1 of `/home` done: `/media/islomar/Backup/home-islomar-2026-10-06.tar.zst` (52 GB). `zstd -t` passed.
-  - tar exited with failure status because of skipped sockets, files changed during the run, and 3 root-owned files in an unused Firefox profile. No needed data skipped.
-- Unused Firefox profile `wodubqpd.default` deleted and removed from `profiles.ini`. Active profile: `nx0r733b.default-release`.
+  - tar exited with failure status because of skipped sockets, files changed during the run, and 3 root-owned files in
+    an unused Firefox profile. No needed data skipped.
+- Unused Firefox profile `wodubqpd.default` deleted and removed from `profiles.ini`. Active profile:
+  `nx0r733b.default-release`.
 
 ### Side effects to know
 
-- Ubuntu's `nodejs` 18 and `npm` were autoremoved. `node` comes from nvm (v22.14.0) and Homebrew. Restore with `sudo apt install nodejs npm` if something needs `/usr/bin/node`.
+- Ubuntu's `nodejs` 18 and `npm` were autoremoved. `node` comes from nvm (v22.14.0) and Homebrew. Restore with
+  `sudo apt install nodejs npm` if something needs `/usr/bin/node`.
 - Dropbox package was purged by mistake. Fixed with `nautilus-dropbox`.
 
 ## Remaining obsolete packages (expected)
 
-Apps from downloaded `.deb` files: e-signature tools, dbeaver-ce, httptoolkit, lm-studio, mongodb-compass, mongodb-mongosh, obsidian, pinokio, steam, warp-terminal, zoom, printer driver.
+Apps from downloaded `.deb` files: e-signature tools, dbeaver-ce, httptoolkit, lm-studio, mongodb-compass,
+mongodb-mongosh, obsidian, pinokio, steam, warp-terminal, zoom, printer driver.
 
-Slimbook stack and Howdy: slimbook*, libslimbook1, python3-slimbook, slimbook-qc71-dkms, howdy, dlib-models. Check after the upgrade.
+Slimbook stack and Howdy: slimbook*, libslimbook1, python3-slimbook, slimbook-qc71-dkms, howdy, dlib-models. Check after
+the upgrade.
 
 ## External backup disk warning
 
@@ -78,9 +129,14 @@ Verbatim portable drive, Samsung HM100UI 1 TB, NTFS, label `Backup`, about 12,40
 - Contains an older home backup `BackupHomeSlimbook/` (July 2025). Do not delete.
 - Buy a new external drive and format it ext4.
 - NTFS structures are damaged (`MFT: expect seq=…`, `Inode is not in use`). `ntfsfix -d` only cleared the dirty flag.
-- 2026-10-06 18:26: a FreeFileSync scan wrote a lock file to the disk and the `ntfs3` driver crashed (`kernel BUG at fs/iomap/buffered-io.c:1061`). FreeFileSync hung in state `D`; only a reboot clears it. No files were deleted.
-- From now on, mount it read-only and never write to it. The forced power-off left it dirty again; do not run `ntfsfix` (it writes). Use `sudo ntfs-3g -o ro /dev/sdX1 /mnt/oldbackup`. Device names change per boot (`sdd` before, `sdb` after the reboot); check with `lsblk`.
-- Archive re-checked after the reboot (mounted read-only with `ntfs-3g`): `zstd -t` passed, 96 GB of data. Copy 1 is intact.
+- 2026-10-06 18:26: a FreeFileSync scan wrote a lock file to the disk and the `ntfs3` driver crashed
+  (`kernel BUG at fs/iomap/buffered-io.c:1061`). FreeFileSync hung in state `D`; only a reboot clears it. No files were
+  deleted.
+- From now on, mount it read-only and never write to it. The forced power-off left it dirty again; do not run `ntfsfix`
+  (it writes). Use `sudo ntfs-3g -o ro /dev/sdX1 /mnt/oldbackup`. Device names change per boot (`sdd` before, `sdb`
+  after the reboot); check with `lsblk`.
+- Archive re-checked after the reboot (mounted read-only with `ntfs-3g`): `zstd -t` passed, 96 GB of data. Copy 1 is
+  intact.
 
 ## Next steps
 
@@ -96,7 +152,8 @@ rsync -aHAX --info=progress2 \
 du -sh /media/islomar/<data-partition-uuid>/home-backup-2026-10-06   # expect ~90 GB
 ```
 
-Exit code 0 is expected now that the Firefox profile with root-owned files is gone. Code 23 means some files were unreadable; check which.
+Exit code 0 is expected now that the Firefox profile with root-owned files is gone. Code 23 means some files were
+unreadable; check which.
 
 Copy 2 is on the same physical disk as the system. It protects against a failed upgrade, not against NVMe failure.
 
@@ -106,17 +163,23 @@ Restore Copy 1 if needed:
 tar --zstd -xpf /media/islomar/Backup/home-islomar-2026-10-06.tar.zst -C /home/islomar
 ```
 
-Eject the external disk before unplugging: `udisksctl unmount -b /dev/sdX1 && udisksctl power-off -b /dev/sdX` (check the name with `lsblk`). Keep it unplugged until the upgrade is done.
+Eject the external disk before unplugging: `udisksctl unmount -b /dev/sdX1 && udisksctl power-off -b /dev/sdX` (check
+the name with `lsblk`). Keep it unplugged until the upgrade is done.
 
 ### 2. Timeshift snapshot of the system
 
-Timeshift saves the system (`/usr`, `/etc`, `/var`, `/opt`), not `/home`. The "Backups" app (Déjà Dup) is a different tool for personal files.
+Timeshift saves the system (`/usr`, `/etc`, `/var`, `/opt`), not `/home`. The "Backups" app (Déjà Dup) is a different
+tool for personal files.
 
-Location: the root partition `nvme0n1p2` (98 GB free). The data partition `nvme0n1p3` has only 49 GB free after Copy 2. Both partitions are on the same NVMe disk, so neither location protects against disk failure.
+Location: the root partition `nvme0n1p2` (98 GB free). The data partition `nvme0n1p3` has only 49 GB free after Copy 2.
+Both partitions are on the same NVMe disk, so neither location protects against disk failure.
 
-Excluded: `/var/lib/docker` (26 GB, images can be pulled again) and `/usr/share/ollama` (32 GB of models; excluded paths are left untouched on restore).
+Excluded: `/var/lib/docker` (26 GB, images can be pulled again) and `/usr/share/ollama` (32 GB of models; excluded paths
+are left untouched on restore).
 
-Done 2026-10-06 19:05: snapshot `2026-10-06_19-05-27`, 65.4 GB, 36 GB left free on `/`. A first attempt without the Ollama exclusion took 94.5 GB and left 3.5 GB free; it was deleted. The 46 GB estimate missed folders readable only by root.
+Done 2026-10-06 19:05: snapshot `2026-10-06_19-05-27`, 65.4 GB, 36 GB left free on `/`. A first attempt without the
+Ollama exclusion took 94.5 GB and left 3.5 GB free; it was deleted. The 46 GB estimate missed folders readable only by
+root.
 
 Reboot first (kernel crash on 2026-10-06, see the external disk section). Then:
 
@@ -140,7 +203,8 @@ sudo timeshift --list
 df -h /   # expect about 36 GB free
 ```
 
-**Delete this snapshot about 2 weeks after the upgrade** (Google Calendar reminder set for 2026-10-23). It uses about 65 GB of `/`.
+**Delete this snapshot about 2 weeks after the upgrade** (Google Calendar reminder set for 2026-10-23). It uses about 65
+GB of `/`.
 
 ### 3. Bootable live USB
 
@@ -185,30 +249,49 @@ Findings (test started 2026-10-06, after the reboot logged into Wayland):
 
 Issues and fixes:
 
-1. Saved monitor layouts did not apply. Cause: X11 and Wayland name outputs differently (`HDMI-1` vs `HDMI-A-1`, `DP-3-1` vs `DP-5`). Fixed by arranging once in Settings → Displays; GNOME keeps both layouts in `~/.config/monitors.xml`.
-2. GNOME Terminal 3.52 crashed on the layout change and closed every window. Workaround: tmux for long tasks. 26.04 ships Ptyxis as the default terminal; recheck after the upgrade.
-3. Baba Is You (old Chowdren engine) crashes on window resize when run on the NVIDIA GPU. Works on Intel. Do not launch the whole Steam client with "Launch using Discrete Graphics Card"; set NVIDIA per game in Properties → Launch Options:
-   `__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only %command%`
-4. Emote cannot catch its global shortcut or type into other windows. Fix: GNOME custom shortcut `Ctrl+Alt+E` → `/snap/bin/emote`, then paste with `Ctrl+V`.
-5. 1Password cannot register its global shortcut. Fix: GNOME custom shortcut `Ctrl+Shift+Space` → `/usr/bin/1password --quick-access`.
-6. Stream Deck (`streamdeck-linux-gui`, pipx) did not start. The autostart entry had `Exec=streamdeck &` (no full path, invalid `&`). Fixed to `Exec=/home/islomar/.local/bin/streamdeck`; launcher added to the app grid (`~/.local/share/applications/streamdeck.desktop`). Only one instance can run; a second launch exits silently. Reopen the window from the top-bar icon → Configure.
+1. Saved monitor layouts did not apply. Cause: X11 and Wayland name outputs differently (`HDMI-1` vs `HDMI-A-1`,
+   `DP-3-1` vs `DP-5`). Fixed by arranging once in Settings → Displays; GNOME keeps both layouts in
+   `~/.config/monitors.xml`.
+2. GNOME Terminal 3.52 crashed on the layout change and closed every window. Workaround: tmux for long tasks. 26.04
+   ships Ptyxis as the default terminal; recheck after the upgrade.
+3. Baba Is You (old Chowdren engine) crashes on window resize when run on the NVIDIA GPU. Works on Intel. Do not launch
+   the whole Steam client with "Launch using Discrete Graphics Card"; set NVIDIA per game in Properties → Launch
+   Options: `__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only %command%`
+4. Emote cannot catch its global shortcut or type into other windows. Fix: GNOME custom shortcut `Ctrl+Alt+E` →
+   `/snap/bin/emote`, then paste with `Ctrl+V`.
+5. 1Password cannot register its global shortcut. Fix: GNOME custom shortcut `Ctrl+Shift+Space` →
+   `/usr/bin/1password --quick-access`.
+6. Stream Deck (`streamdeck-linux-gui`, pipx) did not start. The autostart entry had `Exec=streamdeck &` (no full path,
+   invalid `&`). Fixed to `Exec=/home/islomar/.local/bin/streamdeck`; launcher added to the app grid
+   (`~/.local/share/applications/streamdeck.desktop`). Only one instance can run; a second launch exits silently. Reopen
+   the window from the top-bar icon → Configure.
    - Still to replace: buttons using `wmctrl -xa obs` (X11-only).
 7. ksnip cannot capture on GNOME Wayland. Replaced by Gradia (Flathub `be.alexandervanhee.gradia`):
    - Command: `/usr/bin/flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE`
    - GNOME shortcut `Super+Shift+S`, and the Stream Deck "Annotate" button (page 2) with the Gradia logo.
    - ksnip removed: `sudo snap remove --purge ksnip`; its Stream Deck button cleared.
-   - After the upgrade, consider the Gradia Capture extension (GNOME 49/50 only, not yet on extensions.gnome.org; review its build script first).
+   - After the upgrade, consider the Gradia Capture extension (GNOME 49/50 only, not yet on extensions.gnome.org; review
+     its build script first).
 
-8. Replugging the HDMI screen reset the layout. Cause: the DisplayPort screen came back as `DP-6` instead of `DP-5`, and GNOME only restores a saved layout when every connector name matches. Not Wayland-specific (X11 layouts show the same `DP-3-1` / `DP-3-2` swap). Fix: save the layout once per connector name in Settings → Displays; GNOME keeps all variants.
-9. The touchpad corner lock (top-right, LED) does not lock on Wayland. The tap never reaches the OS (`libinput debug-events` shows no key), and the touchpad keeps sending motion on `event5`, only degraded. On X11 the Slimbook script used `xinput`, which has no effect on Wayland; the `xbindkeys` entries listen for a Ctrl+Super combination this touchpad never sends. Replacement:
-   - Script `~/.local/bin/touchpad-toggle`: toggles `org.gnome.desktop.peripherals.touchpad send-events` with `/usr/bin/gsettings` and shows a notification.
+8. Replugging the HDMI screen reset the layout. Cause: the DisplayPort screen came back as `DP-6` instead of `DP-5`, and
+   GNOME only restores a saved layout when every connector name matches. Not Wayland-specific (X11 layouts show the same
+   `DP-3-1` / `DP-3-2` swap). Fix: save the layout once per connector name in Settings → Displays; GNOME keeps all
+   variants.
+9. The touchpad corner lock (top-right, LED) does not lock on Wayland. The tap never reaches the OS
+   (`libinput debug-events` shows no key), and the touchpad keeps sending motion on `event5`, only degraded. On X11 the
+   Slimbook script used `xinput`, which has no effect on Wayland; the `xbindkeys` entries listen for a Ctrl+Super
+   combination this touchpad never sends. Replacement:
+   - Script `~/.local/bin/touchpad-toggle`: toggles `org.gnome.desktop.peripherals.touchpad send-events` with
+     `/usr/bin/gsettings` and shows a notification.
    - GNOME custom shortcut `Super+Ctrl+T` → `/home/islomar/.local/bin/touchpad-toggle`.
    - Recovery if it stays off: `/usr/bin/gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled`.
    - `xbindkeys` autostart disabled after the upgrade (see Post-upgrade results).
 
 The Wayland test is complete. No blocker found.
 
-Gotcha found on the way: `gsettings` resolved to Homebrew's copy, which writes to `~/.config/glib-2.0/settings/keyfile` and never reaches GNOME. Fixed with `alias gsettings=/usr/bin/gsettings` in `~/.zshrc`. Set shortcuts in Settings → Keyboard, or verify with `dconf read`.
+Gotcha found on the way: `gsettings` resolved to Homebrew's copy, which writes to `~/.config/glib-2.0/settings/keyfile`
+and never reaches GNOME. Fixed with `alias gsettings=/usr/bin/gsettings` in `~/.zshrc`. Set shortcuts in Settings →
+Keyboard, or verify with `dconf read`.
 
 ### 5. Upgrade
 
@@ -225,7 +308,8 @@ If the terminal window closes, open a new one and reattach:
 tmux attach -t upgrade
 ```
 
-Why: on 2026-10-06 GNOME Terminal 3.52 crashed (`SEGV`) on Wayland right after a display layout change, and all terminal windows closed at once. An interrupted `do-release-upgrade` leaves a mix of old and new packages.
+Why: on 2026-10-06 GNOME Terminal 3.52 crashed (`SEGV`) on Wayland right after a display layout change, and all terminal
+windows closed at once. An interrupted `do-release-upgrade` leaves a mix of old and new packages.
 
 During the upgrade:
 
@@ -255,30 +339,37 @@ Configuration file prompts answered during the upgrade:
 
 - `/etc/adduser.conf`: kept (N). Custom `EXTRA_GROUPS` / `ADD_EXTRA_GROUPS=1` only affect future accounts.
 - `/etc/bash.bashrc`: replaced (Y). The only customisation was the Nix block, and Nix is unused.
-- `/etc/default/grub`: kept. Contains the Slimbook panel fix `drm.edid_firmware=eDP-1:edid/edid.bin` (file in `/lib/firmware/edid/`), the Slimbook GRUB theme and `GRUB_GFXMODE`.
+- `/etc/default/grub`: kept. Contains the Slimbook panel fix `drm.edid_firmware=eDP-1:edid/edid.bin` (file in
+  `/lib/firmware/edid/`), the Slimbook GRUB theme and `GRUB_GFXMODE`.
 - `/etc/gdm3/custom.conf`: replaced (Y). Only a disabled auto-login for the unused `beibi` account.
 
 Obsolete packages: 323 removed (answered y). Checked before confirming:
 
-- Third-party apps not affected (1Password, Chrome, VS Code, Docker, Claude Desktop, ChatGPT, Obsidian, DBeaver, Zoom, LM Studio, Slimbook tools).
-- Kernel safe: 26.04 `linux-generic 7.0.0-38` with headers installed; only 24.04 HWE metapackages and kernel 6.8.0-146 removed.
+- Third-party apps not affected (1Password, Chrome, VS Code, Docker, Claude Desktop, ChatGPT, Obsidian, DBeaver, Zoom,
+  LM Studio, Slimbook tools).
+- Kernel safe: 26.04 `linux-generic 7.0.0-38` with headers installed; only 24.04 HWE metapackages and kernel 6.8.0-146
+  removed.
 - Removed: X.org, Python 3.12, old LLVM, GNOME apps replaced in 26.04 (Evince, Eog, Totem, Cheese, System Monitor).
 
 Reinstall after the upgrade:
 
-- `pipx reinstall-all`: all pipx venvs (streamdeck-linux-gui, poetry, uv, black) were built for Python 3.12 and now point to 3.14. Stream Deck will not start until this runs.
+- `pipx reinstall-all`: all pipx venvs (streamdeck-linux-gui, poetry, uv, black) were built for Python 3.12 and now
+  point to 3.14. Stream Deck will not start until this runs.
 - `sudo apt install pass` (`~/.password-store` is intact).
 - If needed: `wl-clipboard`, `graphviz`, `tldr`, `fastfetch` (replaces `neofetch`), newer Ruby or g++.
 
-Later cleanup: many stale folders in `/lib/modules/` from kernels removed years ago (5.15 to 6.8). Check with `dpkg -S` before deleting.
+Later cleanup: many stale folders in `/lib/modules/` from kernels removed years ago (5.15 to 6.8). Check with `dpkg -S`
+before deleting.
 
 #### Uninstall Nix (unused)
 
-Multi-user install from 2023-09-19 (official installer, no `/nix/receipt.json`). The user profile has no packages. Pieces found:
+Multi-user install from 2023-09-19 (official installer, no `/nix/receipt.json`). The user profile has no packages.
+Pieces found:
 
 - systemd: `nix-daemon.service`, `nix-daemon.socket`; `/etc/tmpfiles.d/nix-daemon.conf`
 - `/nix`, `/etc/nix`, `/etc/profile.d/nix.sh`
-- Shell hooks: `/etc/zsh/zshrc` (backup `/etc/zsh/zshrc.backup-before-nix`), `/etc/bashrc`, `/etc/zshrc` (5-line files created by the installer), `/etc/bash.bashrc.backup-before-nix`
+- Shell hooks: `/etc/zsh/zshrc` (backup `/etc/zsh/zshrc.backup-before-nix`), `/etc/bashrc`, `/etc/zshrc` (5-line files
+  created by the installer), `/etc/bash.bashrc.backup-before-nix`
 - Build users `nixbld1…` and group `nixbld`
 - User files: `~/.nix-profile`, `~/.nix-defexpr`, `~/.local/state/nix`
 
@@ -297,11 +388,14 @@ for i in $(seq 1 32); do sudo userdel nixbld$i 2>/dev/null; done; sudo groupdel 
 rm -rf ~/.nix-profile ~/.nix-defexpr ~/.nix-channels ~/.local/state/nix ~/.cache/nix
 ```
 
-Check the `/etc/zsh/zshrc` step against the upgrade first: if 26.04 shipped a new zshrc, remove only the Nix block instead of restoring the 2023 backup. Verify: `systemctl status nix-daemon` (not found), `ls /nix` (missing), new zsh and bash shells start without errors.
+Check the `/etc/zsh/zshrc` step against the upgrade first: if 26.04 shipped a new zshrc, remove only the Nix block
+instead of restoring the 2023 backup. Verify: `systemctl status nix-daemon` (not found), `ls /nix` (missing), new zsh
+and bash shells start without errors.
 
 ## Post-upgrade results (2026-10-06)
 
-Upgrade to 26.04.1 completed on 2026-10-06 (about 22:15). Live USB: the existing 22.04.4 pendrive (1.9 GB) is the rescue system; a 26.04 image does not fit on it.
+Upgrade to 26.04.1 completed on 2026-10-06 (about 22:15). Live USB: the existing 22.04.4 pendrive (1.9 GB) is the rescue
+system; a 26.04 image does not fit on it.
 
 | Check | Result |
 |---|---|
@@ -314,39 +408,70 @@ Upgrade to 26.04.1 completed on 2026-10-06 (about 22:15). Live USB: the existing
 
 Done after the reboot:
 
-- **Ubuntu Pro**: the first-login wizard failed because the machine was already attached (free personal subscription, attach survived the upgrade). `pro status` lists every service as `n/a` on 26.04 for now, although the `resolute-apps` and `resolute-infra` ESM repos respond. Recheck in a few weeks: `sudo pro refresh && pro status`. Never paste the Pro token in notes.
-- **pipx**: `pipx reinstall-all` rebuilt streamdeck-linux-gui, poetry, uv and black on Python 3.14. Stream Deck launcher icon path updated from `python3.12` to `python3.14` in `~/.local/share/applications/streamdeck.desktop`. Repeat both after any Python version change.
+- **Ubuntu Pro**: the first-login wizard failed because the machine was already attached (free personal subscription,
+  attach survived the upgrade). `pro status` lists every service as `n/a` on 26.04 for now, although the `resolute-apps`
+  and `resolute-infra` ESM repos respond. Recheck in a few weeks: `sudo pro refresh && pro status`. Never paste the Pro
+  token in notes.
+- **pipx**: `pipx reinstall-all` rebuilt streamdeck-linux-gui, poetry, uv and black on Python 3.14. Stream Deck launcher
+  icon path updated from `python3.12` to `python3.14` in `~/.local/share/applications/streamdeck.desktop`. Repeat both
+  after any Python version change.
 - **Third-party repos re-enabled** (backup `/etc/apt/sources.list.d.bak-post-upgrade`):
   - `.sources` switched to `Enabled: yes`: 1Password, ChatGPT, Google Chrome, VS Code.
-  - `.list.disabled` restored to `.list` (uncommented `deb` line): Claude Desktop, Kubernetes v1.37, NVIDIA container toolkit, Docker (`noble` changed to `resolute`; Docker publishes for 26.04).
+  - `.list.disabled` restored to `.list` (uncommented `deb` line): Claude Desktop, Kubernetes v1.37, NVIDIA container
+    toolkit, Docker (`noble` changed to `resolute`; Docker publishes for 26.04).
   - Leftover `1password.list` files removed (1Password uses `1password.sources`).
   - Still disabled, no 26.04 build: Slimbook PPA (latest is noble), gencfsm PPA.
   - `sudo apt full-upgrade`: Docker packages rebuilt for 26.04 (same 29.8.2), Chrome 154 → 155.
 - **pass** reinstalled (`~/.password-store` and GPG key intact).
-- **Howdy removed**. The upgrade removed `libpam-python` and `dlib` has no Python 3.14 build, so every `sudo`/`pkexec` logged `PAM unable to dlopen(pam_python.so)`. Steps: PAM backup `/etc/pam.d.bak-howdy-2026-10-06/`, root shell kept open, Howdy lines deleted from `sudo`, `polkit-1`, `common-auth`, `apt purge howdy dlib-models`, PPA file deleted, `sudo -k; sudo true` and `pkexec true` verified.
-- **Nix removed** (backup `/root/nix-uninstall-backup/`, kept with `cp --parents` because `/etc/zsh/zshrc` and `/etc/zshrc` share a name). `systemctl disable --now` already deleted the unit links, so the separate `rm` was skipped. Verified: no Nix lines in `/etc/zsh/zshrc`, no `/nix`, no `nixbld` users or group, zsh and bash start cleanly.
-- **GNOME Software "failed" unit**: started twice at first login (autostart + service), the second instance could not take the bus name. Harmless; cleared with `systemctl --user reset-failed gnome-software.service`.
-- **NVIDIA transitional packages**: `nvidia-driver-515` (22.04) pointed to 535, which in 26.04 points to 580. Both 535 and 580 were marked auto, so removing 515 would have let `autoremove` delete the real driver. Fixed with `sudo apt-mark manual nvidia-driver-580` before `apt purge nvidia-driver-515`.
-- **autoremove** (52 packages): old Qt5/QML, Clutter, 32-bit codec libraries, ImageMagick 6 (ImageMagick 7 still provides `convert`/`magick`), `postgresql-client-16` (`psql` now from client 18), `nvidia-driver-535`, and the neofetch leftovers `chafa`, `jp2a`, `toilet`, `caca-utils`.
-
+- **Howdy removed**. The upgrade removed `libpam-python` and `dlib` has no Python 3.14 build, so every `sudo`/`pkexec`
+  logged `PAM unable to dlopen(pam_python.so)`. Steps: PAM backup `/etc/pam.d.bak-howdy-2026-10-06/`, root shell kept
+  open, Howdy lines deleted from `sudo`, `polkit-1`, `common-auth`, `apt purge howdy dlib-models`, PPA file deleted,
+  `sudo -k; sudo true` and `pkexec true` verified.
+- **Nix removed** (backup `/root/nix-uninstall-backup/`, kept with `cp --parents` because `/etc/zsh/zshrc` and
+  `/etc/zshrc` share a name). `systemctl disable --now` already deleted the unit links, so the separate `rm` was
+  skipped. Verified: no Nix lines in `/etc/zsh/zshrc`, no `/nix`, no `nixbld` users or group, zsh and bash start
+  cleanly.
+- **GNOME Software "failed" unit**: started twice at first login (autostart + service), the second instance could not
+  take the bus name. Harmless; cleared with `systemctl --user reset-failed gnome-software.service`.
+- **NVIDIA transitional packages**: `nvidia-driver-515` (22.04) pointed to 535, which in 26.04 points to 580. Both 535
+  and 580 were marked auto, so removing 515 would have let `autoremove` delete the real driver. Fixed with
+  `sudo apt-mark manual nvidia-driver-580` before `apt purge nvidia-driver-515`.
+- **autoremove** (52 packages): old Qt5/QML, Clutter, 32-bit codec libraries, ImageMagick 6 (ImageMagick 7 still
+  provides `convert`/`magick`), `postgresql-client-16` (`psql` now from client 18), `nvidia-driver-535`, and the
+  neofetch leftovers `chafa`, `jp2a`, `toilet`, `caca-utils`.
 - **OBS on Wayland** (OBS 32.1):
-  - Recording buttons: the old Stream Deck buttons focused OBS with `wmctrl` (X11-only) and sent `Ctrl+R/P/U`. Replaced by OBS's built-in WebSocket remote control (Tools → WebSocket Server Settings → enabled, authentication on, port 4455).
-  - Script `~/.local/bin/obs-ctl` (`record-toggle`, `record-start`, `record-stop`, `pause`, `resume`, `pause-toggle`, `status`): a `uv` script using `obsws-python`, reads host, port and password from `~/.config/obs-studio/plugin_config/obs-websocket/config.json`, shows a notification. Shebang uses the full path to `uv`, because the Stream Deck process may not have `~/.local/bin` in `PATH`.
-  - Stream Deck: "Record OBS" → `obs-ctl record-toggle`, "Pause OBS" → `obs-ctl pause`, "Unpause OBS recording" → `obs-ctl resume`; key sequences removed.
-  - Screen capture sources ("Screen Capture (PipeWire)") need GNOME permission; OBS stores a `RestoreToken` per source in the scene file. Cancelling the startup dialog leaves the source black.
+  - Recording buttons: the old Stream Deck buttons focused OBS with `wmctrl` (X11-only) and sent `Ctrl+R/P/U`. Replaced
+    by OBS's built-in WebSocket remote control (Tools → WebSocket Server Settings → enabled, authentication on, port
+    4455).
+  - Script `~/.local/bin/obs-ctl` (`record-toggle`, `record-start`, `record-stop`, `pause`, `resume`, `pause-toggle`,
+    `status`): a `uv` script using `obsws-python`, reads host, port and password from
+    `~/.config/obs-studio/plugin_config/obs-websocket/config.json`, shows a notification. Shebang uses the full path to
+    `uv`, because the Stream Deck process may not have `~/.local/bin` in `PATH`.
+  - Stream Deck: "Record OBS" → `obs-ctl record-toggle`, "Pause OBS" → `obs-ctl pause`, "Unpause OBS recording" →
+    `obs-ctl resume`; key sequences removed.
+  - Screen capture sources ("Screen Capture (PipeWire)") need GNOME permission; OBS stores a `RestoreToken` per source
+    in the scene file. Cancelling the startup dialog leaves the source black.
   - The DisplayPort monitor ("Left DELL") asks again whenever its connector is renamed (`DP-5` / `DP-6`).
-  - At startup OBS opens all three captures at once; GNOME delivers one and the others can time out (`Error retrieving pipewire fd: Timeout was reached`). Usually "Laptop monitor" stays black. Re-applying settings over WebSocket does not restart it. Workaround (chosen): Properties → Reopen selector when that screen is needed.
+  - At startup OBS opens all three captures at once; GNOME delivers one and the others can time out
+    (`Error retrieving pipewire fd: Timeout was reached`). Usually "Laptop monitor" stays black. Re-applying settings
+    over WebSocket does not restart it. Workaround (chosen): Properties → Reopen selector when that screen is needed.
 - **Cleanup**:
-  - `gpac` (unused, 24.04 build) purged with `libxml2`; `autoremove --purge` then removed the old 24.04 codec libraries (`libavcodec60` and others). Reinstallable from ESM: `sudo apt install gpac`.
-  - `sudo apt purge '~c'`: settings of 283 removed packages (230 old kernels, PHP 8.1/8.3, VirtualBox, PulseAudio, Ulauncher, Notion, old NVIDIA pieces, Python 2.7).
+  - `gpac` (unused, 24.04 build) purged with `libxml2`; `autoremove --purge` then removed the old 24.04 codec libraries
+    (`libavcodec60` and others). Reinstallable from ESM: `sudo apt install gpac`.
+  - `sudo apt purge '~c'`: settings of 283 removed packages (230 old kernels, PHP 8.1/8.3, VirtualBox, PulseAudio,
+    Ulauncher, Notion, old NVIDIA pieces, Python 2.7).
   - 79 orphan folders in `/lib/modules/` removed; only `7.0.0-34-generic` and `7.0.0-38-generic` remain.
-  - Remaining `apt list '?obsolete'`: only apps from downloaded `.deb` files, Slimbook tools, DNIe tools (`libassuan0` is theirs), printer driver.
-  - `xbindkeys` autostart disabled for this user with `~/.config/autostart/xbindkeys.desktop` (`Hidden=true`, overrides the package file `/etc/xdg/autostart/xbindkeys.desktop`); running process stopped. Undo: delete that file. `~/.xbindkeysrc` left in place.
+  - Remaining `apt list '?obsolete'`: only apps from downloaded `.deb` files, Slimbook tools, DNIe tools (`libassuan0`
+    is theirs), printer driver.
+  - `xbindkeys` autostart disabled for this user with `~/.config/autostart/xbindkeys.desktop` (`Hidden=true`, overrides
+    the package file `/etc/xdg/autostart/xbindkeys.desktop`); running process stopped. Undo: delete that file.
+    `~/.xbindkeysrc` left in place.
 
 Still to do:
 
 - After Wayland settles: decide on Gradia Capture extension, retest GNOME Terminal vs Ptyxis.
-- Backup folders to delete once stable: `/etc/apt/sources.list.d.bak-*`, `/etc/pam.d.bak-*`, `/root/nix-uninstall-backup`.
+- Backup folders to delete once stable: `/etc/apt/sources.list.d.bak-*`, `/etc/pam.d.bak-*`,
+  `/root/nix-uninstall-backup`.
 - Timeshift snapshot and Copy 2: delete per "When to delete the backups" (calendar reminder 2026-10-23).
 
 ## When to delete the backups
@@ -366,13 +491,15 @@ sudo timeshift --delete --snapshot '<name from list>'
 df -h /   # expect about 65 GB more free
 ```
 
-Copy 2 uses 89 GB of the data partition. The snapshot uses about 65 GB of `/`. After two weeks, a Timeshift rollback would undo too much.
+Copy 2 uses 89 GB of the data partition. The snapshot uses about 65 GB of `/`. After two weeks, a Timeshift rollback
+would undo too much.
 
 Reminder: Google Calendar event on 2026-10-23. Move it if the upgrade happens later than 2026-10-09.
 
 ### Copy 1 (external archive): only after a replacement exists
 
-It is the only copy outside the laptop. Keep it until a new, healthy disk holds a verified backup. After that, delete it or leave it on the old drive as a pre-upgrade snapshot.
+It is the only copy outside the laptop. Keep it until a new, healthy disk holds a verified backup. After that, delete it
+or leave it on the old drive as a pre-upgrade snapshot.
 
 ### Ongoing backups
 
@@ -384,7 +511,8 @@ Goal: 3-2-1. Three copies, two devices, one offsite.
 
 ### New external disk
 
-10 Gbps USB-C SSD, 1 TB (2 TB only if the price difference is small), formatted ext4. The laptop has 10 Gbps USB and Thunderbolt; 20 Gbps drives bring no gain.
+10 Gbps USB-C SSD, 1 TB (2 TB only if the price difference is small), formatted ext4. The laptop has 10 Gbps USB and
+Thunderbolt; 20 Gbps drives bring no gain.
 
 | Option | Approx. price on Amazon.es (2026-10) | Warranty |
 |---|---|---|
@@ -422,21 +550,25 @@ Result: about 55–60 GB to back up (home is ~117 GB).
 
 Keep despite looking re-downloadable:
 
-- `~/workspace` (4.7 GB): GitHub only has pushed work. Unpushed branches, stashes, uncommitted changes, `.env` files and local-only repos would be lost. Exclude only its build folders.
+- `~/workspace` (4.7 GB): GitHub only has pushed work. Unpushed branches, stashes, uncommitted changes, `.env` files and
+  local-only repos would be lost. Exclude only its build folders.
 - `~/snap`: contains user data, including the Firefox profile.
-- Docker volumes live in `/var/lib/docker`, outside the home backup. Dump any database with hand-made data into the home folder before relying on "recreate it".
+- Docker volumes live in `/var/lib/docker`, outside the home backup. Dump any database with hand-made data into the home
+  folder before relying on "recreate it".
 
 ### Size estimate and disk choice
 
 - First backup about 60 GB; weekly changes typically 1–5 GB.
 - With the retention rule below, the repository stays near one full copy plus the changes kept in about 23 snapshots.
-- 1 TB is plenty. 2 TB only adds room for one-off full copies (like the 52 GB archive or 65 GB Timeshift snapshot) or many large recordings.
+- 1 TB is plenty. 2 TB only adds room for one-off full copies (like the 52 GB archive or 65 GB Timeshift snapshot) or
+  many large recordings.
 
 ### How restic handles history
 
 - Every snapshot is complete and restorable on its own; there is no full + incremental chain.
 - Data is split into chunks stored once; unchanged files take no new space.
-- No periodic "new full backup" is needed (that is a requirement of chain-based tools like duplicity, Déjà Dup's default).
+- No periodic "new full backup" is needed (that is a requirement of chain-based tools like duplicity, Déjà Dup's
+  default).
 - Retention, run after each backup:
 
 ```bash
@@ -444,7 +576,8 @@ restic forget --keep-weekly 8 --keep-monthly 12 --keep-yearly 3 --prune
 ```
 
 - Verification: `restic check` monthly, plus `restic check --read-data-subset=10%` so all data gets read over time.
-- Optional: start a fresh repository about once a year as protection against repository corruption. The independent offsite repository covers the same risk.
+- Optional: start a fresh repository about once a year as protection against repository corruption. The independent
+  offsite repository covers the same risk.
 
 ### Destinations
 
@@ -471,7 +604,8 @@ The risk is exposure. An always-mounted disk shares the laptop's fate:
 Rules:
 
 - Acceptable only while the offsite copy exists.
-- The backup job mounts the disk, runs restic, then unmounts it. The disk stays attached but invisible the rest of the time.
+- The backup job mounts the disk, runs restic, then unmounts it. The disk stays attached but invisible the rest of the
+  time.
 - Eject before moving the laptop: `udisksctl unmount -b /dev/sdX && udisksctl power-off -b /dev/sdX`.
 - Alternative: plug in only to back up, with the plug-in trigger running restic automatically.
 

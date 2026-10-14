@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [SoCraTes Germany 2026](#socrates-germany-2026)
   - [Topics to propose](#topics-to-propose)
@@ -76,7 +76,8 @@
   - OTA: Over The Air
   - Billing Service
   - Using AWS Textract
-  - Download the PDF generated in Stripe and verify it with OCR (just checking the text appeareance, not the layout in the PDF)
+  - Download the PDF generated in Stripe and verify it with OCR (just checking the text appeareance, not the layout in
+    the PDF)
   - The test acted the "Billing Service"
     - Calling the staging Sripe
     - Calling test doubles for the database and another internal service
@@ -114,7 +115,6 @@
       - No deep reading of the requirements. They didn't understand them.
       - They went for everything at once
       - Not enough time to align, that's normal
-
 - **Delete session**
   - Lightweigh ADR
     - <https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records>

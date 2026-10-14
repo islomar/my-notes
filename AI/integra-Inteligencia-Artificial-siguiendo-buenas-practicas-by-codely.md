@@ -1,25 +1,25 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Integra Inteligencia Artificial siguiendo buenas prácticas (OpenAI GPT, Ollama y LangChain)](#integra-inteligencia-artificial-siguiendo-buenas-pr%C3%A1cticas-openai-gpt-ollama-y-langchain)
+- [Integra Inteligencia Artificial siguiendo buenas prácticas (OpenAI GPT, Ollama y LangChain)](#integra-inteligencia-artificial-siguiendo-buenas-prácticas-openai-gpt-ollama-y-langchain)
   - [General](#general)
-  - [🚀 ¿Cómo empezar con la Inteligencia Artificial como Developer?](#-c%C3%B3mo-empezar-con-la-inteligencia-artificial-como-developer)
-    - [Conceptos de integración con IA](#conceptos-de-integraci%C3%B3n-con-ia)
+  - [🚀 ¿Cómo empezar con la Inteligencia Artificial como Developer?](#-cómo-empezar-con-la-inteligencia-artificial-como-developer)
+    - [Conceptos de integración con IA](#conceptos-de-integración-con-ia)
     - [Primeros pasos con OLLaMA](#primeros-pasos-con-ollama)
     - [Desmitifica apps con IA: LangChain vs ModelFusion](#desmitifica-apps-con-ia-langchain-vs-modelfusion)
-  - [💡 Arquitectura de software: Cómo encaja la IA en tu app](#-arquitectura-de-software-c%C3%B3mo-encaja-la-ia-en-tu-app)
-  - [👤 Caso práctico: Perfil de usuario con sugerencias de cursos](#-caso-pr%C3%A1ctico-perfil-de-usuario-con-sugerencias-de-cursos)
-  - [⌨️ Caso práctico: Prompting con Ollama](#-caso-pr%C3%A1ctico-prompting-con-ollama)
+  - [💡 Arquitectura de software: Cómo encaja la IA en tu app](#-arquitectura-de-software-cómo-encaja-la-ia-en-tu-app)
+  - [👤 Caso práctico: Perfil de usuario con sugerencias de cursos](#-caso-práctico-perfil-de-usuario-con-sugerencias-de-cursos)
+  - [⌨️ Caso práctico: Prompting con Ollama](#-caso-práctico-prompting-con-ollama)
   - [✍️ Traslada el coste computacional al momento de escritura](#-traslada-el-coste-computacional-al-momento-de-escritura)
-  - [🗣️ Cómo integrar tu app con OpenAI GPT](#-c%C3%B3mo-integrar-tu-app-con-openai-gpt)
-  - [🏁 Buenas prácticas aplicadas en la integración con LLM](#-buenas-pr%C3%A1cticas-aplicadas-en-la-integraci%C3%B3n-con-llm)
-    - [📖 Técnicas de Prompting: Zero-shot vs Few-shot vs Chain-of-Thought](#-t%C3%A9cnicas-de-prompting-zero-shot-vs-few-shot-vs-chain-of-thought)
+  - [🗣️ Cómo integrar tu app con OpenAI GPT](#-cómo-integrar-tu-app-con-openai-gpt)
+  - [🏁 Buenas prácticas aplicadas en la integración con LLM](#-buenas-prácticas-aplicadas-en-la-integración-con-llm)
+    - [📖 Técnicas de Prompting: Zero-shot vs Few-shot vs Chain-of-Thought](#-técnicas-de-prompting-zero-shot-vs-few-shot-vs-chain-of-thought)
     - [🔫 Implementa Few-Shot Prompting con LangChain](#-implementa-few-shot-prompting-con-langchain)
-    - [🧾 Consigue respuestas más robustas: Tipado con JSON Schema](#-consigue-respuestas-m%C3%A1s-robustas-tipado-con-json-schema)
-  - [✅ Testea la integración con tu LLM](#-testea-la-integraci%C3%B3n-con-tu-llm)
-    - [🐛 Feedback loop más rápido para depurar tu prompt](#-feedback-loop-m%C3%A1s-r%C3%A1pido-para-depurar-tu-prompt)
-    - [🧪 Cómo hacer tests de integración a tu LLM](#-c%C3%B3mo-hacer-tests-de-integraci%C3%B3n-a-tu-llm)
+    - [🧾 Consigue respuestas más robustas: Tipado con JSON Schema](#-consigue-respuestas-más-robustas-tipado-con-json-schema)
+  - [✅ Testea la integración con tu LLM](#-testea-la-integración-con-tu-llm)
+    - [🐛 Feedback loop más rápido para depurar tu prompt](#-feedback-loop-más-rápido-para-depurar-tu-prompt)
+    - [🧪 Cómo hacer tests de integración a tu LLM](#-cómo-hacer-tests-de-integración-a-tu-llm)
     - [♻️ Configura tu entorno de CI para Ollama y GPT](#-configura-tu-entorno-de-ci-para-ollama-y-gpt)
   - [🔜 Conclusiones y siguientes pasos](#-conclusiones-y-siguientes-pasos)
   - [More links](#more-links)
@@ -37,12 +37,16 @@
 
 ## 🚀 ¿Cómo empezar con la Inteligencia Artificial como Developer?
 
-- [ChatGPT Prompting vs RAG vs fine tuning: Aprovecha la IA al máximo](https://www.youtube.com/watch?v=bjCdsnkQ6Dw), video, 69 minutes
+- [ChatGPT Prompting vs RAG vs fine tuning: Aprovecha la IA al máximo](https://www.youtube.com/watch?v=bjCdsnkQ6Dw),
+  video, 69 minutes
   - 13.02.2024
-  - 3 ejemplos para diferenciar lo que podemos conseguir con prompt engineering, vs. RAG (Retrieval-Augmented Generation) vs. fine tuning de modelos de Inteligencia Artificial.
-- [Cómo sacarle el máximo provecho a ChatGPT | #laFunción8x28](https://www.youtube.com/watch?v=sYZHBO3HRhA), video, 76 minutes
+  - 3 ejemplos para diferenciar lo que podemos conseguir con prompt engineering, vs. RAG (Retrieval-Augmented
+    Generation) vs. fine tuning de modelos de Inteligencia Artificial.
+- [Cómo sacarle el máximo provecho a ChatGPT | #laFunción8x28](https://www.youtube.com/watch?v=sYZHBO3HRhA), video, 76
+  minutes
   - 25.04.2023
-  - La IA es una herramienta muy poderosa que podemos utilizar en nuestro día a día. En el directo de hoy Bea Martín Valcárcel (@zigiella) nos ayudará a explorar diversas formas de darle utilidad.
+  - La IA es una herramienta muy poderosa que podemos utilizar en nuestro día a día. En el directo de hoy Bea Martín
+    Valcárcel (@zigiella) nos ayudará a explorar diversas formas de darle utilidad.
 
 ### Conceptos de integración con IA
 
@@ -72,7 +76,8 @@
   - **Resonance**: para PHP
   - **XEF.ai**: para Kotlin
   - **ModelFusion**: para JS/TS, también recomendado por LLaMAcpp
-  - [microsoft/semantic-kernel](https://github.com/microsoft/semantic-kernel): Integrate cutting-edge LLM technology quickly and easily into your apps
+  - [microsoft/semantic-kernel](https://github.com/microsoft/semantic-kernel): Integrate cutting-edge LLM technology
+    quickly and easily into your apps
     - [Introducing new Ollama Connector for Local Models](https://devblogs.microsoft.com/semantic-kernel/introducing-new-ollama-connector-for-local-models/)
 
 ### Primeros pasos con OLLaMA
@@ -92,9 +97,13 @@
   - List all the models downloaded: `curl http://localhost:11434/api/tags | jq`
   - Download a model: `curl --request POST http://localhost:11434/api/pull -d '{"model": "gemma:latest"}'`
     - Similar to `ollama pull gemma:latest`
-  - Ask a model: `curl --request POST http://localhost:11434/api/generate --header "Content-Type: application/json" -d '{"model": "gemma:latest", "prompt": "Qué es CodelyTV? (en menos de 15 palabras)", "stream": false}' | jq`
-    - El `stream: false` devuelve toda la respuesta de golpe, para evitar enviar poco a poco la respuesta (puede interesar o no, depende).
-    - La respuesta incluye "context", que habría que volver a enviar si hiciéramos una nueva consulta relacionada con ésta, para que la considerase de la misma conversación.
+  - Ask a model:
+    `curl --request POST http://localhost:11434/api/generate --header "Content-Type: application/json" -d '{"model":
+    "gemma:latest", "prompt": "Qué es CodelyTV? (en menos de 15 palabras)", "stream": false}' | jq`
+    - El `stream: false` devuelve toda la respuesta de golpe, para evitar enviar poco a poco la respuesta (puede
+      interesar o no, depende).
+    - La respuesta incluye "context", que habría que volver a enviar si hiciéramos una nueva consulta relacionada con
+      ésta, para que la considerase de la misma conversación.
       - El uso de SDKs facilita esto, no tienes que encargarte de ello a mano.
 
 ### Desmitifica apps con IA: LangChain vs ModelFusion
@@ -129,8 +138,10 @@
 - **Alternativa 2: Encapsulado en UsersRepository**
   - [Código fuente](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/03-user_profile_wth_suggestions/2-llm_in_repo)
   - Apuestan por esta opción
-  - En el UserFinder inyectamos un UserRepository, quien a su vez tiene una dependencia/inyección del UserCourseSuggestionsRepository
-  - En realidad deberíamos haber de un LoggedInUserRepository, ya que no querríamos ver los cursos recomendados para un usuario cuyo perfil estuviéramos visitando (y que también hubiera hecho una llamada al mismo Repository)
+  - En el UserFinder inyectamos un UserRepository, quien a su vez tiene una dependencia/inyección del
+    UserCourseSuggestionsRepository
+  - En realidad deberíamos haber de un LoggedInUserRepository, ya que no querríamos ver los cursos recomendados para un
+    usuario cuyo perfil estuviéramos visitando (y que también hubiera hecho una llamada al mismo Repository)
 
 ## ⌨️ Caso práctico: Prompting con Ollama
 
@@ -144,8 +155,10 @@
   - [Código fuente](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/04-llm_implementation_details/2-cache)  
   - Mejora en rendimiento y en el coste computacional.
   - La caché no es la solución ideal, pero ya es una mejora.
-  - Esta caché en DB podría ser mejorada almacenándolo en un Redis con TTL o añadiendo un campo de timestamp para las recomendaciones.
-  - Ejemplo de wrapper para tener caché in memory: [InMemoryCacheUserRepository](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/0b435d4c031fa2ed986cdfeb8b3f1459e14ae8eb/04-llm_implementation_details/2-cache/src/contexts/mooc/users/infrastructure/InMemoryCacheUserRepository.ts#L5)
+  - Esta caché en DB podría ser mejorada almacenándolo en un Redis con TTL o añadiendo un campo de timestamp para las
+    recomendaciones.
+  - Ejemplo de wrapper para tener caché in memory:
+    [InMemoryCacheUserRepository](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/0b435d4c031fa2ed986cdfeb8b3f1459e14ae8eb/04-llm_implementation_details/2-cache/src/contexts/mooc/users/infrastructure/InMemoryCacheUserRepository.ts#L5)
 
 ## ✍️ Traslada el coste computacional al momento de escritura
 
@@ -153,22 +166,23 @@
 
 - [InMemoryEventBus](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/05-event_driven/2-llm_with_domain_events/src/contexts/shared/infrastructure/domain_event/InMemoryEventBus.ts#L9-L9)
 
-![](ai-best-practices-codelytv/ports_and_adapters_with_llm.png)
+![ports and adapters with llm](ai-best-practices-codelytv/ports_and_adapters_with_llm.png)
 
-- Queremos quitarnos la dependencia de Ollama en tiempo de búsqueda, para evitar tiempos de espera adicionales, mayor coste, etc.
+- Queremos quitarnos la dependencia de Ollama en tiempo de búsqueda, para evitar tiempos de espera adicionales, mayor
+  coste, etc.
 - Añadiremos un campo "suggested_courses" de tipo TEXT en la tabla `users`
 
-![](ai-best-practices-codelytv/flujo_peticion_completar_curso.png)
+![flujo peticion completar curso](ai-best-practices-codelytv/flujo_peticion_completar_curso.png)
 
 - `UserCourseProgressCompletedDomainEvent`
-![](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias_1.png)
-![](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias_2.png)
+![flujo peticion generacion sugerencias](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias.png)
+![flujo peticion generacion sugerencias 2](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias_2.png)
 - `UserCourseSuggestionsGenerated`
-![](ai-best-practices-codelytv/flujo_proyectar_sugerencias.png)
+![flujo proyectar sugerencias](ai-best-practices-codelytv/flujo_proyectar_sugerencias.png)
   - Suggestion projection generation
 - More simple solution: just a join between both tables (the table with the user suggestions and the user table)
 
-![](ai-best-practices-codelytv/flujo_total_completar_curso.png)
+![flujo total completar curso](ai-best-practices-codelytv/flujo_total_completar_curso.png)
 
 ## 🗣️ Cómo integrar tu app con OpenAI GPT
 
@@ -188,7 +202,8 @@
       - <https://www.prompttokencounter.com/>
       - <https://tiktokenizer.vercel.app/>
       - <https://gpt-tokenizer.dev/>
-  - A helpful rule of thumb is that one token generally corresponds to ~4 characters of text for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).
+  - A helpful rule of thumb is that one token generally corresponds to ~4 characters of text for common English text.
+    This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).
   - Se pueden añadir callbacks a la llamada a OpenAI, e.g. `handleLLMStart`y `handleLLMEnd`
 - **💸 Precios: Estimación de costes de la API de OpenAI**
   - Versión "Turbo": pasado un tiempo de una versión, sacan la Turbo, que es más potente y ya suele costar menos.
@@ -202,7 +217,8 @@
   - Los precios son diferentes para input y para output (para output suele ser el doble)
   - <https://openai.com/api/pricing/>
   - <https://platform.openai.com/docs/pricing>
-  - Gracias a los eventos y el Event Bus, podemos controlar la velocidad de consumo de los eventos para no superar el límite de peticiones por minuto en OpenAI
+  - Gracias a los eventos y el Event Bus, podemos controlar la velocidad de consumo de los eventos para no superar el
+    límite de peticiones por minuto en OpenAI
 
 ## 🏁 Buenas prácticas aplicadas en la integración con LLM
 
@@ -232,13 +248,16 @@
 ### 🧾 Consigue respuestas más robustas: Tipado con JSON Schema
 
 - [Ejemplo de código para añadir tipos](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/07-good_practices/3-add_types)
-- <https://zod.dev/>: permite tipar. Se podría hacer con TS, pero los tipos en TS desaparecen al ser transpilados a JS. Por otra parte, permite convertirlo en un JSon Schema. Bastante usada, e.g. para las requests de HTTP que llegan o formularios web.
+- <https://zod.dev/>: permite tipar. Se podría hacer con TS, pero los tipos en TS desaparecen al ser transpilados a JS.
+  Por otra parte, permite convertirlo en un JSon Schema. Bastante usada, e.g. para las requests de HTTP que llegan o
+  formularios web.
 - Evitas tener que parsear la respuesta. Queremos tener una respuesta tipada por parte del LLM.
 - [Ejemplo parseardor con Zod](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/07-good_practices/3-add_types/src/contexts/mooc/user_course_suggestions/infrastructure/OllamaMistralCourseSuggestionsGenerator.ts#L34-L34)
 
 ## ✅ Testea la integración con tu LLM
 
 ### 🐛 Feedback loop más rápido para depurar tu prompt
+
 - [Ejemplo de código: debug prompt](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/08-testing/1-debug_prompt)
 - Cómo iterar los prompts rápidamente.
   1. `ollama run mistral`
@@ -246,14 +265,17 @@
   3. Modificar lo necesario y volver al punto 1
 
 ### 🧪 Cómo hacer tests de integración a tu LLM
+
 - [Código con tests de integración del LLM](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/08-testing/2-integration_tests)
 - [OllamaMistralCourseSuggestionsGenerator.test.ts](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/08-testing/2-integration_tests/tests/contexts/mooc/user_course_suggestions/infrastructure/OllamaMistralCourseSuggestionsGenerator.test.ts#L1-L1)
-- Se basa en el evaluator de LangChain... pero usa un prompt diferente en el código de test respecto a producción (comentan que por el JSon Schema), pero IMO eso invalida la confianza y relevancia de los tests :-/
+- Se basa en el evaluator de LangChain... pero usa un prompt diferente en el código de test respecto a producción
+  (comentan que por el JSon Schema), pero IMO eso invalida la confianza y relevancia de los tests :-/
 
 ### ♻️ Configura tu entorno de CI para Ollama y GPT
-- [Ejemplo de código con CI](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/
-main/08-testing/3-llm_ci)
-- Para ejecutar `OpenAIChatGPT35CourseSuggestionsGenerator` sólo en la pipeline, usa nomenclatura `.ci.test` y filtra en los npm scripts (`test` vs `test:ci`)
+
+- [Ejemplo de código con CI](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/08-testing/3-llm_ci)
+- Para ejecutar `OpenAIChatGPT35CourseSuggestionsGenerator` sólo en la pipeline, usa nomenclatura `.ci.test` y filtra en
+  los npm scripts (`test` vs `test:ci`)
 
 ## 🔜 Conclusiones y siguientes pasos
 
@@ -269,5 +291,8 @@ main/08-testing/3-llm_ci)
 
 ## Feedback
 
-- [02-software_architecture/2-implementation-details](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/02-software_architecture/2-implementation_details): no compila, faltan clases. También incluir info Makefile que facilite arrancarlo todo (e.g. que incluya un "docker compose up" para la DB, etc.)
-- [04-llm_implementation_details/1-implement_a_recommendator](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/04-llm_implementation_details/1-implement_a_recommendator): idem, no compila por motivos múltiples.
+- [02-software_architecture/2-implementation-details](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/02-software_architecture/2-implementation_details):
+  no compila, faltan clases. También incluir info Makefile que facilite arrancarlo todo (e.g. que incluya un "docker
+  compose up" para la DB, etc.)
+- [04-llm_implementation_details/1-implement_a_recommendator](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/04-llm_implementation_details/1-implement_a_recommendator):
+  idem, no compila por motivos múltiples.

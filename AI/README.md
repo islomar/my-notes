@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [AI](#ai)
   - [Glossary](#glossary)
@@ -54,12 +54,12 @@
 ## List of interesting skills
 
 - <https://www.skills.sh/>
-- https://www.skills.sh/vercel-labs/skills/find-skills
+- <https://www.skills.sh/vercel-labs/skills/find-skills>
 - <https://github.com/AminBlg/SimpleEnglish>
   - Agent skill: make LLMs write docs in ASD-STE100 Simplified Technical
 - <https://www.skills.sh/mattpocock/skills/grill-me>
-- https://www.skills.sh/juliusbrussee/caveman/caveman
-- https://skills.wheresryan.sh/anatomy
+- <https://www.skills.sh/juliusbrussee/caveman/caveman>
+- <https://skills.wheresryan.sh/anatomy>
   - Name an idea in one line, and Claude draws the machine that does it.
 
 ## AI and Product Management
@@ -102,7 +102,8 @@
     - [bandit](https://bandit.readthedocs.io/en/latest/): check security
   - fixup
     - in pre-commit
-    - [pyupgrade](https://github.com/asottile/pyupgrade): automatically upgrade syntax for newer versions of the language.
+    - [pyupgrade](https://github.com/asottile/pyupgrade): automatically upgrade syntax for newer versions of the
+      language.
   - run  
 - Gee Paw Hill: you go from a "ready state" to the next "ready state"
 - "In anticipation of this, write a test..." --> after describing the expected production behaviour.
@@ -119,7 +120,8 @@
 
 - <https://academy.langchain.com/courses/intro-to-langgraph> (official one, 6 hours)
 - <https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/> (creator, 1.5 hours)
-- [LangChain- Develop AI Agents with LangChain & LangGraph](https://www.udemy.com/course/langchain/?couponCode=CP251120G2V2) (18 hours, Ambassador)
+- [LangChain- Develop AI Agents with LangChain & LangGraph](https://www.udemy.com/course/langchain/?couponCode=CP251120G2V2)
+  (18 hours, Ambassador)
 - [LangGraph Agents](https://langchain-ai.github.io/langgraph/)
 
 ## LLM tooling and comparisons
@@ -127,7 +129,8 @@
 - [LLM tooling comparison](./llm-tooling-comparison.md)
 - <https://kanzai.io/>
   - Your local kanban board for coding agents, from backlog to delivery.
-  - The columns do the work. Drag a card into Development and an agent starts. Drag it into Approved and the merge queue runs. Agents work in parallel, each on its own branch.
+  - The columns do the work. Drag a card into Development and an agent starts. Drag it into Approved and the merge queue
+    runs. Agents work in parallel, each on its own branch.
 
 ## Other resources
 
@@ -140,25 +143,31 @@
 - [Unreasonable Claim of Reasoning Ability of LLM: Part 1](https://pkghosh.wordpress.com/2023/11/24/unreasonable-claim-of-reasoning-ability-of-llm/)
 - <https://poloclub.github.io/transformer-explainer/> (Transformer visually explained)
 - [Context Is What You Need: The Maximum Effective Context Window for Real World Limits of LLMs](https://www.arxiv.org/abs/2509.21361)
-  - "A few top of the line models in our test group failed with as little as 100 tokens in context; most had severe degradation in accuracy by 1000 tokens in context. All models fell far short of their Maximum Context Window by as much as 99 percent."
+  - "A few top of the line models in our test group failed with as little as 100 tokens in context; most had severe
+    degradation in accuracy by 1000 tokens in context. All models fell far short of their Maximum Context Window by as
+    much as 99 percent."
   - [Chat with ChatGPT 5 about the paper](https://chatgpt.com/share/68dcc26b-fcb4-8011-8b20-fb4d9c81fcb9)
 - [Tokenizer and token counter (GPT, Claude, Gemini, Grok)](https://gptforwork.com/tools/tokenizer)
 - Brown M&Ms
-  - You bury an instruction in your prompt or context, and then thoroughly check the output to see if the model ignores it.
-  - If you want to get a feel for the **effective context window of your model**, you can try the "Brown M&Ms" test. Here's one I did where the mighty GPT-5 was forgetting details by the second interaction (Jason Gorman)
+  - You bury an instruction in your prompt or context, and then thoroughly check the output to see if the model ignores
+    it.
+  - If you want to get a feel for the **effective context window of your model**, you can try the "Brown M&Ms" test.
+    Here's one I did where the mighty GPT-5 was forgetting details by the second interaction (Jason Gorman)
     - <https://chatgpt.com/share/68dcf4b8-86b0-8011-ac2b-5a722244b87a>
 - [Building a Bootstrapped B2B Product with Gen AI (0 to 1)](https://elsevanderberg.substack.com/p/building-a-bootstrapped-b2b-product)
   - Hair-on-Fire product market fit archetype
   - Sell before you build
   - ICP: Ideal Customer Profile
-    - In sales and marketing, an ICP is a detailed description of the type of company or customer that would be the most valuable for a business to target
+    - In sales and marketing, an ICP is a detailed description of the type of company or customer that would be the most
+      valuable for a business to target
 - [CLI agent to pull customer quotes related to an opportunity (Else van der Berg)](https://www.youtube.com/watch?v=IOAX32v00ME)
   - <https://www.notion.so/Prompts-for-Product-Discovery-1c9660ca2b52805f8a06e17de26801f8>
 - [Vibe coding an AI native MVP product as a non-technical PM (Dr. Else van der Berg)](https://www.youtube.com/watch?v=lDsQkCiqG1A)
   - <https://elsevanderberg.substack.com/p/vibe-coding-an-ai-native-rag-product>
 - [21 Ways to Use AI at Work (And Build Your AI Product Toolbox)](https://www.producttalk.org/21-ways-to-use-ai-at-work)
 - [15 Ways to Use AI at Home (and Fill Your AI Product Toolbox)](https://www.producttalk.org/15-ways-to-use-ai-at-home/)
-- [Agentic Design Patterns](https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/preview?tab=t.0): it includes examples in Python
+- [Agentic Design Patterns](https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/preview?tab=t.0):
+  it includes examples in Python
 - [bd - Beads Issue Tracker](https://github.com/steveyegge/beads)
   - Give your coding agent a memory upgrade
   - I think for working with GitHub/GitLab issues...

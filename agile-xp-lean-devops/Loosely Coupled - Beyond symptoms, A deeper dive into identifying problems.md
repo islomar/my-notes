@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Loosely Coupled - Beyond symptoms, A deeper dive into identifying problems](#loosely-coupled---beyond-symptoms-a-deeper-dive-into-identifying-problems)
   - [My notes](#my-notes)
@@ -40,8 +40,10 @@
   - <https://www.agileleanhouse.com/lib/lib/People/RussellLAckoff/ALittleBookOfF_Laws.pdf>
 - Context switching, distractions, multi-tasking and workflow interruptions
 - [Tesler's Law](https://lawsofux.com/teslers-law/)
-  - The Law of Conservation of Complexity, states that for any system there is a certain amount of complexity which cannot be reduced.
-  - "All processes have a core of complexity that cannot be designed away and therefore must be assumed by either the system or the user"
+  - The Law of Conservation of Complexity, states that for any system there is a certain amount of complexity which
+    cannot be reduced.
+  - "All processes have a core of complexity that cannot be designed away and therefore must be assumed by either the
+    system or the user"
   - The Design of Everyday Things
     - Users shouldn't be need to be trained to do something
 - Daily meeting asking "Is there anyone blocked or any blocker?" is a smell for lack of real-time communication.
@@ -51,9 +53,9 @@
   - Illumination
   - Verification
 - The Window of Consciousness
-    - https://medium.com/@r.wilms/the-window-of-consciousness-a-soul-dialogue-beyond-mind-and-machine-a80771740634
+  - <https://medium.com/@r.wilms/the-window-of-consciousness-a-soul-dialogue-beyond-mind-and-machine-a80771740634>
 - Book "Dialogue: The Art Of Thinking Together" (William Isaacs)
-  - https://tmiberia.wordpress.com/2013/03/17/dialogue-the-art-of-thinking-together-by-william-isaacs/
+  - <https://tmiberia.wordpress.com/2013/03/17/dialogue-the-art-of-thinking-together-by-william-isaacs/>
 - Queuing is at the root of issues in product development.
 - We need to get better in collaboration.
 - [Alistair Cockburn's Effectiveness of Communication](https://agilonomics.com/altistair-cockburns-effectiveness-of-communication/)
@@ -62,6 +64,6 @@
 - Learning to actually do the work together, not only talking about the work (e.g. meetings, documents)
 - "It is in the doing of the work that we actually discover the work to do"
 
-What do you do when you find a team who don't see the problems 
+What do you do when you find a team who don't see the problems
 
 Thanks a lot for sharing! 🙏

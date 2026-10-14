@@ -1,9 +1,9 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Auditoría Hemav](#auditor%C3%ADa-hemav)
-  - [Diseño de código](#dise%C3%B1o-de-c%C3%B3digo)
+- [Auditoría Hemav](#auditoría-hemav)
+  - [Diseño de código](#diseño-de-código)
   - [Arquitectura de software](#arquitectura-de-software)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -19,7 +19,7 @@
 
 ## Diseño de código
 
-- [PDF with Code Design insights](./hemav-audity-by-codely/Hemav_Audit_Code_Design.pdf)
+- [PDF with Code Design insights](../Design-Architecture/hemav-audity-by-codely/Hemav_Audit_Code_Design.pdf)
 - "Layers" es el producto principal de Hemav.
 - We create the DTO to pass to the Use Case directly from the JSon request payload: highly-coupled.
   - Codely prefers passing the arguments individually to the Use Cases...
@@ -29,4 +29,4 @@
 
 - TBD
 
-Bookmark: 
+Bookmark:

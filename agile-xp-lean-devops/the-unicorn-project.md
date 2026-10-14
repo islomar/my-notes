@@ -1,10 +1,10 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [The Unicorn Project](#the-unicorn-project)
   - [The four ideals](#the-four-ideals)
-  - [Geoffrey Moore’s Four Zones and Three Horizons:](#geoffrey-moores-four-zones-and-three-horizons)
+  - [Geoffrey Moore’s Four Zones and Three Horizons](#geoffrey-moores-four-zones-and-three-horizons)
   - [Core vs Context](#core-vs-context)
   - [Quotes and ideas](#quotes-and-ideas)
   - [Links](#links)
@@ -13,7 +13,7 @@
 
 # The Unicorn Project
 
-https://itrevolution.com/tup-downloads-extra-materials/
+<https://itrevolution.com/tup-downloads-extra-materials/>
 
 ## The four ideals
 
@@ -23,10 +23,10 @@ https://itrevolution.com/tup-downloads-extra-materials/
 4. Psychological Safety
 5. Customer Focus
 
-## Geoffrey Moore’s Four Zones and Three Horizons:
+## Geoffrey Moore’s Four Zones and Three Horizons
 
-- https://www.infoq.com/articles/visual-portfolio-management/
-- https://frankdiana.medium.com/competing-in-the-age-of-disruption-e2187d2ad9d8
+- <https://www.infoq.com/articles/visual-portfolio-management/>
+- <https://frankdiana.medium.com/competing-in-the-age-of-disruption-e2187d2ad9d8>
 - Horizon 1 - Company’s cash-cow.
 - Horizon 2 - High growth. Next cash-cows.
 - Horizon 3 - Pool of ideas to explore. Need to find asap:
@@ -76,6 +76,6 @@ https://itrevolution.com/tup-downloads-extra-materials/
 ## Links
 
 - [DevOpsDays Portland, 2019: Gene Kim - The Unicorn Project And The Five Ideals](https://www.youtube.com/watch?v=M6JGdF9XC7g)
-- https://danlebrero.com/2020/02/05/the-unicorn-project-summary/
-- https://www.infoq.com/articles/unicorn-project/
-- https://coffeejourneys.blog/3-lessons-from-the-unicorn-project/
+- <https://danlebrero.com/2020/02/05/the-unicorn-project-summary/>
+- <https://www.infoq.com/articles/unicorn-project/>
+- <https://coffeejourneys.blog/3-lessons-from-the-unicorn-project/>

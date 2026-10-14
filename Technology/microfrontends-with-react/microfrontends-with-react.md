@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Microfrontends with React - A Complete Developer's Guide](#microfrontends-with-react---a-complete-developers-guide)
   - [Section 1: The basics of microfrontends](#section-1-the-basics-of-microfrontends)
@@ -56,8 +56,10 @@
   - Most flexible and performant solution around right now.
 - Webpack combines many dependencies and JS files into a single one, usually called `bundle.js` or `main.js`
 - <http://localhost:8081/main.js>
-  - This shows the content of the bundled main.js. To actually show what we want, we need to creat a `public` folder with an `index.html` that loads the `main.js` script.
-- HTML Webpack plugin: needed because the bundle JS files created for the Webpack Dev Server have random names, e.g. `1k4j43.bundle.js`, `46j3ji.vendor.js`, etc.
+  - This shows the content of the bundled main.js. To actually show what we want, we need to creat a `public` folder
+    with an `index.html` that loads the `main.js` script.
+- HTML Webpack plugin: needed because the bundle JS files created for the Webpack Dev Server have random names, e.g.
+  `1k4j43.bundle.js`, `46j3ji.vendor.js`, etc.
 
 ## Section 2: The basics of module federations
 
@@ -65,12 +67,13 @@
 
 ## Section 3: Sharing dependencies between apps
 
-- For **asynchronous loading**, it renamed the Container's `index.js` to `bootstrap.js` and created an `index.js` which imports `bootstrap.js`
+- For **asynchronous loading**, it renamed the Container's `index.js` to `bootstrap.js` and created an `index.js` which
+  imports `bootstrap.js`
 - When the container and the remote share a library, we can avoid fetching it twice with `shared: ['faker'],`
   - That works only if the major version matches. Otherwise, it would load 2 different versions.
 - With
 
-```
+```text
     shared: {
         faker: {
             singleton: true,
@@ -78,11 +81,13 @@
     },
 ```
 
-you would load only 1 version, even if the different versioins differ in the major part (a warning is shown in the browser console)
+you would load only 1 version, even if the different versioins differ in the major part (a warning is shown in the
+browser console)
 
 - **Sub-App Execution Context**
 - It exists a bug when the HTML element "id" for the HTML element matches the id for the ModuleFederationPlugin id.
-  - `<div id="cart></div>` --> your browser creates a global variable `cart` for this `div` element... which overrides the `cart` global variable created by the `remoteEntry.js`
+  - `<div id="cart></div>` --> your browser creates a global variable `cart` for this `div` element... which overrides
+    the `cart` global variable created by the `remoteEntry.js`
 
 ## Section 4: Linking multiple apps together
 
@@ -125,13 +130,20 @@ you would load only 1 version, even if the different versioins differ in the maj
 - TBD
 
 ## About iFrames
-- While iframes technically allow embedding different applications, they create more problems than they solve and represent an outdated approach that many beginners mistakenly consider "micro-frontends."
+
+- While iframes technically allow embedding different applications, they create more problems than they solve and
+  represent an outdated approach that many beginners mistakenly consider "micro-frontends."
 - Why it fails:
-  - **Styling nightmare**: Each iframe has its own CSS context, making it impossible to create consistent spacing, fonts, and colors across applications.
-  - **Communication barriers**: Parent and child applications struggle to share data or coordinate actions (like showing loading states).
-  - **Accessibility issues**: Screen readers and keyboard navigation break across iframe boundaries, failing users with disabilities.
-  - **Performance bottlenecks**: Each iframe loads a complete HTML document with its own CSS and JavaScript, consuming unnecessary resources.
-  - **Poor mobile responsiveness**: Iframes do not play well on mobile devices, leading to scrolling issues and touch interaction problems.
+  - **Styling nightmare**: Each iframe has its own CSS context, making it impossible to create consistent spacing,
+    fonts, and colors across applications.
+  - **Communication barriers**: Parent and child applications struggle to share data or coordinate actions (like showing
+    loading states).
+  - **Accessibility issues**: Screen readers and keyboard navigation break across iframe boundaries, failing users with
+    disabilities.
+  - **Performance bottlenecks**: Each iframe loads a complete HTML document with its own CSS and JavaScript, consuming
+    unnecessary resources.
+  - **Poor mobile responsiveness**: Iframes do not play well on mobile devices, leading to scrolling issues and touch
+    interaction problems.
   - **SEO challenges**: Search engines have difficulty correctly indexing content within iframes.
 
 ## Other resources

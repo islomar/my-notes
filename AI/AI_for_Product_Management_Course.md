@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [AI for Product Management Course](#ai-for-product-management-course)
   - [Module 1: welcome to the AI for Product Management Course](#module-1-welcome-to-the-ai-for-product-management-course)
@@ -64,29 +64,33 @@
 
 - Three questions to consider when forming your AI strategy:
   1. What areas of your product need to change?
-    - Use product analytics to identify areas of friction
+     - Use product analytics to identify areas of friction
   2. What areas of your product will remain?
   3. What completely new additions to your product are now possible?
 
 ### Laying a foundation with AI principles (Pendo's ones)
-  - Customer-centric approach
-  - Transparency and open communication
-  - Data governance
-  - Optionality and customization
-  - Compliance with legal and regulatory frameworks
-  - Fairness and equity
-  - Thought leadership
-  - Setting the tone from the top
+
+- Customer-centric approach
+- Transparency and open communication
+- Data governance
+- Optionality and customization
+- Compliance with legal and regulatory frameworks
+- Fairness and equity
+- Thought leadership
+- Setting the tone from the top
 
 ### Four levels of AI
-  - Level 1: There is no involvement from AI and everything is manual.
-  - Level 2: The process is still manual and driven by the human, but AI is there to assist, provide insights, and give recommendations.
-  - Level 3: AI drives the process and the human is there to fine-tune, edit, decline, and approve things.
-  - Level 4: There is no human involvement and the process is fully automated by AI, like a self-driving car.
+
+- Level 1: There is no involvement from AI and everything is manual.
+- Level 2: The process is still manual and driven by the human, but AI is there to assist, provide insights, and give
+  recommendations.
+- Level 3: AI drives the process and the human is there to fine-tune, edit, decline, and approve things.
+- Level 4: There is no human involvement and the process is fully automated by AI, like a self-driving car.
 
 ## Module 4: AI and the product-led organization
 
-- **Product-led organization**: A business that rallies the entire company around the product so each team can leverage it to achieve their most important outcomes.
+- **Product-led organization**: A business that rallies the entire company around the product so each team can leverage
+  it to achieve their most important outcomes.
 - **Six characteristics of product-led organizations**
   1. Align each function around the product
   2. Make decisions with data over gut feel
@@ -109,20 +113,23 @@
 
 ## Module 5: Powering product-lead growth with AI
 
-- Product-led growth (PLG) is a go-to-market business strategy that focuses on placing a company's software product at the center of the buying journey. 
+- Product-led growth (PLG) is a go-to-market business strategy that focuses on placing a company's software product at
+  the center of the buying journey.
 - **Six principles of product-led growth (PLG)**
-  https://www.pendo.io/pendo-blog/6-principles-of-product-led-growth/
+  <https://www.pendo.io/pendo-blog/6-principles-of-product-led-growth/>
   1. Providing a free user experience
-    - Free trials
-    - Freemium products
-    - Product tours
+     - Free trials
+     - Freemium products
+     - Product tours
   2. Delivering an "aha" moment as soon as possible
-    - E.g. an in-app guide
-    - AI can help identify what to offer in the free vs paid versions. E.g. identify users who engage with X feature Y times in the first three months, go on to stay engaged in the product for the remainder of their subscription term.
+     - E.g. an in-app guide
+     - AI can help identify what to offer in the free vs paid versions. E.g. identify users who engage with X feature Y
+      times in the first three months, go on to stay engaged in the product for the remainder of their subscription
+      term.
   3. Committing to best-in-class usability
   4. Delighting users to encourage stickiness
   5. Making purchasing feel like the natural next step
-    - In-app notification to take to the buying page
+     - In-app notification to take to the buying page
   6. Building in virality at every turn
 - **Examples of applying AI to the six PLG principles**
   - Analyzing product usage and conversion data to identify aha moments
@@ -140,7 +147,8 @@
     - Uncover the pain points of both your customers and the larger market.
   - Phase 2: Validate / Ideation
     - Determine the right solution to move forward with
-    - AI-powered tools can allow for **quick analysis of data points** across mediums (e.g. interviews, surveys, in-app polls, service request tickets, etc.) and make recommendations based on the findings
+    - AI-powered tools can allow for **quick analysis of data points** across mediums (e.g. interviews, surveys, in-app
+      polls, service request tickets, etc.) and make recommendations based on the findings
   - Phase 3: Build
     - Partner with engineers and product designers to ensure your idea comes to life as intended
   - Phase 4: Launch
@@ -157,7 +165,6 @@
   - Do highly satisfied or "power users" tend to engage in certain behaviors?
   - What features do retained customers engage with the most?
     - Do those usage patterns exist in the rest of your user base?
-
 
 ## Module 7: AI for Product Management Course next steps
 

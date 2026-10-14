@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Running and Embedding the React Application](#running-and-embedding-the-react-application)
   - [Running Locally](#running-locally)
@@ -22,14 +22,18 @@ This is a React application built with Vite. To run it locally:
 1. Make sure you have Node.js installed on your system
 2. Navigate to the project directory in your terminal
 3. Install dependencies (if you haven't already):
+
    ```bash
    npm install
    ```
+
 4. Start the development server:
+
    ```bash
    npm run dev
    ```
-5. The application will be available at http://localhost:5173 by default
+
+5. The application will be available at <http://localhost:5173> by default
 
 ## Embedding Options
 
@@ -59,6 +63,7 @@ npm run build
 ```
 
 This will create a `dist` directory with optimized production files that can be deployed to services like:
+
 - GitHub Pages
 - Netlify
 - Vercel
@@ -70,6 +75,7 @@ This will create a `dist` directory with optimized production files that can be 
 If you want to use this application as part of another React application:
 
 1. Build it as a library by modifying the `vite.config.ts`:
+
    ```typescript
    import { defineConfig } from 'vite'
    import react from '@vitejs/plugin-react'
@@ -102,11 +108,13 @@ If you want to use this application as part of another React application:
 You can wrap your React application as a Web Component to use it in any HTML page or framework:
 
 1. Install the required packages:
+
    ```bash
    npm install @lit-labs/react
    ```
 
 2. Create a wrapper component:
+
    ```typescript
    // src/web-component.ts
    import { createComponent } from '@lit-labs/react';
@@ -128,6 +136,7 @@ You can wrap your React application as a Web Component to use it in any HTML pag
    ```
 
 3. Then use it in any HTML page:
+
    ```html
    <script type="module" src="/path/to/web-component.js"></script>
    <react-app></react-app>

@@ -1,47 +1,54 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Dotfiles course from CodelyTV](#dotfiles-course-from-codelytv)
-  - [Other dotfiles apps](#other-dotfiles-apps)
-  - [General](#general)
-  - [How to export all the programs installed](#how-to-export-all-the-programs-installed)
-  - [Performance issues](#performance-issues)
-  - [dotly](#dotly)
-  - [¿Cómo crear la documentación "--help" de los scripts en bash?](#c%C3%B3mo-crear-la-documentaci%C3%B3n---help-de-los-scripts-en-bash)
-  - [Recommended apps](#recommended-apps)
+* [Dotfiles course from CodelyTV](#dotfiles-course-from-codelytv)
+  * [Other dotfiles apps](#other-dotfiles-apps)
+  * [General](#general)
+  * [How to export all the programs installed](#how-to-export-all-the-programs-installed)
+  * [Performance issues](#performance-issues)
+  * [dotly](#dotly)
+  * [¿Cómo crear la documentación "--help" de los scripts en bash?](#cómo-crear-la-documentación---help-de-los-scripts-en-bash)
+  * [Recommended apps](#recommended-apps)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # Dotfiles course from CodelyTV
+
 Estimated time ~ 1 hour
 
-* https://github.com/CodelyTV/dotly
-* https://github.com/rgomezcasas/dotfiles
-* https://github.com/CodelyTV/dotfiles
-* https://github.com/islomar/dotfiles
-
+* <https://github.com/CodelyTV/dotly>
+* <https://github.com/rgomezcasas/dotfiles>
+* <https://github.com/CodelyTV/dotfiles>
+* <https://github.com/islomar/dotfiles>
 
 ## Other dotfiles apps
-* https://github.com/twpayne/chezmoi
-* https://github.com/CodelyTV/dotly
 
+* <https://github.com/twpayne/chezmoi>
+* <https://github.com/CodelyTV/dotly>
 
 ## General
+
 * They like cloning the `dotfiles` repo under `$HOME/.dotfiles`.
-* They move the dot files to the repo folder and then they create a symbolic link: `ln -s $HOME/.dotfiles/.bashrc $HOME/.bashrc`
-* What they move: `.profile`, `.bash_profile`, `.bashrc`, `.zshrc`, `.gitconfig/`, `.gitignore_global`, `.gitattributes`, `.zlogin`
+* They move the dot files to the repo folder and then they create a symbolic link:
+  `ln -s $HOME/.dotfiles/.bashrc $HOME/.bashrc`
+* What they move: `.profile`, `.bash_profile`, `.bashrc`, `.zshrc`, `.gitconfig/`, `.gitignore_global`,
+  `.gitattributes`, `.zlogin`
 * They use [skhd](https://github.com/koekeishiya/skhd) for OSX hotkeys management.
 * In Mac, the config can also be un der `$HOME/Library/Application\ Support/`
-    * e.g. for VS Code, they made symbolic links to files under `Code/User`, like `keybindings.json`, `settings.json` and `snippets`.
+  * e.g. for VS Code, they made symbolic links to files under `Code/User`, like `keybindings.json`, `settings.json` and
+    `snippets`.
 * How to know where an application keeps its configuration?
-    * `lsof`: list open files
-    * `lsof -c "iTerm"`: to see all the files opened by iTerm
-    * But sometimes the config files are only opened at the beginning or when something is changed. In that case, run `lsof -r2 -c "iTerm"`: it will run every 2 seconds, so you can then change the iTerm configuration and see the differences between the moment when the change was done and before.
-* Sometimes the most practical thing to do is to create a symbolic link to a whole folder. In that case, we can include in the `.gitignore` the files from the folder that we are not interested in.
-
+  * `lsof`: list open files
+  * `lsof -c "iTerm"`: to see all the files opened by iTerm
+  * But sometimes the config files are only opened at the beginning or when something is changed. In that case, run
+    `lsof -r2 -c "iTerm"`: it will run every 2 seconds, so you can then change the iTerm configuration and see the
+    differences between the moment when the change was done and before.
+* Sometimes the most practical thing to do is to create a symbolic link to a whole folder. In that case, we can include
+  in the `.gitignore` the files from the folder that we are not interested in.
 
 ## How to export all the programs installed
+
 * **brew**
 `brew bundle dump --file="$HOMEBREW_BUNDLE_FILE_PATH" --force`
 
@@ -57,35 +64,36 @@ Estimated time ~ 1 hour
 * **composer**
 Hacemos un symlink del `~/.composer/composer.json`
 
-
 ## Performance issues
-* Group all the scripts: https://github.com/rgomezcasas/dotfiles/tree/master/scripts
-* You can use doclogs in the scripts, e.g. https://github.com/rgomezcasas/dotfiles/blob/master/scripts/mysql/general_log#L7
+
+* Group all the scripts: <https://github.com/rgomezcasas/dotfiles/tree/master/scripts>
+* You can use doclogs in the scripts, e.g.
+  <https://github.com/rgomezcasas/dotfiles/blob/master/scripts/mysql/general_log#L7>
 * Group all the scripts in a `dot` command.
-  * https://github.com/rgomezcasas/dotfiles/blob/master/bin/dot
+  * <https://github.com/rgomezcasas/dotfiles/blob/master/bin/dot>
   * `dot <nameOfTheScriptsFolder> <nameOfTheScript> <arguments>`
   * It shows autocomplete
   * It also reads the doclogs (help)
   * It can be cumbersome... another option: use the `dotly` tool :-)
 
-
 ## dotly
-* https://github.com/CodelyTV/dotly
+
+* <https://github.com/CodelyTV/dotly>
 * Wrapper de zim.
 * Installer.
 
-
 ## ¿Cómo crear la documentación "--help" de los scripts en bash?
-- https://pro.codely.com/library/todo-sobre-los-dotfiles-54672/137187/path/step/178646517/
-- `docs::eval "$@"`
-- http://docopt.org/
-- https://github.com/denisidoro/docpars
-- https://github.com/docopt/docopts
-- https://github.com/CodelyTV/dotly/blob/main/scripts/core/documentation.sh
 
+* <https://pro.codely.com/library/todo-sobre-los-dotfiles-54672/137187/path/step/178646517/>
+* `docs::eval "$@"`
+* <http://docopt.org/>
+* <https://github.com/denisidoro/docpars>
+* <https://github.com/docopt/docopts>
+* <https://github.com/CodelyTV/dotly/blob/main/scripts/core/documentation.sh>
 
 ## Recommended apps
+
 * [Alfred (OSX)](https://www.alfredapp.com/): for productivity, shortcuts, etc.
-    * Alternatives in Linux: Albert and [rofi](https://github.com/davatorium/rofi)
+  * Alternatives in Linux: Albert and [rofi](https://github.com/davatorium/rofi)
 * [navi](https://github.com/denisidoro/navi)
-    * Documentation, interactive shell, cheatsheets for commands.
+  * Documentation, interactive shell, cheatsheets for commands.

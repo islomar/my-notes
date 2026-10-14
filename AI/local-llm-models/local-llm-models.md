@@ -3,11 +3,37 @@
 ## Contents
 
 - [Local LLM models](#local-llm-models)
+  - [In the cloud](#in-the-cloud)
   - [My laptop](#my-laptop)
     - [What fits](#what-fits)
+    - [Benchmark: qwen3:30b-a3b](#benchmark-qwen330b-a3b)
     - [Pending](#pending)
+    - [Ollama model storage](#ollama-model-storage)
   - [General](#general)
-- [In the cloud](#in-the-cloud)
+  - [Ollama vs LM Studio vs Docker](#ollama-vs-lm-studio-vs-docker)
+    - [1. Usually, the intelligence comes from the model, not the inferer](#1-usually-the-intelligence-comes-from-the-model-not-the-inferer)
+    - [2. LM Studio is essentially a laboratory/workbench](#2-lm-studio-is-essentially-a-laboratoryworkbench)
+    - [3. Ollama feels more like a developer service](#3-ollama-feels-more-like-a-developer-service)
+    - [4. Docker by itself is NOT an LLM inferer](#4-docker-by-itself-is-not-an-llm-inferer)
+    - [5. Docker Model Runner has an interesting advantage](#5-docker-model-runner-has-an-interesting-advantage)
+    - [6. And Docker gives you a choice of actual inference engines](#6-and-docker-gives-you-a-choice-of-actual-inference-engines)
+    - [What would I use in your case?](#what-would-i-use-in-your-case)
+  - [Ollama vs llama.cpp vs vLLM vs MLX vs Docker Model Runner](#ollama-vs-llamacpp-vs-vllm-vs-mlx-vs-docker-model-runner)
+    - [The layers](#the-layers)
+    - [The comparison I would make](#the-comparison-i-would-make)
+    - [1. llama.cpp: squeeze a model efficiently onto almost anything](#1-llamacpp-squeeze-a-model-efficiently-onto-almost-anything)
+      - [It isn't merely a toy single-user engine anymore](#it-isnt-merely-a-toy-single-user-engine-anymore)
+    - [2. vLLM: don't optimise one request — optimise the server](#2-vllm-dont-optimise-one-request--optimise-the-server)
+    - [3. PagedAttention is one reason vLLM became so important](#3-pagedattention-is-one-reason-vllm-became-so-important)
+    - [4. Quantization is another major difference](#4-quantization-is-another-major-difference)
+    - [5. MLX is a rather different beast](#5-mlx-is-a-rather-different-beast)
+    - [6. Then where does Ollama fit?](#6-then-where-does-ollama-fit)
+    - [7. Direct llama.cpp vs Ollama is therefore an interesting choice](#7-direct-llamacpp-vs-ollama-is-therefore-an-interesting-choice)
+    - [8. Docker Model Runner is another layer again](#8-docker-model-runner-is-another-layer-again)
+    - [9. What actually changes your tokens/sec?](#9-what-actually-changes-your-tokenssec)
+    - [10. Latency and throughput are NOT the same thing](#10-latency-and-throughput-are-not-the-same-thing)
+    - [11. So which would I choose?](#11-so-which-would-i-choose)
+    - [The recommendation I'd make for you](#the-recommendation-id-make-for-you)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -15,7 +41,7 @@
 
 ## In the cloud
 
-- https://www.runpod.io/
+- <https://www.runpod.io/>
 
 ## My laptop
 
@@ -34,16 +60,21 @@ Slimbook Executive, Ubuntu 24.04. Checked on 2026-10-04.
 ### What fits
 
 - **Fully on GPU (about 30–60 tok/s):** models up to about 4B at Q4, with short context. Example: qwen3:4b, gemma3:4b.
-- **GPU + CPU split (about 8–20 tok/s):** dense 7–9B at Q4, such as qwen3:8b (5.2 GB). They exceed 4 GB VRAM, so Ollama offloads layers to the CPU.
-- **Best fit: MoE models with few active parameters**, such as Qwen3-30B-A3B or gpt-oss-20b at Q4 (about 12–19 GB). The weights sit in RAM. About 3B parameters are active per token. Measured: Qwen3-30B-A3B runs at about 10 tok/s (see [Benchmark](#benchmark-qwen330b-a3b)). Better quality than any 8B dense model.
+- **GPU + CPU split (about 8–20 tok/s):** dense 7–9B at Q4, such as qwen3:8b (5.2 GB). They exceed 4 GB VRAM, so Ollama
+  offloads layers to the CPU.
+- **Best fit: MoE models with few active parameters**, such as Qwen3-30B-A3B or gpt-oss-20b at Q4 (about 12–19 GB). The
+  weights sit in RAM. About 3B parameters are active per token. Measured: Qwen3-30B-A3B runs at about 10 tok/s (see
+  [Benchmark](#benchmark-qwen330b-a3b)). Better quality than any 8B dense model.
 - **Dense 14B at Q4:** a few tok/s. Too slow for interactive use.
 - **Dense 32B+:** loads in RAM, but runs at about 1–3 tok/s.
 
-Models of about 3–4B parameters at Q4 quantization would run fully on the GPU. Larger models will be split between GPU and CPU and run noticeably slower.
+Models of about 3–4B parameters at Q4 quantization would run fully on the GPU. Larger models will be split between GPU
+and CPU and run noticeably slower.
 
 Only Qwen3-30B-A3B is measured. The other speed figures are estimates.
 
-CPU speed ceiling: each generated token reads all active weights from RAM once. Max tok/s ≈ 51 GB/s ÷ active weight size. Real throughput is about 50–70% of that.
+CPU speed ceiling: each generated token reads all active weights from RAM once. Max tok/s ≈ 51 GB/s ÷ active weight
+size. Real throughput is about 50–70% of that.
 
 | Model (Q4) | Active weights per token | Ceiling | Expected on CPU |
 |---|---|---|---|
@@ -56,7 +87,8 @@ Layers offloaded to the 4 GB GPU run faster, so partial offload raises these num
 
 ### Benchmark: qwen3:30b-a3b
 
-Run on 2026-10-04. Ollama 0.34.2, Q4_K_M (18 GB), thinking off, temperature 0, AC power, power profile "balanced", about 24 GB RAM used by other apps.
+Run on 2026-10-04. Ollama 0.34.2, Q4_K_M (18 GB), thinking off, temperature 0, AC power, power profile "balanced", about
+24 GB RAM used by other apps.
 
 | Run | Context | Prompt processing | Generation |
 |---|---|---|---|
@@ -80,12 +112,15 @@ Retest with the 12-thread variant, alternating both models, 3 warm runs each:
 | `qwen3:30b-a3b` (6 threads) | 10.5, 9.7, 9.7 | 9.7 tok/s |
 | `qwen3:30b-a3b-t12` (12 threads) | 11.0, 10.1, 10.0 | 10.1 tok/s |
 
-The 13.4 tok/s result did not repeat. 12 threads gives about +4%, within noise. CPU temperature reached 74 °C during the runs.
+The 13.4 tok/s result did not repeat. 12 threads gives about +4%, within noise. CPU temperature reached 74 °C during the
+runs.
 
 Findings:
 
-- Ollama splits the model well on its own: attention layers and KV cache on the GPU (CUDA, flash attention on), expert weights in RAM. `ollama ps` shows 86% CPU / 14% GPU.
-- Ollama uses 6 threads by default (the P-cores). More threads give little or no gain (see retest). 14 threads is slower, because the E-cores hold back the rest.
+- Ollama splits the model well on its own: attention layers and KV cache on the GPU (CUDA, flash attention on), expert
+  weights in RAM. `ollama ps` shows 86% CPU / 14% GPU.
+- Ollama uses 6 threads by default (the P-cores). More threads give little or no gain (see retest). 14 threads is
+  slower, because the E-cores hold back the rest.
 - Long context costs a lot: at 16k context, generation drops to about 5 tok/s.
 - 10 tok/s × 1.8 GB per token is about 18 GB/s, roughly 35% of the 51 GB/s RAM peak.
 
@@ -107,30 +142,38 @@ Moved on 2026-10-04. Models live on the data partition and are bind-mounted onto
 - Real location: `/media/islomar/11795f86-ef0a-4162-b620-f8be882cf63f/ollama-models` (owner `ollama:ollama`)
 - Path Ollama sees: `/usr/share/ollama/.ollama/models` (no `OLLAMA_MODELS` change)
 - `/etc/fstab` line:
-  ```
+
+  ```text
   /media/islomar/11795f86-ef0a-4162-b620-f8be882cf63f/ollama-models /usr/share/ollama/.ollama/models none bind,nofail,x-systemd.requires-mounts-for=/media/islomar/11795f86-ef0a-4162-b620-f8be882cf63f 0 0
   ```
-- Drop-in `/etc/systemd/system/ollama.service.d/models-mount.conf` sets `RequiresMountsFor=/usr/share/ollama/.ollama/models`. If the mount fails, Ollama does not start, so it cannot fill `/` again.
+
+- Drop-in `/etc/systemd/system/ollama.service.d/models-mount.conf` sets
+  `RequiresMountsFor=/usr/share/ollama/.ollama/models`. If the mount fails, Ollama does not start, so it cannot fill `/`
+  again.
 - Backup of the previous fstab: `/etc/fstab.bak.2026-10-04`
 
-Why a bind mount: the `ollama` user cannot enter `/media/islomar` (permissions `other::---`), so pointing `OLLAMA_MODELS` there fails. An ACL on that folder could be reset by udisks.
+Why a bind mount: the `ollama` user cannot enter `/media/islomar` (permissions `other::---`), so pointing
+`OLLAMA_MODELS` there fails. An ACL on that folder could be reset by udisks.
 
 Check: `findmnt /usr/share/ollama/.ollama/models` and `ollama list`.
 
-
 ## General
-- https://chatgpt.com/g/g-p-6771a6b3ecac819188c21ea367c0e8cb/c/6ab019b4-4c60-83ed-b652-860299874c53
-- https://www.reddit.com/r/LocalLLM/comments/1u4mrz0/laptop_recommendations_for_local_llm_use/
+
+- <https://chatgpt.com/g/g-p-6771a6b3ecac819188c21ea367c0e8cb/c/6ab019b4-4c60-83ed-b652-860299874c53>
+- <https://www.reddit.com/r/LocalLLM/comments/1u4mrz0/laptop_recommendations_for_local_llm_use/>
 - [Extract about local LLM models from AI Community of Practice](./extract-ai-community-of-practice-about-local-llm-models.md)
-- **VRAM (Video RAM)** provides ultra-high-speed, dedicated workspace exclusively for a discrete graphics card, while **unified memory** creates a single shared pool accessed instantly by both the CPU and GPU without data copying.
+- **VRAM (Video RAM)** provides ultra-high-speed, dedicated workspace exclusively for a discrete graphics card, while
+  **unified memory** creates a single shared pool accessed instantly by both the CPU and GPU without data copying.
 - [IA Local Ahora Va 6x Más Rápida en tu PC](https://www.youtube.com/watch?v=LCmHSO6tqME)
-  -  Un modelo de 125.000 millones de parámetros corre a **94 tokens por segundo** usando **Strata** en un PC Ryzen 5 7600, con una RTX 5070 de 12 GB, 64 GB DDR5 de RAM frente a los 15 tok/s de llama.cpp
+  - Un modelo de 125.000 millones de parámetros corre a **94 tokens por segundo** usando **Strata** en un PC Ryzen 5
+    7600, con una RTX 5070 de 12 GB, 64 GB DDR5 de RAM frente a los 15 tok/s de llama.cpp
   - Con motor Strata en lugar de Llama.cpp --> ~65 tok/s
-  - En este vídeo te cuento cómo lo consigue el motor Strata para IA local, cuánto se acelera de verdad al escribir y al leer, y si tu ordenador puede ejecutarlo.
+  - En este vídeo te cuento cómo lo consigue el motor Strata para IA local, cuánto se acelera de verdad al escribir y al
+    leer, y si tu ordenador puede ejecutarlo.
   - Modelo **Qwen 3.8 Flash-next**
   - Strata corre ~5x más rápido con 12 GB de gráfica
 - Los modelos `gemma` tienden a estasr pensados para ser ejecutados en máquinas no muy potentes (es de Google)
-  - https://deepmind.google/models/gemma/
+  - <https://deepmind.google/models/gemma/>
 
 ## Ollama vs LM Studio vs Docker
 
@@ -140,9 +183,11 @@ Yes. The terminology is slightly confusing because **“LLM inferer” mixes sev
 
 A useful mental model is:
 
-**model weights → inference engine → model server/runtime → your application**
+**model weights → inference engine → model server/runtime → your application.**
 
-For example, Qwen, Llama, Mistral or `gpt-oss` are the **models**. Something such as `llama.cpp`, MLX or vLLM is the **actual inference engine** doing the matrix calculations. Ollama, LM Studio and Docker Model Runner sit one level higher and make those engines/models convenient to run and expose via an API.
+For example, Qwen, Llama, Mistral or `gpt-oss` are the **models**. Something such as `llama.cpp`, MLX or vLLM is the
+**actual inference engine** doing the matrix calculations. Ollama, LM Studio and Docker Model Runner sit one level
+higher and make those engines/models convenient to run and expose via an API.
 
 | | Ollama | LM Studio | Docker Model Runner |
 |---|---|---|---|
@@ -157,7 +202,13 @@ For example, Qwen, Llama, Mistral or `gpt-oss` are the **models**. Something suc
 | Engines | Abstracted by Ollama | llama.cpp; MLX on Apple Silicon | llama.cpp, vLLM, Diffusers |
 | Typical experience | `ollama run ...` | Download → click → chat | `docker model run ...` |
 
-LM Studio can expose a local server with OpenAI- and Anthropic-compatible APIs, and currently provides native APIs/SDKs as well. [LM Studio](https://lmstudio.ai/docs/developer/core/server?utm_source=chatgpt.com) Ollama similarly exposes an API and OpenAI compatibility, and has become increasingly oriented toward developer tooling and agents. [Ollama](https://ollama.com/blog/openai-compatibility?trk=public_post_comment-text\&utm_source=chatgpt.com) Docker Model Runner is now much more than simply “put an LLM inside a container”: it directly manages models and supports `llama.cpp`, vLLM and Diffusers engines. [Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
+LM Studio can expose a local server with OpenAI- and Anthropic-compatible APIs, and currently provides native APIs/SDKs
+as well. [LM Studio](https://lmstudio.ai/docs/developer/core/server?utm_source=chatgpt.com) Ollama similarly exposes an
+API and OpenAI compatibility, and has become increasingly oriented toward developer tooling and agents.
+[Ollama](https://ollama.com/blog/openai-compatibility?trk=public_post_comment-text\&utm_source=chatgpt.com) Docker Model
+Runner is now much more than simply “put an LLM inside a container”: it directly manages models and supports
+`llama.cpp`, vLLM and Diffusers engines.
+[Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
 
 The important question is what actually changes when you switch between them.
 
@@ -169,7 +220,8 @@ Suppose you run exactly:
 
 through Ollama, LM Studio and Docker Model Runner.
 
-You should expect roughly the **same fundamental capability**. Switching from LM Studio to Ollama isn't analogous to switching from GPT-5 to Qwen. You're running essentially the same neural network.
+You should expect roughly the **same fundamental capability**. Switching from LM Studio to Ollama isn't analogous to
+switching from GPT-5 to Qwen. You're running essentially the same neural network.
 
 But the outputs might not be identical.
 
@@ -188,7 +240,8 @@ That's because the runtime can change things like:
 
 So:
 
-> **Model choice has a huge effect on answer quality. Runtime choice usually has a much smaller effect on answer quality, but potentially a large effect on speed, RAM/VRAM usage, compatibility and developer experience.**
+> **Model choice has a huge effect on answer quality. Runtime choice usually has a much smaller effect on answer
+> quality, but potentially a large effect on speed, RAM/VRAM usage, compatibility and developer experience.**
 
 That's probably the single most important distinction.
 
@@ -196,9 +249,11 @@ That's probably the single most important distinction.
 
 LM Studio is particularly pleasant when you're experimenting.
 
-You can download a model, see its size and quantization, load it, change context length and parameters, chat with it, inspect behaviour, unload it, switch models, and then expose the model through an API.
+You can download a model, see its size and quantization, load it, change context length and parameters, chat with it,
+inspect behaviour, unload it, switch models, and then expose the model through an API.
 
-It supports `llama.cpp` models on Mac, Windows and Linux and additionally MLX on Apple Silicon. [LM Studio](https://lmstudio.ai/docs/app?trk=public_post-text\&utm_source=chatgpt.com)
+It supports `llama.cpp` models on Mac, Windows and Linux and additionally MLX on Apple Silicon.
+[LM Studio](https://lmstudio.ai/docs/app?trk=public_post-text\&utm_source=chatgpt.com)
 
 And your application can simply talk to:
 
@@ -206,7 +261,8 @@ And your application can simply talk to:
 http://localhost:1234/v1
 ```
 
-using an ordinary OpenAI client. [LM Studio](https://lmstudio.ai/docs/developer/openai-compat?trk=public_post_comment-text\&utm_source=chatgpt.com)
+using an ordinary OpenAI client.
+[LM Studio](https://lmstudio.ai/docs/developer/openai-compat?trk=public_post_comment-text\&utm_source=chatgpt.com)
 
 So I'd characterise it as:
 
@@ -255,9 +311,12 @@ versus:
 ollama run qwen3
 ```
 
-You tell Ollama **what model you want**, rather than worrying much about how to load GGUF files, configure the inference engine, expose HTTP endpoints, etc.
+You tell Ollama **what model you want**, rather than worrying much about how to load GGUF files, configure the inference
+engine, expose HTTP endpoints, etc.
 
-And Ollama exposes an OpenAI-compatible interface, so applications designed for OpenAI-style APIs can often point at it by changing the base URL. [Ollama](https://ollama.com/blog/openai-compatibility?trk=public_post_comment-text\&utm_source=chatgpt.com)
+And Ollama exposes an OpenAI-compatible interface, so applications designed for OpenAI-style APIs can often point at it
+by changing the base URL.
+[Ollama](https://ollama.com/blog/openai-compatibility?trk=public_post_comment-text\&utm_source=chatgpt.com)
 
 For the sort of software development you do, I'd probably start here.
 
@@ -305,7 +364,8 @@ docker model pull ai/qwen2.5-coder
 docker model run ai/qwen2.5-coder
 ```
 
-and Docker manages the inference machinery for you. [Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
+and Docker manages the inference machinery for you.
+[Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
 
 Its architecture looks more like:
 
@@ -341,7 +401,8 @@ LLM model
 
 can all fit into your Docker-centric development environment.
 
-Docker Model Runner can pull models from Docker Hub or Hugging Face and can package GGUF/Safetensors models as **OCI artifacts**. [Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
+Docker Model Runner can pull models from Docker Hub or Hugging Face and can package GGUF/Safetensors models as
+**OCI artifacts**. [Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
 
 That becomes interesting for things like:
 
@@ -356,7 +417,8 @@ git repository
 
 You could reproduce a development environment much more systematically.
 
-Given your preference for automated/reproducible engineering environments, that's the aspect of Docker Model Runner I think you'd find most interesting.
+Given your preference for automated/reproducible engineering environments, that's the aspect of Docker Model Runner I
+think you'd find most interesting.
 
 ### 6. And Docker gives you a choice of actual inference engines
 
@@ -385,7 +447,8 @@ image models
 Stable Diffusion etc.
 ```
 
-Docker itself recommends `llama.cpp` for resource-efficient local development and vLLM where throughput matters. [Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
+Docker itself recommends `llama.cpp` for resource-efficient local development and vLLM where throughput matters.
+[Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
 
 So there's another subtle distinction:
 
@@ -421,7 +484,8 @@ localhost API
 your Python/TypeScript app
 ```
 
-It's ideal if what you're building should simply depend on an `LLMProvider`/`ModelGateway`-style abstraction and you don't want local inference infrastructure leaking into the application.
+It's ideal if what you're building should simply depend on an `LLMProvider`/`ModelGateway`-style abstraction and you
+don't want local inference infrastructure leaking into the application.
 
 **LM Studio → I'd keep it around for exploration.**
 
@@ -456,7 +520,8 @@ without requiring developers to separately install and configure Ollama.
 
 There's one architectural consequence here that I think is **much more important than which of these three you select**.
 
-If you're developing an application around local LLMs, I'd make the application largely unaware of Ollama/LM Studio/Docker:
+If you're developing an application around local LLMs, I'd make the application largely unaware of Ollama/LM
+Studio/Docker:
 
 ```text
                          ┌── OpenAI
@@ -470,13 +535,20 @@ Application → LLM port ──├── Anthropic
                          └── Docker Model Runner
 ```
 
-Since **all three local options now provide OpenAI-compatible APIs**, swapping between them can be nearly just a configuration change. Ollama supports OpenAI-compatible requests; LM Studio exposes `/v1/chat/completions`, `/v1/responses`, embeddings, etc.; and Docker Model Runner exposes compatible APIs as well. [Ollama](https://ollama.com/blog/openai-compatibility?trk=public_post_comment-text\&utm_source=chatgpt.com)
+Since **all three local options now provide OpenAI-compatible APIs**, swapping between them can be nearly just a
+configuration change. Ollama supports OpenAI-compatible requests; LM Studio exposes `/v1/chat/completions`,
+`/v1/responses`, embeddings, etc.; and Docker Model Runner exposes compatible APIs as well.
+[Ollama](https://ollama.com/blog/openai-compatibility?trk=public_post_comment-text\&utm_source=chatgpt.com)
 
-That lets you choose your **model independently from your inference runtime**, which is the separation I would want in the design.
+That lets you choose your **model independently from your inference runtime**, which is the separation I would want in
+the design.
 
-If you want, I can go one level deeper and compare **Ollama vs llama.cpp vs vLLM vs MLX vs Docker Model Runner**. That's actually the more technically interesting comparison, because there we'd be comparing the inference engines themselves and can talk about **tokens/sec, VRAM, batching, quantization and production suitability**.
+If you want, I can go one level deeper and compare **Ollama vs llama.cpp vs vLLM vs MLX vs Docker Model Runner**. That's
+actually the more technically interesting comparison, because there we'd be comparing the inference engines themselves
+and can talk about **tokens/sec, VRAM, batching, quantization and production suitability**.
 
 ## Ollama vs llama.cpp vs vLLM vs MLX vs Docker Model Runner
+
 There is a much more useful way to think about this than simply “Ollama vs vLLM”.
 
 ### The layers
@@ -509,9 +581,12 @@ Your application
        CPU / GPU / memory
 ```
 
-And this matters because **Ollama and Docker Model Runner are primarily higher-level runtimes**, whereas **llama.cpp, vLLM and MLX are closer to the actual computation**.
+And this matters because **Ollama and Docker Model Runner are primarily higher-level runtimes**, whereas
+**llama.cpp, vLLM and MLX are closer to the actual computation**.
 
-As of 2026, Ollama itself can use llama.cpp and MLX-based inference, while Docker Model Runner supports llama.cpp and vLLM for LLMs. [Ollama](https://registry.ollama.com/blog/improved-performance-and-model-support-with-gguf?utm_source=chatgpt.com)
+As of 2026, Ollama itself can use llama.cpp and MLX-based inference, while Docker Model Runner supports llama.cpp and
+vLLM for LLMs.
+[Ollama](https://registry.ollama.com/blog/improved-performance-and-model-support-with-gguf?utm_source=chatgpt.com)
 
 ### The comparison I would make
 
@@ -569,7 +644,8 @@ CPU   ███████
 split model between them
 ```
 
-CPU+GPU hybrid inference is one of its important advantages. [GitHub](https://github.com/ollama/ollama/issues/11247?utm_source=chatgpt.com)
+CPU+GPU hybrid inference is one of its important advantages.
+[GitHub](https://github.com/ollama/ollama/issues/11247?utm_source=chatgpt.com)
 
 Its other superpower is **GGUF quantization**.
 
@@ -585,7 +661,8 @@ Q3_K_M    ↓
 Q2_K      tiny
 ```
 
-llama.cpp supports weight quantization ranging from very low-bit representations through 8-bit and full precision. [GitHub](https://github.com/ollama/ollama/issues/11247?utm_source=chatgpt.com)
+llama.cpp supports weight quantization ranging from very low-bit representations through 8-bit and full precision.
+[GitHub](https://github.com/ollama/ollama/issues/11247?utm_source=chatgpt.com)
 
 This is why you often see:
 
@@ -620,7 +697,8 @@ That's outdated.
 - multimodal models
 - OpenAI-compatible APIs
 
-Continuous batching is enabled by default in its server. [GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md?utm_source=chatgpt.com)
+Continuous batching is enabled by default in its server.
+[GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md?utm_source=chatgpt.com)
 
 So llama.cpp can absolutely serve applications.
 
@@ -662,7 +740,9 @@ and becomes:
 
 That's what vLLM is designed around.
 
-It supports things such as **continuous batching, chunked prefill, prefix caching, PagedAttention, optimized CUDA/HIP execution, speculative decoding and multiple forms of distributed parallelism**. [vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
+It supports things such as **continuous batching, chunked prefill, prefix caching, PagedAttention, optimized CUDA/HIP
+execution, speculative decoding and multiple forms of distributed parallelism**.
+[vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
 
 For example, suppose three requests share a huge system prompt:
 
@@ -677,7 +757,8 @@ Request C:
 [10,000 token system prompt] + "Question C"
 ```
 
-vLLM can use prefix caching so that computation associated with identical prefixes can be reused rather than needlessly recomputed. [vLLM](https://docs.vllm.ai/en/latest/design/prefix_caching/?utm_source=chatgpt.com)
+vLLM can use prefix caching so that computation associated with identical prefixes can be reused rather than needlessly
+recomputed. [vLLM](https://docs.vllm.ai/en/latest/design/prefix_caching/?utm_source=chatgpt.com)
 
 This becomes very relevant for agents because you frequently have:
 
@@ -746,7 +827,8 @@ That's an oversimplification, but a useful one.
 
 ### 4. Quantization is another major difference
 
-This deserves special attention because people often attribute differences to the inference engine that are actually caused by **different representations of the model**.
+This deserves special attention because people often attribute differences to the inference engine that are actually
+caused by **different representations of the model**.
 
 Imagine comparing:
 
@@ -784,7 +866,9 @@ same sampling parameters
 
 and then change only the engine.
 
-vLLM now supports a substantial range of quantisation schemes too—FP8, INT8, INT4, AWQ, GPTQ, GGUF and others—so the historical “llama.cpp = quantized, vLLM = full precision” distinction isn't really valid anymore. [vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
+vLLM now supports a substantial range of quantisation schemes too—FP8, INT8, INT4, AWQ, GPTQ, GGUF and others—so the
+historical “llama.cpp = quantized, vLLM = full precision” distinction isn't really valid anymore.
+[vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
 
 ---
 
@@ -816,7 +900,8 @@ That's a very attractive architecture for large models.
 
 A Mac with 64 or 128 GB unified memory can therefore run models that would otherwise require enormous discrete-GPU VRAM.
 
-`mlx-lm` provides generation, quantisation, Hugging Face integration and even fine-tuning specifically on Apple Silicon. [GitHub](https://github.com/ml-explore/mlx-lm?pubDate=20260614\&utm_source=chatgpt.com)
+`mlx-lm` provides generation, quantisation, Hugging Face integration and even fine-tuning specifically on Apple Silicon.
+[GitHub](https://github.com/ml-explore/mlx-lm?pubDate=20260614\&utm_source=chatgpt.com)
 
 So if I had a high-memory Mac Studio, I would seriously investigate:
 
@@ -826,7 +911,8 @@ MLX-LM
 
 rather than automatically using llama.cpp.
 
-For your Ubuntu environment, however, **MLX-LM isn't the relevant standalone choice**; I'd concentrate primarily on llama.cpp/Ollama versus vLLM. [GitHub](https://github.com/ml-explore/mlx-lm?pubDate=20260614\&utm_source=chatgpt.com) 
+For your Ubuntu environment, however, **MLX-LM isn't the relevant standalone choice**; I'd concentrate primarily on
+llama.cpp/Ollama versus vLLM. [GitHub](https://github.com/ml-explore/mlx-lm?pubDate=20260614\&utm_source=chatgpt.com)
 
 ---
 
@@ -855,7 +941,8 @@ Think:
      └── API
 ```
 
-Ollama itself pins and integrates llama.cpp and adds compatibility and scheduling around it. [GitHub](https://github.com/ollama/ollama/blob/main/llama/README.md?utm_source=chatgpt.com)
+Ollama itself pins and integrates llama.cpp and adds compatibility and scheduling around it.
+[GitHub](https://github.com/ollama/ollama/blob/main/llama/README.md?utm_source=chatgpt.com)
 
 So instead of doing:
 
@@ -885,7 +972,9 @@ It's that it provides:
 
 Model discovery, downloading, configuration, hardware detection, lifecycle, API serving, etc.
 
-And Ollama has continued incorporating optimisations from llama.cpp; its 0.30 release, for example, added broader GGUF compatibility and improved NVIDIA performance while enabling Vulkan acceleration more broadly. [Ollama](https://registry.ollama.com/blog/improved-performance-and-model-support-with-gguf?utm_source=chatgpt.com)
+And Ollama has continued incorporating optimisations from llama.cpp; its 0.30 release, for example, added broader GGUF
+compatibility and improved NVIDIA performance while enabling Vulkan acceleration more broadly.
+[Ollama](https://registry.ollama.com/blog/improved-performance-and-model-support-with-gguf?utm_source=chatgpt.com)
 
 ---
 
@@ -1094,7 +1183,9 @@ many requests
 throughput matters
 ```
 
-vLLM's architecture is particularly geared toward the second case. It supports tensor, pipeline, data, expert and context parallelism for scaling inference across hardware. [vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
+vLLM's architecture is particularly geared toward the second case. It supports tensor, pipeline, data, expert and
+context parallelism for scaling inference across hardware.
+[vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
 
 ---
 
@@ -1137,7 +1228,9 @@ vLLM
 
 especially with one or more serious GPUs.
 
-Its current feature set includes continuous batching, prefix caching, PagedAttention, multiple quantisation formats, speculative decoding and extensive parallel/distributed inference. [vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
+Its current feature set includes continuous batching, prefix caching, PagedAttention, multiple quantisation formats,
+speculative decoding and extensive parallel/distributed inference.
+[vLLM](https://docs.vllm.ai/en/latest/?utm_source=chatgpt.com)
 
 For a **big Apple Silicon machine**:
 
@@ -1170,7 +1263,9 @@ I'd seriously consider:
 Docker Model Runner
 ```
 
-because **OCI model packaging and Docker integration are genuinely useful operational capabilities**, rather than inference-performance improvements. Docker Model Runner can package GGUF/Safetensors models as OCI artifacts and expose OpenAI/Ollama-compatible APIs. [Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
+because **OCI model packaging and Docker integration are genuinely useful operational capabilities**, rather than
+inference-performance improvements. Docker Model Runner can package GGUF/Safetensors models as OCI artifacts and expose
+OpenAI/Ollama-compatible APIs. [Docker Documentation](https://docs.docker.com/ai/model-runner/?utm_source=chatgpt.com)
 
 ---
 
@@ -1220,6 +1315,11 @@ vLLM
 
 without changing your domain/application code.
 
-The benchmark I'd actually run before making the choice is **same model + same quantization + same prompt**, and measure **time-to-first-token, generation tokens/sec, prompt-processing tokens/sec, RAM/VRAM consumption, and aggregate throughput at 1, 4 and 16 concurrent requests**. That would tell you vastly more than generic online “Ollama vs vLLM” benchmarks.
+The benchmark I'd actually run before making the choice is **same model + same quantization + same prompt**, and measure
+**time-to-first-token, generation tokens/sec, prompt-processing tokens/sec, RAM/VRAM consumption, and aggregate
+throughput at 1, 4 and 16 concurrent requests**. That would tell you vastly more than generic online “Ollama vs vLLM”
+benchmarks.
 
-And there is a particularly interesting next question here: **GGUF vs Safetensors, and Q4/Q5/Q8 vs FP8/BF16**. That is often *more consequential* than choosing Ollama versus llama.cpp, because it determines **how large a model you can actually run and how much intelligence you lose through quantization**.
+And there is a particularly interesting next question here: **GGUF vs Safetensors, and Q4/Q5/Q8 vs FP8/BF16**. That is
+often *more consequential* than choosing Ollama versus llama.cpp, because it determines
+**how large a model you can actually run and how much intelligence you lose through quantization**.

@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Convenciones de testing para el proyecto](#convenciones-de-testing-para-el-proyecto)
 
@@ -8,18 +8,20 @@
 
 Estoy siguiendo un ciclo de desarrollo de TDD.
 
-Para hacer la fase de "RED", tenemos que crear un test, que falle. 
+Para hacer la fase de "RED", tenemos que crear un test, que falle.
 
 La funcionalidad deseada y los archivos relacionados están indicados por el usuario.
 
 Ejecuta el test al final para comprobar que realmente no pasa.
 
 Recuerda estar en node 20, y como se ejecuta el test:
-```
+
+```text
 npx jest <PATH_TO_TEST_FILE>
 ```
 
 Al finalizar la tarea, indica escuetamente:
+
 - Modificaciones realizadas.
 - Resultado del test esperado y recibido, confirmando que el test falla por las razones adecuadas.
 
@@ -29,7 +31,7 @@ Convenciones de Testing para el proyecto chat-funnels:
 
 1. Logger de doubles en lugar de mocks directos
    - No usar: jest.mock('../../../../../src/logger', () => ({ logger: { warn: jest.fn() } }))
-   - Usar: import { logger } from '../../../../__DOUBLES__'
+   - Usar: import { logger } from '../../../../**DOUBLES**'
 
 2. No hacer clears explícitos de mocks
    - No usar: logger.info.mockClear()
@@ -40,15 +42,15 @@ Convenciones de Testing para el proyecto chat-funnels:
    - No hacer: Un test que verifique "no se programa Y se registra log"
    - Hacer: Tests separados dentro de un describe block:
      describe('when phoneNumber cannot be internationalized', () => {
-       test('does not schedule fazwaz suggestion', ...)
-       test('logs', ...)
+     test('does not schedule fazwaz suggestion', ...)
+     test('logs', ...)
      })
 
 4. Formato estructurado para logs
    - No usar: logger.info('mensaje', { params })
    - Usar: logger.info({
-       code: 'CODIGO_EN_MAYUSCULAS',
-       payload: entireRequest  // toda la request para debugging
+     code: 'CODIGO_EN_MAYUSCULAS',
+     payload: entireRequest // toda la request para debugging
      })
 
 5. Tipo de log: En caso de duda, consultar al usuario.
@@ -58,8 +60,8 @@ Convenciones de Testing para el proyecto chat-funnels:
 6. Pasar logger como dependencia
    - Incluir el logger en las dependencias del objeto a testear:
      const instance = XXXXX.create({
-       // otras dependencias,
-       logger
+     // otras dependencias,
+     logger
      })
 
 7. Utiliza método test(), no it()
@@ -70,4 +72,6 @@ Convenciones de Testing para el proyecto chat-funnels:
    - Preferir jest-when sobre `mockResolvedValue` directo cuando se validan argumentos
 
 9. Factories estáticas en lugar de constructores
-   - Preferir métodos estáticos `ClassName.create(dependencies = {})` para instanciar clases en producción y en tests, en lugar de usar `new ClassName(...)`. Asegúrate de que las clases nuevas expongan `static create()` y que los tests las creen mediante dicho método.
+   - Preferir métodos estáticos `ClassName.create(dependencies = {})` para instanciar clases en producción y en tests,
+     en lugar de usar `new ClassName(...)`. Asegúrate de que las clases nuevas expongan `static create()` y que los
+     tests las creen mediante dicho método.
