@@ -48,4 +48,6 @@
 
 ### Other resources
 
--
+- [The Claude certification exams: an honest review](https://www.linkedin.com/pulse/claude-certification-exams-honest-review-matthew-purcell-byo2e/)
+- [CCDV-F: Claude Certified Developer Foundations Exam and How I prepared for it](https://medium.com/@sridharcloud/ccdv-f-claude-certified-developer-foundations-exam-and-how-i-prepared-for-it-c25dda15ba1a)
+- Pass your Claude Certified Developer Foundation - Study Guide - CCDV-F Updated Certification
