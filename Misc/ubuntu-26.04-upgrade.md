@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+## Contents
 
 - [Ubuntu 24.04 to 26.04.1 LTS upgrade](#ubuntu-2404-to-26041-lts-upgrade)
   - [Resume the Claude Code session](#resume-the-claude-code-session)
@@ -266,6 +266,7 @@ Issues and fixes:
    (`~/.local/share/applications/streamdeck.desktop`). Only one instance can run; a second launch exits silently. Reopen
    the window from the top-bar icon → Configure.
    - Still to replace: buttons using `wmctrl -xa obs` (X11-only).
+   - Outdated: streamdeck-linux-gui was removed on 2026-10-22 (see Post-upgrade results).
 7. ksnip cannot capture on GNOME Wayland. Replaced by Gradia (Flathub `be.alexandervanhee.gradia`):
    - Command: `/usr/bin/flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE`
    - GNOME shortcut `Super+Shift+S`, and the Stream Deck "Annotate" button (page 2) with the Gradia logo.
@@ -354,7 +355,7 @@ Obsolete packages: 323 removed (answered y). Checked before confirming:
 Reinstall after the upgrade:
 
 - `pipx reinstall-all`: all pipx venvs (streamdeck-linux-gui, poetry, uv, black) were built for Python 3.12 and now
-  point to 3.14. Stream Deck will not start until this runs.
+  point to 3.14. Stream Deck will not start until this runs. (streamdeck-linux-gui removed on 2026-10-22.)
 - `sudo apt install pass` (`~/.password-store` is intact).
 - If needed: `wl-clipboard`, `graphviz`, `tldr`, `fastfetch` (replaces `neofetch`), newer Ruby or g++.
 
@@ -413,8 +414,9 @@ Done after the reboot:
   and `resolute-infra` ESM repos respond. Recheck in a few weeks: `sudo pro refresh && pro status`. Never paste the Pro
   token in notes.
 - **pipx**: `pipx reinstall-all` rebuilt streamdeck-linux-gui, poetry, uv and black on Python 3.14. Stream Deck launcher
-  icon path updated from `python3.12` to `python3.14` in `~/.local/share/applications/streamdeck.desktop`. Repeat both
-  after any Python version change.
+  icon path updated from `python3.12` to `python3.14` in `~/.local/share/applications/streamdeck.desktop`. Repeat
+  `pipx reinstall-all` after any Python version change. Outdated: streamdeck-linux-gui and its launcher were removed on
+  2026-10-22.
 - **Third-party repos re-enabled** (backup `/etc/apt/sources.list.d.bak-post-upgrade`):
   - `.sources` switched to `Enabled: yes`: 1Password, ChatGPT, Google Chrome, VS Code.
   - `.list.disabled` restored to `.list` (uncommented `deb` line): Claude Desktop, Kubernetes v1.37, NVIDIA container
@@ -466,13 +468,35 @@ Done after the reboot:
   - `xbindkeys` autostart disabled for this user with `~/.config/autostart/xbindkeys.desktop` (`Hidden=true`, overrides
     the package file `/etc/xdg/autostart/xbindkeys.desktop`); running process stopped. Undo: delete that file.
     `~/.xbindkeysrc` left in place.
+  - 2026-10-22: deleted stale autostart entries in `~/.config/autostart/`: `gnome-encfs-manager.desktop` and
+    `ulauncher.desktop` (programs not installed), `libinput-gestures.desktop` (X11 tool; GNOME gestures replace it).
+    Running `libinput-gestures` process stopped. The package is still installed; purge with
+    `sudo apt purge libinput-gestures` if nothing else needs it.
+  - 2026-10-22: streamdeck-linux-gui removed (pipx package was already gone). Deleted `~/.streamdeck_ui.json*` backups,
+    `~/.streamdeck_ui.log`, `~/.config/streamdeck-ui/`, `~/.config/autostart-streamdeck.desktop.bak`,
+    `~/.local/share/applications/streamdeck.desktop`. Kept `/etc/udev/rules.d/70-streamdeck.rules` (see Still to do).
+  - 2026-10-22: Copy 2 (`home-backup-2026-10-06`) deleted; data partition at 131 GB free.
+  - 2026-10-22: Timeshift snapshot deleted; `/` back to 78 GB free. Disabled PPA file
+    `gencfsm-ubuntu-ppa-jammy.sources` deleted. The `/etc/apt/sources.list.d.bak-*` and `/etc/pam.d.bak-*` backup folders
+    deleted.
 
-Still to do:
+Still to do (checked 2026-10-22):
 
+- Reboot: `sudo apt full-upgrade` done on 2026-10-22 (systemd, GNOME Shell); `/var/run/reboot-required` is set. The 46
+  packages still listed as upgradable are phased updates (Mutter, libadwaita, libvirt/QEMU); apt installs them when
+  the rollout reaches this machine.
+- More space on `/` if needed (77 GB free): `~/.cache` (29 GB), Docker (4.9 GB unused images, 4.4 GB unused volumes;
+  check volumes for hand-made data before `docker volume prune`).
+- `/root/nix-uninstall-backup`: delete once stable (not checked; readable only by root).
+- Stream Deck: trying StreamController (Flatpak `com.core447.StreamController`, autostarts) and OpenDeck. Only one app
+  can hold the device at a time. Pick one and remove the other. The OBS buttons (`obs-ctl`) need setting up again in
+  the chosen app. udev: OpenDeck's package installs `/etc/udev/rules.d/40-streamdeck.rules` (USB and hidraw). The
+  hand-made `70-streamdeck.rules` (USB only, from streamdeck-linux-gui) is redundant while OpenDeck is installed.
+  Delete it once the choice is made; if OpenDeck goes, StreamController needs its own rule with hidraw access.
+- Ubuntu Pro: `sudo pro refresh && pro status`.
+- Slimbook PPA: check for a `resolute` build.
+- NVIDIA container toolkit: test with a CUDA container.
 - After Wayland settles: decide on Gradia Capture extension, retest GNOME Terminal vs Ptyxis.
-- Backup folders to delete once stable: `/etc/apt/sources.list.d.bak-*`, `/etc/pam.d.bak-*`,
-  `/root/nix-uninstall-backup`.
-- Timeshift snapshot and Copy 2: delete per "When to delete the backups" (calendar reminder 2026-10-23).
 
 ## When to delete the backups
 
