@@ -413,6 +413,8 @@ Done after the reboot:
   attach survived the upgrade). `pro status` lists every service as `n/a` on 26.04 for now, although the `resolute-apps`
   and `resolute-infra` ESM repos respond. Recheck in a few weeks: `sudo pro refresh && pro status`. Never paste the Pro
   token in notes.
+  - 2026-10-22: `sudo pro refresh` fixed it. `esm-apps` and `esm-infra` enabled; `livepatch`, `landscape` and
+    `anbox-cloud` entitled but disabled (left off).
 - **pipx**: `pipx reinstall-all` rebuilt streamdeck-linux-gui, poetry, uv and black on Python 3.14. Stream Deck launcher
   icon path updated from `python3.12` to `python3.14` in `~/.local/share/applications/streamdeck.desktop`. Repeat
   `pipx reinstall-all` after any Python version change. Outdated: streamdeck-linux-gui and its launcher were removed on
@@ -433,6 +435,7 @@ Done after the reboot:
   `/etc/zshrc` share a name). `systemctl disable --now` already deleted the unit links, so the separate `rm` was
   skipped. Verified: no Nix lines in `/etc/zsh/zshrc`, no `/nix`, no `nixbld` users or group, zsh and bash start
   cleanly.
+  - 2026-10-22: backup `/root/nix-uninstall-backup/` deleted.
 - **GNOME Software "failed" unit**: started twice at first login (autostart + service), the second instance could not
   take the bus name. Harmless; cleared with `systemctl --user reset-failed gnome-software.service`.
   - 2026-10-22: it comes back at every login. Cause: `/etc/xdg/autostart/gnome-software-service.desktop` and
@@ -506,13 +509,11 @@ Still to do (checked 2026-10-22):
 - More space on `/` if needed (91 GB free): GPT4All models in `~/.cache/gpt4all` (6.4 GB), Docker images built locally
   (kata and devcontainer images, ~2 GB), unused Docker volumes (~1.8 GB). Two unnamed Postgres 15 volumes from 2023
   (`2942a2c7…`, `625435d7…`) hold one user database each; check before deleting.
-- `/root/nix-uninstall-backup`: delete once stable (not checked; readable only by root).
 - Stream Deck: trying StreamController (Flatpak `com.core447.StreamController`, autostarts) and OpenDeck. Only one app
   can hold the device at a time. Pick one and remove the other. The OBS buttons (`obs-ctl`) need setting up again in
   the chosen app. udev: OpenDeck's package installs `/etc/udev/rules.d/40-streamdeck.rules` (USB and hidraw). The
   hand-made `70-streamdeck.rules` (USB only, from streamdeck-linux-gui) is redundant while OpenDeck is installed.
   Delete it once the choice is made; if OpenDeck goes, StreamController needs its own rule with hidraw access.
-- Ubuntu Pro: `sudo pro refresh && pro status`.
 - Slimbook PPA: check for a `resolute` build.
 - NVIDIA container toolkit: test with a CUDA container.
 - After Wayland settles: decide on Gradia Capture extension, retest GNOME Terminal vs Ptyxis.
