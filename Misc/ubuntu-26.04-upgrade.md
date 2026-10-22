@@ -475,6 +475,9 @@ Done after the reboot:
   - 2026-10-22: streamdeck-linux-gui removed (pipx package was already gone). Deleted `~/.streamdeck_ui.json*` backups,
     `~/.streamdeck_ui.log`, `~/.config/streamdeck-ui/`, `~/.config/autostart-streamdeck.desktop.bak`,
     `~/.local/share/applications/streamdeck.desktop`. Kept `/etc/udev/rules.d/70-streamdeck.rules` (see Still to do).
+  - 2026-10-22: freed 14 GB on `/` (77 → 91 GB free). Deleted package caches in `~/.cache` (pip, yarn, typescript,
+    Homebrew, pkg, pypoetry, node-gyp, pnpm, mesa shader cache), 16 public Docker images, and two k3d volumes from 2023.
+    Kept: Whisper models (used by whisper-ctranslate2), GPT4All models, locally built images.
   - 2026-10-22: Copy 2 (`home-backup-2026-10-06`) deleted; data partition at 131 GB free.
   - 2026-10-22: Timeshift snapshot deleted; `/` back to 78 GB free. Disabled PPA file
     `gencfsm-ubuntu-ppa-jammy.sources` deleted. The `/etc/apt/sources.list.d.bak-*` and `/etc/pam.d.bak-*` backup folders
@@ -485,8 +488,9 @@ Still to do (checked 2026-10-22):
 - Reboot: `sudo apt full-upgrade` done on 2026-10-22 (systemd, GNOME Shell); `/var/run/reboot-required` is set. The 46
   packages still listed as upgradable are phased updates (Mutter, libadwaita, libvirt/QEMU); apt installs them when
   the rollout reaches this machine.
-- More space on `/` if needed (77 GB free): `~/.cache` (29 GB), Docker (4.9 GB unused images, 4.4 GB unused volumes;
-  check volumes for hand-made data before `docker volume prune`).
+- More space on `/` if needed (91 GB free): GPT4All models in `~/.cache/gpt4all` (6.4 GB), Docker images built locally
+  (kata and devcontainer images, ~2 GB), unused Docker volumes (~1.8 GB). Two unnamed Postgres 15 volumes from 2023
+  (`2942a2c7…`, `625435d7…`) hold one user database each; check before deleting.
 - `/root/nix-uninstall-backup`: delete once stable (not checked; readable only by root).
 - Stream Deck: trying StreamController (Flatpak `com.core447.StreamController`, autostarts) and OpenDeck. Only one app
   can hold the device at a time. Pick one and remove the other. The OBS buttons (`obs-ctl`) need setting up again in
