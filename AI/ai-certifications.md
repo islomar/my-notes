@@ -20,7 +20,6 @@
 
 - <https://mammothclub.com/courses?search=claude+certification>
   - You can buy it very cheap [from Humble Bundle](https://www.humblebundle.com/software/complete-claude-and-anthropic-certification-bundle-software)
-- [O'Reilly - Claude Certified Developer - Foundations Exam Prep: A Two-Hour Crash Course](https://www.oreilly.com/live-events/claude-certified-developer-foundations-exam-prep-a-two-hour-crash-course/0642572438371/)  
 
 ### Free
 
@@ -51,3 +50,5 @@
 - [The Claude certification exams: an honest review](https://www.linkedin.com/pulse/claude-certification-exams-honest-review-matthew-purcell-byo2e/)
 - [CCDV-F: Claude Certified Developer Foundations Exam and How I prepared for it](https://medium.com/@sridharcloud/ccdv-f-claude-certified-developer-foundations-exam-and-how-i-prepared-for-it-c25dda15ba1a)
 - Pass your Claude Certified Developer Foundation - Study Guide - CCDV-F Updated Certification
+- [LinkedIn post from someone sharing their experience passing the exam](https://lnkd.in/p/er-6yWk7)
+  - [Claude Certified Architect: The Only AI Certification You Need to Get a $150K+ AI Job](https://www.youtube.com/watch?v=eslH5LrXkMg) - YouTube video, 1h 15m
