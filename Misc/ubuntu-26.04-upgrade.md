@@ -435,6 +435,13 @@ Done after the reboot:
   cleanly.
 - **GNOME Software "failed" unit**: started twice at first login (autostart + service), the second instance could not
   take the bus name. Harmless; cleared with `systemctl --user reset-failed gnome-software.service`.
+  - 2026-10-22: it comes back at every login. Cause: `/etc/xdg/autostart/gnome-software-service.desktop` and
+    `org.gnome.Software.desktop` are obsolete 22.04 conffiles (`dpkg-query -W -f='${Conffiles}' gnome-software` marks
+    them `obsolete`). In 26.04 GNOME Software starts through D-Bus activation of the static
+    `gnome-software.service`. The old autostart entries take the bus name first, so the service fails.
+    Fixed: both files backed up to `/root/xdg-autostart-backup-2026-10-22/` and deleted. Tested with D-Bus activation
+    (`busctl --user call org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus StartServiceByName su
+    org.gnome.Software 0`): `gnome-software.service` active, no failed user units.
 - **NVIDIA transitional packages**: `nvidia-driver-515` (22.04) pointed to 535, which in 26.04 points to 580. Both 535
   and 580 were marked auto, so removing 515 would have let `autoremove` delete the real driver. Fixed with
   `sudo apt-mark manual nvidia-driver-580` before `apt purge nvidia-driver-515`.
@@ -478,6 +485,10 @@ Done after the reboot:
   - 2026-10-22: freed 14 GB on `/` (77 → 91 GB free). Deleted package caches in `~/.cache` (pip, yarn, typescript,
     Homebrew, pkg, pypoetry, node-gyp, pnpm, mesa shader cache), 16 public Docker images, and two k3d volumes from 2023.
     Kept: Whisper models (used by whisper-ctranslate2), GPT4All models, locally built images.
+  - 2026-10-22: `sudo apt full-upgrade` and reboot. Checked after the reboot: kernel 7.0.0-38, Wayland, GNOME Shell
+    50.1, systemd 259.9, NVIDIA 580.178.04, DKMS modules built for both kernels, Docker containers up, Dropbox up to
+    date, 93 GB free on `/`. The 46 packages still listed as upgradable are phased updates (Mutter, libadwaita,
+    libvirt/QEMU); apt installs them when the rollout reaches this machine.
   - 2026-10-22: Copy 2 (`home-backup-2026-10-06`) deleted; data partition at 131 GB free.
   - 2026-10-22: Timeshift snapshot deleted; `/` back to 78 GB free. Disabled PPA file
     `gencfsm-ubuntu-ppa-jammy.sources` deleted. The `/etc/apt/sources.list.d.bak-*` and `/etc/pam.d.bak-*` backup folders
@@ -485,9 +496,13 @@ Done after the reboot:
 
 Still to do (checked 2026-10-22):
 
-- Reboot: `sudo apt full-upgrade` done on 2026-10-22 (systemd, GNOME Shell); `/var/run/reboot-required` is set. The 46
-  packages still listed as upgradable are phased updates (Mutter, libadwaita, libvirt/QEMU); apt installs them when
-  the rollout reaches this machine.
+- GNOME Software: after the next login, confirm `systemctl --user --failed` is empty. Then delete
+  `/root/xdg-autostart-backup-2026-10-22/`.
+- 163 obsolete conffiles from 22.04 remain in `/etc` (list them with `dpkg-query -W -f='${Package}\n${Conffiles}\n'`
+  and look for `obsolete`). Only the GNOME Software ones have a visible effect. Others worth a look: `/etc/dbus-1/system.d/`
+  files of dnsmasq-base, switcheroo-control, thermald, usb-creator-common; `/etc/profile.d/Z99-cloud*.sh`.
+- `/etc/udev/rules.d/60-brother-libsane-type1-inst.rules:14` uses the removed `SYSFS` key; udev logs an error at each
+  boot. Matters only for a Brother scanner.
 - More space on `/` if needed (91 GB free): GPT4All models in `~/.cache/gpt4all` (6.4 GB), Docker images built locally
   (kata and devcontainer images, ~2 GB), unused Docker volumes (~1.8 GB). Two unnamed Postgres 15 volumes from 2023
   (`2942a2c7…`, `625435d7…`) hold one user database each; check before deleting.
