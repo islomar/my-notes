@@ -97,7 +97,7 @@
 - **Large Language Models & the Brain**
   - 7 international giants with their Foundational Large Language Models (**"Engines"**):
     - Google: Gemini -- 1 million tokens
-    - Amazon: Claude (from Antrhopic) - 200k tokens
+    - Amazon: Claude (from Anthropic) - 200k tokens
     - Microsoft: ChatGPT (from OpenAI) - 128k tokens
     - Meta: LLaMA 3 (70k tokens)
     - Twitter: Grok

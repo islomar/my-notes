@@ -54,14 +54,14 @@
 - <https://s172-29-127-134p8888.lab-aws-production.deeplearning.ai/doc/tree/L3>
 - [Guide on how to implement tool use](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview#how-to-implement-tool-use)
 - The code is in
-  [L3_Chatbot_Example_MCP_Antrhopic_course.ipynb](./mcp-course-by-anthropic/L3_Chatbot_Example_MCP_Antrhopic_course.ipynb)
+  [L3_Chatbot_Example_MCP_Anthropic_course.ipynb](./mcp-course-by-anthropic/L3_Chatbot_Example_MCP_Anthropic_course.ipynb)
 
 ## Lesson 4: Creating an MCP Server
 
 - We will wrap what we did in the last section and wrap it in an MCP server using the standard IO transport.
 - We will use FastMCP
 - The code is in
-  [L4_Creating_an_MCP_server_Antrhopic_course.ipynb](./mcp-course-by-anthropic/L4_Creating_an_MCP_server_Antrhopic_course.ipynb)
+  [L4_Creating_an_MCP_server_Anthropic_course.ipynb](./mcp-course-by-anthropic/L4_Creating_an_MCP_server_Anthropic_course.ipynb)
 - After following the instructions, we run an MCP inspector, accessible at
   <https://s172-29-127-134p6274.lab-aws-production.deeplearning.ai/#resources>
 - Steps:
@@ -84,7 +84,7 @@ npx @modelcontextprotocol/inspector uv run research_server.py
 
 ## Lesson 5: Creating an MCP Client
 
-- [Code example](mcp-course-by-anthropic/L5_MCP_Client_Antrhopic_course.ipynb)
+- [Code example](mcp-course-by-anthropic/L5_MCP_Client_Anthropic_course.ipynb)
 - In the example, the MCP client starts a local MCP server with `uv run research_server.py`
 - The MCP client connects to the MCP server
 - The MCP_ChatBot class consists of the methods:
