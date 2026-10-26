@@ -32,8 +32,6 @@
 
 ## General
 
-- [TDD and Generative AI – A Perfect Pairing?](https://www.youtube.com/live/_JjQRZEOOY8), 1 hour video by JetBrains
-  - Showing a **local LLM** Agent (Llama3.1), a tool "Test Driven Generator"
 - [RepoMix](https://github.com/yamadashy/repomix)
   - 📦 Repomix is a powerful tool that **packs your entire repository into a single, AI-friendly file**.
   - It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude,
