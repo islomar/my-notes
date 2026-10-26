@@ -8,7 +8,7 @@
     - [LLMs](#llms)
   - [List of AI coding assistants and tools](#list-of-ai-coding-assistants-and-tools)
   - [General AI Agents](#general-ai-agents)
-    - [Antrhopic Claude](#antrhopic-claude)
+    - [Anthropic Claude](#anthropic-claude)
     - [Cursor](#cursor)
     - [JetBrains Junie](#jetbrains-junie)
     - [GitHub Copilot](#github-copilot)
@@ -130,7 +130,7 @@
 - [warp](https://www.warp.dev/)
   - Warp is the fastest way to build with multiple AI agents—from writing code to shipping it.
 
-### Antrhopic Claude
+### Anthropic Claude
 
 - [A practical guide to the Claude code context window size](https://www.eesel.ai/blog/claude-code-context-window-size)
   - "Lost in the middle" problem
@@ -415,7 +415,7 @@ screencast using Ollama
   - "use ./speak.sh tool to talk to me out loud when you warn me about issues"  
 - Semantic zoom
   - We can zoom in and out of text
-    - Make it more succint
+    - Make it more succinct
     - Make it shorter
     - Give me a TLDR of this
     - Tell me more about...
