@@ -93,7 +93,7 @@ npx @modelcontextprotocol/inspector uv run research_server.py
   - `connect_to_server_and_run`
 - ... and has the following attributes:
   - session (of type ClientSession)
-  - anthropic: Anthropic
+  - `anthropic`: Anthropic
   - available_tools
 - In `connect_to_server_and_run`, the client launches the server and requests the list of tools that the server provides
   (through the client session). The tool definitions are stored in the variable available_tools and are passed in to the
@@ -116,7 +116,7 @@ uv run mcp_chatbot.py
 ```
 
 - Other resources
-  - [Quick Start for Client Developpers](https://modelcontextprotocol.io/quickstart/client)
+  - [Quick Start for Client Developers](https://modelcontextprotocol.io/quickstart/client)
   - [Writing MCP client](https://github.com/modelcontextprotocol/python-sdk/blob/main/examples/clients/simple-chatbot/mcp_simple_chatbot/main.py)  
   - Another mcp chatbot example
 
@@ -147,7 +147,7 @@ uv run mcp_chatbot.py
 ## Lesson 9: Creating and deploying remote servers
 
 - We use [Render](https://render.com/) to deploy our MCP Server.
-  - It does not suppor `uv`, so we need to make it compatible with pip:
+  - It does not support `uv`, so we need to make it compatible with pip:
     `uv pip compile pyproject.toml > requirements.txt`
   - We also do `echo "python-3.11.11" > runtime.txt`
 - We need a GitHub repository so that Render deploys it from there.  

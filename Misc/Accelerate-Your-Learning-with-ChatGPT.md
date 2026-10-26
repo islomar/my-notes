@@ -53,7 +53,7 @@
   - [Suno: make a song about anything](https://suno.com/)
   - It introduced the idea of the **Transformer**, which has two main components in it:
     - The encoder: where we take in the information, e.g. the prompt
-    - The decoder: which spits out the ouput
+    - The decoder: which spits out the output
 - **Translation**: an act, process, or instance of translating; such as:
   - a rendering from one language into another
   - a change to a different substance, form, or appearance: **conversion**
@@ -104,7 +104,7 @@
     - LinkedIn (Microsoft): Inflection Pi
     - Baidu: ERNIE
     - Alibaba: Tongyi Qianwen
-    - Tencen: Hunyuan
+    - Tencent: Hunyuan
   - There are 149 foundational LLMs released in 2023 alone.
   - **Context window**: number of tokens (how many words at a time can this model take in)
     - [Most devs don’t understand how context windows work (Matt Pocock)](https://www.youtube.com/watch?v=-uW5-TaVXu4)
@@ -114,18 +114,18 @@
       - And it doesn't only matter the input size: there must bu room for the output as well.
     - The LLM can't remember information outside the context window.
   - It's always good to **tell your engine to become an expert** in whatever subject is involved in your query.
-  - Two pathaways, two ways of learning:
+  - Two pathways, two ways of learning:
     - Hippocampus learning, declarative, going from the working memory to the long-term one. Conscious learning.
       Deliberative thinking.
     - Basal ganglia. Unconscious learning, more experiential. Automatic way of thinking. Deep neural network.
       - Not only for physical activities, it also happens with maths, for example.
       - The automatic system gets less powerful when we grow older.
   - AI **hallucinations** or confabulations.
-    - AI does not have the conscious hippocampus way of learning, only the experiental one. Odd outputs. Like a human
+    - AI does not have the conscious hippocampus way of learning, only the experiential one. Odd outputs. Like a human
       with prefrontal cortex damaged.
 - **Learning in the Age of AI: More than "Cheating Lightly"**
   - [The Flynn Effect](https://en.wikipedia.org/wiki/Flynn_effect): IQ tests are updated periodically. Raise from 30s to
-    70s (educatoin?). Decline from 70s (she thinks related with things like calculators and stopping learning and
+    70s (education?). Decline from 70s (she thinks related with things like calculators and stopping learning and
     understanding some things).
   - You can get practice materials from ChatGPT and alike. It's easier to learn.
 - **Prompting for Options & Perspectives, Not Answers**
@@ -154,13 +154,13 @@
 
 - **Mapping the Landscape of Large Language Models and GenAI Learning**
   - ChatGPT:
-    - Writing assistants: Jjenni, Grammarly, Writesonic, Jasper
+    - Writing assistants: Jenni, Grammarly, Writesonic, Jasper
     - Research: Quivr, Consensus, Elicit, Explainpaper, scite_, keenious, scholarcy, Connected papers, Semantic scholar,
       ResearchRabbit.
     - Live to Internet: Copilot, Plus AI (PowerPoint maker).
     - Teachers and instructors: Magic school, Eduaide.ai, TeachMateAI.
     - Creative productivity platforms: Canva, Gamma
-    - Imagery: Dall-E, Midjourney, Stable Difussion
+    - Imagery: Dall-E, Midjourney, Stable Diffusion
   - Gemini
     - Video: Pika, runaway, Kapwing, synthesia
   - LLaMa
@@ -173,9 +173,9 @@
   - Training data
     - ChatGPT trained on a massive internet dataset.
     - Meta AI trained on subset of internet, focused on conversational and interactive data.
-    - Semantich Scholar trained on 200 million research papers
+    - Semantic Scholar trained on 200 million research papers
   - Tuning:
-    - Differently optimized for in-depth versus converstaional responses and other factors
+    - Differently optimized for in-depth versus conversational responses and other factors
   - Personality
 - **AI-Driven Learning: Maximizing Retrieval Practice**
   - **Retrieval practice**: much better for learning than any other approach.
@@ -184,7 +184,7 @@
     - [Pretesting Reduces Mind Wandering and Enhances Learning During Online Lectures](https://www.researchgate.net/publication/347120870_Pretesting_Reduces_Mind_Wandering_and_Enhances_Learning_During_Online_Lectures)
     - Often you don't know what is actually important among the things that you want to learn...
     - Quiz done BEFORE starting to study.
-  - Ask for the "key ideas" to help caffold your learning.
+  - Ask for the "key ideas" to help scaffold your learning.
   - Example: "Can you provide a three-page synopsis in layperson's terms of the attached document?"
     - layperson=lego
     - <https://abreevy8.io>
@@ -242,12 +242,12 @@
     - Diffuse mode
       - The task-negative network
       - e.g. wandering mind, daydreaming
-  - Pinbal metaphor to understand those two ways of learning and thinking.
+  - Pinball metaphor to understand those two ways of learning and thinking.
   - Dopamine: anticipatory hormone and neurons.
-  - Hooks and curiosity suppress diffues mode and enhace focus.
+  - Hooks and curiosity suppress diffuse mode and enhance focus.
   - Ask genAI for ideas to provoke curiosity!
 - **Multimodal prompting discovery**
-  - E.g. tranlating imagery into information.
+  - E.g. translating imagery into information.
   - Examples:
     - "I'm going to take pictures of things. And whenever I take pictures of things, you give me a crazy, fun, totally
       unique new game that I could play with them."
@@ -258,7 +258,7 @@
 - **GenAI as a creative catalyst: supplementing working memory**
   - Working memory: the part of your memory holding something temporarily.
   - Long-term memory: the memory we hold all around our neocortex.
-    - Neocortex: the thin surface of the brain whre many of our memories are stored.
+    - Neocortex: the thin surface of the brain where many of our memories are stored.
 - **The importance of classical study & memorization with respect to prompts**
   - Example: "Write a letter to my boss asking for a raise **in the style of** William Faulkner"
   - Example: "Create a SWOT analysis of this presentation"
