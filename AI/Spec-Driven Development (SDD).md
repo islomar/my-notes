@@ -6,6 +6,20 @@
   - [Tools](#tools)
   - [Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl - 15.10.2025](#understanding-spec-driven-development-kiro-spec-kit-and-tessl---15102025)
   - [Course Spec-Driven Development with Coding Agents](#course-spec-driven-development-with-coding-agents)
+    - [Practical example](#practical-example)
+    - [Course Summary](#course-summary)
+      - [Core Idea](#core-idea)
+      - [Key Concepts by Lesson](#key-concepts-by-lesson)
+        - [Why SDD (L1)](#why-sdd-l1)
+        - [Workflow Overview (L2)](#workflow-overview-l2)
+        - [The Constitution (L4)](#the-constitution-l4)
+        - [Feature Loop (L5–L7)](#feature-loop-l5l7)
+        - [Replanning (L8)](#replanning-l8)
+        - [MVP (L10)](#mvp-l10)
+        - [Legacy / Brownfield Projects (L11)](#legacy--brownfield-projects-l11)
+        - [Custom Workflows / Skills (L12)](#custom-workflows--skills-l12)
+        - [Agent Replaceability (L13)](#agent-replaceability-l13)
+      - [SDD Workflow at a Glance](#sdd-workflow-at-a-glance)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -81,4 +95,122 @@
   ![SDD feature process](images/sdd-feature-process.png)
 - After each feature, there is a replanning phase to revisit and improve the constitution, update the roadmap, etc.
   ![SDD project evolution](images/sdd-project-evolution.png)
-- TBD  
+- Set up your environment: <https://github.com/https-deeplearning-ai/sc-spec-driven-development-files>
+  - Fork created: <https://github.com/islomar/sc-spec-driven-development-files>
+
+### Practical example
+
+- <https://github.com/https-deeplearning-ai/sc-spec-driven-development-files/tree/main/Video05_Creating_the_Constitution>
+  - Prompts 1-3 initially delivered to create the Constitution
+- <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video06_Feature_Specification>
+  - It asked to create a branch for the plan for the first phase under `roadmap.md`
+  - It reviewed the docs generated before committing them:
+    - `requirements.md`
+    - `plan.md`
+    - `validation.md`
+  - It prompts any change, not doing it directly on the code.
+- <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video07_Feature_Implementation>
+- "Implement the remaining task groups."
+
+### Course Summary
+
+- <https://community.deeplearning.ai/t/course-summary-additional-walkthrough-material/891884?u=islomar>
+
+#### Core Idea
+
+Instead of vibe coding (prompt → hope → fix → repeat), you write a **specification** first. The spec is the “brain”; the agent is the “muscle.”
+
+-–
+
+#### Key Concepts by Lesson
+
+##### Why SDD (L1)
+
+Vibe coding doesn’t scale. Specs create a persistent artifact that survives context window resets, reduces cognitive overhead, and improves how accurately the agent matches your intent.
+
+##### Workflow Overview (L2)
+
+Three layers:
+
+- **Constitution** — project-level
+
+- **Feature specs** — feature-level
+
+- **Replanning** — between features
+
+Analogy: you’re the architect with blueprints; the agent is the builder.
+
+##### The Constitution (L4)
+
+Three files written *with* the agent in conversation:
+
+- `mission.md` — why + who
+
+- `tech-stack.md` — how it’s built
+
+- `roadmap.md` — what and in what order
+
+##### Feature Loop (L5–L7)
+
+For each feature: **Plan → Implement → Validate**
+
+- Each step happens in a fresh agent context
+
+- Work in its own Git branch
+
+- Spec files are committed alongside code
+
+##### Replanning (L8)
+
+Between features, update the constitution and roadmap. Catch drift before it compounds.
+
+- Small scope changes → do it now
+
+- Large scope → schedule on roadmap
+
+##### MVP (L10)
+
+Once your constitution and early feature specs are solid, you can tell the agent to implement the rest of the roadmap at once. Treat it as a stress test of your specs.
+
+##### Legacy / Brownfield Projects (L11)
+
+Same process — the agent reverse-engineers a constitution from existing code, READMEs, and TODOs. Then continue with the normal feature loop.
+
+##### Custom Workflows / Skills (L12)
+
+Automate repetitive SDD prompts using **Agent Skills** (a standardized format). Skills can be project-scoped or global. MCP servers are being partly replaced by Skills + CLI tools.
+
+##### Agent Replaceability (L13)
+
+By following open standards (AGENTS.md, Agent Skills, MCP, ACP), your workflow isn’t locked to one agent or IDE.
+
+-–
+
+#### SDD Workflow at a Glance
+
+```text
+
+Constitution (once)
+
+└── mission.md
+
+└── tech-stack.md
+
+└── roadmap.md
+
+Feature loop (repeating)
+
+└── Plan → feature spec (plan + requirements + validation criteria)
+
+└── Implement → agent builds in a branch
+
+└── Validate → human reviews, tests, commits, merges
+
+Replanning (between features)
+
+└── Update constitution if needed
+
+└── Revise roadmap
+
+└── Improve your workflow (skills, automation)  
+```

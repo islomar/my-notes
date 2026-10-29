@@ -61,6 +61,7 @@
 - <https://www.skills.sh/juliusbrussee/caveman/caveman>
 - <https://skills.wheresryan.sh/anatomy>
   - Name an idea in one line, and Claude draws the machine that does it.
+- <https://github.com/sergebulaev/linkedin-skills>  
 
 ## AI and Product Management
 
