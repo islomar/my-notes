@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+## Contents
 
 - [AI Code Assistants & LLMs](#ai-code-assistants--llms)
   - [General](#general)
@@ -32,10 +32,6 @@
 
 ## General
 
-- [RepoMix](https://github.com/yamadashy/repomix)
-  - 📦 Repomix is a powerful tool that **packs your entire repository into a single, AI-friendly file**.
-  - It is perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude,
-    ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.
 - [How to use AI to increase Software Development productivity](https://newsletter.eng-leadership.com/p/how-to-use-ai-to-increase-software)
 - [How to Choose the Right LLM](https://blog.jetbrains.com/ai/2025/03/how-to-choose-the-right-llm/)
 - [Enterprise AI Playbook](https://platforms.substack.com/p/how-to-win-at-enterprise-ai-a-playbook)
