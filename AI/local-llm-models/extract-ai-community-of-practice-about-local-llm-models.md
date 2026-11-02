@@ -37,16 +37,14 @@ There are several layers that are easy to mix up.
 
 A **model** is something like Qwen, Gemma, Llama, Mistral, DeepSeek, etc. These are the neural-network weights.
 
-A **runtime/inference engine** is the software that actually executes those weights on your CPU/GPU. The important names
-you'll encounter are:
+A **runtime/inference engine** is the software that actually executes those weights on your CPU/GPU. The important names you'll encounter are:
 
 - **llama.cpp** — low-level, extremely important ecosystem component; optimized local inference, especially with GGUF
   models.
 - **Ollama** — much friendlier model/runtime manager built to make local inference feel almost like Docker: `pull`,
   `run`, API, etc.
 - **LM Studio** — GUI-oriented local model manager/chat/API server.
-- **vLLM** — more oriented toward high-throughput model serving, particularly servers/GPUs rather than experimenting on
-  a laptop.
+- **vLLM** — more oriented toward high-throughput model serving, particularly servers/GPUs rather than experimenting on a laptop.
 
 Then there are **harnesses/agents** such as OpenCode, Pi, Hermes, Claude Code, Codex, etc. They can use an LLM as their
 “brain,” but they are not themselves the model.

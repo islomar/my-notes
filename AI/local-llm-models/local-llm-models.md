@@ -34,6 +34,7 @@
     - [10. Latency and throughput are NOT the same thing](#10-latency-and-throughput-are-not-the-same-thing)
     - [11. So which would I choose?](#11-so-which-would-i-choose)
     - [The recommendation I'd make for you](#the-recommendation-id-make-for-you)
+  - [Local agentic AI on Mac](#local-agentic-ai-on-mac)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -1323,3 +1324,32 @@ benchmarks.
 And there is a particularly interesting next question here: **GGUF vs Safetensors, and Q4/Q5/Q8 vs FP8/BF16**. That is
 often *more consequential* than choosing Ollama versus llama.cpp, because it determines
 **how large a model you can actually run and how much intelligence you lose through quantization**.
+
+## Local agentic AI on Mac
+
+- [WWDC26: Run local agentic AI on the Mac using MLX | Apple](https://www.youtube.com/watch?v=wykPErJ8M-8)
+  - Example with MLX running the model and OpenCode as agent
+  - [MLX](https://mlx-framework.org/)
+    - MLX is an array framework for efficient and flexible machine learning on Apple silicon
+    - The design of MLX is inspired by frameworks like PyTorch, Jax, and ArrayFire. A notable difference from these
+      frameworks and MLX is the **unified memory model**. Arrays in MLX live in **shared memory**. Operations on MLX
+      arrays can be performed on any of the supported device types without performing data copies. Currently supported
+      device types are the CPU and GPU.
+    - <https://ml-explore.github.io/mlx/build/html/index.html>
+  - **Local agentic AI stack**
+    - In the base: MLX
+    - MLX-LM
+      - <https://github.com/ml-explore/mlx-lm>
+      - MLX LM is a Python package for generating text and fine-tuning large language models on Apple silicon with MLX.
+    - MLX-LM Server
+      - OpenAI compatible HTTP server
+      - Ollama, LM Studio or vLLM can live at the same level than the MLX-LM server
+    - Local agent
+      - Any framework or tool that talks the OpenAI standard protocol
+  - Challenges
+    - prompt processing
+    - concurrency
+      - continuous batching
+    - model size
+      - models can be too large to fit in memory
+      - MLX can distribute the model in multiple machines (distributed inference)
