@@ -100,17 +100,24 @@
 
 ### Practical example
 
-- <https://github.com/https-deeplearning-ai/sc-spec-driven-development-files/tree/main/Video05_Creating_the_Constitution>
+- **Creating the constitution**
+  - <https://github.com/https-deeplearning-ai/sc-spec-driven-development-files/tree/main/Video05_Creating_the_Constitution>
   - Prompts 1-3 initially delivered to create the Constitution
-- <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video06_Feature_Specification>
+- **Feature specification**
+  - <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video06_Feature_Specification>
   - It asked to create a branch for the plan for the first phase under `roadmap.md`
   - It reviewed the docs generated before committing them:
     - `requirements.md`
     - `plan.md`
     - `validation.md`
   - It prompts any change, not doing it directly on the code.
-- <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video07_Feature_Implementation>
-- "Implement the remaining task groups."
+- **Feature implementation**
+  - <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video07_Feature_Implementation>
+  - "Implement the remaining task groups."
+- **Feature validation**
+  - <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video08_Feature_Validation>
+  - TBD
+-
 
 ### Course Summary
 
