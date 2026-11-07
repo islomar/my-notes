@@ -6,7 +6,7 @@
   - [General](#general)
   - [🚀 ¿Cómo empezar con la Inteligencia Artificial como Developer?](#-cómo-empezar-con-la-inteligencia-artificial-como-developer)
     - [Conceptos de integración con IA](#conceptos-de-integración-con-ia)
-    - [Primeros pasos con OLLaMA](#primeros-pasos-con-ollama)
+    - [Primeros pasos con Ollama](#primeros-pasos-con-ollama)
     - [Desmitifica apps con IA: LangChain vs ModelFusion](#desmitifica-apps-con-ia-langchain-vs-modelfusion)
   - [💡 Arquitectura de software: Cómo encaja la IA en tu app](#-arquitectura-de-software-cómo-encaja-la-ia-en-tu-app)
   - [👤 Caso práctico: Perfil de usuario con sugerencias de cursos](#-caso-práctico-perfil-de-usuario-con-sugerencias-de-cursos)
@@ -65,14 +65,14 @@
   - [LlaMAcpp](https://github.com/ggml-org/llama.cpp) es el más conocido, genera un binario.
     - Sirve para varios modelos, no sólo para LLaMA.
   - Quiero desplegarlo, normalmente necesitas varios servidores. Muy caro en la nube.
-  - **OLLaMa** es la más famosa abstracción sobre LLaMA hoy en día. Por debajo usa LLaMAcpp.
+  - **Ollama** es la más famosa abstracción sobre LLaMA hoy en día. Por debajo usa LLaMAcpp.
     - Ofrece un API HTTP
 - **SDKs**
   - Abstracción que facilita la integración
   - **LangChain**: para JS y Python (ciudadano de primer nivel), el más famoso
     - **LangChain4j**: para JVM
     - Permitir aplicar técnicas de RAG, donde se complementa la información del modelo con tu propia "base de datos".
-    - Puede interactuar con las APIs de OLLaMA y similar, pero también con los modelos directamente.
+    - Puede interactuar con las APIs de Ollama y similar, pero también con los modelos directamente.
   - **Resonance**: para PHP
   - **XEF.ai**: para Kotlin
   - **ModelFusion**: para JS/TS, también recomendado por LLaMAcpp
@@ -80,7 +80,7 @@
     quickly and easily into your apps
     - [Introducing new Ollama Connector for Local Models](https://devblogs.microsoft.com/semantic-kernel/introducing-new-ollama-connector-for-local-models/)
 
-### Primeros pasos con OLLaMA
+### Primeros pasos con Ollama
 
 - [Código fuente](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/tree/main/01-intro/2-ollama)
 - <https://ollama.com/>
@@ -166,7 +166,7 @@
 
 - [InMemoryEventBus](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/05-event_driven/2-llm_with_domain_events/src/contexts/shared/infrastructure/domain_event/InMemoryEventBus.ts#L9-L9)
 
-![ports and adapters with llm](ai-best-practices-codelytv/ports_and_adapters_with_llm.png)
+![ports and adapters with LLM](ai-best-practices-codelytv/ports_and_adapters_with_llm.png)
 
 - Queremos quitarnos la dependencia de Ollama en tiempo de búsqueda, para evitar tiempos de espera adicionales, mayor
   coste, etc.

@@ -72,7 +72,7 @@
 - La **comparación** del embedding se haría en la propia base de datos, pero la **generación** puede ser en la DB o
   llamando a un LLM o...
 - **Embedding models** (to generate the embedding/vector)
-  - `nomic-embed-text` vector(768): te lo puedes montar en local con OLlamA,
+  - `nomic-embed-text` vector(768): te lo puedes montar en local con Ollama,
     <https://ollama.com/library/nomic-embed-text>
   - `text-embedding-3-small` vector(1536): de OpenAI
   - `text-embedding-3-large` vector(3072): de OpenAI

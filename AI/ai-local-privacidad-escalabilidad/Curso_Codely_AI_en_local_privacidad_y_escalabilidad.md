@@ -164,8 +164,8 @@
 - Even better: Dockerize, so that the same works for the CI pipeline and for local development
   - [compose.yml](https://github.com/CodelyTV/ai-local_models-course/blob/main/04-prod/1-ollama_ci/2-docker/compose.yml#L14)
   - I relies also on
-    [ollama-entrypoint.sh](https://github.com/CodelyTV/ai-local_models-course/blob/main/04-prod/1-ollama_ci/2-docker/etc/ollama/ollama-entrypoint.sh)
-    - Descarga los modelos con un retry básico, y arranca el servidor de ollama
+    [`ollama-entrypoint.sh`](https://github.com/CodelyTV/ai-local_models-course/blob/main/04-prod/1-ollama_ci/2-docker/etc/ollama/ollama-entrypoint.sh)
+    - Descarga los modelos con un retry básico, y arranca el servidor de Ollama
   - Y en la pipeline también usamos
     [el mismo docker compose](https://github.com/CodelyTV/ai-local_models-course/blob/main/04-prod/1-ollama_ci/2-docker/.github/workflows/ci.yml#L31)
 

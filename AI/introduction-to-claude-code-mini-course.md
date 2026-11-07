@@ -45,7 +45,7 @@
 - Harness, models, and efforts.
 - **Harness**
   - The program running Claude Code
-  - It exposes all the the tools to the model, the shell commands, the code base, etc.
+  - It exposes all the tools to the model, the shell commands, the code base, etc.
 - **Models**
   ![Claude code models](introduction-to-claude-code-course/Claude-code-models.png)
   - Trade-offs between capability, speed, and cost
