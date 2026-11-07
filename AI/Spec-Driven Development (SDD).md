@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+## Contents
 
 - [Spec-Driven Development (SDD)](#spec-driven-development-sdd)
   - [Tools](#tools)
@@ -117,7 +117,6 @@
 - **Feature validation**
   - <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video08_Feature_Validation>
   - TBD
--
 
 ### Course Summary
 

@@ -58,10 +58,16 @@
 - <https://github.com/AminBlg/SimpleEnglish>
   - Agent skill: make LLMs write docs in ASD-STE100 Simplified Technical
 - <https://www.skills.sh/mattpocock/skills/grill-me>
+  - <https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/>
 - <https://www.skills.sh/juliusbrussee/caveman/caveman>
 - <https://skills.wheresryan.sh/anatomy>
   - Name an idea in one line, and Claude draws the machine that does it.
 - <https://github.com/sergebulaev/linkedin-skills>  
+- REA (Reverse Engineer Anything):
+  - <https://rea.tools/>
+  - <https://github.com/morluto/rea>
+- show-me skill
+  - TBD  
 
 ## AI and Product Management
 
@@ -132,6 +138,9 @@
   - Your local kanban board for coding agents, from backlog to delivery.
   - The columns do the work. Drag a card into Development and an agent starts. Drag it into Approved and the merge queue
     runs. Agents work in parallel, each on its own branch.
+- [WonderTwin](https://wondertwin.ai/)
+  - Run local twins of every external service your AI agents reach for.
+  - Stripe, Plaid, Shopify, and 35 more — running on your laptop.
 
 ## Other resources
 

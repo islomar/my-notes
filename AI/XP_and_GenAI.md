@@ -8,6 +8,10 @@
 
 # XP and GenAI
 
+- <https://impatientprogramming.org/>
+  - Agentic engineering that actually works for humans
+  - A method for engineering teams that build with coding agents.
+    It keeps the values of Extreme Programming (XP) and rewrites its twenty-nine rules for a world where typing is nearly free and the hard part is keeping control of the code.
 - [TDD and Generative AI – A Perfect Pairing?](https://www.youtube.com/live/_JjQRZEOOY8), 1 hour video by JetBrains
   - Showing a **local LLM** Agent (Llama3.1), a tool "Test Driven Generator"
 - [TDD inside the agent loop - theater or actual value?](https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html) - 10.08.2026

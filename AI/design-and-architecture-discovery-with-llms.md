@@ -11,7 +11,7 @@
 # Design and Architecture discovery with LLMs
 
 - [Discovering legacy software with AI (Modesto San Juan)](https://www.modestosanjuan.com/posts/legacy-discovery-with-ai/)
-- [Taller Modesto IA SCPNA 2025](./taller-modesto-ia-scpna-2025.md)
+- [Taller Modesto IA SCPNA 2025](./notes-from-talks-and-workshops/taller-modesto-ia-scpna-2025.md)
 - [Susurrando DDD a la IA (Fernando Aparicio)](./DDD_ft_LLMs.md#susurrando-ddd-a-la-ia-un-enfoque-para-controlar-la-variabilidad-de-los-llms)
   - Deterministic class manifest, templates to reduce variability, and bounded context canvas.
 - [SDD: Legacy / Brownfield Projects](<./Spec-Driven Development (SDD).md#legacy--brownfield-projects-l11>)
