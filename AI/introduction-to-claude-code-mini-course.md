@@ -268,7 +268,7 @@
 
 - [Claude Cowork](https://claude.com/es/product/cowork)
 - She uses it for all her Slack messages, all her calendar, all her email, getting up to speed with Slack, etc.
-- You can do the same than with Claude Code, just a different UI, more for non-technical taska.
+- You can do the same as with Claude Code, just a different UI, more for non-technical tasks.
 
 ### Agent SDK
 

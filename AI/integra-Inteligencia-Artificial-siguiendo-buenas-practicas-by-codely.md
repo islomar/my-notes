@@ -172,11 +172,11 @@
   coste, etc.
 - Añadiremos un campo "suggested_courses" de tipo TEXT en la tabla `users`
 
-![flujo peticion completar curso](ai-best-practices-codelytv/flujo_peticion_completar_curso.png)
+![flujo petición completar curso](ai-best-practices-codelytv/flujo_peticion_completar_curso.png)
 
 - `UserCourseProgressCompletedDomainEvent`
-![flujo peticion generacion sugerencias](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias.png)
-![flujo peticion generacion sugerencias 2](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias_2.png)
+![flujo petición generación sugerencias](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias.png)
+![flujo petición generación sugerencias 2](ai-best-practices-codelytv/flujo_peticion_generacion_sugerencias_2.png)
 - `UserCourseSuggestionsGenerated`
 ![flujo proyectar sugerencias](ai-best-practices-codelytv/flujo_proyectar_sugerencias.png)
   - Suggestion projection generation
@@ -252,7 +252,7 @@
   Por otra parte, permite convertirlo en un JSon Schema. Bastante usada, e.g. para las requests de HTTP que llegan o
   formularios web.
 - Evitas tener que parsear la respuesta. Queremos tener una respuesta tipada por parte del LLM.
-- [Ejemplo parseardor con Zod](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/07-good_practices/3-add_types/src/contexts/mooc/user_course_suggestions/infrastructure/OllamaMistralCourseSuggestionsGenerator.ts#L34-L34)
+- [Ejemplo parseador con Zod](https://github.com/CodelyTV/add_ai_follwing_best_practices-course/blob/95fd558ae5ec9d98064d492210b993ec19fdc74d/07-good_practices/3-add_types/src/contexts/mooc/user_course_suggestions/infrastructure/OllamaMistralCourseSuggestionsGenerator.ts#L34-L34)
 
 ## ✅ Testea la integración con tu LLM
 

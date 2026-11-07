@@ -136,7 +136,7 @@
 - Cuando pedimos un plato, en la base de datos añade una nueva fila que contiene un campo `embedding`
 - Embedding: vector multidimensional que representa semánticamente el contenido que queramos (por ejemplo la descripción
   y el título del plato en el caso de "Neveraly")
-- El buscador de cursos de Codely ya es semántico (si buscas "spark" también muestra un curso con el emoji de estreallas
+- El buscador de cursos de Codely ya es semántico (si buscas "spark" también muestra un curso con el emoji de estrellas
   😅)
 - [PostgresCookedDishRepository: storage of embedding](https://github.com/CodelyTV/ai-local_models-course/blob/d4608176042775a98469c833a5b4d956896912cf/03-text_use_cases/2-embeddings/src/contexts/dishes/cooked-dishes/infrastructure/PostgresCookedDishRepository.ts#L25)
 - [Use of the embedding to exclude dishes when searching](https://github.com/CodelyTV/ai-local_models-course/blob/d4608176042775a98469c833a5b4d956896912cf/03-text_use_cases/2-embeddings/src/contexts/dishes/dishes/infraestructure/AiSdkMinistral3DishByIngredientsSuggesterGateway.ts#L41)
@@ -147,7 +147,7 @@
 
 - Uso de <https://ollama.com/library/translategemma>
   - Específico para traducciones y para máquinas no muy potentes, por ejemplo para Android
-- Los modelos `gemma` tienden a estasr pensados para ser ejecutados en máquinas no muy potentes
+- Los modelos `gemma` tienden a estar pensados para ser ejecutados en máquinas no muy potentes
 - [i18n of Neveraly](https://github.com/CodelyTV/ai-local_models-course/tree/d4608176042775a98469c833a5b4d956896912cf/03-text_use_cases/3-translation/src/app/i18n)
 - `es.json` es generado a partir de `en.json` con el script
   [translate-i18n.ts](https://github.com/CodelyTV/ai-local_models-course/blob/d4608176042775a98469c833a5b4d956896912cf/03-text_use_cases/3-translation/src/app/scripts/translate-i18n.ts),
@@ -204,7 +204,7 @@
         ONNX, NVIDIA® TensorRT™, RAPIDS™ cuML, XGBoost, scikit-learn RandomForest, OpenVINO, custom C++, and more.
       - Entrenan y compilan algunos modelos en particular para los propios chips de Amazon
         ([Inferentia](https://aws.amazon.com/es/ai/machine-learning/inferentia/))
-  - Una vez lo tienen, obien lo sirve con endpoint en SageMaker, o en su propio EKS.
+  - Una vez lo tienen, o bien lo sirve con endpoint en SageMaker, o en su propio EKS.
 
 ## 🔜 Conclusiones y siguientes pasos
 

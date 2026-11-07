@@ -173,7 +173,7 @@ Check: `findmnt /usr/share/ollama/.ollama/models` and `ollama list`.
     leer, y si tu ordenador puede ejecutarlo.
   - Modelo **Qwen 3.8 Flash-next**
   - Strata corre ~5x más rápido con 12 GB de gráfica
-- Los modelos `gemma` tienden a estasr pensados para ser ejecutados en máquinas no muy potentes (es de Google)
+- Los modelos `gemma` tienden a estar pensados para ser ejecutados en máquinas no muy potentes (es de Google)
   - <https://deepmind.google/models/gemma/>
 
 ## Ollama vs LM Studio vs Docker
