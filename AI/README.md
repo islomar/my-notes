@@ -66,8 +66,11 @@
 - REA (Reverse Engineer Anything):
   - <https://rea.tools/>
   - <https://github.com/morluto/rea>
-- show-me skill
-  - TBD  
+- `show-me`
+  - <https://www.humanlayer.com/blog/show-me-skill>
+  - tl;dr make your agent converse visually instead of in walls of prose.
+  - <https://github.com/humanlayer/skills/blob/main/plugins/show-me/skills/show-me/SKILL.md>
+  - This is really good for program design
 
 ## AI and Product Management
 
