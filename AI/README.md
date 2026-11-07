@@ -103,20 +103,20 @@
     - Make releasing software a predictable and deterministic non-even
     - CD
 - MD file describing the core scripts
-  - prepare or clean_start
+  - `prepare` or `clean_start`
     - `git clean`
-  - run_tests
+  - `run_tests`
     - [bandit](https://bandit.readthedocs.io/en/latest/): check security
-  - fixup
+  - `fixup`
     - in pre-commit
-    - [pyupgrade](https://github.com/asottile/pyupgrade): automatically upgrade syntax for newer versions of the
+    - [`pyupgrade`](https://github.com/asottile/pyupgrade): automatically upgrade syntax for newer versions of the
       language.
   - run  
 - Gee Paw Hill: you go from a "ready state" to the next "ready state"
 - "In anticipation of this, write a test..." --> after describing the expected production behaviour.
 - <https://github.com/tottinge/python-starter/blob/main/TDD_PROCESS.md>
 - <https://typer.tiangolo.com/>
-- gitpython
+- `gitpython`
   - <https://github.com/gitpython-developers/GitPython>
   - <https://gitpython.readthedocs.io/en/stable/>
 - He uses Warp + JetBrains

@@ -20,7 +20,7 @@ Las recomendaciones deben ser pragmáticas y válidas. Si no existen recomendaci
 
 El resultado debes indicarlo. No escribas ningún fichero todavía.
 
-Debes recomendar solo y únicamnete modificaciones de código (refactors técnicos), y solo sobre el método / métodos que están impactados por los tests añadidos / modificados / eliminados.
+Debes recomendar solo y únicamente modificaciones de código (refactors técnicos), y solo sobre el método / métodos que están impactados por los tests añadidos / modificados / eliminados.
 NO incluyas sugerencias funcionales, solo refactors técnicos.
 
 Las recomendaciones sugeridas NO pueden introducir comportamiento nuevo, ni implicar o requerir nuevos tests.

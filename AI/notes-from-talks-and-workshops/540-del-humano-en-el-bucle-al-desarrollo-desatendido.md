@@ -19,7 +19,7 @@
 - June 2025: Reglas de consenso. CLAUDE.md
 - Oct 2025 - Feb 2026: Commands --> Skills
 - Mar 2026 --> Skill / Implement
-  - Encadena de principio a fin el análisis del ticket, rama, plan, implementación, qa, commit, push y PR en draft (aviso en Slack)
+  - Encadena de principio a fin el análisis del ticket, rama, plan, implementación, QA, commit, push y PR en draft (aviso en Slack)
   - Necesidad de que haga varias rondas de QA, que paralelice varias cosas
 - May 2026: deterministic guardrails (hooks, lints, checks)
 - June 2026: Workflow/implement, orquestación

@@ -15,11 +15,9 @@
 
 What happens when collaborative programming meets artificial intelligence?
 
-In this session, we’ll explore how mobbing and AI can complement each other to accelerate learning, improve code
-quality, and strengthen team alignment.
+In this session, we’ll explore how mobbing and AI can complement each other to accelerate learning, improve code quality, and strengthen team alignment.
 
-We’ll share real examples of AI-assisted mobbing—from refactors to retros—and discuss what worked, what didn’t, and how
-to keep humans at the center of collaboration.
+We’ll share real examples of AI-assisted mobbing—from refactors to retros—and discuss what worked, what didn’t, and how to keep humans at the center of collaboration.
 
 Whether you’re curious about ensemble development (Mob Programming / Software Teaming) or experimenting with AI tools,
 you’ll walk away with practical ways to integrate both without losing the magic of thinking together.

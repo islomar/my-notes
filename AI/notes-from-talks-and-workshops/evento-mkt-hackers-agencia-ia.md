@@ -36,7 +36,7 @@
   - <https://inmo-hackers.com/inmobiliaria>
 - Creación de avatares:
   - <https://heygen.com>
-  - Mejor subir una voz real, lo leido es muy artificial
+  - Mejor subir una voz real, lo leído es muy artificial
 - Para añadir captions a los vídeos
   - <https://captions.ai/>
 - Fuentes de información:
