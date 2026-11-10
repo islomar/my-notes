@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-## Contents
+**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Ubuntu 24.04 to 26.04.1 LTS upgrade](#ubuntu-2404-to-26041-lts-upgrade)
   - [Resume the Claude Code session](#resume-the-claude-code-session)
