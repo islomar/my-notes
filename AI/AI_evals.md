@@ -32,6 +32,7 @@
 - [Trace Claude Code sessions](https://docs.langchain.com/langsmith/trace-claude-code) (from LangChain)
   - <https://github.com/langchain-ai/langsmith-claude-code-plugins>
 - <https://live.bytebytego.com/courses/ai-evals>
+- [Cómo medir y mejorar la calidad de las respuestas de tu LLM: métricas, pruebas y ajustes que funcionan](https://benjagarrido.com/como-medir-y-mejorar-la-calidad-de-las-respuestas-de-tu-llm-metricas-pruebas-y-ajustes-que-funcionan/)
 
 ## Tools
 

@@ -54,3 +54,5 @@
 - [LinkedIn post from someone sharing their experience passing the exam](https://lnkd.in/p/er-6yWk7)
   - [Claude Certified Architect: The Only AI Certification You Need to Get a $150K+ AI Job](https://www.youtube.com/watch?v=eslH5LrXkMg) - YouTube video, 1h 15m
 - <https://lnkd.in/p/eQX-WR6P>
+- <https://lnkd.in/p/eTEcV82J>
+- <https://lnkd.in/p/ekpnrbiy>

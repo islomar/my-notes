@@ -116,7 +116,9 @@
   - "Implement the remaining task groups."
 - **Feature validation**
   - <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video08_Feature_Validation>
-  - TBD
+- **Project replanning**
+  - <https://github.com/islomar/sc-spec-driven-development-files/tree/main/Video09_Project_Replanning>
+  - It creates a `replanning` branch
 
 ### Course Summary
 

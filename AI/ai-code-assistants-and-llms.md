@@ -14,7 +14,6 @@
     - [GitHub Copilot](#github-copilot)
   - [Other people's experiences and examples](#other-peoples-experiences-and-examples)
     - [Vibe coding](#vibe-coding)
-  - [Courses](#courses)
   - [Rules and Prompting](#rules-and-prompting)
     - [Other people prompts, rules or agents](#other-people-prompts-rules-or-agents)
     - [My own prompts](#my-own-prompts)
@@ -217,19 +216,6 @@
 ### Vibe coding
 
 - <https://www.eferro.net/2025/04/vibe-coding-ii-when-flow-meets-tests.html>
-
-## Courses
-
-- [Accelerate Your Learning with ChatGPT](https://www.coursera.org/learn/learning-chatgpt)
-- [Anthropic's Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
-  - This tutorial also exists on
-    [Google Sheets using Anthropic's Claude for Sheets extension](https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit?usp=sharing)
-- [Thinking Different with AI: A Self-Paced Collaborative Course](https://flowchainsensei.wordpress.com/2025/05/30/thinking-different-with-ai-a-self-paced-collaborative-course/)
-- [Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic](https://www.youtube.com/watch?v=kQmXtrmQ5Zg)
-- [Codely Courses](https://codely.com/en/courses)
-  - Add Artificial Intelligence Following Best Practices
-  - AI: Embeddings & RAG
-  - Automatic Embeddings in Postgres
 
 ## Rules and Prompting
 

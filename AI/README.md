@@ -7,11 +7,12 @@
   - [Learning resources (training, courses)](#learning-resources-training-courses)
   - [Language](#language)
   - [List of interesting MCPs](#list-of-interesting-mcps)
-  - [List of interesting skills](#list-of-interesting-skills)
+  - [List of interesting skills or plugins](#list-of-interesting-skills-or-plugins)
   - [AI and Product Management](#ai-and-product-management)
   - [TDD, LLM, TBD: PDQ, OK?](#tdd-llm-tbd-pdq-ok)
   - [LangGraph](#langgraph)
   - [LLM tooling and comparisons](#llm-tooling-and-comparisons)
+  - [Interesting talks](#interesting-talks)
   - [Other resources](#other-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -51,14 +52,18 @@
 - <https://www.eventcatalog.dev/docs/development/developer-tools/mcp-server/introduction>
 - MCP servers can bloat your context window quite rapidly by providing large numbers of tool definitions
 
-## List of interesting skills
+## List of interesting skills or plugins
 
+- <https://github.com/lexler/skill-factory>
+- <https://github.com/eferro/skill-factory>
 - <https://www.skills.sh/>
 - <https://www.skills.sh/vercel-labs/skills/find-skills>
 - <https://github.com/AminBlg/SimpleEnglish>
   - Agent skill: make LLMs write docs in ASD-STE100 Simplified Technical
 - <https://www.skills.sh/mattpocock/skills/grill-me>
   - <https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/>
+  - <https://www.aihero.dev/skills-grill-with-docs#its-working-if>
+  - `grill-with-docs → to-spec → to-tickets → implement → code-review → retro`
 - <https://www.skills.sh/juliusbrussee/caveman/caveman>
 - <https://skills.wheresryan.sh/anatomy>
   - Name an idea in one line, and Claude draws the machine that does it.
@@ -71,6 +76,17 @@
   - tl;dr make your agent converse visually instead of in walls of prose.
   - <https://github.com/humanlayer/skills/blob/main/plugins/show-me/skills/show-me/SKILL.md>
   - This is really good for program design
+- <https://github.com/jcesarperez/review-powers>
+  - For PR reviews  
+- [Anti-slop skills](https://webreactiva.com/blog/comparativa-skills-anti-slop)
+- [Cloudflare security audit skill](https://github.com/cloudflare/security-audit-skill)
+- [Skill inspector by NVIDIA](https://github.com/NVIDIA/SkillSpector)
+  - Security scanner for AI agent skills.
+    Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.
+  - [Pi extension](https://github.com/NVIDIA/SkillSpector/blob/main/docs/PI_EXTENSION.md)
+- [promptfoo - Red team Configuration](https://www.promptfoo.dev/docs/red-team/quickstart/)
+  - Promptfoo is an open-source tool for red teaming gen AI applications.
+  - <http://localhost:15500/redteam/setup>
 
 ## AI and Product Management
 
@@ -144,6 +160,62 @@
 - [WonderTwin](https://wondertwin.ai/)
   - Run local twins of every external service your AI agents reach for.
   - Stripe, Plaid, Shopify, and 35 more — running on your laptop.
+
+## Interesting talks
+
+- [Are You Using Claude Code Wrong? 6 Fixes That Change Everything](https://www.youtube.com/watch?v=6eZmX3b7ErQ)
+  - Boris Cherny (Anthropic)
+  - <https://howborisusesclaudecode.com/>
+  - Every gap left in a request is filled with a guess.
+    - We don't need anymore a long prompt with the role at the begining and a long list, but a clear intent, WHAT we want, how much effort to spend and how it should check its own work.
+  - For anything with some complexity, flip it around and make Claude ask the questions: "Interview me until you could write the spec, then write it to spec.md"
+    - I feel that's `/grill-me`
+    - If what you want is visual, better show an image instead of describing it.
+  - Ask for evidences instead of a verdict
+  - `/verify`: makes Claude build and run the app and check the result
+  - `/code-review`: checks the work in a fresh sub-agent that never saw your conversation. Ask him to skip style in a UI review, it always finds something and never finishes...
+  - Claude making the same mistake once and again
+    - If you see it making the same mistake, push Escape
+    - If you see Claude doing the mistake for a third time, start a new session `/clear` and a prompt summarizing what you just learnt.
+  - `Esc`+ + `Esc` shows you the history and lets you rewind the code and the conversation.
+  - The cache lives for ~1 hour on a subscription, and only 5 minutes on an API key
+    - So... if you leave the session open over lunch, once the session past about 200k tokens,
+      Claude Code compacts it just before the cache expires, so you will come back to a summary of your work, not to your work itself.
+    - The fix is a set of small habits:
+      - `/clear` between tasks that have nothing to do with each other
+      - `/tbd` does not add anything to the conversation
+      - Turn effort down for simple jobs: low effort means fewer and shorter tool calls
+      - When a message deserves deep thinking, type `/ultrathink`
+      - Once a week, run `/usage`
+      - A growing CLAUDE.md is a problem, "Lost-In-The-Middle". It's worse if you write IMPORTANT or NEVER, it will overapply the rule everywhere.
+      In July 2026, they deleted 80% of instructions and everything kept on working the same: models are better and need less harness.
+      - Keep `CLAUDE.md` under 200 lines and delete everything Claude can find by reading the project itself.
+        Spend that space in what it can't find: the exact command that runs your tests, the places where the code is misleading, and anything you've had to correct twice.
+      - If there is a rule that Claude keeps missing, turn it into a hook.
+        - `/doctor prompt-audit` finds instructions written for older models, files that no longer exist, and lines that contradict each other.
+      - CLAUDE keeps an automatic **memory** for every project.
+        As you work, it saves notes about you, the corrections given, the work in project, where things live... The first 200 lines of that memory load into every conversation, like your own instructions.
+        - Type `/memory` every couple of weeks, open the auto memory folder, and read what has been written there about you. You can edit or delete anything that's no longer true
+- [What Does Quality Look Like When Software Development Becomes Agentic?](https://www.youtube.com/watch?v=2QiguGJo1s4) - 20 min. - Modern Software Engineering (October 2026)
+- [How We Build Effective Agents: Barry Zhang, Anthropic](https://www.youtube.com/watch?v=D7_ipDqhtwk) - 15 min. (April 2025)
+  - Workflows: LLMs orchestrated by code
+  - Agents: LLMs deciding their own trajectories
+  - Idea 1: **Don't build agents for everything**. Checklist for "should I build an agent?"
+    - Is the task complex enough?
+    - Is the task valuable enough?
+    - Are all parts of the task doable
+    - What is the cost of error/error discovery? (go with Agents if it's low)
+  - Idea 2: **Keep it simple**
+    - "Agents are models using tools in a loop". Components:
+      - Environment
+      - Tools
+      - System prompt
+  - Idea 3: **Think like your agents**
+    - Put yourself in their -shoes- context window
+  - Personal musings
+    - Agents need budget-awareness: how do we explain and enforce 5 mins/$10/2M tokens budgets?
+    - Tools should be self-evolving
+    - Multi-agents need new ways of communicating
 
 ## Other resources
 
